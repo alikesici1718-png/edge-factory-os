@@ -1,5 +1,12 @@
 # Edge Factory OS
 
+> **Note:** This repository contains substantial governance scaffolding
+> (risk gates, approval workflows, orchestration) built preemptively for
+> production use if a validated signal had been found. Since no signal
+> passed validation, this scaffolding remains unexercised — see "Verified
+> vs. Unverified Components" below. Some lower-priority tooling has been
+> moved to `tools/archive/` for clarity; it is not deleted.
+
 ## Research at a Glance
 
 - 81 perpetual futures symbols (Binance/OKX)
@@ -126,6 +133,8 @@ Detailed inventory: [docs/SCRIPT_INVENTORY.md](docs/SCRIPT_INVENTORY.md)
 
 ## Requirements
 
+See [requirements.txt](requirements.txt). Install with:
+
 ```
-pip install pandas numpy ccxt
+pip install -r requirements.txt
 ```
