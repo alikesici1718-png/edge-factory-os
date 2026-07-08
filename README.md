@@ -2,7 +2,7 @@
 
 ## Overview
 
-Edge Factory OS is a self-managing research pipeline for systematic crypto signal discovery across 81 symbols. It autonomously proposes, tests, validates, and promotes (or retires) trading signal candidates across 6 strategy families, with human-approval gates at promotion checkpoints.
+Edge Factory OS is a research and evaluation pipeline for systematic crypto signal discovery across 81 symbols. The signal evaluation and closure workflow (preregistration -> execution -> evaluation -> closure) has been run end-to-end and produced verified results across 33 strategy evaluations and 27 formal closures. A fully autonomous orchestration layer (automatic triggering without manual execution) was also built but has not yet been exercised end-to-end.
 
 **Strategy families (one live paper logger per family):**
 1. Impulse Event Long (`impulse_event_long_live_paper_logger.py`)
@@ -18,13 +18,13 @@ The pipeline manages its own research queue, tracks signal lifecycle state (cand
 
 ## Architecture
 
-### State Management
+### State Management *(not yet exercised — see Verified vs. Unverified section)*
 - `edge_factory_os_orchestrator.py` / `_v2.py`: top-level loop coordinating research queue, signal lifecycle, and approval routing
 - `edge_factory_autonomous_research_queue.py`: queues new candidate signals; prioritizes by evidence score
 - `edge_factory_family_lifecycle_engine.py`: tracks each signal family through stages (research → sandbox → paper → live)
 - `edge_factory_os_decision_ledger.py`: append-only audit log of every promotion/retirement decision
 
-### Risk Gates
+### Risk Gates *(not yet exercised — see Verified vs. Unverified section)*
 - `edge_factory_capital_governor.py` / `adaptive_capital_governor_v2.py`: enforces per-signal and global capital limits
 - `edge_factory_kill_switch_controller.py`: halts live allocation on drawdown breach
 - `global_paper_risk_manager.py` (v1–v4): cross-signal paper portfolio risk; prevents correlated over-allocation
@@ -39,6 +39,19 @@ Before any signal advances, it must pass a sequential validator chain:
 5. `edge_factory_native_bps_validator.py`: net-of-cost profitability check in bps
 
 **`tools/` folder**: 837 governance and introspection scripts; see "Tools Directory" section below for a categorized breakdown.
+
+## Verified vs. Unverified Components
+
+**Verified (executed, produced real output):**
+- Signal evaluation pipeline: 33 strategy evaluations executed with real performance metrics. Example candidate: 17,716 signals tested across 34 months (Jan 2023 - Oct 2025), net -19.13 bps after costs, 33.6% win rate.
+- Closure/rejection workflow: 27 strategies formally closed via `artifacts/strategy_closures/`, all hash-verified (SHA-256 chain linking each closure to its source execution and evaluation artifacts). All 27 closed as rejected after cost-adjusted evaluation.
+- Evidence: `artifacts/strategy_evaluations/` (33 files), `artifacts/strategy_closures/` (27 files)
+
+**Built but not yet exercised:**
+- Fully autonomous orchestration (`edge_factory_os_orchestrator.py` / `_v2.py`): code exists and has been imported, but no evidence of a full autonomous run (research queue -> auto-execution -> auto-promotion without manual triggering). All 35 executions found in artifacts were triggered directly via `tools/` scripts, not via the orchestrator.
+- Live paper trading (8 strategy-specific loggers in `src/`): code exists, imported, but no evidence of any executed paper trade or output file.
+
+This distinction matters: the research and evaluation methodology is real and produced real (negative) findings. The autonomous orchestration and live-trading layers are unexercised infrastructure, built preemptively in case a signal had passed validation.
 
 ## Key Findings
 
