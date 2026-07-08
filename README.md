@@ -38,7 +38,7 @@ Before any signal advances, it must pass a sequential validator chain:
 4. `edge_factory_research_candidate_validator.py`: final evidence synthesis gate
 5. `edge_factory_native_bps_validator.py`: net-of-cost profitability check in bps
 
-**`tools/` folder**: 892 governance and introspection scripts; see "Tools Directory" section below for a categorized breakdown.
+**`tools/` folder**: 837 governance and introspection scripts; see "Tools Directory" section below for a categorized breakdown.
 
 ## Key Findings
 
@@ -57,13 +57,13 @@ edge_factory_os_repo/
 │   ├── edge_factory_os_decision_ledger.py     # Immutable audit log
 │   ├── *_live_paper_logger.py                 # Per-strategy paper trading loggers
 │   └── global_paper_risk_manager*.py          # Cross-signal risk manager
-├── tools/                  # 892 governance scripts — see Tools Directory section below
+├── tools/                  # 837 governance scripts — see Tools Directory section below
 └── README.md
 ```
 
 ## Tools Directory (Internal Governance Utilities)
 
-Total: 892 files across 11 functional groups. Files are named `edge_factory_os_[repo_only_]<signal_or_subsystem>_<verb>_v<N>.py`; the `_repo_only_` infix means the script is read-only (no live capital, no API orders).
+Total: 837 files across 10 functional groups. Files are named `edge_factory_os_[repo_only_]<signal_or_subsystem>_<verb>_v<N>.py`; the `_repo_only_` infix means the script is read-only (no live capital, no API orders).
 
 ### Pre-registration Contracts (35 files)
 Frozen hypothesis specifications written before a backtest is run. Each file records the exact signal definition, entry/exit rules, cost assumptions, and expected direction — so the result cannot be retrofitted after the fact. Examples: `*_preregistration_contract_v1.py`, `*_preregistration_v1.py` (e.g., `crypto_15m_liquidity_sweep_reversal_preregistration_v1.py`, `binance_okx_overlap_funding_crowding_reversal_full_range_preregistration_contract_v1.py`).
@@ -91,9 +91,6 @@ Human-in-the-loop checkpoints. Each `_approval_` file records a manual approval 
 
 ### Diagnostics, Audits, and Repairs (104 files)
 Ad-hoc investigation and fix scripts generated when a step fails or a data anomaly is found. Sub-patterns: `*_diagnostic_*` (inspect an artifact or panel), `*_audit_*` (whole-system checks), `*_repair_*` / `*_patch_*` (apply targeted fixes with preview → approval → apply cycle). Examples: `*_bom_syntax_repair_*`, `*_gate_metadata_patch_*`, `*_impulse_long_row_level_diagnostic_*`.
-
-### Old Short Clean Room (55 files)
-Isolated reconstruction workbench for the `old_short_gate_aware` strategy family, which lost its original backtest data. Scripts attempt to rebuild evidence from scratch using bounded synthetic fixtures, behavioral validators, and schema-matched dry runs — without touching live runtime. Examples: `*_old_short_clean_room_bounded_behavioral_validation_*`, `*_old_short_clean_room_direct_backtest_*`, `*_old_short_clean_room_threshold_reconstruction_*`.
 
 ### Cycle Operators and Self-Improvement Planners (11 files)
 Top-level loop orchestration tools that schedule which governance module runs next in the autonomous research cycle. `cycle_operator_v*.py` files (v1–v4) read the scheduler policy and invoke control tower; `self_improvement_planner_v*.py` files propose structural changes to the pipeline itself. Examples: `edge_factory_os_cycle_operator_v1.py`, `edge_factory_os_self_improvement_planner_v4.py`.
