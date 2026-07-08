@@ -1,0 +1,499 @@
+{
+  "packet_name": "edge_factory_os_external_audit_packet_refresh_v1",
+  "created_at_utc": "2026-05-14T02:05:48.514256+00:00",
+  "packet_status": "EXTERNAL_AUDIT_PACKET_REFRESH_READY",
+  "severity": "ATTENTION",
+  "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+  "selected_audit_focus": "METHODOLOGY_AND_RUNTIME_FAMILY_DISTINCTION",
+  "runtime_family_section_included": true,
+  "old_short_status_included": true,
+  "summary_for_external_auditor": {
+    "high_level_verdict_before_external_audit": "REVIEW_REQUIRED_NO_RELEASE",
+    "broad_strategy_search_allowed": false,
+    "research_execution_allowed_now": false,
+    "candidate_generation_allowed": false,
+    "family_release_allowed": false,
+    "runtime_touch_allowed": false,
+    "capital_change_allowed": false,
+    "active_paper_allowed": false,
+    "live_allowed": false,
+    "real_orders_allowed": false,
+    "closed_restricted_route": {
+      "closed_route_hash": "9596f6d3a0fa7a0b",
+      "closed_route_family": "MARKET_STATE_TRANSITION_FAMILY",
+      "restricted_route_closed": true,
+      "additional_null_budget_allowed_now": false,
+      "release_allowed": false
+    },
+    "restricted_retest_key_numbers": {
+      "alpha_budget": 1.736111111111111e-05,
+      "max_p_empirical_plus_one": 0.002997002997002997,
+      "required_runs_per_null_model_for_alpha": 57599,
+      "estimated_total_required_null_runs": 230396,
+      "decision_class": "UNDERPOWERED_FOR_TINY_GLOBAL_ALPHA_ROUTE_BUDGET_CONSUMED"
+    },
+    "old_short_runtime_family_note": "old_short was not directly invalidated by research route failures. Prior monitoring saw it as OK/positive, but it still needs current runtime sample/drift/capital-governor review before action.",
+    "blocked_route_count": 19,
+    "lesson_count": 25,
+    "vault_item_count": 1,
+    "git_untracked_or_dirty_count": 4
+  },
+  "runtime_family_prior_snapshot": {
+    "snapshot_type": "PRIOR_MONITORING_SUMMARY_NOT_CURRENT_PROOF",
+    "important_warning": "Do not mix runtime family monitoring with failed research-route validation.",
+    "families": {
+      "old_short": {
+        "prior_status": "OK_OR_POSITIVE_INFO_IN_PRIOR_MONITORING",
+        "prior_notes": [
+          "Previously seen as OK/HAS_CLOSED_SAMPLE.",
+          "Earlier family performance snapshot showed old_short positive with roughly 5 closed trades and around 80% win rate.",
+          "No direct invalidation of old_short occurred in the anti-overfitting research-route work.",
+          "Still requires current runtime sample, drift review, and capital governor before any promotion/capital action."
+        ],
+        "audit_instruction": "Protect from being incorrectly grouped with failed research routes; verify current metrics before any decision."
+      },
+      "impulse_long": {
+        "prior_status": "NEGATIVE_OR_EARLY_WATCH_IN_PRIOR_MONITORING",
+        "prior_notes": [
+          "Previously identified as negative_watch family.",
+          "Anti-overfitting research work repeatedly touched impulse/market-state style hypotheses, but that does not automatically equal runtime family release decision."
+        ],
+        "audit_instruction": "Review separately from old_short; do not allow promotion without family-specific evidence."
+      },
+      "market_relative_short": {
+        "prior_status": "ATTENTION_IN_PRIOR_EXPOSURE_MONITORING",
+        "prior_notes": [
+          "Previously had high exposure / no closed sample attention.",
+          "Needs closed sample and exposure review."
+        ],
+        "audit_instruction": "Treat as monitoring risk, not validated edge."
+      },
+      "weak_market_short": {
+        "prior_status": "INCONCLUSIVE_OR_LOW_EXPOSURE_PRIOR_MONITORING",
+        "prior_notes": [
+          "Previously had little/no closed sample.",
+          "Needs more data before decisions."
+        ],
+        "audit_instruction": "No release/capital action without sample."
+      }
+    }
+  },
+  "governance_component_summaries": [
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_multiple_testing_ledger_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "ledger_status": "GLOBAL_MULTIPLE_TESTING_LEDGER_ACTIVE_RESEARCH_LOCKED",
+        "market_state_route_status": null,
+        "effective_comparison_count": null,
+        "diagnostic_alpha_after_pressure": null
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\research_budget_policy_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "policy_status": "RESEARCH_BUDGET_POLICY_ACTIVE_METHODOLOGY_ONLY",
+        "research_budget_status": "STRATEGY_SEARCH_BUDGET_LOCKED_UNTIL_GOVERNANCE_REPAIR"
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\promising_signal_vault_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "vault_status": "PROMISING_SIGNAL_VAULT_ACTIVE_RELEASE_BLOCKED",
+        "vault_item_count_after": null
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\anti_overfitting_governance_state_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "state_status": "ANTI_OVERFITTING_GOVERNANCE_ACTIVE_RESEARCH_REPAIR_REQUIRED"
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\pre_registration_policy_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "policy_status": "PRE_REGISTRATION_POLICY_DRAFT_READY",
+        "all_future_research_must_be_pre_registered": true
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\nested_validation_policy_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "policy_status": "NESTED_VALIDATION_POLICY_READY_STRATEGY_SEARCH_LOCKED"
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\registries\\untouched_holdout_registry_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "registry_status": "UNTOUCHED_HOLDOUT_REGISTRY_READY_NOT_SELECTED_NOT_PEEKED",
+        "holdout_selected": false,
+        "holdout_peeked": false,
+        "holdout_usable_now": false
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\holdout_access_control_policy_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "policy_status": "HOLDOUT_ACCESS_CONTROL_POLICY_READY_ACCESS_BLOCKED",
+        "holdout_access_allowed_now": false
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_route_family_alpha_accounting_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "accounting_status": "GLOBAL_ROUTE_FAMILY_ALPHA_ACCOUNTANT_READY_STRATEGY_SEARCH_STILL_LOCKED",
+        "global_alpha_accounting_pass": true,
+        "family_count": 9,
+        "blocked_route_count": 18
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_alpha_spending_policy_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "policy_status": "GLOBAL_ALPHA_SPENDING_POLICY_ACTIVE_ZERO_STRATEGY_BUDGET",
+        "current_total_strategy_alpha_budget": 0.0,
+        "current_total_strategy_route_budget": 0
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\restricted_market_state_structure_retest_evaluator_state_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "evaluator_status": "RESTRICTED_MARKET_STATE_STRUCTURE_RETEST_EVALUATOR_UNDERPOWERED_NO_VALIDATION",
+        "decision_class": "UNDERPOWERED_FOR_TINY_GLOBAL_ALPHA_ROUTE_BUDGET_CONSUMED",
+        "required_runs_per_null_model_for_alpha": 57599,
+        "estimated_total_required_null_runs": 230396,
+        "release_allowed": false
+      },
+      "load_error": null
+    },
+    {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\restricted_null_power_feasibility_review_state_v1.json",
+      "exists": true,
+      "selected_fields": {
+        "review_status": "RESTRICTED_NULL_POWER_FEASIBILITY_REVIEW_NOT_JUSTIFIED_ROUTE_CLOSED",
+        "decision_class": "NULL_POWER_NOT_JUSTIFIED_P_ESTIMATE_FAR_ABOVE_ALPHA_ROUTE_BUDGET_CONSUMED",
+        "additional_null_power_recommended": false,
+        "route_closed": true,
+        "release_allowed": false
+      },
+      "load_error": null
+    }
+  ],
+  "policy_locked_contract": {
+    "contract_name": "edge_factory_os_policy_locked_research_direction_contract_v1",
+    "created_at_utc": "2026-05-14T02:02:43.298419+00:00",
+    "contract_status": "POLICY_LOCKED_RESEARCH_DIRECTION_CONTRACT_READY_NO_EXECUTION",
+    "contract_id": "POLICY_LOCKED_RESEARCH_DIRECTION_CONTRACT_V1_7a42a3105dfc90d3_20260514_020243",
+    "contract_hash": "7a42a3105dfc90d3",
+    "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+    "selected_research_key": "RD8_02_EXTERNAL_AUDIT_PACKET_REFRESH",
+    "selected_route_hash": "fc6f897a3512de08",
+    "selected_next_module": "edge_factory_os_external_audit_packet_refresh_v1.py",
+    "selected_route_family": "METHODOLOGY_AUDIT_FAMILY",
+    "closed_route_hash": "9596f6d3a0fa7a0b",
+    "closed_route_family": "MARKET_STATE_TRANSITION_FAMILY",
+    "purpose": "Build an external audit / methodology packet refresh after restricted market-state route closure, without executing research, without strategy search, and without any release/candidate/runtime/capital/live action.",
+    "why_this_direction": [
+      "The restricted market-state route failed validation under tiny global alpha.",
+      "Additional null power was not justified.",
+      "Before more research, the system should refresh an adversarial audit packet.",
+      "This direction is materially different from market-state strategy retesting."
+    ],
+    "required_inputs": [
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_policy_locked_research_rotation_after_restricted_retest\\policy_locked_research_rotation_after_restricted_retest_latest.json",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\policy_locked_research_rotation_after_restricted_retest_state_v1.json",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\queues\\policy_locked_research_rotation_after_restricted_retest_queue_v1.json",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\restricted_retest_closed_route_registry_v1.json",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_multiple_testing_ledger_v1.json",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_route_family_alpha_accounting_v1.json",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\promising_signal_vault_v1.json",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\pre_registration_policy_v1.json",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\nested_validation_policy_v1.json",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\registries\\untouched_holdout_registry_v1.json"
+    ],
+    "required_outputs": [
+      "external_audit_packet_refresh_latest.json",
+      "external_audit_packet_refresh_latest.txt",
+      "audit_packet_manifest_v1.json",
+      "audit_prompt_red_team_packet_v1.txt"
+    ],
+    "hard_rules": [
+      "no strategy search",
+      "no research execution",
+      "no broad axis expansion",
+      "no holdout access",
+      "no candidate generation",
+      "no candidate contract",
+      "no family release",
+      "no runtime touch",
+      "no capital change",
+      "no active paper enable",
+      "no live trading",
+      "no real orders",
+      "preserve closed-route evidence",
+      "include all anti-overfitting governance state in audit packet",
+      "include overfitting/null-power failure lessons",
+      "include untracked backup/git-status warning section"
+    ],
+    "release_gate_feed": {
+      "POLICY_LOCKED_CONTRACT_READY": true,
+      "BROAD_STRATEGY_SEARCH_ALLOWED": false,
+      "RESEARCH_EXECUTION_ALLOWED_NOW": false,
+      "HOLDOUT_ACCESS_ALLOWED": false,
+      "CANDIDATE_GENERATION_ALLOWED_FROM_THIS_CONTRACT": false,
+      "CANDIDATE_CONTRACT_ALLOWED_FROM_THIS_CONTRACT": false,
+      "FAMILY_RELEASE_ALLOWED_FROM_THIS_CONTRACT": false,
+      "RUNTIME_CHANGE_ALLOWED_FROM_THIS_CONTRACT": false,
+      "CAPITAL_CHANGE_ALLOWED_FROM_THIS_CONTRACT": false,
+      "ACTIVE_PAPER_ALLOWED_FROM_THIS_CONTRACT": false,
+      "LIVE_ALLOWED_FROM_THIS_CONTRACT": false,
+      "REAL_ORDERS_ALLOWED_FROM_THIS_CONTRACT": false
+    },
+    "audit_scope": {
+      "must_review": [
+        "global multiple-testing ledger",
+        "research budget policy",
+        "promising signal vault",
+        "pre-registration policy",
+        "nested validation policy",
+        "untouched holdout governance",
+        "route-family alpha accounting",
+        "restricted market-state retest failure",
+        "null power feasibility closure",
+        "closed route registry",
+        "current git status/untracked backups"
+      ],
+      "must_answer": [
+        "Where can the OS still fool itself?",
+        "Which gates are too weak or too easy to satisfy?",
+        "Which one-off modules should be consolidated before more research?",
+        "Whether the next direction should be data-information quality, external audit, or architecture consolidation.",
+        "Whether any current route deserves more budget. Default answer should be no unless evidence is exceptional."
+      ]
+    },
+    "candidate_generation_allowed": false,
+    "candidate_contract_allowed": false,
+    "family_release_allowed": false,
+    "promotion_allowed": false,
+    "runtime_touch_allowed": false,
+    "launcher_allowed": false,
+    "patch_runtime_allowed": false,
+    "capital_change_allowed": false,
+    "active_paper_allowed": false,
+    "live_allowed": false,
+    "real_orders_allowed": false,
+    "execution_performed": false,
+    "file_delete_performed": false,
+    "file_move_performed": false,
+    "archive_performed": false
+  },
+  "builder_state": {
+    "state_name": "edge_factory_os_policy_locked_research_direction_contract_builder_state_v1",
+    "created_at_utc": "2026-05-14T02:02:43.298419+00:00",
+    "builder_status": "POLICY_LOCKED_RESEARCH_DIRECTION_CONTRACT_BUILDER_READY",
+    "contract_created": true,
+    "contract_id": "POLICY_LOCKED_RESEARCH_DIRECTION_CONTRACT_V1_7a42a3105dfc90d3_20260514_020243",
+    "contract_hash": "7a42a3105dfc90d3",
+    "selected_research_key": "RD8_02_EXTERNAL_AUDIT_PACKET_REFRESH",
+    "selected_route_hash": "fc6f897a3512de08",
+    "selected_next_module": "edge_factory_os_external_audit_packet_refresh_v1.py",
+    "selected_route_family": "METHODOLOGY_AUDIT_FAMILY",
+    "closed_route_hash": "9596f6d3a0fa7a0b",
+    "closed_route_family": "MARKET_STATE_TRANSITION_FAMILY",
+    "restricted_route_closed": true,
+    "materially_different_from_closed_route": true,
+    "broad_strategy_search_allowed": false,
+    "research_execution_allowed_now": false,
+    "next_recommended_research_key": "RD8_02_EXTERNAL_AUDIT_PACKET_REFRESH",
+    "next_module": "edge_factory_os_external_audit_packet_refresh_v1.py",
+    "prerequisites": {
+      "rotation_ready": true,
+      "rotation_state_ready": true,
+      "queue_ready": true,
+      "closed_registry_ready": true,
+      "closed_route_hash_present": true,
+      "closed_route_family_market_state": true,
+      "restricted_route_closed": true,
+      "additional_null_budget_not_allowed": true,
+      "release_blocked": true,
+      "selected_direction_present": true,
+      "selected_not_meta_builder": true,
+      "selected_materially_different": true,
+      "selected_route_hash_not_blocked": true,
+      "ledger_active": true,
+      "alpha_accounting_pass": true,
+      "alpha_policy_active": true,
+      "vault_active": true,
+      "reopen_policy_restricted": true,
+      "pre_registration_required": true,
+      "nested_ready": true,
+      "holdout_not_selected": true,
+      "holdout_not_peeked": true,
+      "holdout_access_blocked": true,
+      "lessons_present": true,
+      "blocklist_present": true
+    },
+    "candidate_generation_allowed": false,
+    "candidate_contract_allowed": false,
+    "family_release_allowed": false,
+    "promotion_allowed": false,
+    "runtime_touch_allowed": false,
+    "launcher_allowed": false,
+    "patch_runtime_allowed": false,
+    "capital_change_allowed": false,
+    "active_paper_allowed": false,
+    "live_allowed": false,
+    "real_orders_allowed": false,
+    "execution_performed": false,
+    "file_delete_performed": false,
+    "file_move_performed": false,
+    "archive_performed": false
+  },
+  "rotation_state": {
+    "state_name": "edge_factory_os_policy_locked_research_rotation_after_restricted_retest_state_v1",
+    "created_at_utc": "2026-05-14T02:00:51.963306+00:00",
+    "rotation_status": "POLICY_LOCKED_RESEARCH_ROTATION_READY_MATERIAL_DIFFERENT_DIRECTION_SELECTED",
+    "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+    "closed_route_hash": "9596f6d3a0fa7a0b",
+    "closed_route_family": "MARKET_STATE_TRANSITION_FAMILY",
+    "restricted_route_closed": true,
+    "additional_null_budget_allowed_now": false,
+    "release_allowed": false,
+    "candidate_direction_count": 3,
+    "selected_research_key": "RD8_01_POLICY_LOCKED_RESEARCH_DIRECTION_CONTRACT_BUILDER",
+    "selected_route_hash": "71cdb1288c4b8cb0",
+    "selected_next_module": "edge_factory_os_policy_locked_research_direction_contract_builder_v1.py",
+    "broad_strategy_search_allowed": false,
+    "research_execution_allowed_now": false,
+    "next_recommended_research_key": "RD8_01_POLICY_LOCKED_RESEARCH_DIRECTION_CONTRACT_BUILDER",
+    "next_module": "edge_factory_os_policy_locked_research_direction_contract_builder_v1.py",
+    "candidate_generation_allowed": false,
+    "candidate_contract_allowed": false,
+    "family_release_allowed": false,
+    "promotion_allowed": false,
+    "runtime_touch_allowed": false,
+    "launcher_allowed": false,
+    "patch_runtime_allowed": false,
+    "capital_change_allowed": false,
+    "active_paper_allowed": false,
+    "live_allowed": false,
+    "real_orders_allowed": false,
+    "execution_performed": false,
+    "file_delete_performed": false,
+    "file_move_performed": false,
+    "archive_performed": false
+  },
+  "closed_route_registry": {
+    "registry_name": "edge_factory_os_restricted_retest_closed_route_registry_v1",
+    "created_at_utc": "2026-05-14T02:00:51.963306+00:00",
+    "registry_status": "RESTRICTED_RETEST_CLOSED_ROUTE_REGISTERED",
+    "closed_route_hash": "9596f6d3a0fa7a0b",
+    "closed_route_family": "MARKET_STATE_TRANSITION_FAMILY",
+    "closed_decision_class": "NULL_POWER_NOT_JUSTIFIED_P_ESTIMATE_FAR_ABOVE_ALPHA_ROUTE_BUDGET_CONSUMED",
+    "reason": "Current empirical p estimate is far above tiny alpha and route budget is consumed; do not spend more null power.",
+    "additional_null_budget_allowed_now": false,
+    "release_allowed": false,
+    "preservation_status": "PRESERVED_AS_UNDERPOWERED_NOT_VALIDATED_STRUCTURE_HINT",
+    "do_not_repeat_without": [
+      "new_governance_budget_decision",
+      "new_route_hash_or_explicit_reopen_approval",
+      "new pre-registered materially different contract",
+      "null-power feasibility pass",
+      "no holdout access"
+    ],
+    "candidate_generation_allowed": false,
+    "candidate_contract_allowed": false,
+    "family_release_allowed": false,
+    "promotion_allowed": false,
+    "runtime_touch_allowed": false,
+    "launcher_allowed": false,
+    "patch_runtime_allowed": false,
+    "capital_change_allowed": false,
+    "active_paper_allowed": false,
+    "live_allowed": false,
+    "real_orders_allowed": false,
+    "execution_performed": false,
+    "file_delete_performed": false,
+    "file_move_performed": false,
+    "archive_performed": false
+  },
+  "git_status": {
+    "git_status_command_returncode": 0,
+    "git_status_short_lines": [
+      "?? tools/edge_factory_os_external_audit_packet_refresh_v1.py",
+      "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+      "?? tools/edge_factory_os_universe_coverage_guard_v1.py"
+    ],
+    "git_untracked_or_dirty_count": 4,
+    "git_status_stderr": ""
+  },
+  "questions_for_external_audit": [
+    "Where can the OS still fool itself despite the new gates?",
+    "Are any gates circular, cosmetic, or too easy to pass?",
+    "Is the tiny-alpha policy too strict, too loose, or correctly conservative?",
+    "Was the restricted market-state route closure correct?",
+    "Should old_short be protected from unrelated research-route failures?",
+    "What current runtime family monitor refresh is needed before any capital decision?",
+    "Should the next step be data-information quality review, architecture consolidation, or runtime monitor refresh?",
+    "Are untracked backup files a process risk or harmless artifacts?",
+    "Which modules should be consolidated before more research?",
+    "What single next module minimizes self-deception risk?"
+  ],
+  "input_paths": {
+    "contract_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\contracts\\policy_locked_research_direction_contract_v1.json",
+    "builder_state_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\policy_locked_research_direction_contract_builder_state_v1.json",
+    "rotation_state_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\policy_locked_research_rotation_after_restricted_retest_state_v1.json",
+    "closed_route_registry_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\restricted_retest_closed_route_registry_v1.json",
+    "lesson_index_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_lesson_memory\\lesson_memory_index.json",
+    "blocklist_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_lesson_memory\\candidate_route_blocklist.json"
+  },
+  "release_gate_feed": {
+    "EXTERNAL_AUDIT_PACKET_READY": true,
+    "BROAD_STRATEGY_SEARCH_ALLOWED": false,
+    "RESEARCH_EXECUTION_ALLOWED_NOW": false,
+    "CANDIDATE_GENERATION_ALLOWED_FROM_AUDIT_PACKET": false,
+    "CANDIDATE_CONTRACT_ALLOWED_FROM_AUDIT_PACKET": false,
+    "FAMILY_RELEASE_ALLOWED_FROM_AUDIT_PACKET": false,
+    "RUNTIME_CHANGE_ALLOWED_FROM_AUDIT_PACKET": false,
+    "CAPITAL_CHANGE_ALLOWED_FROM_AUDIT_PACKET": false,
+    "ACTIVE_PAPER_ALLOWED_FROM_AUDIT_PACKET": false,
+    "LIVE_ALLOWED_FROM_AUDIT_PACKET": false,
+    "REAL_ORDERS_ALLOWED_FROM_AUDIT_PACKET": false
+  },
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

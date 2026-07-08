@@ -1,0 +1,73 @@
+====================================================================================================
+EDGE FACTORY OS NULL BASELINE METHOD REPAIR CONTRACT v1
+====================================================================================================
+contract_status: NULL_BASELINE_METHOD_REPAIR_CONTRACT_READY
+allowed_scope: READ_ONLY_RESEARCH
+next_action: BUILD_NULL_BASELINE_METHOD_REPAIR_RUNNER
+contract_id: NULL_BASELINE_METHOD_REPAIR_CONTRACT_V1_be546f0cff17e465_20260513_204129
+contract_hash: be546f0cff17e465
+route_hash: 38742d49ff629a83
+route_hash_blocked: False
+research_key: NULL_BASELINE_METHOD_REPAIR_V1
+direction_queue_key: RD5_06A_NULL_BASELINE_METHOD_REPAIR_CONTRACT
+plugin_key: NULL_BASELINE_METHOD_REPAIR_PLUGIN_V1
+policy_hash: e4a85ce55a1fdee0
+method_state: NULL_BASELINE_METHOD_AUDIT_ATTENTION_REPAIR_RECOMMENDED
+strict_policy_key: STRICT_MONTH_STABILITY_12_OF_12
+canonical_policy_month_count: 12
+minimum_empirical_replay_runs: 1000
+required_repair_method_count: 8
+next_module: edge_factory_os_null_baseline_method_repair_runner_v1.py
+
+REPAIR METHODS
+----------------------------------------------------------------------------------------------------
+- empirical_month_block_bootstrap
+- within_month_symbol_resample
+- symbol_holdout_replay
+- month_holdout_replay
+- time_block_bootstrap_from_diagnostic_rows
+- negative_control_replay
+- cost_stress_empirical_replay
+- liquidity_bucket_empirical_shuffle
+- volatility_bucket_empirical_shuffle
+- side_flip_empirical_replay
+
+GATE CAPS
+----------------------------------------------------------------------------------------------------
+max_allowed_strict_12_any_random_hit_rate: 0.01
+max_allowed_null_adjusted_any_random_hit_rate: 0.005
+empirical_p_value_required_lte: 0.01
+minimum_actual_vs_null_margin_bps: 2500.0
+
+REQUIRED RUNNER OUTPUTS
+----------------------------------------------------------------------------------------------------
+- policy_consumption_report
+- guard_consumption_report
+- method_state_consumption_report
+- empirical_replay_input_inventory
+- repair_method_inventory
+- empirical_replay_run_summary
+- repaired_false_positive_summary
+- repaired_policy_gate_pass_fail_table
+- method_repair_recommendation
+- latest_json
+- latest_txt
+- csv_outputs
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

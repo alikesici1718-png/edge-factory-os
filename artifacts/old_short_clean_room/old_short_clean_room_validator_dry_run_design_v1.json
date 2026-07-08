@@ -1,0 +1,1464 @@
+{
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_VALIDATOR_DRY_RUN_DESIGN",
+  "behavioral_similarity_checks": {
+    "entry_delay_abs_error": {
+      "condition": "if both samples provide signal_time and entry_time",
+      "formula": "abs(candidate_entry_delay_seconds - proxy_entry_delay_seconds)",
+      "target": "approximately 2 minutes"
+    },
+    "family_key_match_rate": {
+      "expected": "old_short",
+      "formula": "rows_with_old_short / comparable_rows"
+    },
+    "gate_behavior_consistency": {
+      "formula": "consistent_gate_events / comparable_gate_events",
+      "required": "gate allow required before open"
+    },
+    "hold_minutes_abs_error": {
+      "condition": "if both samples provide entry and exit or planned_exit times",
+      "formula": "abs(candidate_hold_minutes - proxy_hold_minutes)",
+      "target": "approximately 120 minutes"
+    },
+    "no_position_without_gate_allow": {
+      "formula": "candidate_open_positions_without_gate_allow == 0",
+      "required": true
+    },
+    "notional_abs_error": {
+      "formula": "abs(candidate_notional_usdt - proxy_notional_usdt)",
+      "target": "near 50 USDT for 1000 USDT base equity"
+    },
+    "rejected_reason_overlap": {
+      "expected_reasons": [
+        "gate_missing",
+        "gate_timeout",
+        "gate_block"
+      ],
+      "formula": "reason_set_intersection / reason_set_union"
+    },
+    "side_match_rate": {
+      "expected": "short",
+      "formula": "rows_with_short_side / comparable_rows"
+    },
+    "signal_feature_presence_rate": {
+      "formula": "present_required_signal_features / required_signal_features",
+      "required_features": [
+        "signal_ret1_bps",
+        "signal_ret3_bps",
+        "signal_ret5_bps",
+        "signal_ret60_bps",
+        "signal_vol_quote",
+        "signal_range_bps",
+        "entry_vol_quote",
+        "entry_range_bps"
+      ]
+    },
+    "subfamily_presence": {
+      "expected": [
+        "blowoff_short",
+        "mean_reversion_short"
+      ],
+      "formula": "required_subfamilies_present_in_bounded_samples"
+    }
+  },
+  "dry_run_identity": {
+    "behavioral_validation_only": true,
+    "dry_run_design_only": true,
+    "exact_original_source_recovered": false,
+    "no_exact_replay_claim": true,
+    "route_key": "old_short_clean_room_v1",
+    "validator_execution_allowed_now": false,
+    "validator_key": "old_short_clean_room_validator_v1"
+  },
+  "dry_run_result_classes": {
+    "allowed": [
+      "CLEAN_ROOM_VALIDATOR_DRY_RUN_PASS_NO_EDGE_NO_LIVE",
+      "CLEAN_ROOM_VALIDATOR_DRY_RUN_PARTIAL_NO_EDGE_NO_LIVE",
+      "CLEAN_ROOM_VALIDATOR_DRY_RUN_FAIL_NO_EDGE_NO_LIVE",
+      "CLEAN_ROOM_VALIDATOR_DRY_RUN_INCONCLUSIVE_NO_EDGE_NO_LIVE"
+    ],
+    "forbidden": [
+      "original source recovered",
+      "exact replay",
+      "candidate",
+      "edge claim",
+      "runtime/live/capital permission"
+    ]
+  },
+  "dry_run_thresholds": {
+    "closed_trades_schema_compatible": {
+      "must_be": true
+    },
+    "family_key_match_rate": {
+      ">=": 0.99
+    },
+    "median_entry_delay_error_seconds": {
+      "<=": 60
+    },
+    "median_hold_error_minutes": {
+      "<=": 10
+    },
+    "no_live_order_fields": {
+      "must_be": true
+    },
+    "no_position_without_gate_allow": {
+      "must_be": true
+    },
+    "notional_median_error_usdt": {
+      "<=": 5
+    },
+    "schema_match_rate": {
+      ">=": 0.95
+    },
+    "side_match_rate": {
+      ">=": 0.99
+    },
+    "threshold_type": "validation_thresholds_not_strategy_parameters"
+  },
+  "dry_run_validation_flow": [
+    "LOAD_CONTRACT",
+    "LOAD_VALIDATOR_PREVIEW",
+    "LOAD_SAMPLE_SCHEMAS",
+    "LOAD_MASTER_PROXY_SAMPLE",
+    "LOAD_CLEAN_ROOM_SAMPLE",
+    "RUN_SCHEMA_CHECKS",
+    "RUN_BEHAVIORAL_SIMILARITY_CHECKS",
+    "BUILD_DRY_RUN_REPORT",
+    "REPORT_ONLY"
+  ],
+  "future_dry_run_scope": {
+    "compare_clean_room_preview_output_sample_to_master_proxy_output_sample": true,
+    "never_claim_exact_original_match": true,
+    "never_infer_missing_original_thresholds": true,
+    "never_produce_edge_candidate_runtime_live_capital_permission": true,
+    "never_run_full_historical_backtest": true,
+    "operate_only_on_small_bounded_samples": true,
+    "validator_execution_allowed_now": false
+  },
+  "future_inputs": {
+    "clean_room_output_sample_dir": "future bounded sample directory from clean-room preview output",
+    "logger_metadata_reference": "C:\\Users\\alike\\old_short_gate_aware_live_paper_logger.py",
+    "master_upper_system_proxy_sample_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic",
+    "old_short_clean_room_contract": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+    "old_short_runner_preview": "artifacts/old_short_clean_room/old_short_clean_room_runner_preview_v1.json",
+    "old_short_validator_preview": "artifacts/old_short_clean_room/old_short_clean_room_validator_preview_v1.json",
+    "validator_config_json": "future dry-run config JSON with sample limits and guards"
+  },
+  "module": "edge_factory_os_repo_only_old_short_clean_room_validator_dry_run_design_v1",
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_VALIDATOR_DRY_RUN_IMPLEMENTATION_PREVIEW_V1",
+  "output_report_schema": {
+    "classification_values": [
+      "CLEAN_ROOM_VALIDATOR_DRY_RUN_PASS_NO_EDGE_NO_LIVE",
+      "CLEAN_ROOM_VALIDATOR_DRY_RUN_PARTIAL_NO_EDGE_NO_LIVE",
+      "CLEAN_ROOM_VALIDATOR_DRY_RUN_FAIL_NO_EDGE_NO_LIVE",
+      "CLEAN_ROOM_VALIDATOR_DRY_RUN_INCONCLUSIVE_NO_EDGE_NO_LIVE"
+    ],
+    "no_edge_no_live_permissions": true,
+    "required_top_level_keys": [
+      "status",
+      "route_key",
+      "validator_key",
+      "sample_paths",
+      "sample_row_counts",
+      "schema_check_results",
+      "behavioral_similarity_results",
+      "threshold_results",
+      "unresolved_fields_preserved",
+      "pass_fail_classification",
+      "limitations",
+      "no_edge_no_live_permissions",
+      "payload_sha256_excluding_hash"
+    ]
+  },
+  "payload_sha256_excluding_hash": "4680c5dcccd4aa4577a33efb493b7c254fe242354e659d50cd1057f126dd08f3",
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "validator_dry_run_design_created": true,
+    "validator_execution_allowed_now": false
+  },
+  "sample_policy": {
+    "allowed_sample_material": [
+      "headers and schema samples",
+      "closed_trades sample",
+      "rejected_entries sample",
+      "signals sample",
+      "pending/open sample if present"
+    ],
+    "maximum_rows_per_file_default": 100,
+    "must_not": [
+      "read unbounded full datasets by default",
+      "read raw market data",
+      "run old_short strategy",
+      "create new trades",
+      "calculate live/order data"
+    ],
+    "selected_bounded_window_if_available": true,
+    "this_module_sample_policy": "metadata/header plus first 3 rows only"
+  },
+  "schema_checks": {
+    "closed_trades.csv": {
+      "family_key_expectation": {
+        "expected_family_key": "old_short",
+        "source_expectation": {
+          "columns_checked": [
+            "family_key"
+          ],
+          "heartbeat_strategy_family_allowed": [
+            "old_short_gate_aware",
+            "old_short_clean_room_v1"
+          ],
+          "required_value": "old_short"
+        }
+      },
+      "no_live_order_private_fields": {
+        "forbidden_fields": [
+          "api_key",
+          "api_secret",
+          "passphrase",
+          "order_id",
+          "client_order_id",
+          "live_order_id",
+          "exchange_order_id",
+          "fill_id",
+          "trade_id",
+          "private_endpoint"
+        ],
+        "must_be_absent": true
+      },
+      "optional_columns": [
+        "preview_run_id",
+        "preview_validation_note"
+      ],
+      "required_columns": [
+        "close_id",
+        "position_id",
+        "inst_id",
+        "coin",
+        "family_key",
+        "family",
+        "strategy",
+        "side",
+        "signal_id",
+        "signal_time",
+        "entry_time",
+        "exit_time",
+        "planned_exit_time",
+        "hold_minutes_actual",
+        "raw_entry_close",
+        "raw_exit_close",
+        "entry_price",
+        "exit_price",
+        "entry_slip_bps",
+        "exit_slip_bps",
+        "fee_bps_total",
+        "stress_extra_bps",
+        "gross_ret",
+        "realistic_net_ret",
+        "stress_net_ret",
+        "net_ret",
+        "notional",
+        "pnl",
+        "stress_pnl",
+        "equity_before",
+        "equity_after",
+        "signal_ret1_bps",
+        "signal_ret3_bps",
+        "signal_ret5_bps",
+        "signal_ret60_bps",
+        "signal_vol_quote",
+        "signal_range_bps",
+        "entry_vol_quote",
+        "entry_range_bps"
+      ],
+      "schema_compatibility_rate": "matched_required_columns / required_columns",
+      "side_expectation": {
+        "expected_side": "short",
+        "source_expectation": {
+          "columns_checked": [
+            "side"
+          ],
+          "required_value": "short",
+          "short_only": true
+        }
+      },
+      "timestamp_fields": {
+        "columns": [
+          "signal_time",
+          "entry_time",
+          "exit_time",
+          "planned_exit_time"
+        ],
+        "must_be_monotonic_where_applicable": true,
+        "no_future_runtime_requirement": true
+      },
+      "type_expectations": {
+        "identity_columns": "non-empty strings where required",
+        "numeric_columns": "parseable numeric values for returns, prices, sizes, pnl, counts where present",
+        "state_json": null,
+        "timestamp_columns": "ISO-8601 UTC parseable where present"
+      }
+    },
+    "heartbeat.csv": {
+      "family_key_expectation": {
+        "expected_family_key": "old_short",
+        "source_expectation": {
+          "columns_checked": [
+            "strategy_family"
+          ],
+          "heartbeat_strategy_family_allowed": [
+            "old_short_gate_aware",
+            "old_short_clean_room_v1"
+          ],
+          "required_value": "old_short"
+        }
+      },
+      "no_live_order_private_fields": {
+        "forbidden_fields": [
+          "api_key",
+          "api_secret",
+          "passphrase",
+          "order_id",
+          "client_order_id",
+          "live_order_id",
+          "exchange_order_id",
+          "fill_id",
+          "trade_id",
+          "private_endpoint"
+        ],
+        "must_be_absent": true
+      },
+      "optional_columns": [
+        "preview_run_id",
+        "preview_validation_note"
+      ],
+      "required_columns": [
+        "log_time",
+        "strategy_family",
+        "coins",
+        "equity",
+        "pending_entries",
+        "open_positions",
+        "closed_count",
+        "errors",
+        "require_global_gate"
+      ],
+      "schema_compatibility_rate": "matched_required_columns / required_columns",
+      "side_expectation": {
+        "expected_side": "short",
+        "source_expectation": {
+          "columns_checked": [],
+          "required_value": "short",
+          "short_only": true
+        }
+      },
+      "timestamp_fields": {
+        "columns": [
+          "log_time"
+        ],
+        "must_be_monotonic_where_applicable": true,
+        "no_future_runtime_requirement": true
+      },
+      "type_expectations": {
+        "identity_columns": "non-empty strings where required",
+        "numeric_columns": "parseable numeric values for returns, prices, sizes, pnl, counts where present",
+        "state_json": null,
+        "timestamp_columns": "ISO-8601 UTC parseable where present"
+      }
+    },
+    "open_positions.csv": {
+      "family_key_expectation": {
+        "expected_family_key": "old_short",
+        "source_expectation": {
+          "columns_checked": [
+            "family_key"
+          ],
+          "heartbeat_strategy_family_allowed": [
+            "old_short_gate_aware",
+            "old_short_clean_room_v1"
+          ],
+          "required_value": "old_short"
+        }
+      },
+      "no_live_order_private_fields": {
+        "forbidden_fields": [
+          "api_key",
+          "api_secret",
+          "passphrase",
+          "order_id",
+          "client_order_id",
+          "live_order_id",
+          "exchange_order_id",
+          "fill_id",
+          "trade_id",
+          "private_endpoint"
+        ],
+        "must_be_absent": true
+      },
+      "optional_columns": [
+        "preview_run_id",
+        "preview_validation_note"
+      ],
+      "required_columns": [
+        "position_id",
+        "signal_id",
+        "coin",
+        "inst_id",
+        "family_key",
+        "family",
+        "strategy",
+        "side",
+        "signal_time",
+        "entry_time",
+        "planned_exit_time",
+        "hold_minutes",
+        "raw_entry_close",
+        "entry_price",
+        "notional",
+        "equity_before",
+        "signal_ret1_bps",
+        "signal_ret3_bps",
+        "signal_ret5_bps",
+        "signal_ret60_bps",
+        "signal_vol_quote",
+        "signal_range_bps",
+        "entry_vol_quote",
+        "entry_range_bps"
+      ],
+      "schema_compatibility_rate": "matched_required_columns / required_columns",
+      "side_expectation": {
+        "expected_side": "short",
+        "source_expectation": {
+          "columns_checked": [
+            "side"
+          ],
+          "required_value": "short",
+          "short_only": true
+        }
+      },
+      "timestamp_fields": {
+        "columns": [
+          "signal_time",
+          "entry_time",
+          "planned_exit_time"
+        ],
+        "must_be_monotonic_where_applicable": false,
+        "no_future_runtime_requirement": true
+      },
+      "type_expectations": {
+        "identity_columns": "non-empty strings where required",
+        "numeric_columns": "parseable numeric values for returns, prices, sizes, pnl, counts where present",
+        "state_json": null,
+        "timestamp_columns": "ISO-8601 UTC parseable where present"
+      }
+    },
+    "pending_entries.csv": {
+      "family_key_expectation": {
+        "expected_family_key": "old_short",
+        "source_expectation": {
+          "columns_checked": [
+            "family_key"
+          ],
+          "heartbeat_strategy_family_allowed": [
+            "old_short_gate_aware",
+            "old_short_clean_room_v1"
+          ],
+          "required_value": "old_short"
+        }
+      },
+      "no_live_order_private_fields": {
+        "forbidden_fields": [
+          "api_key",
+          "api_secret",
+          "passphrase",
+          "order_id",
+          "client_order_id",
+          "live_order_id",
+          "exchange_order_id",
+          "fill_id",
+          "trade_id",
+          "private_endpoint"
+        ],
+        "must_be_absent": true
+      },
+      "optional_columns": [
+        "preview_run_id",
+        "preview_validation_note"
+      ],
+      "required_columns": [
+        "position_id",
+        "signal_id",
+        "coin",
+        "inst_id",
+        "family_key",
+        "family",
+        "strategy",
+        "side",
+        "signal_time",
+        "target_entry_time",
+        "entry_delay_minutes",
+        "notional",
+        "gate_decision",
+        "created_time"
+      ],
+      "schema_compatibility_rate": "matched_required_columns / required_columns",
+      "side_expectation": {
+        "expected_side": "short",
+        "source_expectation": {
+          "columns_checked": [
+            "side"
+          ],
+          "required_value": "short",
+          "short_only": true
+        }
+      },
+      "timestamp_fields": {
+        "columns": [
+          "signal_time",
+          "target_entry_time",
+          "created_time"
+        ],
+        "must_be_monotonic_where_applicable": false,
+        "no_future_runtime_requirement": true
+      },
+      "type_expectations": {
+        "identity_columns": "non-empty strings where required",
+        "numeric_columns": "parseable numeric values for returns, prices, sizes, pnl, counts where present",
+        "state_json": null,
+        "timestamp_columns": "ISO-8601 UTC parseable where present"
+      }
+    },
+    "rejected_entries.csv": {
+      "family_key_expectation": {
+        "expected_family_key": "old_short",
+        "source_expectation": {
+          "columns_checked": [
+            "family_key"
+          ],
+          "heartbeat_strategy_family_allowed": [
+            "old_short_gate_aware",
+            "old_short_clean_room_v1"
+          ],
+          "required_value": "old_short"
+        }
+      },
+      "no_live_order_private_fields": {
+        "forbidden_fields": [
+          "api_key",
+          "api_secret",
+          "passphrase",
+          "order_id",
+          "client_order_id",
+          "live_order_id",
+          "exchange_order_id",
+          "fill_id",
+          "trade_id",
+          "private_endpoint"
+        ],
+        "must_be_absent": true
+      },
+      "optional_columns": [
+        "preview_run_id",
+        "preview_validation_note"
+      ],
+      "required_columns": [
+        "reject_id",
+        "signal_id",
+        "coin",
+        "inst_id",
+        "family_key",
+        "family",
+        "strategy",
+        "side",
+        "signal_time",
+        "rejected_time",
+        "reason",
+        "gate_decision",
+        "overlap_state",
+        "family_position_count",
+        "global_position_count"
+      ],
+      "schema_compatibility_rate": "matched_required_columns / required_columns",
+      "side_expectation": {
+        "expected_side": "short",
+        "source_expectation": {
+          "columns_checked": [
+            "side"
+          ],
+          "required_value": "short",
+          "short_only": true
+        }
+      },
+      "timestamp_fields": {
+        "columns": [
+          "signal_time",
+          "rejected_time"
+        ],
+        "must_be_monotonic_where_applicable": false,
+        "no_future_runtime_requirement": true
+      },
+      "type_expectations": {
+        "identity_columns": "non-empty strings where required",
+        "numeric_columns": "parseable numeric values for returns, prices, sizes, pnl, counts where present",
+        "state_json": null,
+        "timestamp_columns": "ISO-8601 UTC parseable where present"
+      }
+    },
+    "signals.csv": {
+      "family_key_expectation": {
+        "expected_family_key": "old_short",
+        "source_expectation": {
+          "columns_checked": [
+            "family_key"
+          ],
+          "heartbeat_strategy_family_allowed": [
+            "old_short_gate_aware",
+            "old_short_clean_room_v1"
+          ],
+          "required_value": "old_short"
+        }
+      },
+      "no_live_order_private_fields": {
+        "forbidden_fields": [
+          "api_key",
+          "api_secret",
+          "passphrase",
+          "order_id",
+          "client_order_id",
+          "live_order_id",
+          "exchange_order_id",
+          "fill_id",
+          "trade_id",
+          "private_endpoint"
+        ],
+        "must_be_absent": true
+      },
+      "optional_columns": [
+        "preview_run_id",
+        "preview_validation_note"
+      ],
+      "required_columns": [
+        "signal_id",
+        "signal_time",
+        "inst_id",
+        "coin",
+        "family_key",
+        "family",
+        "strategy",
+        "side",
+        "raw_close",
+        "signal_ret1_bps",
+        "signal_ret3_bps",
+        "signal_ret5_bps",
+        "signal_ret60_bps",
+        "signal_vol_quote",
+        "signal_range_bps",
+        "gate_decision",
+        "gate_reason"
+      ],
+      "schema_compatibility_rate": "matched_required_columns / required_columns",
+      "side_expectation": {
+        "expected_side": "short",
+        "source_expectation": {
+          "columns_checked": [
+            "side"
+          ],
+          "required_value": "short",
+          "short_only": true
+        }
+      },
+      "timestamp_fields": {
+        "columns": [
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time"
+        ],
+        "must_be_monotonic_where_applicable": false,
+        "no_future_runtime_requirement": true
+      },
+      "type_expectations": {
+        "identity_columns": "non-empty strings where required",
+        "numeric_columns": "parseable numeric values for returns, prices, sizes, pnl, counts where present",
+        "state_json": null,
+        "timestamp_columns": "ISO-8601 UTC parseable where present"
+      }
+    },
+    "state.json": {
+      "family_key_expectation": {
+        "expected_family_key": "old_short",
+        "source_expectation": {
+          "columns_checked": [
+            "family_key"
+          ],
+          "heartbeat_strategy_family_allowed": [
+            "old_short_gate_aware",
+            "old_short_clean_room_v1"
+          ],
+          "required_value": "old_short"
+        }
+      },
+      "no_live_order_private_fields": {
+        "forbidden_fields": [
+          "api_key",
+          "api_secret",
+          "passphrase",
+          "order_id",
+          "client_order_id",
+          "live_order_id",
+          "exchange_order_id",
+          "fill_id",
+          "trade_id",
+          "private_endpoint"
+        ],
+        "must_be_absent": true
+      },
+      "optional_columns": [
+        "preview_run_id",
+        "preview_validation_note"
+      ],
+      "required_columns": {
+        "format": "JSON object",
+        "required_top_level_keys": [
+          "route_key",
+          "family_key",
+          "equity",
+          "pending_entries",
+          "open_positions",
+          "closed_count",
+          "last_signal_time",
+          "last_heartbeat_time",
+          "errors"
+        ]
+      },
+      "schema_compatibility_rate": "matched_required_columns / required_columns",
+      "side_expectation": {
+        "expected_side": "short",
+        "source_expectation": {
+          "columns_checked": [],
+          "required_value": "short",
+          "short_only": true
+        }
+      },
+      "timestamp_fields": {
+        "columns": [
+          "last_signal_time",
+          "last_heartbeat_time"
+        ],
+        "must_be_monotonic_where_applicable": false,
+        "no_future_runtime_requirement": true
+      },
+      "type_expectations": {
+        "identity_columns": "non-empty strings where required",
+        "numeric_columns": "parseable numeric values for returns, prices, sizes, pnl, counts where present",
+        "state_json": "JSON object with required top-level keys",
+        "timestamp_columns": "ISO-8601 UTC parseable where present"
+      }
+    }
+  },
+  "source_artifacts": {
+    "clean_room_contract": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REBUILD_CONTRACT",
+      "loaded": true,
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "payload_sha256_excluding_hash": "02d0c3ff2f905be2df695a7ca52bfd931c94a4720cb3c883f8fd5d7ad00f5e6d",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_CONTRACT_CREATED"
+    },
+    "logger_script_text_only_metadata": {
+      "checked_as_text_only": true,
+      "contains_blowoff_short": true,
+      "contains_gate_reference": true,
+      "contains_mean_reversion_short": true,
+      "contains_old_short": true,
+      "executed": false,
+      "exists": true,
+      "path": "C:\\Users\\alike\\old_short_gate_aware_live_paper_logger.py",
+      "sample_bytes": 34181
+    },
+    "master_upper_system_small_samples": [
+      {
+        "exists": true,
+        "header": [
+          "type",
+          "signal_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "created_at"
+        ],
+        "name": "signals.csv",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\signals.csv",
+        "read_error": null,
+        "sample_policy": "header plus first 3 rows only",
+        "sample_rows": [
+          {
+            "coin": "LAB",
+            "created_at": "2026-05-10T21:05:56.484304Z",
+            "entry_delay_minutes": "2",
+            "family": "mean_reversion_short",
+            "family_key": "old_short",
+            "hold_minutes": "120",
+            "inst_id": "LAB-USDT-SWAP",
+            "planned_exit_time": "2026-05-10T23:06:00Z",
+            "side": "short",
+            "signal_close": "4.7934",
+            "signal_id": "LAB_mean_reversion_short_20260510T210400Z",
+            "signal_range_bps": "102.31399813219815",
+            "signal_ret1_bps": "-42.17130274009495",
+            "signal_ret3_bps": "153.78749364514556",
+            "signal_ret5_bps": "305.06288294098516",
+            "signal_ret60_bps": "403.9242072363414",
+            "signal_time": "2026-05-10T21:04:00Z",
+            "signal_vol_quote": "553759.978",
+            "strategy": "mean_reversion_short",
+            "target_entry_time": "2026-05-10T21:06:00Z",
+            "type": "signal_pending_short"
+          },
+          {
+            "coin": "SAHARA",
+            "created_at": "2026-05-10T22:47:40.535612Z",
+            "entry_delay_minutes": "2",
+            "family": "blowoff_short",
+            "family_key": "old_short",
+            "hold_minutes": "120",
+            "inst_id": "SAHARA-USDT-SWAP",
+            "planned_exit_time": "2026-05-11T00:47:00Z",
+            "side": "short",
+            "signal_close": "0.03989",
+            "signal_id": "SAHARA_blowoff_short_20260510T224500Z",
+            "signal_range_bps": "156.2112571286897",
+            "signal_ret1_bps": "-109.09992561368598",
+            "signal_ret3_bps": "-191.78755839685203",
+            "signal_ret5_bps": "-145.75098814229247",
+            "signal_ret60_bps": "580.9018567639268",
+            "signal_time": "2026-05-10T22:45:00Z",
+            "signal_vol_quote": "172967.0466",
+            "strategy": "blowoff_short",
+            "target_entry_time": "2026-05-10T22:47:00Z",
+            "type": "signal_pending_short"
+          },
+          {
+            "coin": "ENS",
+            "created_at": "2026-05-11T00:08:38.244658Z",
+            "entry_delay_minutes": "2",
+            "family": "mean_reversion_short",
+            "family_key": "old_short",
+            "hold_minutes": "120",
+            "inst_id": "ENS-USDT-SWAP",
+            "planned_exit_time": "2026-05-11T02:08:00Z",
+            "side": "short",
+            "signal_close": "7.884",
+            "signal_id": "ENS_mean_reversion_short_20260511T000600Z",
+            "signal_range_bps": "459.8703888335004",
+            "signal_ret1_bps": "-183.04071722076932",
+            "signal_ret3_bps": "175.5291688177585",
+            "signal_ret5_bps": "687.2712484749899",
+            "signal_ret60_bps": "635.3702954269536",
+            "signal_time": "2026-05-11T00:06:00Z",
+            "signal_vol_quote": "905607.9866",
+            "strategy": "mean_reversion_short",
+            "target_entry_time": "2026-05-11T00:08:00Z",
+            "type": "signal_pending_short"
+          }
+        ],
+        "size_bytes": 49380
+      },
+      {
+        "exists": true,
+        "header": [
+          "status",
+          "signal_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "created_at"
+        ],
+        "name": "pending_entries.csv",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\pending_entries.csv",
+        "read_error": null,
+        "sample_policy": "header plus first 3 rows only",
+        "sample_rows": [],
+        "size_bytes": 267
+      },
+      {
+        "exists": true,
+        "header": [
+          "position_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_id",
+          "signal_time",
+          "entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "raw_entry_close",
+          "entry_price",
+          "notional",
+          "equity_before",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "entry_vol_quote",
+          "entry_range_bps",
+          "entry_slip_bps",
+          "exit_slip_bps",
+          "fee_bps_total",
+          "stress_extra_bps"
+        ],
+        "name": "open_positions.csv",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\open_positions.csv",
+        "read_error": null,
+        "sample_policy": "header plus first 3 rows only",
+        "sample_rows": [],
+        "size_bytes": 397
+      },
+      {
+        "exists": true,
+        "header": [
+          "close_id",
+          "position_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_id",
+          "signal_time",
+          "entry_time",
+          "exit_time",
+          "planned_exit_time",
+          "hold_minutes_actual",
+          "raw_entry_close",
+          "raw_exit_close",
+          "entry_price",
+          "exit_price",
+          "entry_slip_bps",
+          "exit_slip_bps",
+          "fee_bps_total",
+          "stress_extra_bps",
+          "gross_ret",
+          "realistic_net_ret",
+          "stress_net_ret",
+          "net_ret",
+          "notional",
+          "pnl",
+          "stress_pnl",
+          "equity_before",
+          "equity_after",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "entry_vol_quote",
+          "entry_range_bps"
+        ],
+        "name": "closed_trades.csv",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\closed_trades.csv",
+        "read_error": null,
+        "sample_policy": "header plus first 3 rows only",
+        "sample_rows": [
+          {
+            "close_id": "close_YGG_mean_reversion_short_20260512T000300Z_20260512T020300Z",
+            "coin": "YGG",
+            "entry_price": "0.047889975",
+            "entry_range_bps": "108.69565217391298",
+            "entry_slip_bps": "25.0",
+            "entry_time": "2026-05-12T00:03:00Z",
+            "entry_vol_quote": "166354.54823",
+            "equity_after": "1002.49732719589",
+            "equity_before": "1000.0",
+            "exit_price": "0.045503474999999995",
+            "exit_slip_bps": "25.0",
+            "exit_time": "2026-05-12T02:03:00Z",
+            "family": "mean_reversion_short",
+            "family_key": "old_short",
+            "fee_bps_total": "25.0",
+            "gross_ret": "0.052446543917799904",
+            "hold_minutes_actual": "120.0",
+            "inst_id": "YGG-USDT-SWAP",
+            "net_ret": "0.0499465439177999",
+            "notional": "50.0",
+            "planned_exit_time": "2026-05-12T02:03:00Z",
+            "pnl": "2.497327195889995",
+            "position_id": "YGG_mean_reversion_short_20260512T000300Z",
+            "raw_entry_close": "0.04801",
+            "raw_exit_close": "0.04539",
+            "realistic_net_ret": "0.0499465439177999",
+            "side": "short",
+            "signal_id": "YGG_mean_reversion_short_20260512T000100Z",
+            "signal_range_bps": "206.95364238410616",
+            "signal_ret1_bps": "-136.58940397351049",
+            "signal_ret3_bps": "333.9115351257593",
+            "signal_ret5_bps": "340.6378824039935",
+            "signal_ret60_bps": "374.4013931214618",
+            "signal_time": "2026-05-12T00:01:00Z",
+            "signal_vol_quote": "314525.69792",
+            "strategy": "mean_reversion_short",
+            "stress_extra_bps": "50.0",
+            "stress_net_ret": "0.044946543917799904",
+            "stress_pnl": "2.247327195889995"
+          },
+          {
+            "close_id": "close_LAB_blowoff_short_20260512T021000Z_20260512T041000Z",
+            "coin": "LAB",
+            "entry_price": "5.2733835000000004",
+            "entry_range_bps": "132.33448682359267",
+            "entry_slip_bps": "25.0",
+            "entry_time": "2026-05-12T02:10:00Z",
+            "entry_vol_quote": "328643.537",
+            "equity_after": "1003.9250430775958",
+            "equity_before": "1002.49732719589",
+            "exit_price": "5.1145545",
+            "exit_slip_bps": "25.0",
+            "exit_time": "2026-05-12T04:10:00Z",
+            "family": "blowoff_short",
+            "family_key": "old_short",
+            "fee_bps_total": "25.0",
+            "gross_ret": "0.0310543176341167",
+            "hold_minutes_actual": "120.0",
+            "inst_id": "LAB-USDT-SWAP",
+            "net_ret": "0.028554317634116703",
+            "notional": "50.0",
+            "planned_exit_time": "2026-05-12T04:10:00Z",
+            "pnl": "1.427715881705835",
+            "position_id": "LAB_blowoff_short_20260512T021000Z",
+            "raw_entry_close": "5.2866",
+            "raw_exit_close": "5.1018",
+            "realistic_net_ret": "0.028554317634116703",
+            "side": "short",
+            "signal_id": "LAB_blowoff_short_20260512T020800Z",
+            "signal_range_bps": "74.4430974390057",
+            "signal_ret1_bps": "-45.08429626823185",
+            "signal_ret3_bps": "-81.53404801449437",
+            "signal_ret5_bps": "-75.16525023607113",
+            "signal_ret60_bps": "577.8869185402891",
+            "signal_time": "2026-05-12T02:08:00Z",
+            "signal_vol_quote": "510306.635",
+            "strategy": "blowoff_short",
+            "stress_extra_bps": "50.0",
+            "stress_net_ret": "0.023554317634116702",
+            "stress_pnl": "1.177715881705835"
+          },
+          {
+            "close_id": "close_CRCL_mean_reversion_short_20260512T133500Z_20260512T153500Z",
+            "coin": "CRCL",
+            "entry_price": "135.809625",
+            "entry_range_bps": "140.63980179261145",
+            "entry_slip_bps": "25.0",
+            "entry_time": "2026-05-12T13:35:00Z",
+            "entry_vol_quote": "669552.216",
+            "equity_after": "1008.0665659228621",
+            "equity_before": "1003.9250430775958",
+            "exit_price": "125.13204999999999",
+            "exit_slip_bps": "25.0",
+            "exit_time": "2026-05-12T15:35:00Z",
+            "family": "mean_reversion_short",
+            "family_key": "old_short",
+            "fee_bps_total": "25.0",
+            "gross_ret": "0.08533045690532526",
+            "hold_minutes_actual": "120.0",
+            "inst_id": "CRCL-USDT-SWAP",
+            "net_ret": "0.08283045690532526",
+            "notional": "50.0",
+            "planned_exit_time": "2026-05-12T15:35:00Z",
+            "pnl": "4.1415228452662625",
+            "position_id": "CRCL_mean_reversion_short_20260512T133500Z",
+            "raw_entry_close": "136.15",
+            "raw_exit_close": "124.82",
+            "realistic_net_ret": "0.08283045690532526",
+            "side": "short",
+            "signal_id": "CRCL_mean_reversion_short_20260512T133300Z",
+            "signal_range_bps": "137.8815080789937",
+            "signal_ret1_bps": "-55.99425699928218",
+            "signal_ret3_bps": "407.99459012698327",
+            "signal_ret5_bps": "501.09923432643643",
+            "signal_ret60_bps": "447.2433818538346",
+            "signal_time": "2026-05-12T13:33:00Z",
+            "signal_vol_quote": "1156203.024",
+            "strategy": "mean_reversion_short",
+            "stress_extra_bps": "50.0",
+            "stress_net_ret": "0.07783045690532525",
+            "stress_pnl": "3.8915228452662625"
+          }
+        ],
+        "size_bytes": 5103
+      },
+      {
+        "exists": true,
+        "header": [
+          "type",
+          "reason",
+          "log_time",
+          "signal_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "created_at"
+        ],
+        "name": "rejected_entries.csv",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\rejected_entries.csv",
+        "read_error": null,
+        "sample_policy": "header plus first 3 rows only",
+        "sample_rows": [
+          {
+            "coin": "LAB",
+            "created_at": "2026-05-10T21:05:56.484304Z",
+            "entry_delay_minutes": "2",
+            "family": "mean_reversion_short",
+            "family_key": "old_short",
+            "hold_minutes": "120",
+            "inst_id": "LAB-USDT-SWAP",
+            "log_time": "2026-05-10T21:16:56.303088Z",
+            "planned_exit_time": "2026-05-10T23:06:00Z",
+            "reason": "global_gate_timeout_gate_file_missing",
+            "side": "short",
+            "signal_close": "4.7934",
+            "signal_id": "LAB_mean_reversion_short_20260510T210400Z",
+            "signal_range_bps": "102.31399813219815",
+            "signal_ret1_bps": "-42.17130274009495",
+            "signal_ret3_bps": "153.78749364514556",
+            "signal_ret5_bps": "305.06288294098516",
+            "signal_ret60_bps": "403.9242072363414",
+            "signal_time": "2026-05-10T21:04:00Z",
+            "signal_vol_quote": "553759.978",
+            "strategy": "mean_reversion_short",
+            "target_entry_time": "2026-05-10T21:06:00Z",
+            "type": "entry_reject"
+          },
+          {
+            "coin": "SAHARA",
+            "created_at": "2026-05-10T22:47:40.535612Z",
+            "entry_delay_minutes": "2",
+            "family": "blowoff_short",
+            "family_key": "old_short",
+            "hold_minutes": "120",
+            "inst_id": "SAHARA-USDT-SWAP",
+            "log_time": "2026-05-10T22:57:57.227274Z",
+            "planned_exit_time": "2026-05-11T00:47:00Z",
+            "reason": "global_gate_timeout_gate_file_missing",
+            "side": "short",
+            "signal_close": "0.03989",
+            "signal_id": "SAHARA_blowoff_short_20260510T224500Z",
+            "signal_range_bps": "156.2112571286897",
+            "signal_ret1_bps": "-109.09992561368598",
+            "signal_ret3_bps": "-191.78755839685203",
+            "signal_ret5_bps": "-145.75098814229247",
+            "signal_ret60_bps": "580.9018567639268",
+            "signal_time": "2026-05-10T22:45:00Z",
+            "signal_vol_quote": "172967.0466",
+            "strategy": "blowoff_short",
+            "target_entry_time": "2026-05-10T22:47:00Z",
+            "type": "entry_reject"
+          },
+          {
+            "coin": "ENS",
+            "created_at": "2026-05-11T00:08:38.244658Z",
+            "entry_delay_minutes": "2",
+            "family": "mean_reversion_short",
+            "family_key": "old_short",
+            "hold_minutes": "120",
+            "inst_id": "ENS-USDT-SWAP",
+            "log_time": "2026-05-11T00:18:41.158840Z",
+            "planned_exit_time": "2026-05-11T02:08:00Z",
+            "reason": "global_gate_timeout_gate_file_missing",
+            "side": "short",
+            "signal_close": "7.884",
+            "signal_id": "ENS_mean_reversion_short_20260511T000600Z",
+            "signal_range_bps": "459.8703888335004",
+            "signal_ret1_bps": "-183.04071722076932",
+            "signal_ret3_bps": "175.5291688177585",
+            "signal_ret5_bps": "687.2712484749899",
+            "signal_ret60_bps": "635.3702954269536",
+            "signal_time": "2026-05-11T00:06:00Z",
+            "signal_vol_quote": "905607.9866",
+            "strategy": "mean_reversion_short",
+            "target_entry_time": "2026-05-11T00:08:00Z",
+            "type": "entry_reject"
+          }
+        ],
+        "size_bytes": 68634
+      },
+      {
+        "exists": true,
+        "header": [
+          "log_time",
+          "equity",
+          "open_positions",
+          "pending_entries",
+          "closed_count",
+          "errors",
+          "coins",
+          "strategy_family",
+          "require_global_gate"
+        ],
+        "name": "heartbeat.csv",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\heartbeat.csv",
+        "read_error": null,
+        "sample_policy": "header plus first 3 rows only",
+        "sample_rows": [
+          {
+            "closed_count": "0",
+            "coins": "283",
+            "equity": "1000.0",
+            "errors": "0",
+            "log_time": "2026-05-10T20:12:02.547635Z",
+            "open_positions": "0",
+            "pending_entries": "0",
+            "require_global_gate": "True",
+            "strategy_family": "old_short_gate_aware"
+          },
+          {
+            "closed_count": "0",
+            "coins": "283",
+            "equity": "1000.0",
+            "errors": "0",
+            "log_time": "2026-05-10T20:15:00.520302Z",
+            "open_positions": "0",
+            "pending_entries": "0",
+            "require_global_gate": "True",
+            "strategy_family": "old_short_gate_aware"
+          },
+          {
+            "closed_count": "0",
+            "coins": "283",
+            "equity": "1000.0",
+            "errors": "0",
+            "log_time": "2026-05-10T20:21:27.994213Z",
+            "open_positions": "0",
+            "pending_entries": "0",
+            "require_global_gate": "True",
+            "strategy_family": "old_short_gate_aware"
+          }
+        ],
+        "size_bytes": 109898
+      },
+      {
+        "exists": true,
+        "name": "state.json",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\state.json",
+        "read_error": null,
+        "sample": {
+          "closed_count": 7,
+          "coins": 283,
+          "equity": 1004.6529235482571,
+          "errors": 12,
+          "open": 0,
+          "pending": 0,
+          "require_global_gate": true,
+          "updated_at": "2026-05-14T02:24:46.614423Z"
+        },
+        "sample_policy": "header plus first 3 rows only",
+        "size_bytes": 203,
+        "top_level_keys": [
+          "closed_count",
+          "coins",
+          "equity",
+          "errors",
+          "open",
+          "pending",
+          "require_global_gate",
+          "updated_at"
+        ]
+      }
+    ],
+    "old_short_artifact_metadata_only": [
+      {
+        "exists": true,
+        "metadata_only": true,
+        "modified_time_utc": "2026-05-25T17:53:09Z",
+        "path": "artifacts/old_short/old_short_deep_gate_source_forensic_search_v1.json",
+        "size_bytes": 1477506
+      },
+      {
+        "exists": true,
+        "metadata_only": true,
+        "modified_time_utc": "2026-05-25T17:05:33Z",
+        "path": "artifacts/old_short/old_short_evidence_recovery_status_refresh_v1.json",
+        "size_bytes": 325644
+      },
+      {
+        "exists": true,
+        "metadata_only": true,
+        "modified_time_utc": "2026-05-25T17:36:51Z",
+        "path": "artifacts/old_short/old_short_exact_rerun_unavailable_closure_v1.json",
+        "size_bytes": 6456
+      },
+      {
+        "exists": true,
+        "metadata_only": true,
+        "modified_time_utc": "2026-05-25T17:11:29Z",
+        "path": "artifacts/old_short/old_short_frozen_route_contract_reconstruction_v1.json",
+        "size_bytes": 9371
+      },
+      {
+        "exists": true,
+        "metadata_only": true,
+        "modified_time_utc": "2026-05-25T17:27:53Z",
+        "path": "artifacts/old_short/old_short_gate_source_disambiguation_review_v1.json",
+        "size_bytes": 33106
+      },
+      {
+        "exists": true,
+        "metadata_only": true,
+        "modified_time_utc": "2026-05-25T18:02:26Z",
+        "path": "artifacts/old_short/old_short_master_upper_system_source_review_v1.json",
+        "size_bytes": 146946
+      },
+      {
+        "exists": true,
+        "metadata_only": true,
+        "modified_time_utc": "2026-05-25T17:18:15Z",
+        "path": "artifacts/old_short/old_short_missing_data_source_recovery_discovery_v1.json",
+        "size_bytes": 766442
+      },
+      {
+        "exists": true,
+        "metadata_only": true,
+        "modified_time_utc": "2026-05-25T18:18:39Z",
+        "path": "artifacts/old_short/old_short_proxy_backtest_data_coverage_source_review_v1.json",
+        "size_bytes": 378254
+      }
+    ],
+    "runner_preview": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW",
+      "loaded": true,
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_preview_v1.json",
+      "payload_sha256_excluding_hash": "31f36fb36bc02fe059faa3fccb141074afe5f12f4e49933de6ee82cd0acd767b",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW_CREATED"
+    },
+    "validator_implementation_preview": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_VALIDATOR_IMPLEMENTATION_PREVIEW",
+      "loaded": true,
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_VALIDATOR_DRY_RUN_DESIGN_V1",
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_validator_implementation_preview_v1.json",
+      "payload_sha256_excluding_hash": "16b958e63f57d882b1809369b248896d16bb8cd1f82129322b3a23e7198b805a",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_VALIDATOR_IMPLEMENTATION_PREVIEW_CREATED"
+    },
+    "validator_preview": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_VALIDATOR_PREVIEW",
+      "loaded": true,
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_validator_preview_v1.json",
+      "payload_sha256_excluding_hash": "47e476820607edf9ae74950b57fb32ca1841f5893d1889af89b3e217fe719c39",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_VALIDATOR_PREVIEW_CREATED"
+    }
+  },
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-25T19:25:39Z",
+    "git_head": "fe34dbd44aa105280e336595ad09a99a83084fdb",
+    "git_head_subject": "Add old short clean-room validator implementation preview",
+    "preflight_repo_status": {
+      "allowed_pending_before_run": [
+        "?? tools/edge_factory_os_repo_only_old_short_clean_room_validator_dry_run_design_v1.py"
+      ],
+      "dirty_tracked_before_run": [],
+      "no_existing_files_modified": true,
+      "repo_clean_before_run": true,
+      "status_lines_before_run": [
+        "?? tools/edge_factory_os_repo_only_old_short_clean_room_validator_dry_run_design_v1.py"
+      ],
+      "target_artifact_preexisting_before_run": false,
+      "target_tool_present_as_new_untracked_file": true,
+      "unexpected_untracked_before_run": []
+    },
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo"
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_VALIDATOR_DRY_RUN_DESIGN_CREATED",
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence"
+  ],
+  "validation_checks": {
+    "behavioral_similarity_checks_defined": true,
+    "behavioral_validation_only_preserved": true,
+    "clean_room_contract_loaded": true,
+    "dry_run_scope_defined": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_called": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_full_dataset_comparison": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_runtime_live_capital": true,
+    "no_runtime_touched": true,
+    "no_validator_execution": true,
+    "original_exact_source_not_claimed": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "result_classes_no_edge_no_live": true,
+    "runner_preview_loaded": true,
+    "sample_policy_defined": true,
+    "schema_checks_defined": true,
+    "unresolved_fields_preserved": true,
+    "validator_implementation_next_allowed_step_verified": true,
+    "validator_implementation_preview_loaded": true,
+    "validator_preview_loaded": true
+  }
+}

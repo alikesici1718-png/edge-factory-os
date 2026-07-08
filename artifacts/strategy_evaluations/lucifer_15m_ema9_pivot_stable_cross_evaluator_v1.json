@@ -1,0 +1,129 @@
+{
+  "artifact_kind": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EVALUATOR",
+  "config_id": "lucifer_15m_ema9_pivot_stable_cross_sl1_tp2",
+  "evaluator_findings": {
+    "diagnostic_promising": false,
+    "holdout_monthly_positive_rate": 0.142857,
+    "holdout_net_bps": -19.075924,
+    "metric_integrity_passed": true,
+    "no_lookahead_repaint_issue": true,
+    "null_baseline_limitation_recorded": false,
+    "null_baseline_pass": false,
+    "null_policy_satisfied_for_promising_gate": false,
+    "rejection_reasons": [
+      "validation_net_bps_not_positive",
+      "validation_monthly_positive_rate_below_0_60",
+      "holdout_net_bps_not_positive",
+      "null_baseline_not_passed_and_no_limitation"
+    ],
+    "result_class": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+    "safety_review_passed": true,
+    "validation_closed_trades": 4747,
+    "validation_closed_trades_min_100_pass": true,
+    "validation_monthly_positive_rate": 0.0,
+    "validation_net_bps": -20.969033,
+    "validation_null_percentile": 0.21
+  },
+  "evaluator_inputs": {
+    "execution_artifact": "artifacts/strategy_executions/lucifer_15m_ema9_pivot_stable_cross_execution_v1.json",
+    "execution_payload_hash_verified": true,
+    "execution_payload_sha256_excluding_hash": "7d3ae7af0970d9a2b28345491d370f83725ccb355864fd3523c16bcfeb608bfa",
+    "execution_rerun": false,
+    "execution_status": "PASS_REPO_CODE_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTED",
+    "metadata_read": "git HEAD, tracked Python count, and dirty path scope only",
+    "panel_rows_read": false
+  },
+  "evaluator_policy_applied": {
+    "allowed_result_classes": [
+      "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+      "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+      "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_INCONCLUSIVE_NEEDS_MORE_DATA",
+      "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
+    ],
+    "diagnostic_promising_true_only_if_all_true": [
+      "validation net bps > 0",
+      "validation monthly positive rate >= 0.60",
+      "validation closed trades >= 100, otherwise inconclusive",
+      "holdout net bps > 0",
+      "null baseline passes or limitation is explicitly recorded",
+      "metric integrity passes",
+      "no lookahead/repaint issue",
+      "safety review passes"
+    ]
+  },
+  "execution_metric_snapshot": {
+    "accepted_signals": 17716,
+    "both_hit_same_bar_count": 48,
+    "closed_trades": 17714,
+    "cooldown_skipped_count": 1497,
+    "fake_pivot_jump_blocked_count": 1,
+    "gross_bps": 0.869369,
+    "holdout_monthly_positive_rate": 0.142857,
+    "holdout_net_bps": -19.075924,
+    "holdout_worst_month": {
+      "month": "2025-09",
+      "net_bps": -31.836735
+    },
+    "long_trades": 8384,
+    "net_bps": -19.130631,
+    "open_unresolved_trades": 2,
+    "short_trades": 9330,
+    "skipped_signals": 2339,
+    "stop_hit_count": 11758,
+    "take_profit_hit_count": 5956,
+    "total_signals": 20055,
+    "validation_monthly_positive_rate": 0.0,
+    "validation_net_bps": -20.969033,
+    "validation_worst_month": {
+      "month": "2024-08",
+      "net_bps": -35.690867
+    },
+    "win_rate": 0.336231
+  },
+  "module": "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_evaluator_v1.py",
+  "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_closure_v1.py",
+  "payload_sha256_excluding_hash": "3524987813d75b612b8fe4c120f54d4c67848712e9fe5559d9e3957a7c4a07e7",
+  "replacement_checks_all_true": true,
+  "route_family": "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE",
+  "safety_closure_constraints": {
+    "candidate_generated": false,
+    "capital_permission_granted": false,
+    "edge_claimed": false,
+    "family_released": false,
+    "live_permission_granted": false,
+    "orders_submitted": false,
+    "runtime_permission_granted": false
+  },
+  "source_checkpoint": {
+    "dirty_paths_during_artifact_creation": [
+      "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_evaluator_v1.py"
+    ],
+    "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": true,
+    "pre_evaluator_head": "28868c14a98fc59908b4d556fa6ab60149dcc40e",
+    "pre_evaluator_head_verified_at_artifact_creation": "28868c14a98fc59908b4d556fa6ab60149dcc40e",
+    "repo_clean_before_evaluator_confirmed_externally": true,
+    "tracked_python_count_before_evaluator": 934,
+    "tracked_python_count_verified_at_artifact_creation": 934
+  },
+  "status": "PASS_REPO_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EVALUATED",
+  "strategy_name": "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1",
+  "validation_checks": {
+    "artifact_path_equals_required_path": true,
+    "diagnostic_promising_policy_applied": true,
+    "execution_artifact_loaded": true,
+    "execution_not_rerun": true,
+    "execution_payload_hash_verified": true,
+    "metric_integrity_result_recorded": true,
+    "module_path_equals_required_path": true,
+    "no_candidate": true,
+    "no_edge_claim": true,
+    "no_lookahead_repaint_result_recorded": true,
+    "no_runtime_live_capital": true,
+    "panel_rows_not_read": true,
+    "payload_sha256_excluding_hash_present": true,
+    "replacement_checks_all_true": true,
+    "result_class_allowed": true,
+    "safety_result_recorded": true,
+    "status_equals_required_status": true
+  }
+}

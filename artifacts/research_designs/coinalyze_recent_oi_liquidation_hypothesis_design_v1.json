@@ -1,0 +1,341 @@
+{
+  "anti_overfit_policy": {
+    "chronological_segments_required_if_enough_data": true,
+    "coinalyze_free_data_recent_short_history_limitation": true,
+    "event_study_before_strategy_backtest": true,
+    "future_backtest_requires_lockbox_or_paper_forward": true,
+    "no_live_capital_candidate_after_event_study": true,
+    "no_parameter_grid": true,
+    "round_structural_thresholds_only": true
+  },
+  "artifact_kind": "COINALYZE_RECENT_OI_LIQUIDATION_HYPOTHESIS_DESIGN",
+  "data_availability_interpretation": {
+    "available_mechanism_inputs": [
+      "open_interest_history",
+      "liquidation_history",
+      "funding_rate_history",
+      "long_short_ratio_history",
+      "ohlcv_history_for_alignment"
+    ],
+    "interpretation": "The V5 discovery found OI, liquidation, and funding coverage across all 10 probe symbols with 15min as the best usable interval, supporting recent-data mechanism studies but not long-history OHLCV-style lockbox claims.",
+    "ready_for_recent_research": true,
+    "recommended_scope": "Recent Coinalyze-only dataset build followed by event studies before any strategy backtest.",
+    "usable_for_2022_2025_deep_backtest": false
+  },
+  "hypothesis_designs": [
+    {
+      "anti_overfit_requirements": [
+        "No parameter grid in the first event study.",
+        "Use round structural thresholds only, such as top decile event buckets or fixed multiples of recent median liquidation volume.",
+        "Chronologically split recent data if enough history exists; do not use later segments to tune earlier definitions.",
+        "Compare event windows to simple time-block nulls before any backtest is considered.",
+        "No candidate, edge, live, or capital permission from event-study results."
+      ],
+      "expected_direction": "Upward mean reversion after the liquidation cascade completes and OI has flushed.",
+      "hypothesis_key": "LONG_LIQUIDATION_EXHAUSTION_REVERSAL",
+      "mechanism": "After a strong sell move, a large long-liquidation spike with falling open interest can mark forced selling exhaustion rather than voluntary risk transfer.",
+      "minimum_history_needed": "At least 30 recent 15m days for a first event study; 60 or more days preferred for chronological segmentation.",
+      "no_trade_conditions": [
+        "Liquidation spike occurs without OI contraction.",
+        "Funding and long/short ratio still indicate fresh long crowding after the event.",
+        "Broad market remains in an accelerating sell cascade.",
+        "Event occurs in illiquid or incomplete data windows."
+      ],
+      "overfitting_risks": [
+        "Choosing best liquidation-spike threshold after seeing outcomes.",
+        "Optimizing rebound horizon by symbol.",
+        "Treating one exchange's liquidation feed as market-wide truth."
+      ],
+      "pass_fail_design_criteria_for_future_preregistration": {
+        "fail": "Forward returns are mixed, entirely symbol/month dependent, or similar to timestamp-block null events.",
+        "pass": "Across chronological segments, post-event forward returns are directionally positive after costs are ignored for event study, event frequency is sufficient, and effect is not dominated by one symbol."
+      },
+      "possible_failure_modes": [
+        "Liquidation cascade is trend continuation rather than exhaustion.",
+        "OI drop reflects liquidity withdrawal, not completed forced selling.",
+        "Funding data is too sparse or exchange-specific to identify crowding.",
+        "Recent free-history window is too short for robust tail-event statistics."
+      ],
+      "preferred_interval": "15min",
+      "proposed_first_test_type": "EVENT_STUDY_ONLY",
+      "required_data_fields": [
+        "long_liquidation_volume",
+        "open_interest",
+        "open_interest_delta",
+        "close",
+        "price_return",
+        "funding_rate",
+        "long_short_ratio"
+      ],
+      "why_others_cant_arb": "The setup depends on forced deleveraging, latency of crowd unwind, and uncertainty about whether liquidations are complete; many participants cannot add risk during cascades."
+    },
+    {
+      "anti_overfit_requirements": [
+        "No parameter grid in the first event study.",
+        "Use round structural thresholds only, such as top decile event buckets or fixed multiples of recent median liquidation volume.",
+        "Chronologically split recent data if enough history exists; do not use later segments to tune earlier definitions.",
+        "Compare event windows to simple time-block nulls before any backtest is considered.",
+        "No candidate, edge, live, or capital permission from event-study results."
+      ],
+      "expected_direction": "Downward mean reversion after short-squeeze exhaustion and OI flush.",
+      "hypothesis_key": "SHORT_LIQUIDATION_EXHAUSTION_REVERSAL",
+      "mechanism": "After a strong pump, a large short-liquidation spike with falling open interest can mark forced buying exhaustion after a short squeeze.",
+      "minimum_history_needed": "At least 30 recent 15m days for initial event study; 60 or more days preferred.",
+      "no_trade_conditions": [
+        "Short-liquidation spike occurs while OI continues to expand.",
+        "Funding remains negative enough to suggest shorts are still crowded rather than flushed.",
+        "BTC and ETH are in broad market pump conditions.",
+        "The event is caused by listing or data discontinuity."
+      ],
+      "overfitting_risks": [
+        "Picking pump-return and liquidation thresholds from best examples.",
+        "Selecting only symbols with visible squeeze reversals.",
+        "Using holdout-like recent days to tune event definitions."
+      ],
+      "pass_fail_design_criteria_for_future_preregistration": {
+        "fail": "Events continue upward, are too rare, or depend on a single pump episode.",
+        "pass": "Forward returns after short-liquidation/OI-flush events are negative across multiple symbols and segments, with timestamp-block nulls less competitive."
+      },
+      "possible_failure_modes": [
+        "Short liquidation spike starts a momentum breakout instead of ending one.",
+        "OI drop is too small to prove deleveraging.",
+        "Crowding proxies disagree across funding and long/short ratio."
+      ],
+      "preferred_interval": "15min",
+      "proposed_first_test_type": "EVENT_STUDY_ONLY",
+      "required_data_fields": [
+        "short_liquidation_volume",
+        "open_interest",
+        "open_interest_delta",
+        "close",
+        "price_return",
+        "funding_rate",
+        "long_short_ratio"
+      ],
+      "why_others_cant_arb": "Short squeezes are reflexive and balance-sheet constrained; arbitrageurs may wait until forced buying slows, making exhaustion timing hard but potentially observable."
+    },
+    {
+      "anti_overfit_requirements": [
+        "No parameter grid in the first event study.",
+        "Use round structural thresholds only, such as top decile event buckets or fixed multiples of recent median liquidation volume.",
+        "Chronologically split recent data if enough history exists; do not use later segments to tune earlier definitions.",
+        "Compare event windows to simple time-block nulls before any backtest is considered.",
+        "No candidate, edge, live, or capital permission from event-study results."
+      ],
+      "expected_direction": "Continuation when OI builds without adverse liquidation; reversal when buildup is followed by liquidation shock against the crowded side.",
+      "hypothesis_key": "OI_BUILDUP_BREAKOUT_CONTINUATION_OR_TRAP",
+      "mechanism": "Open interest rising with price expansion indicates leverage buildup; continuation may follow if no liquidation occurs, while liquidation against the crowded side may turn the move into a trap.",
+      "minimum_history_needed": "At least 60 days of 15m or 1h data for buildup periods plus event follow-through windows.",
+      "no_trade_conditions": [
+        "OI and price move are directionally inconsistent.",
+        "Liquidation data is missing or side cannot be separated.",
+        "Funding is neutral and OI buildup is small relative to recent baseline."
+      ],
+      "overfitting_risks": [
+        "Optimizing OI buildup lookback.",
+        "Separating continuation/trap regimes after seeing PnL-like outcomes.",
+        "Choosing different event windows by symbol."
+      ],
+      "pass_fail_design_criteria_for_future_preregistration": {
+        "fail": "Field coverage is inconsistent, side labels are ambiguous, or event counts are too sparse.",
+        "pass": "Dataset review confirms stable OI trend, liquidation-side, funding, and price fields across the probe universe before any event outcome test."
+      },
+      "possible_failure_modes": [
+        "OI buildup reflects hedging, not directional leverage.",
+        "Liquidation shock arrives after the measured forward window.",
+        "Continuation and trap regimes cancel in aggregate."
+      ],
+      "preferred_interval": "15min",
+      "proposed_first_test_type": "DATASET_BUILD_ONLY",
+      "required_data_fields": [
+        "open_interest",
+        "open_interest_delta",
+        "price_return",
+        "long_liquidation_volume",
+        "short_liquidation_volume",
+        "funding_rate"
+      ],
+      "why_others_cant_arb": "The signal separates healthy leverage expansion from forced unwind only after combining OI trend, price trend, and liquidation side; single-variable arbitrage is noisy."
+    },
+    {
+      "anti_overfit_requirements": [
+        "No parameter grid in the first event study.",
+        "Use round structural thresholds only, such as top decile event buckets or fixed multiples of recent median liquidation volume.",
+        "Chronologically split recent data if enough history exists; do not use later segments to tune earlier definitions.",
+        "Compare event windows to simple time-block nulls before any backtest is considered.",
+        "No candidate, edge, live, or capital permission from event-study results."
+      ],
+      "expected_direction": "Reversal away from the crowded funding side after OI contracts and liquidation confirms unwind.",
+      "hypothesis_key": "FUNDING_CROWDING_UNWIND",
+      "mechanism": "Extreme positive funding suggests crowded longs and extreme negative funding suggests crowded shorts; OI contraction plus liquidation confirms crowd unwind.",
+      "minimum_history_needed": "At least 60 recent days because funding regimes are slower than 15m liquidation shocks.",
+      "no_trade_conditions": [
+        "Funding is extreme but OI is still expanding.",
+        "No liquidation confirmation occurs.",
+        "Funding field is stale, missing, or exchange timing cannot be aligned."
+      ],
+      "overfitting_risks": [
+        "Choosing funding cutoffs from best reversals.",
+        "Combining many confirmation filters until sample is tiny.",
+        "Using the same recent window for threshold discovery and evaluation."
+      ],
+      "pass_fail_design_criteria_for_future_preregistration": {
+        "fail": "Funding extremes alone dominate without confirmation, or confirmed events are too rare to evaluate honestly.",
+        "pass": "Extreme-funding plus OI/liquidation-confirmed events show consistent reversal direction across chronological segments."
+      },
+      "possible_failure_modes": [
+        "Funding remains extreme during persistent trend.",
+        "Funding is arbitraged by basis trades and not a clean directional crowding measure.",
+        "Free recent data has too few full funding cycles."
+      ],
+      "preferred_interval": "1hour",
+      "proposed_first_test_type": "EVENT_STUDY_ONLY",
+      "required_data_fields": [
+        "funding_rate",
+        "open_interest",
+        "open_interest_delta",
+        "long_liquidation_volume",
+        "short_liquidation_volume",
+        "price_return",
+        "long_short_ratio"
+      ],
+      "why_others_cant_arb": "Funding crowding can persist longer than expected, so naive contrarian trades are dangerous; forced-liquidation confirmation may identify the narrower unwind phase."
+    },
+    {
+      "anti_overfit_requirements": [
+        "No parameter grid in the first event study.",
+        "Use round structural thresholds only, such as top decile event buckets or fixed multiples of recent median liquidation volume.",
+        "Chronologically split recent data if enough history exists; do not use later segments to tune earlier definitions.",
+        "Compare event windows to simple time-block nulls before any backtest is considered.",
+        "No candidate, edge, live, or capital permission from event-study results."
+      ],
+      "expected_direction": "Short-term reversal opposite the liquidation side once OI confirms a flush.",
+      "hypothesis_key": "LIQUIDATION_IMBALANCE_WITH_OI_FLUSH",
+      "mechanism": "A one-sided liquidation imbalance plus falling OI may distinguish forced exit from ordinary volatility and identify short-term exhaustion.",
+      "minimum_history_needed": "At least 30 recent 15m days for first event study; more history required before any backtest.",
+      "no_trade_conditions": [
+        "Long and short liquidations are balanced.",
+        "OI does not fall during the liquidation event.",
+        "Price movement is small relative to recent volatility.",
+        "Event overlaps known data outage or incomplete exchange coverage."
+      ],
+      "overfitting_risks": [
+        "Mining imbalance ratios.",
+        "Choosing forward windows after looking at event returns.",
+        "Dropping symbols with adverse liquidation behavior."
+      ],
+      "pass_fail_design_criteria_for_future_preregistration": {
+        "fail": "Imbalance events behave like normal volatility or are not distinct from random high-volume intervals.",
+        "pass": "One-sided liquidation plus OI-flush events show reversal behavior across sides, symbols, and chronological segments, with no single cascade dominating."
+      },
+      "possible_failure_modes": [
+        "Liquidation imbalance is a momentum confirmation, not exhaustion.",
+        "OI flush follows rather than precedes the tradable reversal window.",
+        "Event study is dominated by one market-wide cascade."
+      ],
+      "preferred_interval": "15min",
+      "proposed_first_test_type": "EVENT_STUDY_ONLY",
+      "required_data_fields": [
+        "long_liquidation_volume",
+        "short_liquidation_volume",
+        "liquidation_imbalance",
+        "open_interest",
+        "open_interest_delta",
+        "price_return",
+        "volume"
+      ],
+      "why_others_cant_arb": "The opportunity depends on transient forced flow and balance-sheet stress; crowd exits are not easily arbitraged while liquidation engines are still active."
+    }
+  ],
+  "limitations": [
+    "This design uses only V5 availability metadata; it does not call Coinalyze or acquire new rows.",
+    "Coinalyze free data is recent and short-history, so any later backtest would require separate lockbox or paper-forward treatment.",
+    "Hypotheses are mechanisms for future testing, not candidates or edge claims."
+  ],
+  "module": "edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_hypothesis_design_v1",
+  "next_allowed_step": "COINALYZE_RECENT_OI_LIQUIDATION_DATASET_BUILDER_V1",
+  "payload_sha256_excluding_hash": "5a2bb26517fe935085f8595857bfc02a104d057b4c28162d59e0dc0983a032a6",
+  "prior_discovery_summary": {
+    "best_usable_interval": "15min",
+    "commit": "aeee03c3a504db2d72262cc23fcf3be5313abf74",
+    "endpoint_success_counts": {
+      "funding-rate-history": 30,
+      "liquidation-history": 30,
+      "long-short-ratio-history": 30,
+      "ohlcv-history": 30,
+      "open-interest-history": 30
+    },
+    "market_count": 4403,
+    "probe_symbol_count": 10,
+    "result_classification": "COINALYZE_FREE_DATA_READY_FOR_RECENT_OI_LIQUIDATION_RESEARCH",
+    "status": "PASS_REPO_ONLY_COINALYZE_FREE_OI_LIQ_FUNDING_AVAILABILITY_DISCOVERY_V5_CREATED",
+    "usable_funding_symbol_count": 10,
+    "usable_liquidation_symbol_count": 10,
+    "usable_oi_symbol_count": 10
+  },
+  "recommended_hypothesis_priority": [
+    {
+      "hypothesis_key": "LIQUIDATION_IMBALANCE_WITH_OI_FLUSH",
+      "rank": 1,
+      "rationale": "Most directly tests forced-flow exhaustion using liquidation side plus OI contraction and can be studied symmetrically for long and short cascades."
+    },
+    {
+      "hypothesis_key": "LONG_LIQUIDATION_EXHAUSTION_REVERSAL",
+      "rank": 2,
+      "rationale": "Clean forced-selling exhaustion mechanism after sell cascades."
+    },
+    {
+      "hypothesis_key": "SHORT_LIQUIDATION_EXHAUSTION_REVERSAL",
+      "rank": 3,
+      "rationale": "Clean forced-buying exhaustion mechanism after short squeezes."
+    },
+    {
+      "hypothesis_key": "FUNDING_CROWDING_UNWIND",
+      "rank": 4,
+      "rationale": "Useful crowding overlay, but funding can persist and should require OI/liquidation confirmation."
+    },
+    {
+      "hypothesis_key": "OI_BUILDUP_BREAKOUT_CONTINUATION_OR_TRAP",
+      "rank": 5,
+      "rationale": "Broader regime concept that should start with dataset review because continuation/trap definitions are easier to overfit."
+    }
+  ],
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "data_builder_allowed_next": true,
+    "edge_claim_allowed_now": false,
+    "hypothesis_design_created": true,
+    "live_permission_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "coinalyze_v5_discovery": "artifacts/data_discovery/coinalyze_free_oi_liq_funding_availability_discovery_v5.json",
+    "prior_ohlcv_context_used": false
+  },
+  "source_checkpoint": "aeee03c3a504db2d72262cc23fcf3be5313abf74",
+  "status": "PASS_REPO_ONLY_COINALYZE_RECENT_OI_LIQUIDATION_HYPOTHESIS_DESIGN_CREATED",
+  "validation_checks": {
+    "coinalyze_v5_discovery_loaded": true,
+    "discovery_ready_verified": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_call_made": true,
+    "no_api_key_used": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_pnl_computation": true,
+    "no_runtime_live_capital": true,
+    "no_signal_generation": true,
+    "no_strategy_execution": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

@@ -1,0 +1,983 @@
+{
+  "allowed_next_step": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_DISCOVERY_V1",
+  "artifact_kind": "OUTCOME_BLIND_BINANCE_THEORY_QUEUE_BUILDER",
+  "available_feature_registry": {
+    "global_long_short_ratio": {
+      "available": true,
+      "symbols_available": 10
+    },
+    "historical_2020_2022_probe_metadata": {
+      "archive_availability_summary": {
+        "available_archive_count": 3763,
+        "missing_archive_count": 11356
+      },
+      "available": true,
+      "holdout_event_count": 98,
+      "symbols_available": [
+        "APTUSDT",
+        "BNBUSDT",
+        "BTCUSDT",
+        "DOGEUSDT",
+        "ETHUSDT",
+        "LINKUSDT",
+        "OPUSDT",
+        "SOLUSDT",
+        "XRPUSDT"
+      ]
+    },
+    "independent_2026_probe_metadata": {
+      "archive_availability_summary": {
+        "available_archive_count": 1761,
+        "missing_archive_count": 79
+      },
+      "available": true,
+      "symbols_available": [
+        "APTUSDT",
+        "ARBUSDT",
+        "BNBUSDT",
+        "BTCUSDT",
+        "DOGEUSDT",
+        "ETHUSDT",
+        "LINKUSDT",
+        "OPUSDT",
+        "SOLUSDT",
+        "XRPUSDT"
+      ],
+      "validation_event_count": 81
+    },
+    "open_interest_metrics": {
+      "available": true,
+      "coverage": {
+        "historical_holdout_window": {
+          "end": "2022-12-31T23:45:00Z",
+          "pre_2023_only": true,
+          "start": "2020-01-01T00:00:00Z",
+          "used_2023_2025_research_sample": false
+        },
+        "independent_2026_window": {
+          "end": "2026-05-26T23:45:00Z",
+          "start": "2026-01-01T00:00:00Z",
+          "uses_2023_2025_research_sample": false,
+          "validation_start_not_before": "2026-01-01"
+        },
+        "research_2023_2025_max": "2025-12-31T23:55:00Z",
+        "research_2023_2025_min": "2023-01-01T00:00:00Z"
+      },
+      "symbols_available": 10
+    },
+    "public_15m_kline_ohlcv": {
+      "available": true,
+      "interval": "15m",
+      "research_archive_availability": {
+        "cache_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\cache\\binance_public_kline_forward_return_diagnostic_v1",
+        "host": "data.binance.vision",
+        "monthly_archive_count_available": 358,
+        "monthly_archive_count_missing": 2,
+        "monthly_archive_count_requested": 360,
+        "path_template": "data/futures/um/monthly/klines/{symbol}/15m/{symbol}-15m-{year:04d}-{month:02d}.zip",
+        "raw_cache_gitignored": true
+      },
+      "row_count": 1044324
+    },
+    "taker_buy_sell_pressure_ratio": {
+      "available": true,
+      "note": "Metric archive has taker buy/sell ratio and derived sell pressure, not raw taker buy/sell volume components.",
+      "symbols_available": 10
+    },
+    "top_account_long_short_ratio": {
+      "available": true,
+      "symbols_available": 10
+    },
+    "top_position_long_short_ratio": {
+      "available": true,
+      "symbols_available": 10
+    }
+  },
+  "backlog_theories": [
+    {
+      "allowed_next_step_if_selected": "OI_EXPANSION_PRICE_ABSORPTION_WITH_VOLUME_CONFIRMATION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "ideal_to_acceptable",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Requires absorption and volume confirmation; avoids broad crowding and does not reuse short_core pressure-failure definition.",
+      "mechanical_rationale": "OI expansion plus extreme taker flow is only considered when the current bar/range shows absorption and public kline volume confirms stress.",
+      "overfitting_risk": "medium",
+      "pre_registration_requirements": [
+        "limit volume threshold degrees of freedom",
+        "predefine absorption variants before return diagnostics",
+        "block any reuse of exact short_core labels"
+      ],
+      "primary_event_discovery_module_name": "OI_EXPANSION_PRICE_ABSORPTION_WITH_VOLUME_CONFIRMATION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 4,
+      "required_features": [
+        "open_interest",
+        "taker_ratio",
+        "15m_ohlcv_volume",
+        "range_close_location",
+        "wick_absorption"
+      ],
+      "theory_id": "OI_EXPANSION_PRICE_ABSORPTION_WITH_VOLUME_CONFIRMATION"
+    },
+    {
+      "allowed_next_step_if_selected": "CROSS_SYMBOL_PRESSURE_DISPERSION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available_with_symbol_listing_limitations",
+      "expected_event_frequency_band": "ideal",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Cross-symbol state diagnostic, not the exact short_core or broad single-event route.",
+      "mechanical_rationale": "A cross-sectional dispersion/concentration event captures relative pressure across symbols without directional single-symbol optimization.",
+      "overfitting_risk": "medium",
+      "pre_registration_requirements": [
+        "freeze symbol universe before event discovery",
+        "handle listing-history missingness explicitly",
+        "no forward-return-weighted symbol selection"
+      ],
+      "primary_event_discovery_module_name": "CROSS_SYMBOL_PRESSURE_DISPERSION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 5,
+      "required_features": [
+        "multi_symbol_oi_change",
+        "multi_symbol_taker_pressure",
+        "cross_sectional_dispersion"
+      ],
+      "theory_id": "CROSS_SYMBOL_PRESSURE_DISPERSION_EVENT"
+    },
+    {
+      "allowed_next_step_if_selected": "MARKET_WIDE_OI_SYNCHRONIZATION_STRESS_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available_with_symbol_listing_limitations",
+      "expected_event_frequency_band": "sparse_but_feasible",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Market-state diagnostic that avoids single-symbol crowding forward-return route reuse.",
+      "mechanical_rationale": "Synchronized OI expansion/contraction and taker imbalance across many symbols define a market stress state, not a strategy.",
+      "overfitting_risk": "low_medium",
+      "pre_registration_requirements": [
+        "freeze breadth threshold",
+        "freeze symbol inclusion policy",
+        "separate expansion and contraction states before diagnostics"
+      ],
+      "primary_event_discovery_module_name": "MARKET_WIDE_OI_SYNCHRONIZATION_STRESS_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 6,
+      "required_features": [
+        "multi_symbol_oi_change",
+        "multi_symbol_taker_imbalance",
+        "market_wide_synchronization_count"
+      ],
+      "theory_id": "MARKET_WIDE_OI_SYNCHRONIZATION_STRESS_EVENT"
+    },
+    {
+      "allowed_next_step_if_selected": "TAKER_PRESSURE_DIVERGENCE_WITH_PRICE_NONCONFIRMATION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "acceptable_but_potentially_broad",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "OI is annotation/tier, not optimized threshold; avoids taker-flow momentum continuation and taker-buy exhaustion labels.",
+      "mechanical_rationale": "Extreme taker pressure with non-confirming price action can be studied with OI as an annotation rather than a tuned hard gate.",
+      "overfitting_risk": "medium_high",
+      "pre_registration_requirements": [
+        "cap variants and sides",
+        "use OI tiers only for descriptive coverage",
+        "reject momentum/exhaustion naming"
+      ],
+      "primary_event_discovery_module_name": "TAKER_PRESSURE_DIVERGENCE_WITH_PRICE_NONCONFIRMATION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 7,
+      "required_features": [
+        "taker_ratio",
+        "15m_ohlc_close_location",
+        "price_nonconfirmation",
+        "oi_annotation"
+      ],
+      "theory_id": "TAKER_PRESSURE_DIVERGENCE_WITH_PRICE_NONCONFIRMATION"
+    },
+    {
+      "allowed_next_step_if_selected": "PRICE_RANGE_REJECTION_WITH_OI_TAKER_CONFIRMATION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "acceptable_but_potentially_broad",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Price action is primary and OI/taker are confirmation tiers; must exclude the exact tested short_core definition.",
+      "mechanical_rationale": "Make public kline wick/range rejection the primary event, while OI/taker features confirm stress rather than define the same already-tested short_core route.",
+      "overfitting_risk": "medium_high",
+      "pre_registration_requirements": [
+        "hard exclude exact short_core definition",
+        "freeze wick/range logic before return labels",
+        "limit confirmation tier count"
+      ],
+      "primary_event_discovery_module_name": "PRICE_RANGE_REJECTION_WITH_OI_TAKER_CONFIRMATION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 8,
+      "required_features": [
+        "15m_ohlc_wick_range_rejection",
+        "open_interest_annotation",
+        "taker_pressure_confirmation"
+      ],
+      "theory_id": "PRICE_RANGE_REJECTION_WITH_OI_TAKER_CONFIRMATION"
+    }
+  ],
+  "blocked_route_keys": [
+    "broad_oi_taker_crowding_forward_return_route",
+    "funding_crowding_reversal",
+    "funding_carry",
+    "funding_extreme_volume_surge",
+    "taker_buy_exhaustion",
+    "taker_flow_momentum_continuation",
+    "SHORT_PRESSURE_FAILURE_DELAYED_DOWNSIDE_CONTINUATION_DIAGNOSTIC_as_live_candidate_route",
+    "liquidation_required_route_without_liquidation_data",
+    "funding_required_route_without_funding_data"
+  ],
+  "blocker": null,
+  "current_head": "073a4bcb8e06b6582c9a87099cf56169a4fc6b81",
+  "expected_head": "073a4bcb8e06b6582c9a87099cf56169a4fc6b81",
+  "forbidden_actions_confirmed_false": {
+    "backtest": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "failed_routes_reused_under_new_names": false,
+    "forward_returns_computed": false,
+    "null_validation_run": false,
+    "optimization_against_returns": false,
+    "order_private_account_api_key": false,
+    "p_values_computed": false,
+    "pnl": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "strategy": false,
+    "trade_simulation": false
+  },
+  "head_matches_expected": true,
+  "input_artifact_hashes_after": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_oi_taker_crowding_forward_return_robustness_runner_v1.json": "0fd21e8f4741f895dd86af8c567890d5138f3f4347a10ecaf71886a5a4580ca8",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_direction_semantics_review_v1.json": "14a5749ca89f5c04914811ffdd54578c1b91f7da5adf232f370e289fbcb6b8e3",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_frozen_historical_holdout_backtest_v1.json": "543f7d4fa84fe0933d62da875986e689543314d3fc3a2018b476cd90eb175ed9",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_runner_v1.json": "08a898fd52eafefd3ce09ce921e2c62bddb604fcfd088a64685c448aa840560a"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_oi_taker_crowding_forward_return_robustness_runner_v1.json": "0fd21e8f4741f895dd86af8c567890d5138f3f4347a10ecaf71886a5a4580ca8",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_direction_semantics_review_v1.json": "14a5749ca89f5c04914811ffdd54578c1b91f7da5adf232f370e289fbcb6b8e3",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_frozen_historical_holdout_backtest_v1.json": "543f7d4fa84fe0933d62da875986e689543314d3fc3a2018b476cd90eb175ed9",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_runner_v1.json": "08a898fd52eafefd3ce09ce921e2c62bddb604fcfd088a64685c448aa840560a"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_payload_hashes_verified": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc",
+    "artifacts/research/binance_oi_taker_crowding_forward_return_robustness_runner_v1.json": "1080ffd33dc3cdd5720c50670dcefc9c07ff519a2414d368c3a1eef81d4c4c63",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "01469f54853ee0e9c07c6897f170617564a333f7df2f33e46ba5a127f8fbf9a6",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_direction_semantics_review_v1.json": "ed8e49451405598234bb23586f28d0c471a217d649d87b78789e61d23c4dab74",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_frozen_historical_holdout_backtest_v1.json": "7d12729e01620819519ad6e2f3e3a6135a2b7e5a41177e95c9491805bf2e6daa",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_runner_v1.json": "691632395583ed6351497669d57d8d02db113c7e294c28b5ea6dfc17da1640d4"
+  },
+  "module": "OUTCOME_BLIND_BINANCE_THEORY_QUEUE_BUILDER_V1",
+  "overfitting_controls": {
+    "cooldown_and_concentration_checks_before_outcome_labels": true,
+    "independent_validation_required_before_any_promotion": true,
+    "limit_threshold_degrees_of_freedom": true,
+    "no_forward_returns_inspected_for_theory_selection": true,
+    "no_p_values_used_for_theory_selection": true,
+    "no_pnl_sharpe_hit_rate_or_backtest_metrics": true,
+    "no_strategy_signal_candidate_release_permission": true,
+    "outcome_blind_queue_scoring": true,
+    "pre_register_event_definitions_before_return_diagnostics": true
+  },
+  "payload_sha256_excluding_hash": "8d84ede6d6d6128224ad193fe2c390c0bf5cbc36ef0a41c6ac97f09f291ad5cd",
+  "prior_route_lessons": {
+    "broad_oi_taker_crowding_route": {
+      "closed_for_queue_reuse": true,
+      "lesson": "Do not reuse broad OI/taker/crowding forward-return route; future theories need materially narrower mechanics.",
+      "result_classification": "BINANCE_OI_TAKER_CROWDING_FORWARD_RETURN_ROBUSTNESS_WEAK_OR_NOT_ROBUST"
+    },
+    "data_availability_lesson": {
+      "lesson": "Avoid theories that require true liquidation or funding history unless explicitly marked data-unavailable.",
+      "liquidation_and_funding_unavailable": true
+    },
+    "short_pressure_failure_delayed_downside_continuation": {
+      "closed_for_new_theory_queue_as_live_or_candidate": true,
+      "direction_relabel_required": true,
+      "historical_holdout_result": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_HISTORICAL_HOLDOUT_INCONCLUSIVE_INSUFFICIENT_SAMPLE",
+      "independent_2026_result": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_INDEPENDENT_VALIDATION_INCONCLUSIVE_INSUFFICIENT_SAMPLE",
+      "lesson": "Keep as monitor/accumulation only; do not turn into live/candidate route or retune thresholds.",
+      "neutral_label": "SHORT_PRESSURE_FAILURE_DELAYED_DOWNSIDE_CONTINUATION_DIAGNOSTIC"
+    }
+  },
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "replacement_checks_all_true": true,
+  "research_budget_policy": {
+    "candidate_or_release_allowed": false,
+    "failed_robustness_policy": "close_or_materially_redesign; do not rename and retest same mechanics",
+    "future_theory_sequence": [
+      "event_discovery_without_returns",
+      "event_validator",
+      "forward_return_diagnostic",
+      "null_validation",
+      "robustness",
+      "pre_registered_independent_validation",
+      "monitor_or_close"
+    ],
+    "independent_validation_fail_or_inconclusive_policy": "monitor_or_close; do not tune thresholds",
+    "one_theory_at_a_time": true
+  },
+  "result_classification": "OUTCOME_BLIND_BINANCE_THEORY_QUEUE_READY",
+  "selected_next_research_batch": [
+    {
+      "allowed_next_step_if_selected": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "sparse_but_feasible_to_ideal",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Uses OI contraction instead of expansion and makes price rejection mandatory; no funding, liquidation, or broad crowding premise.",
+      "mechanical_rationale": "Open interest contraction can indicate forced position reduction or de-risking; if same-bar taker pressure is extreme and price rejects the flow direction, the event is mechanically distinct from OI expansion pressure failure.",
+      "overfitting_risk": "medium_low",
+      "pre_registration_requirements": [
+        "freeze contraction percentile grid before return diagnostics",
+        "define long capitulation and short-cover variants without forward returns",
+        "cooldown and concentration gates before any return labels"
+      ],
+      "primary_event_discovery_module_name": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Highest priority because it is outcome-blind, uses available OI/taker/price features, and is mechanically opposite the failed OI expansion pressure-failure route.",
+      "recommended_priority": 1,
+      "required_features": [
+        "open_interest",
+        "oi_delta_log_1h",
+        "taker_buy_sell_ratio_or_sell_pressure",
+        "15m_ohlc_range_wicks_close_location"
+      ],
+      "theory_id": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION"
+    },
+    {
+      "allowed_next_step_if_selected": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "ideal",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Regime-state event with no taker-flow momentum premise and no crowding route reuse.",
+      "mechanical_rationale": "An OI shock concurrent with realized-volatility compression/expansion transition is a market-state change, not a directional prediction.",
+      "overfitting_risk": "low_medium",
+      "pre_registration_requirements": [
+        "freeze realized volatility windows",
+        "classify expansion/compression states before return labels",
+        "market-state diagnostics before any side-specific interpretation"
+      ],
+      "primary_event_discovery_module_name": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Selected for robust market-state mechanics, low dependence on directional naming, and limited threshold degrees of freedom.",
+      "recommended_priority": 2,
+      "required_features": [
+        "open_interest",
+        "oi_delta_log_1h_or_4h",
+        "15m_ohlc_realized_volatility",
+        "volatility_regime_state"
+      ],
+      "theory_id": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT"
+    },
+    {
+      "allowed_next_step_if_selected": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "sparse_but_feasible_to_ideal",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Ratio-path normalization does not require OI expansion/taker flow as the core event and does not use funding crowding.",
+      "mechanical_rationale": "Top account/position long-short ratios moving from extreme toward neutral can define a crowding-state normalization event using only ratio path/current/prior state.",
+      "overfitting_risk": "low_medium",
+      "pre_registration_requirements": [
+        "freeze extreme and neutral bands from symbol-month distributions",
+        "record account vs position variants before returns",
+        "avoid funding terminology"
+      ],
+      "primary_event_discovery_module_name": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Selected because ratio-path normalization uses available top-account/top-position features without funding or broad OI/taker reuse.",
+      "recommended_priority": 3,
+      "required_features": [
+        "top_account_long_short_ratio",
+        "top_position_long_short_ratio",
+        "global_long_short_ratio",
+        "ratio_path_change"
+      ],
+      "theory_id": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT"
+    }
+  ],
+  "status": "PASS_REPO_ONLY_OUTCOME_BLIND_BINANCE_THEORY_QUEUE_BUILDER_CREATED",
+  "theory_families_considered": [
+    {
+      "allowed_next_step_if_selected": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "sparse_but_feasible_to_ideal",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Uses OI contraction instead of expansion and makes price rejection mandatory; no funding, liquidation, or broad crowding premise.",
+      "mechanical_rationale": "Open interest contraction can indicate forced position reduction or de-risking; if same-bar taker pressure is extreme and price rejects the flow direction, the event is mechanically distinct from OI expansion pressure failure.",
+      "overfitting_risk": "medium_low",
+      "pre_registration_requirements": [
+        "freeze contraction percentile grid before return diagnostics",
+        "define long capitulation and short-cover variants without forward returns",
+        "cooldown and concentration gates before any return labels"
+      ],
+      "primary_event_discovery_module_name": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Highest priority because it is outcome-blind, uses available OI/taker/price features, and is mechanically opposite the failed OI expansion pressure-failure route.",
+      "recommended_priority": 1,
+      "required_features": [
+        "open_interest",
+        "oi_delta_log_1h",
+        "taker_buy_sell_ratio_or_sell_pressure",
+        "15m_ohlc_range_wicks_close_location"
+      ],
+      "theory_id": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION"
+    },
+    {
+      "allowed_next_step_if_selected": "OI_EXPANSION_PRICE_ABSORPTION_WITH_VOLUME_CONFIRMATION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "ideal_to_acceptable",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Requires absorption and volume confirmation; avoids broad crowding and does not reuse short_core pressure-failure definition.",
+      "mechanical_rationale": "OI expansion plus extreme taker flow is only considered when the current bar/range shows absorption and public kline volume confirms stress.",
+      "overfitting_risk": "medium",
+      "pre_registration_requirements": [
+        "limit volume threshold degrees of freedom",
+        "predefine absorption variants before return diagnostics",
+        "block any reuse of exact short_core labels"
+      ],
+      "primary_event_discovery_module_name": "OI_EXPANSION_PRICE_ABSORPTION_WITH_VOLUME_CONFIRMATION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 4,
+      "required_features": [
+        "open_interest",
+        "taker_ratio",
+        "15m_ohlcv_volume",
+        "range_close_location",
+        "wick_absorption"
+      ],
+      "theory_id": "OI_EXPANSION_PRICE_ABSORPTION_WITH_VOLUME_CONFIRMATION"
+    },
+    {
+      "allowed_next_step_if_selected": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "ideal",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Regime-state event with no taker-flow momentum premise and no crowding route reuse.",
+      "mechanical_rationale": "An OI shock concurrent with realized-volatility compression/expansion transition is a market-state change, not a directional prediction.",
+      "overfitting_risk": "low_medium",
+      "pre_registration_requirements": [
+        "freeze realized volatility windows",
+        "classify expansion/compression states before return labels",
+        "market-state diagnostics before any side-specific interpretation"
+      ],
+      "primary_event_discovery_module_name": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Selected for robust market-state mechanics, low dependence on directional naming, and limited threshold degrees of freedom.",
+      "recommended_priority": 2,
+      "required_features": [
+        "open_interest",
+        "oi_delta_log_1h_or_4h",
+        "15m_ohlc_realized_volatility",
+        "volatility_regime_state"
+      ],
+      "theory_id": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT"
+    },
+    {
+      "allowed_next_step_if_selected": "TAKER_PRESSURE_DIVERGENCE_WITH_PRICE_NONCONFIRMATION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "acceptable_but_potentially_broad",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "OI is annotation/tier, not optimized threshold; avoids taker-flow momentum continuation and taker-buy exhaustion labels.",
+      "mechanical_rationale": "Extreme taker pressure with non-confirming price action can be studied with OI as an annotation rather than a tuned hard gate.",
+      "overfitting_risk": "medium_high",
+      "pre_registration_requirements": [
+        "cap variants and sides",
+        "use OI tiers only for descriptive coverage",
+        "reject momentum/exhaustion naming"
+      ],
+      "primary_event_discovery_module_name": "TAKER_PRESSURE_DIVERGENCE_WITH_PRICE_NONCONFIRMATION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 7,
+      "required_features": [
+        "taker_ratio",
+        "15m_ohlc_close_location",
+        "price_nonconfirmation",
+        "oi_annotation"
+      ],
+      "theory_id": "TAKER_PRESSURE_DIVERGENCE_WITH_PRICE_NONCONFIRMATION"
+    },
+    {
+      "allowed_next_step_if_selected": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "sparse_but_feasible_to_ideal",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Ratio-path normalization does not require OI expansion/taker flow as the core event and does not use funding crowding.",
+      "mechanical_rationale": "Top account/position long-short ratios moving from extreme toward neutral can define a crowding-state normalization event using only ratio path/current/prior state.",
+      "overfitting_risk": "low_medium",
+      "pre_registration_requirements": [
+        "freeze extreme and neutral bands from symbol-month distributions",
+        "record account vs position variants before returns",
+        "avoid funding terminology"
+      ],
+      "primary_event_discovery_module_name": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Selected because ratio-path normalization uses available top-account/top-position features without funding or broad OI/taker reuse.",
+      "recommended_priority": 3,
+      "required_features": [
+        "top_account_long_short_ratio",
+        "top_position_long_short_ratio",
+        "global_long_short_ratio",
+        "ratio_path_change"
+      ],
+      "theory_id": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT"
+    },
+    {
+      "allowed_next_step_if_selected": "CROSS_SYMBOL_PRESSURE_DISPERSION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available_with_symbol_listing_limitations",
+      "expected_event_frequency_band": "ideal",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Cross-symbol state diagnostic, not the exact short_core or broad single-event route.",
+      "mechanical_rationale": "A cross-sectional dispersion/concentration event captures relative pressure across symbols without directional single-symbol optimization.",
+      "overfitting_risk": "medium",
+      "pre_registration_requirements": [
+        "freeze symbol universe before event discovery",
+        "handle listing-history missingness explicitly",
+        "no forward-return-weighted symbol selection"
+      ],
+      "primary_event_discovery_module_name": "CROSS_SYMBOL_PRESSURE_DISPERSION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 5,
+      "required_features": [
+        "multi_symbol_oi_change",
+        "multi_symbol_taker_pressure",
+        "cross_sectional_dispersion"
+      ],
+      "theory_id": "CROSS_SYMBOL_PRESSURE_DISPERSION_EVENT"
+    },
+    {
+      "allowed_next_step_if_selected": "MARKET_WIDE_OI_SYNCHRONIZATION_STRESS_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available_with_symbol_listing_limitations",
+      "expected_event_frequency_band": "sparse_but_feasible",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Market-state diagnostic that avoids single-symbol crowding forward-return route reuse.",
+      "mechanical_rationale": "Synchronized OI expansion/contraction and taker imbalance across many symbols define a market stress state, not a strategy.",
+      "overfitting_risk": "low_medium",
+      "pre_registration_requirements": [
+        "freeze breadth threshold",
+        "freeze symbol inclusion policy",
+        "separate expansion and contraction states before diagnostics"
+      ],
+      "primary_event_discovery_module_name": "MARKET_WIDE_OI_SYNCHRONIZATION_STRESS_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 6,
+      "required_features": [
+        "multi_symbol_oi_change",
+        "multi_symbol_taker_imbalance",
+        "market_wide_synchronization_count"
+      ],
+      "theory_id": "MARKET_WIDE_OI_SYNCHRONIZATION_STRESS_EVENT"
+    },
+    {
+      "allowed_next_step_if_selected": "PRICE_RANGE_REJECTION_WITH_OI_TAKER_CONFIRMATION_EVENT_DISCOVERY_V1",
+      "data_availability_status": "available",
+      "expected_event_frequency_band": "acceptable_but_potentially_broad",
+      "forbidden_actions": {
+        "backtest": false,
+        "candidate_generation": false,
+        "edge_claim": false,
+        "failed_routes_reused_under_new_names": false,
+        "forward_returns_computed": false,
+        "null_validation_run": false,
+        "optimization_against_returns": false,
+        "order_private_account_api_key": false,
+        "p_values_computed": false,
+        "pnl": false,
+        "runtime_live_capital": false,
+        "signal": false,
+        "strategy": false,
+        "trade_simulation": false
+      },
+      "material_difference_from_failed_routes": "Price action is primary and OI/taker are confirmation tiers; must exclude the exact tested short_core definition.",
+      "mechanical_rationale": "Make public kline wick/range rejection the primary event, while OI/taker features confirm stress rather than define the same already-tested short_core route.",
+      "overfitting_risk": "medium_high",
+      "pre_registration_requirements": [
+        "hard exclude exact short_core definition",
+        "freeze wick/range logic before return labels",
+        "limit confirmation tier count"
+      ],
+      "primary_event_discovery_module_name": "PRICE_RANGE_REJECTION_WITH_OI_TAKER_CONFIRMATION_EVENT_DISCOVERY_V1",
+      "reason_for_priority": "Backlog: mechanically plausible but lower priority due broader definitions, greater overlap risk, or higher threshold degrees of freedom.",
+      "recommended_priority": 8,
+      "required_features": [
+        "15m_ohlc_wick_range_rejection",
+        "open_interest_annotation",
+        "taker_pressure_confirmation"
+      ],
+      "theory_id": "PRICE_RANGE_REJECTION_WITH_OI_TAKER_CONFIRMATION"
+    }
+  ],
+  "theory_queue_status": "PASS_REPO_ONLY_OUTCOME_BLIND_BINANCE_THEORY_QUEUE_BUILDER_CREATED",
+  "theory_scores": {
+    "CROSS_SYMBOL_PRESSURE_DISPERSION_EVENT": {
+      "score_components": {
+        "data_availability": 16,
+        "expected_event_count_feasibility": 18,
+        "independent_validation_feasibility": 15,
+        "interpretability_low_overfitting": 13,
+        "low_overlap_low_concentration_potential": 14,
+        "material_difference_from_failed_routes": 16,
+        "minimal_threshold_degrees_of_freedom": 12,
+        "robustness_testability": 15
+      },
+      "score_total": 119,
+      "scoring_outcome_blind": true,
+      "theory_id": "CROSS_SYMBOL_PRESSURE_DISPERSION_EVENT"
+    },
+    "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT": {
+      "score_components": {
+        "data_availability": 20,
+        "expected_event_count_feasibility": 16,
+        "independent_validation_feasibility": 15,
+        "interpretability_low_overfitting": 17,
+        "low_overlap_low_concentration_potential": 14,
+        "material_difference_from_failed_routes": 18,
+        "minimal_threshold_degrees_of_freedom": 15,
+        "robustness_testability": 15
+      },
+      "score_total": 130,
+      "scoring_outcome_blind": true,
+      "theory_id": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT"
+    },
+    "MARKET_WIDE_OI_SYNCHRONIZATION_STRESS_EVENT": {
+      "score_components": {
+        "data_availability": 16,
+        "expected_event_count_feasibility": 13,
+        "independent_validation_feasibility": 15,
+        "interpretability_low_overfitting": 17,
+        "low_overlap_low_concentration_potential": 14,
+        "material_difference_from_failed_routes": 17,
+        "minimal_threshold_degrees_of_freedom": 14,
+        "robustness_testability": 15
+      },
+      "score_total": 121,
+      "scoring_outcome_blind": true,
+      "theory_id": "MARKET_WIDE_OI_SYNCHRONIZATION_STRESS_EVENT"
+    },
+    "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION": {
+      "score_components": {
+        "data_availability": 20,
+        "expected_event_count_feasibility": 16,
+        "independent_validation_feasibility": 15,
+        "interpretability_low_overfitting": 16,
+        "low_overlap_low_concentration_potential": 14,
+        "material_difference_from_failed_routes": 20,
+        "minimal_threshold_degrees_of_freedom": 14,
+        "robustness_testability": 15
+      },
+      "score_total": 130,
+      "scoring_outcome_blind": true,
+      "theory_id": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION"
+    },
+    "OI_EXPANSION_PRICE_ABSORPTION_WITH_VOLUME_CONFIRMATION": {
+      "score_components": {
+        "data_availability": 20,
+        "expected_event_count_feasibility": 13,
+        "independent_validation_feasibility": 15,
+        "interpretability_low_overfitting": 13,
+        "low_overlap_low_concentration_potential": 14,
+        "material_difference_from_failed_routes": 14,
+        "minimal_threshold_degrees_of_freedom": 10,
+        "robustness_testability": 15
+      },
+      "score_total": 114,
+      "scoring_outcome_blind": true,
+      "theory_id": "OI_EXPANSION_PRICE_ABSORPTION_WITH_VOLUME_CONFIRMATION"
+    },
+    "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT": {
+      "score_components": {
+        "data_availability": 20,
+        "expected_event_count_feasibility": 18,
+        "independent_validation_feasibility": 15,
+        "interpretability_low_overfitting": 17,
+        "low_overlap_low_concentration_potential": 14,
+        "material_difference_from_failed_routes": 19,
+        "minimal_threshold_degrees_of_freedom": 15,
+        "robustness_testability": 15
+      },
+      "score_total": 133,
+      "scoring_outcome_blind": true,
+      "theory_id": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT"
+    },
+    "PRICE_RANGE_REJECTION_WITH_OI_TAKER_CONFIRMATION": {
+      "score_components": {
+        "data_availability": 20,
+        "expected_event_count_feasibility": 10,
+        "independent_validation_feasibility": 15,
+        "interpretability_low_overfitting": 9,
+        "low_overlap_low_concentration_potential": 14,
+        "material_difference_from_failed_routes": 12,
+        "minimal_threshold_degrees_of_freedom": 9,
+        "robustness_testability": 15
+      },
+      "score_total": 104,
+      "scoring_outcome_blind": true,
+      "theory_id": "PRICE_RANGE_REJECTION_WITH_OI_TAKER_CONFIRMATION"
+    },
+    "TAKER_PRESSURE_DIVERGENCE_WITH_PRICE_NONCONFIRMATION": {
+      "score_components": {
+        "data_availability": 20,
+        "expected_event_count_feasibility": 10,
+        "independent_validation_feasibility": 15,
+        "interpretability_low_overfitting": 9,
+        "low_overlap_low_concentration_potential": 14,
+        "material_difference_from_failed_routes": 10,
+        "minimal_threshold_degrees_of_freedom": 8,
+        "robustness_testability": 15
+      },
+      "score_total": 101,
+      "scoring_outcome_blind": true,
+      "theory_id": "TAKER_PRESSURE_DIVERGENCE_WITH_PRICE_NONCONFIRMATION"
+    }
+  },
+  "unavailable_feature_registry": {
+    "funding": {
+      "available": false,
+      "reason": "unavailable in this metrics archive",
+      "route_policy": "do not revive funding crowding/carry/volume surge routes"
+    },
+    "liquidation": {
+      "available": false,
+      "reason": "unavailable in this metrics archive",
+      "route_policy": "data-unavailable theories only; no direct liquidation flush tests"
+    },
+    "private_account_order_live_data": {
+      "available": false,
+      "reason": "forbidden by safety policy and not needed for outcome-blind research queue"
+    },
+    "raw_taker_buy_sell_volume_components": {
+      "available": false,
+      "reason": "unavailable; taker ratio is available"
+    }
+  },
+  "validation_checks": {
+    "available_oi_taker_crowding_kline_features": true,
+    "first_selected_is_preferred_contraction_theory": true,
+    "input_artifact_hashes_unchanged": true,
+    "no_forward_returns_computed": true,
+    "no_null_validation_run": true,
+    "no_p_values_computed": true,
+    "no_strategy_signal_candidate_release_permissions": true,
+    "selected_batch_at_most_3": true,
+    "unavailable_funding_liquidation_blocked": true
+  }
+}

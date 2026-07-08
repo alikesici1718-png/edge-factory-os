@@ -1,0 +1,471 @@
+{
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_PREVIEW_CREATED",
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_PREVIEW",
+  "module": {
+    "name": "edge_factory_os_repo_only_old_short_clean_room_runner_realistic_fixture_dry_run_preview_v1",
+    "path": "tools/edge_factory_os_repo_only_old_short_clean_room_runner_realistic_fixture_dry_run_preview_v1.py",
+    "standard_library_only": true,
+    "created_files": [
+      "tools/edge_factory_os_repo_only_old_short_clean_room_runner_realistic_fixture_dry_run_preview_v1.py",
+      "artifacts/old_short_clean_room/old_short_clean_room_runner_realistic_fixture_dry_run_preview_v1.json"
+    ],
+    "modified_existing_files": [],
+    "code_changed": true
+  },
+  "source_checkpoint": {
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "expected_head": "08d5527ceaefa23944231cbb5a5534b33e17de0b",
+    "actual_head": "08d5527ceaefa23944231cbb5a5534b33e17de0b",
+    "head_verified": true,
+    "expected_tracked_python_count": 958,
+    "actual_tracked_python_count": 958,
+    "tracked_python_count_verified": true,
+    "repo_clean_before_run": true,
+    "git_status_at_preview_artifact_build": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_runner_realistic_fixture_dry_run_preview_v1.py"
+    ],
+    "allowed_pending_at_preview_artifact_build": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_runner_realistic_fixture_dry_run_preview_v1.py"
+    ],
+    "dirty_tracked_at_preview_artifact_build": [],
+    "unexpected_untracked_at_preview_artifact_build": [],
+    "no_existing_files_modified": true
+  },
+  "source_artifacts": {
+    "prior_realistic_fixture_dry_run_design": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_realistic_fixture_dry_run_design_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_DESIGN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_DESIGN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_PREVIEW_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "807efcf61dc66731fb3eabde4f157b8d0e52c117499e02b17c8dde68253670b2",
+      "sha256": "3d88e8f7645730a36d1e46b5041284921ba9a984e504b719f91f7adec3c21cf9"
+    },
+    "realistic_bounded_fixture_generation_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_GENERATION_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_GENERATION_DRY_RUN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_DESIGN_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "474fd909870b16ba291f9f67e8546eb330c96fad2baa0303472bb67ac9e17e9d",
+      "sha256": "fc3e5c1fee83c6d432a77e184d072299f5e53d3329f7c25c3c77a4c8000806f7"
+    },
+    "runner_fixture_threshold_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_fixture_threshold_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "308b63488abb4b40ee4e23d128a2aa82d96f1efa43c49d0ba6a32fb434298b11",
+      "sha256": "e533fc89374724d0e63a61b4a87081012c17624679857c7a3e7f31b31e1f2d68"
+    },
+    "threshold_behavioral_proposal_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "9cf7be3706095fa4e8c8bfd4586e40a4714631250118fd67cc4d94cb47f62461",
+      "sha256": "63220c1cce0a22b83dbc630599a23e5855cd682c0d0dec19d2a799841c4a15ff"
+    },
+    "threshold_proposal_review": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_proposal_review_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "bc0e5a2994a978b582488bfeb3d05f1898836ced3d6684474d6c7cedbd68ccda",
+      "sha256": "f3e78cda956787bb83b2d69e882219658c118371c7e4b476a5bb31e2d54f1f04"
+    },
+    "old_short_clean_room_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REBUILD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_CONTRACT_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "02d0c3ff2f905be2df695a7ca52bfd931c94a4720cb3c883f8fd5d7ad00f5e6d",
+      "sha256": "dc04d75bdd5882a2952a0a1e0a3ce7855d736d4b6882b689dcc20b41fc7cc68d"
+    }
+  },
+  "preview_identity": {
+    "route_key": "old_short_clean_room_v1",
+    "preview_only": true,
+    "realistic_fixture_runner_dry_run_allowed_now": false,
+    "runner_execution_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "original_exact_source_recovered": false,
+    "exact_replay_available": false,
+    "clean_room_behavioral_reconstruction": true,
+    "no_edge_claim": true,
+    "no_live_capital": true
+  },
+  "no_live_guard_constants": {
+    "REALISTIC_FIXTURE_RUNNER_DRY_RUN_ALLOWED": false,
+    "RUNNER_EXECUTION_ALLOWED": false,
+    "SIGNAL_GENERATION_ALLOWED": false,
+    "POSITION_OPEN_ALLOWED": false,
+    "BACKTEST_ALLOWED": false,
+    "PNL_COMPUTATION_ALLOWED": false,
+    "RUNTIME_ALLOWED": false,
+    "MONITOR_ALLOWED": false,
+    "LIVE_TRADING_ALLOWED": false,
+    "CAPITAL_ALLOCATION_ALLOWED": false,
+    "ORDER_PLACEMENT_ALLOWED": false,
+    "CANDIDATE_GENERATION_ALLOWED": false,
+    "EDGE_CLAIM_ALLOWED": false
+  },
+  "preview_module_structure": {
+    "class_count": 8,
+    "classes": {
+      "OldShortRealisticFixtureDryRunConfigPreview": {
+        "purpose": "preview configuration and no-live guard exposure",
+        "methods": [
+          "preview_schema()"
+        ],
+        "executes_runner_logic": false
+      },
+      "OldShortRealisticFixtureLoaderPreview": {
+        "purpose": "declare future fixture input allow-list",
+        "methods": [
+          "preview_contract()"
+        ],
+        "executes_fixture_loading_now": false
+      },
+      "OldShortFixtureThresholdContractLoaderPreview": {
+        "purpose": "declare reviewed threshold contract checks",
+        "methods": [
+          "preview_contract()"
+        ],
+        "executes_threshold_application_now": false
+      },
+      "OldShortFixtureCaseProcessorPreview": {
+        "purpose": "declare fixture case processing return shape",
+        "methods": [
+          "process_case_preview()"
+        ],
+        "executes_case_processing_now": false
+      },
+      "OldShortFixtureGateProcessorPreview": {
+        "purpose": "declare gate state handling return shape",
+        "methods": [
+          "gate_preview()"
+        ],
+        "executes_gate_logic_now": false
+      },
+      "OldShortFixtureLifecycleWriterPreview": {
+        "purpose": "declare paper-only output contract",
+        "methods": [
+          "output_preview()"
+        ],
+        "writes_runner_outputs_now": false
+      },
+      "OldShortRealisticFixtureDryRunReportPreview": {
+        "purpose": "declare report metric shape",
+        "methods": [
+          "report_preview()"
+        ],
+        "builds_runner_report_now": false
+      },
+      "OldShortRunnerRealisticFixtureDryRunPreview": {
+        "purpose": "compose preview artifact only",
+        "methods": [
+          "build_preview_artifact()"
+        ],
+        "executes_runner_logic": false
+      }
+    },
+    "module_contract": "class and function contracts only; no runner execution"
+  },
+  "input_fixture_contract": {
+    "operation": "metadata_and_contract_preview_only",
+    "future_allowed_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1",
+    "future_may_read_only": [
+      "fixture_index.json",
+      "master_proxy_cases.jsonl",
+      "clean_room_replay_fixture_inputs.jsonl",
+      "validation_pair_fixtures.jsonl",
+      "fixture_generation_summary.json"
+    ],
+    "future_must_not_read": [
+      "raw market data",
+      "raw OKX 1m data",
+      "full MASTER output",
+      "runtime directories",
+      "private/account data"
+    ],
+    "reads_fixture_rows_now": false,
+    "executes_runner_now": false,
+    "fixture_case_count_from_prior_package": 5,
+    "family_coverage_from_prior_package": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "gate_state_coverage_from_prior_package": [
+      "gate_blocked",
+      "gate_missing_timeout"
+    ],
+    "gate_allowed_coverage_present": false
+  },
+  "threshold_contract_preview": {
+    "operation": "threshold_contract_preview_only",
+    "future_must_load_reviewed_contract": true,
+    "expected_family_threshold_count": 2,
+    "families_expected": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "required_labels": [
+      "BEHAVIORAL_RECONSTRUCTION_THRESHOLD",
+      "NOT_ORIGINAL_THRESHOLD",
+      "NOT_PNL_OPTIMIZED",
+      "NOT_EDGE_EVIDENCE",
+      "NO_LIVE_CAPITAL"
+    ],
+    "fail_closed_if_missing_or_incomplete": true,
+    "loaded_for_preview": true,
+    "contract_complete_from_prior_artifact": true,
+    "observed_family_threshold_count": 2,
+    "family_threshold_count_verified_2": true,
+    "required_labels_verified": true,
+    "threshold_modification_allowed": false,
+    "threshold_selection_allowed": false,
+    "pnl_optimization_allowed": false
+  },
+  "processing_plan": {
+    "state_count": 9,
+    "states": [
+      "LOAD_FIXTURE_PACKAGE",
+      "LOAD_THRESHOLD_CONTRACT",
+      "VALIDATE_FIXTURE_LABELS",
+      "VALIDATE_ROUTE_FAMILY_SIDE",
+      "EVALUATE_FEATURE_FIXTURE_WITH_THRESHOLD_CONTRACT",
+      "APPLY_GATE_FIXTURE",
+      "WRITE_PAPER_ONLY_OUTPUT",
+      "BUILD_DRY_RUN_REPORT",
+      "REPORT_ONLY"
+    ],
+    "states_are_preview_only_now": true,
+    "no_state_may_lead_to": [
+      "real order",
+      "runtime",
+      "live",
+      "capital",
+      "candidate generation",
+      "edge claim"
+    ]
+  },
+  "gate_state_handling": {
+    "method_signature": "gate_preview(fixture_case) -> dict",
+    "executes_gate_logic_now": false,
+    "supported_gate_states": {
+      "gate_blocked": "rejected_entries",
+      "gate_missing_timeout": "rejected_entries",
+      "gate_allowed": "paper open/closed only if fixture exists"
+    },
+    "gate_allowed_absent_policy": {
+      "dry_run_may_still_run_blocked_missing_cases": true,
+      "classification_can_be_partial_at_best": true,
+      "accepted_lifecycle_coverage_marked_missing": true,
+      "no_open_closed_lifecycle_equivalence_claim": true
+    },
+    "prior_gate_state_coverage": [
+      "gate_blocked",
+      "gate_missing_timeout"
+    ],
+    "gate_allowed_present_in_prior_fixture_package": false,
+    "accepted_lifecycle_coverage_present": false
+  },
+  "output_preview": {
+    "method_signature": "write_paper_only_outputs_preview(processed_cases) -> dict",
+    "writes_outputs_now": false,
+    "future_output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\realistic_fixture_dry_run_v1",
+    "may_include": [
+      "signals.csv",
+      "pending_entries.csv",
+      "open_positions.csv if gate_allowed fixture exists",
+      "closed_trades.csv if close fixture exists",
+      "rejected_entries.csv",
+      "heartbeat.csv",
+      "state.json",
+      "runner_realistic_fixture_dry_run_report.json"
+    ],
+    "must_never_write_to": [
+      "MASTER_UPPER_SYSTEM",
+      "paper_run_gate_* runtime roots",
+      "live runtime directories",
+      "old original output directories",
+      "repo tracked paths except summary JSON artifacts"
+    ],
+    "output_root_overlap_with_master_or_runtime_allowed": false,
+    "repo_tracked_output_allowed_now": [
+      "artifacts/old_short_clean_room/old_short_clean_room_runner_realistic_fixture_dry_run_preview_v1.json"
+    ],
+    "runner_output_write_allowed_now": false
+  },
+  "safety_labels": [
+    "GENERATED_BY_CLEAN_ROOM",
+    "PROXY_BEHAVIOR_FIXTURE",
+    "NOT_ORIGINAL_OLD_SHORT",
+    "NOT_EXACT_REPLAY",
+    "NOT_REAL_TRADE",
+    "NOT_BACKTEST",
+    "NOT_RUNTIME",
+    "NOT_EDGE_EVIDENCE",
+    "NO_LIVE_CAPITAL"
+  ],
+  "fail_closed_policy": {
+    "condition_count": 14,
+    "future_dry_run_must_fail_closed_if": [
+      "fixture root missing",
+      "fixture files missing",
+      "threshold contract missing",
+      "route_key mismatch",
+      "family_key mismatch",
+      "side not short",
+      "required feature missing",
+      "safety labels missing",
+      "fixture uses PnL/outcome selection",
+      "raw market data path supplied",
+      "runtime path supplied",
+      "live/order/private fields detected",
+      "output root overlaps MASTER/runtime",
+      "no-live guard false"
+    ],
+    "blocked_status_policy": {
+      "status": "BLOCKED / APPROVAL_REQUIRED",
+      "replacement_checks_all_true": false,
+      "next_module": "approval/blocker/review module"
+    }
+  },
+  "preview_metrics": {
+    "method_signature": "build_report_preview(processed_cases) -> dict",
+    "builds_real_report_now": false,
+    "required_metrics": [
+      "fixture_case_count",
+      "processed_case_count",
+      "family_coverage",
+      "gate_state_coverage",
+      "passed_case_count",
+      "rejected_case_count",
+      "fail_closed_count",
+      "generated_output_file_count",
+      "accepted_lifecycle_coverage_present",
+      "safety_label_audit_passed",
+      "no_pnl_used",
+      "no_market_data_used",
+      "no_edge_live_capital"
+    ],
+    "preview_values_from_prior_fixture_package": {
+      "fixture_case_count": 5,
+      "processed_case_count": 0,
+      "family_coverage": [
+        "blowoff_short",
+        "mean_reversion_short"
+      ],
+      "gate_state_coverage": [
+        "gate_blocked",
+        "gate_missing_timeout"
+      ],
+      "passed_case_count": 0,
+      "rejected_case_count": 0,
+      "fail_closed_count": 0,
+      "generated_output_file_count": 0,
+      "accepted_lifecycle_coverage_present": false,
+      "safety_label_audit_passed": true,
+      "no_pnl_used": true,
+      "no_market_data_used": true,
+      "no_edge_live_capital": true
+    },
+    "metrics_are_preview_contract_only": true
+  },
+  "result_classes": [
+    "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_PASS_NO_EDGE_NO_LIVE",
+    "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_PARTIAL_NO_EDGE_NO_LIVE",
+    "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_FAIL_CLOSED_NO_EDGE_NO_LIVE",
+    "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_INCONCLUSIVE_NO_EDGE_NO_LIVE"
+  ],
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_V1",
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence",
+    "gate_allowed/open-close lifecycle coverage absent unless later fixture adds it"
+  ],
+  "limitations": [
+    "Preview only; no realistic fixture runner dry-run is executed now.",
+    "No signal generation, behavioral validation, full dataset comparison, backtest, or PnL computation is performed.",
+    "No raw market data, raw OKX 1m data, runtime directory, private data, network, or API is read.",
+    "The prior realistic fixture package covers gate_blocked and gate_missing_timeout; gate_allowed/open-close lifecycle coverage may be absent.",
+    "If gate_allowed remains absent, future dry-run classification is PARTIAL at best and no open/closed lifecycle equivalence may be claimed.",
+    "This preview does not recover original old_short source and does not claim exact replay."
+  ],
+  "safety_permissions": {
+    "runner_realistic_fixture_dry_run_preview_created": true,
+    "realistic_fixture_runner_dry_run_allowed_now": false,
+    "runner_execution_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "full_dataset_comparison_allowed_now": false,
+    "backtest_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "prior_realistic_fixture_dry_run_design_loaded": true,
+    "prior_next_allowed_step_verified": true,
+    "original_exact_source_not_claimed": true,
+    "clean_room_reconstruction_preserved": true,
+    "no_fixture_runner_execution": true,
+    "no_signal_generation": true,
+    "no_behavioral_validation_execution": true,
+    "no_full_dataset_comparison": true,
+    "no_backtest_run": true,
+    "no_pnl_computation": true,
+    "no_runtime_touched": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "no_live_guard_constants_false": true,
+    "input_fixture_contract_defined": true,
+    "threshold_contract_preview_defined": true,
+    "processing_plan_defined": true,
+    "gate_state_handling_defined": true,
+    "fail_closed_policy_defined": true,
+    "result_classes_defined": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "db72534f85e8425b90d1984357c02e4c8999eb68e337b4939251459920c5c284"
+}

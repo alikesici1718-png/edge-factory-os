@@ -1,0 +1,800 @@
+{
+  "allowed_next_step": "COMBINED_VOLATILITY_STRESS_EVENT_ACCUMULATION_OR_REFINEMENT_REVIEW_V1",
+  "arbusdt_summary": {
+    "arbusdt_concentration": 0.06666666666666667,
+    "arbusdt_count": 1
+  },
+  "blocker": null,
+  "candidate_generation_allowed": false,
+  "combined_event_definition": {
+    "component_a_allowed_types": [
+      "expansion + volatility expansion",
+      "expansion + volatility compression break"
+    ],
+    "component_b_allowed_type": "account/position divergence resolution",
+    "current_prior_component_data_only": true,
+    "future_return_or_volatility_outcome_used": false,
+    "name": "COMBINED_VOLATILITY_STRESS_EVENT",
+    "options_data_used": false,
+    "overlap_window": "+/-1h fixed",
+    "same_symbol_required": true
+  },
+  "combined_event_timestamp_policy": {
+    "combined_event_time": "max(component_a_time, component_b_time)",
+    "examples_first_25": [
+      {
+        "combined_event_time": "2023-02-04T13:35:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2023-02-04T13:05:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2023-02-04T13:35:00Z",
+        "distance_minutes": 30.0,
+        "symbol": "BTCUSDT"
+      },
+      {
+        "combined_event_time": "2023-03-07T01:40:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2023-03-07T01:25:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2023-03-07T01:40:00Z",
+        "distance_minutes": 15.0,
+        "symbol": "APTUSDT"
+      },
+      {
+        "combined_event_time": "2023-06-05T16:05:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2023-06-05T15:05:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2023-06-05T16:05:00Z",
+        "distance_minutes": 60.0,
+        "symbol": "BNBUSDT"
+      },
+      {
+        "combined_event_time": "2023-07-13T15:25:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2023-07-13T15:25:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2023-07-13T15:25:00Z",
+        "distance_minutes": 0.0,
+        "symbol": "XRPUSDT"
+      },
+      {
+        "combined_event_time": "2023-11-01T00:40:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2023-11-01T00:40:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2023-11-01T00:35:00Z",
+        "distance_minutes": 5.0,
+        "symbol": "ARBUSDT"
+      },
+      {
+        "combined_event_time": "2023-12-07T04:10:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2023-12-07T04:10:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2023-12-07T04:10:00Z",
+        "distance_minutes": 0.0,
+        "symbol": "APTUSDT"
+      },
+      {
+        "combined_event_time": "2023-12-07T16:35:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2023-12-07T15:35:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2023-12-07T16:35:00Z",
+        "distance_minutes": 60.0,
+        "symbol": "OPUSDT"
+      },
+      {
+        "combined_event_time": "2024-05-03T20:35:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2024-05-03T20:00:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2024-05-03T20:35:00Z",
+        "distance_minutes": 35.0,
+        "symbol": "APTUSDT"
+      },
+      {
+        "combined_event_time": "2024-09-12T13:00:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2024-09-12T12:50:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2024-09-12T13:00:00Z",
+        "distance_minutes": 10.0,
+        "symbol": "XRPUSDT"
+      },
+      {
+        "combined_event_time": "2025-01-27T00:00:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2025-01-27T00:00:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2025-01-26T23:50:00Z",
+        "distance_minutes": 10.0,
+        "symbol": "APTUSDT"
+      },
+      {
+        "combined_event_time": "2025-01-30T14:35:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2025-01-30T13:35:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2025-01-30T14:35:00Z",
+        "distance_minutes": 60.0,
+        "symbol": "DOGEUSDT"
+      },
+      {
+        "combined_event_time": "2025-02-01T09:40:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2025-02-01T09:30:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2025-02-01T09:40:00Z",
+        "distance_minutes": 10.0,
+        "symbol": "XRPUSDT"
+      },
+      {
+        "combined_event_time": "2025-03-14T09:20:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2025-03-14T08:20:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2025-03-14T09:20:00Z",
+        "distance_minutes": 60.0,
+        "symbol": "LINKUSDT"
+      },
+      {
+        "combined_event_time": "2025-08-07T11:35:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2025-08-07T11:00:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2025-08-07T11:35:00Z",
+        "distance_minutes": 35.0,
+        "symbol": "DOGEUSDT"
+      },
+      {
+        "combined_event_time": "2025-12-26T15:20:00Z",
+        "component_a_subtype": "expansion + volatility compression break",
+        "component_a_time": "2025-12-26T15:10:00Z",
+        "component_b_subtype": "account/position divergence resolution",
+        "component_b_time": "2025-12-26T15:20:00Z",
+        "distance_minutes": 10.0,
+        "symbol": "DOGEUSDT"
+      }
+    ],
+    "rationale": "time both component confirmations are known"
+  },
+  "combined_theory_id": "COMBINED_VOLATILITY_STRESS_EVENT",
+  "component_a_subtype_distribution": {
+    "expansion + volatility compression break": 15
+  },
+  "component_a_theory_id": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT",
+  "component_b_subtype_distribution": {
+    "account/position divergence resolution": 15
+  },
+  "component_b_theory_id": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT",
+  "component_event_reconstruction_status": {
+    "component_a": {
+      "all_reconstructed_counts": {
+        "best_oi_contraction_post_stress_volatility_normalization_definition": 455,
+        "best_oi_contraction_volatility_expansion_definition": 550,
+        "best_oi_expansion_volatility_compression_break_definition": 585,
+        "best_oi_expansion_volatility_expansion_definition": 585
+      },
+      "selected_slots": [
+        "best_oi_expansion_volatility_expansion_definition",
+        "best_oi_expansion_volatility_compression_break_definition"
+      ],
+      "source_reconstruction": {
+        "actual_counts": {
+          "best_oi_contraction_post_stress_volatility_normalization_definition": 455,
+          "best_oi_contraction_volatility_expansion_definition": 550,
+          "best_oi_expansion_volatility_compression_break_definition": 585,
+          "best_oi_expansion_volatility_expansion_definition": 585
+        },
+        "archive_summary": {
+          "archive_record_count": 360,
+          "missing_archive_records": [
+            {
+              "available": false,
+              "month": 1,
+              "reason": null,
+              "symbol": "ARBUSDT",
+              "year": 2023
+            },
+            {
+              "available": false,
+              "month": 2,
+              "reason": null,
+              "symbol": "ARBUSDT",
+              "year": 2023
+            }
+          ],
+          "raw_archive_paths_embedded": false
+        },
+        "expected_counts": {
+          "best_oi_contraction_post_stress_volatility_normalization_definition": 455,
+          "best_oi_contraction_volatility_expansion_definition": 550,
+          "best_oi_expansion_volatility_compression_break_definition": 585,
+          "best_oi_expansion_volatility_expansion_definition": 585
+        },
+        "reconstruction_counters": {
+          "aggregate": {
+            "cooldown_rejections__best_oi_contraction_post_stress_volatility_normalization_definition": 726,
+            "cooldown_rejections__best_oi_contraction_volatility_expansion_definition": 998,
+            "cooldown_rejections__best_oi_expansion_volatility_compression_break_definition": 1451,
+            "cooldown_rejections__best_oi_expansion_volatility_expansion_definition": 1451,
+            "missing__oi_delta_log_1h_missing": 56230,
+            "raw_counts__best_oi_contraction_post_stress_volatility_normalization_definition": 1181,
+            "raw_counts__best_oi_contraction_volatility_expansion_definition": 1548,
+            "raw_counts__best_oi_expansion_volatility_compression_break_definition": 2036,
+            "raw_counts__best_oi_expansion_volatility_expansion_definition": 2036
+          },
+          "per_symbol": {
+            "APTUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 91,
+                "best_oi_contraction_volatility_expansion_definition": 100,
+                "best_oi_expansion_volatility_compression_break_definition": 112,
+                "best_oi_expansion_volatility_expansion_definition": 112
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 4038
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 146,
+                "best_oi_contraction_volatility_expansion_definition": 153,
+                "best_oi_expansion_volatility_compression_break_definition": 167,
+                "best_oi_expansion_volatility_expansion_definition": 167
+              }
+            },
+            "ARBUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 90,
+                "best_oi_contraction_volatility_expansion_definition": 88,
+                "best_oi_expansion_volatility_compression_break_definition": 101,
+                "best_oi_expansion_volatility_expansion_definition": 101
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 6080
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 145,
+                "best_oi_contraction_volatility_expansion_definition": 136,
+                "best_oi_expansion_volatility_compression_break_definition": 161,
+                "best_oi_expansion_volatility_expansion_definition": 161
+              }
+            },
+            "BNBUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 46,
+                "best_oi_contraction_volatility_expansion_definition": 92,
+                "best_oi_expansion_volatility_compression_break_definition": 155,
+                "best_oi_expansion_volatility_expansion_definition": 155
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 6237
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 82,
+                "best_oi_contraction_volatility_expansion_definition": 138,
+                "best_oi_expansion_volatility_compression_break_definition": 207,
+                "best_oi_expansion_volatility_expansion_definition": 207
+              }
+            },
+            "BTCUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 36,
+                "best_oi_contraction_volatility_expansion_definition": 105,
+                "best_oi_expansion_volatility_compression_break_definition": 166,
+                "best_oi_expansion_volatility_expansion_definition": 166
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 5893
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 65,
+                "best_oi_contraction_volatility_expansion_definition": 169,
+                "best_oi_expansion_volatility_compression_break_definition": 227,
+                "best_oi_expansion_volatility_expansion_definition": 227
+              }
+            },
+            "DOGEUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 72,
+                "best_oi_contraction_volatility_expansion_definition": 89,
+                "best_oi_expansion_volatility_compression_break_definition": 208,
+                "best_oi_expansion_volatility_expansion_definition": 208
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 6254
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 122,
+                "best_oi_contraction_volatility_expansion_definition": 136,
+                "best_oi_expansion_volatility_compression_break_definition": 274,
+                "best_oi_expansion_volatility_expansion_definition": 274
+              }
+            },
+            "ETHUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 46,
+                "best_oi_contraction_volatility_expansion_definition": 153,
+                "best_oi_expansion_volatility_compression_break_definition": 166,
+                "best_oi_expansion_volatility_expansion_definition": 166
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 3795
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 83,
+                "best_oi_contraction_volatility_expansion_definition": 237,
+                "best_oi_expansion_volatility_compression_break_definition": 229,
+                "best_oi_expansion_volatility_expansion_definition": 229
+              }
+            },
+            "LINKUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 110,
+                "best_oi_contraction_volatility_expansion_definition": 85,
+                "best_oi_expansion_volatility_compression_break_definition": 123,
+                "best_oi_expansion_volatility_expansion_definition": 123
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 7818
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 164,
+                "best_oi_contraction_volatility_expansion_definition": 133,
+                "best_oi_expansion_volatility_compression_break_definition": 177,
+                "best_oi_expansion_volatility_expansion_definition": 177
+              }
+            },
+            "OPUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 111,
+                "best_oi_contraction_volatility_expansion_definition": 81,
+                "best_oi_expansion_volatility_compression_break_definition": 82,
+                "best_oi_expansion_volatility_expansion_definition": 82
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 6357
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 174,
+                "best_oi_contraction_volatility_expansion_definition": 134,
+                "best_oi_expansion_volatility_compression_break_definition": 132,
+                "best_oi_expansion_volatility_expansion_definition": 132
+              }
+            },
+            "SOLUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 89,
+                "best_oi_contraction_volatility_expansion_definition": 132,
+                "best_oi_expansion_volatility_compression_break_definition": 132,
+                "best_oi_expansion_volatility_expansion_definition": 132
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 4140
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 135,
+                "best_oi_contraction_volatility_expansion_definition": 193,
+                "best_oi_expansion_volatility_compression_break_definition": 192,
+                "best_oi_expansion_volatility_expansion_definition": 192
+              }
+            },
+            "XRPUSDT": {
+              "cooldown_rejections": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 35,
+                "best_oi_contraction_volatility_expansion_definition": 73,
+                "best_oi_expansion_volatility_compression_break_definition": 206,
+                "best_oi_expansion_volatility_expansion_definition": 206
+              },
+              "missing": {
+                "oi_delta_log_1h_missing": 5618
+              },
+              "raw_counts": {
+                "best_oi_contraction_post_stress_volatility_normalization_definition": 65,
+                "best_oi_contraction_volatility_expansion_definition": 119,
+                "best_oi_expansion_volatility_compression_break_definition": 270,
+                "best_oi_expansion_volatility_expansion_definition": 270
+              }
+            }
+          }
+        },
+        "status": "EVENT_COUNT_RECONSTRUCTION_EXACT"
+      },
+      "status": "EVENT_COUNT_RECONSTRUCTION_EXACT",
+      "used_count": 1170
+    },
+    "component_b": {
+      "all_reconstructed_counts": {
+        "best_long_crowding_normalization_candidate": 520,
+        "best_short_crowding_normalization_candidate": 426,
+        "optional_account_position_divergence_resolution_candidate": 947
+      },
+      "selected_slots": [
+        "optional_account_position_divergence_resolution_candidate"
+      ],
+      "source_reconstruction": {
+        "actual_counts": {
+          "best_long_crowding_normalization_candidate": 520,
+          "best_short_crowding_normalization_candidate": 426,
+          "optional_account_position_divergence_resolution_candidate": 947
+        },
+        "archive_summary": {
+          "archive_record_count": 360,
+          "missing_archive_records": [
+            {
+              "available": false,
+              "month": 1,
+              "reason": null,
+              "symbol": "ARBUSDT",
+              "year": 2023
+            },
+            {
+              "available": false,
+              "month": 2,
+              "reason": null,
+              "symbol": "ARBUSDT",
+              "year": 2023
+            }
+          ],
+          "raw_archive_paths_embedded": false
+        },
+        "expected_counts": {
+          "best_long_crowding_normalization_candidate": 520,
+          "best_short_crowding_normalization_candidate": 426,
+          "optional_account_position_divergence_resolution_candidate": 947
+        },
+        "reconstruction_counters": {
+          "aggregate": {
+            "cooldown_rejections__best_long_crowding_normalization_candidate": 7885,
+            "cooldown_rejections__best_short_crowding_normalization_candidate": 6555,
+            "cooldown_rejections__optional_account_position_divergence_resolution_candidate": 5209,
+            "raw_counts__best_long_crowding_normalization_candidate": 8405,
+            "raw_counts__best_short_crowding_normalization_candidate": 6981,
+            "raw_counts__optional_account_position_divergence_resolution_candidate": 6156
+          },
+          "per_symbol": {
+            "APTUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 560,
+                "best_short_crowding_normalization_candidate": 640,
+                "optional_account_position_divergence_resolution_candidate": 365
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 597,
+                "best_short_crowding_normalization_candidate": 697,
+                "optional_account_position_divergence_resolution_candidate": 445
+              }
+            },
+            "ARBUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 451,
+                "best_short_crowding_normalization_candidate": 350,
+                "optional_account_position_divergence_resolution_candidate": 425
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 497,
+                "best_short_crowding_normalization_candidate": 375,
+                "optional_account_position_divergence_resolution_candidate": 508
+              }
+            },
+            "BNBUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 650,
+                "best_short_crowding_normalization_candidate": 546,
+                "optional_account_position_divergence_resolution_candidate": 483
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 685,
+                "best_short_crowding_normalization_candidate": 575,
+                "optional_account_position_divergence_resolution_candidate": 565
+              }
+            },
+            "BTCUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 231,
+                "best_short_crowding_normalization_candidate": 277,
+                "optional_account_position_divergence_resolution_candidate": 232
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 246,
+                "best_short_crowding_normalization_candidate": 292,
+                "optional_account_position_divergence_resolution_candidate": 282
+              }
+            },
+            "DOGEUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 1355,
+                "best_short_crowding_normalization_candidate": 1727,
+                "optional_account_position_divergence_resolution_candidate": 935
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 1441,
+                "best_short_crowding_normalization_candidate": 1832,
+                "optional_account_position_divergence_resolution_candidate": 1089
+              }
+            },
+            "ETHUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 475,
+                "best_short_crowding_normalization_candidate": 283,
+                "optional_account_position_divergence_resolution_candidate": 350
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 503,
+                "best_short_crowding_normalization_candidate": 302,
+                "optional_account_position_divergence_resolution_candidate": 442
+              }
+            },
+            "LINKUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 850,
+                "best_short_crowding_normalization_candidate": 773,
+                "optional_account_position_divergence_resolution_candidate": 559
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 902,
+                "best_short_crowding_normalization_candidate": 816,
+                "optional_account_position_divergence_resolution_candidate": 653
+              }
+            },
+            "OPUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 853,
+                "best_short_crowding_normalization_candidate": 741,
+                "optional_account_position_divergence_resolution_candidate": 618
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 916,
+                "best_short_crowding_normalization_candidate": 801,
+                "optional_account_position_divergence_resolution_candidate": 721
+              }
+            },
+            "SOLUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 1088,
+                "best_short_crowding_normalization_candidate": 402,
+                "optional_account_position_divergence_resolution_candidate": 597
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 1160,
+                "best_short_crowding_normalization_candidate": 426,
+                "optional_account_position_divergence_resolution_candidate": 701
+              }
+            },
+            "XRPUSDT": {
+              "cooldown_rejections": {
+                "best_long_crowding_normalization_candidate": 1372,
+                "best_short_crowding_normalization_candidate": 816,
+                "optional_account_position_divergence_resolution_candidate": 645
+              },
+              "missing": {},
+              "raw_counts": {
+                "best_long_crowding_normalization_candidate": 1458,
+                "best_short_crowding_normalization_candidate": 865,
+                "optional_account_position_divergence_resolution_candidate": 750
+              }
+            }
+          }
+        },
+        "selected_secondary_definitions_not_used_as_primary": {
+          "best_long_crowding_persistence_break_candidate": {
+            "cooldown_filtered_count": 46,
+            "definition_id": "LONG_CROWDING_PERSISTENCE_BREAK_EVENT__source_top_account__extreme_p95.0__strength_weak__window_24h__cooldown_6h",
+            "used_as_primary": false
+          },
+          "best_short_crowding_persistence_break_candidate": {
+            "cooldown_filtered_count": 45,
+            "definition_id": "SHORT_CROWDING_PERSISTENCE_BREAK_EVENT__source_top_position__extreme_p5.0__strength_weak__window_4h__cooldown_6h",
+            "used_as_primary": false
+          }
+        },
+        "status": "EVENT_COUNT_RECONSTRUCTION_EXACT"
+      },
+      "status": "EVENT_COUNT_RECONSTRUCTION_EXACT",
+      "used_count": 947
+    },
+    "current_prior_data_only": true,
+    "forward_return_fields_used": false,
+    "options_fields_used": false
+  },
+  "component_order_distribution": {
+    "component_a_before_component_b": 11,
+    "component_b_before_component_a": 2,
+    "same_timestamp": 2
+  },
+  "component_time_distance_summary": {
+    "count": 15,
+    "max_minutes": 60.0,
+    "mean_minutes": 26.666666666666668,
+    "median_minutes": 15.0,
+    "min_minutes": 0.0
+  },
+  "concentration_summary": {
+    "concentration_acceptable": false,
+    "month_concentration_preferred_max": 0.15,
+    "symbol_concentration_preferred_max": 0.25,
+    "top_month": "2023-12",
+    "top_month_concentration": 0.13333333333333333,
+    "top_symbol": "APTUSDT",
+    "top_symbol_concentration": 0.26666666666666666
+  },
+  "cooldown_filtered_counts": {
+    "12h": 15,
+    "24h": 15,
+    "6h": 15
+  },
+  "core_longpaths_value": "true",
+  "current_head": "9d1dc80a601546b00e5e5acfcdea23afe7ce4c92",
+  "data_quality_warnings": [],
+  "deduplication_policy": {
+    "component_events_reused": false,
+    "policy": "deterministic nearest-timestamp-pair greedy matching",
+    "sort_order": [
+      "absolute time distance",
+      "combined event time",
+      "component A time",
+      "component B time",
+      "symbol",
+      "component event ids"
+    ],
+    "tie_breaker": "earliest pair deterministically",
+    "uses_returns_or_outcomes": false
+  },
+  "discovery_status": "PASS",
+  "event_count_threshold_interpretation": {
+    "band": "too_sparse",
+    "exceeds_100": false,
+    "interpretation": "<50 unique combined events; too sparse for immediate diagnostic",
+    "unique_combined_event_count": 15,
+    "uses_returns_or_outcomes": false
+  },
+  "expected_head": "9d1dc80a601546b00e5e5acfcdea23afe7ce4c92",
+  "forbidden_actions_confirmed_false": {
+    "absolute_returns": false,
+    "backtest": false,
+    "candidate_generation": false,
+    "component_event_definition_change": false,
+    "forward_returns": false,
+    "implied_move_calculation": false,
+    "implied_volatility_lookup": false,
+    "null_validation": false,
+    "options_chain_lookup": false,
+    "outcome_use_2023_2025": false,
+    "outcome_use_2026": false,
+    "overlap_window_tuning": false,
+    "p_values": false,
+    "pnl": false,
+    "release": false,
+    "runtime_live_capital_order_private_account_api_key": false,
+    "signal": false,
+    "strategy": false
+  },
+  "forward_return_diagnostic_allowed": false,
+  "head_matches_expected": true,
+  "input_artifact_hashes_after": {
+    "artifacts/contracts/long_short_ratio_extreme_normalization_pre_registered_independent_validation_contract_v1.json": "194e919d6a322e7ccbd1a7f255c00daa553382e5e0eaeb054eed84a3b5eab947",
+    "artifacts/contracts/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_contract_v1.json": "10a1201daf070a7ce6848a6de891ccc852f3a60eb5f3cd1f1cce6b3850958257",
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/long_short_ratio_extreme_normalization_event_discovery_v1.json": "597d286cb34f7a1e25e2941fbcc37558800748c35946ec85cb75ac7ee5b84cfb",
+    "artifacts/research/long_short_ratio_extreme_normalization_event_validator_v1.json": "8f62934c251ee8b85b38dc96420e034c62bebbe2324ccb11be7bbde7941488f1",
+    "artifacts/research/long_short_ratio_extreme_normalization_pre_registered_independent_validation_runner_v1.json": "e5a5e097d258e1396828f3e18313d7d6dc03e0f15b72cb195ed146849dca2f79",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_evaluator_v1.json": "b3d6436e52d40f1f76660bdc0323c043b4bd889d60d0f07d8273f50cf9a8767e",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "95bff40616afdcaa2f1fe40fd1b4753057b0a30cd8386ebae4f2910ffda0fe98",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_runner_v1.json": "2d3a52882f111bda9ed0ca5d239f7948d38c10547ae83d18852851f321390759",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "e5360f6f3516ea31a9af1c4ccf5990a4b8aeb423752372709f9f501c2a7c684e"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/contracts/long_short_ratio_extreme_normalization_pre_registered_independent_validation_contract_v1.json": "194e919d6a322e7ccbd1a7f255c00daa553382e5e0eaeb054eed84a3b5eab947",
+    "artifacts/contracts/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_contract_v1.json": "10a1201daf070a7ce6848a6de891ccc852f3a60eb5f3cd1f1cce6b3850958257",
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/long_short_ratio_extreme_normalization_event_discovery_v1.json": "597d286cb34f7a1e25e2941fbcc37558800748c35946ec85cb75ac7ee5b84cfb",
+    "artifacts/research/long_short_ratio_extreme_normalization_event_validator_v1.json": "8f62934c251ee8b85b38dc96420e034c62bebbe2324ccb11be7bbde7941488f1",
+    "artifacts/research/long_short_ratio_extreme_normalization_pre_registered_independent_validation_runner_v1.json": "e5a5e097d258e1396828f3e18313d7d6dc03e0f15b72cb195ed146849dca2f79",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_evaluator_v1.json": "b3d6436e52d40f1f76660bdc0323c043b4bd889d60d0f07d8273f50cf9a8767e",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "95bff40616afdcaa2f1fe40fd1b4753057b0a30cd8386ebae4f2910ffda0fe98",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_runner_v1.json": "2d3a52882f111bda9ed0ca5d239f7948d38c10547ae83d18852851f321390759",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "e5360f6f3516ea31a9af1c4ccf5990a4b8aeb423752372709f9f501c2a7c684e"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "missing_component_summary": {
+    "component_a_reconstruction_missing": {
+      "cooldown_rejections__best_oi_contraction_post_stress_volatility_normalization_definition": 726,
+      "cooldown_rejections__best_oi_contraction_volatility_expansion_definition": 998,
+      "cooldown_rejections__best_oi_expansion_volatility_compression_break_definition": 1451,
+      "cooldown_rejections__best_oi_expansion_volatility_expansion_definition": 1451,
+      "missing__oi_delta_log_1h_missing": 56230,
+      "raw_counts__best_oi_contraction_post_stress_volatility_normalization_definition": 1181,
+      "raw_counts__best_oi_contraction_volatility_expansion_definition": 1548,
+      "raw_counts__best_oi_expansion_volatility_compression_break_definition": 2036,
+      "raw_counts__best_oi_expansion_volatility_expansion_definition": 2036
+    },
+    "component_a_used_event_count": 1170,
+    "component_a_without_component_b_within_1h": 1140,
+    "component_b_reconstruction_missing": {
+      "cooldown_rejections__best_long_crowding_normalization_candidate": 7885,
+      "cooldown_rejections__best_short_crowding_normalization_candidate": 6555,
+      "cooldown_rejections__optional_account_position_divergence_resolution_candidate": 5209,
+      "raw_counts__best_long_crowding_normalization_candidate": 8405,
+      "raw_counts__best_short_crowding_normalization_candidate": 6981,
+      "raw_counts__optional_account_position_divergence_resolution_candidate": 6156
+    },
+    "component_b_used_event_count": 947,
+    "component_b_without_component_a_within_1h": 932
+  },
+  "month_coverage_summary": {
+    "event_count_by_month": {
+      "2023-02": 1,
+      "2023-03": 1,
+      "2023-06": 1,
+      "2023-07": 1,
+      "2023-11": 1,
+      "2023-12": 2,
+      "2024-05": 1,
+      "2024-09": 1,
+      "2025-01": 2,
+      "2025-02": 1,
+      "2025-03": 1,
+      "2025-08": 1,
+      "2025-12": 1
+    },
+    "top_month": "2023-12",
+    "top_month_concentration": 0.13333333333333333,
+    "top_month_count": 2,
+    "unique_month_count": 13
+  },
+  "options_availability_diagnostic_allowed_after_validator": false,
+  "overlap_window_distribution": {
+    "exact_same_timestamp": 2,
+    "within_15m": 6,
+    "within_30m": 1,
+    "within_60m": 6
+  },
+  "overlap_window_policy": {
+    "informational_buckets_only": [
+      "exact_same_timestamp",
+      "within_15m",
+      "within_30m",
+      "within_60m"
+    ],
+    "optimized_or_tuned": false,
+    "primary_window": "+/-1h",
+    "window_ms": 3600000
+  },
+  "raw_pair_count": 30,
+  "recovery_audit_status": "PASS",
+  "release_allowed": false,
+  "result_classification": "COMBINED_VOLATILITY_STRESS_EVENT_DISCOVERY_TOO_SPARSE",
+  "signal_allowed": false,
+  "strategy_allowed": false,
+  "symbol_coverage_summary": {
+    "event_count_by_symbol": {
+      "APTUSDT": 4,
+      "ARBUSDT": 1,
+      "BNBUSDT": 1,
+      "BTCUSDT": 1,
+      "DOGEUSDT": 3,
+      "LINKUSDT": 1,
+      "OPUSDT": 1,
+      "XRPUSDT": 3
+    },
+    "top_symbol": "APTUSDT",
+    "top_symbol_concentration": 0.26666666666666666,
+    "top_symbol_count": 4,
+    "unique_symbol_count": 8
+  },
+  "unique_combined_event_count": 15
+}

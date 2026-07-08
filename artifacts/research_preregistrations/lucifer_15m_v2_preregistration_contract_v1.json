@@ -1,0 +1,200 @@
+{
+  "artifact_kind": "LUCIFER_15M_V2_PREREGISTRATION_CONTRACT",
+  "config_id": "lucifer_15m_v2_stable_cross_trend_volume_sl1_tp2",
+  "cycle": [
+    "preregistration",
+    "execution",
+    "evaluator",
+    "closure"
+  ],
+  "dataset_preregistration": {
+    "external_panel_directory": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol",
+    "panel_classification": "PANEL_15M_REVIEW_PASS_VALID_FOR_READ_ONLY_EXTREME_MOVE_RESEARCH",
+    "panel_review_artifact": "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json",
+    "panel_review_status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
+    "range_end_inclusive_utc": "2025-10-31T23:45:00Z",
+    "range_start_utc": "2023-01-01T00:00:00Z",
+    "reviewed_binance_okx_overlap_81_symbol_15m_panel_only": true,
+    "rows": 7808472,
+    "symbols": 81,
+    "unrelated_datasets_allowed": false
+  },
+  "entry_exit_cost_contract": {
+    "cross_symbol_overlap_allowed": true,
+    "entry": "signal evaluated at bar close, entry at next 15m open if present",
+    "intrabar_policy": "use 15m OHLC high/low; if stop and take both hit, assume stop first",
+    "long_stop": "entry * 0.99",
+    "long_take": "entry * 1.02",
+    "one_position_per_symbol": true,
+    "round_trip_cost_bps": 20,
+    "short_stop": "entry * 1.01",
+    "short_take": "entry * 0.98",
+    "unresolved_policy": "report separately and exclude from closed-trade performance"
+  },
+  "evaluator_policy": {
+    "allowed_result_classes": [
+      "LUCIFER_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+      "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
+      "LUCIFER_15M_V2_INCONCLUSIVE_NEEDS_MORE_DATA",
+      "LUCIFER_15M_V2_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
+    ],
+    "diagnostic_promising_true_only_if_all_true": [
+      "validation net > 0",
+      "holdout net > 0",
+      "validation monthly positive rate >= 0.60",
+      "validation closed trades >= 100, else inconclusive",
+      "null baseline passes",
+      "metric integrity passes",
+      "no lookahead/repaint issue",
+      "safety passes"
+    ]
+  },
+  "fixed_parameters": {
+    "cooldown_bars": 10,
+    "emaFast": 9,
+    "emaTrendFast": 21,
+    "emaTrendLong": 200,
+    "emaTrendSlow": 50,
+    "leftBars": 150,
+    "minStableBars": 5,
+    "pyramiding_per_symbol": 0,
+    "rightBars": 75,
+    "round_trip_cost_bps": 20,
+    "stop_loss_pct": 1.0,
+    "take_profit_pct": 2.0,
+    "timeframe": "15m",
+    "volume_mult": 1.5,
+    "volume_sma_len": 20
+  },
+  "forbidden_actions_confirmed_false": {
+    "candidate_generation": false,
+    "capital_permission": false,
+    "edge_claim": false,
+    "live_permission": false,
+    "network_used": false,
+    "optimization": false,
+    "orders_submitted": false,
+    "parameter_grid": false,
+    "private_api_used": false,
+    "runtime_permission": false
+  },
+  "metrics_required": [
+    "total raw crosses",
+    "fake_cross_blocked",
+    "trend_filter_blocked",
+    "volume_filter_blocked",
+    "accepted signals",
+    "closed trades",
+    "unresolved trades",
+    "long/short split",
+    "stop/take counts",
+    "both-hit-same-bar count",
+    "gross/net bps",
+    "validation net",
+    "holdout net",
+    "monthly gross/net",
+    "monthly positive rate",
+    "worst month",
+    "win rate",
+    "average win/loss",
+    "profit factor",
+    "symbol concentration",
+    "side split",
+    "no-lookahead checks",
+    "pivot confirmation delay checks"
+  ],
+  "module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_preregistration_contract_v1.py",
+  "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_execution_v1.py",
+  "null_baseline_contract": {
+    "method": "deterministic timestamp/block shuffle null",
+    "pass_rule": "validation percentile >= 0.95",
+    "required_if_feasible": true,
+    "run_count": 100
+  },
+  "payload_sha256_excluding_hash": "0dfd11a8ee11bf812d9f0abd7c1773e68a4f70f5ced074d0840cfb9e9c05c8f6",
+  "pivot_and_true_cross_contract": {
+    "active_level_update": "active resistance/support updates only at confirmation time",
+    "extra_anti_fake_cross_rule": [
+      "reject if active level was updated within minStableBars bars",
+      "reject if level changed on current or previous bar",
+      "count these as fake_cross_blocked"
+    ],
+    "level_must_not_change_current_bar": true,
+    "level_must_not_change_immediately_previous_bar": true,
+    "levels_are_step_levels_not_diagonal_lines": true,
+    "long_true_cross": "active support stable, ema9[1] < support, ema9 >= support",
+    "no_pivot_before_confirmation": true,
+    "pivot_confirmation": "raw pivot high/low is confirmed only after rightBars future bars",
+    "short_true_cross": "active resistance stable, ema9[1] > resistance, ema9 <= resistance",
+    "tradeable_level_rule": "bar_index - level_confirmed_bar_index >= minStableBars"
+  },
+  "replacement_checks_all_true": true,
+  "route": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2",
+  "source_checkpoint": {
+    "actual_clean_head": "d0972f46f9ab0963e2fdcf235652204d68deaddd",
+    "actual_head_verified_at_artifact_creation": "d0972f46f9ab0963e2fdcf235652204d68deaddd",
+    "dirty_paths_during_artifact_creation": [
+      "tools/edge_factory_os_repo_only_lucifer_15m_v2_preregistration_contract_v1.py"
+    ],
+    "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": true,
+    "repo_clean_before_route_start": true,
+    "tracked_python_count_before_route_start": 936,
+    "tracked_python_count_verified_at_artifact_creation": 936
+  },
+  "splits": {
+    "holdout": {
+      "end_exclusive_utc": "2025-11-01T00:00:00Z",
+      "start_utc": "2025-04-01T00:00:00Z"
+    },
+    "split_assignment": "entry timestamp determines split",
+    "train": {
+      "end_exclusive_utc": "2024-07-01T00:00:00Z",
+      "start_utc": "2023-01-01T00:00:00Z"
+    },
+    "validation": {
+      "end_exclusive_utc": "2025-04-01T00:00:00Z",
+      "start_utc": "2024-07-01T00:00:00Z"
+    }
+  },
+  "status": "PASS_REPO_ONLY_LUCIFER_15M_V2_PREREGISTRATION_CONTRACT_CREATED",
+  "structural_filters": {
+    "atr_stop_used": false,
+    "candle_close_filter_used": false,
+    "long_trend_filter": "close > ema200 and ema21 > ema50",
+    "proximity_filter_used": false,
+    "rsi_filter_used": false,
+    "score_system_used": false,
+    "seven_of_seven_kesin_gir_labels_used": false,
+    "short_trend_filter": "close < ema200 and ema21 < ema50",
+    "volume_confirmation": "volume > sma(volume, 20) * 1.5"
+  },
+  "timeframe": "15m",
+  "v1_context": {
+    "not_parameter_optimization": true,
+    "prior_closed_trades": 17714,
+    "prior_holdout_net_bps": -19.075924,
+    "prior_result_class": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+    "prior_total_signals": 20055,
+    "prior_validation_net_bps": -20.969033,
+    "structural_repair_reason": "V1 likely over-traded and missed the intended visual quality filter."
+  },
+  "validation_checks": {
+    "actual_clean_head_recorded": true,
+    "artifact_path_equals_required_path": true,
+    "module_path_equals_required_path": true,
+    "no_candidate": true,
+    "no_edge_claim": true,
+    "no_optimization": true,
+    "no_parameter_grid": true,
+    "no_runtime_live_capital": true,
+    "panel_review_artifact_loaded": true,
+    "panel_review_classification_verified": true,
+    "panel_review_status_verified": true,
+    "payload_sha256_excluding_hash_present": true,
+    "replacement_checks_all_true": true,
+    "single_config_only": true,
+    "status_equals_required_status": true,
+    "timeframe_15m_only": true,
+    "tracked_python_count_recorded": true
+  }
+}

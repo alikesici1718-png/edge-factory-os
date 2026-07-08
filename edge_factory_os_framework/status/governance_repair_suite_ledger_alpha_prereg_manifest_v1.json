@@ -1,0 +1,40 @@
+{
+  "active_paper_allowed": false,
+  "archive_performed": false,
+  "audit_repair_mapping": {
+    "repair_01_non_null_ledger": "implemented",
+    "repair_02_alpha_accounting_not_circular": "implemented",
+    "repair_03_pre_registration_active_enforcement": "implemented"
+  },
+  "blocked_route_count": 19,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T02:27:25.146460+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "launcher_allowed": false,
+  "lesson_count": 25,
+  "live_allowed": false,
+  "manifest_name": "edge_factory_os_governance_repair_suite_ledger_alpha_prereg_manifest_v1",
+  "manifest_status": "GOVERNANCE_REPAIR_MANIFEST_READY",
+  "old_files_preserved": {
+    "old_alpha_accounting_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_route_family_alpha_accounting_v1.json",
+    "old_alpha_policy_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_alpha_spending_policy_v1.json",
+    "old_ledger_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_multiple_testing_ledger_v1.json",
+    "old_prereg_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\pre_registration_policy_v1.json"
+  },
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "repair_files": {
+    "alpha_enforcement_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_alpha_accounting_enforcement_v1.json",
+    "pre_registration_enforcement_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\pre_registration_enforcement_policy_v1.json",
+    "repair_state_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\governance_repair_suite_ledger_alpha_prereg_state_v1.json",
+    "repaired_ledger_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_multiple_testing_ledger_enforced_v1.json"
+  },
+  "runtime_touch_allowed": false,
+  "vault_item_count": 1
+}

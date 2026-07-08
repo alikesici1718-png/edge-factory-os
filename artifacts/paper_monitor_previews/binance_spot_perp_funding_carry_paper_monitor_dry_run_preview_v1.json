@@ -1,0 +1,407 @@
+{
+  "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_PAPER_MONITOR_DRY_RUN_IMPLEMENTATION_PREVIEW",
+  "artifact_schema_preview": {
+    "future_dry_run_output_schema": [
+      "status",
+      "snapshot_time_utc",
+      "state_machine_trace",
+      "public_snapshot_records",
+      "repaired_sizing_results",
+      "risk_halt_checks",
+      "simulated_entry_plan_labeled_SIMULATED_NOT_ORDER",
+      "payload_sha256_excluding_hash"
+    ],
+    "future_monitor_report_schema": [
+      "status",
+      "report_type",
+      "source_artifacts",
+      "paper_monitor_enabled_now_false",
+      "runtime_live_capital_false",
+      "payload_sha256_excluding_hash"
+    ],
+    "future_risk_halt_report_schema": [
+      "status",
+      "risk_halt_reason",
+      "critical_flags",
+      "state_at_halt",
+      "orders_placed_false",
+      "live_capital_permission_false",
+      "payload_sha256_excluding_hash"
+    ]
+  },
+  "data_adapter_stub_contract": {
+    "adapter_stub_count": 5,
+    "adapter_stubs": {
+      "get_exchange_rules_snapshot": {
+        "implemented_now": false,
+        "network_called": false,
+        "stub_status": "STUB_ONLY_NO_NETWORK"
+      },
+      "get_public_funding_snapshot": {
+        "implemented_now": false,
+        "network_called": false,
+        "stub_status": "STUB_ONLY_NO_NETWORK"
+      },
+      "get_public_futures_price_snapshot": {
+        "implemented_now": false,
+        "network_called": false,
+        "stub_status": "STUB_ONLY_NO_NETWORK"
+      },
+      "get_public_premium_index_snapshot": {
+        "implemented_now": false,
+        "network_called": false,
+        "stub_status": "STUB_ONLY_NO_NETWORK"
+      },
+      "get_public_spot_price_snapshot": {
+        "implemented_now": false,
+        "network_called": false,
+        "stub_status": "STUB_ONLY_NO_NETWORK"
+      }
+    },
+    "future_implementation_requires_separate_approval": true,
+    "must_not_call_network": true
+  },
+  "implementation_preview_scope": {
+    "api_calls_defined_now": false,
+    "daemon_service_scheduler_defined_now": false,
+    "implementation_preview_only": true,
+    "live_or_capital_permission": false,
+    "network_calls_defined_now": false,
+    "order_paths_defined_now": false,
+    "paper_monitor_enabled_now": false,
+    "runtime_launcher_defined_now": false,
+    "single_cycle_future_step_only": true
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_spot_perp_funding_carry_paper_monitor_dry_run_preview_v1.py",
+  "next_allowed_step": "PAPER_MONITOR_DRY_RUN_SINGLE_CYCLE_IMPLEMENTATION_ONLY",
+  "no_live_guard_constants": {
+    "CANDIDATE_GENERATION_ALLOWED": false,
+    "CAPITAL_ALLOCATION_ALLOWED": false,
+    "EDGE_CLAIM_ALLOWED": false,
+    "LIVE_TRADING_ALLOWED": false,
+    "ORDER_PLACEMENT_ALLOWED": false,
+    "PRIVATE_API_ALLOWED": false,
+    "RUNTIME_ALLOWED": false
+  },
+  "payload_sha256_excluding_hash": "2d82499353b3ff5ed2326644de01fdfad01d2ca4a13e4edd7c90c4a329fa6173",
+  "preview_limitations": [
+    "This preview defines interfaces, schemas, guards, and transition rules only.",
+    "No public or private market data is fetched.",
+    "No price, funding, exchangeInfo, account, balance, or order endpoint is called.",
+    "No daemon, scheduler, service, runtime launcher, paper monitor, live trading, or capital allocation is created.",
+    "Sizing and risk engines are interfaces only and do not compute live order quantities.",
+    "No candidate generation, edge claim, or family release is created."
+  ],
+  "prior_design_preserved": {
+    "classification": "PAPER_MONITOR_DESIGN_READY_FOR_DRY_RUN_IMPLEMENTATION_PREVIEW_NO_LIVE_PERMISSION",
+    "critical_risk_flag_count": 13,
+    "kill_switch_rule_count": 8,
+    "live_capital_permission_exists": false,
+    "next_allowed_step": "PAPER_MONITOR_DRY_RUN_IMPLEMENTATION_PREVIEW_ONLY",
+    "non_critical_risk_flag_count": 5,
+    "paper_monitor_enabled_now": false,
+    "report_type_count": 7,
+    "state_count": 10,
+    "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_PAPER_MONITOR_DESIGN_CREATED"
+  },
+  "replacement_checks_all_true": true,
+  "report_schema_preview": {
+    "daily_carry_report": [
+      "schema_version",
+      "source_artifacts",
+      "payload_sha256_excluding_hash",
+      "no_order_confirmation",
+      "no_live_capital_permission",
+      "day_utc",
+      "simulated_funding_component",
+      "simulated_price_hedge_residual"
+    ],
+    "funding_event_report": [
+      "schema_version",
+      "source_artifacts",
+      "payload_sha256_excluding_hash",
+      "no_order_confirmation",
+      "no_live_capital_permission",
+      "funding_time_utc",
+      "per_symbol_funding_rate",
+      "simulated_funding_accrual"
+    ],
+    "hourly_snapshot_report": [
+      "schema_version",
+      "source_artifacts",
+      "payload_sha256_excluding_hash",
+      "no_order_confirmation",
+      "no_live_capital_permission",
+      "snapshot_time_utc",
+      "symbol_prices",
+      "funding_rates",
+      "risk_flags"
+    ],
+    "monthly_carry_report": [
+      "schema_version",
+      "source_artifacts",
+      "payload_sha256_excluding_hash",
+      "no_order_confirmation",
+      "no_live_capital_permission",
+      "month_utc",
+      "simulated_monthly_carry",
+      "negative_funding_event_count"
+    ],
+    "risk_flag_report": [
+      "schema_version",
+      "source_artifacts",
+      "payload_sha256_excluding_hash",
+      "no_order_confirmation",
+      "no_live_capital_permission",
+      "critical_flags",
+      "non_critical_flags",
+      "risk_halt_state"
+    ],
+    "simulated_pnl_attribution_report": [
+      "schema_version",
+      "source_artifacts",
+      "payload_sha256_excluding_hash",
+      "no_order_confirmation",
+      "no_live_capital_permission",
+      "funding_component",
+      "price_hedge_residual",
+      "estimated_fees",
+      "estimated_slippage"
+    ],
+    "sizing_pass_fail_report": [
+      "schema_version",
+      "source_artifacts",
+      "payload_sha256_excluding_hash",
+      "no_order_confirmation",
+      "no_live_capital_permission",
+      "capital_scenarios",
+      "symbol_sizing_results",
+      "smallest_passing_scenario"
+    ]
+  },
+  "risk_engine_stub_contract": {
+    "critical_risk_flags": [
+      "any_private_api_key_requirement",
+      "any_order_endpoint_call_attempted",
+      "any_symbol_status_not_trading",
+      "missing_spot_price",
+      "missing_futures_price",
+      "missing_funding_data",
+      "missing_next_funding_time",
+      "sizing_failure_for_all_scenarios",
+      "leg_mismatch_above_threshold_for_all_scenarios",
+      "stale_snapshot",
+      "negative_funding_across_all_symbols",
+      "exchange_rule_mismatch",
+      "missing_premiumIndex_data"
+    ],
+    "interface_name": "evaluate_risk_flags_preview",
+    "non_critical_risk_flags": [
+      "some_capital_scenarios_fail_sizing",
+      "one_symbol_negative_funding_but_aggregate_remains_positive",
+      "high_notional_mismatch_in_non_selected_scenarios",
+      "next_funding_time_far_or_ambiguous",
+      "premiumIndex_present_but_no_server_timestamp"
+    ],
+    "preview_response": {
+      "implemented_now": false,
+      "input_record_received": false,
+      "input_schema_name": "future_risk_flag_input",
+      "private_or_account_values_allowed": false,
+      "stub_status": "INTERFACE_ONLY_NO_ACCOUNT_MARGIN_OR_PRIVATE_VALUES"
+    },
+    "private_account_margin_values_allowed": false
+  },
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "implementation_preview_created": true,
+    "live_permission_allowed_now": false,
+    "next_step_must_not_be_live_or_capital": true,
+    "order_placement_allowed_now": false,
+    "paper_monitor_enabled_now": false,
+    "private_api_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "sizing_engine_stub_contract": {
+    "decimal_arithmetic_required_in_future_implementation": true,
+    "interface_name": "repaired_common_base_quantity_sizing_preview",
+    "live_quantities_computed_now": false,
+    "preview_response": {
+      "implemented_now": false,
+      "input_record_received": false,
+      "input_schema_name": "future_repaired_sizing_input",
+      "references_prior_repair_algorithm": true,
+      "requires_common_base_quantity": true,
+      "requires_decimal_arithmetic": true,
+      "stub_status": "INTERFACE_ONLY_NO_LIVE_QUANTITY_COMPUTATION"
+    },
+    "references_repaired_common_base_quantity_algorithm": true,
+    "validation_rules": [
+      "same_base_quantity_for_spot_and_perp",
+      "minQty_stepSize_minNotional_tickSize_filters_required",
+      "fail_closed_if_any_symbol_or_scenario_fails",
+      "do_not_assume_capital_pass_fail_monotonicity"
+    ]
+  },
+  "source_artifacts": {
+    "exchange_rule_discovery": "artifacts/exchange_rule_discovery/binance_spot_perp_funding_carry_exchange_rule_discovery_v1.json",
+    "exchange_rule_payload_sha256_excluding_hash": "db998979f8d902ddff553877fa59384893021d2e814fb4c42dbc1ab194ebff46",
+    "order_sizing_repair_payload_sha256_excluding_hash": "0f189c4b8999d7d9a1018cf988952e630d554ed898fc29a61510af93a906d822",
+    "order_sizing_repair_sim": "artifacts/order_sizing_simulations/binance_spot_perp_funding_carry_order_sizing_repair_sim_v1.json",
+    "paper_dry_run": "artifacts/paper_trading_dry_runs/binance_spot_perp_funding_carry_paper_dry_run_simulator_v1.json",
+    "paper_dry_run_payload_sha256_excluding_hash": "7dcc93b6c82344266c72144f2cd06c5b5507701d2c7f99a7971652f175dc655d",
+    "paper_monitor_design": "artifacts/paper_monitor_designs/binance_spot_perp_funding_carry_paper_monitor_design_v1.json",
+    "paper_monitor_design_payload_sha256_excluding_hash": "25cb17fa9a4e296f194b79808a6515d880ec232ecde3356c008ccb2da04c6188",
+    "risk_capital_diagnostic": "artifacts/risk_capital_diagnostics/binance_spot_perp_delta_neutral_funding_carry_risk_capital_feasibility_v1.json",
+    "risk_capital_payload_sha256_excluding_hash": "9b158cf8517e47c750c39234ea1d7287619a969f567cc682e16edd103a080ccc",
+    "strategy_closure": "artifacts/strategy_closures/binance_spot_perp_delta_neutral_funding_carry_closure_v1.json",
+    "strategy_closure_payload_sha256_excluding_hash": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8"
+  },
+  "source_checkpoint": {
+    "repo_clean_before_run": true,
+    "repo_head_at_run": "fe2d0ccf07599a0887c00633c17aae0a738279a7",
+    "tracked_python_count_at_start": 891
+  },
+  "state_machine_preview": {
+    "default_state": "DISABLED",
+    "simulated_entry_label_required": "SIMULATED_NOT_ORDER",
+    "state_count": 10,
+    "state_machine_class": "PaperMonitorStateMachinePreview",
+    "states": [
+      "DISABLED",
+      "SNAPSHOT_PUBLIC_MARKET_DATA",
+      "REFRESH_EXCHANGE_RULES",
+      "RUN_REPAIRED_SIZING",
+      "SIMULATE_ENTRY_DECISION",
+      "SIMULATE_POSITION_OPEN",
+      "MONITOR_FUNDING",
+      "SIMULATE_REBALANCE_OR_EXIT",
+      "RISK_HALT",
+      "REPORT_ONLY"
+    ]
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_PAPER_MONITOR_DRY_RUN_PREVIEW_CREATED",
+  "transition_table_preview": {
+    "critical_risk_flag_goes_to": "RISK_HALT",
+    "deterministic_transition_table": [
+      {
+        "condition": "single-cycle preview is explicitly invoked in report-only mode",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "DISABLED",
+        "target_state": "SNAPSHOT_PUBLIC_MARKET_DATA"
+      },
+      {
+        "condition": "public data missing or stale",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "SNAPSHOT_PUBLIC_MARKET_DATA",
+        "target_state": "REPORT_ONLY"
+      },
+      {
+        "condition": "public data schema is present for simulation records",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "SNAPSHOT_PUBLIC_MARKET_DATA",
+        "target_state": "REFRESH_EXCHANGE_RULES"
+      },
+      {
+        "condition": "public exchange rule schema is present",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "REFRESH_EXCHANGE_RULES",
+        "target_state": "RUN_REPAIRED_SIZING"
+      },
+      {
+        "condition": "all sizing scenarios fail",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "RUN_REPAIRED_SIZING",
+        "target_state": "REPORT_ONLY"
+      },
+      {
+        "condition": "any critical risk flag is true",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "RUN_REPAIRED_SIZING",
+        "target_state": "RISK_HALT"
+      },
+      {
+        "condition": "sizing passes and no critical risk flag is true",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "RUN_REPAIRED_SIZING",
+        "target_state": "SIMULATE_ENTRY_DECISION"
+      },
+      {
+        "condition": "paper-only simulated entry is labeled SIMULATED_NOT_ORDER",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "SIMULATE_ENTRY_DECISION",
+        "target_state": "SIMULATE_POSITION_OPEN"
+      },
+      {
+        "condition": "simulated position state is recorded without account or order IDs",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "SIMULATE_POSITION_OPEN",
+        "target_state": "MONITOR_FUNDING"
+      },
+      {
+        "condition": "paper funding or rebalance checkpoint is reconciled",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "MONITOR_FUNDING",
+        "target_state": "SIMULATE_REBALANCE_OR_EXIT"
+      },
+      {
+        "condition": "single-cycle preview report is finalized",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "SIMULATE_REBALANCE_OR_EXIT",
+        "target_state": "REPORT_ONLY"
+      },
+      {
+        "condition": "risk halt is reported without any order action",
+        "live_or_capital_allowed": false,
+        "order_placement_allowed": false,
+        "source_state": "RISK_HALT",
+        "target_state": "REPORT_ONLY"
+      }
+    ],
+    "public_data_missing_goes_to": "REPORT_ONLY",
+    "simulated_entry_never_becomes_real_order": true,
+    "sizing_fails_goes_to": "REPORT_ONLY",
+    "sizing_passes_and_no_critical_flags_goes_to": "SIMULATE_ENTRY_DECISION",
+    "transition_count": 12
+  },
+  "validation_checks": {
+    "data_adapter_stubs_do_not_call_network": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "next_allowed_step_verified_preview_only": true,
+    "no_api_called": true,
+    "no_api_key_used": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_launcher_created": true,
+    "no_live_guard_constants_false": true,
+    "no_live_or_capital_permission": true,
+    "no_network_used": true,
+    "no_order_endpoint_called": true,
+    "no_orders_placed": true,
+    "no_private_api": true,
+    "no_runtime_enabled": true,
+    "no_scheduler_created": true,
+    "prior_design_classification_verified": true,
+    "prior_paper_monitor_design_loaded": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "report_schemas_defined": true,
+    "state_machine_preview_defined": true
+  }
+}

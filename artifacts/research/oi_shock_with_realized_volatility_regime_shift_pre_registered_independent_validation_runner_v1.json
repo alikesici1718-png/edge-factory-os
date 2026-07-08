@@ -1,0 +1,1390 @@
+{
+  "allowed_next_step": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_INDEPENDENT_SAMPLE_ACCUMULATION_MONITOR_V1",
+  "archive_availability_summary": {
+    "available_archive_count": 1779,
+    "checksum_available_count": 1779,
+    "checksum_verified_count": 1779,
+    "downloaded_archive_count": 1779,
+    "missing_archive_count": 61,
+    "missing_archives": [
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/SOLUSDT/SOLUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/SOLUSDT/SOLUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/SOLUSDT/SOLUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/SOLUSDT/SOLUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/SOLUSDT/SOLUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/15m/SOLUSDT-15m-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BTCUSDT/BTCUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BTCUSDT/BTCUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BTCUSDT/BTCUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BTCUSDT/BTCUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BTCUSDT/BTCUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "APTUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/APTUSDT/APTUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "APTUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/APTUSDT/APTUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "APTUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/APTUSDT/APTUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "APTUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/APTUSDT/APTUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "APTUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/APTUSDT/APTUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "APTUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/15m/APTUSDT-15m-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "XRPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/XRPUSDT/XRPUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "XRPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/XRPUSDT/XRPUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "XRPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/XRPUSDT/XRPUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "XRPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/XRPUSDT/XRPUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "XRPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/XRPUSDT/XRPUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "XRPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/XRPUSDT/15m/XRPUSDT-15m-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ETHUSDT/ETHUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ETHUSDT/ETHUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ETHUSDT/ETHUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ETHUSDT/ETHUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ETHUSDT/ETHUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/DOGEUSDT/DOGEUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/DOGEUSDT/DOGEUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/DOGEUSDT/DOGEUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/DOGEUSDT/DOGEUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "HTTP Error 503: Service Unavailable",
+        "kind": "metrics",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/DOGEUSDT/DOGEUSDT-metrics-2026-04-14.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/DOGEUSDT/DOGEUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/DOGEUSDT/15m/DOGEUSDT-15m-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BNBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BNBUSDT/BNBUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BNBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BNBUSDT/BNBUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BNBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BNBUSDT/BNBUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BNBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BNBUSDT/BNBUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "BNBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/BNBUSDT/BNBUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "BNBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BNBUSDT/15m/BNBUSDT-15m-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "LINKUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/LINKUSDT/LINKUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "LINKUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/LINKUSDT/LINKUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "LINKUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/LINKUSDT/LINKUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "LINKUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/LINKUSDT/LINKUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "LINKUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/LINKUSDT/LINKUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "LINKUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/LINKUSDT/15m/LINKUSDT-15m-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ARBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ARBUSDT/ARBUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ARBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ARBUSDT/ARBUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ARBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ARBUSDT/ARBUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ARBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ARBUSDT/ARBUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "ARBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ARBUSDT/ARBUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "ARBUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/15m/ARBUSDT-15m-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "OPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/OPUSDT/OPUSDT-metrics-2026-01.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "OPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/OPUSDT/OPUSDT-metrics-2026-02.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "OPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/OPUSDT/OPUSDT-metrics-2026-03.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "OPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/OPUSDT/OPUSDT-metrics-2026-04.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "metrics",
+        "symbol": "OPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/OPUSDT/OPUSDT-metrics-2026-05.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "kind": "klines",
+        "symbol": "OPUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/OPUSDT/15m/OPUSDT-15m-2026-05.zip"
+      }
+    ],
+    "reused_archive_count": 0,
+    "total_archive_records": 1840,
+    "uses_public_data_binance_vision_only": true,
+    "validation_start": "2026-01-01"
+  },
+  "artifact_kind": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_RUNNER",
+  "blocker": null,
+  "bonferroni_p_values": {
+    "best_oi_expansion_volatility_compression_break_definition": 0.057942057942057944,
+    "best_oi_expansion_volatility_expansion_definition": 0.07192807192807193
+  },
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "current_head": "749982396877be53d0ce9fa1b1df60322f632b13",
+  "data_quality_warnings": [
+    "61 public archive probes were unavailable."
+  ],
+  "event_counts_by_primary_target": {
+    "best_oi_expansion_volatility_compression_break_definition": 70,
+    "best_oi_expansion_volatility_expansion_definition": 70
+  },
+  "event_reconstruction_status": "RECONSTRUCTED_FROZEN_PRIMARY_TARGETS_ONLY",
+  "event_reconstruction_summary": {
+    "current_or_prior_bar_only": true,
+    "horizon_changes": false,
+    "reconstruction_counters": {
+      "aggregate": {
+        "cooldown_rejections__best_oi_expansion_volatility_compression_break_definition": 161,
+        "cooldown_rejections__best_oi_expansion_volatility_expansion_definition": 161,
+        "missing__oi_delta_log_1h_missing": 226,
+        "missing__price_bar_missing": 10,
+        "raw_counts__best_oi_expansion_volatility_compression_break_definition": 231,
+        "raw_counts__best_oi_expansion_volatility_expansion_definition": 231
+      },
+      "per_symbol": {
+        "APTUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 16,
+            "best_oi_expansion_volatility_expansion_definition": 16
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 32,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 26,
+            "best_oi_expansion_volatility_expansion_definition": 26
+          }
+        },
+        "ARBUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 7,
+            "best_oi_expansion_volatility_expansion_definition": 7
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 12,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 13,
+            "best_oi_expansion_volatility_expansion_definition": 13
+          }
+        },
+        "BNBUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 17,
+            "best_oi_expansion_volatility_expansion_definition": 17
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 12,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 25,
+            "best_oi_expansion_volatility_expansion_definition": 25
+          }
+        },
+        "BTCUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 14,
+            "best_oi_expansion_volatility_expansion_definition": 14
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 28,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 18,
+            "best_oi_expansion_volatility_expansion_definition": 18
+          }
+        },
+        "DOGEUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 28,
+            "best_oi_expansion_volatility_expansion_definition": 28
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 24,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 38,
+            "best_oi_expansion_volatility_expansion_definition": 38
+          }
+        },
+        "ETHUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 12,
+            "best_oi_expansion_volatility_expansion_definition": 12
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 14,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 20,
+            "best_oi_expansion_volatility_expansion_definition": 20
+          }
+        },
+        "LINKUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 10,
+            "best_oi_expansion_volatility_expansion_definition": 10
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 24,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 16,
+            "best_oi_expansion_volatility_expansion_definition": 16
+          }
+        },
+        "OPUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 11,
+            "best_oi_expansion_volatility_expansion_definition": 11
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 44,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 16,
+            "best_oi_expansion_volatility_expansion_definition": 16
+          }
+        },
+        "SOLUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 6,
+            "best_oi_expansion_volatility_expansion_definition": 6
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 14,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 9,
+            "best_oi_expansion_volatility_expansion_definition": 9
+          }
+        },
+        "XRPUSDT": {
+          "cooldown_rejections": {
+            "best_oi_expansion_volatility_compression_break_definition": 40,
+            "best_oi_expansion_volatility_expansion_definition": 40
+          },
+          "missing": {
+            "oi_delta_log_1h_missing": 22,
+            "price_bar_missing": 1
+          },
+          "raw_counts": {
+            "best_oi_expansion_volatility_compression_break_definition": 50,
+            "best_oi_expansion_volatility_expansion_definition": 50
+          }
+        }
+      }
+    },
+    "selected_primary_targets": {
+      "best_oi_expansion_volatility_compression_break_definition": {
+        "arbusdt_count": 60,
+        "cooldown_filtered_count": 585,
+        "definition_id": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT__oi_p95.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+        "meta": {
+          "cooldown_hours": 6,
+          "family": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT",
+          "oi_direction": "expansion",
+          "oi_threshold": "p95.0",
+          "regime_shift_window": "current15m_range_vs_prior4h_median",
+          "uses_forward_returns": false,
+          "uses_outcome_optimization": false,
+          "vol_high_threshold": "p75.0",
+          "vol_low_threshold": "p25.0"
+        },
+        "missing_component_count": 56230,
+        "month_coverage_count": 36,
+        "months": [
+          "2023-01",
+          "2023-02",
+          "2023-03",
+          "2023-04",
+          "2023-05",
+          "2023-06",
+          "2023-07",
+          "2023-08",
+          "2023-09",
+          "2023-10",
+          "2023-11",
+          "2023-12",
+          "2024-01",
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05",
+          "2024-06",
+          "2024-07",
+          "2024-08",
+          "2024-09",
+          "2024-10",
+          "2024-11",
+          "2024-12",
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06",
+          "2025-07",
+          "2025-08",
+          "2025-09",
+          "2025-10",
+          "2025-11",
+          "2025-12"
+        ],
+        "oi_shock_direction_distribution": {
+          "expansion": 2036
+        },
+        "optional_annotation_distribution": {
+          "long_short_ratio_annotation": {
+            "account_only": 299,
+            "both": 39,
+            "none": 1528,
+            "position_only": 170
+          },
+          "taker_pressure_annotation": {
+            "buy_pressure_extreme": 44,
+            "none": 1964,
+            "sell_pressure_extreme": 28
+          },
+          "volume_stress_annotation": {
+            "not_volume_stress": 1138,
+            "volume_stress_p95_or_higher": 898
+          }
+        },
+        "overlap_rate": 0.0,
+        "raw_event_count": 2036,
+        "reason_counts": {
+          "rejected_due_to_cooldown_count": 1451,
+          "rejected_due_to_missing_volatility_regime_count": 0
+        },
+        "selection_score": 1443.1,
+        "selection_slot": "best_oi_expansion_volatility_compression_break_definition",
+        "symbol_coverage_count": 10,
+        "symbols": [
+          "APTUSDT",
+          "ARBUSDT",
+          "BNBUSDT",
+          "BTCUSDT",
+          "DOGEUSDT",
+          "ETHUSDT",
+          "LINKUSDT",
+          "OPUSDT",
+          "SOLUSDT",
+          "XRPUSDT"
+        ],
+        "target_event_count_band": "ideal",
+        "top_month": "2025-06",
+        "top_month_concentration": 0.05128205128205128,
+        "top_symbol": "DOGEUSDT",
+        "top_symbol_concentration": 0.11282051282051282,
+        "unique_symbol_timestamp_count": 2036,
+        "unique_timestamp_count": 1893,
+        "volatility_regime_distribution": {
+          "compressed_range_breakout": 2036
+        }
+      },
+      "best_oi_expansion_volatility_expansion_definition": {
+        "arbusdt_count": 60,
+        "cooldown_filtered_count": 585,
+        "definition_id": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT__oi_p95.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+        "meta": {
+          "cooldown_hours": 6,
+          "family": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT",
+          "oi_direction": "expansion",
+          "oi_threshold": "p95.0",
+          "regime_shift_window": "current15m_range_vs_prior4h_median",
+          "uses_forward_returns": false,
+          "uses_outcome_optimization": false,
+          "vol_high_threshold": "p75.0",
+          "vol_low_threshold": "p25.0"
+        },
+        "missing_component_count": 56230,
+        "month_coverage_count": 36,
+        "months": [
+          "2023-01",
+          "2023-02",
+          "2023-03",
+          "2023-04",
+          "2023-05",
+          "2023-06",
+          "2023-07",
+          "2023-08",
+          "2023-09",
+          "2023-10",
+          "2023-11",
+          "2023-12",
+          "2024-01",
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05",
+          "2024-06",
+          "2024-07",
+          "2024-08",
+          "2024-09",
+          "2024-10",
+          "2024-11",
+          "2024-12",
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06",
+          "2025-07",
+          "2025-08",
+          "2025-09",
+          "2025-10",
+          "2025-11",
+          "2025-12"
+        ],
+        "oi_shock_direction_distribution": {
+          "expansion": 2036
+        },
+        "optional_annotation_distribution": {
+          "long_short_ratio_annotation": {
+            "account_only": 299,
+            "both": 39,
+            "none": 1528,
+            "position_only": 170
+          },
+          "taker_pressure_annotation": {
+            "buy_pressure_extreme": 44,
+            "none": 1964,
+            "sell_pressure_extreme": 28
+          },
+          "volume_stress_annotation": {
+            "not_volume_stress": 1138,
+            "volume_stress_p95_or_higher": 898
+          }
+        },
+        "overlap_rate": 0.0,
+        "raw_event_count": 2036,
+        "reason_counts": {
+          "rejected_due_to_cooldown_count": 1451,
+          "rejected_due_to_missing_volatility_regime_count": 0
+        },
+        "selection_score": 1443.1,
+        "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+        "symbol_coverage_count": 10,
+        "symbols": [
+          "APTUSDT",
+          "ARBUSDT",
+          "BNBUSDT",
+          "BTCUSDT",
+          "DOGEUSDT",
+          "ETHUSDT",
+          "LINKUSDT",
+          "OPUSDT",
+          "SOLUSDT",
+          "XRPUSDT"
+        ],
+        "target_event_count_band": "ideal",
+        "top_month": "2025-06",
+        "top_month_concentration": 0.05128205128205128,
+        "top_symbol": "DOGEUSDT",
+        "top_symbol_concentration": 0.11282051282051282,
+        "unique_symbol_timestamp_count": 2036,
+        "unique_timestamp_count": 1893,
+        "volatility_regime_distribution": {
+          "prior4h_compressed_range_to_current15m_range_break": 2036
+        }
+      }
+    },
+    "signed_return_promotion": false,
+    "strict_variant_promotion": false,
+    "threshold_changes": false
+  },
+  "expected_head": "749982396877be53d0ce9fa1b1df60322f632b13",
+  "failed_validation_gates": [
+    "sufficient_event_count_exists_for_at_least_one_primary_target",
+    "insufficient_independent_validation_sample"
+  ],
+  "fdr_q_values": {
+    "best_oi_expansion_volatility_compression_break_definition": 0.03596403596403597,
+    "best_oi_expansion_volatility_expansion_definition": 0.03596403596403597
+  },
+  "final_validation_decision": "at least one primary target is in the 50-99 attention/inconclusive event-count band",
+  "forbidden_actions_confirmed_false": {
+    "account_api": false,
+    "api_key": false,
+    "backtest": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "event_definition_changes": false,
+    "horizon_changes": false,
+    "optimization_against_validation_outcomes": false,
+    "order_private_account_api_key": false,
+    "outcome_based_selection": false,
+    "pnl": false,
+    "private_api": false,
+    "release_promotion": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "signed_return_findings_promoted": false,
+    "strategy": false,
+    "threshold_changes": false,
+    "trade_simulation": false,
+    "used_2023_2025_as_independent_validation": false
+  },
+  "frozen_hypothesis": {
+    "diagnostic_family": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT",
+    "expected_direction": "future_absolute_return_or_realized_volatility_higher_than_null",
+    "horizon": "15m_only",
+    "primary_event_targets": [
+      {
+        "event_label": "expansion + volatility expansion",
+        "horizon": "15m",
+        "prior_bonferroni_p": 0.015984015984015984,
+        "prior_fdr_q": 0.005328005328005328,
+        "prior_p_abs_high_mean": 0.000999000999000999,
+        "research_sample_event_count": 585,
+        "target_id": "best_oi_expansion_volatility_expansion_definition"
+      },
+      {
+        "event_label": "expansion + volatility compression break",
+        "horizon": "15m",
+        "prior_bonferroni_p": 0.015984015984015984,
+        "prior_fdr_q": 0.005328005328005328,
+        "prior_p_abs_high_mean": 0.000999000999000999,
+        "research_sample_event_count": 585,
+        "target_id": "best_oi_expansion_volatility_compression_break_definition"
+      }
+    ],
+    "primary_metric_family": "forward_abs_return / realized-volatility proxy",
+    "primary_null_model": "month-aware symbol-balanced null",
+    "primary_p_value": "p_abs_high_mean",
+    "primary_statistic": "mean_15m_forward_abs_return_or_equivalent_realized_volatility_proxy",
+    "primary_test_scope": "two_pre_registered_primary_volatility_tests",
+    "signed_return_findings": {
+      "pass_fail_allowed": false,
+      "role": "secondary_tracking_only",
+      "strategy_candidate_signal_allowed": false
+    }
+  },
+  "head_matches_expected": true,
+  "independent_validation_data_policy_followed": true,
+  "independent_validation_passed": false,
+  "independent_validation_window": {
+    "end": "2026-05-27T23:45:00Z",
+    "start": "2026-01-01T00:00:00Z",
+    "uses_2023_2025_research_sample": false,
+    "validation_start_not_before": "2026-01-01"
+  },
+  "input_artifact_hashes_after": {
+    "artifacts/contracts/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_contract_v1.json": "10a1201daf070a7ce6848a6de891ccc852f3a60eb5f3cd1f1cce6b3850958257",
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "95bff40616afdcaa2f1fe40fd1b4753057b0a30cd8386ebae4f2910ffda0fe98",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_diagnostic_robustness_runner_v1.json": "c27845a11721a9d4dd3285d70c233bdd49dcb1d8afd1fb9ad79ad88d918a8698",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "e5360f6f3516ea31a9af1c4ccf5990a4b8aeb423752372709f9f501c2a7c684e"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/contracts/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_contract_v1.json": "10a1201daf070a7ce6848a6de891ccc852f3a60eb5f3cd1f1cce6b3850958257",
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "95bff40616afdcaa2f1fe40fd1b4753057b0a30cd8386ebae4f2910ffda0fe98",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_diagnostic_robustness_runner_v1.json": "c27845a11721a9d4dd3285d70c233bdd49dcb1d8afd1fb9ad79ad88d918a8698",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "e5360f6f3516ea31a9af1c4ccf5990a4b8aeb423752372709f9f501c2a7c684e"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_payload_hashes_verified": {
+    "artifacts/contracts/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_contract_v1.json": "3510f64766e0d7c5fb84d821d6ec0d9815fae0cffa27c0bee79f66fdbe9cc492",
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "dad346c255410ee1406e19f1480d32d8cbcc4bd24de25977b2038dd3e20900df",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "52f9421380375f81616f897163d49e20a275febde00a52e58b0b0f2786df34e5",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_diagnostic_robustness_runner_v1.json": "fe55aab079fa97efdfcb1f3dc8e7110f8a72c44f05900c425b04e81dcd5dcc10",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "92ee7c7adb2250c82725bb6cfa0954ee49882b345eaef01e59daba89ceef932f"
+  },
+  "live_allowed": false,
+  "missing_forward_return_summary": {
+    "by_primary_target": {
+      "best_oi_expansion_volatility_compression_break_definition": 0,
+      "best_oi_expansion_volatility_expansion_definition": 0
+    },
+    "total_missing": 0
+  },
+  "module": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_RUNNER_V1",
+  "month_aware_symbol_balanced_null_summary": {
+    "fallback_summary": {
+      "best_oi_expansion_volatility_compression_break_definition": {
+        "empty_pool_count": 0,
+        "event_timestamp_exclusion_used": 39,
+        "month_aware_pool_used": 39,
+        "symbol_pool_fallback_used": 0,
+        "target": "best_oi_expansion_volatility_compression_break_definition"
+      },
+      "best_oi_expansion_volatility_expansion_definition": {
+        "empty_pool_count": 0,
+        "event_timestamp_exclusion_used": 39,
+        "month_aware_pool_used": 39,
+        "symbol_pool_fallback_used": 0,
+        "target": "best_oi_expansion_volatility_expansion_definition"
+      }
+    },
+    "null_model": "month_aware_symbol_balanced_null",
+    "permutation_count_completed": 1000,
+    "permutation_count_requested": 1000
+  },
+  "month_coverage": {
+    "best_oi_expansion_volatility_compression_break_definition": {
+      "month_count": 5,
+      "months": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ],
+      "top_month": "2026-01",
+      "top_month_concentration": 0.24285714285714285,
+      "top_month_count": 17
+    },
+    "best_oi_expansion_volatility_expansion_definition": {
+      "month_count": 5,
+      "months": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ],
+      "top_month": "2026-01",
+      "top_month_concentration": 0.24285714285714285,
+      "top_month_count": 17
+    }
+  },
+  "null_model": "month_aware_symbol_balanced_null",
+  "null_stats_by_primary_target": {
+    "best_oi_expansion_volatility_compression_break_definition": {
+      "null_mean_mean": 0.002507432525276517,
+      "null_mean_q01": 0.0018054107972073886,
+      "null_mean_q05": 0.002000529973629457,
+      "null_mean_q50": 0.0024731047391948055,
+      "null_mean_q95": 0.003116868762817123,
+      "null_mean_q99": 0.0036052769157080894,
+      "null_mean_std": 0.0003564893677684534
+    },
+    "best_oi_expansion_volatility_expansion_definition": {
+      "null_mean_mean": 0.0024946804287725418,
+      "null_mean_q01": 0.0017827041715132495,
+      "null_mean_q05": 0.001995743568432862,
+      "null_mean_q50": 0.0024542510786024685,
+      "null_mean_q95": 0.0031376187214206992,
+      "null_mean_q99": 0.003429244074402133,
+      "null_mean_std": 0.00034977423729197477
+    }
+  },
+  "observed_primary_volatility_stats": {
+    "best_oi_expansion_volatility_compression_break_definition": {
+      "event_count": 70,
+      "forward_range_proxy_stats": {
+        "mean": 0.006775536914084139,
+        "median": 0.005539921327017878,
+        "q75": 0.008229795743111504,
+        "q95": 0.018040652546134888,
+        "valid_count": 70
+      },
+      "mean_abs_return": 0.0032513095551589925,
+      "median_abs_return": 0.0017802805483912443,
+      "missing_count": 0,
+      "q50_abs_return": 0.0017802805483912443,
+      "q75_abs_return": 0.003707127881724198,
+      "q90_abs_return": 0.007461222636140586,
+      "q95_abs_return": 0.011770247250178015,
+      "q99_abs_return": 0.017217690853215065,
+      "realized_vol_proxy_stats": {
+        "mean": 0.0032513095551589925,
+        "median": 0.0017802805483912443,
+        "q75": 0.003707127881724198,
+        "q95": 0.011770247250178015,
+        "valid_count": 70
+      },
+      "std_abs_return": 0.004016045387508914,
+      "valid_count": 70
+    },
+    "best_oi_expansion_volatility_expansion_definition": {
+      "event_count": 70,
+      "forward_range_proxy_stats": {
+        "mean": 0.006775536914084139,
+        "median": 0.005539921327017878,
+        "q75": 0.008229795743111504,
+        "q95": 0.018040652546134888,
+        "valid_count": 70
+      },
+      "mean_abs_return": 0.0032513095551589925,
+      "median_abs_return": 0.0017802805483912443,
+      "missing_count": 0,
+      "q50_abs_return": 0.0017802805483912443,
+      "q75_abs_return": 0.003707127881724198,
+      "q90_abs_return": 0.007461222636140586,
+      "q95_abs_return": 0.011770247250178015,
+      "q99_abs_return": 0.017217690853215065,
+      "realized_vol_proxy_stats": {
+        "mean": 0.0032513095551589925,
+        "median": 0.0017802805483912443,
+        "q75": 0.003707127881724198,
+        "q95": 0.011770247250178015,
+        "valid_count": 70
+      },
+      "std_abs_return": 0.004016045387508914,
+      "valid_count": 70
+    }
+  },
+  "p_abs_high_mean_by_primary_target": {
+    "best_oi_expansion_volatility_compression_break_definition": 0.028971028971028972,
+    "best_oi_expansion_volatility_expansion_definition": 0.03596403596403597
+  },
+  "p_values_by_primary_target": {
+    "best_oi_expansion_volatility_compression_break_definition": {
+      "empirical_p_value_formula": "p = (1 + count(null stats as or more extreme than observed)) / (1 + permutation_count)",
+      "p_abs_high_mean": 0.028971028971028972,
+      "p_abs_low_mean": 0.972027972027972
+    },
+    "best_oi_expansion_volatility_expansion_definition": {
+      "empirical_p_value_formula": "p = (1 + count(null stats as or more extreme than observed)) / (1 + permutation_count)",
+      "p_abs_high_mean": 0.03596403596403597,
+      "p_abs_low_mean": 0.965034965034965
+    }
+  },
+  "payload_sha256_excluding_hash": "393b50bfa8fc820571d73fb234521f59be7659481919deb4d5f0d995f76ede6f",
+  "permutation_count_completed": 1000,
+  "permutation_count_requested": 1000,
+  "public_data_source_summary": {
+    "cache_files_staged": false,
+    "cache_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\cache\\oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_runner_v1",
+    "daily_klines_root": "https://data.binance.vision/data/futures/um/daily/klines",
+    "daily_metrics_root": "https://data.binance.vision/data/futures/um/daily/metrics",
+    "host": "data.binance.vision",
+    "monthly_klines_root": "https://data.binance.vision/data/futures/um/monthly/klines",
+    "monthly_metrics_root": "https://data.binance.vision/data/futures/um/monthly/metrics",
+    "raw_data_committed": false
+  },
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "release_allowed": false,
+  "replacement_checks_all_true": true,
+  "result_classification": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_INDEPENDENT_VALIDATION_INCONCLUSIVE_INSUFFICIENT_SAMPLE",
+  "runtime_touch_allowed": false,
+  "sensitivity_diagnostics": {
+    "best_oi_expansion_volatility_compression_break_definition": {
+      "alternate_volatility_proxy_sensitivity": {
+        "alternate_proxy_recorded": true,
+        "forward_range_proxy_available": true,
+        "forward_range_proxy_mean": 0.006775536914084139,
+        "realized_vol_proxy_available": true,
+        "realized_vol_proxy_mean": 0.0032513095551589925
+      },
+      "arbusdt_exclusion": {
+        "arbusdt_event_count": 6,
+        "effect_destroyed": false,
+        "magnitude_ratio_vs_full": 0.961333347894227,
+        "observed_without_arbusdt": {
+          "count": 64,
+          "mean_abs_return": 0.003125592299701484,
+          "median_abs_return": 0.0016558870445142482,
+          "q95_abs_return": 0.010308154856765206
+        },
+        "skipped": false
+      },
+      "leave_one_month_out": {
+        "any_single_dependence": null,
+        "reason": "insufficient events or full mean unavailable",
+        "skipped": true
+      },
+      "leave_one_symbol_out": {
+        "any_single_dependence": null,
+        "reason": "insufficient events or full mean unavailable",
+        "skipped": true
+      },
+      "top_contributor_months": [
+        {
+          "contribution_to_total_abs_return": 0.44833249583279233,
+          "count": 14,
+          "key": "2026-02",
+          "mean_abs_return": 0.007288338637947185
+        },
+        {
+          "contribution_to_total_abs_return": 0.19127353255869947,
+          "count": 17,
+          "key": "2026-01",
+          "mean_abs_return": 0.0025607213225881174
+        },
+        {
+          "contribution_to_total_abs_return": 0.1525650045126279,
+          "count": 17,
+          "key": "2026-03",
+          "mean_abs_return": 0.0020425014109902782
+        },
+        {
+          "contribution_to_total_abs_return": 0.11135357242882127,
+          "count": 10,
+          "key": "2026-05",
+          "mean_abs_return": 0.0025343145382724086
+        },
+        {
+          "contribution_to_total_abs_return": 0.09647539466705903,
+          "count": 12,
+          "key": "2026-04",
+          "mean_abs_return": 0.0018297496730260061
+        }
+      ],
+      "top_contributor_symbols": [
+        {
+          "contribution_to_total_abs_return": 0.17755743071615165,
+          "count": 10,
+          "key": "DOGEUSDT",
+          "mean_abs_return": 0.0040410591975383325
+        },
+        {
+          "contribution_to_total_abs_return": 0.14362883606534727,
+          "count": 10,
+          "key": "XRPUSDT",
+          "mean_abs_return": 0.0032688726496693963
+        },
+        {
+          "contribution_to_total_abs_return": 0.13779221540290224,
+          "count": 10,
+          "key": "APTUSDT",
+          "mean_abs_return": 0.0031360360259618746
+        },
+        {
+          "contribution_to_total_abs_return": 0.12265048035464803,
+          "count": 8,
+          "key": "ETHUSDT",
+          "mean_abs_return": 0.0034892784388166898
+        },
+        {
+          "contribution_to_total_abs_return": 0.12106665335384961,
+          "count": 6,
+          "key": "ARBUSDT",
+          "mean_abs_return": 0.004592293613372415
+        }
+      ]
+    },
+    "best_oi_expansion_volatility_expansion_definition": {
+      "alternate_volatility_proxy_sensitivity": {
+        "alternate_proxy_recorded": true,
+        "forward_range_proxy_available": true,
+        "forward_range_proxy_mean": 0.006775536914084139,
+        "realized_vol_proxy_available": true,
+        "realized_vol_proxy_mean": 0.0032513095551589925
+      },
+      "arbusdt_exclusion": {
+        "arbusdt_event_count": 6,
+        "effect_destroyed": false,
+        "magnitude_ratio_vs_full": 0.961333347894227,
+        "observed_without_arbusdt": {
+          "count": 64,
+          "mean_abs_return": 0.003125592299701484,
+          "median_abs_return": 0.0016558870445142482,
+          "q95_abs_return": 0.010308154856765206
+        },
+        "skipped": false
+      },
+      "leave_one_month_out": {
+        "any_single_dependence": null,
+        "reason": "insufficient events or full mean unavailable",
+        "skipped": true
+      },
+      "leave_one_symbol_out": {
+        "any_single_dependence": null,
+        "reason": "insufficient events or full mean unavailable",
+        "skipped": true
+      },
+      "top_contributor_months": [
+        {
+          "contribution_to_total_abs_return": 0.44833249583279233,
+          "count": 14,
+          "key": "2026-02",
+          "mean_abs_return": 0.007288338637947185
+        },
+        {
+          "contribution_to_total_abs_return": 0.19127353255869947,
+          "count": 17,
+          "key": "2026-01",
+          "mean_abs_return": 0.0025607213225881174
+        },
+        {
+          "contribution_to_total_abs_return": 0.1525650045126279,
+          "count": 17,
+          "key": "2026-03",
+          "mean_abs_return": 0.0020425014109902782
+        },
+        {
+          "contribution_to_total_abs_return": 0.11135357242882127,
+          "count": 10,
+          "key": "2026-05",
+          "mean_abs_return": 0.0025343145382724086
+        },
+        {
+          "contribution_to_total_abs_return": 0.09647539466705903,
+          "count": 12,
+          "key": "2026-04",
+          "mean_abs_return": 0.0018297496730260061
+        }
+      ],
+      "top_contributor_symbols": [
+        {
+          "contribution_to_total_abs_return": 0.17755743071615165,
+          "count": 10,
+          "key": "DOGEUSDT",
+          "mean_abs_return": 0.0040410591975383325
+        },
+        {
+          "contribution_to_total_abs_return": 0.14362883606534727,
+          "count": 10,
+          "key": "XRPUSDT",
+          "mean_abs_return": 0.0032688726496693963
+        },
+        {
+          "contribution_to_total_abs_return": 0.13779221540290224,
+          "count": 10,
+          "key": "APTUSDT",
+          "mean_abs_return": 0.0031360360259618746
+        },
+        {
+          "contribution_to_total_abs_return": 0.12265048035464803,
+          "count": 8,
+          "key": "ETHUSDT",
+          "mean_abs_return": 0.0034892784388166898
+        },
+        {
+          "contribution_to_total_abs_return": 0.12106665335384961,
+          "count": 6,
+          "key": "ARBUSDT",
+          "mean_abs_return": 0.004592293613372415
+        }
+      ]
+    }
+  },
+  "signal_allowed": false,
+  "status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_RUNNER_CREATED",
+  "strategy_allowed": false,
+  "symbol_coverage": {
+    "best_oi_expansion_volatility_compression_break_definition": {
+      "symbol_count": 10,
+      "symbols": [
+        "APTUSDT",
+        "ARBUSDT",
+        "BNBUSDT",
+        "BTCUSDT",
+        "DOGEUSDT",
+        "ETHUSDT",
+        "LINKUSDT",
+        "OPUSDT",
+        "SOLUSDT",
+        "XRPUSDT"
+      ],
+      "top_symbol": "DOGEUSDT",
+      "top_symbol_concentration": 0.14285714285714285,
+      "top_symbol_count": 10
+    },
+    "best_oi_expansion_volatility_expansion_definition": {
+      "symbol_count": 10,
+      "symbols": [
+        "APTUSDT",
+        "ARBUSDT",
+        "BNBUSDT",
+        "BTCUSDT",
+        "DOGEUSDT",
+        "ETHUSDT",
+        "LINKUSDT",
+        "OPUSDT",
+        "SOLUSDT",
+        "XRPUSDT"
+      ],
+      "top_symbol": "DOGEUSDT",
+      "top_symbol_concentration": 0.14285714285714285,
+      "top_symbol_count": 10
+    }
+  },
+  "symbols_available": [
+    "APTUSDT",
+    "ARBUSDT",
+    "BNBUSDT",
+    "BTCUSDT",
+    "DOGEUSDT",
+    "ETHUSDT",
+    "LINKUSDT",
+    "OPUSDT",
+    "SOLUSDT",
+    "XRPUSDT"
+  ],
+  "symbols_requested": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "APTUSDT",
+    "ARBUSDT",
+    "OPUSDT"
+  ],
+  "theory_id": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT",
+  "validation_checks": {
+    "contract_ready": true,
+    "event_definition_unchanged": true,
+    "horizon_unchanged": true,
+    "input_artifact_hashes_unchanged": true,
+    "no_2023_2025_independent_validation_reuse": true,
+    "no_strategy_signal_candidate_release_permissions": true,
+    "public_data_vision_only": true,
+    "signed_return_not_promoted": true,
+    "thresholds_unchanged": true,
+    "validation_window_2026_plus_only": true
+  },
+  "validation_gates": {
+    "alternate_volatility_proxy_sensitivity_recorded_when_feasible": true,
+    "arbusdt_missing_archive_sensitivity_recorded_if_relevant": true,
+    "both_primary_targets_reported": true,
+    "event_reconstruction_current_or_prior_bar_only": true,
+    "fdr_and_bonferroni_recorded_across_two_primary_tests": true,
+    "independent_validation_uses_2026_plus_only": true,
+    "leave_one_month_no_single_dependence_when_applicable": true,
+    "leave_one_symbol_no_single_dependence_when_applicable": true,
+    "no_forbidden_action_occurred": true,
+    "observed_primary_volatility_metric_higher_than_null": true,
+    "p_abs_high_mean_lte_0_05_for_at_least_one_primary_target": true,
+    "sufficient_event_count_exists_for_at_least_one_primary_target": false
+  },
+  "validation_status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_RUNNER_CREATED"
+}

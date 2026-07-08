@@ -1,0 +1,37 @@
+{
+  "active_paper_allowed": false,
+  "archive_performed": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T02:30:47.347444+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "key_decisions": {
+    "closed_research_route_cannot_invalidate_old_short": true,
+    "minimum_closed_trades_capital": 50,
+    "minimum_closed_trades_monitoring": 20,
+    "old_short_not_capital_approved": true,
+    "old_short_not_invalidated": true
+  },
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "manifest_name": "edge_factory_os_family_registry_and_lesson_enforcer_repair_manifest_v1",
+  "manifest_status": "FAMILY_REGISTRY_LESSON_ENFORCER_MANIFEST_READY",
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "repair_files": {
+    "lesson_enforcer_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\lesson_memory_route_enforcer_v1.json",
+    "repair_state_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\family_registry_and_lesson_enforcer_repair_state_v1.json",
+    "runtime_family_registry_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\registries\\runtime_family_registry_v1.json"
+  },
+  "repair_mapping": {
+    "external_audit_family_registry": "implemented",
+    "external_audit_lesson_enforcer": "implemented",
+    "old_short_runtime_family_separation": "implemented"
+  },
+  "runtime_touch_allowed": false
+}

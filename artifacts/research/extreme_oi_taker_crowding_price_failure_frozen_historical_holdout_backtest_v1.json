@@ -1,0 +1,3394 @@
+{
+  "actual_holdout_window": {
+    "end": "2022-12-31T23:45:00Z",
+    "pre_2023_only": true,
+    "start": "2020-01-01T00:00:00Z",
+    "used_2023_2025_research_sample": false
+  },
+  "allowed_next_step": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_INDEPENDENT_SAMPLE_ACCUMULATION_MONITOR_V1",
+  "approved_neutral_diagnostic_label": "SHORT_PRESSURE_FAILURE_DELAYED_DOWNSIDE_CONTINUATION_DIAGNOSTIC",
+  "archive_availability_summary": {
+    "availability_by_symbol": {
+      "APTUSDT": {
+        "available": 77,
+        "missing": 2095
+      },
+      "ARBUSDT": {
+        "available": 0,
+        "missing": 2264
+      },
+      "BNBUSDT": {
+        "available": 431,
+        "missing": 768
+      },
+      "BTCUSDT": {
+        "available": 888,
+        "missing": 280
+      },
+      "DOGEUSDT": {
+        "available": 426,
+        "missing": 924
+      },
+      "ETHUSDT": {
+        "available": 432,
+        "missing": 736
+      },
+      "LINKUSDT": {
+        "available": 432,
+        "missing": 736
+      },
+      "OPUSDT": {
+        "available": 221,
+        "missing": 1829
+      },
+      "SOLUSDT": {
+        "available": 424,
+        "missing": 988
+      },
+      "XRPUSDT": {
+        "available": 432,
+        "missing": 736
+      }
+    },
+    "available_archive_count": 3763,
+    "checksum_available_count": 3763,
+    "checksum_verified_count": 3763,
+    "downloaded_archive_count": 3763,
+    "kind": "all",
+    "missing_archive_count": 11356,
+    "missing_archive_sample": [
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ETHUSDT/ETHUSDT-metrics-2020-01.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-01.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-08.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-02.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-03.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-04.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-07.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-06.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-09.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-05.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-10.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-13.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-15.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-17.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-14.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-12.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-11.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-19.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-16.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-21.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-22.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-24.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-23.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-20.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-28.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-18.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-29.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-31.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-25.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-26.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-27.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-30.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ETHUSDT/ETHUSDT-metrics-2020-02.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-02.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-03.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-05.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-08.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-10.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-01.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-09.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-04.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-06.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-14.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-17.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-13.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-19.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-12.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-16.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-11.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-18.zip"
+      }
+    ],
+    "reused_archive_count": 0,
+    "total_archive_records": 15119
+  },
+  "artifact_kind": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FROZEN_HISTORICAL_HOLDOUT_BACKTEST",
+  "blocker": null,
+  "bonferroni_p_value": 0.2217782217782218,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "cost_stressed_diagnostic_returns": {
+    "0bps": {
+      "compounding_used": false,
+      "cost_bps_per_event": 0,
+      "deployable_pnl": false,
+      "mean_short_interpretation_return": 0.0010276985862346661,
+      "position_sizing_used": false,
+      "positive_rate": 0.5306122448979592
+    },
+    "10bps": {
+      "compounding_used": false,
+      "cost_bps_per_event": 10,
+      "deployable_pnl": false,
+      "mean_short_interpretation_return": 2.7698586234665156e-05,
+      "position_sizing_used": false,
+      "positive_rate": 0.46938775510204084
+    },
+    "20bps": {
+      "compounding_used": false,
+      "cost_bps_per_event": 20,
+      "deployable_pnl": false,
+      "mean_short_interpretation_return": -0.0009723014137653349,
+      "position_sizing_used": false,
+      "positive_rate": 0.41836734693877553
+    },
+    "2bps": {
+      "compounding_used": false,
+      "cost_bps_per_event": 2,
+      "deployable_pnl": false,
+      "mean_short_interpretation_return": 0.0008276985862346659,
+      "position_sizing_used": false,
+      "positive_rate": 0.5204081632653061
+    },
+    "5bps": {
+      "compounding_used": false,
+      "cost_bps_per_event": 5,
+      "deployable_pnl": false,
+      "mean_short_interpretation_return": 0.0005276985862346656,
+      "position_sizing_used": false,
+      "positive_rate": 0.5
+    }
+  },
+  "current_head": "7904a4973463a6b449bd3064e5415f5eb56911ad",
+  "data_quality_warnings": [
+    "ARBUSDT missing pre-2023 archives: metrics=0, klines=0",
+    "11356 public pre-2023 archive probes were unavailable."
+  ],
+  "event_count": 98,
+  "event_reconstruction_status": "RECONSTRUCTED_FROZEN_SHORT_CORE_ONLY",
+  "event_reconstruction_summary": {
+    "cooldown_filtered_count": 98,
+    "crowding_confirmation_distribution": {
+      "account_only": 6,
+      "none": 100,
+      "position_only": 4
+    },
+    "events": [
+      {
+        "base_index": 84076,
+        "base_open": "2022-05-25T19:00:00Z",
+        "base_open_ms": 1653505200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-05",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "ETHUSDT",
+        "timestamp": "2022-05-25T19:10:00Z",
+        "ts_ms": 1653505800000
+      },
+      {
+        "base_index": 87295,
+        "base_open": "2022-06-28T07:45:00Z",
+        "base_open_ms": 1656402300000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-06",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "ETHUSDT",
+        "timestamp": "2022-06-28T07:45:00Z",
+        "ts_ms": 1656402300000
+      },
+      {
+        "base_index": 87826,
+        "base_open": "2022-07-03T20:30:00Z",
+        "base_open_ms": 1656880200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "ETHUSDT",
+        "timestamp": "2022-07-03T20:35:00Z",
+        "ts_ms": 1656880500000
+      },
+      {
+        "base_index": 88927,
+        "base_open": "2022-07-15T07:45:00Z",
+        "base_open_ms": 1657871100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "ETHUSDT",
+        "timestamp": "2022-07-15T07:55:00Z",
+        "ts_ms": 1657871700000
+      },
+      {
+        "base_index": 93419,
+        "base_open": "2022-08-31T02:45:00Z",
+        "base_open_ms": 1661913900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-08",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "ETHUSDT",
+        "timestamp": "2022-08-31T02:55:00Z",
+        "ts_ms": 1661914500000
+      },
+      {
+        "base_index": 102765,
+        "base_open": "2022-12-06T11:15:00Z",
+        "base_open_ms": 1670325300000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 4,
+        "month": "2022-12",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "ETHUSDT",
+        "timestamp": "2022-12-06T11:15:00Z",
+        "ts_ms": 1670325300000
+      },
+      {
+        "base_index": 70534,
+        "base_open": "2022-07-15T02:30:00Z",
+        "base_open_ms": 1657852200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "DOGEUSDT",
+        "timestamp": "2022-07-15T02:30:00Z",
+        "ts_ms": 1657852200000
+      },
+      {
+        "base_index": 73627,
+        "base_open": "2022-08-16T07:45:00Z",
+        "base_open_ms": 1660635900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-08",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "DOGEUSDT",
+        "timestamp": "2022-08-16T07:55:00Z",
+        "ts_ms": 1660636500000
+      },
+      {
+        "base_index": 75617,
+        "base_open": "2022-09-06T01:15:00Z",
+        "base_open_ms": 1662426900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "DOGEUSDT",
+        "timestamp": "2022-09-06T01:25:00Z",
+        "ts_ms": 1662427500000
+      },
+      {
+        "base_index": 63368,
+        "base_open": "2021-12-01T10:00:00Z",
+        "base_open_ms": 1638352800000,
+        "crowding_confirmation": "account_only",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BNBUSDT",
+        "timestamp": "2021-12-01T10:10:00Z",
+        "ts_ms": 1638353400000
+      },
+      {
+        "base_index": 65593,
+        "base_open": "2021-12-24T14:15:00Z",
+        "base_open_ms": 1640355300000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BNBUSDT",
+        "timestamp": "2021-12-24T14:25:00Z",
+        "ts_ms": 1640355900000
+      },
+      {
+        "base_index": 65893,
+        "base_open": "2021-12-27T17:15:00Z",
+        "base_open_ms": 1640625300000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BNBUSDT",
+        "timestamp": "2021-12-27T17:20:00Z",
+        "ts_ms": 1640625600000
+      },
+      {
+        "base_index": 82941,
+        "base_open": "2022-06-23T07:15:00Z",
+        "base_open_ms": 1655968500000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-06",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BNBUSDT",
+        "timestamp": "2022-06-23T07:20:00Z",
+        "ts_ms": 1655968800000
+      },
+      {
+        "base_index": 91045,
+        "base_open": "2022-09-15T17:15:00Z",
+        "base_open_ms": 1663262100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BNBUSDT",
+        "timestamp": "2022-09-15T17:20:00Z",
+        "ts_ms": 1663262400000
+      },
+      {
+        "base_index": 95716,
+        "base_open": "2022-11-03T09:00:00Z",
+        "base_open_ms": 1667466000000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2022-11",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BNBUSDT",
+        "timestamp": "2022-11-03T09:10:00Z",
+        "ts_ms": 1667466600000
+      },
+      {
+        "base_index": 96966,
+        "base_open": "2022-11-16T09:30:00Z",
+        "base_open_ms": 1668591000000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-11",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BNBUSDT",
+        "timestamp": "2022-11-16T09:30:00Z",
+        "ts_ms": 1668591000000
+      },
+      {
+        "base_index": 97844,
+        "base_open": "2022-11-25T13:00:00Z",
+        "base_open_ms": 1669381200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-11",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BNBUSDT",
+        "timestamp": "2022-11-25T13:10:00Z",
+        "ts_ms": 1669381800000
+      },
+      {
+        "base_index": 23464,
+        "base_open": "2020-09-01T10:00:00Z",
+        "base_open_ms": 1598954400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2020-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2020-09-01T10:10:00Z",
+        "ts_ms": 1598955000000
+      },
+      {
+        "base_index": 23764,
+        "base_open": "2020-09-04T13:00:00Z",
+        "base_open_ms": 1599224400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2020-09",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2020-09-04T13:00:00Z",
+        "ts_ms": 1599224400000
+      },
+      {
+        "base_index": 24405,
+        "base_open": "2020-09-11T05:15:00Z",
+        "base_open_ms": 1599801300000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2020-09",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2020-09-11T05:25:00Z",
+        "ts_ms": 1599801900000
+      },
+      {
+        "base_index": 25390,
+        "base_open": "2020-09-21T11:30:00Z",
+        "base_open_ms": 1600687800000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2020-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2020-09-21T11:40:00Z",
+        "ts_ms": 1600688400000
+      },
+      {
+        "base_index": 33924,
+        "base_open": "2020-12-19T09:00:00Z",
+        "base_open_ms": 1608368400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2020-12",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2020-12-19T09:05:00Z",
+        "ts_ms": 1608368700000
+      },
+      {
+        "base_index": 35465,
+        "base_open": "2021-01-04T10:15:00Z",
+        "base_open_ms": 1609755300000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2021-01",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-01-04T10:15:00Z",
+        "ts_ms": 1609755300000
+      },
+      {
+        "base_index": 36507,
+        "base_open": "2021-01-15T06:45:00Z",
+        "base_open_ms": 1610693100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-01",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-01-15T06:45:00Z",
+        "ts_ms": 1610693100000
+      },
+      {
+        "base_index": 36977,
+        "base_open": "2021-01-20T04:15:00Z",
+        "base_open_ms": 1611116100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-01",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-01-20T04:15:00Z",
+        "ts_ms": 1611116100000
+      },
+      {
+        "base_index": 42733,
+        "base_open": "2021-03-21T03:15:00Z",
+        "base_open_ms": 1616296500000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2021-03",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-03-21T03:20:00Z",
+        "ts_ms": 1616296800000
+      },
+      {
+        "base_index": 45674,
+        "base_open": "2021-04-20T18:30:00Z",
+        "base_open_ms": 1618943400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-04",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-04-20T18:35:00Z",
+        "ts_ms": 1618943700000
+      },
+      {
+        "base_index": 46473,
+        "base_open": "2021-04-29T02:15:00Z",
+        "base_open_ms": 1619662500000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-04",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-04-29T02:15:00Z",
+        "ts_ms": 1619662500000
+      },
+      {
+        "base_index": 49083,
+        "base_open": "2021-05-26T06:45:00Z",
+        "base_open_ms": 1622011500000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-05",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-05-26T06:50:00Z",
+        "ts_ms": 1622011800000
+      },
+      {
+        "base_index": 49785,
+        "base_open": "2021-06-02T14:15:00Z",
+        "base_open_ms": 1622643300000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-06",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-06-02T14:25:00Z",
+        "ts_ms": 1622643900000
+      },
+      {
+        "base_index": 49849,
+        "base_open": "2021-06-03T06:15:00Z",
+        "base_open_ms": 1622700900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-06",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-06-03T06:15:00Z",
+        "ts_ms": 1622700900000
+      },
+      {
+        "base_index": 52934,
+        "base_open": "2021-07-05T09:30:00Z",
+        "base_open_ms": 1625477400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-07",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-07-05T09:35:00Z",
+        "ts_ms": 1625477700000
+      },
+      {
+        "base_index": 54457,
+        "base_open": "2021-07-21T06:15:00Z",
+        "base_open_ms": 1626848100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-07",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-07-21T06:25:00Z",
+        "ts_ms": 1626848700000
+      },
+      {
+        "base_index": 55219,
+        "base_open": "2021-07-29T04:45:00Z",
+        "base_open_ms": 1627533900000,
+        "crowding_confirmation": "account_only",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-07",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-07-29T04:55:00Z",
+        "ts_ms": 1627534500000
+      },
+      {
+        "base_index": 56411,
+        "base_open": "2021-08-10T14:45:00Z",
+        "base_open_ms": 1628606700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2021-08",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-08-10T14:45:00Z",
+        "ts_ms": 1628606700000
+      },
+      {
+        "base_index": 59169,
+        "base_open": "2021-09-08T08:15:00Z",
+        "base_open_ms": 1631088900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-09",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-09-08T08:15:00Z",
+        "ts_ms": 1631088900000
+      },
+      {
+        "base_index": 59774,
+        "base_open": "2021-09-14T15:30:00Z",
+        "base_open_ms": 1631633400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-09-14T15:40:00Z",
+        "ts_ms": 1631634000000
+      },
+      {
+        "base_index": 61369,
+        "base_open": "2021-10-01T06:15:00Z",
+        "base_open_ms": 1633068900000,
+        "crowding_confirmation": "position_only",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-10",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-10-01T06:25:00Z",
+        "ts_ms": 1633069500000
+      },
+      {
+        "base_index": 62229,
+        "base_open": "2021-10-10T05:15:00Z",
+        "base_open_ms": 1633842900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-10",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-10-10T05:20:00Z",
+        "ts_ms": 1633843200000
+      },
+      {
+        "base_index": 65407,
+        "base_open": "2021-11-12T07:45:00Z",
+        "base_open_ms": 1636703100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-11",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-11-12T07:50:00Z",
+        "ts_ms": 1636703400000
+      },
+      {
+        "base_index": 66340,
+        "base_open": "2021-11-22T01:00:00Z",
+        "base_open_ms": 1637542800000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-11",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-11-22T01:10:00Z",
+        "ts_ms": 1637543400000
+      },
+      {
+        "base_index": 68309,
+        "base_open": "2021-12-12T13:15:00Z",
+        "base_open_ms": 1639314900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2021-12-12T13:25:00Z",
+        "ts_ms": 1639315500000
+      },
+      {
+        "base_index": 84496,
+        "base_open": "2022-05-30T04:00:00Z",
+        "base_open_ms": 1653883200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-05",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2022-05-30T04:10:00Z",
+        "ts_ms": 1653883800000
+      },
+      {
+        "base_index": 85167,
+        "base_open": "2022-06-06T03:45:00Z",
+        "base_open_ms": 1654487100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-06",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2022-06-06T03:45:00Z",
+        "ts_ms": 1654487100000
+      },
+      {
+        "base_index": 85353,
+        "base_open": "2022-06-08T02:15:00Z",
+        "base_open_ms": 1654654500000,
+        "crowding_confirmation": "account_only",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-06",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2022-06-08T02:15:00Z",
+        "ts_ms": 1654654500000
+      },
+      {
+        "base_index": 86312,
+        "base_open": "2022-06-18T02:00:00Z",
+        "base_open_ms": 1655517600000,
+        "crowding_confirmation": "position_only",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-06",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2022-06-18T02:00:00Z",
+        "ts_ms": 1655517600000
+      },
+      {
+        "base_index": 88018,
+        "base_open": "2022-07-05T20:30:00Z",
+        "base_open_ms": 1657053000000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2022-07-05T20:40:00Z",
+        "ts_ms": 1657053600000
+      },
+      {
+        "base_index": 89606,
+        "base_open": "2022-07-22T09:30:00Z",
+        "base_open_ms": 1658482200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2022-07-22T09:35:00Z",
+        "ts_ms": 1658482500000
+      },
+      {
+        "base_index": 92101,
+        "base_open": "2022-08-17T09:15:00Z",
+        "base_open_ms": 1660727700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-08",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2022-08-17T09:20:00Z",
+        "ts_ms": 1660728000000
+      },
+      {
+        "base_index": 93914,
+        "base_open": "2022-09-05T06:30:00Z",
+        "base_open_ms": 1662359400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2022-09-05T06:30:00Z",
+        "ts_ms": 1662359400000
+      },
+      {
+        "base_index": 99681,
+        "base_open": "2022-11-04T08:15:00Z",
+        "base_open_ms": 1667549700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-11",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "BTCUSDT",
+        "timestamp": "2022-11-04T08:20:00Z",
+        "ts_ms": 1667550000000
+      },
+      {
+        "base_index": 66344,
+        "base_open": "2021-12-08T10:00:00Z",
+        "base_open_ms": 1638957600000,
+        "crowding_confirmation": "account_only",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2021-12-08T10:00:00Z",
+        "ts_ms": 1638957600000
+      },
+      {
+        "base_index": 66958,
+        "base_open": "2021-12-14T19:30:00Z",
+        "base_open_ms": 1639510200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2021-12-14T19:40:00Z",
+        "ts_ms": 1639510800000
+      },
+      {
+        "base_index": 67313,
+        "base_open": "2021-12-18T12:15:00Z",
+        "base_open_ms": 1639829700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2021-12-18T12:20:00Z",
+        "ts_ms": 1639830000000
+      },
+      {
+        "base_index": 67666,
+        "base_open": "2021-12-22T04:30:00Z",
+        "base_open_ms": 1640147400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2021-12-22T04:35:00Z",
+        "ts_ms": 1640147700000
+      },
+      {
+        "base_index": 67773,
+        "base_open": "2021-12-23T07:15:00Z",
+        "base_open_ms": 1640243700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2021-12-23T07:20:00Z",
+        "ts_ms": 1640244000000
+      },
+      {
+        "base_index": 68077,
+        "base_open": "2021-12-26T11:15:00Z",
+        "base_open_ms": 1640517300000,
+        "crowding_confirmation": "account_only",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2021-12-26T11:15:00Z",
+        "ts_ms": 1640517300000
+      },
+      {
+        "base_index": 71425,
+        "base_open": "2022-01-30T08:15:00Z",
+        "base_open_ms": 1643530500000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-01",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-01-30T08:25:00Z",
+        "ts_ms": 1643531100000
+      },
+      {
+        "base_index": 82424,
+        "base_open": "2022-05-24T22:00:00Z",
+        "base_open_ms": 1653429600000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-05",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-05-24T22:00:00Z",
+        "ts_ms": 1653429600000
+      },
+      {
+        "base_index": 82732,
+        "base_open": "2022-05-28T03:00:00Z",
+        "base_open_ms": 1653706800000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-05",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-05-28T03:05:00Z",
+        "ts_ms": 1653707100000
+      },
+      {
+        "base_index": 83009,
+        "base_open": "2022-05-31T00:15:00Z",
+        "base_open_ms": 1653956100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-05",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-05-31T00:15:00Z",
+        "ts_ms": 1653956100000
+      },
+      {
+        "base_index": 85128,
+        "base_open": "2022-06-22T02:00:00Z",
+        "base_open_ms": 1655863200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-06",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-06-22T02:00:00Z",
+        "ts_ms": 1655863200000
+      },
+      {
+        "base_index": 86214,
+        "base_open": "2022-07-03T09:30:00Z",
+        "base_open_ms": 1656840600000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-07-03T09:35:00Z",
+        "ts_ms": 1656840900000
+      },
+      {
+        "base_index": 87409,
+        "base_open": "2022-07-15T20:15:00Z",
+        "base_open_ms": 1657916100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-07-15T20:15:00Z",
+        "ts_ms": 1657916100000
+      },
+      {
+        "base_index": 87894,
+        "base_open": "2022-07-20T21:30:00Z",
+        "base_open_ms": 1658352600000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-07-20T21:35:00Z",
+        "ts_ms": 1658352900000
+      },
+      {
+        "base_index": 97614,
+        "base_open": "2022-10-30T03:30:00Z",
+        "base_open_ms": 1667100600000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-10",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-10-30T03:40:00Z",
+        "ts_ms": 1667101200000
+      },
+      {
+        "base_index": 98878,
+        "base_open": "2022-11-12T07:30:00Z",
+        "base_open_ms": 1668238200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-11",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-11-12T07:35:00Z",
+        "ts_ms": 1668238500000
+      },
+      {
+        "base_index": 99283,
+        "base_open": "2022-11-16T12:45:00Z",
+        "base_open_ms": 1668602700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-11",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-11-16T12:55:00Z",
+        "ts_ms": 1668603300000
+      },
+      {
+        "base_index": 102278,
+        "base_open": "2022-12-17T17:30:00Z",
+        "base_open_ms": 1671298200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-12",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-12-17T17:30:00Z",
+        "ts_ms": 1671298200000
+      },
+      {
+        "base_index": 103597,
+        "base_open": "2022-12-31T11:15:00Z",
+        "base_open_ms": 1672485300000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "LINKUSDT",
+        "timestamp": "2022-12-31T11:25:00Z",
+        "ts_ms": 1672485900000
+      },
+      {
+        "base_index": 68486,
+        "base_open": "2021-12-19T17:45:00Z",
+        "base_open_ms": 1639935900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2021-12-19T17:50:00Z",
+        "ts_ms": 1639936200000
+      },
+      {
+        "base_index": 69195,
+        "base_open": "2021-12-27T03:00:00Z",
+        "base_open_ms": 1640574000000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2021-12",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2021-12-27T03:00:00Z",
+        "ts_ms": 1640574000000
+      },
+      {
+        "base_index": 82158,
+        "base_open": "2022-05-16T03:45:00Z",
+        "base_open_ms": 1652672700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-05",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-05-16T03:45:00Z",
+        "ts_ms": 1652672700000
+      },
+      {
+        "base_index": 84576,
+        "base_open": "2022-06-10T08:15:00Z",
+        "base_open_ms": 1654848900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-06",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-06-10T08:15:00Z",
+        "ts_ms": 1654848900000
+      },
+      {
+        "base_index": 87920,
+        "base_open": "2022-07-15T04:15:00Z",
+        "base_open_ms": 1657858500000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-07-15T04:15:00Z",
+        "ts_ms": 1657858500000
+      },
+      {
+        "base_index": 88830,
+        "base_open": "2022-07-24T15:45:00Z",
+        "base_open_ms": 1658677500000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-07-24T15:50:00Z",
+        "ts_ms": 1658677800000
+      },
+      {
+        "base_index": 90363,
+        "base_open": "2022-08-09T15:00:00Z",
+        "base_open_ms": 1660057200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-08",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-08-09T15:00:00Z",
+        "ts_ms": 1660057200000
+      },
+      {
+        "base_index": 91184,
+        "base_open": "2022-08-18T04:15:00Z",
+        "base_open_ms": 1660796100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-08",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-08-18T04:15:00Z",
+        "ts_ms": 1660796100000
+      },
+      {
+        "base_index": 96558,
+        "base_open": "2022-10-13T03:45:00Z",
+        "base_open_ms": 1665632700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-10",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-10-13T03:45:00Z",
+        "ts_ms": 1665632700000
+      },
+      {
+        "base_index": 99918,
+        "base_open": "2022-11-17T03:45:00Z",
+        "base_open_ms": 1668656700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-11",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-11-17T03:55:00Z",
+        "ts_ms": 1668657300000
+      },
+      {
+        "base_index": 102869,
+        "base_open": "2022-12-17T21:30:00Z",
+        "base_open_ms": 1671312600000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2022-12",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-12-17T21:30:00Z",
+        "ts_ms": 1671312600000
+      },
+      {
+        "base_index": 103834,
+        "base_open": "2022-12-27T22:45:00Z",
+        "base_open_ms": 1672181100000,
+        "crowding_confirmation": "account_only",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-12",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "XRPUSDT",
+        "timestamp": "2022-12-27T22:50:00Z",
+        "ts_ms": 1672181400000
+      },
+      {
+        "base_index": 58659,
+        "base_open": "2022-05-23T07:45:00Z",
+        "base_open_ms": 1653291900000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-05",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "SOLUSDT",
+        "timestamp": "2022-05-23T07:55:00Z",
+        "ts_ms": 1653292500000
+      },
+      {
+        "base_index": 58957,
+        "base_open": "2022-05-26T10:15:00Z",
+        "base_open_ms": 1653560100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-05",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "SOLUSDT",
+        "timestamp": "2022-05-26T10:20:00Z",
+        "ts_ms": 1653560400000
+      },
+      {
+        "base_index": 65193,
+        "base_open": "2022-07-30T09:15:00Z",
+        "base_open_ms": 1659172500000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-07",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "SOLUSDT",
+        "timestamp": "2022-07-30T09:20:00Z",
+        "ts_ms": 1659172800000
+      },
+      {
+        "base_index": 66621,
+        "base_open": "2022-08-14T06:15:00Z",
+        "base_open_ms": 1660457700000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-08",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "SOLUSDT",
+        "timestamp": "2022-08-14T06:15:00Z",
+        "ts_ms": 1660457700000
+      },
+      {
+        "base_index": 69000,
+        "base_open": "2022-09-08T01:00:00Z",
+        "base_open_ms": 1662598800000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": true,
+          "opposite_1h_return": false,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "SOLUSDT",
+        "timestamp": "2022-09-08T01:05:00Z",
+        "ts_ms": 1662599100000
+      },
+      {
+        "base_index": 72104,
+        "base_open": "2022-10-10T09:00:00Z",
+        "base_open_ms": 1665392400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2022-10",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "SOLUSDT",
+        "timestamp": "2022-10-10T09:00:00Z",
+        "ts_ms": 1665392400000
+      },
+      {
+        "base_index": 74020,
+        "base_open": "2022-10-30T08:00:00Z",
+        "base_open_ms": 1667116800000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 3,
+        "month": "2022-10",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "SOLUSDT",
+        "timestamp": "2022-10-30T08:00:00Z",
+        "ts_ms": 1667116800000
+      },
+      {
+        "base_index": 79137,
+        "base_open": "2022-12-22T15:15:00Z",
+        "base_open_ms": 1671722100000,
+        "crowding_confirmation": "position_only",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2022-12",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "SOLUSDT",
+        "timestamp": "2022-12-22T15:25:00Z",
+        "ts_ms": 1671722700000
+      },
+      {
+        "base_index": 48,
+        "base_open": "2022-06-02T02:00:00Z",
+        "base_open_ms": 1654135200000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2022-06",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "OPUSDT",
+        "timestamp": "2022-06-02T02:00:00Z",
+        "ts_ms": 1654135200000
+      },
+      {
+        "base_index": 6599,
+        "base_open": "2022-08-09T07:45:00Z",
+        "base_open_ms": 1660031100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2022-08",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "OPUSDT",
+        "timestamp": "2022-08-09T07:45:00Z",
+        "ts_ms": 1660031100000
+      },
+      {
+        "base_index": 6759,
+        "base_open": "2022-08-10T23:45:00Z",
+        "base_open_ms": 1660175100000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2022-08",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "OPUSDT",
+        "timestamp": "2022-08-10T23:45:00Z",
+        "ts_ms": 1660175100000
+      },
+      {
+        "base_index": 7525,
+        "base_open": "2022-08-18T23:15:00Z",
+        "base_open_ms": 1660864500000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2022-08",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "OPUSDT",
+        "timestamp": "2022-08-18T23:20:00Z",
+        "ts_ms": 1660864800000
+      },
+      {
+        "base_index": 9567,
+        "base_open": "2022-09-09T05:45:00Z",
+        "base_open_ms": 1662702300000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "OPUSDT",
+        "timestamp": "2022-09-09T05:55:00Z",
+        "ts_ms": 1662702900000
+      },
+      {
+        "base_index": 9850,
+        "base_open": "2022-09-12T04:30:00Z",
+        "base_open_ms": 1662957000000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "OPUSDT",
+        "timestamp": "2022-09-12T04:35:00Z",
+        "ts_ms": 1662957300000
+      },
+      {
+        "base_index": 9946,
+        "base_open": "2022-09-13T04:30:00Z",
+        "base_open_ms": 1663043400000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 1,
+        "month": "2022-09",
+        "price_failure_flags": {
+          "close_location_failure": false,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": true,
+          "wick_rejection": false
+        },
+        "side": "short_core",
+        "symbol": "OPUSDT",
+        "timestamp": "2022-09-13T04:40:00Z",
+        "ts_ms": 1663044000000
+      },
+      {
+        "base_index": 10640,
+        "base_open": "2022-09-20T10:00:00Z",
+        "base_open_ms": 1663668000000,
+        "crowding_confirmation": "none",
+        "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+        "failure_score": 2,
+        "month": "2022-09",
+        "price_failure_flags": {
+          "close_location_failure": true,
+          "failed_breakout_breakdown": false,
+          "opposite_1h_return": false,
+          "wick_rejection": true
+        },
+        "side": "short_core",
+        "symbol": "OPUSDT",
+        "timestamp": "2022-09-20T10:05:00Z",
+        "ts_ms": 1663668300000
+      }
+    ],
+    "price_failure_variant_distribution": {
+      "close_location_failure": 52,
+      "failed_breakout_breakdown": 20,
+      "opposite_1h_return": 77,
+      "wick_rejection": 52
+    },
+    "raw_event_count": 110,
+    "rejected_due_to_cooldown": 12,
+    "rejected_due_to_missing_components": {
+      "oi_delta_log_1h_missing": 1444,
+      "price_bar_missing": 2972,
+      "taker_sell_aggression_missing": 256703
+    },
+    "rejected_due_to_missing_price_failure": 58
+  },
+  "expected_head": "7904a4973463a6b449bd3064e5415f5eb56911ad",
+  "failed_holdout_gates": [
+    "p_negative_mean_lte_0_05",
+    "insufficient_or_unavailable_pre_2023_holdout_sample"
+  ],
+  "fdr_q_value": 0.2217782217782218,
+  "final_holdout_decision": "50-99 valid holdout events: inconclusive by preregistered sample rule",
+  "forbidden_actions_confirmed_false": {
+    "account_api": false,
+    "api_key": false,
+    "candidate_generation": false,
+    "deployable_pnl_reported": false,
+    "edge_claim": false,
+    "event_definition_changes": false,
+    "horizon_changes": false,
+    "live_paper_trading": false,
+    "optimization_against_holdout_returns": false,
+    "order_private_account_api_key": false,
+    "picked_window_based_on_results": false,
+    "private_api": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "strategy_release": false,
+    "threshold_changes": false,
+    "used_2023_2025_as_holdout": false
+  },
+  "frozen_hypothesis": {
+    "diagnostic_label": "SHORT_PRESSURE_FAILURE_DELAYED_DOWNSIDE_CONTINUATION_DIAGNOSTIC",
+    "event_side": "short_core",
+    "expected_direction": "negative",
+    "horizon": "1h",
+    "primary_multiple_comparison_scope": "single_pre_registered_primary_test",
+    "primary_null_model_for_validation": "month_aware_symbol_balanced_null",
+    "primary_statistic": "mean_1h_close_to_close_forward_return",
+    "research_sample_event_count": 451,
+    "research_sample_month_aware_bonferroni": 0.007992007992007992,
+    "research_sample_month_aware_fdr_q": 0.007992007992007992,
+    "research_sample_month_aware_p_negative_mean": 0.000999000999000999,
+    "research_sample_observed_mean": -0.0016947738188285704,
+    "research_sample_prior_bonferroni": 0.007992007992007992,
+    "research_sample_prior_fdr_q": 0.007992007992007992,
+    "research_sample_prior_raw_p": 0.000999000999000999,
+    "research_sample_valid_count": 451,
+    "secondary_tracked_diagnostics": [
+      {
+        "horizon": "4h",
+        "pass_fail_allowed": false,
+        "role": "exploratory_non_primary_record_only",
+        "side": "long_core"
+      },
+      {
+        "horizon": "24h",
+        "pass_fail_allowed": false,
+        "role": "exploratory_non_primary_record_only",
+        "side": "long_core"
+      }
+    ]
+  },
+  "head_matches_expected": true,
+  "historical_holdout_passed": false,
+  "holdout_backtest_status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FROZEN_HISTORICAL_HOLDOUT_BACKTEST_CREATED",
+  "holdout_gates": {
+    "cost_stressed_non_trivial_10bps": true,
+    "cost_stressed_non_trivial_5bps": true,
+    "current_prior_bar_reconstruction_only": true,
+    "leave_one_symbol_month_no_obvious_dependence_when_applicable": true,
+    "no_forbidden_action_occurred": true,
+    "observed_primary_mean_negative": true,
+    "p_negative_mean_lte_0_05": false,
+    "pre_2023_data_only": true,
+    "sufficient_event_count_gte_100": false
+  },
+  "input_artifact_hashes_after": {
+    "artifacts/contracts/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_contract_v1.json": "e79c38e571e0ef050c8a344f816e61248b08ec02f786606dfe39b70f06328448",
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_direction_semantics_review_v1.json": "14a5749ca89f5c04914811ffdd54578c1b91f7da5adf232f370e289fbcb6b8e3",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_definition_refinement_v1.json": "d4b24019fbc99ebe2a1e85e7f9b1f15e853529cbaf383fdaab3ffcebd2c479f8",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_runner_v1.json": "08a898fd52eafefd3ce09ce921e2c62bddb604fcfd088a64685c448aa840560a"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/contracts/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_contract_v1.json": "e79c38e571e0ef050c8a344f816e61248b08ec02f786606dfe39b70f06328448",
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_direction_semantics_review_v1.json": "14a5749ca89f5c04914811ffdd54578c1b91f7da5adf232f370e289fbcb6b8e3",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_definition_refinement_v1.json": "d4b24019fbc99ebe2a1e85e7f9b1f15e853529cbaf383fdaab3ffcebd2c479f8",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_runner_v1.json": "08a898fd52eafefd3ce09ce921e2c62bddb604fcfd088a64685c448aa840560a"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_payload_hashes_verified": {
+    "artifacts/contracts/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_contract_v1.json": "584c602c93ca07d57decce0cdbcd07bf73f4ba30784d512f9e05d28877d8cea3",
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_direction_semantics_review_v1.json": "ed8e49451405598234bb23586f28d0c471a217d649d87b78789e61d23c4dab74",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_definition_refinement_v1.json": "09be0b2032e7d890d87abbf8f903eb62a9938194a7573e610b83325a1671268d",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_runner_v1.json": "691632395583ed6351497669d57d8d02db113c7e294c28b5ea6dfc17da1640d4"
+  },
+  "kline_availability_summary": {
+    "availability_by_symbol": {
+      "APTUSDT": {
+        "available": 3,
+        "missing": 1037
+      },
+      "ARBUSDT": {
+        "available": 0,
+        "missing": 1132
+      },
+      "BNBUSDT": {
+        "available": 35,
+        "missing": 32
+      },
+      "BTCUSDT": {
+        "available": 36,
+        "missing": 0
+      },
+      "DOGEUSDT": {
+        "available": 30,
+        "missing": 188
+      },
+      "ETHUSDT": {
+        "available": 36,
+        "missing": 0
+      },
+      "LINKUSDT": {
+        "available": 36,
+        "missing": 0
+      },
+      "OPUSDT": {
+        "available": 7,
+        "missing": 911
+      },
+      "SOLUSDT": {
+        "available": 28,
+        "missing": 252
+      },
+      "XRPUSDT": {
+        "available": 36,
+        "missing": 0
+      }
+    },
+    "available_archive_count": 247,
+    "checksum_available_count": 247,
+    "checksum_verified_count": 247,
+    "downloaded_archive_count": 247,
+    "kind": "klines",
+    "missing_archive_count": 3552,
+    "missing_archive_sample": [
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-01.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-05.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-06.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-03.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-08.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-02.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-09.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-07.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-04.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-10.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-11.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-13.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-12.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-17.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-18.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-20.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-14.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-19.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-16.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-21.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-22.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-24.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-23.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-25.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-27.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-28.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-26.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-15.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-31.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-29.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-01-30.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-02.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-01.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-07.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-10.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-09.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-06.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-03.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-04.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-05.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-15.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-14.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-17.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-11.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-08.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-13.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-12.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "DOGEUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/15m/DOGEUSDT-15m-2020-02-16.zip"
+      }
+    ],
+    "reused_archive_count": 0,
+    "total_archive_records": 3799
+  },
+  "live_allowed": false,
+  "metrics_availability_summary": {
+    "availability_by_symbol": {
+      "APTUSDT": {
+        "available": 74,
+        "missing": 1058
+      },
+      "ARBUSDT": {
+        "available": 0,
+        "missing": 1132
+      },
+      "BNBUSDT": {
+        "available": 396,
+        "missing": 736
+      },
+      "BTCUSDT": {
+        "available": 852,
+        "missing": 280
+      },
+      "DOGEUSDT": {
+        "available": 396,
+        "missing": 736
+      },
+      "ETHUSDT": {
+        "available": 396,
+        "missing": 736
+      },
+      "LINKUSDT": {
+        "available": 396,
+        "missing": 736
+      },
+      "OPUSDT": {
+        "available": 214,
+        "missing": 918
+      },
+      "SOLUSDT": {
+        "available": 396,
+        "missing": 736
+      },
+      "XRPUSDT": {
+        "available": 396,
+        "missing": 736
+      }
+    },
+    "available_archive_count": 3516,
+    "checksum_available_count": 3516,
+    "checksum_verified_count": 3516,
+    "downloaded_archive_count": 3516,
+    "kind": "metrics",
+    "missing_archive_count": 7804,
+    "missing_archive_sample": [
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ETHUSDT/ETHUSDT-metrics-2020-01.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-01.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-08.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-02.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-03.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-04.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-07.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-06.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-09.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-05.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-10.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-13.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-15.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-17.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-14.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-12.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-11.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-19.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-16.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-21.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-22.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-24.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-23.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-20.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-28.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-18.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-29.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-31.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-25.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-26.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-27.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-01-30.zip"
+      },
+      {
+        "cadence": "monthly",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/metrics/ETHUSDT/ETHUSDT-metrics-2020-02.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-02.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-03.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-05.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-08.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-10.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-01.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-09.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-04.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-06.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-14.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-17.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-13.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-19.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-12.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-16.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-11.zip"
+      },
+      {
+        "cadence": "daily",
+        "error": "404 not found",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2020-02-18.zip"
+      }
+    ],
+    "reused_archive_count": 0,
+    "total_archive_records": 11320
+  },
+  "module": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FROZEN_HISTORICAL_HOLDOUT_BACKTEST_V1",
+  "month_coverage": {
+    "month_count": 22,
+    "months": [
+      "2020-09",
+      "2020-12",
+      "2021-01",
+      "2021-03",
+      "2021-04",
+      "2021-05",
+      "2021-06",
+      "2021-07",
+      "2021-08",
+      "2021-09",
+      "2021-10",
+      "2021-11",
+      "2021-12",
+      "2022-01",
+      "2022-05",
+      "2022-06",
+      "2022-07",
+      "2022-08",
+      "2022-09",
+      "2022-10",
+      "2022-11",
+      "2022-12"
+    ],
+    "top_contributor_months": [
+      {
+        "contribution_to_total_sum": 0.9277075603019993,
+        "count": 8,
+        "key": "2022-06",
+        "mean": -0.011679195914979304
+      },
+      {
+        "contribution_to_total_sum": 0.6981366954465045,
+        "count": 11,
+        "key": "2022-07",
+        "mean": -0.006392041936461237
+      },
+      {
+        "contribution_to_total_sum": -0.5524152583834083,
+        "count": 3,
+        "key": "2021-01",
+        "mean": 0.018545401748466157
+      },
+      {
+        "contribution_to_total_sum": -0.5453629785464389,
+        "count": 9,
+        "key": "2022-08",
+        "mean": 0.00610288207551293
+      },
+      {
+        "contribution_to_total_sum": 0.31013620101198924,
+        "count": 12,
+        "key": "2021-12",
+        "mean": -0.0026029333717817273
+      }
+    ]
+  },
+  "null_model": "month_aware_symbol_balanced_null",
+  "null_stats": {
+    "null_mean_mean": -0.00012872784462397374,
+    "null_mean_q01": -0.0027707520163910886,
+    "null_mean_q05": -0.002037395340849065,
+    "null_mean_q50": -0.00010548718818762186,
+    "null_mean_q95": 0.001740977855009299,
+    "null_mean_q99": 0.0024782661545941225,
+    "null_mean_std": 0.0011571175908962638
+  },
+  "observed_primary_stats": {
+    "event_count": 98,
+    "mean_forward_return": -0.0010276985862346661,
+    "mean_gross_short_interpretation_return": 0.0010276985862346661,
+    "median_forward_return": -0.0005159725246446367,
+    "missing_forward_return_count": 0,
+    "negative_rate_forward_return": 0.5306122448979592,
+    "positive_rate_forward_return": 0.46938775510204084,
+    "q01": -0.05629656475503646,
+    "q05": -0.017711098309073973,
+    "q25": -0.005902865538847252,
+    "q50": -0.0005159725246446367,
+    "q75": 0.0035663111264884195,
+    "q95": 0.018711236148378056,
+    "q99": 0.04395787410386659,
+    "std_forward_return": 0.015320227473458056,
+    "valid_forward_return_count": 98
+  },
+  "p_values": {
+    "empirical_p_value_formula": "p = (1 + count(null stats as or more extreme than observed)) / (1 + permutation_count)",
+    "null_center_used_for_two_sided": -0.00012872784462397374,
+    "p_negative_mean": 0.2217782217782218,
+    "p_positive_mean": 0.7792207792207793,
+    "p_two_sided": 0.42357642357642356
+  },
+  "payload_sha256_excluding_hash": "7d12729e01620819519ad6e2f3e3a6135a2b7e5a41177e95c9491805bf2e6daa",
+  "permutation_count_completed": 1000,
+  "permutation_count_requested": 1000,
+  "public_data_source_summary": {
+    "cache_files_staged": false,
+    "cache_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\cache\\extreme_oi_taker_crowding_price_failure_frozen_historical_holdout_backtest_v1",
+    "daily_klines_root": "https://data.binance.vision/data/futures/um/daily/klines",
+    "daily_metrics_root": "https://data.binance.vision/data/futures/um/daily/metrics",
+    "monthly_klines_root": "https://data.binance.vision/data/futures/um/monthly/klines",
+    "monthly_metrics_root": "https://data.binance.vision/data/futures/um/monthly/metrics",
+    "raw_data_committed": false
+  },
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "release_allowed": false,
+  "replacement_checks_all_true": true,
+  "requested_holdout_window": {
+    "must_be_pre_2023": true,
+    "preferred_end": "2022-12-31",
+    "preferred_start": "2020-01-01",
+    "timezone": "UTC"
+  },
+  "result_classification": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_HISTORICAL_HOLDOUT_INCONCLUSIVE_INSUFFICIENT_SAMPLE",
+  "runtime_touch_allowed": false,
+  "sensitivity_diagnostics": {
+    "arbusdt_exclusion": {
+      "arbusdt_event_count": 0,
+      "reason": "no ARBUSDT events",
+      "skipped": true
+    },
+    "leave_one_month_out": {
+      "any_single_dependence": null,
+      "reason": "insufficient events or full mean unavailable",
+      "skipped": true
+    },
+    "leave_one_symbol_out": {
+      "any_single_dependence": null,
+      "reason": "insufficient events or full mean unavailable",
+      "skipped": true
+    },
+    "top_contributor_months": [
+      {
+        "contribution_to_total_sum": 0.9277075603019993,
+        "count": 8,
+        "key": "2022-06",
+        "mean": -0.011679195914979304
+      },
+      {
+        "contribution_to_total_sum": 0.6981366954465045,
+        "count": 11,
+        "key": "2022-07",
+        "mean": -0.006392041936461237
+      },
+      {
+        "contribution_to_total_sum": -0.5524152583834083,
+        "count": 3,
+        "key": "2021-01",
+        "mean": 0.018545401748466157
+      },
+      {
+        "contribution_to_total_sum": -0.5453629785464389,
+        "count": 9,
+        "key": "2022-08",
+        "mean": 0.00610288207551293
+      },
+      {
+        "contribution_to_total_sum": 0.31013620101198924,
+        "count": 12,
+        "key": "2021-12",
+        "mean": -0.0026029333717817273
+      }
+    ],
+    "top_contributor_symbols": [
+      {
+        "contribution_to_total_sum": 0.6602327586001129,
+        "count": 8,
+        "key": "OPUSDT",
+        "mean": -0.008311873339339582
+      },
+      {
+        "contribution_to_total_sum": -0.5930610153211675,
+        "count": 34,
+        "key": "BTCUSDT",
+        "mean": 0.0017567594342839127
+      },
+      {
+        "contribution_to_total_sum": 0.433968981249894,
+        "count": 19,
+        "key": "LINKUSDT",
+        "mean": -0.002300365907001106
+      },
+      {
+        "contribution_to_total_sum": 0.3880459378120296,
+        "count": 12,
+        "key": "XRPUSDT",
+        "mean": -0.0032568198037488116
+      },
+      {
+        "contribution_to_total_sum": 0.3405565406709251,
+        "count": 8,
+        "key": "SOLUSDT",
+        "mean": -0.004287371073410859
+      }
+    ]
+  },
+  "signal_allowed": false,
+  "status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FROZEN_HISTORICAL_HOLDOUT_BACKTEST_CREATED",
+  "strategy_allowed": false,
+  "symbol_coverage": {
+    "symbol_count": 8,
+    "symbols": [
+      "BNBUSDT",
+      "BTCUSDT",
+      "DOGEUSDT",
+      "ETHUSDT",
+      "LINKUSDT",
+      "OPUSDT",
+      "SOLUSDT",
+      "XRPUSDT"
+    ],
+    "top_contributor_symbols": [
+      {
+        "contribution_to_total_sum": 0.6602327586001129,
+        "count": 8,
+        "key": "OPUSDT",
+        "mean": -0.008311873339339582
+      },
+      {
+        "contribution_to_total_sum": -0.5930610153211675,
+        "count": 34,
+        "key": "BTCUSDT",
+        "mean": 0.0017567594342839127
+      },
+      {
+        "contribution_to_total_sum": 0.433968981249894,
+        "count": 19,
+        "key": "LINKUSDT",
+        "mean": -0.002300365907001106
+      },
+      {
+        "contribution_to_total_sum": 0.3880459378120296,
+        "count": 12,
+        "key": "XRPUSDT",
+        "mean": -0.0032568198037488116
+      },
+      {
+        "contribution_to_total_sum": 0.3405565406709251,
+        "count": 8,
+        "key": "SOLUSDT",
+        "mean": -0.004287371073410859
+      }
+    ]
+  },
+  "symbols_available": [
+    "APTUSDT",
+    "BNBUSDT",
+    "BTCUSDT",
+    "DOGEUSDT",
+    "ETHUSDT",
+    "LINKUSDT",
+    "OPUSDT",
+    "SOLUSDT",
+    "XRPUSDT"
+  ],
+  "symbols_requested": [
+    "APTUSDT",
+    "ARBUSDT",
+    "BNBUSDT",
+    "BTCUSDT",
+    "DOGEUSDT",
+    "ETHUSDT",
+    "LINKUSDT",
+    "OPUSDT",
+    "SOLUSDT",
+    "XRPUSDT"
+  ],
+  "validation_checks": {
+    "contract_ready": true,
+    "event_side_short_core": true,
+    "expected_direction_negative": true,
+    "horizon_1h": true,
+    "independent_validation_prior_inconclusive": true,
+    "input_artifact_hashes_unchanged": true,
+    "label_exact": true,
+    "no_2023_2025_holdout_reuse": true,
+    "no_artifacts_data_builds_written": true,
+    "no_strategy_signal_candidate_release_permissions": true,
+    "pre_2023_only": true,
+    "primary_null_month_aware_symbol_balanced": true,
+    "public_data_vision_only": true,
+    "refinement_ready": true,
+    "semantics_relabel_ready": true
+  }
+}

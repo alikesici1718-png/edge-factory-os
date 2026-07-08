@@ -1,0 +1,1307 @@
+{
+  "status": "PASS_REPO_ONLY_BINANCE_DATA_VISION_UM_METRICS_DATASET_BUILDER_CREATED",
+  "artifact_kind": "BINANCE_DATA_VISION_UM_METRICS_DATASET_BUILDER",
+  "module": "BINANCE_DATA_VISION_UM_METRICS_DATASET_BUILDER_V1",
+  "source_checkpoint": {
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "source_discovery_commit": "41b9212d5e0bf41b4657dd43e5debea58254df39",
+    "repo_head_before_tool_creation": "41b9212d5e0bf41b4657dd43e5debea58254df39",
+    "tracked_python_count_before_tool_creation": 1056,
+    "tracked_python_count_at_run": 1056,
+    "git_status_short_after_stale_cleanup_before_tool_creation": [],
+    "git_status_short_at_run_start": [
+      "?? artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json",
+      "?? tools/edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_builder_v1.py"
+    ],
+    "build_started_at_utc": "2026-05-27T23:08:06Z"
+  },
+  "source_artifacts": {
+    "binance_metrics_archive_discovery": {
+      "path": "artifacts/data_discovery/binance_data_vision_um_metrics_archive_discovery_v1.json",
+      "status": "PASS_REPO_ONLY_BINANCE_DATA_VISION_UM_METRICS_ARCHIVE_DISCOVERY_CREATED",
+      "result_classification": "BINANCE_DATA_VISION_METRICS_READY_FOR_OI_TAKER_CROWDING_DATASET",
+      "payload_sha256_excluding_hash": "8a313aaf03eeca565f9bf2f71d02ee69b69c87fd5ed14671d3fc7acc22da657b"
+    }
+  },
+  "cleanup_summary": {
+    "stale_institutional_contract_leftovers_removed": true,
+    "removed_paths": [
+      "artifacts/research_contracts/",
+      "tools/edge_factory_os_repo_only_institutional_research_contract_for_top_family_v1.py"
+    ],
+    "repo_clean_after_cleanup_before_dataset_tool_creation": true
+  },
+  "archive_source": {
+    "base_url": "https://data.binance.vision/",
+    "daily_metrics_root": "https://data.binance.vision/data/futures/um/daily/metrics",
+    "monthly_metrics_root": "https://data.binance.vision/data/futures/um/monthly/metrics",
+    "public_archive_only": true,
+    "url_patterns": {
+      "daily": "https://data.binance.vision/data/futures/um/daily/metrics/SYMBOL/SYMBOL-metrics-YYYY-MM-DD.zip",
+      "monthly": "https://data.binance.vision/data/futures/um/monthly/metrics/SYMBOL/SYMBOL-metrics-YYYY-MM.zip"
+    }
+  },
+  "requested_symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "APTUSDT",
+    "ARBUSDT",
+    "OPUSDT"
+  ],
+  "requested_metrics": [
+    "openInterestHist",
+    "takerlongshortRatio",
+    "globalLongShortAccountRatio",
+    "topLongShortAccountRatio",
+    "topLongShortPositionRatio"
+  ],
+  "external_output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1",
+  "download_summary": {
+    "monthly_archive_probe_summary": {
+      "BTCUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      },
+      "ETHUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      },
+      "SOLUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      },
+      "DOGEUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      },
+      "XRPUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      },
+      "BNBUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      },
+      "LINKUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      },
+      "APTUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      },
+      "ARBUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      },
+      "OPUSDT": {
+        "monthly_files_available": 0,
+        "monthly_files_checked": 36
+      }
+    },
+    "preferred_monthly_files_when_available": true,
+    "daily_files_used_when_monthly_unavailable": true,
+    "archive_files_available": 10879,
+    "archive_files_downloaded": 0,
+    "archive_files_reused_existing": 10879,
+    "archive_files_missing": 81,
+    "download_manifest_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\checksums\\download_manifest_v1.csv",
+    "unrelated_market_data_downloaded": false
+  },
+  "generated_external_files": {
+    "raw_archives_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\raw_archives",
+    "normalized_by_symbol_files": [
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\BTCUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\ETHUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\SOLUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\DOGEUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\XRPUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\BNBUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\LINKUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\APTUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\ARBUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\OPUSDT_um_metrics_5m_2023_2025_v1.csv"
+    ],
+    "coverage_report_files": [
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\dataset_coverage_summary_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\archive_file_availability_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\BTCUSDT_coverage_report_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\ETHUSDT_coverage_report_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\SOLUSDT_coverage_report_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\DOGEUSDT_coverage_report_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\XRPUSDT_coverage_report_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\BNBUSDT_coverage_report_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\LINKUSDT_coverage_report_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\APTUSDT_coverage_report_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\ARBUSDT_coverage_report_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\OPUSDT_coverage_report_v1.csv"
+    ],
+    "checksum_files": [
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\checksums\\download_manifest_v1.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\checksums\\normalized_file_sha256_v1.csv"
+    ]
+  },
+  "normalized_dataset_summary": {
+    "requested_symbol_count": 10,
+    "built_symbol_count": 10,
+    "built_symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "DOGEUSDT",
+      "XRPUSDT",
+      "BNBUSDT",
+      "LINKUSDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "OPUSDT"
+    ],
+    "symbols_with_open_interest": 10,
+    "symbols_with_taker_ratio": 10,
+    "symbols_with_global_long_short": 10,
+    "symbols_with_top_account_ratio": 10,
+    "symbols_with_top_position_ratio": 10,
+    "symbols_with_long_short_ratio": 10,
+    "symbols_with_full_proxy_alignment": 10,
+    "timestamp_global_min": "2023-01-01T00:00:00Z",
+    "timestamp_global_max": "2025-12-31T23:55:00Z",
+    "total_normalized_rows": 3131587,
+    "coverage_by_year": {
+      "2023": 1027644,
+      "2024": 1052773,
+      "2025": 1051170
+    },
+    "metric_coverage_by_year": {
+      "2023": {
+        "openInterestHist": 1027644,
+        "takerlongshortRatio": 1027614,
+        "globalLongShortAccountRatio": 1027523,
+        "topLongShortAccountRatio": 1027434,
+        "topLongShortPositionRatio": 1027513
+      },
+      "2024": {
+        "openInterestHist": 1052773,
+        "takerlongshortRatio": 1052773,
+        "globalLongShortAccountRatio": 1052694,
+        "topLongShortAccountRatio": 1052693,
+        "topLongShortPositionRatio": 1052612
+      },
+      "2025": {
+        "openInterestHist": 1051170,
+        "takerlongshortRatio": 1051170,
+        "globalLongShortAccountRatio": 1050971,
+        "topLongShortAccountRatio": 1050626,
+        "topLongShortPositionRatio": 1050993
+      }
+    },
+    "limitations": [
+      "Dataset contains OI/taker/crowding proxy metrics, not true liquidation data.",
+      "Funding fields are unavailable in the sampled/discovered metrics archive and are not included.",
+      "Taker buy and sell volume components are unavailable in the combined metrics archive; only the ratio is normalized.",
+      "Some symbols begin after 2023-01-01, so early missing dates can reflect instrument listing history."
+    ]
+  },
+  "per_symbol_coverage": {
+    "BTCUSDT": {
+      "symbol": "BTCUSDT",
+      "file_availability": {
+        "available_archive_count": 1096,
+        "missing_archive_count": 0
+      },
+      "earliest_timestamp": "2023-01-01T00:00:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 315514,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 134,
+      "missing_date_count": 0,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 0,
+        "invalid_ratio_rate": 0.0,
+        "invalid_ratio_tolerance_count": 31
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 315514,
+        "takerlongshortRatio": 315514,
+        "globalLongShortAccountRatio": 315476,
+        "topLongShortAccountRatio": 315432,
+        "topLongShortPositionRatio": 315466
+      },
+      "rows_by_year": {
+        "2023": 105117,
+        "2024": 105280,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105105,
+          "topLongShortAccountRatio": 105096,
+          "topLongShortPositionRatio": 105104
+        },
+        "2024": {
+          "openInterestHist": 105280,
+          "takerlongshortRatio": 105280,
+          "globalLongShortAccountRatio": 105273,
+          "topLongShortAccountRatio": 105273,
+          "topLongShortPositionRatio": 105263
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105098,
+          "topLongShortAccountRatio": 105063,
+          "topLongShortPositionRatio": 105099
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\BTCUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "4a1546f568de76b42f9f8be64dfe807ee385727758a86f138af2f1bf37659c4d",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\BTCUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "21ecc1c5399a7088955348f78f3c2690e71fea7e99c9b09140c845bd5af151c4"
+    },
+    "ETHUSDT": {
+      "symbol": "ETHUSDT",
+      "file_availability": {
+        "available_archive_count": 1096,
+        "missing_archive_count": 0
+      },
+      "earliest_timestamp": "2023-01-01T00:00:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 315514,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 134,
+      "missing_date_count": 0,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 0,
+        "invalid_ratio_rate": 0.0,
+        "invalid_ratio_tolerance_count": 31
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 315514,
+        "takerlongshortRatio": 315514,
+        "globalLongShortAccountRatio": 315474,
+        "topLongShortAccountRatio": 315428,
+        "topLongShortPositionRatio": 315466
+      },
+      "rows_by_year": {
+        "2023": 105117,
+        "2024": 105280,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105105,
+          "topLongShortAccountRatio": 105096,
+          "topLongShortPositionRatio": 105104
+        },
+        "2024": {
+          "openInterestHist": 105280,
+          "takerlongshortRatio": 105280,
+          "globalLongShortAccountRatio": 105273,
+          "topLongShortAccountRatio": 105271,
+          "topLongShortPositionRatio": 105263
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105096,
+          "topLongShortAccountRatio": 105061,
+          "topLongShortPositionRatio": 105099
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\ETHUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "b0bb33ab29a3c95052f9ddf4ef120ff5d53d58fcc67cb47f97a961e3ccab5a45",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\ETHUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "cc68fe84852b7268fa9e61a0ef157f1a33a462a2d3f5fde8e27800f9f4474013"
+    },
+    "SOLUSDT": {
+      "symbol": "SOLUSDT",
+      "file_availability": {
+        "available_archive_count": 1096,
+        "missing_archive_count": 0
+      },
+      "earliest_timestamp": "2023-01-01T00:00:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 315497,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 151,
+      "missing_date_count": 0,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 2,
+        "invalid_ratio_rate": 6.339204493228144e-06,
+        "invalid_ratio_tolerance_count": 31
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 315497,
+        "takerlongshortRatio": 315494,
+        "globalLongShortAccountRatio": 315456,
+        "topLongShortAccountRatio": 315413,
+        "topLongShortPositionRatio": 315449
+      },
+      "rows_by_year": {
+        "2023": 105100,
+        "2024": 105280,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 105100,
+          "takerlongshortRatio": 105097,
+          "globalLongShortAccountRatio": 105088,
+          "topLongShortAccountRatio": 105080,
+          "topLongShortPositionRatio": 105087
+        },
+        "2024": {
+          "openInterestHist": 105280,
+          "takerlongshortRatio": 105280,
+          "globalLongShortAccountRatio": 105271,
+          "topLongShortAccountRatio": 105271,
+          "topLongShortPositionRatio": 105263
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105097,
+          "topLongShortAccountRatio": 105062,
+          "topLongShortPositionRatio": 105099
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\SOLUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "05493c8216fe7cf5ae80ee5d7dfd44045809c4cad8f09b34e7adc19ee7846c2e",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\SOLUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "4a81610976b8856d2c5ff4cfcfff10a6cb0cf6d9ce3f9709ae0d551ecad45952"
+    },
+    "DOGEUSDT": {
+      "symbol": "DOGEUSDT",
+      "file_availability": {
+        "available_archive_count": 1096,
+        "missing_archive_count": 0
+      },
+      "earliest_timestamp": "2023-01-01T00:00:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 315514,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 134,
+      "missing_date_count": 0,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 2,
+        "invalid_ratio_rate": 6.338862934766761e-06,
+        "invalid_ratio_tolerance_count": 31
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 315514,
+        "takerlongshortRatio": 315512,
+        "globalLongShortAccountRatio": 315473,
+        "topLongShortAccountRatio": 315429,
+        "topLongShortPositionRatio": 315466
+      },
+      "rows_by_year": {
+        "2023": 105117,
+        "2024": 105280,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105115,
+          "globalLongShortAccountRatio": 105105,
+          "topLongShortAccountRatio": 105095,
+          "topLongShortPositionRatio": 105103
+        },
+        "2024": {
+          "openInterestHist": 105280,
+          "takerlongshortRatio": 105280,
+          "globalLongShortAccountRatio": 105271,
+          "topLongShortAccountRatio": 105272,
+          "topLongShortPositionRatio": 105264
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105097,
+          "topLongShortAccountRatio": 105062,
+          "topLongShortPositionRatio": 105099
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\DOGEUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "d66585fec475c510966dcf3f87407261b9f5dd0e78543eb9f681e9c47c04c180",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\DOGEUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "bad780f46517c25b06e39c1c4e1597a939d3360686e977da0f682463d2fd114e"
+    },
+    "XRPUSDT": {
+      "symbol": "XRPUSDT",
+      "file_availability": {
+        "available_archive_count": 1096,
+        "missing_archive_count": 0
+      },
+      "earliest_timestamp": "2023-01-01T00:00:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 315514,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 134,
+      "missing_date_count": 0,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 0,
+        "invalid_ratio_rate": 0.0,
+        "invalid_ratio_tolerance_count": 31
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 315514,
+        "takerlongshortRatio": 315509,
+        "globalLongShortAccountRatio": 315473,
+        "topLongShortAccountRatio": 315429,
+        "topLongShortPositionRatio": 315466
+      },
+      "rows_by_year": {
+        "2023": 105117,
+        "2024": 105280,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105112,
+          "globalLongShortAccountRatio": 105105,
+          "topLongShortAccountRatio": 105096,
+          "topLongShortPositionRatio": 105104
+        },
+        "2024": {
+          "openInterestHist": 105280,
+          "takerlongshortRatio": 105280,
+          "globalLongShortAccountRatio": 105271,
+          "topLongShortAccountRatio": 105271,
+          "topLongShortPositionRatio": 105263
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105097,
+          "topLongShortAccountRatio": 105062,
+          "topLongShortPositionRatio": 105099
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\XRPUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "9db98292b91fefbe3ba6cf592240ad7a772637f83ae349a9732c8b528acad44b",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\XRPUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "3a90b9cb739aa3670d70701529c41fdeabdff91306b486e1fae156575bf7c092"
+    },
+    "BNBUSDT": {
+      "symbol": "BNBUSDT",
+      "file_availability": {
+        "available_archive_count": 1096,
+        "missing_archive_count": 0
+      },
+      "earliest_timestamp": "2023-01-01T00:00:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 315514,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 134,
+      "missing_date_count": 0,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 4,
+        "invalid_ratio_rate": 1.2677725869533523e-05,
+        "invalid_ratio_tolerance_count": 31
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 315514,
+        "takerlongshortRatio": 315512,
+        "globalLongShortAccountRatio": 315474,
+        "topLongShortAccountRatio": 315430,
+        "topLongShortPositionRatio": 315466
+      },
+      "rows_by_year": {
+        "2023": 105117,
+        "2024": 105280,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105115,
+          "globalLongShortAccountRatio": 105105,
+          "topLongShortAccountRatio": 105096,
+          "topLongShortPositionRatio": 105104
+        },
+        "2024": {
+          "openInterestHist": 105280,
+          "takerlongshortRatio": 105280,
+          "globalLongShortAccountRatio": 105271,
+          "topLongShortAccountRatio": 105271,
+          "topLongShortPositionRatio": 105263
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105098,
+          "topLongShortAccountRatio": 105063,
+          "topLongShortPositionRatio": 105099
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\BNBUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "bc16749a4e96f88616871bd649b953dfba4cf84d2bdd03b1f4956416da3edcf9",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\BNBUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "469b4c1cf7875825354d19d06e4e1697c73edb9397ccba4a457abde2e22810dd"
+    },
+    "LINKUSDT": {
+      "symbol": "LINKUSDT",
+      "file_availability": {
+        "available_archive_count": 1096,
+        "missing_archive_count": 0
+      },
+      "earliest_timestamp": "2023-01-01T00:00:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 315514,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 134,
+      "missing_date_count": 0,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 2,
+        "invalid_ratio_rate": 6.338862934766761e-06,
+        "invalid_ratio_tolerance_count": 31
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 315514,
+        "takerlongshortRatio": 315504,
+        "globalLongShortAccountRatio": 315474,
+        "topLongShortAccountRatio": 315431,
+        "topLongShortPositionRatio": 315468
+      },
+      "rows_by_year": {
+        "2023": 105117,
+        "2024": 105280,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105107,
+          "globalLongShortAccountRatio": 105105,
+          "topLongShortAccountRatio": 105096,
+          "topLongShortPositionRatio": 105104
+        },
+        "2024": {
+          "openInterestHist": 105280,
+          "takerlongshortRatio": 105280,
+          "globalLongShortAccountRatio": 105272,
+          "topLongShortAccountRatio": 105272,
+          "topLongShortPositionRatio": 105264
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105097,
+          "topLongShortAccountRatio": 105063,
+          "topLongShortPositionRatio": 105100
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\LINKUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "43e9e039f60530d1adfa3292f05c3ca50dd92e53f58232355fbf50cc81b1870e",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\LINKUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "25f4e243f2327b49fcae8bc792e304bfc507c576b949321481c226268a18ed33"
+    },
+    "APTUSDT": {
+      "symbol": "APTUSDT",
+      "file_availability": {
+        "available_archive_count": 1096,
+        "missing_archive_count": 0
+      },
+      "earliest_timestamp": "2023-01-01T00:00:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 315496,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 152,
+      "missing_date_count": 0,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 0,
+        "invalid_ratio_rate": 0.0,
+        "invalid_ratio_tolerance_count": 31
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 315496,
+        "takerlongshortRatio": 315495,
+        "globalLongShortAccountRatio": 315457,
+        "topLongShortAccountRatio": 315415,
+        "topLongShortPositionRatio": 315451
+      },
+      "rows_by_year": {
+        "2023": 105117,
+        "2024": 105262,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105116,
+          "globalLongShortAccountRatio": 105105,
+          "topLongShortAccountRatio": 105096,
+          "topLongShortPositionRatio": 105104
+        },
+        "2024": {
+          "openInterestHist": 105262,
+          "takerlongshortRatio": 105262,
+          "globalLongShortAccountRatio": 105254,
+          "topLongShortAccountRatio": 105254,
+          "topLongShortPositionRatio": 105247
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105098,
+          "topLongShortAccountRatio": 105065,
+          "topLongShortPositionRatio": 105100
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\APTUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "beca72d7be4a46e1570b90f934732ac9d7babdda990d376615e3936c78888522",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\APTUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "59746e436781f6fa7674238f4689526477331245e8b43ded6aad88547b3e6632"
+    },
+    "ARBUSDT": {
+      "symbol": "ARBUSDT",
+      "file_availability": {
+        "available_archive_count": 1015,
+        "missing_archive_count": 81
+      },
+      "earliest_timestamp": "2023-03-23T15:05:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 291996,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 143,
+      "missing_date_count": 81,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 4,
+        "invalid_ratio_rate": 1.3698817792024549e-05,
+        "invalid_ratio_tolerance_count": 29
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 291996,
+        "takerlongshortRatio": 291993,
+        "globalLongShortAccountRatio": 291956,
+        "topLongShortAccountRatio": 291915,
+        "topLongShortPositionRatio": 291952
+      },
+      "rows_by_year": {
+        "2023": 81608,
+        "2024": 105271,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 81608,
+          "takerlongshortRatio": 81605,
+          "globalLongShortAccountRatio": 81595,
+          "topLongShortAccountRatio": 81587,
+          "topLongShortPositionRatio": 81595
+        },
+        "2024": {
+          "openInterestHist": 105271,
+          "takerlongshortRatio": 105271,
+          "globalLongShortAccountRatio": 105265,
+          "topLongShortAccountRatio": 105265,
+          "topLongShortPositionRatio": 105257
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105096,
+          "topLongShortAccountRatio": 105063,
+          "topLongShortPositionRatio": 105100
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\ARBUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "935feff924d284db0784d65ea07308b59105443c78b6b831ef151b4d0e0f7132",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\ARBUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "6bdfbb0701cedcc309eb608aa530726ed8b804f05443002047f6cb6e74cd2f18"
+    },
+    "OPUSDT": {
+      "symbol": "OPUSDT",
+      "file_availability": {
+        "available_archive_count": 1096,
+        "missing_archive_count": 0
+      },
+      "earliest_timestamp": "2023-01-01T00:00:00Z",
+      "latest_timestamp": "2025-12-31T23:55:00Z",
+      "row_count": 315514,
+      "duplicate_timestamp_count": 0,
+      "missing_interval_count": 134,
+      "missing_date_count": 0,
+      "numeric_field_sanity": {
+        "negative_oi_count": 0,
+        "invalid_ratio_count": 5,
+        "invalid_ratio_rate": 1.5847157336916905e-05,
+        "invalid_ratio_tolerance_count": 31
+      },
+      "source_field_availability": {
+        "openInterestHist": true,
+        "takerlongshortRatio": true,
+        "globalLongShortAccountRatio": true,
+        "topLongShortAccountRatio": true,
+        "topLongShortPositionRatio": true
+      },
+      "metric_row_counts": {
+        "openInterestHist": 315514,
+        "takerlongshortRatio": 315510,
+        "globalLongShortAccountRatio": 315475,
+        "topLongShortAccountRatio": 315431,
+        "topLongShortPositionRatio": 315468
+      },
+      "rows_by_year": {
+        "2023": 105117,
+        "2024": 105280,
+        "2025": 105117
+      },
+      "metric_rows_by_year": {
+        "2023": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105113,
+          "globalLongShortAccountRatio": 105105,
+          "topLongShortAccountRatio": 105096,
+          "topLongShortPositionRatio": 105104
+        },
+        "2024": {
+          "openInterestHist": 105280,
+          "takerlongshortRatio": 105280,
+          "globalLongShortAccountRatio": 105273,
+          "topLongShortAccountRatio": 105273,
+          "topLongShortPositionRatio": 105265
+        },
+        "2025": {
+          "openInterestHist": 105117,
+          "takerlongshortRatio": 105117,
+          "globalLongShortAccountRatio": 105097,
+          "topLongShortAccountRatio": 105062,
+          "topLongShortPositionRatio": 105099
+        }
+      },
+      "has_open_interest": true,
+      "has_taker_ratio": true,
+      "has_long_short_ratio": true,
+      "has_full_proxy_alignment": true,
+      "data_quality_pass": true,
+      "duplicate_source_timestamp_count": 0,
+      "normalized_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\normalized_by_symbol\\OPUSDT_um_metrics_5m_2023_2025_v1.csv",
+      "normalized_file_sha256": "51b20b54cd96ab9a8b521af547ca99a68fec307877356623e3e809b8511d267f",
+      "coverage_report_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\coverage_reports\\OPUSDT_coverage_report_v1.csv",
+      "coverage_report_file_sha256": "67c1a7507c9186b099c07e38a84daa19749ea0d1af15134e30459b5ec44a777b"
+    }
+  },
+  "per_metric_coverage": {
+    "openInterestHist": {
+      "symbols_with_metric": 10,
+      "rows_with_metric": 3131587
+    },
+    "takerlongshortRatio": {
+      "symbols_with_metric": 10,
+      "rows_with_metric": 3131557
+    },
+    "globalLongShortAccountRatio": {
+      "symbols_with_metric": 10,
+      "rows_with_metric": 3131188
+    },
+    "topLongShortAccountRatio": {
+      "symbols_with_metric": 10,
+      "rows_with_metric": 3130753
+    },
+    "topLongShortPositionRatio": {
+      "symbols_with_metric": 10,
+      "rows_with_metric": 3131118
+    }
+  },
+  "data_quality_checks": {
+    "per_symbol": {
+      "BTCUSDT": {
+        "file_availability": {
+          "available_archive_count": 1096,
+          "missing_archive_count": 0
+        },
+        "earliest_timestamp": "2023-01-01T00:00:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 315514,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 134,
+        "missing_date_count": 0,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 0,
+          "invalid_ratio_rate": 0.0,
+          "invalid_ratio_tolerance_count": 31
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      },
+      "ETHUSDT": {
+        "file_availability": {
+          "available_archive_count": 1096,
+          "missing_archive_count": 0
+        },
+        "earliest_timestamp": "2023-01-01T00:00:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 315514,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 134,
+        "missing_date_count": 0,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 0,
+          "invalid_ratio_rate": 0.0,
+          "invalid_ratio_tolerance_count": 31
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      },
+      "SOLUSDT": {
+        "file_availability": {
+          "available_archive_count": 1096,
+          "missing_archive_count": 0
+        },
+        "earliest_timestamp": "2023-01-01T00:00:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 315497,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 151,
+        "missing_date_count": 0,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 2,
+          "invalid_ratio_rate": 6.339204493228144e-06,
+          "invalid_ratio_tolerance_count": 31
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      },
+      "DOGEUSDT": {
+        "file_availability": {
+          "available_archive_count": 1096,
+          "missing_archive_count": 0
+        },
+        "earliest_timestamp": "2023-01-01T00:00:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 315514,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 134,
+        "missing_date_count": 0,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 2,
+          "invalid_ratio_rate": 6.338862934766761e-06,
+          "invalid_ratio_tolerance_count": 31
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      },
+      "XRPUSDT": {
+        "file_availability": {
+          "available_archive_count": 1096,
+          "missing_archive_count": 0
+        },
+        "earliest_timestamp": "2023-01-01T00:00:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 315514,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 134,
+        "missing_date_count": 0,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 0,
+          "invalid_ratio_rate": 0.0,
+          "invalid_ratio_tolerance_count": 31
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      },
+      "BNBUSDT": {
+        "file_availability": {
+          "available_archive_count": 1096,
+          "missing_archive_count": 0
+        },
+        "earliest_timestamp": "2023-01-01T00:00:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 315514,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 134,
+        "missing_date_count": 0,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 4,
+          "invalid_ratio_rate": 1.2677725869533523e-05,
+          "invalid_ratio_tolerance_count": 31
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      },
+      "LINKUSDT": {
+        "file_availability": {
+          "available_archive_count": 1096,
+          "missing_archive_count": 0
+        },
+        "earliest_timestamp": "2023-01-01T00:00:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 315514,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 134,
+        "missing_date_count": 0,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 2,
+          "invalid_ratio_rate": 6.338862934766761e-06,
+          "invalid_ratio_tolerance_count": 31
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      },
+      "APTUSDT": {
+        "file_availability": {
+          "available_archive_count": 1096,
+          "missing_archive_count": 0
+        },
+        "earliest_timestamp": "2023-01-01T00:00:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 315496,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 152,
+        "missing_date_count": 0,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 0,
+          "invalid_ratio_rate": 0.0,
+          "invalid_ratio_tolerance_count": 31
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      },
+      "ARBUSDT": {
+        "file_availability": {
+          "available_archive_count": 1015,
+          "missing_archive_count": 81
+        },
+        "earliest_timestamp": "2023-03-23T15:05:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 291996,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 143,
+        "missing_date_count": 81,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 4,
+          "invalid_ratio_rate": 1.3698817792024549e-05,
+          "invalid_ratio_tolerance_count": 29
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      },
+      "OPUSDT": {
+        "file_availability": {
+          "available_archive_count": 1096,
+          "missing_archive_count": 0
+        },
+        "earliest_timestamp": "2023-01-01T00:00:00Z",
+        "latest_timestamp": "2025-12-31T23:55:00Z",
+        "row_count": 315514,
+        "duplicate_timestamp_count": 0,
+        "missing_interval_count": 134,
+        "missing_date_count": 0,
+        "numeric_field_sanity": {
+          "negative_oi_count": 0,
+          "invalid_ratio_count": 5,
+          "invalid_ratio_rate": 1.5847157336916905e-05,
+          "invalid_ratio_tolerance_count": 31
+        },
+        "source_field_availability": {
+          "openInterestHist": true,
+          "takerlongshortRatio": true,
+          "globalLongShortAccountRatio": true,
+          "topLongShortAccountRatio": true,
+          "topLongShortPositionRatio": true
+        },
+        "checksum_availability_and_result": "see checksum_summary/download_manifest",
+        "data_quality_pass": true
+      }
+    },
+    "overall": {
+      "negative_oi_count": 0,
+      "invalid_ratio_count": 19,
+      "duplicate_timestamp_count": 0,
+      "data_quality_pass": true
+    }
+  },
+  "checksum_summary": {
+    "download_manifest_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\checksums\\download_manifest_v1.csv",
+    "download_manifest_sha256": "ec3369e60ef1e6184cacbed8fc1b245221ed05feddadd5ac6f1e7608b5c2e0be",
+    "normalized_file_sha256_manifest": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_data_vision_um_metrics_dataset_v1\\checksums\\normalized_file_sha256_v1.csv",
+    "normalized_file_sha256_manifest_sha256": "b6941471b92186a410f1a5ebc0bcd3e4f2b4eaa0e43347e09b1ff8d145990520",
+    "archives_with_checksum_available": 10879,
+    "archives_with_checksum_verified": 10879,
+    "checksum_mismatch_count": 0
+  },
+  "historical_feasibility": {
+    "historical_2023_2025_feasible": true,
+    "requested_start_date": "2023-01-01",
+    "requested_end_date": "2025-12-31",
+    "material_coverage_by_year": {
+      "2023": 1027644,
+      "2024": 1052773,
+      "2025": 1051170
+    },
+    "ready_threshold": "at least 5 symbols with OI + taker ratio + at least one long/short crowding ratio and quality pass"
+  },
+  "proxy_package_summary": {
+    "purpose": "OI + taker pressure + crowding proxy dataset",
+    "true_liquidation_data": false,
+    "open_interest_available": 10,
+    "taker_ratio_available": 10,
+    "long_short_ratio_available": 10,
+    "full_proxy_alignment_symbols": 10
+  },
+  "unavailable_data_summary": {
+    "liquidation": "unavailable in this metrics archive",
+    "funding": "unavailable in this metrics archive",
+    "taker_buy_sell_volume_components": "unavailable; taker ratio is available"
+  },
+  "result_classification": "BINANCE_DATA_VISION_UM_METRICS_DATASET_READY_FOR_PROXY_EVENT_STUDY",
+  "next_allowed_step": "BINANCE_OI_TAKER_CROWDING_PROXY_EVENT_STUDY_V1",
+  "limitations": [
+    "Dataset contains OI/taker/crowding proxy metrics, not true liquidation data.",
+    "Funding fields are unavailable in the sampled/discovered metrics archive and are not included.",
+    "Taker buy and sell volume components are unavailable in the combined metrics archive; only the ratio is normalized.",
+    "Some symbols begin after 2023-01-01, so early missing dates can reflect instrument listing history.",
+    "This builder did not run strategy logic, generate signals, compute PnL, optimize, create candidates, or claim edge.",
+    "External raw archives are limited to public Binance Data Vision USD-M metrics archive files."
+  ],
+  "safety_permissions": {
+    "dataset_builder_created": true,
+    "proxy_event_study_allowed_next": true,
+    "strategy_execution_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "backtest_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "trade_simulation_allowed_now": false,
+    "optimization_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false
+  },
+  "validation_checks": {
+    "stale_institutional_contract_leftovers_removed": true,
+    "repo_clean_before_dataset_build": true,
+    "binance_discovery_artifact_loaded": true,
+    "public_archive_only": true,
+    "no_api_key_used": true,
+    "no_private_api_used": true,
+    "no_account_api_used": true,
+    "no_order_endpoint_used": true,
+    "no_strategy_execution": true,
+    "no_signal_generation": true,
+    "no_backtest_run": true,
+    "no_pnl_computation": true,
+    "no_trade_simulation": true,
+    "no_optimization": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "external_output_root_used": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_tracked_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc"
+}

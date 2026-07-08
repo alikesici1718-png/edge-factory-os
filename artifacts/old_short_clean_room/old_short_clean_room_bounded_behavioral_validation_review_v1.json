@@ -1,0 +1,319 @@
+{
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_REVIEW_CREATED",
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_REVIEW",
+  "module": {
+    "name": "edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_review_v1",
+    "path": "tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_review_v1.py",
+    "standard_library_only": true,
+    "created_files": [
+      "tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_review_v1.py",
+      "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_review_v1.json"
+    ],
+    "modified_existing_files": [],
+    "code_changed": true
+  },
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-27T07:08:02Z",
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "expected_head": "73ba8b8982e706bb1cd97a992ef892fd2e440c95",
+    "actual_head": "73ba8b8982e706bb1cd97a992ef892fd2e440c95",
+    "expected_tracked_python_count": 954,
+    "actual_tracked_python_count": 954,
+    "repo_clean_before_run": true,
+    "git_status_before_run": [
+      "?? artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_review_v1.json",
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_review_v1.py"
+    ],
+    "dirty_tracked_before_run": [],
+    "allowed_pending_before_run": [
+      "?? artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_review_v1.json",
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_review_v1.py"
+    ],
+    "unexpected_untracked_before_run": []
+  },
+  "source_artifacts": {
+    "bounded_behavioral_validation_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DRY_RUN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "c35f49f5aa1e3c2db1829c7b643b9cc902fe2c1b5ae632833f82e69175acef75",
+      "replacement_checks_all_true": true,
+      "sha256": "4cb7a5f5a4c3c6ecb41ed47cbf5f619896af06c076a0065f6e1d4d1cc25a5244"
+    },
+    "bounded_behavioral_validation_preview": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_preview_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_PREVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_PREVIEW_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "ad8ac9bea86e3d9d6d245ed1255ba9b0bc80c4eba21d9376b82108590a218d07",
+      "replacement_checks_all_true": true,
+      "sha256": "09e1b24d00ac48474ca90ac1b782ba51cc144c179dd9fc690e58c23896b94e37"
+    },
+    "bounded_behavioral_validation_design": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_design_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DESIGN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DESIGN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "1650f2e3462be33e5d3e57d726f16fca163728906082637727a50700ce03b77b",
+      "replacement_checks_all_true": true,
+      "sha256": "2b1dc06e27b79f023bb55d98d2e4dbbe909a4074a5cd02c3929f5a7f1abc96fb"
+    },
+    "feature_fixture_validator_check": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_feature_fixture_validator_check_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "650b896125ca6509320e8340eff0deea64fa13a5b688e9713b4e26e584687bdd",
+      "replacement_checks_all_true": true,
+      "sha256": "774bbca11a43e378bfc9d80af324a0db42da76eab4ed2f1f383aa3e8c90d0d15"
+    },
+    "runner_feature_fixture_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_feature_fixture_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "15bc81a734982e975399c25b1775760e97cfef3f73fde0cdff714713800c3284",
+      "replacement_checks_all_true": true,
+      "sha256": "35d57c85b59f97d93c1c87bc30c81af6a25fa70812fbd116ca84034cf6e238b3"
+    },
+    "runner_fixture_threshold_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_fixture_threshold_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "308b63488abb4b40ee4e23d128a2aa82d96f1efa43c49d0ba6a32fb434298b11",
+      "replacement_checks_all_true": true,
+      "sha256": "e533fc89374724d0e63a61b4a87081012c17624679857c7a3e7f31b31e1f2d68"
+    },
+    "threshold_behavioral_proposal": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "9cf7be3706095fa4e8c8bfd4586e40a4714631250118fd67cc4d94cb47f62461",
+      "replacement_checks_all_true": true,
+      "sha256": "63220c1cce0a22b83dbc630599a23e5855cd682c0d0dec19d2a799841c4a15ff"
+    }
+  },
+  "prior_dry_run_preserved": {
+    "status_matches_prior_required_status": true,
+    "route_key_matches": true,
+    "result_classification_is_partial": true,
+    "schema_match_rate_verified_1": true,
+    "safety_label_match_rate_verified_1": true,
+    "computed_metric_count_verified_13": true,
+    "missing_metric_count_verified_2": true,
+    "next_allowed_step_is_review": true,
+    "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DRY_RUN_CREATED",
+    "route_key": "old_short_clean_room_v1",
+    "result_classification": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIOR_MATCH_PARTIAL_NO_EDGE_NO_LIVE",
+    "schema_match_rate": 1.0,
+    "safety_label_match_rate": 1.0,
+    "computed_metric_count": 13,
+    "missing_metric_count": 2,
+    "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_REVIEW_V1"
+  },
+  "metric_safety_review": {
+    "computed_metrics": [
+      "entry_delay_median_abs_error_seconds",
+      "family_key_match_rate",
+      "gate_behavior_consistency_rate",
+      "hold_minutes_median_abs_error",
+      "no_position_without_gate_violation_count",
+      "notional_median_abs_error",
+      "rejected_reason_overlap_rate",
+      "safety_label_match_rate",
+      "schema_match_rate",
+      "side_match_rate",
+      "signal_feature_presence_rate",
+      "state_heartbeat_schema_match",
+      "subfamily_presence_match"
+    ],
+    "computed_metric_count": 13,
+    "all_computed_metrics_bounded_sample_safe": true,
+    "pnl_metric_names": [],
+    "pnl_or_outcome_used_for_validation": false,
+    "no_pnl_metric_used": true,
+    "no_full_dataset_metric_used": true,
+    "no_raw_market_data_used": true,
+    "no_edge_live_capital_claims": true,
+    "pnl_fields_seen_but_not_used": [
+      {
+        "sample": "MASTER",
+        "file": "closed_trades.csv",
+        "field": "gross_ret"
+      },
+      {
+        "sample": "MASTER",
+        "file": "closed_trades.csv",
+        "field": "stress_net_ret"
+      },
+      {
+        "sample": "MASTER",
+        "file": "closed_trades.csv",
+        "field": "realistic_net_ret"
+      },
+      {
+        "sample": "MASTER",
+        "file": "closed_trades.csv",
+        "field": "stress_pnl"
+      },
+      {
+        "sample": "MASTER",
+        "file": "closed_trades.csv",
+        "field": "pnl"
+      },
+      {
+        "sample": "MASTER",
+        "file": "closed_trades.csv",
+        "field": "net_ret"
+      }
+    ]
+  },
+  "missing_metric_review": {
+    "missing_metric_count": 2,
+    "missing_metrics": [
+      {
+        "metric": "coin_overlap_rate",
+        "reason": "clean-room synthetic feature fixture has no coin or inst_id field"
+      },
+      {
+        "metric": "timestamp_alignment_rate",
+        "reason": "synthetic fixture has no shared signal ids or aligned timestamps with MASTER sample"
+      }
+    ],
+    "critical_before_continuing": false,
+    "requires_non_synthetic_clean_room_output": true,
+    "p1_attention_required": true,
+    "review_note": "Missing coin overlap and timestamp alignment require a more realistic bounded clean-room fixture; they do not hide a hard safety failure in this review."
+  },
+  "partial_classification_review": {
+    "prior_result_classification": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIOR_MATCH_PARTIAL_NO_EDGE_NO_LIVE",
+    "partial_is_acceptable_for_review": true,
+    "real_behavioral_equivalence_not_proven": true,
+    "synthetic_fixture_limitation_preserved": true,
+    "partial_allows_backtest_live_capital": false,
+    "not_ready_for_backtest": true
+  },
+  "safety_permission_review": {
+    "all_required_permissions_false": true,
+    "permission_checks": {
+      "full_dataset_comparison_allowed_now": true,
+      "backtest_allowed_now": true,
+      "runner_execution_allowed_now": true,
+      "signal_generation_allowed_now": true,
+      "pnl_computation_allowed_now": true,
+      "runtime_permission_allowed_now": true,
+      "monitor_allowed_now": true,
+      "live_permission_allowed_now": true,
+      "capital_permission_allowed_now": true,
+      "candidate_generation_allowed_now": true,
+      "edge_claim_allowed_now": true,
+      "family_release_allowed_now": true
+    },
+    "candidate_generation": false,
+    "edge_claim": false,
+    "family_release": false,
+    "runtime": false,
+    "monitor": false,
+    "live": false,
+    "capital": false
+  },
+  "review_findings": {
+    "p0_issue_count": 0,
+    "p1_attention_count": 3,
+    "p0_findings": [],
+    "p1_findings": [
+      {
+        "severity": "P1",
+        "finding": "missing metrics require more realistic bounded clean-room fixture",
+        "metrics": [
+          "coin_overlap_rate",
+          "timestamp_alignment_rate"
+        ]
+      },
+      {
+        "severity": "P1",
+        "finding": "synthetic feature fixture limits real behavioral equivalence"
+      },
+      {
+        "severity": "P1",
+        "finding": "PARTIAL result is not ready for backtest/live/capital and requires realistic fixture design first"
+      }
+    ]
+  },
+  "result_classification": "OLD_SHORT_BOUNDED_BEHAVIORAL_VALIDATION_REVIEW_PASS_WITH_P1_ATTENTION_NO_EDGE_NO_LIVE",
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_DESIGN_V1",
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence"
+  ],
+  "limitations": [
+    "review only; no behavioral validation execution",
+    "prior dry-run is synthetic-fixture-limited and only PARTIAL",
+    "real behavioral equivalence is not proven",
+    "not ready for backtest, live, capital, candidate generation, or edge claim",
+    "missing metrics require realistic bounded fixture design before stronger behavioral review"
+  ],
+  "safety_permissions": {
+    "bounded_behavioral_validation_review_created": true,
+    "behavioral_validation_allowed_now": false,
+    "full_dataset_comparison_allowed_now": false,
+    "backtest_allowed_now": false,
+    "runner_execution_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "prior_bounded_behavioral_validation_loaded": true,
+    "prior_next_allowed_step_verified": true,
+    "schema_match_rate_verified_1": true,
+    "safety_label_match_rate_verified_1": true,
+    "computed_metric_count_verified_13": true,
+    "no_pnl_metric_used": true,
+    "no_full_dataset_comparison": true,
+    "no_backtest_run": true,
+    "no_runner_execution": true,
+    "no_signal_generation": true,
+    "no_runtime_touched": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "unresolved_fields_preserved": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "8ae96209c6b774e4b83b114601efecea369293e89f8254a2329501b7aeb8d934"
+}

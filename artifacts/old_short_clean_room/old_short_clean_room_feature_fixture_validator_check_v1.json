@@ -1,0 +1,407 @@
+{
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK_CREATED",
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK",
+  "module": {
+    "name": "edge_factory_os_repo_only_old_short_clean_room_feature_fixture_validator_check_v1",
+    "path": "tools/edge_factory_os_repo_only_old_short_clean_room_feature_fixture_validator_check_v1.py",
+    "standard_library_only": true,
+    "created_files": [
+      "tools/edge_factory_os_repo_only_old_short_clean_room_feature_fixture_validator_check_v1.py",
+      "artifacts/old_short_clean_room/old_short_clean_room_feature_fixture_validator_check_v1.json"
+    ],
+    "modified_existing_files": [],
+    "code_changed": true
+  },
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-27T06:25:47Z",
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "expected_head": "79b1cfc35fc2dc0dcbfc94b6e2694eeff14cb739",
+    "actual_head": "79b1cfc35fc2dc0dcbfc94b6e2694eeff14cb739",
+    "expected_tracked_python_count": 950,
+    "actual_tracked_python_count": 950,
+    "repo_clean_before_run": true,
+    "git_status_before_run": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_feature_fixture_validator_check_v1.py"
+    ],
+    "dirty_tracked_before_run": [],
+    "allowed_pending_before_run": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_feature_fixture_validator_check_v1.py"
+    ],
+    "unexpected_untracked_before_run": []
+  },
+  "source_artifacts": {
+    "clean_room_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REBUILD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_CONTRACT_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "02d0c3ff2f905be2df695a7ca52bfd931c94a4720cb3c883f8fd5d7ad00f5e6d",
+      "replacement_checks_all_true": true,
+      "sha256": "dc04d75bdd5882a2952a0a1e0a3ce7855d736d4b6882b689dcc20b41fc7cc68d"
+    },
+    "runner_feature_fixture_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_feature_fixture_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "15bc81a734982e975399c25b1775760e97cfef3f73fde0cdff714713800c3284",
+      "replacement_checks_all_true": true,
+      "sha256": "35d57c85b59f97d93c1c87bc30c81af6a25fa70812fbd116ca84034cf6e238b3"
+    },
+    "runner_fixture_threshold_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_fixture_threshold_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "308b63488abb4b40ee4e23d128a2aa82d96f1efa43c49d0ba6a32fb434298b11",
+      "replacement_checks_all_true": true,
+      "sha256": "e533fc89374724d0e63a61b4a87081012c17624679857c7a3e7f31b31e1f2d68"
+    },
+    "threshold_behavioral_proposal": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "9cf7be3706095fa4e8c8bfd4586e40a4714631250118fd67cc4d94cb47f62461",
+      "replacement_checks_all_true": true,
+      "sha256": "63220c1cce0a22b83dbc630599a23e5855cd682c0d0dec19d2a799841c4a15ff"
+    },
+    "threshold_proposal_review": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_proposal_review_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "bc0e5a2994a978b582488bfeb3d05f1898836ced3d6684474d6c7cedbd68ccda",
+      "replacement_checks_all_true": true,
+      "sha256": "f3e78cda956787bb83b2d69e882219658c118371c7e4b476a5bb31e2d54f1f04"
+    },
+    "validator_preview": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_validator_preview_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_VALIDATOR_PREVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_VALIDATOR_PREVIEW_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "47e476820607edf9ae74950b57fb32ca1841f5893d1889af89b3e217fe719c39",
+      "replacement_checks_all_true": true,
+      "sha256": "a454e13c9bc063f828b7716a9208c177390c46bcbdc36c5b263598d189b1755c"
+    },
+    "validator_bounded_sample_dry_run_v2": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_validator_bounded_sample_dry_run_v2.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_VALIDATOR_BOUNDED_SAMPLE_DRY_RUN_V2",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_VALIDATOR_BOUNDED_SAMPLE_DRY_RUN_V2_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "8c3ee5cf12e299234a7c62392ed07f50129e18409e145d892cdfc4ad931fea0e",
+      "replacement_checks_all_true": true,
+      "sha256": "c7f7448019bf81d0d34278e32f02343889ffcd1c448df522896f38c5bc9b9a28"
+    }
+  },
+  "feature_fixture_source_review": {
+    "status_matches_required_prior_status": true,
+    "route_key_matches": true,
+    "dry_run_mode_matches": true,
+    "result_classification_pass_no_edge_no_live": true,
+    "next_allowed_step_matches": true,
+    "no_live_permissions_false": true,
+    "prior_status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN_CREATED",
+    "prior_route_key": "old_short_clean_room_v1",
+    "prior_dry_run_mode": "FEATURE_FIXTURE_DRY_RUN",
+    "prior_result_classification": "OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN_PASS_NO_EDGE_NO_LIVE",
+    "prior_next_allowed_step": "OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK_V1",
+    "prior_fixture_row_count": 6,
+    "prior_family_threshold_count": 2,
+    "prior_fail_closed_count": 4
+  },
+  "file_presence_check": {
+    "output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1",
+    "output_root_exists": true,
+    "output_root_safe": true,
+    "expected_files": [
+      "signals.csv",
+      "pending_entries.csv",
+      "open_positions.csv",
+      "closed_trades.csv",
+      "rejected_entries.csv",
+      "heartbeat.csv",
+      "state.json"
+    ],
+    "found_files": [
+      "closed_trades.csv",
+      "heartbeat.csv",
+      "open_positions.csv",
+      "pending_entries.csv",
+      "rejected_entries.csv",
+      "signals.csv",
+      "state.json"
+    ],
+    "missing_files": [],
+    "feature_fixture_file_count": 7,
+    "all_7_feature_fixture_files_found": true,
+    "file_snapshots_before_read": {
+      "signals.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\signals.csv",
+        "exists": true,
+        "size": 3457,
+        "mtime_ns": 1779862753535461400,
+        "sha256": "64c7847b4b6c69af1f522b89eb95f6ee6726d570cef3f782a617f02916c80c37"
+      },
+      "pending_entries.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\pending_entries.csv",
+        "exists": true,
+        "size": 2410,
+        "mtime_ns": 1779862753536471500,
+        "sha256": "ab32fd96d20516830f2157d776d8340a50b29d138806e600608dd97597317868"
+      },
+      "open_positions.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\open_positions.csv",
+        "exists": true,
+        "size": 1574,
+        "mtime_ns": 1779862753537186000,
+        "sha256": "f16b74c8f8fe99a833aead7efed0f73024039b326572f41abaed1e849951d306"
+      },
+      "closed_trades.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\closed_trades.csv",
+        "exists": true,
+        "size": 1693,
+        "mtime_ns": 1779862753537693300,
+        "sha256": "ec91ed56db603d3d07aff471d1918b24ec38cca8faa17f3a33773d7fb0d31245"
+      },
+      "rejected_entries.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\rejected_entries.csv",
+        "exists": true,
+        "size": 2577,
+        "mtime_ns": 1779862753537693300,
+        "sha256": "8e15c7e951535613b6baa8b73642df0f287ac6a9581a0067a5856403d7720cea"
+      },
+      "heartbeat.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\heartbeat.csv",
+        "exists": true,
+        "size": 446,
+        "mtime_ns": 1779862753538700500,
+        "sha256": "71ad757e6e2453246f38f2efade4f1025f7804805f888cdec83062e081c647ba"
+      },
+      "state.json": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\state.json",
+        "exists": true,
+        "size": 804,
+        "mtime_ns": 1779862753538700500,
+        "sha256": "386023d7a35d2b2a64e3a8ec6dc2503f19893078b6cfb32921a9c19e6adadfba"
+      }
+    },
+    "file_snapshots_after_read": {
+      "signals.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\signals.csv",
+        "exists": true,
+        "size": 3457,
+        "mtime_ns": 1779862753535461400,
+        "sha256": "64c7847b4b6c69af1f522b89eb95f6ee6726d570cef3f782a617f02916c80c37"
+      },
+      "pending_entries.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\pending_entries.csv",
+        "exists": true,
+        "size": 2410,
+        "mtime_ns": 1779862753536471500,
+        "sha256": "ab32fd96d20516830f2157d776d8340a50b29d138806e600608dd97597317868"
+      },
+      "open_positions.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\open_positions.csv",
+        "exists": true,
+        "size": 1574,
+        "mtime_ns": 1779862753537186000,
+        "sha256": "f16b74c8f8fe99a833aead7efed0f73024039b326572f41abaed1e849951d306"
+      },
+      "closed_trades.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\closed_trades.csv",
+        "exists": true,
+        "size": 1693,
+        "mtime_ns": 1779862753537693300,
+        "sha256": "ec91ed56db603d3d07aff471d1918b24ec38cca8faa17f3a33773d7fb0d31245"
+      },
+      "rejected_entries.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\rejected_entries.csv",
+        "exists": true,
+        "size": 2577,
+        "mtime_ns": 1779862753537693300,
+        "sha256": "8e15c7e951535613b6baa8b73642df0f287ac6a9581a0067a5856403d7720cea"
+      },
+      "heartbeat.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\heartbeat.csv",
+        "exists": true,
+        "size": 446,
+        "mtime_ns": 1779862753538700500,
+        "sha256": "71ad757e6e2453246f38f2efade4f1025f7804805f888cdec83062e081c647ba"
+      },
+      "state.json": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\state.json",
+        "exists": true,
+        "size": 804,
+        "mtime_ns": 1779862753538700500,
+        "sha256": "386023d7a35d2b2a64e3a8ec6dc2503f19893078b6cfb32921a9c19e6adadfba"
+      }
+    },
+    "feature_fixture_files_not_modified": true
+  },
+  "safety_label_check": {
+    "required_labels": [
+      "GENERATED_BY_CLEAN_ROOM",
+      "NOT_ORIGINAL_OLD_SHORT",
+      "PAPER_ONLY",
+      "NOT_LIVE",
+      "NOT_EDGE_EVIDENCE",
+      "SYNTHETIC_FEATURE_FIXTURE",
+      "NOT_MARKET_DATA",
+      "NOT_BACKTEST",
+      "NOT_REAL_TRADE"
+    ],
+    "checked_units": 20,
+    "passed_units": 20,
+    "safety_label_match_rate": 1.0,
+    "safety_labels_verified": true,
+    "missing_label_units": []
+  },
+  "schema_check_results": {
+    "schema_match_rate": 1.0,
+    "schema_plumbing_checked": true,
+    "schema_checks_passed": true,
+    "schema_gaps": [],
+    "family_key_match_rate": 1.0,
+    "side_match_rate": 1.0,
+    "family_counts": {
+      "blowoff_short": 9,
+      "mean_reversion_short": 9
+    },
+    "family_and_side_labels_passed": true,
+    "no_private_or_secret_fields": true,
+    "no_live_field_check_passed": true,
+    "no_order_field_check_passed": true,
+    "no_runtime_enabled_flags": true
+  },
+  "threshold_contract_check": {
+    "route_key_preserved": true,
+    "threshold_contract_reference_present": true,
+    "family_threshold_count": 2,
+    "family_threshold_count_verified_2": true,
+    "original_threshold_claim_absent": true,
+    "checked_label_sets": 18,
+    "passed_label_sets": 18,
+    "threshold_label_match_rate": 1.0,
+    "threshold_labels_checked": true,
+    "threshold_labels_passed": true,
+    "missing_threshold_labels": [],
+    "threshold_contract_check_passed": true
+  },
+  "gate_fixture_behavior_check": {
+    "gate_allowed_path_present": true,
+    "gate_blocked_path_present": true,
+    "gate_missing_timeout_path_present": true,
+    "blocked_and_timeout_rejected_entries_present": true,
+    "no_position_without_gate_allow": true,
+    "gate_fixture_behavior_check_passed": true
+  },
+  "fail_closed_check": {
+    "missing_feature_fixture_failed_closed": true,
+    "threshold_miss_fixture_failed_closed": true,
+    "fail_closed_count_from_artifact_preserved": true,
+    "no_inferred_missing_values": true,
+    "no_pnl_or_outcome_use": true,
+    "fail_closed_check_passed": true
+  },
+  "validator_plumbing_metrics": {
+    "schema_match_rate": 1.0,
+    "safety_label_match_rate": 1.0,
+    "family_key_match_rate": 1.0,
+    "side_match_rate": 1.0,
+    "threshold_label_match_rate": 1.0,
+    "gate_fixture_behavior_check_passed": true,
+    "fail_closed_check_passed": true,
+    "no_live_field_check_passed": true,
+    "no_order_field_check_passed": true
+  },
+  "non_applicable_real_behavior_metrics": {
+    "real_behavioral_similarity_against_master": "NOT_COMPUTED_FEATURE_FIXTURE_ONLY",
+    "pnl": "NOT_COMPUTED",
+    "real_win_loss": "NOT_COMPUTED",
+    "market_performance": "NOT_COMPUTED",
+    "full_dataset_comparison": "NOT_RUN",
+    "backtest": "NOT_RUN"
+  },
+  "result_classification": "OLD_SHORT_FEATURE_FIXTURE_VALIDATOR_CHECK_PASS_NO_EDGE_NO_LIVE",
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DESIGN_V1",
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence"
+  ],
+  "limitations": [
+    "feature fixture validator plumbing check only",
+    "not full validator execution",
+    "not behavioral validation against real market behavior",
+    "not PnL validation",
+    "not original old_short replay",
+    "not full dataset comparison",
+    "not backtest",
+    "not runtime, monitor, live, or capital enablement",
+    "not candidate generation",
+    "not an edge claim"
+  ],
+  "safety_permissions": {
+    "feature_fixture_validator_check_created": true,
+    "validator_execution_allowed_now": false,
+    "behavioral_validation_allowed_now": false,
+    "full_dataset_comparison_allowed_now": false,
+    "backtest_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "prior_runner_feature_fixture_artifact_loaded": true,
+    "feature_fixture_output_root_exists": true,
+    "all_7_feature_fixture_files_found": true,
+    "feature_fixture_files_not_modified": true,
+    "no_master_upper_system_modified": true,
+    "no_runtime_directory_modified": true,
+    "safety_labels_verified": true,
+    "schema_plumbing_checked": true,
+    "threshold_labels_checked": true,
+    "gate_fixture_behavior_checked": true,
+    "fail_closed_behavior_checked": true,
+    "real_behavioral_metrics_not_claimed": true,
+    "no_full_dataset_comparison": true,
+    "no_backtest_run": true,
+    "no_runtime_touched": true,
+    "no_monitor_enabled": true,
+    "no_orders_placed": true,
+    "no_network_used": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "unresolved_fields_preserved": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_repo_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "650b896125ca6509320e8340eff0deea64fa13a5b688e9713b4e26e584687bdd"
+}

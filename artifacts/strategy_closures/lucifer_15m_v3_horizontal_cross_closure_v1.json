@@ -1,0 +1,127 @@
+{
+  "artifact_kind": "LUCIFER_15M_V3_HORIZONTAL_CROSS_CLOSURE",
+  "closure_inputs": {
+    "evaluator_artifact": "artifacts/strategy_evaluations/lucifer_15m_v3_horizontal_cross_evaluator_v1.json",
+    "evaluator_payload_hash_verified": true,
+    "evaluator_payload_sha256_excluding_hash": "4445d5650518e922620ea862e205e594e715715128b05ea711b39e806a2a9f37",
+    "evaluator_status": "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_EVALUATED",
+    "execution_rerun": false,
+    "panel_rows_read": false
+  },
+  "closure_reason": "Route closed after evaluator. The evaluator result is preserved exactly; this V3 horizontal-only pivot cross correction grants no candidate, edge claim, family release, runtime, live, or capital permission.",
+  "config_id": "lucifer_15m_v3_horizontal_pivot_cross_sl1_tp2",
+  "execution_metric_snapshot_preserved_from_evaluator": {
+    "accepted_signals": 17708,
+    "both_hit_same_bar_count": 48,
+    "closed_trades": 17706,
+    "cooldown_skipped": 1564,
+    "diagonal_jump_cross_blocked": 11338,
+    "gross_bps": 0.881057,
+    "holdout_monthly_positive_rate": 0.142857,
+    "holdout_net_bps": -19.025487,
+    "holdout_worst_month": {
+      "month": "2025-09",
+      "net_bps": -31.656442
+    },
+    "long_trades": 8380,
+    "net_bps": -19.118943,
+    "raw_crosses": 31393,
+    "short_trades": 9326,
+    "stop_hit_count": 11752,
+    "take_profit_hit_count": 5954,
+    "unresolved_trades": 2,
+    "valid_horizontal_crosses": 20055,
+    "validation_monthly_positive_rate": 0.0,
+    "validation_net_bps": -20.948167,
+    "validation_worst_month": {
+      "month": "2024-08",
+      "net_bps": -35.690867
+    }
+  },
+  "final_result": {
+    "diagnostic_promising": false,
+    "evaluator_result_preserved_exactly": {
+      "diagnostic_promising": false,
+      "holdout_monthly_positive_rate": 0.142857,
+      "holdout_net_bps": -19.025487,
+      "metric_integrity_passed": true,
+      "no_lookahead_repaint_issue": true,
+      "null_baseline_pass": false,
+      "rejection_reasons": [
+        "validation_net_bps_not_positive",
+        "holdout_net_bps_not_positive",
+        "validation_monthly_positive_rate_below_0_60",
+        "null_baseline_not_passed"
+      ],
+      "result_class": "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
+      "safety_review_passed": true,
+      "validation_closed_trades": 4746,
+      "validation_closed_trades_min_100_pass": true,
+      "validation_monthly_positive_rate": 0.0,
+      "validation_net_bps": -20.948167,
+      "validation_null_percentile": 0.22
+    },
+    "result_class": "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP"
+  },
+  "forbidden_actions_confirmed_false": {
+    "candidate_generated": false,
+    "capital_permission_granted": false,
+    "data_downloaded": false,
+    "edge_claimed": false,
+    "family_released": false,
+    "grid_search": false,
+    "live_permission_granted": false,
+    "network_used": false,
+    "optimization": false,
+    "orders_submitted": false,
+    "other_parameters_tested": false,
+    "other_timeframes_tested": false,
+    "parameter_expansion": false,
+    "private_api_used": false,
+    "runtime_permission_granted": false
+  },
+  "module": "tools/edge_factory_os_repo_only_lucifer_15m_v3_horizontal_cross_closure_v1.py",
+  "next_module": null,
+  "payload_sha256_excluding_hash": "800babe279ad36ce6f915621b2c7606e920fdef3db0922817d824e3eafa322fd",
+  "permissions": {
+    "candidate_generated": false,
+    "capital_permission_granted": false,
+    "edge_claimed": false,
+    "family_released": false,
+    "live_permission_granted": false,
+    "orders_submitted": false,
+    "runtime_permission_granted": false
+  },
+  "replacement_checks_all_true": true,
+  "route": "LUCIFER_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3",
+  "route_closed": true,
+  "source_checkpoint": {
+    "dirty_paths_during_artifact_creation": [
+      "tools/edge_factory_os_repo_only_lucifer_15m_v3_horizontal_cross_closure_v1.py"
+    ],
+    "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": true,
+    "pre_closure_head": "074d6084d6d3b150e3e32977693f948caa2c53f6",
+    "pre_closure_head_verified_at_artifact_creation": "074d6084d6d3b150e3e32977693f948caa2c53f6",
+    "repo_clean_before_closure_confirmed_externally": true,
+    "tracked_python_count_before_closure": 943,
+    "tracked_python_count_verified_at_artifact_creation": 943
+  },
+  "status": "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_CLOSURE_CREATED",
+  "validation_checks": {
+    "artifact_path_equals_required_path": true,
+    "evaluator_artifact_loaded": true,
+    "evaluator_payload_hash_verified": true,
+    "evaluator_result_preserved_exactly": true,
+    "execution_not_rerun": true,
+    "module_path_equals_required_path": true,
+    "no_candidate": true,
+    "no_edge_claim": true,
+    "no_family_release": true,
+    "no_runtime_live_capital": true,
+    "panel_rows_not_read": true,
+    "payload_sha256_excluding_hash_present": true,
+    "replacement_checks_all_true": true,
+    "route_closed_true": true,
+    "status_equals_required_status": true
+  }
+}

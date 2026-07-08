@@ -1,0 +1,768 @@
+{
+  "allowed_next_step": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_FORWARD_RETURN_DIAGNOSTIC_V1",
+  "artifact_kind": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_VALIDATOR",
+  "blocker": null,
+  "candidate_generation_allowed": false,
+  "current_head": "c09a6ca997bb0b661f1b651c857bf3037c00ce90",
+  "data_quality_warnings": [
+    "Known public kline archive gaps remain: ARBUSDT-2023-01 and ARBUSDT-2023-02.",
+    "56,230 missing 1h OI-delta rows recorded as global input-row missingness.",
+    "Raw data/cache files were not committed.",
+    "Selected rows have no missing volatility-regime component rejections; global missingness is recorded as attention."
+  ],
+  "event_quality_validation": {
+    "best_oi_contraction_post_stress_volatility_normalization_definition": {
+      "arbusdt_count": 55,
+      "cooldown_filtered_event_count": 455,
+      "definition_id": "OI_CONTRACTION_POST_STRESS_VOLATILITY_NORMALIZATION_EVENT__oi_p5.0__vol_low_p25.0__vol_high_p75.0__window_current1h_vs_prior4h__cooldown_6h",
+      "missing_component_count_recorded": 56230,
+      "month_coverage_count": 36,
+      "oi_shock_direction_distribution": {
+        "contraction": 1181
+      },
+      "optional_annotation_distribution": {
+        "long_short_ratio_annotation": {
+          "account_only": 127,
+          "both": 19,
+          "none": 909,
+          "position_only": 126
+        },
+        "taker_pressure_annotation": {
+          "buy_pressure_extreme": 10,
+          "none": 1159,
+          "sell_pressure_extreme": 12
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 1162,
+          "volume_stress_p95_or_higher": 19
+        }
+      },
+      "overlap_rate": 0.0,
+      "raw_event_count": 1181,
+      "reason_counts": {
+        "rejected_due_to_cooldown_count": 726,
+        "rejected_due_to_missing_volatility_regime_count": 0
+      },
+      "selection_slot": "best_oi_contraction_post_stress_volatility_normalization_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "top_month": "2023-02",
+      "top_month_concentration": 0.046153846153846156,
+      "top_symbol": "OPUSDT",
+      "top_symbol_concentration": 0.13846153846153847,
+      "unique_symbol_timestamp_count": 1181,
+      "unique_timestamp_count": 1129,
+      "volatility_regime_distribution": {
+        "prior4h_high_vol_to_current1h_low": 1181
+      }
+    },
+    "best_oi_contraction_volatility_expansion_definition": {
+      "arbusdt_count": 48,
+      "cooldown_filtered_event_count": 550,
+      "definition_id": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT__oi_p5.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "missing_component_count_recorded": 56230,
+      "month_coverage_count": 36,
+      "oi_shock_direction_distribution": {
+        "contraction": 1548
+      },
+      "optional_annotation_distribution": {
+        "long_short_ratio_annotation": {
+          "account_only": 134,
+          "both": 27,
+          "none": 1244,
+          "position_only": 143
+        },
+        "taker_pressure_annotation": {
+          "buy_pressure_extreme": 15,
+          "none": 1506,
+          "sell_pressure_extreme": 27
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 948,
+          "volume_stress_p95_or_higher": 600
+        }
+      },
+      "overlap_rate": 0.0,
+      "raw_event_count": 1548,
+      "reason_counts": {
+        "rejected_due_to_cooldown_count": 998,
+        "rejected_due_to_missing_volatility_regime_count": 0
+      },
+      "selection_slot": "best_oi_contraction_volatility_expansion_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "top_month": "2023-09",
+      "top_month_concentration": 0.04909090909090909,
+      "top_symbol": "ETHUSDT",
+      "top_symbol_concentration": 0.15272727272727274,
+      "unique_symbol_timestamp_count": 1548,
+      "unique_timestamp_count": 1283,
+      "volatility_regime_distribution": {
+        "prior4h_compressed_range_to_current15m_range_break": 1548
+      }
+    },
+    "best_oi_expansion_volatility_compression_break_definition": {
+      "arbusdt_count": 60,
+      "cooldown_filtered_event_count": 585,
+      "definition_id": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT__oi_p95.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "missing_component_count_recorded": 56230,
+      "month_coverage_count": 36,
+      "oi_shock_direction_distribution": {
+        "expansion": 2036
+      },
+      "optional_annotation_distribution": {
+        "long_short_ratio_annotation": {
+          "account_only": 299,
+          "both": 39,
+          "none": 1528,
+          "position_only": 170
+        },
+        "taker_pressure_annotation": {
+          "buy_pressure_extreme": 44,
+          "none": 1964,
+          "sell_pressure_extreme": 28
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 1138,
+          "volume_stress_p95_or_higher": 898
+        }
+      },
+      "overlap_rate": 0.0,
+      "raw_event_count": 2036,
+      "reason_counts": {
+        "rejected_due_to_cooldown_count": 1451,
+        "rejected_due_to_missing_volatility_regime_count": 0
+      },
+      "selection_slot": "best_oi_expansion_volatility_compression_break_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "top_month": "2025-06",
+      "top_month_concentration": 0.05128205128205128,
+      "top_symbol": "DOGEUSDT",
+      "top_symbol_concentration": 0.11282051282051282,
+      "unique_symbol_timestamp_count": 2036,
+      "unique_timestamp_count": 1893,
+      "volatility_regime_distribution": {
+        "compressed_range_breakout": 2036
+      }
+    },
+    "best_oi_expansion_volatility_expansion_definition": {
+      "arbusdt_count": 60,
+      "cooldown_filtered_event_count": 585,
+      "definition_id": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT__oi_p95.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "missing_component_count_recorded": 56230,
+      "month_coverage_count": 36,
+      "oi_shock_direction_distribution": {
+        "expansion": 2036
+      },
+      "optional_annotation_distribution": {
+        "long_short_ratio_annotation": {
+          "account_only": 299,
+          "both": 39,
+          "none": 1528,
+          "position_only": 170
+        },
+        "taker_pressure_annotation": {
+          "buy_pressure_extreme": 44,
+          "none": 1964,
+          "sell_pressure_extreme": 28
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 1138,
+          "volume_stress_p95_or_higher": 898
+        }
+      },
+      "overlap_rate": 0.0,
+      "raw_event_count": 2036,
+      "reason_counts": {
+        "rejected_due_to_cooldown_count": 1451,
+        "rejected_due_to_missing_volatility_regime_count": 0
+      },
+      "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "top_month": "2025-06",
+      "top_month_concentration": 0.05128205128205128,
+      "top_symbol": "DOGEUSDT",
+      "top_symbol_concentration": 0.11282051282051282,
+      "unique_symbol_timestamp_count": 2036,
+      "unique_timestamp_count": 1893,
+      "volatility_regime_distribution": {
+        "prior4h_compressed_range_to_current15m_range_break": 2036
+      }
+    },
+    "optional_stricter_best_oi_contraction_volatility_expansion_definition": {
+      "arbusdt_count": 13,
+      "cooldown_filtered_event_count": 162,
+      "definition_id": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT__oi_p2.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "missing_component_count_recorded": 56230,
+      "month_coverage_count": 32,
+      "oi_shock_direction_distribution": {
+        "contraction": 360
+      },
+      "optional_annotation_distribution": {
+        "long_short_ratio_annotation": {
+          "account_only": 36,
+          "both": 11,
+          "none": 278,
+          "position_only": 35
+        },
+        "taker_pressure_annotation": {
+          "buy_pressure_extreme": 1,
+          "none": 353,
+          "sell_pressure_extreme": 6
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 69,
+          "volume_stress_p95_or_higher": 291
+        }
+      },
+      "overlap_rate": 0.0,
+      "raw_event_count": 360,
+      "reason_counts": {
+        "rejected_due_to_cooldown_count": 198,
+        "rejected_due_to_missing_volatility_regime_count": 0
+      },
+      "selection_slot": "optional_stricter_best_oi_contraction_volatility_expansion_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "sparse_but_potentially_usable",
+      "top_month": "2023-07",
+      "top_month_concentration": 0.06790123456790123,
+      "top_symbol": "ETHUSDT",
+      "top_symbol_concentration": 0.16049382716049382,
+      "unique_symbol_timestamp_count": 360,
+      "unique_timestamp_count": 310,
+      "volatility_regime_distribution": {
+        "prior4h_compressed_range_to_current15m_range_break": 360
+      }
+    },
+    "optional_stricter_best_oi_expansion_volatility_compression_break_definition": {
+      "arbusdt_count": 12,
+      "cooldown_filtered_event_count": 192,
+      "definition_id": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT__oi_p97.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "missing_component_count_recorded": 56230,
+      "month_coverage_count": 36,
+      "oi_shock_direction_distribution": {
+        "expansion": 597
+      },
+      "optional_annotation_distribution": {
+        "long_short_ratio_annotation": {
+          "account_only": 119,
+          "both": 18,
+          "none": 413,
+          "position_only": 47
+        },
+        "taker_pressure_annotation": {
+          "buy_pressure_extreme": 7,
+          "none": 581,
+          "sell_pressure_extreme": 9
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 133,
+          "volume_stress_p95_or_higher": 464
+        }
+      },
+      "overlap_rate": 0.0,
+      "raw_event_count": 597,
+      "reason_counts": {
+        "rejected_due_to_cooldown_count": 405,
+        "rejected_due_to_missing_volatility_regime_count": 0
+      },
+      "selection_slot": "optional_stricter_best_oi_expansion_volatility_compression_break_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "sparse_but_potentially_usable",
+      "top_month": "2023-06",
+      "top_month_concentration": 0.052083333333333336,
+      "top_symbol": "XRPUSDT",
+      "top_symbol_concentration": 0.14583333333333334,
+      "unique_symbol_timestamp_count": 597,
+      "unique_timestamp_count": 569,
+      "volatility_regime_distribution": {
+        "compressed_range_breakout": 597
+      }
+    },
+    "optional_stricter_best_oi_expansion_volatility_expansion_definition": {
+      "arbusdt_count": 12,
+      "cooldown_filtered_event_count": 192,
+      "definition_id": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT__oi_p97.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "missing_component_count_recorded": 56230,
+      "month_coverage_count": 36,
+      "oi_shock_direction_distribution": {
+        "expansion": 597
+      },
+      "optional_annotation_distribution": {
+        "long_short_ratio_annotation": {
+          "account_only": 119,
+          "both": 18,
+          "none": 413,
+          "position_only": 47
+        },
+        "taker_pressure_annotation": {
+          "buy_pressure_extreme": 7,
+          "none": 581,
+          "sell_pressure_extreme": 9
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 133,
+          "volume_stress_p95_or_higher": 464
+        }
+      },
+      "overlap_rate": 0.0,
+      "raw_event_count": 597,
+      "reason_counts": {
+        "rejected_due_to_cooldown_count": 405,
+        "rejected_due_to_missing_volatility_regime_count": 0
+      },
+      "selection_slot": "optional_stricter_best_oi_expansion_volatility_expansion_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "sparse_but_potentially_usable",
+      "top_month": "2023-06",
+      "top_month_concentration": 0.052083333333333336,
+      "top_symbol": "XRPUSDT",
+      "top_symbol_concentration": 0.14583333333333334,
+      "unique_symbol_timestamp_count": 597,
+      "unique_timestamp_count": 569,
+      "volatility_regime_distribution": {
+        "prior4h_compressed_range_to_current15m_range_break": 597
+      }
+    }
+  },
+  "expected_head": "c09a6ca997bb0b661f1b651c857bf3037c00ce90",
+  "final_event_definition_decision": "Main OI shock / realized-volatility regime-shift definitions pass validator gates with data-quality and threshold-degree attention.",
+  "forbidden_actions_confirmed_false": {
+    "account_api": false,
+    "api_key": false,
+    "backtest": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "event_definitions_modified": false,
+    "forward_returns_computed": false,
+    "null_validation_run": false,
+    "optimization_against_returns": false,
+    "order_private_account_api_key": false,
+    "p_values_computed": false,
+    "pnl": false,
+    "private_api": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "strategy": false,
+    "thresholds_tuned_after_outcomes": false,
+    "trade_simulation": false
+  },
+  "forward_return_diagnostic_allowed": true,
+  "head_matches_expected": true,
+  "input_artifact_hashes_after": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_forward_return_diagnostic_evaluator_v1.json": "1939f18b2aca411bd2af1e0bc67b39eb6e947ea265560b14a0ab8265e305a987",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_forward_return_diagnostic_evaluator_v1.json": "1939f18b2aca411bd2af1e0bc67b39eb6e947ea265560b14a0ab8265e305a987",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_payload_hashes_verified": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "01469f54853ee0e9c07c6897f170617564a333f7df2f33e46ba5a127f8fbf9a6",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_forward_return_diagnostic_evaluator_v1.json": "8541ca5af6bc0c7300dec68fc99004f42f4dc6c574ce03af71ac009819c4d61f",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "dad346c255410ee1406e19f1480d32d8cbcc4bd24de25977b2038dd3e20900df",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "8d84ede6d6d6128224ad193fe2c390c0bf5cbc36ef0a41c6ac97f09f291ad5cd"
+  },
+  "main_acceptance_gates": {
+    "all_main_counts_match_checkpoint": true,
+    "all_main_definitions_pass": true,
+    "best_oi_contraction_post_stress_volatility_normalization_definition": {
+      "all_required_gates_pass": true,
+      "cooldown_event_count_300_to_1500": true,
+      "material_difference_from_failed_routes": true,
+      "month_coverage_at_least_24": true,
+      "overlap_near_zero": true,
+      "selected_events_have_required_components_by_construction": true,
+      "symbol_coverage_at_least_8_and_target_10": true,
+      "symbol_coverage_equals_10": true,
+      "top_month_concentration_lte_15pct": true,
+      "top_symbol_concentration_lte_25pct": true,
+      "uses_no_forward_returns": true,
+      "uses_no_outcome_optimization": true
+    },
+    "best_oi_contraction_volatility_expansion_definition": {
+      "all_required_gates_pass": true,
+      "cooldown_event_count_300_to_1500": true,
+      "material_difference_from_failed_routes": true,
+      "month_coverage_at_least_24": true,
+      "overlap_near_zero": true,
+      "selected_events_have_required_components_by_construction": true,
+      "symbol_coverage_at_least_8_and_target_10": true,
+      "symbol_coverage_equals_10": true,
+      "top_month_concentration_lte_15pct": true,
+      "top_symbol_concentration_lte_25pct": true,
+      "uses_no_forward_returns": true,
+      "uses_no_outcome_optimization": true
+    },
+    "best_oi_expansion_volatility_compression_break_definition": {
+      "all_required_gates_pass": true,
+      "cooldown_event_count_300_to_1500": true,
+      "material_difference_from_failed_routes": true,
+      "month_coverage_at_least_24": true,
+      "overlap_near_zero": true,
+      "selected_events_have_required_components_by_construction": true,
+      "symbol_coverage_at_least_8_and_target_10": true,
+      "symbol_coverage_equals_10": true,
+      "top_month_concentration_lte_15pct": true,
+      "top_symbol_concentration_lte_25pct": true,
+      "uses_no_forward_returns": true,
+      "uses_no_outcome_optimization": true
+    },
+    "best_oi_expansion_volatility_expansion_definition": {
+      "all_required_gates_pass": true,
+      "cooldown_event_count_300_to_1500": true,
+      "material_difference_from_failed_routes": true,
+      "month_coverage_at_least_24": true,
+      "overlap_near_zero": true,
+      "selected_events_have_required_components_by_construction": true,
+      "symbol_coverage_at_least_8_and_target_10": true,
+      "symbol_coverage_equals_10": true,
+      "top_month_concentration_lte_15pct": true,
+      "top_symbol_concentration_lte_25pct": true,
+      "uses_no_forward_returns": true,
+      "uses_no_outcome_optimization": true
+    }
+  },
+  "material_difference_from_failed_routes": {
+    "different_from_closed_oi_contraction_taker_capitulation_route": true,
+    "different_from_failed_broad_oi_taker_crowding_route": true,
+    "different_from_prior_short_pressure_delayed_downside_continuation_diagnostic": true,
+    "market_state_oi_shock_plus_realized_volatility_regime_route": true,
+    "no_funding_liquidation_private_or_unavailable_features_required": true,
+    "taker_and_long_short_fields_are_annotations_not_gates": true
+  },
+  "module": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_VALIDATOR_V1",
+  "no_leakage_validation": {
+    "cooldown_uses_event_time_only_not_future_returns": true,
+    "no_forward_return_fields_used": true,
+    "no_leakage_detected": true,
+    "oi_shock_current_prior_only": true,
+    "realized_volatility_regime_current_prior_bars_only": true,
+    "taker_pressure_long_short_ratio_volume_annotations_only": true,
+    "volatility_compression_expansion_no_future_bars": true
+  },
+  "outcome_blind_selection_validation": {
+    "definitions_evaluated": 648,
+    "no_forward_returns_used": true,
+    "no_p_values_used": true,
+    "no_pnl_hit_rate_sharpe_or_backtest_metrics_used": true,
+    "selection_basis": [
+      "event cleanliness",
+      "cooldown-filtered event count",
+      "symbol/month coverage",
+      "top symbol/month concentration",
+      "overlap",
+      "missingness",
+      "material difference from failed routes",
+      "simplicity / low degrees of freedom"
+    ],
+    "taker_pressure_long_short_ratio_and_volume_are_annotations_only": true,
+    "threshold_degrees_of_freedom_attention_but_acceptable": true
+  },
+  "payload_sha256_excluding_hash": "52f9421380375f81616f897163d49e20a275febde00a52e58b0b0f2786df34e5",
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "release_allowed": false,
+  "replacement_checks_all_true": true,
+  "result_classification": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_VALIDATOR_PASS_WITH_ATTENTION",
+  "secondary_tier_warnings": {
+    "not_primary_for_forward_return_diagnostic": true,
+    "optional_strict_variants": {
+      "optional_stricter_best_oi_contraction_volatility_expansion_definition": {
+        "cooldown_filtered_event_count": 162,
+        "cooldown_hours": 6,
+        "definition_id": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT__oi_p2.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+        "family": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT",
+        "month_coverage_count": 32,
+        "oi_direction": "contraction",
+        "oi_threshold": "p2.5",
+        "overlap_rate": 0.0,
+        "raw_event_count": 360,
+        "regime_shift_window": "current15m_range_vs_prior4h_median",
+        "selection_slot": "optional_stricter_best_oi_contraction_volatility_expansion_definition",
+        "symbol_coverage_count": 10,
+        "target_event_count_band": "sparse_but_potentially_usable",
+        "uses_forward_returns": false,
+        "uses_outcome_optimization": false,
+        "vol_high_threshold": "p90.0",
+        "vol_low_threshold": "p25.0"
+      },
+      "optional_stricter_best_oi_expansion_volatility_compression_break_definition": {
+        "cooldown_filtered_event_count": 192,
+        "cooldown_hours": 6,
+        "definition_id": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT__oi_p97.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+        "family": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT",
+        "month_coverage_count": 36,
+        "oi_direction": "expansion",
+        "oi_threshold": "p97.5",
+        "overlap_rate": 0.0,
+        "raw_event_count": 597,
+        "regime_shift_window": "current15m_range_vs_prior4h_median",
+        "selection_slot": "optional_stricter_best_oi_expansion_volatility_compression_break_definition",
+        "symbol_coverage_count": 10,
+        "target_event_count_band": "sparse_but_potentially_usable",
+        "uses_forward_returns": false,
+        "uses_outcome_optimization": false,
+        "vol_high_threshold": "p90.0",
+        "vol_low_threshold": "p25.0"
+      },
+      "optional_stricter_best_oi_expansion_volatility_expansion_definition": {
+        "cooldown_filtered_event_count": 192,
+        "cooldown_hours": 6,
+        "definition_id": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT__oi_p97.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+        "family": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT",
+        "month_coverage_count": 36,
+        "oi_direction": "expansion",
+        "oi_threshold": "p97.5",
+        "overlap_rate": 0.0,
+        "raw_event_count": 597,
+        "regime_shift_window": "current15m_range_vs_prior4h_median",
+        "selection_slot": "optional_stricter_best_oi_expansion_volatility_expansion_definition",
+        "symbol_coverage_count": 10,
+        "target_event_count_band": "sparse_but_potentially_usable",
+        "uses_forward_returns": false,
+        "uses_outcome_optimization": false,
+        "vol_high_threshold": "p90.0",
+        "vol_low_threshold": "p25.0"
+      }
+    },
+    "strict_variant_cooldown_counts": {
+      "optional_stricter_best_oi_contraction_volatility_expansion_definition": 162,
+      "optional_stricter_best_oi_expansion_volatility_compression_break_definition": 192,
+      "optional_stricter_best_oi_expansion_volatility_expansion_definition": 192
+    },
+    "strict_variants_are_secondary": true,
+    "strict_variants_sparse_or_small_sample": true
+  },
+  "selected_definition_count_validation": {
+    "all_expected_counts_match": true,
+    "main_definition_count_checks": {
+      "best_oi_contraction_post_stress_volatility_normalization_definition": {
+        "cooldown_filtered_count_actual": 455,
+        "cooldown_filtered_count_expected": 455,
+        "matches_expected": true,
+        "raw_event_count_actual": 1181,
+        "raw_event_count_expected": 1181
+      },
+      "best_oi_contraction_volatility_expansion_definition": {
+        "cooldown_filtered_count_actual": 550,
+        "cooldown_filtered_count_expected": 550,
+        "matches_expected": true,
+        "raw_event_count_actual": 1548,
+        "raw_event_count_expected": 1548
+      },
+      "best_oi_expansion_volatility_compression_break_definition": {
+        "cooldown_filtered_count_actual": 585,
+        "cooldown_filtered_count_expected": 585,
+        "matches_expected": true,
+        "raw_event_count_actual": 2036,
+        "raw_event_count_expected": 2036
+      },
+      "best_oi_expansion_volatility_expansion_definition": {
+        "cooldown_filtered_count_actual": 585,
+        "cooldown_filtered_count_expected": 585,
+        "matches_expected": true,
+        "raw_event_count_actual": 2036,
+        "raw_event_count_expected": 2036
+      }
+    },
+    "secondary_definition_count_checks": {
+      "optional_stricter_best_oi_contraction_volatility_expansion_definition": {
+        "cooldown_filtered_count_actual": 162,
+        "cooldown_filtered_count_expected": 162,
+        "matches_expected": true
+      },
+      "optional_stricter_best_oi_expansion_volatility_compression_break_definition": {
+        "cooldown_filtered_count_actual": 192,
+        "cooldown_filtered_count_expected": 192,
+        "matches_expected": true
+      },
+      "optional_stricter_best_oi_expansion_volatility_expansion_definition": {
+        "cooldown_filtered_count_actual": 192,
+        "cooldown_filtered_count_expected": 192,
+        "matches_expected": true
+      }
+    }
+  },
+  "selected_main_definitions": {
+    "best_oi_contraction_post_stress_volatility_normalization_definition": {
+      "cooldown_filtered_event_count": 455,
+      "cooldown_hours": 6,
+      "definition_id": "OI_CONTRACTION_POST_STRESS_VOLATILITY_NORMALIZATION_EVENT__oi_p5.0__vol_low_p25.0__vol_high_p75.0__window_current1h_vs_prior4h__cooldown_6h",
+      "family": "OI_CONTRACTION_POST_STRESS_VOLATILITY_NORMALIZATION_EVENT",
+      "month_coverage_count": 36,
+      "oi_direction": "contraction",
+      "oi_threshold": "p5.0",
+      "overlap_rate": 0.0,
+      "raw_event_count": 1181,
+      "regime_shift_window": "current1h_vs_prior4h",
+      "selection_slot": "best_oi_contraction_post_stress_volatility_normalization_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "uses_forward_returns": false,
+      "uses_outcome_optimization": false,
+      "vol_high_threshold": "p75.0",
+      "vol_low_threshold": "p25.0"
+    },
+    "best_oi_contraction_volatility_expansion_definition": {
+      "cooldown_filtered_event_count": 550,
+      "cooldown_hours": 6,
+      "definition_id": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT__oi_p5.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "family": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT",
+      "month_coverage_count": 36,
+      "oi_direction": "contraction",
+      "oi_threshold": "p5.0",
+      "overlap_rate": 0.0,
+      "raw_event_count": 1548,
+      "regime_shift_window": "current15m_range_vs_prior4h_median",
+      "selection_slot": "best_oi_contraction_volatility_expansion_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "uses_forward_returns": false,
+      "uses_outcome_optimization": false,
+      "vol_high_threshold": "p75.0",
+      "vol_low_threshold": "p25.0"
+    },
+    "best_oi_expansion_volatility_compression_break_definition": {
+      "cooldown_filtered_event_count": 585,
+      "cooldown_hours": 6,
+      "definition_id": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT__oi_p95.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "family": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT",
+      "month_coverage_count": 36,
+      "oi_direction": "expansion",
+      "oi_threshold": "p95.0",
+      "overlap_rate": 0.0,
+      "raw_event_count": 2036,
+      "regime_shift_window": "current15m_range_vs_prior4h_median",
+      "selection_slot": "best_oi_expansion_volatility_compression_break_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "uses_forward_returns": false,
+      "uses_outcome_optimization": false,
+      "vol_high_threshold": "p75.0",
+      "vol_low_threshold": "p25.0"
+    },
+    "best_oi_expansion_volatility_expansion_definition": {
+      "cooldown_filtered_event_count": 585,
+      "cooldown_hours": 6,
+      "definition_id": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT__oi_p95.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "family": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT",
+      "month_coverage_count": 36,
+      "oi_direction": "expansion",
+      "oi_threshold": "p95.0",
+      "overlap_rate": 0.0,
+      "raw_event_count": 2036,
+      "regime_shift_window": "current15m_range_vs_prior4h_median",
+      "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "uses_forward_returns": false,
+      "uses_outcome_optimization": false,
+      "vol_high_threshold": "p75.0",
+      "vol_low_threshold": "p25.0"
+    }
+  },
+  "selected_secondary_definitions": {
+    "optional_stricter_best_oi_contraction_volatility_expansion_definition": {
+      "cooldown_filtered_event_count": 162,
+      "cooldown_hours": 6,
+      "definition_id": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT__oi_p2.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "family": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT",
+      "month_coverage_count": 32,
+      "oi_direction": "contraction",
+      "oi_threshold": "p2.5",
+      "overlap_rate": 0.0,
+      "raw_event_count": 360,
+      "regime_shift_window": "current15m_range_vs_prior4h_median",
+      "selection_slot": "optional_stricter_best_oi_contraction_volatility_expansion_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "sparse_but_potentially_usable",
+      "uses_forward_returns": false,
+      "uses_outcome_optimization": false,
+      "vol_high_threshold": "p90.0",
+      "vol_low_threshold": "p25.0"
+    },
+    "optional_stricter_best_oi_expansion_volatility_compression_break_definition": {
+      "cooldown_filtered_event_count": 192,
+      "cooldown_hours": 6,
+      "definition_id": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT__oi_p97.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "family": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT",
+      "month_coverage_count": 36,
+      "oi_direction": "expansion",
+      "oi_threshold": "p97.5",
+      "overlap_rate": 0.0,
+      "raw_event_count": 597,
+      "regime_shift_window": "current15m_range_vs_prior4h_median",
+      "selection_slot": "optional_stricter_best_oi_expansion_volatility_compression_break_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "sparse_but_potentially_usable",
+      "uses_forward_returns": false,
+      "uses_outcome_optimization": false,
+      "vol_high_threshold": "p90.0",
+      "vol_low_threshold": "p25.0"
+    },
+    "optional_stricter_best_oi_expansion_volatility_expansion_definition": {
+      "cooldown_filtered_event_count": 192,
+      "cooldown_hours": 6,
+      "definition_id": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT__oi_p97.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+      "family": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT",
+      "month_coverage_count": 36,
+      "oi_direction": "expansion",
+      "oi_threshold": "p97.5",
+      "overlap_rate": 0.0,
+      "raw_event_count": 597,
+      "regime_shift_window": "current15m_range_vs_prior4h_median",
+      "selection_slot": "optional_stricter_best_oi_expansion_volatility_expansion_definition",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "sparse_but_potentially_usable",
+      "uses_forward_returns": false,
+      "uses_outcome_optimization": false,
+      "vol_high_threshold": "p90.0",
+      "vol_low_threshold": "p25.0"
+    }
+  },
+  "signal_allowed": false,
+  "source_artifact_summary": {
+    "dataset_result_classification": "BINANCE_DATA_VISION_UM_METRICS_DATASET_READY_FOR_PROXY_EVENT_STUDY",
+    "discovery_result_classification": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_DISCOVERY_READY",
+    "kline_result_classification": "BINANCE_PUBLIC_KLINE_FORWARD_RETURN_DIAGNOSTIC_DATA_QUALITY_ATTENTION",
+    "previous_evaluator_result_classification": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_DIAGNOSTIC_EVALUATOR_ROUTE_CLOSED_NO_ROBUST_EFFECT",
+    "theory_queue_result_classification": "OUTCOME_BLIND_BINANCE_THEORY_QUEUE_READY"
+  },
+  "status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_VALIDATOR_CREATED",
+  "strategy_allowed": false,
+  "theory_id": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT",
+  "threshold_degrees_of_freedom_attention": {
+    "acceptable_for_next_diagnostic": true,
+    "attention": "OI shock, volatility threshold, regime-shift window, and cooldown combinations were evaluated, but selection was outcome-blind and did not inspect returns, p-values, PnL, hit rate, Sharpe, or backtest metrics.",
+    "definition_grid_count_evaluated": 648,
+    "degrees_of_freedom_recorded": true
+  },
+  "validation_checks": {
+    "all_inputs_found_and_hash_verified": true,
+    "all_main_definitions_pass_acceptance_gates": true,
+    "artifacts_data_builds_not_written": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "head_matches_expected": true,
+    "input_artifact_hashes_unchanged": true,
+    "no_forward_returns_pvalues_null_backtest_pnl": true,
+    "no_leakage_validated": true,
+    "no_runtime_live_capital_order_private_account_api_key": true,
+    "no_strategy_signal_candidate_release": true,
+    "outcome_blind_selection_validated": true,
+    "prior_discovery_ready": true,
+    "repo_clean_or_only_outputs_during_run": true,
+    "selected_clean_event_definitions_exactly_reported": true
+  },
+  "validator_status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_VALIDATOR_CREATED"
+}

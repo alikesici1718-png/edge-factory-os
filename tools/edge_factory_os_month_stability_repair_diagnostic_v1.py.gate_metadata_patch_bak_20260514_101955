@@ -1,0 +1,811 @@
+from __future__ import annotations
+
+import json
+import math
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+
+MODULE = "edge_factory_os_month_stability_repair_diagnostic_v1"
+NOW = datetime.now(timezone.utc)
+
+REPO_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = REPO_DIR.parent
+
+REPAIR_CONTRACT_LATEST = (
+    BASE_DIR
+    / "edge_factory_os_research_direction_contracts"
+    / "month_stability_repair_contract_latest.json"
+)
+
+REGIME_FILTERED_RUNNER_LATEST = (
+    BASE_DIR
+    / "edge_factory_os_regime_filtered_candidate_backtest_runner_v1"
+    / "regime_filtered_candidate_backtest_runner_latest.json"
+)
+
+REGIME_FILTERED_EVAL_LATEST = (
+    BASE_DIR
+    / "edge_factory_os_regime_filtered_candidate_evaluator_v1"
+    / "regime_filtered_candidate_evaluator_latest.json"
+)
+
+OUT_ROOT = BASE_DIR / MODULE
+RUN_DIR = OUT_ROOT / f"month_stability_repair_diagnostic_v1_{NOW.strftime('%Y%m%d_%H%M%S')}"
+LATEST_JSON = OUT_ROOT / "month_stability_repair_diagnostic_latest.json"
+LATEST_MD = OUT_ROOT / "month_stability_repair_diagnostic_latest.md"
+
+
+def load_json(path: Path) -> Optional[Dict[str, Any]]:
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            obj = json.load(f)
+        return obj if isinstance(obj, dict) else None
+    except Exception:
+        return None
+
+
+def dump_json(path: Path, obj: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(obj, f, indent=2, sort_keys=True, default=str)
+
+
+def fnum(v: Any, default=None):
+    try:
+        if v is None:
+            return default
+        x = float(v)
+        return x if math.isfinite(x) else default
+    except Exception:
+        return default
+
+
+def inum(v: Any, default=0):
+    try:
+        if v is None:
+            return default
+        return int(float(v))
+    except Exception:
+        return default
+
+
+def safe_get(d: Dict[str, Any], path: List[str], default=None):
+    cur: Any = d
+    for key in path:
+        if not isinstance(cur, dict):
+            return default
+        cur = cur.get(key)
+    return cur if cur is not None else default
+
+
+def summarize(df, ret_col: str) -> Dict[str, Any]:
+    if df is None or len(df) == 0 or ret_col not in df.columns:
+        return {
+            "trade_count": 0,
+            "symbol_count": 0,
+            "month_count": 0,
+            "positive_month_rate": None,
+            "total_net_bps": 0.0,
+            "mean_net_bps": None,
+            "win_rate": None,
+            "profit_factor": None,
+        }
+
+    vals = df[ret_col].dropna()
+
+    if len(vals) == 0:
+        return {
+            "trade_count": int(len(df)),
+            "symbol_count": int(df["symbol"].nunique()) if "symbol" in df.columns else 0,
+            "month_count": 0,
+            "positive_month_rate": None,
+            "total_net_bps": 0.0,
+            "mean_net_bps": None,
+            "win_rate": None,
+            "profit_factor": None,
+        }
+
+    wins = vals[vals > 0]
+    losses = vals[vals < 0]
+    pf = None
+
+    if len(losses) > 0 and abs(float(losses.sum())) > 0:
+        pf = float(wins.sum()) / abs(float(losses.sum()))
+    elif len(wins) > 0:
+        pf = 999.0
+
+    monthly = {}
+    positive_month_rate = None
+
+    if "month" in df.columns:
+        m = df.groupby("month")[ret_col].sum().dropna()
+        monthly = {str(k): float(v) for k, v in m.items()}
+        if len(m) > 0:
+            positive_month_rate = float((m > 0).mean())
+
+    return {
+        "trade_count": int(len(df)),
+        "symbol_count": int(df["symbol"].nunique()) if "symbol" in df.columns else 0,
+        "month_count": int(len(monthly)),
+        "positive_month_rate": positive_month_rate,
+        "monthly_total_net_bps": monthly,
+        "win_count": int((vals > 0).sum()),
+        "loss_count": int((vals < 0).sum()),
+        "win_rate": float((vals > 0).mean()),
+        "total_net_bps": float(vals.sum()),
+        "mean_net_bps": float(vals.mean()),
+        "median_net_bps": float(vals.median()),
+        "best_net_bps": float(vals.max()),
+        "worst_net_bps": float(vals.min()),
+        "profit_factor": pf,
+    }
+
+
+def split_train_oos(df):
+    if df is None or len(df) == 0 or "time" not in df.columns:
+        return {
+            "train": df,
+            "oos": df.iloc[0:0] if df is not None else None,
+            "split_time": None,
+        }
+
+    times = df["time"].dropna().sort_values()
+    if len(times) == 0:
+        return {
+            "train": df,
+            "oos": df.iloc[0:0],
+            "split_time": None,
+        }
+
+    split_idx = int(len(times) * 0.70)
+    split_idx = max(0, min(split_idx, len(times) - 1))
+    split_time = times.iloc[split_idx]
+
+    return {
+        "train": df[df["time"] <= split_time],
+        "oos": df[df["time"] > split_time],
+        "split_time": str(split_time),
+    }
+
+
+def symbol_concentration(df, ret_col: str) -> Dict[str, Any]:
+    if df is None or len(df) == 0 or "symbol" not in df.columns:
+        return {
+            "top_symbol_abs_share": None,
+            "top_win_symbols": [],
+            "top_loss_symbols": [],
+        }
+
+    grouped = df.groupby("symbol")[ret_col].agg(["count", "sum", "mean"]).reset_index()
+    grouped = grouped.rename(columns={"count": "trade_count", "sum": "total_net_bps", "mean": "mean_net_bps"})
+
+    total = float(df[ret_col].sum()) if len(df) else 0.0
+    grouped["abs_share_of_total"] = grouped["total_net_bps"].abs() / max(abs(total), 1e-9)
+
+    return {
+        "top_symbol_abs_share": float(grouped["abs_share_of_total"].max()) if len(grouped) else None,
+        "top_win_symbols": grouped.sort_values("total_net_bps", ascending=False).head(10).to_dict("records"),
+        "top_loss_symbols": grouped.sort_values("total_net_bps", ascending=True).head(10).to_dict("records"),
+    }
+
+
+def evaluate_filter(df, ret_col: str, filter_name: str, mask) -> Dict[str, Any]:
+    kept = df.loc[mask].copy()
+    removed = df.loc[~mask].copy()
+
+    split = split_train_oos(kept)
+
+    kept_all = summarize(kept, ret_col)
+    kept_train = summarize(split["train"], ret_col)
+    kept_oos = summarize(split["oos"], ret_col)
+    removed_all = summarize(removed, ret_col)
+    sym = symbol_concentration(kept, ret_col)
+
+    checks = {
+        "all_trade_count": {
+            "pass": kept_all.get("trade_count", 0) >= 300,
+            "value": kept_all.get("trade_count"),
+            "required": ">=300",
+        },
+        "oos_trade_count": {
+            "pass": kept_oos.get("trade_count", 0) >= 75,
+            "value": kept_oos.get("trade_count"),
+            "required": ">=75",
+        },
+        "all_mean_positive": {
+            "pass": fnum(kept_all.get("mean_net_bps"), -999999) > 0,
+            "value": kept_all.get("mean_net_bps"),
+            "required": ">0",
+        },
+        "train_mean_positive": {
+            "pass": fnum(kept_train.get("mean_net_bps"), -999999) > 0,
+            "value": kept_train.get("mean_net_bps"),
+            "required": ">0",
+        },
+        "oos_mean_positive": {
+            "pass": fnum(kept_oos.get("mean_net_bps"), -999999) > 0,
+            "value": kept_oos.get("mean_net_bps"),
+            "required": ">0",
+        },
+        "train_profit_factor": {
+            "pass": fnum(kept_train.get("profit_factor"), 0) >= 1.10,
+            "value": kept_train.get("profit_factor"),
+            "required": ">=1.10",
+        },
+        "oos_profit_factor": {
+            "pass": fnum(kept_oos.get("profit_factor"), 0) >= 1.10,
+            "value": kept_oos.get("profit_factor"),
+            "required": ">=1.10",
+        },
+        "oos_win_rate": {
+            "pass": fnum(kept_oos.get("win_rate"), 0) >= 0.45,
+            "value": kept_oos.get("win_rate"),
+            "required": ">=0.45",
+        },
+        "all_positive_month_rate": {
+            "pass": fnum(kept_all.get("positive_month_rate"), 0) >= 0.55,
+            "value": kept_all.get("positive_month_rate"),
+            "required": ">=0.55",
+        },
+        "oos_positive_month_rate": {
+            "pass": fnum(kept_oos.get("positive_month_rate"), 0) >= 0.50,
+            "value": kept_oos.get("positive_month_rate"),
+            "required": ">=0.50",
+        },
+        "symbol_concentration": {
+            "pass": sym.get("top_symbol_abs_share") is None or fnum(sym.get("top_symbol_abs_share"), 999) <= 0.50,
+            "value": sym.get("top_symbol_abs_share"),
+            "required": "<=0.50",
+        },
+    }
+
+    passed = [k for k, v in checks.items() if v.get("pass") is True]
+    failed = [k for k, v in checks.items() if v.get("pass") is not True]
+
+    # This is a diagnostic score, not release approval.
+    score = 0.0
+    score += (fnum(kept_all.get("positive_month_rate"), 0) or 0) * 100
+    score += max(fnum(kept_all.get("mean_net_bps"), 0) or 0, 0) / 2
+    score += max(fnum(kept_train.get("profit_factor"), 0) or 0, 0) * 5
+    score += max(fnum(kept_oos.get("profit_factor"), 0) or 0, 0) * 5
+    score += min(kept_all.get("trade_count", 0), 500) / 20
+    score -= max(len(failed) - 1, 0) * 10
+
+    return {
+        "filter_name": filter_name,
+        "kept_all": kept_all,
+        "kept_train": kept_train,
+        "kept_oos": kept_oos,
+        "removed_all": removed_all,
+        "split_time": split["split_time"],
+        "symbol_concentration": sym,
+        "checks": checks,
+        "passed_checks": passed,
+        "failed_checks": failed,
+        "diagnostic_full_quality_pass_preview": len(failed) == 0,
+        "diagnostic_score": score,
+        "kept_months": kept_all.get("monthly_total_net_bps"),
+        "removed_months": removed_all.get("monthly_total_net_bps"),
+    }
+
+
+def main() -> int:
+    RUN_DIR.mkdir(parents=True, exist_ok=True)
+
+    critical: List[str] = []
+    attention: List[str] = []
+    info: List[str] = []
+
+    contract = load_json(REPAIR_CONTRACT_LATEST)
+    runner = load_json(REGIME_FILTERED_RUNNER_LATEST)
+    evaluator = load_json(REGIME_FILTERED_EVAL_LATEST)
+
+    if not isinstance(contract, dict):
+        critical.append("month_stability_repair_contract_latest_missing")
+        contract = {}
+
+    if not isinstance(runner, dict):
+        critical.append("regime_filtered_candidate_runner_latest_missing")
+        runner = {}
+
+    if not isinstance(evaluator, dict):
+        critical.append("regime_filtered_candidate_evaluator_latest_missing")
+        evaluator = {}
+
+    if contract.get("research_key") != "MONTH_STABILITY_REPAIR_DIAGNOSTIC_V1":
+        critical.append(f"unexpected_contract_key:{contract.get('research_key')}")
+
+    if evaluator.get("evaluator_status") != "REGIME_FILTERED_CANDIDATE_EVALUATOR_PROMISING_MONTH_STABILITY_BLOCKED":
+        critical.append(f"unexpected_evaluator_status:{evaluator.get('evaluator_status')}")
+
+    if evaluator.get("only_month_stability_failed") is not True:
+        critical.append("only_month_stability_failed_not_true")
+
+    paths = runner.get("outputs") or {}
+    candidate_csv = paths.get("candidate_trades_csv")
+
+    if not candidate_csv:
+        critical.append("candidate_trades_csv_missing_from_runner_outputs")
+
+    candidate_path = Path(str(candidate_csv)) if candidate_csv else None
+
+    if candidate_path is None or not candidate_path.exists():
+        critical.append(f"candidate_trades_csv_not_found:{candidate_csv}")
+
+    if critical:
+        diagnostic_status = "MONTH_STABILITY_REPAIR_DIAGNOSTIC_CRITICAL_BLOCKED"
+        severity = "CRITICAL"
+        allowed_scope = "READ_ONLY_REVIEW"
+        next_action = "FIX_INPUTS_BEFORE_REPAIR_DIAGNOSTIC"
+        reason = "; ".join(critical)
+
+        result = {
+            "module": MODULE,
+            "created_at_utc": NOW.isoformat(),
+            "diagnostic_status": diagnostic_status,
+            "severity": severity,
+            "allowed_scope": allowed_scope,
+            "next_action": next_action,
+            "reason": reason,
+            "critical": critical,
+            "attention": attention,
+            "info": info,
+            "safety": {
+                "read_only": True,
+                "offline_only": True,
+                "mutate_runtime_allowed": False,
+                "launcher_allowed": False,
+                "patch_runtime_allowed": False,
+                "active_paper_allowed": False,
+                "live_allowed": False,
+                "capital_change_allowed": False,
+                "family_disable_allowed": False,
+                "real_orders_allowed": False,
+                "execution_performed": False,
+            },
+        }
+
+        dump_json(RUN_DIR / "month_stability_repair_diagnostic_v1_state.json", result)
+        dump_json(LATEST_JSON, result)
+
+        print("=" * 100)
+        print("EDGE FACTORY OS MONTH STABILITY REPAIR DIAGNOSTIC v1")
+        print("=" * 100)
+        print(f"diagnostic_status: {diagnostic_status}")
+        print(f"severity: {severity}")
+        print(f"reason: {reason}")
+        print(f"latest_json: {LATEST_JSON}")
+        print("=" * 100)
+        return 2
+
+    import pandas as pd
+    import numpy as np
+
+    df = pd.read_csv(candidate_path)
+
+    if "time" in df.columns:
+        df["time"] = pd.to_datetime(df["time"], errors="coerce", utc=True)
+
+    if "month" not in df.columns and "time" in df.columns:
+        df["month"] = df["time"].dt.to_period("M").astype(str)
+
+    ret_candidates = [c for c in df.columns if c.startswith("net_ret_") and c.endswith("_bps")]
+    if not ret_candidates:
+        critical.append("net_return_column_missing")
+        ret_col = None
+    else:
+        ret_col = ret_candidates[0]
+
+    feature_candidates = [
+        "mean_mkt_ret3_bps",
+        "mean_mkt_ret6_bps",
+        "mkt_ret3_bps",
+        "mkt_ret6_bps",
+        "coin_ret6_bps",
+        "entry_vol_quote",
+        "mean_entry_vol_quote",
+        "median_entry_vol_quote",
+        "std_coin_ret3_bps",
+        "mean_entry_range_bps",
+        "entry_range_bps",
+        "coin_ret3_bps",
+    ]
+
+    available_features = [c for c in feature_candidates if c in df.columns]
+
+    if not available_features:
+        critical.append("no_available_repair_features")
+
+    if critical:
+        diagnostic_status = "MONTH_STABILITY_REPAIR_DIAGNOSTIC_CRITICAL_BLOCKED"
+        severity = "CRITICAL"
+        allowed_scope = "READ_ONLY_REVIEW"
+        next_action = "FIX_FEATURE_INPUTS"
+        reason = "; ".join(critical)
+        result = {
+            "module": MODULE,
+            "created_at_utc": NOW.isoformat(),
+            "diagnostic_status": diagnostic_status,
+            "severity": severity,
+            "allowed_scope": allowed_scope,
+            "next_action": next_action,
+            "reason": reason,
+            "critical": critical,
+            "attention": attention,
+            "info": info,
+            "safety": {
+                "read_only": True,
+                "offline_only": True,
+                "mutate_runtime_allowed": False,
+                "launcher_allowed": False,
+                "patch_runtime_allowed": False,
+                "active_paper_allowed": False,
+                "live_allowed": False,
+                "capital_change_allowed": False,
+                "family_disable_allowed": False,
+                "real_orders_allowed": False,
+                "execution_performed": False,
+            },
+        }
+    else:
+        baseline_summary = summarize(df, ret_col)
+
+        monthly = df.groupby("month")[ret_col].agg(["count", "sum", "mean", "median"]).reset_index()
+        monthly = monthly.rename(columns={"count": "trade_count", "sum": "total_net_bps", "mean": "mean_net_bps", "median": "median_net_bps"})
+        monthly_wr = df.assign(win=df[ret_col] > 0).groupby("month")["win"].mean().reset_index().rename(columns={"win": "win_rate"})
+        monthly_sym = df.groupby("month")["symbol"].nunique().reset_index().rename(columns={"symbol": "symbol_count"})
+        monthly = monthly.merge(monthly_wr, on="month", how="left").merge(monthly_sym, on="month", how="left")
+
+        bad_months = monthly[monthly["total_net_bps"] < 0].sort_values("total_net_bps", ascending=True)
+        good_months = monthly[monthly["total_net_bps"] > 0].sort_values("total_net_bps", ascending=False)
+
+        filter_results = []
+
+        for feature in available_features:
+            s = df[feature].dropna()
+
+            if len(s) < 50:
+                continue
+
+            qs = sorted(set([0.20, 0.25, 0.33, 0.50, 0.67, 0.75, 0.80]))
+            thresholds = []
+            for q in qs:
+                try:
+                    thresholds.append(float(s.quantile(q)))
+                except Exception:
+                    pass
+
+            thresholds = sorted(set([round(x, 10) for x in thresholds]))
+
+            for thr in thresholds:
+                # keep high side
+                try:
+                    mask_hi = df[feature] >= thr
+                    filter_results.append(evaluate_filter(df, ret_col, f"{feature} >= {thr}", mask_hi))
+                except Exception:
+                    pass
+
+                # keep low side
+                try:
+                    mask_lo = df[feature] <= thr
+                    filter_results.append(evaluate_filter(df, ret_col, f"{feature} <= {thr}", mask_lo))
+                except Exception:
+                    pass
+
+        # Simple interaction repairs, still diagnostic only.
+        if "mean_mkt_ret3_bps" in df.columns and "coin_ret6_bps" in df.columns:
+            m1 = df["mean_mkt_ret3_bps"] >= df["mean_mkt_ret3_bps"].quantile(0.33)
+            m2 = df["coin_ret6_bps"] >= df["coin_ret6_bps"].quantile(0.33)
+            filter_results.append(evaluate_filter(df, ret_col, "mean_mkt_ret3_bps >= q33 AND coin_ret6_bps >= q33", m1 & m2))
+
+        if "mean_mkt_ret6_bps" in df.columns and "entry_vol_quote" in df.columns:
+            m1 = df["mean_mkt_ret6_bps"] >= df["mean_mkt_ret6_bps"].quantile(0.33)
+            m2 = df["entry_vol_quote"] >= df["entry_vol_quote"].quantile(0.25)
+            filter_results.append(evaluate_filter(df, ret_col, "mean_mkt_ret6_bps >= q33 AND entry_vol_quote >= q25", m1 & m2))
+
+        if "coin_ret6_bps" in df.columns and "entry_range_bps" in df.columns:
+            m1 = df["coin_ret6_bps"] >= df["coin_ret6_bps"].quantile(0.33)
+            m2 = df["entry_range_bps"] <= df["entry_range_bps"].quantile(0.75)
+            filter_results.append(evaluate_filter(df, ret_col, "coin_ret6_bps >= q33 AND entry_range_bps <= q75", m1 & m2))
+
+        filter_results.sort(key=lambda x: x.get("diagnostic_score", 0), reverse=True)
+
+        full_quality_preview = [r for r in filter_results if r.get("diagnostic_full_quality_pass_preview") is True]
+        month_repaired = [
+            r for r in filter_results
+            if fnum(safe_get(r, ["kept_all", "positive_month_rate"]), 0) >= 0.55
+            and inum(safe_get(r, ["kept_all", "trade_count"])) >= 300
+        ]
+
+        best_result = filter_results[0] if filter_results else None
+        best_full_quality = full_quality_preview[0] if full_quality_preview else None
+        best_month_repaired = month_repaired[0] if month_repaired else None
+
+        diagnostic_table_path = RUN_DIR / "month_stability_repair_filter_results.json"
+        monthly_table_path = RUN_DIR / "month_stability_repair_monthly_table.csv"
+
+        dump_json(diagnostic_table_path, {"filter_results": filter_results[:300]})
+        monthly.to_csv(monthly_table_path, index=False)
+
+        findings = []
+
+        findings.append({
+            "finding_id": "MSR_F1_BASELINE_MONTH_STABILITY_BLOCKER_CONFIRMED",
+            "severity": "HIGH",
+            "claim": "The candidate remains blocked by all-period positive month rate.",
+            "evidence": {
+                "baseline_positive_month_rate": baseline_summary.get("positive_month_rate"),
+                "baseline_trade_count": baseline_summary.get("trade_count"),
+                "bad_months": bad_months.to_dict("records"),
+                "good_months": good_months.to_dict("records"),
+            },
+        })
+
+        if best_month_repaired:
+            findings.append({
+                "finding_id": "MSR_F2_MONTH_STABILITY_REPAIR_CANDIDATE_FOUND_DIAGNOSTIC_ONLY",
+                "severity": "ATTENTION",
+                "claim": "A pre-outcome filter improved all-period positive month rate to the release threshold region.",
+                "evidence": {
+                    "filter_name": best_month_repaired.get("filter_name"),
+                    "kept_all": best_month_repaired.get("kept_all"),
+                    "kept_oos": best_month_repaired.get("kept_oos"),
+                    "failed_checks": best_month_repaired.get("failed_checks"),
+                },
+                "interpretation": "This does not approve release. It may justify a new repair candidate contract only if overfit guards are acceptable.",
+            })
+        else:
+            findings.append({
+                "finding_id": "MSR_F2_NO_MONTH_STABILITY_REPAIR_FOUND",
+                "severity": "ATTENTION",
+                "claim": "No tested pre-outcome repair filter achieved the minimum all-positive-month-rate with sufficient sample.",
+                "evidence": {
+                    "tested_filter_count": len(filter_results),
+                    "best_filter": best_result,
+                },
+            })
+
+        if best_full_quality:
+            findings.append({
+                "finding_id": "MSR_F3_FULL_QUALITY_PREVIEW_REPAIR_FOUND_DIAGNOSTIC_ONLY",
+                "severity": "ATTENTION",
+                "claim": "A tested repair filter passed all preview checks diagnostically.",
+                "evidence": {
+                    "filter_name": best_full_quality.get("filter_name"),
+                    "kept_all": best_full_quality.get("kept_all"),
+                    "kept_train": best_full_quality.get("kept_train"),
+                    "kept_oos": best_full_quality.get("kept_oos"),
+                },
+                "interpretation": "Even if preview passes, a new contract/hash/full runner/evaluator/release gate are still required.",
+            })
+
+        diagnostic_status = "MONTH_STABILITY_REPAIR_DIAGNOSTIC_COMPLETE"
+        severity = "ATTENTION"
+        allowed_scope = "READ_ONLY_RESEARCH"
+        next_action = "EVALUATE_MONTH_STABILITY_REPAIR_DIAGNOSTIC"
+        reason = (
+            f"tested_filter_count={len(filter_results)}; "
+            f"month_repaired_count={len(month_repaired)}; "
+            f"full_quality_preview_count={len(full_quality_preview)}"
+        )
+
+        result = {
+            "module": MODULE,
+            "created_at_utc": NOW.isoformat(),
+
+            "diagnostic_status": diagnostic_status,
+            "severity": severity,
+            "allowed_scope": allowed_scope,
+            "next_action": next_action,
+            "reason": reason,
+
+            "contract_source": str(REPAIR_CONTRACT_LATEST),
+            "runner_source": str(REGIME_FILTERED_RUNNER_LATEST),
+            "evaluator_source": str(REGIME_FILTERED_EVAL_LATEST),
+
+            "source_candidate_route_hash": safe_get(contract, ["source_candidate", "candidate_route_hash"]),
+            "candidate_trades_csv": str(candidate_path),
+            "ret_col": ret_col,
+            "available_features": available_features,
+
+            "baseline_summary": baseline_summary,
+            "monthly_table": monthly.to_dict("records"),
+            "bad_months": bad_months.to_dict("records"),
+            "good_months": good_months.to_dict("records"),
+
+            "tested_filter_count": len(filter_results),
+            "month_repaired_count": len(month_repaired),
+            "full_quality_preview_count": len(full_quality_preview),
+
+            "best_filter_by_score": best_result,
+            "best_month_repaired_filter": best_month_repaired,
+            "best_full_quality_preview_filter": best_full_quality,
+            "top_filter_results": filter_results[:20],
+
+            "outputs": {
+                "filter_results_json": str(diagnostic_table_path),
+                "monthly_table_csv": str(monthly_table_path),
+            },
+
+            "findings": findings,
+
+            "release_gate_feed": {
+                "MONTH_STABILITY_REPAIR_DIAGNOSTIC_RAN": True,
+                "MONTH_STABILITY_REPAIR_FOUND": bool(best_month_repaired),
+                "FULL_QUALITY_PREVIEW_REPAIR_FOUND": bool(best_full_quality),
+                "RELEASE_PASS_FROM_THIS_DIAGNOSTIC": False,
+                "status": diagnostic_status,
+            },
+
+            "decision": {
+                "candidate_generation_recommended_now": False,
+                "repair_candidate_contract_recommended_preview": bool(best_month_repaired or best_full_quality),
+                "family_release_recommended": False,
+                "promotion_recommended": False,
+                "runtime_change_recommended": False,
+                "capital_change_recommended": False,
+                "why_no_action": [
+                    "diagnostic_only_contract",
+                    "repair_filter_requires_new_contract_and_hash",
+                    "manual_month_blacklist_disallowed",
+                    "release_gate_required",
+                    "no_runtime_or_capital_action_allowed",
+                ],
+            },
+
+            "safety": {
+                "read_only": True,
+                "offline_only": True,
+                "mutate_runtime_allowed": False,
+                "launcher_allowed": False,
+                "patch_runtime_allowed": False,
+                "active_paper_allowed": False,
+                "live_allowed": False,
+                "capital_change_allowed": False,
+                "family_disable_allowed": False,
+                "real_orders_allowed": False,
+                "execution_performed": True,
+            },
+
+            "critical": critical,
+            "attention": attention,
+            "info": info,
+        }
+
+    out_json = RUN_DIR / "month_stability_repair_diagnostic_v1_state.json"
+    out_md = RUN_DIR / "month_stability_repair_diagnostic_v1_report.md"
+
+    dump_json(out_json, result)
+    dump_json(LATEST_JSON, result)
+
+    md = f"""# EDGE FACTORY OS MONTH STABILITY REPAIR DIAGNOSTIC v1
+
+diagnostic_status: {result.get("diagnostic_status")}  
+severity: {result.get("severity")}  
+allowed_scope: {result.get("allowed_scope")}  
+next_action: {result.get("next_action")}  
+reason: {result.get("reason")}
+
+source_candidate_route_hash: {result.get("source_candidate_route_hash")}  
+candidate_trades_csv: {result.get("candidate_trades_csv")}  
+ret_col: {result.get("ret_col")}
+
+## Baseline Summary
+
+{json.dumps(result.get("baseline_summary"), indent=2, default=str)}
+
+## Bad Months
+
+{json.dumps(result.get("bad_months"), indent=2, default=str)}
+
+## Good Months
+
+{json.dumps(result.get("good_months"), indent=2, default=str)}
+
+## Repair Summary
+
+tested_filter_count: {result.get("tested_filter_count")}  
+month_repaired_count: {result.get("month_repaired_count")}  
+full_quality_preview_count: {result.get("full_quality_preview_count")}
+
+## Best Filter By Score
+
+{json.dumps(result.get("best_filter_by_score"), indent=2, default=str)[:12000]}
+
+## Best Month Repaired Filter
+
+{json.dumps(result.get("best_month_repaired_filter"), indent=2, default=str)[:12000]}
+
+## Best Full Quality Preview Filter
+
+{json.dumps(result.get("best_full_quality_preview_filter"), indent=2, default=str)[:12000]}
+
+## Release Gate Feed
+
+{json.dumps(result.get("release_gate_feed"), indent=2, default=str)}
+
+## Decision
+
+{json.dumps(result.get("decision"), indent=2, default=str)}
+
+## Safety
+
+read_only: True  
+offline_only: True  
+mutate_runtime_allowed: False  
+launcher_allowed: False  
+patch_runtime_allowed: False  
+active_paper_allowed: False  
+live_allowed: False  
+capital_change_allowed: False  
+family_disable_allowed: False  
+real_orders_allowed: False  
+execution_performed: {safe_get(result, ["safety", "execution_performed"])}
+
+critical: {critical}  
+attention: {attention}  
+info: {info}
+"""
+
+    out_md.write_text(md, encoding="utf-8")
+    LATEST_MD.write_text(md, encoding="utf-8")
+
+    print("=" * 100)
+    print("EDGE FACTORY OS MONTH STABILITY REPAIR DIAGNOSTIC v1")
+    print("=" * 100)
+    print(f"diagnostic_status: {result.get('diagnostic_status')}")
+    print(f"severity: {result.get('severity')}")
+    print(f"allowed_scope: {result.get('allowed_scope')}")
+    print(f"next_action: {result.get('next_action')}")
+    print(f"reason: {result.get('reason')}")
+    print()
+    print("BASELINE")
+    print("-" * 100)
+    print(json.dumps(result.get("baseline_summary"), indent=2, default=str))
+    print()
+    print("REPAIR SUMMARY")
+    print("-" * 100)
+    print(f"tested_filter_count: {result.get('tested_filter_count')}")
+    print(f"month_repaired_count: {result.get('month_repaired_count')}")
+    print(f"full_quality_preview_count: {result.get('full_quality_preview_count')}")
+    print()
+    print("BEST MONTH REPAIRED FILTER")
+    print("-" * 100)
+    print(json.dumps(result.get("best_month_repaired_filter"), indent=2, default=str)[:8000])
+    print()
+    print("BEST FULL QUALITY PREVIEW FILTER")
+    print("-" * 100)
+    print(json.dumps(result.get("best_full_quality_preview_filter"), indent=2, default=str)[:8000])
+    print()
+    print("RELEASE GATE FEED")
+    print("-" * 100)
+    print(result.get("release_gate_feed"))
+    print()
+    print("DECISION")
+    print("-" * 100)
+    print(json.dumps(result.get("decision"), indent=2, default=str))
+    print()
+    print("SAFETY")
+    print("-" * 100)
+    print("read_only: True")
+    print("offline_only: True")
+    print("mutate_runtime_allowed: False")
+    print("launcher_allowed: False")
+    print("patch_runtime_allowed: False")
+    print("active_paper_allowed: False")
+    print("live_allowed: False")
+    print("capital_change_allowed: False")
+    print("family_disable_allowed: False")
+    print("real_orders_allowed: False")
+    print(f"execution_performed: {safe_get(result, ['safety', 'execution_performed'])}")
+    print()
+    print(f"latest_json: {LATEST_JSON}")
+    print("=" * 100)
+
+    return 0 if result.get("severity") != "CRITICAL" else 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

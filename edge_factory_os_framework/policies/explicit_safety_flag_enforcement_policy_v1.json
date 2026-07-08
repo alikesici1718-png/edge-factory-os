@@ -1,0 +1,48 @@
+{
+  "action_safety_interpretation": {
+    "False": "blocked",
+    "None_or_missing": "blocked",
+    "True": "allowed only if all higher gates also pass"
+  },
+  "active_paper_allowed": false,
+  "allowed_pattern": "Use missing/None safety flags only to deny actions.",
+  "archive_performed": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "closed_route_rerun_allowed": false,
+  "core_rule": "Missing/None safety flag blocks action but does not satisfy readiness.",
+  "created_at_utc": "2026-05-14T02:25:15.080002+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "forbidden_pattern": "Do not use missing/None safety flags to satisfy plugin_ready or contract_ready.",
+  "hard_requirements_for_future_plugins": [
+    "plugin_expansion_allowed must be present",
+    "candidate_generation_allowed must be present",
+    "family_release_allowed must be present",
+    "runtime_touch_allowed must be present",
+    "capital_change_allowed must be present",
+    "active_paper_allowed must be present",
+    "live_allowed must be present",
+    "real_orders_allowed must be present",
+    "Missing fields make plugin_ready=False even though action remains blocked."
+  ],
+  "joint_null_patch_resolution": "TECHNICAL_BUG_FIX_CONFIRMED_NO_POLICY_VIOLATION",
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "patch_runtime_allowed": false,
+  "policy_name": "edge_factory_os_explicit_safety_flag_enforcement_policy_v1",
+  "policy_status": "EXPLICIT_SAFETY_FLAG_POLICY_ACTIVE",
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "runtime_touch_allowed": false,
+  "schema_readiness_interpretation": {
+    "required_field_missing": "schema_not_ready",
+    "required_field_none": "schema_not_ready",
+    "required_field_present_and_false": "ready for blocked-state validation",
+    "required_field_true": "not blocked; requires explicit authorization gate"
+  },
+  "source_panel_patch_resolution": "POLICY_SENSITIVE_PATCH_LOGGED_SCHEMA_WEAKNESS_REPAIR_REQUIRED"
+}

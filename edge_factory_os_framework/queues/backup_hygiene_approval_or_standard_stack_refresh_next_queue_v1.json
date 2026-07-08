@@ -1,0 +1,37 @@
+{
+  "active_paper_allowed": false,
+  "archive_performed": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T06:31:10.372936+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "next_steps": [
+    {
+      "active_paper_allowed": false,
+      "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+      "backup_delete_allowed_now": false,
+      "backup_move_allowed_now": false,
+      "capital_change_allowed": false,
+      "live_allowed": false,
+      "module": "edge_factory_os_repo_only_standard_os_status_refresh_v1.py",
+      "purpose": "Refresh consolidated repo-only OS status after governance repairs and old_short monitor classification.",
+      "real_orders_allowed": false,
+      "research_key": "RD8_11_REPO_ONLY_STANDARD_OS_STATUS_REFRESH",
+      "runtime_touch_allowed": false
+    }
+  ],
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "queue_name": "edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh_next_queue_v1",
+  "queue_status": "BACKUP_HYGIENE_STANDARD_REFRESH_NEXT_QUEUE_READY",
+  "real_orders_allowed": false,
+  "runtime_touch_allowed": false,
+  "top_next_module": "edge_factory_os_repo_only_standard_os_status_refresh_v1.py",
+  "top_next_research_key": "RD8_11_REPO_ONLY_STANDARD_OS_STATUS_REFRESH"
+}

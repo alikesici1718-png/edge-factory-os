@@ -1,0 +1,817 @@
+{
+  "artifact_kind": "BINANCE_OKX_OVERLAP_TAKER_FLOW_MOMENTUM_CONTINUATION_EXECUTION",
+  "config_id": "taker_buy_share_mom4h_rank_hold8h",
+  "config_result": {
+    "config_id": "taker_buy_share_mom4h_rank_hold8h",
+    "executed_timestamp_count": 20464,
+    "hypothesis_name": "taker_buy_share_momentum_continuation",
+    "train_entry_count": 13184,
+    "train_gross_metric_bps": -0.23015,
+    "train_net_metric_bps": -20.23015,
+    "validation_entry_count": 7280,
+    "validation_gross_metric_bps": -0.408263,
+    "validation_net_metric_bps": -20.408263,
+    "validation_positive_after_cost": false
+  },
+  "diagnostic_interpretation_limits": {
+    "diagnostic_execution_only": true,
+    "future_closure_required": true,
+    "future_evaluator_required": true,
+    "grants_no_runtime_live_capital_permission": true,
+    "not_candidate_generation": true,
+    "not_edge_claim": true,
+    "not_family_release": true
+  },
+  "execution_safety_controls": {
+    "cross_window_holding_return_skipped_count": 1296,
+    "cross_window_holding_returns_included": false,
+    "exactly_one_config_executed": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_family_release": true,
+    "no_non_preregistered_config_tested": true,
+    "no_parameter_expansion": true,
+    "no_runtime_live_capital": true
+  },
+  "forbidden_actions_confirmed_false": {
+    "binance_1m_source_rows_read": false,
+    "binance_api_called": false,
+    "binance_coverage_discovery_rerun": false,
+    "binance_panel_build_rerun": false,
+    "boundary_buffer_accessed": false,
+    "candidates_generated": false,
+    "capital_permission_granted": false,
+    "edge_claimed": false,
+    "existing_files_modified_by_module": false,
+    "family_released": false,
+    "funding_data_fetched": false,
+    "funding_rate_endpoint_called": false,
+    "funding_rows_read": false,
+    "holdout_accessed": false,
+    "live_permission_granted": false,
+    "network_used": false,
+    "non_preregistered_config_tested": false,
+    "okx_panel_rows_read": false,
+    "okx_whitelisted_artifact_read": false,
+    "runtime_permission_granted": false,
+    "strategy_search_executed": false
+  },
+  "input_data_validation": {
+    "binance_1m_source_rows_read": false,
+    "external_panel_rows_read_for_execution": true,
+    "funding_rows_read": false,
+    "okx_panel_rows_read": false,
+    "panel_complete_rows_read": 3149492,
+    "panel_derived_taker_buy_sell_available": true,
+    "panel_files_read": 81,
+    "preregistration_artifact_loaded": true,
+    "preregistration_payload_hash_verified": true,
+    "symbol_count": 81,
+    "symbols": [
+      "1INCHUSDT",
+      "AAVEUSDT",
+      "ADAUSDT",
+      "AGLDUSDT",
+      "ALGOUSDT",
+      "APEUSDT",
+      "API3USDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "ARUSDT",
+      "ATOMUSDT",
+      "AVAXUSDT",
+      "AXSUSDT",
+      "BANDUSDT",
+      "BATUSDT",
+      "BCHUSDT",
+      "BICOUSDT",
+      "BLURUSDT",
+      "BNBUSDT",
+      "BTCUSDT",
+      "CELOUSDT",
+      "CFXUSDT",
+      "CHZUSDT",
+      "COMPUSDT",
+      "CRVUSDT",
+      "DOGEUSDT",
+      "DOTUSDT",
+      "DYDXUSDT",
+      "EGLDUSDT",
+      "ENSUSDT",
+      "ETCUSDT",
+      "ETHUSDT",
+      "ETHWUSDT",
+      "FILUSDT",
+      "GALAUSDT",
+      "GMTUSDT",
+      "GMXUSDT",
+      "GRTUSDT",
+      "ICPUSDT",
+      "IMXUSDT",
+      "IOSTUSDT",
+      "IOTAUSDT",
+      "KSMUSDT",
+      "LDOUSDT",
+      "LINKUSDT",
+      "LPTUSDT",
+      "LRCUSDT",
+      "LTCUSDT",
+      "MAGICUSDT",
+      "MANAUSDT",
+      "MINAUSDT",
+      "NEARUSDT",
+      "NEOUSDT",
+      "ONTUSDT",
+      "OPUSDT",
+      "ORDIUSDT",
+      "PEOPLEUSDT",
+      "QTUMUSDT",
+      "RSRUSDT",
+      "RVNUSDT",
+      "SANDUSDT",
+      "SNXUSDT",
+      "SOLUSDT",
+      "STXUSDT",
+      "SUIUSDT",
+      "SUSHIUSDT",
+      "THETAUSDT",
+      "TONUSDT",
+      "TRBUSDT",
+      "TRXUSDT",
+      "UMAUSDT",
+      "UNIUSDT",
+      "USDCUSDT",
+      "WOOUSDT",
+      "XLMUSDT",
+      "XRPUSDT",
+      "XTZUSDT",
+      "YFIUSDT",
+      "YGGUSDT",
+      "ZILUSDT",
+      "ZRXUSDT"
+    ],
+    "taker_buy_sell_availability_lock_loaded": true,
+    "used_only_complete_1h_rows": true
+  },
+  "metric_integrity_summary": {
+    "config_id_matches_preregistration": true,
+    "exactly_one_config_executed": true,
+    "metric_integrity_issue_count": 0,
+    "metric_integrity_issues": [],
+    "metric_integrity_passed": true,
+    "no_candidate_edge_release_runtime": true,
+    "no_cross_window_returns_included": true,
+    "no_lookahead": true,
+    "no_nan_or_infinite_metrics": true,
+    "no_non_preregistered_config": true,
+    "no_timestamp_outside_aligned_window": true
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_okx_overlap_taker_flow_momentum_continuation_execution_v1.py",
+  "monthly_stability_summary": {
+    "monthly_positive_rate": 0.0,
+    "monthly_stability_review_preliminary_passed": false,
+    "validation_month_count": 10,
+    "validation_monthly_entry_count_by_month": {
+      "2025-01": 744,
+      "2025-02": 672,
+      "2025-03": 744,
+      "2025-04": 720,
+      "2025-05": 744,
+      "2025-06": 720,
+      "2025-07": 744,
+      "2025-08": 744,
+      "2025-09": 720,
+      "2025-10": 728
+    },
+    "validation_monthly_gross_metric_bps_by_month": {
+      "2025-01": 1.861671,
+      "2025-02": 1.07094,
+      "2025-03": 1.44482,
+      "2025-04": -1.872081,
+      "2025-05": 2.999301,
+      "2025-06": -0.885232,
+      "2025-07": -1.899602,
+      "2025-08": -2.500354,
+      "2025-09": 2.134256,
+      "2025-10": -6.4027
+    },
+    "validation_monthly_net_metric_bps_by_month": {
+      "2025-01": -18.138329,
+      "2025-02": -18.92906,
+      "2025-03": -18.55518,
+      "2025-04": -21.872081,
+      "2025-05": -17.000699,
+      "2025-06": -20.885232,
+      "2025-07": -21.899602,
+      "2025-08": -22.500354,
+      "2025-09": -17.865744,
+      "2025-10": -26.4027
+    },
+    "validation_positive_month_count": 0
+  },
+  "null_baseline_summary": {
+    "block_length_hours": 168,
+    "null_baseline": "deterministic_signal_timestamp_block_shuffle_null",
+    "null_baseline_review_preliminary_passed": false,
+    "null_run_count": 100,
+    "train_null_net_metric_bps_mean": -19.876997,
+    "valid_train_null_run_count": 100,
+    "valid_validation_null_run_count": 100,
+    "validation_null_net_metric_bps_mean": -20.036289,
+    "validation_null_percentile": 0.31
+  },
+  "payload_sha256_excluding_hash": "5f4ab1b09b3308179ad067a704261dbba81b26d86c3d9cb4f6078259293e4952",
+  "per_symbol_input_summary": {
+    "1INCHUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "AAVEUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ADAUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "AGLDUSDT": {
+      "complete_panel_rows_read": 24164,
+      "valid_forward_return_rows": 19797,
+      "valid_taker_buy_share_mom4h_feature_rows": 19781
+    },
+    "ALGOUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "APEUSDT": {
+      "complete_panel_rows_read": 36128,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "API3USDT": {
+      "complete_panel_rows_read": 36691,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "APTUSDT": {
+      "complete_panel_rows_read": 30957,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ARBUSDT": {
+      "complete_panel_rows_read": 27223,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ARUSDT": {
+      "complete_panel_rows_read": 40219,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ATOMUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "AVAXUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "AXSUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "BANDUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "BATUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "BCHUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "BICOUSDT": {
+      "complete_panel_rows_read": 22690,
+      "valid_forward_return_rows": 18323,
+      "valid_taker_buy_share_mom4h_feature_rows": 18307
+    },
+    "BLURUSDT": {
+      "complete_panel_rows_read": 26363,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "BNBUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "BTCUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "CELOUSDT": {
+      "complete_panel_rows_read": 40243,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "CFXUSDT": {
+      "complete_panel_rows_read": 27968,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "CHZUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "COMPUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "CRVUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "DOGEUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "DOTUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "DYDXUSDT": {
+      "complete_panel_rows_read": 40651,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "EGLDUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ENSUSDT": {
+      "complete_panel_rows_read": 38707,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ETCUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ETHUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ETHWUSDT": {
+      "complete_panel_rows_read": 21226,
+      "valid_forward_return_rows": 16859,
+      "valid_taker_buy_share_mom4h_feature_rows": 16843
+    },
+    "FILUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "GALAUSDT": {
+      "complete_panel_rows_read": 40459,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "GMTUSDT": {
+      "complete_panel_rows_read": 36139,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "GMXUSDT": {
+      "complete_panel_rows_read": 28040,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "GRTUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ICPUSDT": {
+      "complete_panel_rows_read": 41732,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "IMXUSDT": {
+      "complete_panel_rows_read": 36835,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "IOSTUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "IOTAUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "KSMUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "LDOUSDT": {
+      "complete_panel_rows_read": 31595,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "LINKUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "LPTUSDT": {
+      "complete_panel_rows_read": 39163,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "LRCUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "LTCUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "MAGICUSDT": {
+      "complete_panel_rows_read": 28604,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "MANAUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "MINAUSDT": {
+      "complete_panel_rows_read": 28284,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "NEARUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "NEOUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ONTUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "OPUSDT": {
+      "complete_panel_rows_read": 34304,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ORDIUSDT": {
+      "complete_panel_rows_read": 21730,
+      "valid_forward_return_rows": 17363,
+      "valid_taker_buy_share_mom4h_feature_rows": 17347
+    },
+    "PEOPLEUSDT": {
+      "complete_panel_rows_read": 38011,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "QTUMUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "RSRUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "RVNUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "SANDUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "SNXUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "SOLUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "STXUSDT": {
+      "complete_panel_rows_read": 27944,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "SUIUSDT": {
+      "complete_panel_rows_read": 26239,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "SUSHIUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "THETAUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "TONUSDT": {
+      "complete_panel_rows_read": 18970,
+      "valid_forward_return_rows": 14603,
+      "valid_taker_buy_share_mom4h_feature_rows": 14587
+    },
+    "TRBUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "TRXUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "UMAUSDT": {
+      "complete_panel_rows_read": 26074,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "UNIUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "USDCUSDT": {
+      "complete_panel_rows_read": 27486,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "WOOUSDT": {
+      "complete_panel_rows_read": 35611,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "XLMUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "XRPUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "XTZUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "YFIUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "YGGUSDT": {
+      "complete_panel_rows_read": 23995,
+      "valid_forward_return_rows": 19628,
+      "valid_taker_buy_share_mom4h_feature_rows": 19612
+    },
+    "ZILUSDT": {
+      "complete_panel_rows_read": 43703,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    },
+    "ZRXUSDT": {
+      "complete_panel_rows_read": 43823,
+      "valid_forward_return_rows": 20472,
+      "valid_taker_buy_share_mom4h_feature_rows": 20464
+    }
+  },
+  "replacement_checks_all_true": true,
+  "return_and_cost_policy": {
+    "annualized": false,
+    "compounded": false,
+    "entry_price": "open at entry timestamp E",
+    "exit_price": "open at E + 8h",
+    "gross_spread_return": "mean(long returns) - mean(short underlying returns)",
+    "holding_period_hours": 8,
+    "metric_units": "bps per eligible entry timestamp",
+    "net_spread_return": "gross_spread_return - 0.0020",
+    "round_trip_cost_bps": 20
+  },
+  "route_family": "CROSS_SECTIONAL_TAKER_BUY_SHARE_MOMENTUM_CONTINUATION_BASELINE",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "closure_required_after_evaluator": true,
+    "edge_claim_allowed_now": false,
+    "evaluator_required_next": true,
+    "family_release_allowed_now": false,
+    "holdout_access_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "okx_panel_access_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_completed": true,
+    "strategy_execution_is_diagnostic_only": true,
+    "strategy_search_allowed_now": false
+  },
+  "signal_coverage_summary": {
+    "average_eligible_symbols_per_timestamp": 80.171796,
+    "invalid_quote_volume_context_count": 648,
+    "max_eligible_symbols_per_timestamp": 81,
+    "median_eligible_symbols_per_timestamp": 81.0,
+    "min_eligible_symbols_per_timestamp": 0,
+    "missing_entry_or_exit_row_count": 0,
+    "signal_coverage_review_preliminary_passed": true,
+    "skipped_timestamps_insufficient_leg_symbols": 0,
+    "skipped_timestamps_insufficient_symbols": 8,
+    "train_eligible_timestamp_count": 13184,
+    "validation_eligible_timestamp_count": 7280
+  },
+  "signal_definition": {
+    "long_leg": "top 20 percent highest signal",
+    "minimum_eligible_symbols": 60,
+    "minimum_long_symbols": 5,
+    "minimum_short_symbols": 5,
+    "no_current_hour_leakage": true,
+    "prior_4h_avg": "average share over E-8h, E-7h, E-6h, E-5h",
+    "rank_policy": "ascending by signal, tie by symbol",
+    "recent_4h_avg": "average share over E-4h, E-3h, E-2h, E-1h",
+    "required_prior_complete_bars_per_symbol": 8,
+    "short_leg": "bottom 20 percent lowest signal",
+    "signal_name": "taker_buy_share_mom4h",
+    "taker_buy_quote_share": "taker_buy_quote_volume / quote_volume",
+    "taker_buy_share_mom4h": "recent_4h_avg - prior_4h_avg"
+  },
+  "source_artifacts": {
+    "panel_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_near_5y_1m_to_1h_panel_build_execution_v1\\panel_1h_by_symbol",
+    "payload_hashes": {
+      "artifacts/coverage_locks/binance_usdt_perpetual_1m_coverage_discovery_lock_v1.json": "18a84b71c649b0462fdb0d511597dcb701448fe06184ef9c8da93d6911ada4e0",
+      "artifacts/panel_build_manifests/binance_okx_overlap_near_5y_1m_to_1h_panel_build_manifest_v1.json": "bf4d4d681f36fab3a2131701e25ebc45c94ddb757f92874498ef425d698f40a7",
+      "artifacts/panel_build_previews/binance_near_5y_coverage_lock_review_okx_overlap_panel_build_preview_v1.json": "16e93ca05fe28f0d101d5228e299306bad3aea171f22bc6901f770b0ecf3a3d9",
+      "artifacts/panel_build_reviews/binance_okx_overlap_near_5y_panel_build_review_after_execution_v1.json": "34b88a3ff0870c708e2df034c243cf639b711ebce3c6a4f32edffb92a2229112",
+      "artifacts/research_preregistrations/binance_okx_overlap_taker_flow_momentum_continuation_preregistration_contract_v1.json": "572682b83593e29bece7d63a39af6f536db1eaa84d45330e39c0f863864da84b",
+      "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json": "0cfe239f6f5ad2d20bda64b827416851de8f5b959066902b59f1f00f44eba716",
+      "artifacts/taker_buy_sell_volume_availability_locks/binance_okx_overlap_taker_buy_sell_volume_history_availability_discovery_lock_v1.json": "c38473ac64e04264f89e5838886d415b6b3537a7885f9a5f477b968b75cb767c"
+    }
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_TAKER_FLOW_MOMENTUM_CONTINUATION_EXECUTED",
+  "train_validation_summary": {
+    "aligned_window_end_exclusive_utc": "2025-10-31T16:00:00Z",
+    "aligned_window_start_utc": "2023-07-01T00:00:00Z",
+    "train": {
+      "entry_count": 13184,
+      "gross_metric_bps": -0.23015,
+      "net_metric_bps": -20.23015,
+      "positive_after_cost": false
+    },
+    "train_window_end_exclusive_utc": "2025-01-01T00:00:00Z",
+    "train_window_start_utc": "2023-07-01T00:00:00Z",
+    "validation": {
+      "entry_count": 7280,
+      "gross_metric_bps": -0.408263,
+      "net_metric_bps": -20.408263,
+      "positive_after_cost": false
+    },
+    "validation_window_end_exclusive_utc": "2025-10-31T16:00:00Z",
+    "validation_window_start_utc": "2025-01-01T00:00:00Z"
+  },
+  "turnover_concentration_summary": {
+    "average_turnover": 0.637565,
+    "max_turnover": 0.896552,
+    "median_turnover": 0.638298,
+    "symbol_exposure_share_top10": [
+      {
+        "exposure_share": 0.025341,
+        "selection_count": 16411,
+        "symbol": "USDCUSDT"
+      },
+      {
+        "exposure_share": 0.017046,
+        "selection_count": 11039,
+        "symbol": "GMXUSDT"
+      },
+      {
+        "exposure_share": 0.016788,
+        "selection_count": 10872,
+        "symbol": "RVNUSDT"
+      },
+      {
+        "exposure_share": 0.016777,
+        "selection_count": 10865,
+        "symbol": "BATUSDT"
+      },
+      {
+        "exposure_share": 0.016661,
+        "selection_count": 10790,
+        "symbol": "IOSTUSDT"
+      },
+      {
+        "exposure_share": 0.01615,
+        "selection_count": 10459,
+        "symbol": "UMAUSDT"
+      },
+      {
+        "exposure_share": 0.016073,
+        "selection_count": 10409,
+        "symbol": "TRXUSDT"
+      },
+      {
+        "exposure_share": 0.015653,
+        "selection_count": 10137,
+        "symbol": "ZILUSDT"
+      },
+      {
+        "exposure_share": 0.01561,
+        "selection_count": 10109,
+        "symbol": "ONTUSDT"
+      },
+      {
+        "exposure_share": 0.015324,
+        "selection_count": 9924,
+        "symbol": "BICOUSDT"
+      }
+    ],
+    "top_symbol_exposure_share": 0.025341,
+    "turnover_concentration_review_preliminary_passed": true
+  },
+  "validation_checks": {
+    "aligned_window_verified": true,
+    "binance_1h_panel_rows_read_for_execution": true,
+    "config_count_verified_1": true,
+    "config_id_matches_preregistration": true,
+    "exact_overlap_symbol_count_verified_81": true,
+    "exactly_one_new_tracked_json_execution_artifact_expected": true,
+    "exactly_one_new_tracked_python_tool_file_expected": true,
+    "execution_artifact_json_valid": true,
+    "execution_artifact_path_equals_required_path": true,
+    "funding_rows_not_read": true,
+    "metric_integrity_checks_created": true,
+    "module_path_equals_required_path": true,
+    "monthly_stability_created": true,
+    "no_binance_1m_source_rows_read": true,
+    "no_binance_api_call": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified_expected": true,
+    "no_funding_data_fetched": true,
+    "no_funding_endpoint_called": true,
+    "no_network_used": true,
+    "no_okx_panel_rows_read": true,
+    "no_other_tracked_files_expected": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_search": true,
+    "null_baseline_complete": true,
+    "panel_review_loaded": true,
+    "panel_schema_checked_from_artifacts": true,
+    "payload_sha256_excluding_hash_present": true,
+    "preregistration_artifact_loaded": true,
+    "preregistration_payload_hash_verified": true,
+    "replacement_checks_all_true": true,
+    "route_family_verified": true,
+    "signal_coverage_created": true,
+    "status_equals_required_status": true,
+    "turnover_concentration_created": true
+  }
+}

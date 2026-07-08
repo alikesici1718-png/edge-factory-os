@@ -1,0 +1,119 @@
+{
+  "plugin_key": "PRE_REGISTERED_RESEARCH_REDESIGN_PLUGIN_V1",
+  "plugin_type": "METHODOLOGY_ONLY_PRE_REGISTERED_RESEARCH_REDESIGN_GOVERNANCE",
+  "research_key": "PRE_REGISTERED_RESEARCH_REDESIGN_AND_HOLDOUT_GOVERNANCE_V1",
+  "direction_queue_key": "RD7_01_PRE_REGISTERED_RESEARCH_REDESIGN_AND_HOLDOUT_GOVERNANCE",
+  "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+  "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+  "ledger_status": "GLOBAL_MULTIPLE_TESTING_LEDGER_ACTIVE_RESEARCH_LOCKED",
+  "research_budget_status": "STRATEGY_SEARCH_BUDGET_LOCKED_UNTIL_GOVERNANCE_REPAIR",
+  "anti_overfitting_state_status": "ANTI_OVERFITTING_GOVERNANCE_ACTIVE_RESEARCH_REPAIR_REQUIRED",
+  "vault_status": "PROMISING_SIGNAL_VAULT_ACTIVE_RELEASE_BLOCKED",
+  "lesson_count": 24,
+  "blocked_route_count": 18,
+  "vault_item_count": 1,
+  "governance_requirements": [
+    "pre_registered_contract_before_any_search",
+    "route_budget_allocation_before_any_search",
+    "global_multiple_testing_ledger_consumed_before_any_search",
+    "promising_signal_vault_consumed_before_redesign",
+    "blocked_route_hash_preflight",
+    "nested_search_validation_split_required",
+    "untouched_final_holdout_registry_required",
+    "procedural_joint_null_required_for_search_procedure",
+    "familywise_or_route_family_alpha_correction_required",
+    "no_release_from_diagnostic_or_preview_only",
+    "all_candidate_family_runtime_capital_live_flags_false"
+  ],
+  "nested_validation_requirements": {
+    "search_set": {
+      "purpose": "allowed to explore within pre-registered route budget only",
+      "may_influence_hypothesis": true,
+      "may_influence_release": false
+    },
+    "validation_set": {
+      "purpose": "test pre-registered hypothesis after search is fixed",
+      "may_influence_hypothesis": false,
+      "may_influence_release": false
+    },
+    "untouched_final_holdout": {
+      "purpose": "single-use final examination after full governance chain passes",
+      "may_influence_hypothesis": false,
+      "may_be_reused": false,
+      "required_before_any_candidate_release": true
+    }
+  },
+  "route_budget_rules": {
+    "strategy_search_allowed_now": false,
+    "methodology_repair_allowed_now": true,
+    "default_new_route_budget": 0,
+    "redesign_budget_requires_manual_governance_contract": true,
+    "promising_vault_redesign_budget_requires": [
+      "new_route_hash",
+      "material_difference_report",
+      "explicit alpha allocation",
+      "nested validation plan",
+      "untouched holdout plan",
+      "procedural null plan"
+    ],
+    "budget_spend_events": [
+      "route_family_created",
+      "feature_family_scanned",
+      "threshold_grid_scanned",
+      "axis_family_scanned",
+      "null_model_family_added",
+      "evaluator_or_deep_validation_run"
+    ]
+  },
+  "alpha_policy": {
+    "familywise_alpha": 0.05,
+    "diagnostic_alpha_source": "global_multiple_testing_ledger_v1",
+    "effective_comparison_count": 2880,
+    "diagnostic_alpha_after_pressure": 1.736111111111111e-05,
+    "future_alpha_must_be_allocated_before_run": true,
+    "post_hoc_alpha_allocation_allowed": false,
+    "procedural_null_p_value_required": true,
+    "single_axis_null_not_sufficient_after_search": true
+  },
+  "forbidden_actions": [
+    "strategy_search_without_budget",
+    "post_hoc_threshold_selection",
+    "post_hoc_feature_selection_without_accounting",
+    "single_axis_null_after_multi_axis_search",
+    "same_route_hash_reuse",
+    "untouched_holdout_peeking",
+    "candidate_generation",
+    "candidate_contract",
+    "family_release",
+    "runtime_touch",
+    "capital_change",
+    "active_paper",
+    "live_trading",
+    "real_orders"
+  ],
+  "required_runner_outputs": [
+    "pre_registration_policy_validation_report",
+    "holdout_governance_policy_validation_report",
+    "route_budget_policy_validation_report",
+    "promising_signal_vault_consumption_report",
+    "global_alpha_accounting_readiness_report",
+    "blocked_route_hash_preflight_report",
+    "governance_gate_table",
+    "methodology_repair_next_queue"
+  ],
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

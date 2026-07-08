@@ -1,0 +1,38 @@
+{
+  "active_paper_allowed": false,
+  "archive_performed": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T02:30:47.347444+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "next_steps": [
+    {
+      "active_paper_allowed": false,
+      "allowed_scope": "READ_ONLY_RUNTIME_MONITORING",
+      "candidate_generation_allowed": false,
+      "capital_change_allowed": false,
+      "family_release_allowed": false,
+      "live_allowed": false,
+      "module": "edge_factory_os_runtime_family_monitor_refresh_old_short_aware_v1.py",
+      "old_short_research_invalidation_applies": false,
+      "purpose": "Refresh runtime family monitor with old_short-aware separation; no capital/runtime/live action.",
+      "real_orders_allowed": false,
+      "research_key": "RD8_07_RUNTIME_FAMILY_MONITOR_REFRESH_OLD_SHORT_AWARE",
+      "runtime_touch_allowed": false
+    }
+  ],
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "queue_name": "edge_factory_os_family_registry_and_lesson_enforcer_repair_next_queue_v1",
+  "queue_status": "FAMILY_REGISTRY_LESSON_ENFORCER_NEXT_QUEUE_READY",
+  "real_orders_allowed": false,
+  "runtime_touch_allowed": false,
+  "top_next_module": "edge_factory_os_runtime_family_monitor_refresh_old_short_aware_v1.py",
+  "top_next_research_key": "RD8_07_RUNTIME_FAMILY_MONITOR_REFRESH_OLD_SHORT_AWARE"
+}

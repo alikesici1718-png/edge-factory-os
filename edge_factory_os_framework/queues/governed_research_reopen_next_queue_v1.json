@@ -1,0 +1,42 @@
+{
+  "queue_name": "edge_factory_os_governed_research_reopen_next_queue_v1",
+  "created_at_utc": "2026-05-14T01:42:16.412437+00:00",
+  "queue_status": "GOVERNED_RESEARCH_REOPEN_NEXT_QUEUE_READY",
+  "broad_strategy_search_allowed": false,
+  "restricted_pre_registered_research_contract_allowed": true,
+  "top_next_research_key": "RD7_05_RESTRICTED_PRE_REGISTERED_RESEARCH_CONTRACT_FACTORY",
+  "top_next_module": "edge_factory_os_restricted_pre_registered_research_contract_factory_v1.py",
+  "next_steps": [
+    {
+      "research_key": "RD7_05_RESTRICTED_PRE_REGISTERED_RESEARCH_CONTRACT_FACTORY",
+      "module": "edge_factory_os_restricted_pre_registered_research_contract_factory_v1.py",
+      "priority": 100,
+      "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+      "purpose": "Build a factory that can create a narrow pre-registered research contract from vault/ledger under explicit alpha and route budget, without running research.",
+      "broad_strategy_search_allowed": false,
+      "strategy_execution_allowed": false,
+      "candidate_generation_allowed": false,
+      "family_release_allowed": false,
+      "runtime_touch_allowed": false,
+      "capital_change_allowed": false,
+      "active_paper_allowed": false,
+      "live_allowed": false,
+      "real_orders_allowed": false
+    }
+  ],
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

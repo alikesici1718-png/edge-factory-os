@@ -1,0 +1,504 @@
+{
+  "acquisition_manifest_review": {
+    "checksum_verified_zip_count": 36,
+    "data_outside_repo_only": true,
+    "funding_records": 1629,
+    "payload_sha256_excluding_hash": "96c75d66548228a590a603ca0c226db04e578c35231b420f82004d0c29d8532b",
+    "perp_rows": 13032,
+    "spot_rows": 13032,
+    "status_verified": true,
+    "symbol_count": 3,
+    "symbol_count_verified_3": true,
+    "window_end_exclusive_utc": "2026-05-01T00:00:00Z",
+    "window_start_utc": "2025-11-01T00:00:00Z",
+    "window_verified": true,
+    "zip_count": 36
+  },
+  "aggregate_validation_review": {
+    "duplicate_counts": {
+      "funding": 0,
+      "perp": 0,
+      "spot": 0
+    },
+    "file_hash_maps": {
+      "funding": {
+        "BTCUSDT": "9b719664b5070a3144f44389e8b239cca8578035b7d3c30a8dc9aff0a2bc39d9",
+        "ETHUSDT": "4d064151f648ffea1f4027a211daad69a5fd35cd250d9009eb565b553dd1af0b",
+        "SOLUSDT": "6e7bc3dd6b4c80e364ba1a15511d086dfabead70356510a278fcc219808308dc"
+      },
+      "perp": {
+        "BTCUSDT": "5fd60be1fc4e39bb59a89602c5bee694709fa3b59daf89a1f7704f450e77402d",
+        "ETHUSDT": "00910dcb9c25e63ba6b7b60acca3b55ad8452a30a04ffc189b431bbfc7ef4940",
+        "SOLUSDT": "a5a0b145c68f929973d42a9b385eba3922e4e4c17546d453fa2a4767a0f30a9d"
+      },
+      "spot": {
+        "BTCUSDT": "3b2e5a7cf2cb4279db18155093dce47b5a52f46f144791a42a55ee3f1e4bbed2",
+        "ETHUSDT": "cd44a34ed275b263a2a48a3da26b78dc4260f1b39d9148dc2624f0bc01b18be8",
+        "SOLUSDT": "91410d8207727e89a933bf1871bca356c51b4c3b28c4675a1f7798a16c3c8a3c"
+      }
+    },
+    "index_hash": "6ecade3fd981319878fafcb54e650fbc8fe88567ea551ea0112f9527a0d55cd3",
+    "missing_invalid_field_counts": {
+      "invalid_numeric": 0,
+      "malformed_json": 0,
+      "missing_fields": 0,
+      "wrong_symbol": 0
+    },
+    "numeric_sanity_valid": true,
+    "ohlc_sanity_valid": true,
+    "p0_issues": [],
+    "p1_attention_items": [],
+    "panel_complete_1h_all_true": true,
+    "panel_header_valid": true,
+    "reviewed_funding_records": 1629,
+    "reviewed_max_funding_timestamp": "2026-04-30T16:00:00Z",
+    "reviewed_max_perp_timestamp": "2026-04-30T23:00:00Z",
+    "reviewed_max_spot_timestamp": "2026-04-30T23:00:00Z",
+    "reviewed_min_funding_timestamp": "2025-11-01T00:00:00Z",
+    "reviewed_min_perp_timestamp": "2025-11-01T00:00:00Z",
+    "reviewed_min_spot_timestamp": "2025-11-01T00:00:00Z",
+    "reviewed_perp_rows": 13032,
+    "reviewed_spot_rows": 13032,
+    "reviewed_symbol_count": 3
+  },
+  "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_FORWARD_EXTENSION_DATA_REVIEW",
+  "cross_layer_alignment_review": {
+    "BTCUSDT": {
+      "funding_event_interval_gap_summary": {
+        "event_count": 543,
+        "gap_count": 542,
+        "max_8h_gap_jitter_ms": 16,
+        "max_gap_hours": 8.000004444444444,
+        "min_gap_hours": 7.999995833333333,
+        "non_8h_gap_count": 0,
+        "unique_gap_hours_rounded": [
+          8
+        ]
+      },
+      "funding_record_count": 543,
+      "min_max_timestamp_by_layer": {
+        "funding": {
+          "max": "2026-04-30T16:00:00Z",
+          "min": "2025-11-01T00:00:00Z"
+        },
+        "perp": {
+          "max": "2026-04-30T23:00:00Z",
+          "min": "2025-11-01T00:00:00Z"
+        },
+        "spot": {
+          "max": "2026-04-30T23:00:00Z",
+          "min": "2025-11-01T00:00:00Z"
+        }
+      },
+      "perp_only_missing_hours": 0,
+      "perp_row_count": 4344,
+      "spot_only_missing_hours": 0,
+      "spot_perp_common_hourly_timestamp_count": 4344,
+      "spot_row_count": 4344,
+      "symbol": "BTCUSDT"
+    },
+    "ETHUSDT": {
+      "funding_event_interval_gap_summary": {
+        "event_count": 543,
+        "gap_count": 542,
+        "max_8h_gap_jitter_ms": 16,
+        "max_gap_hours": 8.000004444444444,
+        "min_gap_hours": 7.999995833333333,
+        "non_8h_gap_count": 0,
+        "unique_gap_hours_rounded": [
+          8
+        ]
+      },
+      "funding_record_count": 543,
+      "min_max_timestamp_by_layer": {
+        "funding": {
+          "max": "2026-04-30T16:00:00Z",
+          "min": "2025-11-01T00:00:00Z"
+        },
+        "perp": {
+          "max": "2026-04-30T23:00:00Z",
+          "min": "2025-11-01T00:00:00Z"
+        },
+        "spot": {
+          "max": "2026-04-30T23:00:00Z",
+          "min": "2025-11-01T00:00:00Z"
+        }
+      },
+      "perp_only_missing_hours": 0,
+      "perp_row_count": 4344,
+      "spot_only_missing_hours": 0,
+      "spot_perp_common_hourly_timestamp_count": 4344,
+      "spot_row_count": 4344,
+      "symbol": "ETHUSDT"
+    },
+    "SOLUSDT": {
+      "funding_event_interval_gap_summary": {
+        "event_count": 543,
+        "gap_count": 542,
+        "max_8h_gap_jitter_ms": 16,
+        "max_gap_hours": 8.000004444444444,
+        "min_gap_hours": 7.999995833333333,
+        "non_8h_gap_count": 0,
+        "unique_gap_hours_rounded": [
+          8
+        ]
+      },
+      "funding_record_count": 543,
+      "min_max_timestamp_by_layer": {
+        "funding": {
+          "max": "2026-04-30T16:00:00Z",
+          "min": "2025-11-01T00:00:00Z"
+        },
+        "perp": {
+          "max": "2026-04-30T23:00:00Z",
+          "min": "2025-11-01T00:00:00Z"
+        },
+        "spot": {
+          "max": "2026-04-30T23:00:00Z",
+          "min": "2025-11-01T00:00:00Z"
+        }
+      },
+      "perp_only_missing_hours": 0,
+      "perp_row_count": 4344,
+      "spot_only_missing_hours": 0,
+      "spot_perp_common_hourly_timestamp_count": 4344,
+      "spot_row_count": 4344,
+      "symbol": "SOLUSDT"
+    }
+  },
+  "data_validity_classification": "FORWARD_EXTENSION_DATA_REVIEW_PASS_VALID_FOR_EXTENDED_FUNDING_CARRY_DIAGNOSTIC",
+  "external_index_review": {
+    "expected_index_file_sha256": "6ecade3fd981319878fafcb54e650fbc8fe88567ea551ea0112f9527a0d55cd3",
+    "expected_index_payload_sha256": "01ddc9e75da418696fa92f18d7bd12745b8a9f3b1382507b36e73979233e18a8",
+    "index_exists": true,
+    "index_file_hash_matches_manifest": true,
+    "index_file_sha256": "6ecade3fd981319878fafcb54e650fbc8fe88567ea551ea0112f9527a0d55cd3",
+    "index_outside_repo": true,
+    "index_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\extension_index\\binance_spot_perp_funding_carry_forward_extension_index_v1.json",
+    "index_payload_hash_matches_manifest": true,
+    "index_payload_sha256": "01ddc9e75da418696fa92f18d7bd12745b8a9f3b1382507b36e73979233e18a8",
+    "references_exactly_3_funding_files": true,
+    "references_exactly_3_perp_files": true,
+    "references_exactly_3_spot_files": true,
+    "symbol_count": 3
+  },
+  "funding_file_review": {
+    "BTCUSDT": {
+      "duplicate_symbol_time_count": 0,
+      "expected_sha256": "9b719664b5070a3144f44389e8b239cca8578035b7d3c30a8dc9aff0a2bc39d9",
+      "file_exists": true,
+      "file_sha256": "9b719664b5070a3144f44389e8b239cca8578035b7d3c30a8dc9aff0a2bc39d9",
+      "funding_event_interval_gap_summary": {
+        "event_count": 543,
+        "gap_count": 542,
+        "max_8h_gap_jitter_ms": 16,
+        "max_gap_hours": 8.000004444444444,
+        "min_gap_hours": 7.999995833333333,
+        "non_8h_gap_count": 0,
+        "unique_gap_hours_rounded": [
+          8
+        ]
+      },
+      "hash_matches_expected": true,
+      "invalid_numeric_count": 0,
+      "malformed_json_count": 0,
+      "mark_price_numeric_fail_count": 0,
+      "max_funding_time_utc": "2026-04-30T16:00:00Z",
+      "max_timestamp_utc_ms_jitter": 16,
+      "min_funding_time_utc": "2025-11-01T00:00:00Z",
+      "missing_field_count": 0,
+      "outside_repo": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol\\BTCUSDT_funding_forward_202511_202604.jsonl.gz",
+      "record_count": 543,
+      "rows_outside_window": 0,
+      "strictly_increasing": true,
+      "symbol": "BTCUSDT",
+      "timestamp_utc_ms_jitter_count": 311,
+      "wrong_symbol_count": 0
+    },
+    "ETHUSDT": {
+      "duplicate_symbol_time_count": 0,
+      "expected_sha256": "4d064151f648ffea1f4027a211daad69a5fd35cd250d9009eb565b553dd1af0b",
+      "file_exists": true,
+      "file_sha256": "4d064151f648ffea1f4027a211daad69a5fd35cd250d9009eb565b553dd1af0b",
+      "funding_event_interval_gap_summary": {
+        "event_count": 543,
+        "gap_count": 542,
+        "max_8h_gap_jitter_ms": 16,
+        "max_gap_hours": 8.000004444444444,
+        "min_gap_hours": 7.999995833333333,
+        "non_8h_gap_count": 0,
+        "unique_gap_hours_rounded": [
+          8
+        ]
+      },
+      "hash_matches_expected": true,
+      "invalid_numeric_count": 0,
+      "malformed_json_count": 0,
+      "mark_price_numeric_fail_count": 0,
+      "max_funding_time_utc": "2026-04-30T16:00:00Z",
+      "max_timestamp_utc_ms_jitter": 16,
+      "min_funding_time_utc": "2025-11-01T00:00:00Z",
+      "missing_field_count": 0,
+      "outside_repo": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol\\ETHUSDT_funding_forward_202511_202604.jsonl.gz",
+      "record_count": 543,
+      "rows_outside_window": 0,
+      "strictly_increasing": true,
+      "symbol": "ETHUSDT",
+      "timestamp_utc_ms_jitter_count": 311,
+      "wrong_symbol_count": 0
+    },
+    "SOLUSDT": {
+      "duplicate_symbol_time_count": 0,
+      "expected_sha256": "6e7bc3dd6b4c80e364ba1a15511d086dfabead70356510a278fcc219808308dc",
+      "file_exists": true,
+      "file_sha256": "6e7bc3dd6b4c80e364ba1a15511d086dfabead70356510a278fcc219808308dc",
+      "funding_event_interval_gap_summary": {
+        "event_count": 543,
+        "gap_count": 542,
+        "max_8h_gap_jitter_ms": 16,
+        "max_gap_hours": 8.000004444444444,
+        "min_gap_hours": 7.999995833333333,
+        "non_8h_gap_count": 0,
+        "unique_gap_hours_rounded": [
+          8
+        ]
+      },
+      "hash_matches_expected": true,
+      "invalid_numeric_count": 0,
+      "malformed_json_count": 0,
+      "mark_price_numeric_fail_count": 0,
+      "max_funding_time_utc": "2026-04-30T16:00:00Z",
+      "max_timestamp_utc_ms_jitter": 16,
+      "min_funding_time_utc": "2025-11-01T00:00:00Z",
+      "missing_field_count": 0,
+      "outside_repo": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol\\SOLUSDT_funding_forward_202511_202604.jsonl.gz",
+      "record_count": 543,
+      "rows_outside_window": 0,
+      "strictly_increasing": true,
+      "symbol": "SOLUSDT",
+      "timestamp_utc_ms_jitter_count": 311,
+      "wrong_symbol_count": 0
+    }
+  },
+  "limitations": [
+    "Data review only; no strategy execution or return computation was performed.",
+    "Review covers only the acquired forward closed-month extension through 2026-05-01 exclusive.",
+    "May 2026 daily partial data was intentionally not reviewed because it was not acquired.",
+    "No network or API calls were used by this review."
+  ],
+  "module": "edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_data_review_v1",
+  "next_allowed_step": "EXTENDED_FUNDING_CARRY_DIAGNOSTIC_ONLY",
+  "payload_sha256_excluding_hash": "99941fa6975402af3828c974559e3974df9f60ead88096d55b9e873a9fcaf176",
+  "perp_file_review": {
+    "BTCUSDT": {
+      "complete_1h_all_true": true,
+      "duplicate_symbol_hour_count": 0,
+      "expected_sha256": "5fd60be1fc4e39bb59a89602c5bee694709fa3b59daf89a1f7704f450e77402d",
+      "file_exists": true,
+      "file_sha256": "5fd60be1fc4e39bb59a89602c5bee694709fa3b59daf89a1f7704f450e77402d",
+      "gap_count": 0,
+      "hash_matches_expected": true,
+      "header_ok": true,
+      "hourly_aligned": true,
+      "invalid_numeric_count": 0,
+      "layer": "perp",
+      "max_timestamp_utc": "2026-04-30T23:00:00Z",
+      "min_timestamp_utc": "2025-11-01T00:00:00Z",
+      "missing_field_count": 0,
+      "ohlc_sanity_valid": true,
+      "outside_repo": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol\\BTCUSDT_perp_1h_forward_202511_202604.csv.gz",
+      "row_count": 4344,
+      "rows_outside_window": 0,
+      "strictly_increasing": true,
+      "symbol": "BTCUSDT",
+      "wrong_symbol_count": 0
+    },
+    "ETHUSDT": {
+      "complete_1h_all_true": true,
+      "duplicate_symbol_hour_count": 0,
+      "expected_sha256": "00910dcb9c25e63ba6b7b60acca3b55ad8452a30a04ffc189b431bbfc7ef4940",
+      "file_exists": true,
+      "file_sha256": "00910dcb9c25e63ba6b7b60acca3b55ad8452a30a04ffc189b431bbfc7ef4940",
+      "gap_count": 0,
+      "hash_matches_expected": true,
+      "header_ok": true,
+      "hourly_aligned": true,
+      "invalid_numeric_count": 0,
+      "layer": "perp",
+      "max_timestamp_utc": "2026-04-30T23:00:00Z",
+      "min_timestamp_utc": "2025-11-01T00:00:00Z",
+      "missing_field_count": 0,
+      "ohlc_sanity_valid": true,
+      "outside_repo": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol\\ETHUSDT_perp_1h_forward_202511_202604.csv.gz",
+      "row_count": 4344,
+      "rows_outside_window": 0,
+      "strictly_increasing": true,
+      "symbol": "ETHUSDT",
+      "wrong_symbol_count": 0
+    },
+    "SOLUSDT": {
+      "complete_1h_all_true": true,
+      "duplicate_symbol_hour_count": 0,
+      "expected_sha256": "a5a0b145c68f929973d42a9b385eba3922e4e4c17546d453fa2a4767a0f30a9d",
+      "file_exists": true,
+      "file_sha256": "a5a0b145c68f929973d42a9b385eba3922e4e4c17546d453fa2a4767a0f30a9d",
+      "gap_count": 0,
+      "hash_matches_expected": true,
+      "header_ok": true,
+      "hourly_aligned": true,
+      "invalid_numeric_count": 0,
+      "layer": "perp",
+      "max_timestamp_utc": "2026-04-30T23:00:00Z",
+      "min_timestamp_utc": "2025-11-01T00:00:00Z",
+      "missing_field_count": 0,
+      "ohlc_sanity_valid": true,
+      "outside_repo": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol\\SOLUSDT_perp_1h_forward_202511_202604.csv.gz",
+      "row_count": 4344,
+      "rows_outside_window": 0,
+      "strictly_increasing": true,
+      "symbol": "SOLUSDT",
+      "wrong_symbol_count": 0
+    }
+  },
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "data_valid_for_extended_funding_carry_diagnostic": true,
+    "edge_claim_allowed_now": false,
+    "forward_extension_data_review_created": true,
+    "live_permission_allowed_now": false,
+    "next_step_may_be_extended_funding_carry_diagnostic_only": true,
+    "next_step_must_not_be_live_or_capital": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "acquisition_manifest": {
+      "path": "artifacts/data_acquisition_locks/binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1.json",
+      "payload_sha256_excluding_hash": "96c75d66548228a590a603ca0c226db04e578c35231b420f82004d0c29d8532b",
+      "status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_FORWARD_EXTENSION_ACQUISITION_LOCK_CREATED"
+    },
+    "external_index": {
+      "external_index_sha256": "01ddc9e75da418696fa92f18d7bd12745b8a9f3b1382507b36e73979233e18a8",
+      "index_file_sha256": "6ecade3fd981319878fafcb54e650fbc8fe88567ea551ea0112f9527a0d55cd3",
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\extension_index\\binance_spot_perp_funding_carry_forward_extension_index_v1.json"
+    }
+  },
+  "source_checkpoint": {
+    "artifact_path": "artifacts/data_reviews/binance_spot_perp_funding_carry_forward_extension_data_review_v1.json",
+    "created_at_utc": "2026-05-25T15:54:38Z",
+    "expected_head": "1955537b1adc69997914c20cf0dc72d614aad44a",
+    "tool_path": "tools/edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_data_review_v1.py",
+    "tracked_python_count_before": 904
+  },
+  "spot_file_review": {
+    "BTCUSDT": {
+      "complete_1h_all_true": true,
+      "duplicate_symbol_hour_count": 0,
+      "expected_sha256": "3b2e5a7cf2cb4279db18155093dce47b5a52f46f144791a42a55ee3f1e4bbed2",
+      "file_exists": true,
+      "file_sha256": "3b2e5a7cf2cb4279db18155093dce47b5a52f46f144791a42a55ee3f1e4bbed2",
+      "gap_count": 0,
+      "hash_matches_expected": true,
+      "header_ok": true,
+      "hourly_aligned": true,
+      "invalid_numeric_count": 0,
+      "layer": "spot",
+      "max_timestamp_utc": "2026-04-30T23:00:00Z",
+      "min_timestamp_utc": "2025-11-01T00:00:00Z",
+      "missing_field_count": 0,
+      "ohlc_sanity_valid": true,
+      "outside_repo": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol\\BTCUSDT_spot_1h_forward_202511_202604.csv.gz",
+      "row_count": 4344,
+      "rows_outside_window": 0,
+      "strictly_increasing": true,
+      "symbol": "BTCUSDT",
+      "wrong_symbol_count": 0
+    },
+    "ETHUSDT": {
+      "complete_1h_all_true": true,
+      "duplicate_symbol_hour_count": 0,
+      "expected_sha256": "cd44a34ed275b263a2a48a3da26b78dc4260f1b39d9148dc2624f0bc01b18be8",
+      "file_exists": true,
+      "file_sha256": "cd44a34ed275b263a2a48a3da26b78dc4260f1b39d9148dc2624f0bc01b18be8",
+      "gap_count": 0,
+      "hash_matches_expected": true,
+      "header_ok": true,
+      "hourly_aligned": true,
+      "invalid_numeric_count": 0,
+      "layer": "spot",
+      "max_timestamp_utc": "2026-04-30T23:00:00Z",
+      "min_timestamp_utc": "2025-11-01T00:00:00Z",
+      "missing_field_count": 0,
+      "ohlc_sanity_valid": true,
+      "outside_repo": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol\\ETHUSDT_spot_1h_forward_202511_202604.csv.gz",
+      "row_count": 4344,
+      "rows_outside_window": 0,
+      "strictly_increasing": true,
+      "symbol": "ETHUSDT",
+      "wrong_symbol_count": 0
+    },
+    "SOLUSDT": {
+      "complete_1h_all_true": true,
+      "duplicate_symbol_hour_count": 0,
+      "expected_sha256": "91410d8207727e89a933bf1871bca356c51b4c3b28c4675a1f7798a16c3c8a3c",
+      "file_exists": true,
+      "file_sha256": "91410d8207727e89a933bf1871bca356c51b4c3b28c4675a1f7798a16c3c8a3c",
+      "gap_count": 0,
+      "hash_matches_expected": true,
+      "header_ok": true,
+      "hourly_aligned": true,
+      "invalid_numeric_count": 0,
+      "layer": "spot",
+      "max_timestamp_utc": "2026-04-30T23:00:00Z",
+      "min_timestamp_utc": "2025-11-01T00:00:00Z",
+      "missing_field_count": 0,
+      "ohlc_sanity_valid": true,
+      "outside_repo": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol\\SOLUSDT_spot_1h_forward_202511_202604.csv.gz",
+      "row_count": 4344,
+      "rows_outside_window": 0,
+      "strictly_increasing": true,
+      "symbol": "SOLUSDT",
+      "wrong_symbol_count": 0
+    }
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_FORWARD_EXTENSION_DATA_REVIEW_CREATED",
+  "validation_checks": {
+    "acquisition_manifest_loaded": true,
+    "acquisition_status_verified": true,
+    "all_external_files_exist": true,
+    "all_external_files_outside_repo": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "external_index_loaded": true,
+    "funding_records_match_manifest": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_duplicate_funding_symbol_time": true,
+    "no_duplicate_perp_symbol_hour": true,
+    "no_duplicate_spot_symbol_hour": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_network_used": true,
+    "no_rows_outside_window": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_execution": true,
+    "numeric_sanity_valid": true,
+    "ohlc_sanity_valid": true,
+    "perp_rows_match_manifest": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "reviewed_symbol_count_verified_3": true,
+    "spot_rows_match_manifest": true
+  }
+}

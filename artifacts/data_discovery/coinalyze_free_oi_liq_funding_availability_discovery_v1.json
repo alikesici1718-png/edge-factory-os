@@ -1,0 +1,85 @@
+{
+  "api_key_handling": {
+    "api_key_loaded": false,
+    "api_key_persisted": false,
+    "api_key_read_attempted_from_env_only": true,
+    "api_key_required": true,
+    "api_key_value_written": false,
+    "blocked_reason": "BLOCKED_COINALYZE_API_KEY_MISSING",
+    "env_var_name": "COINALYZE_API_KEY",
+    "env_var_present": false
+  },
+  "artifact_kind": "COINALYZE_FREE_OI_LIQ_FUNDING_AVAILABILITY_DISCOVERY",
+  "coinalyze_constraints": {
+    "api_key_required": true,
+    "conservative_rate_limit_sleeps": true,
+    "free_api_discovery_only": true,
+    "intraday_history_limited": true,
+    "no_private_exchange_api": true,
+    "recent_data_prototyping_only": true
+  },
+  "endpoint_probe_results": [],
+  "interval_coverage_summary": {
+    "best_usable_interval": null,
+    "tested_intervals": [
+      "15min",
+      "1hour",
+      "daily"
+    ]
+  },
+  "limitations": [
+    "COINALYZE_API_KEY was not present in the environment, so no Coinalyze API request was made.",
+    "Per hard safety rules, the route stopped instead of substituting another source or claiming discovery success."
+  ],
+  "market_discovery_summary": {
+    "binance_stable_perp_count": 0,
+    "market_count": 0,
+    "okx_stable_swap_count": 0,
+    "source_endpoint": "future-markets"
+  },
+  "module": "edge_factory_os_repo_only_coinalyze_free_oi_liq_funding_availability_discovery_v1",
+  "next_allowed_step": "COINALYZE_API_KEY_ENV_SETUP_REVIEW_V1",
+  "next_module": "COINALYZE_API_KEY_ENV_SETUP_REVIEW_V1",
+  "payload_sha256_excluding_hash": "8f0b61e93ab9a1af72da5979b10058558f9f1324ef91a1e9cfa327aa33df28a2",
+  "probe_symbols": [],
+  "replacement_checks_all_true": false,
+  "result_classification": "COINALYZE_FREE_DATA_BLOCKED_API_OR_RATE_LIMIT",
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "data_discovery_created": true,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_checkpoint": "94511dc575f9afcdc4b3ca55cf46f29122a52cde",
+  "status": "BLOCKED_COINALYZE_API_KEY_MISSING",
+  "usable_data_summary": {
+    "usable_funding_symbol_count": 0,
+    "usable_funding_symbols": [],
+    "usable_liquidation_symbol_count": 0,
+    "usable_liquidation_symbols": [],
+    "usable_oi_symbol_count": 0,
+    "usable_oi_symbols": []
+  },
+  "validation_checks": {
+    "api_key_loaded_from_env_only": false,
+    "api_key_not_written_to_artifact": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_pnl_computation": true,
+    "no_private_exchange_api_used": true,
+    "no_runtime_live_capital": true,
+    "no_signal_generation": true,
+    "no_strategy_execution": true,
+    "replacement_checks_all_true": false,
+    "repo_clean_before_run": true
+  }
+}

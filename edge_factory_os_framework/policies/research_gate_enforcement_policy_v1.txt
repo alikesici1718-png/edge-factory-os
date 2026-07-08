@@ -1,0 +1,64 @@
+====================================================================================================
+EDGE FACTORY OS RESEARCH GATE ENFORCEMENT POLICY v1
+====================================================================================================
+policy_status: RESEARCH_GATE_ENFORCEMENT_POLICY_ACTIVE
+policy_hash: e4a85ce55a1fdee0
+severity: ATTENTION
+strict_policy_key: STRICT_MONTH_STABILITY_12_OF_12
+canonical_policy_month_count: 12
+source_false_positive_assessment: FALSE_POSITIVE_BASELINE_HIGH_TIGHTEN_RESEARCH_GATES
+source_max_strict_12_any_random_hit_rate: 1.0
+source_max_null_adjusted_any_random_hit_rate: 1.0
+research_gate_tightening_required: True
+plugin_expansion_allowed_before_policy_validation: False
+
+ENFORCED GATE RULES
+----------------------------------------------------------------------------------------------------
+minimum_permutation_runs: 1000
+required_independent_null_models: 8
+max_allowed_strict_12_any_random_hit_rate: 0.01
+max_allowed_null_adjusted_any_random_hit_rate: 0.005
+empirical_p_value_required_lte: 0.01
+minimum_actual_vs_null_margin_bps: 2500.0
+minimum_positive_months: 12
+required_canonical_months: 12
+require_out_of_time_month_split: True
+require_symbol_holdout_split: True
+require_cost_stress_pass: True
+require_top_symbol_concentration_cap: True
+max_top_symbol_share: 0.2
+max_top5_symbol_share: 0.5
+require_no_manual_symbol_whitelist: True
+require_no_manual_month_blacklist: True
+require_data_quality_guard_pass: True
+require_route_hash_not_blocked: True
+require_negative_controls: True
+require_null_models: True
+require_deep_validation_before_candidate_contract: True
+require_manual_or_ai_review_non_override: True
+
+HARD BLOCKS
+----------------------------------------------------------------------------------------------------
+- plugin_expansion_without_policy_validation
+- strict_preview_without_null_adjustment
+- null_adjusted_signal_without_empirical_p_value
+- false_positive_rate_above_cap
+- data_quality_guard_missing_or_failed
+- blocked_route_hash_reuse
+- manual_symbol_whitelist
+- manual_month_blacklist
+- candidate_generation_before_deep_validation
+- family_release_before_full_release_gate
+- runtime_touch_before_final_release_gate
+- capital_or_live_action_before_final_release_gate
+
+SAFETY
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+runtime_touch_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False

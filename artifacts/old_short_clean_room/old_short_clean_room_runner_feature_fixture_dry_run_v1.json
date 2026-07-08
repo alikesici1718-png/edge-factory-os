@@ -1,0 +1,795 @@
+{
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN_CREATED",
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN",
+  "module": {
+    "name": "edge_factory_os_repo_only_old_short_clean_room_runner_feature_fixture_dry_run_v1",
+    "path": "tools/edge_factory_os_repo_only_old_short_clean_room_runner_feature_fixture_dry_run_v1.py",
+    "standard_library_only": true,
+    "code_changed": true,
+    "created_files": [
+      "tools/edge_factory_os_repo_only_old_short_clean_room_runner_feature_fixture_dry_run_v1.py",
+      "artifacts/old_short_clean_room/old_short_clean_room_runner_feature_fixture_dry_run_v1.json"
+    ],
+    "modified_existing_files": []
+  },
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-27T06:19:13Z",
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "expected_head": "43bd8d6b5269c60b6213a731051c519427e6a61a",
+    "actual_head": "43bd8d6b5269c60b6213a731051c519427e6a61a",
+    "expected_tracked_python_count": 949,
+    "actual_tracked_python_count": 949,
+    "repo_clean_before_run": true,
+    "git_status_before_run": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_runner_feature_fixture_dry_run_v1.py"
+    ],
+    "dirty_tracked_before_run": [],
+    "allowed_pending_before_run": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_runner_feature_fixture_dry_run_v1.py"
+    ],
+    "unexpected_untracked_before_run": [],
+    "target_tool_present_as_new_untracked_file": true,
+    "target_artifact_preexisting_before_run": false
+  },
+  "source_artifacts": {
+    "clean_room_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REBUILD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_CONTRACT_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "02d0c3ff2f905be2df695a7ca52bfd931c94a4720cb3c883f8fd5d7ad00f5e6d",
+      "replacement_checks_all_true": true,
+      "sha256": "dc04d75bdd5882a2952a0a1e0a3ce7855d736d4b6882b689dcc20b41fc7cc68d"
+    },
+    "runner_dry_run_design": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_dry_run_design_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_DESIGN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_DESIGN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "e5a73d750033e5cce8d8ababece2f8f383860c740fc1bfd4e5be1434662e2c56",
+      "replacement_checks_all_true": true,
+      "sha256": "9a06be1b84ea5d1246192ef353fa6acf236fd1be218f69fb33b4ca1191fb7756"
+    },
+    "runner_dry_run_implementation_preview": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_dry_run_implementation_preview_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_IMPLEMENTATION_PREVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_IMPLEMENTATION_PREVIEW_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "1232ad3cce1e2e23a6f7907c07abc3d6a1b4ba8621efa7d6420d77b679ac8c4a",
+      "replacement_checks_all_true": true,
+      "sha256": "d161897e9bc9b1f8f1d542d2515e2bdd06de3e4e0421252d95b5f662fa18b316"
+    },
+    "runner_fixture_threshold_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_fixture_threshold_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "308b63488abb4b40ee4e23d128a2aa82d96f1efa43c49d0ba6a32fb434298b11",
+      "replacement_checks_all_true": true,
+      "sha256": "e533fc89374724d0e63a61b4a87081012c17624679857c7a3e7f31b31e1f2d68"
+    },
+    "threshold_behavioral_proposal": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "9cf7be3706095fa4e8c8bfd4586e40a4714631250118fd67cc4d94cb47f62461",
+      "replacement_checks_all_true": true,
+      "sha256": "63220c1cce0a22b83dbc630599a23e5855cd682c0d0dec19d2a799841c4a15ff"
+    },
+    "threshold_proposal_review": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_proposal_review_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "bc0e5a2994a978b582488bfeb3d05f1898836ced3d6684474d6c7cedbd68ccda",
+      "replacement_checks_all_true": true,
+      "sha256": "f3e78cda956787bb83b2d69e882219658c118371c7e4b476a5bb31e2d54f1f04"
+    },
+    "runner_schema_fixture_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_schema_fixture_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_SCHEMA_FIXTURE_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_SCHEMA_FIXTURE_DRY_RUN_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "4dd3d7a76bac35dd2c873542ddc10f4223c39543888653ed701ebb26a044807a",
+      "replacement_checks_all_true": true,
+      "sha256": "1b75cfc698c8cc539c1e01a4f827803dd322a36a3c70f3923faa6c6fb14b33e7"
+    }
+  },
+  "dry_run_identity": {
+    "route_key": "old_short_clean_room_v1",
+    "dry_run_mode": "FEATURE_FIXTURE_DRY_RUN",
+    "feature_fixture_only": true,
+    "synthetic_feature_fixture": true,
+    "not_market_data": true,
+    "not_original_old_short": true,
+    "not_real_trade": true,
+    "not_backtest": true,
+    "not_runtime": true,
+    "not_edge_evidence": true,
+    "paper_only": true,
+    "no_live_capital": true,
+    "output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1"
+  },
+  "threshold_contract_review": {
+    "threshold_contract_loaded": true,
+    "threshold_contract_status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_CREATED",
+    "threshold_contract_artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT",
+    "contract_complete_verified": true,
+    "family_threshold_count": 2,
+    "families_expected": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "threshold_labels_present": true,
+    "threshold_label_missing": [],
+    "p1_attention_count": 4,
+    "p0_issue_count": 0,
+    "forbidden_evidence_used": false,
+    "pnl_fields_used": false,
+    "prior_contract_status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_CREATED"
+  },
+  "synthetic_feature_fixture_summary": {
+    "fixture_row_count": 6,
+    "feature_fields": [
+      "signal_ret1_bps",
+      "signal_ret3_bps",
+      "signal_ret5_bps",
+      "signal_ret60_bps",
+      "signal_vol_quote",
+      "signal_range_bps",
+      "entry_vol_quote",
+      "entry_range_bps"
+    ],
+    "required_labels": [
+      "GENERATED_BY_CLEAN_ROOM",
+      "SYNTHETIC_FEATURE_FIXTURE",
+      "NOT_MARKET_DATA",
+      "NOT_ORIGINAL_OLD_SHORT",
+      "NOT_REAL_TRADE",
+      "NOT_BACKTEST",
+      "NOT_RUNTIME",
+      "NOT_EDGE_EVIDENCE",
+      "PAPER_ONLY",
+      "NOT_LIVE"
+    ],
+    "families_exercised": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "fixture_rows": [
+      {
+        "fixture_id": "feature_fixture_001_blowoff_pass_gate_allowed",
+        "family_target": "blowoff_short",
+        "expected_fixture_behavior": "threshold_pass_gate_allowed",
+        "gate_status": "gate_allowed",
+        "labels": [
+          "GENERATED_BY_CLEAN_ROOM",
+          "SYNTHETIC_FEATURE_FIXTURE",
+          "NOT_MARKET_DATA",
+          "NOT_ORIGINAL_OLD_SHORT",
+          "NOT_REAL_TRADE",
+          "NOT_BACKTEST",
+          "NOT_RUNTIME",
+          "NOT_EDGE_EVIDENCE",
+          "PAPER_ONLY",
+          "NOT_LIVE"
+        ]
+      },
+      {
+        "fixture_id": "feature_fixture_002_mean_reversion_pass_gate_allowed",
+        "family_target": "mean_reversion_short",
+        "expected_fixture_behavior": "threshold_pass_gate_allowed",
+        "gate_status": "gate_allowed",
+        "labels": [
+          "GENERATED_BY_CLEAN_ROOM",
+          "SYNTHETIC_FEATURE_FIXTURE",
+          "NOT_MARKET_DATA",
+          "NOT_ORIGINAL_OLD_SHORT",
+          "NOT_REAL_TRADE",
+          "NOT_BACKTEST",
+          "NOT_RUNTIME",
+          "NOT_EDGE_EVIDENCE",
+          "PAPER_ONLY",
+          "NOT_LIVE"
+        ]
+      },
+      {
+        "fixture_id": "feature_fixture_003_missing_required_feature",
+        "family_target": "blowoff_short",
+        "expected_fixture_behavior": "fail_closed_missing_required_feature",
+        "gate_status": "gate_allowed",
+        "labels": [
+          "GENERATED_BY_CLEAN_ROOM",
+          "SYNTHETIC_FEATURE_FIXTURE",
+          "NOT_MARKET_DATA",
+          "NOT_ORIGINAL_OLD_SHORT",
+          "NOT_REAL_TRADE",
+          "NOT_BACKTEST",
+          "NOT_RUNTIME",
+          "NOT_EDGE_EVIDENCE",
+          "PAPER_ONLY",
+          "NOT_LIVE"
+        ]
+      },
+      {
+        "fixture_id": "feature_fixture_004_threshold_miss",
+        "family_target": "mean_reversion_short",
+        "expected_fixture_behavior": "fail_closed_threshold_miss",
+        "gate_status": "gate_allowed",
+        "labels": [
+          "GENERATED_BY_CLEAN_ROOM",
+          "SYNTHETIC_FEATURE_FIXTURE",
+          "NOT_MARKET_DATA",
+          "NOT_ORIGINAL_OLD_SHORT",
+          "NOT_REAL_TRADE",
+          "NOT_BACKTEST",
+          "NOT_RUNTIME",
+          "NOT_EDGE_EVIDENCE",
+          "PAPER_ONLY",
+          "NOT_LIVE"
+        ]
+      },
+      {
+        "fixture_id": "feature_fixture_005_gate_blocked",
+        "family_target": "blowoff_short",
+        "expected_fixture_behavior": "threshold_pass_gate_blocked",
+        "gate_status": "gate_blocked",
+        "labels": [
+          "GENERATED_BY_CLEAN_ROOM",
+          "SYNTHETIC_FEATURE_FIXTURE",
+          "NOT_MARKET_DATA",
+          "NOT_ORIGINAL_OLD_SHORT",
+          "NOT_REAL_TRADE",
+          "NOT_BACKTEST",
+          "NOT_RUNTIME",
+          "NOT_EDGE_EVIDENCE",
+          "PAPER_ONLY",
+          "NOT_LIVE"
+        ]
+      },
+      {
+        "fixture_id": "feature_fixture_006_gate_missing_timeout",
+        "family_target": "mean_reversion_short",
+        "expected_fixture_behavior": "threshold_pass_gate_missing_timeout",
+        "gate_status": "gate_missing_timeout",
+        "labels": [
+          "GENERATED_BY_CLEAN_ROOM",
+          "SYNTHETIC_FEATURE_FIXTURE",
+          "NOT_MARKET_DATA",
+          "NOT_ORIGINAL_OLD_SHORT",
+          "NOT_REAL_TRADE",
+          "NOT_BACKTEST",
+          "NOT_RUNTIME",
+          "NOT_EDGE_EVIDENCE",
+          "PAPER_ONLY",
+          "NOT_LIVE"
+        ]
+      }
+    ]
+  },
+  "runner_dry_run_results": {
+    "fixture_row_count": 6,
+    "threshold_contract_loaded": true,
+    "family_threshold_count": 2,
+    "passed_feature_fixture_count": 4,
+    "failed_feature_fixture_count": 2,
+    "signals_written": 6,
+    "pending_entries_written": 4,
+    "open_positions_written": 2,
+    "closed_trades_written": 2,
+    "rejected_entries_written": 4,
+    "fail_closed_count": 4,
+    "missing_feature_fail_count": 1,
+    "threshold_miss_fail_count": 1,
+    "safety_label_audit_passed": true,
+    "evaluations": [
+      {
+        "fixture_id": "feature_fixture_001_blowoff_pass_gate_allowed",
+        "family_target": "blowoff_short",
+        "expected_fixture_behavior": "threshold_pass_gate_allowed",
+        "gate_status": "gate_allowed",
+        "threshold_pass": true,
+        "fail_closed": false,
+        "fail_reason": null,
+        "missing_features": [],
+        "threshold_miss_features": [],
+        "rules_evaluated": [
+          {
+            "feature": "entry_range_bps",
+            "operator": ">=",
+            "threshold_value": 89.28675,
+            "fixture_value": 100.0,
+            "passed": true
+          },
+          {
+            "feature": "entry_vol_quote",
+            "operator": ">=",
+            "threshold_value": 190389.09385,
+            "fixture_value": 240000.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_range_bps",
+            "operator": ">=",
+            "threshold_value": 93.220444,
+            "fixture_value": 150.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret1_bps",
+            "operator": "<=",
+            "threshold_value": -40.279703,
+            "fixture_value": -80.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret3_bps",
+            "operator": "<=",
+            "threshold_value": -93.742588,
+            "fixture_value": -130.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret5_bps",
+            "operator": "<=",
+            "threshold_value": -21.744896,
+            "fixture_value": -70.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret60_bps",
+            "operator": ">=",
+            "threshold_value": 585.328222,
+            "fixture_value": 700.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_vol_quote",
+            "operator": ">=",
+            "threshold_value": 166708.59775,
+            "fixture_value": 250000.0,
+            "passed": true
+          }
+        ]
+      },
+      {
+        "fixture_id": "feature_fixture_002_mean_reversion_pass_gate_allowed",
+        "family_target": "mean_reversion_short",
+        "expected_fixture_behavior": "threshold_pass_gate_allowed",
+        "gate_status": "gate_allowed",
+        "threshold_pass": true,
+        "fail_closed": false,
+        "fail_reason": null,
+        "missing_features": [],
+        "threshold_miss_features": [],
+        "rules_evaluated": [
+          {
+            "feature": "entry_range_bps",
+            "operator": ">=",
+            "threshold_value": 86.760674,
+            "fixture_value": 100.0,
+            "passed": true
+          },
+          {
+            "feature": "entry_vol_quote",
+            "operator": ">=",
+            "threshold_value": 310845.080115,
+            "fixture_value": 400000.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_range_bps",
+            "operator": ">=",
+            "threshold_value": 114.060101,
+            "fixture_value": 160.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret1_bps",
+            "operator": "<=",
+            "threshold_value": -23.484387,
+            "fixture_value": -40.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret3_bps",
+            "operator": ">=",
+            "threshold_value": 97.185997,
+            "fixture_value": 150.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret5_bps",
+            "operator": ">=",
+            "threshold_value": 340.637882,
+            "fixture_value": 400.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret60_bps",
+            "operator": ">=",
+            "threshold_value": 270.13461,
+            "fixture_value": 600.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_vol_quote",
+            "operator": ">=",
+            "threshold_value": 158278.3766,
+            "fixture_value": 500000.0,
+            "passed": true
+          }
+        ]
+      },
+      {
+        "fixture_id": "feature_fixture_003_missing_required_feature",
+        "family_target": "blowoff_short",
+        "expected_fixture_behavior": "fail_closed_missing_required_feature",
+        "gate_status": "gate_allowed",
+        "threshold_pass": false,
+        "fail_closed": true,
+        "fail_reason": "required_feature_missing",
+        "missing_features": [
+          "signal_ret3_bps"
+        ],
+        "threshold_miss_features": [],
+        "rules_evaluated": []
+      },
+      {
+        "fixture_id": "feature_fixture_004_threshold_miss",
+        "family_target": "mean_reversion_short",
+        "expected_fixture_behavior": "fail_closed_threshold_miss",
+        "gate_status": "gate_allowed",
+        "threshold_pass": false,
+        "fail_closed": true,
+        "fail_reason": "threshold_miss",
+        "missing_features": [],
+        "threshold_miss_features": [
+          "signal_ret3_bps"
+        ],
+        "rules_evaluated": [
+          {
+            "feature": "entry_range_bps",
+            "operator": ">=",
+            "threshold_value": 86.760674,
+            "fixture_value": 100.0,
+            "passed": true
+          },
+          {
+            "feature": "entry_vol_quote",
+            "operator": ">=",
+            "threshold_value": 310845.080115,
+            "fixture_value": 400000.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_range_bps",
+            "operator": ">=",
+            "threshold_value": 114.060101,
+            "fixture_value": 160.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret1_bps",
+            "operator": "<=",
+            "threshold_value": -23.484387,
+            "fixture_value": -40.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret3_bps",
+            "operator": ">=",
+            "threshold_value": 97.185997,
+            "fixture_value": 50.0,
+            "passed": false
+          },
+          {
+            "feature": "signal_ret5_bps",
+            "operator": ">=",
+            "threshold_value": 340.637882,
+            "fixture_value": 400.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret60_bps",
+            "operator": ">=",
+            "threshold_value": 270.13461,
+            "fixture_value": 600.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_vol_quote",
+            "operator": ">=",
+            "threshold_value": 158278.3766,
+            "fixture_value": 500000.0,
+            "passed": true
+          }
+        ]
+      },
+      {
+        "fixture_id": "feature_fixture_005_gate_blocked",
+        "family_target": "blowoff_short",
+        "expected_fixture_behavior": "threshold_pass_gate_blocked",
+        "gate_status": "gate_blocked",
+        "threshold_pass": true,
+        "fail_closed": false,
+        "fail_reason": null,
+        "missing_features": [],
+        "threshold_miss_features": [],
+        "rules_evaluated": [
+          {
+            "feature": "entry_range_bps",
+            "operator": ">=",
+            "threshold_value": 89.28675,
+            "fixture_value": 100.0,
+            "passed": true
+          },
+          {
+            "feature": "entry_vol_quote",
+            "operator": ">=",
+            "threshold_value": 190389.09385,
+            "fixture_value": 240000.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_range_bps",
+            "operator": ">=",
+            "threshold_value": 93.220444,
+            "fixture_value": 150.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret1_bps",
+            "operator": "<=",
+            "threshold_value": -40.279703,
+            "fixture_value": -80.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret3_bps",
+            "operator": "<=",
+            "threshold_value": -93.742588,
+            "fixture_value": -130.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret5_bps",
+            "operator": "<=",
+            "threshold_value": -21.744896,
+            "fixture_value": -70.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret60_bps",
+            "operator": ">=",
+            "threshold_value": 585.328222,
+            "fixture_value": 700.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_vol_quote",
+            "operator": ">=",
+            "threshold_value": 166708.59775,
+            "fixture_value": 250000.0,
+            "passed": true
+          }
+        ]
+      },
+      {
+        "fixture_id": "feature_fixture_006_gate_missing_timeout",
+        "family_target": "mean_reversion_short",
+        "expected_fixture_behavior": "threshold_pass_gate_missing_timeout",
+        "gate_status": "gate_missing_timeout",
+        "threshold_pass": true,
+        "fail_closed": false,
+        "fail_reason": null,
+        "missing_features": [],
+        "threshold_miss_features": [],
+        "rules_evaluated": [
+          {
+            "feature": "entry_range_bps",
+            "operator": ">=",
+            "threshold_value": 86.760674,
+            "fixture_value": 100.0,
+            "passed": true
+          },
+          {
+            "feature": "entry_vol_quote",
+            "operator": ">=",
+            "threshold_value": 310845.080115,
+            "fixture_value": 400000.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_range_bps",
+            "operator": ">=",
+            "threshold_value": 114.060101,
+            "fixture_value": 160.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret1_bps",
+            "operator": "<=",
+            "threshold_value": -23.484387,
+            "fixture_value": -40.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret3_bps",
+            "operator": ">=",
+            "threshold_value": 97.185997,
+            "fixture_value": 150.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret5_bps",
+            "operator": ">=",
+            "threshold_value": 340.637882,
+            "fixture_value": 400.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_ret60_bps",
+            "operator": ">=",
+            "threshold_value": 270.13461,
+            "fixture_value": 600.0,
+            "passed": true
+          },
+          {
+            "feature": "signal_vol_quote",
+            "operator": ">=",
+            "threshold_value": 158278.3766,
+            "fixture_value": 500000.0,
+            "passed": true
+          }
+        ]
+      }
+    ],
+    "real_signal_generation": false,
+    "real_pnl_computation": false,
+    "runtime_touched": false,
+    "live_capital_permission": false
+  },
+  "gate_fixture_results": {
+    "gate_allowed_count": 4,
+    "gate_blocked_count": 1,
+    "gate_missing_timeout_count": 1,
+    "gate_allowed_open_rows": 2,
+    "gate_allowed_closed_rows": 2,
+    "gate_blocked_rejections": 1,
+    "gate_missing_timeout_rejections": 1
+  },
+  "generated_output_summary": {
+    "output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1",
+    "approved_external_subfolder": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1",
+    "generated_output_file_count": 7,
+    "generated_files": [
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\signals.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\pending_entries.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\open_positions.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\closed_trades.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\rejected_entries.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\heartbeat.csv",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\feature_fixture_dry_run_v1\\state.json"
+    ],
+    "generated_row_counts": {
+      "signals.csv": 6,
+      "pending_entries.csv": 4,
+      "open_positions.csv": 2,
+      "closed_trades.csv": 2,
+      "rejected_entries.csv": 4,
+      "heartbeat.csv": 1,
+      "state.json": 1
+    },
+    "external_output_root_used": true,
+    "wrote_only_under_approved_external_subfolder": true,
+    "no_external_files_overwritten": true
+  },
+  "safety_label_audit": {
+    "required_labels": [
+      "GENERATED_BY_CLEAN_ROOM",
+      "SYNTHETIC_FEATURE_FIXTURE",
+      "NOT_MARKET_DATA",
+      "NOT_ORIGINAL_OLD_SHORT",
+      "NOT_REAL_TRADE",
+      "NOT_BACKTEST",
+      "NOT_RUNTIME",
+      "NOT_EDGE_EVIDENCE",
+      "PAPER_ONLY",
+      "NOT_LIVE"
+    ],
+    "all_generated_rows_labeled": true,
+    "state_object_labeled": true,
+    "safety_label_audit_passed": true,
+    "no_live_order_private_output_fields": true
+  },
+  "fail_closed_audit": {
+    "fail_closed_count": 4,
+    "missing_feature_fail_count": 1,
+    "threshold_miss_fail_count": 1,
+    "gate_blocked_fail_count": 1,
+    "gate_missing_timeout_fail_count": 1,
+    "intentional_fail_closed_cases_passed": true,
+    "missing_threshold_contract_fail_closed": false,
+    "unsafe_output_path_fail_closed": false,
+    "missing_safety_label_fail_closed": false
+  },
+  "result_classification": "OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN_PASS_NO_EDGE_NO_LIVE",
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK_V1",
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence"
+  ],
+  "limitations": [
+    "synthetic feature fixtures only",
+    "not market data",
+    "not original old_short replay",
+    "not exact frozen replay",
+    "not a backtest",
+    "not an edge claim",
+    "no threshold optimization or modification",
+    "no runtime, monitor, live, or capital permission"
+  ],
+  "safety_permissions": {
+    "runner_feature_fixture_dry_run_created": true,
+    "runner_execution_allowed_now": false,
+    "real_signal_generation_allowed_now": false,
+    "backtest_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "fixture_threshold_contract_loaded": true,
+    "contract_complete_verified": true,
+    "dry_run_mode_feature_fixture_only": true,
+    "no_raw_market_data_read": true,
+    "no_okx_1m_data_read": true,
+    "no_network_used": true,
+    "no_api_called": true,
+    "no_real_signal_generation": true,
+    "no_backtest_run": true,
+    "no_runtime_touched": true,
+    "no_monitor_enabled": true,
+    "no_orders_placed": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "external_output_root_used": true,
+    "no_master_upper_system_modified": true,
+    "no_runtime_directory_modified": true,
+    "all_7_output_files_created": true,
+    "safety_labels_present": true,
+    "intentional_fail_closed_cases_passed": true,
+    "unresolved_fields_preserved": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_repo_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "15bc81a734982e975399c25b1775760e97cfef3f73fde0cdff714713800c3284"
+}

@@ -1,0 +1,255 @@
+{
+  "allowed_next_step": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_PRE_REGISTERED_INDEPENDENT_VALIDATION_RUNNER_V1",
+  "artifact_kind": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT",
+  "blocker": null,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "contract_status": "PASS_REPO_ONLY_LONG_SHORT_RATIO_EXTREME_NORMALIZATION_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT_CREATED",
+  "current_head": "4b4a036fca5c719ddaa7718871b64d7c88096835",
+  "expected_head": "4b4a036fca5c719ddaa7718871b64d7c88096835",
+  "failure_rules": {
+    "data_quality_insufficient": "data_quality_attention_or_inconclusive",
+    "event_count_too_low": "inconclusive_or_fail_depending_on_severity",
+    "event_reconstruction_not_reproducible": "failed_stop",
+    "forbidden_actions_occur": "failed_stop",
+    "p_abs_high_mean_fails": "fail",
+    "signed_return_only_result": "cannot_pass_primary_volatility_validation",
+    "validation_data_inspected_or_optimized_before_freezing": "failed_stop",
+    "volatility_effect_disappears": "fail"
+  },
+  "forbidden_actions_confirmed_false": {
+    "account_api": false,
+    "api_key": false,
+    "backtest": false,
+    "candidate_generation": false,
+    "cooldown_changes": false,
+    "edge_claim": false,
+    "event_definitions_modified": false,
+    "history_rewritten": false,
+    "new_returns_computed": false,
+    "normalization_strength_changes": false,
+    "null_validation_rerun": false,
+    "optimization_against_validation_outcomes": false,
+    "order_private_account_api_key": false,
+    "p_values_recomputed": false,
+    "persistence_break_tier_promoted": false,
+    "pnl": false,
+    "prior_artifacts_modified": false,
+    "prior_artifacts_renamed": false,
+    "private_api": false,
+    "ratio_source_changes": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "signed_return_findings_promoted": false,
+    "strategy": false,
+    "threshold_changes": false,
+    "trade_simulation": false,
+    "validation_run": false
+  },
+  "frozen_event_definition_policy": {
+    "cooldown_changes_allowed": false,
+    "event_definition_edits_based_on_validation_outcomes_allowed": false,
+    "event_definition_must_be_reconstructed_exactly": true,
+    "event_reconstruction_uses_current_or_prior_observations_only": true,
+    "normalization_strength_changes_allowed": false,
+    "optimization_on_validation_data_allowed": false,
+    "persistence_break_tier_promotion_allowed": false,
+    "primary_definition_id": "account_position_pair medium 1h cooldown 24h",
+    "primary_event": "account/position divergence resolution",
+    "ratio_source_changes_allowed": false,
+    "signed_return_promotion_allowed": false,
+    "source_of_truth": [
+      "artifacts/research/long_short_ratio_extreme_normalization_event_discovery_v1.json",
+      "artifacts/research/long_short_ratio_extreme_normalization_event_validator_v1.json"
+    ],
+    "threshold_changes_allowed": false
+  },
+  "frozen_hypothesis": {
+    "diagnostic_family": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT",
+    "event_count_in_research_sample": 947,
+    "expected_direction": "future_absolute_return_or_realized_volatility_higher_than_null",
+    "primary_event": {
+      "event_id": "optional_account_position_divergence_resolution_candidate",
+      "event_label": "account/position divergence resolution",
+      "research_sample_event_count": 947
+    },
+    "primary_horizons": [
+      "15m",
+      "1h",
+      "4h"
+    ],
+    "primary_metric_family": "forward_abs_return / realized-volatility proxy",
+    "primary_null_model": "month-aware symbol-balanced null",
+    "primary_p_value": "p_abs_high_mean",
+    "primary_targets": [
+      {
+        "event_id": "optional_account_position_divergence_resolution_candidate",
+        "event_label": "account/position divergence resolution",
+        "horizon": "15m",
+        "prior_bonferroni_p": 0.002997002997002997,
+        "prior_fdr_q": 0.000999000999000999,
+        "prior_p_abs_high_mean": 0.000999000999000999,
+        "research_sample_event_count": 947,
+        "research_sample_mean_abs_return": 0.004701931375964501
+      },
+      {
+        "event_id": "optional_account_position_divergence_resolution_candidate",
+        "event_label": "account/position divergence resolution",
+        "horizon": "1h",
+        "prior_bonferroni_p": 0.002997002997002997,
+        "prior_fdr_q": 0.000999000999000999,
+        "prior_p_abs_high_mean": 0.000999000999000999,
+        "research_sample_event_count": 947,
+        "research_sample_mean_abs_return": 0.008151963600828729
+      },
+      {
+        "event_id": "optional_account_position_divergence_resolution_candidate",
+        "event_label": "account/position divergence resolution",
+        "horizon": "4h",
+        "prior_bonferroni_p": 0.002997002997002997,
+        "prior_fdr_q": 0.000999000999000999,
+        "prior_p_abs_high_mean": 0.000999000999000999,
+        "research_sample_event_count": 947,
+        "research_sample_mean_abs_return": 0.015145698846520991
+      }
+    ],
+    "primary_test_scope": "three_pre_registered_primary_volatility_tests",
+    "signed_return_findings": {
+      "pass_fail_allowed": false,
+      "role": "secondary_tracking_only",
+      "strategy_candidate_signal_allowed": false
+    }
+  },
+  "future_runner_scope": {
+    "allowed_next_step": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_PRE_REGISTERED_INDEPENDENT_VALIDATION_RUNNER_V1",
+    "may_change_event_definition": false,
+    "may_change_thresholds_or_horizons": false,
+    "may_create_candidate_logic": false,
+    "may_create_live_or_capital_logic": false,
+    "may_create_release_logic": false,
+    "may_create_signal_logic": false,
+    "may_create_strategy_logic": false,
+    "may_evaluate_only_frozen_hypothesis": true,
+    "may_promote_signed_return_findings": false
+  },
+  "head_matches_expected": true,
+  "independent_validation_data_policy": {
+    "acceptable_independent_validation_sources": [
+      "2026+ public Binance Data Vision data",
+      "pre-frozen untouched symbol_or_universe_expansion",
+      "both, only if frozen before inspecting validation outcomes"
+    ],
+    "if_2026_plus_public_data_is_used": "data acquisition and validation must happen in a separate future runner",
+    "if_expansion_symbols_are_used": "symbol list must be frozen before return or volatility computation",
+    "independent_validation_must_be_outside_or_untouched_relative_to_research_sample": true,
+    "private_account_api_key_order_data_allowed": false,
+    "research_evaluation_sample_must_not_be_reused_as_independent_validation": true,
+    "research_evaluation_sample_window": {
+      "end": "2025-12-31",
+      "start": "2023-01-01",
+      "timezone": "UTC",
+      "usage": "research_evaluation_and_robustness_only_not_independent_validation"
+    },
+    "validation_outcome_inspection_before_freeze_allowed": false
+  },
+  "independent_validation_required": true,
+  "input_artifact_hashes_after": {
+    "artifacts/research/long_short_ratio_extreme_normalization_event_discovery_v1.json": "597d286cb34f7a1e25e2941fbcc37558800748c35946ec85cb75ac7ee5b84cfb",
+    "artifacts/research/long_short_ratio_extreme_normalization_event_validator_v1.json": "8f62934c251ee8b85b38dc96420e034c62bebbe2324ccb11be7bbde7941488f1",
+    "artifacts/research/long_short_ratio_extreme_normalization_forward_return_diagnostic_v1.json": "b8e71aea2d32a6922a862bb2dc065928c7e2073cf4d67239b7a83bc1fbfe7ce3",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_evaluator_v1.json": "b3d6436e52d40f1f76660bdc0323c043b4bd889d60d0f07d8273f50cf9a8767e",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_runner_v1.json": "bb41131555c4385a812190e2f4824bccb8604d23241e97dcc850a4cd1cb2f7ef"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/research/long_short_ratio_extreme_normalization_event_discovery_v1.json": "597d286cb34f7a1e25e2941fbcc37558800748c35946ec85cb75ac7ee5b84cfb",
+    "artifacts/research/long_short_ratio_extreme_normalization_event_validator_v1.json": "8f62934c251ee8b85b38dc96420e034c62bebbe2324ccb11be7bbde7941488f1",
+    "artifacts/research/long_short_ratio_extreme_normalization_forward_return_diagnostic_v1.json": "b8e71aea2d32a6922a862bb2dc065928c7e2073cf4d67239b7a83bc1fbfe7ce3",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_evaluator_v1.json": "b3d6436e52d40f1f76660bdc0323c043b4bd889d60d0f07d8273f50cf9a8767e",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_runner_v1.json": "bb41131555c4385a812190e2f4824bccb8604d23241e97dcc850a4cd1cb2f7ef"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_integrity_checks": {
+    "diagnostic_promising_volatility_only": true,
+    "diagnostic_route_promising_true": true,
+    "discovery_ready": true,
+    "evaluator_candidate_generation_false": true,
+    "evaluator_promising_diagnostic_only": true,
+    "evaluator_release_false": true,
+    "evaluator_signal_false": true,
+    "evaluator_strategy_false": true,
+    "forbidden_flags_false": true,
+    "independent_validation_required_true": true,
+    "permissions_false": true,
+    "robustness_failed_gates_empty": true,
+    "robustness_promising": true,
+    "validator_passed": true
+  },
+  "input_payload_hashes_verified": {
+    "artifacts/research/long_short_ratio_extreme_normalization_event_discovery_v1.json": "62d639dad24abddc0515c26a8e8f86c0699559caf1c2315e828ff127a3a09f16",
+    "artifacts/research/long_short_ratio_extreme_normalization_event_validator_v1.json": "194f6fffb8b8d43e61d49500230b2eaca89156e21e5806fe1898a66cd0610060",
+    "artifacts/research/long_short_ratio_extreme_normalization_forward_return_diagnostic_v1.json": "6ac1e707d8399e63d91d402ede157787c0ea1e4cb27db5fe96a5b99c93204ea7",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_evaluator_v1.json": "f28368072a483d1d50c80732833694a3e1cb51e9b0ca2e5495e3c6c649148e2b",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_runner_v1.json": "aa3b9610a69fe7acf1250919221887ab7d86100d87c501f89e34f73093e7b799"
+  },
+  "live_allowed": false,
+  "minimum_sample_rules": {
+    "attention_band_rule": "classify as attention/inconclusive unless effect and robustness are extremely clear; do not pass automatically",
+    "attention_or_inconclusive_band": "50 <= primary_event_validation_event_count <= 99",
+    "inconclusive_insufficient_sample_threshold": "primary_event_validation_event_count < 50",
+    "month_coverage_must_be_recorded": true,
+    "normal_evaluation_threshold": "primary_event_validation_event_count >= 100",
+    "symbol_coverage_must_be_recorded": true
+  },
+  "module": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT_V1",
+  "payload_sha256_excluding_hash": "68af20e97530550d59964c9665095fd882cc5ed51267d436a8b0d49482d80593",
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "release_allowed": false,
+  "replacement_checks_all_true": true,
+  "research_sample_window": {
+    "end": "2025-12-31",
+    "start": "2023-01-01",
+    "timezone": "UTC",
+    "usage": "research_evaluation_and_robustness_only_not_independent_validation"
+  },
+  "result_classification": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT_READY",
+  "runtime_touch_allowed": false,
+  "signal_allowed": false,
+  "status": "PASS_REPO_ONLY_LONG_SHORT_RATIO_EXTREME_NORMALIZATION_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT_CREATED",
+  "strategy_allowed": false,
+  "theory_id": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT",
+  "validation_checks": {
+    "candidate_generation_allowed_false": true,
+    "diagnostic_route_promising": true,
+    "independent_validation_required": true,
+    "input_artifact_hashes_unchanged": true,
+    "no_event_definitions_modified": true,
+    "no_new_returns_computed": true,
+    "no_null_validation_rerun": true,
+    "no_p_values_recomputed": true,
+    "no_signed_return_promotion": true,
+    "no_validation_run": true,
+    "release_allowed_false": true,
+    "robustness_evaluator_promising": true,
+    "runtime_live_capital_false": true,
+    "signal_allowed_false": true,
+    "strategy_allowed_false": true
+  },
+  "validation_gates": {
+    "all_15m_1h_4h_targets_must_be_reported": true,
+    "alternate_volatility_proxy_sensitivity_recorded_when_feasible": true,
+    "arbusdt_missing_archive_sensitivity_recorded_if_relevant": true,
+    "data_quality_warnings_recorded": true,
+    "event_reconstruction_current_or_prior_observations_only": true,
+    "fdr_and_bonferroni_recorded_across_three_primary_tests": true,
+    "input_hashes_must_be_unchanged": true,
+    "leave_one_month_diagnostics_required_when_enough_months": true,
+    "leave_one_symbol_diagnostics_required_when_enough_events": true,
+    "observed_primary_volatility_metric_higher_than_null_required": true,
+    "p_abs_high_mean_lte_0_05_for_at_least_one_primary_horizon_required": true,
+    "private_account_api_key_order_data_allowed": false,
+    "public_archive_only": true,
+    "single_symbol_or_month_dependence_must_be_absent_when_testable": true,
+    "strategy_candidate_release_action_allowed": false,
+    "sufficient_event_count_for_at_least_one_primary_horizon_required": true
+  }
+}

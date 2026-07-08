@@ -1,0 +1,326 @@
+{
+  "artifact_kind": "TRAP_QUALITY_LOCKBOX_FREEZE_CONTRACT",
+  "explicit_rejections": {
+    "market_pump_veto": {
+      "null_percentile": 0.73,
+      "reason": "Rejected as standalone finalist; lower null percentile than trap-quality V1.",
+      "reject_as_standalone_finalist": true,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_MARKET_PUMP_VETO_V1"
+    },
+    "rejection_depth_required": {
+      "null_percentile": 0.87,
+      "reason": "Rejected follow-up; mandatory rejection depth was effectively redundant and slightly worse than the finalist.",
+      "reject_as_finalist": true,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_REJECTION_DEPTH_REQUIRED_V1"
+    },
+    "risk_tightened": {
+      "null_percentile": 0.53,
+      "reason": "Rejected follow-up; risk-quality tightening worsened validation and null versus the finalist.",
+      "reject_as_finalist": true,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_RISK_TIGHTENED_V2"
+    },
+    "time_exit_only": {
+      "null_percentile": 0.84,
+      "reason": "Rejected as finalist despite stronger net bps because null percentile is below the finalist and below 0.90.",
+      "reject_as_finalist": true,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_TIME_EXIT_ONLY_V2"
+    },
+    "trap_score4": {
+      "null_percentile": 0.58,
+      "reason": "Rejected follow-up; score4-only tightening worsened validation and null versus the finalist.",
+      "reject_as_finalist": true,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_SCORE4_ONLY_V2"
+    },
+    "wider_stop": {
+      "null_percentile": 0.68,
+      "reason": "Rejected follow-up; wider stop worsened validation and null versus the finalist.",
+      "reject_as_finalist": true,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_WIDER_STOP_V2"
+    }
+  },
+  "finalist_summary": {
+    "closed_trades": 454,
+    "diagnostic_promising": false,
+    "evaluator_result_class": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_REJECTED_NO_FOLLOWUP",
+    "execution_status": "PASS_REPO_CODE_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EXECUTED",
+    "gross_pnl_usdt": 114.221136,
+    "holdout_monthly_positive_rate": 0.714286,
+    "holdout_net_bps": 341.386162,
+    "label": "trap_quality_v1",
+    "max_drawdown_bps": -1185.662327,
+    "metric_integrity_result": true,
+    "net_pnl_usdt": 29.155331,
+    "null_baseline": {
+      "feasible": true,
+      "null_pass": false,
+      "runs": 100,
+      "validation_percentile": 0.9
+    },
+    "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_V1",
+    "top3_symbol_concentration": {
+      "symbols": [
+        {
+          "symbol": "APEUSDT",
+          "trade_count": 11
+        },
+        {
+          "symbol": "APTUSDT",
+          "trade_count": 11
+        },
+        {
+          "symbol": "MAGICUSDT",
+          "trade_count": 11
+        }
+      ],
+      "top_n": 3,
+      "trade_count": 33,
+      "trade_share": 0.072687
+    },
+    "top_symbol_concentration": {
+      "top_symbol": "APEUSDT",
+      "top_symbol_trade_count": 11,
+      "top_symbol_trade_share": 0.024229,
+      "trade_count_by_symbol": {
+        "1INCHUSDT": 10,
+        "AAVEUSDT": 6,
+        "ADAUSDT": 4,
+        "AGLDUSDT": 7,
+        "ALGOUSDT": 3,
+        "APEUSDT": 11,
+        "API3USDT": 6,
+        "APTUSDT": 11,
+        "ARBUSDT": 5,
+        "ARUSDT": 5,
+        "ATOMUSDT": 2,
+        "AVAXUSDT": 4,
+        "AXSUSDT": 3,
+        "BANDUSDT": 6,
+        "BATUSDT": 8,
+        "BCHUSDT": 6,
+        "BICOUSDT": 8,
+        "BLURUSDT": 4,
+        "BNBUSDT": 6,
+        "CELOUSDT": 9,
+        "CFXUSDT": 8,
+        "CHZUSDT": 5,
+        "COMPUSDT": 4,
+        "CRVUSDT": 6,
+        "DOGEUSDT": 9,
+        "DOTUSDT": 4,
+        "DYDXUSDT": 4,
+        "EGLDUSDT": 2,
+        "ENSUSDT": 5,
+        "ETCUSDT": 4,
+        "ETHWUSDT": 5,
+        "FILUSDT": 8,
+        "GALAUSDT": 5,
+        "GMTUSDT": 6,
+        "GMXUSDT": 7,
+        "GRTUSDT": 4,
+        "ICPUSDT": 7,
+        "IMXUSDT": 6,
+        "IOSTUSDT": 2,
+        "IOTAUSDT": 9,
+        "KSMUSDT": 3,
+        "LDOUSDT": 10,
+        "LINKUSDT": 10,
+        "LPTUSDT": 10,
+        "LRCUSDT": 3,
+        "LTCUSDT": 5,
+        "MAGICUSDT": 11,
+        "MANAUSDT": 7,
+        "MINAUSDT": 9,
+        "NEARUSDT": 3,
+        "NEOUSDT": 5,
+        "ONTUSDT": 8,
+        "OPUSDT": 4,
+        "ORDIUSDT": 4,
+        "PEOPLEUSDT": 9,
+        "QTUMUSDT": 7,
+        "RSRUSDT": 8,
+        "RVNUSDT": 3,
+        "SANDUSDT": 4,
+        "SNXUSDT": 3,
+        "SOLUSDT": 4,
+        "STXUSDT": 5,
+        "SUIUSDT": 6,
+        "SUSHIUSDT": 5,
+        "THETAUSDT": 3,
+        "TONUSDT": 2,
+        "TRBUSDT": 6,
+        "TRXUSDT": 4,
+        "UMAUSDT": 5,
+        "UNIUSDT": 5,
+        "WOOUSDT": 6,
+        "XLMUSDT": 5,
+        "XRPUSDT": 8,
+        "XTZUSDT": 8,
+        "YFIUSDT": 5,
+        "YGGUSDT": 7,
+        "ZILUSDT": 6,
+        "ZRXUSDT": 4
+      }
+    },
+    "total_cost_usdt": 85.065805,
+    "two_x_fee_stress_net_pnl_usdt": -55.910474,
+    "two_x_fee_stress_positive": false,
+    "validation_monthly_positive_rate": 0.555556,
+    "validation_net_bps": 379.021858,
+    "worst_month_bps": -233.483652
+  },
+  "freeze_decision": {
+    "finalist_count": 1,
+    "frozen_finalist": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_V1",
+    "next_allowed_step": "TRAP_QUALITY_LOCKBOX_FORWARD_DATA_ACQUISITION_V1",
+    "not_edge_claim": true,
+    "not_live_or_capital_permission": true,
+    "null_percentile": 0.9,
+    "reason": "Original trap-quality V1 has the highest null percentile among viable candidates: 0.90."
+  },
+  "known_historical_context_not_lockbox_pass_claim": {
+    "finalist_holdout_monthly_positive_rate": 0.714286,
+    "finalist_two_x_fee_stress_net_pnl_usdt": -55.910474,
+    "finalist_validation_monthly_positive_rate": 0.555556,
+    "note": "These existing in-sample/validation/holdout aggregates are selection context only. The lockbox criteria apply to future forward data."
+  },
+  "lockbox_criteria": {
+    "max_drawdown_gt_minus_2000_bps": "future lockbox max drawdown must be > -2000 bps",
+    "monthly_positive_rate_gte_0_60": "future lockbox monthly positive rate must be >= 0.60",
+    "net_bps_gt_0": "future lockbox net bps must be > 0",
+    "null_percentile_gte_0_90": "future lockbox null percentile must be >= 0.90",
+    "top3_symbol_concentration_lte_0_30": "future lockbox top-3 symbol concentration must be <= 0.30",
+    "trade_count_gte_50": "future lockbox closed trade count must be >= 50",
+    "two_x_fee_stress_remains_positive": "future lockbox 2x fee-stress net must remain positive",
+    "worst_month_gt_minus_500_bps": "future lockbox worst month must be > -500 bps"
+  },
+  "module": "edge_factory_os_repo_only_trap_quality_lockbox_freeze_contract_v1",
+  "payload_sha256_excluding_hash": "9e35e99a2d4288ba2e4e5608285e8feef337a0f1034267d2f3ea15ac19967f97",
+  "reject_criteria": {
+    "monthly_positive_rate_lt_0_50": "reject lockbox result if monthly positive rate < 0.50",
+    "net_bps_lte_0": "reject lockbox result if net bps <= 0",
+    "null_percentile_lt_0_80": "reject lockbox result if null percentile < 0.80",
+    "top_symbol_concentration_gt_0_50": "reject lockbox result if top symbol concentration > 0.50"
+  },
+  "replacement_checks_all_true": true,
+  "route_rankings_by_null_percentile": [
+    {
+      "holdout_net_bps": 341.386162,
+      "label": "trap_quality_v1",
+      "null_percentile": 0.9,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_V1",
+      "validation_net_bps": 379.021858
+    },
+    {
+      "holdout_net_bps": 318.933879,
+      "label": "rejection_depth_required",
+      "null_percentile": 0.87,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_REJECTION_DEPTH_REQUIRED_V1",
+      "validation_net_bps": 333.987878
+    },
+    {
+      "holdout_net_bps": 760.170262,
+      "label": "time_exit_only",
+      "null_percentile": 0.84,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_TIME_EXIT_ONLY_V2",
+      "validation_net_bps": 474.463351
+    },
+    {
+      "holdout_net_bps": 631.193536,
+      "label": "market_pump_veto",
+      "null_percentile": 0.73,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_MARKET_PUMP_VETO_V1",
+      "validation_net_bps": 328.194894
+    },
+    {
+      "holdout_net_bps": 269.838538,
+      "label": "wider_stop",
+      "null_percentile": 0.68,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_WIDER_STOP_V2",
+      "validation_net_bps": 204.244772
+    },
+    {
+      "holdout_net_bps": 225.045896,
+      "label": "trap_score4",
+      "null_percentile": 0.58,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_SCORE4_ONLY_V2",
+      "validation_net_bps": 55.431136
+    },
+    {
+      "holdout_net_bps": 472.052892,
+      "label": "risk_tightened",
+      "null_percentile": 0.53,
+      "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_RISK_TIGHTENED_V2",
+      "validation_net_bps": 52.328974
+    }
+  ],
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "data_acquisition_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "lockbox_freeze_contract_created": true,
+    "new_strategy_allowed_now": false,
+    "optimization_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "v_next_allowed_now": false
+  },
+  "source_artifacts": {
+    "evaluator_artifacts": {
+      "market_pump_veto": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_idiosyncratic_sweep_short_market_pump_veto_evaluator_v1.json",
+      "rejection_depth_required": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_idiosyncratic_sweep_short_rejection_depth_required_evaluator_v1.json",
+      "risk_tightened": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_idiosyncratic_sweep_short_trap_quality_risk_tightened_evaluator_v1.json",
+      "time_exit_only": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_idiosyncratic_sweep_short_trap_quality_time_exit_only_evaluator_v1.json",
+      "trap_quality_v1": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_idiosyncratic_sweep_short_trap_quality_evaluator_v1.json",
+      "trap_score4": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_idiosyncratic_sweep_short_trap_score4_evaluator_v1.json",
+      "wider_stop": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_idiosyncratic_sweep_short_trap_quality_wider_stop_evaluator_v1.json"
+    },
+    "execution_artifacts": {
+      "market_pump_veto": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_idiosyncratic_sweep_short_market_pump_veto_execution_v1.json",
+      "rejection_depth_required": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_idiosyncratic_sweep_short_rejection_depth_required_execution_v1.json",
+      "risk_tightened": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_idiosyncratic_sweep_short_trap_quality_risk_tightened_execution_v1.json",
+      "time_exit_only": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_idiosyncratic_sweep_short_trap_quality_time_exit_only_execution_v1.json",
+      "trap_quality_v1": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_idiosyncratic_sweep_short_trap_quality_execution_v1.json",
+      "trap_score4": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_idiosyncratic_sweep_short_trap_score4_execution_v1.json",
+      "wider_stop": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_idiosyncratic_sweep_short_trap_quality_wider_stop_execution_v1.json"
+    }
+  },
+  "source_checkpoint": {
+    "actual_head": "83cd30a99d256875af2c24aaa01d9d551dbc9836",
+    "allowed_new_paths_at_contract_creation": [
+      "?? artifacts/research_preregistrations/trap_quality_lockbox_freeze_contract_v1.json",
+      "?? tools/edge_factory_os_repo_only_trap_quality_lockbox_freeze_contract_v1.py"
+    ],
+    "git_status_at_contract_creation": [
+      "?? tools/edge_factory_os_repo_only_trap_quality_lockbox_freeze_contract_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 1037,
+    "unexpected_dirty_paths_at_contract_creation": []
+  },
+  "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FREEZE_CONTRACT_CREATED",
+  "validation_checks": {
+    "all_required_execution_artifacts_loaded": true,
+    "finalist_exactly_one": true,
+    "finalist_has_highest_null_percentile_among_viable_candidates": true,
+    "finalist_is_trap_quality_v1": true,
+    "market_pump_veto_rejected_as_standalone_finalist": true,
+    "no_api_called": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_data_acquired": true,
+    "no_edge_claim": true,
+    "no_network_used": true,
+    "no_optimization": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_modified": true,
+    "no_v_next_created": true,
+    "rejection_depth_required_rejected": true,
+    "repo_clean_before_run": true,
+    "risk_tightened_rejected": true,
+    "time_exit_only_rejected_as_finalist": true,
+    "trap_score4_rejected": true,
+    "wider_stop_rejected": true
+  }
+}

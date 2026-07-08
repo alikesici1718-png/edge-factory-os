@@ -1,0 +1,69 @@
+EDGE FACTORY OS - EXTERNAL / RED-TEAM AUDIT REQUEST
+====================================================================================================
+
+You are auditing an automated trading research OS. Be adversarial.
+Your job is to find ways the system can still fool itself.
+
+CRITICAL CONTEXT
+- Broad strategy search is currently blocked.
+- Candidate generation is blocked.
+- Family release is blocked.
+- Runtime/capital/active-paper/live/real orders are blocked.
+- The final holdout is unselected, unpeeked, and unusable.
+- Many research routes were closed due overfitting/null/power failures.
+- Runtime family monitoring must not be confused with research route failures.
+
+SPECIFIC REQUESTS
+1. Identify any remaining overfitting, leakage, multiple-testing, or post-hoc selection risk.
+2. Decide whether any gate is too easy to satisfy or circular.
+3. Check whether the route-family alpha accounting is strict enough.
+4. Check whether the restricted market-state retest closure is correct.
+5. Check whether old_short is being unfairly punished by unrelated failed research routes.
+6. Tell us what to build next: data-information review, architecture consolidation, or runtime family monitor refresh.
+7. Default stance: no more budget, no candidate, no release unless evidence is exceptional.
+
+RUNTIME FAMILY DISTINCTION
+- old_short: prior monitoring positive/OK; not invalidated by research route failures; must be rechecked with current sample before action.
+- impulse_long: prior negative/early watch.
+- market_relative_short: prior exposure/no closed sample attention.
+- weak_market_short: inconclusive.
+
+OUTPUT FORMAT REQUEST
+- Verdict: PASS / FAIL / REVIEW_REQUIRED
+- Top 10 risks.
+- Any gate that must be strengthened.
+- Whether old_short should be protected, paused, or further monitored.
+- Next safest module.
+
+PACKET JSON SUMMARY
+{
+  "high_level_verdict_before_external_audit": "REVIEW_REQUIRED_NO_RELEASE",
+  "broad_strategy_search_allowed": false,
+  "research_execution_allowed_now": false,
+  "candidate_generation_allowed": false,
+  "family_release_allowed": false,
+  "runtime_touch_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "closed_restricted_route": {
+    "closed_route_hash": "9596f6d3a0fa7a0b",
+    "closed_route_family": "MARKET_STATE_TRANSITION_FAMILY",
+    "restricted_route_closed": true,
+    "additional_null_budget_allowed_now": false,
+    "release_allowed": false
+  },
+  "restricted_retest_key_numbers": {
+    "alpha_budget": 1.736111111111111e-05,
+    "max_p_empirical_plus_one": 0.002997002997002997,
+    "required_runs_per_null_model_for_alpha": 57599,
+    "estimated_total_required_null_runs": 230396,
+    "decision_class": "UNDERPOWERED_FOR_TINY_GLOBAL_ALPHA_ROUTE_BUDGET_CONSUMED"
+  },
+  "old_short_runtime_family_note": "old_short was not directly invalidated by research route failures. Prior monitoring saw it as OK/positive, but it still needs current runtime sample/drift/capital-governor review before action.",
+  "blocked_route_count": 19,
+  "lesson_count": 25,
+  "vault_item_count": 1,
+  "git_untracked_or_dirty_count": 4
+}

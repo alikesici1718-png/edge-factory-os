@@ -1,0 +1,1182 @@
+{
+  "artifact_inventory": {
+    "allowed_artifact_directories": [
+      "strategy_executions",
+      "strategy_evaluations",
+      "strategy_closures",
+      "strategy_reviews",
+      "event_studies",
+      "data_builds",
+      "research_preregistrations",
+      "research_designs"
+    ],
+    "artifact_count_by_directory": {
+      "data_builds": 2,
+      "event_studies": 1,
+      "research_designs": 2,
+      "research_preregistrations": 32,
+      "strategy_closures": 27,
+      "strategy_evaluations": 33,
+      "strategy_executions": 35,
+      "strategy_reviews": 9
+    },
+    "family_artifact_counts": {
+      "BETA_NEUTRAL_RESIDUAL_MR": 4,
+      "COINALYZE_LONG_LIQUIDATION_FLUSH": 7,
+      "FUNDING_OR_BASIS_CARRY": 35,
+      "LIQUIDITY_SWEEP_REVERSAL": 7,
+      "LUCIFER_EMA_PIVOT": 12,
+      "OLD_SHORT_CLEAN_ROOM": 7,
+      "REGIME_BREAKOUT_MOMENTUM": 4,
+      "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY": 43
+    },
+    "load_error_count": 0,
+    "total_json_artifacts_loaded": 141,
+    "unassigned_allowed_artifact_count": 22,
+    "unassigned_allowed_artifacts_sample": [
+      "artifacts/strategy_executions/binance_okx_overlap_15m_extreme_move_reversal_execution_v1.json",
+      "artifacts/strategy_executions/binance_okx_overlap_15m_gk_volatility_zscore_squeeze_execution_v1.json",
+      "artifacts/strategy_executions/binance_okx_overlap_pairs_trading_log_spread_execution_v1.json",
+      "artifacts/strategy_executions/binance_okx_overlap_taker_buy_imbalance_exhaustion_reversal_execution_v1.json",
+      "artifacts/strategy_executions/binance_okx_overlap_taker_flow_momentum_continuation_execution_v1.json",
+      "artifacts/strategy_evaluations/binance_okx_overlap_15m_extreme_move_reversal_evaluator_v1.json",
+      "artifacts/strategy_evaluations/binance_okx_overlap_15m_gk_volatility_zscore_squeeze_evaluator_v1.json",
+      "artifacts/strategy_evaluations/binance_okx_overlap_pairs_trading_log_spread_evaluator_v1.json",
+      "artifacts/strategy_evaluations/binance_okx_overlap_taker_buy_imbalance_exhaustion_reversal_evaluator_v1.json",
+      "artifacts/strategy_evaluations/binance_okx_overlap_taker_flow_momentum_continuation_evaluator_v1.json",
+      "artifacts/strategy_closures/binance_okx_overlap_15m_extreme_move_reversal_closure_v1.json",
+      "artifacts/strategy_closures/binance_okx_overlap_15m_gk_volatility_zscore_squeeze_closure_v1.json",
+      "artifacts/strategy_closures/binance_okx_overlap_pairs_trading_log_spread_closure_v1.json",
+      "artifacts/strategy_closures/binance_okx_overlap_taker_buy_imbalance_exhaustion_reversal_closure_v1.json",
+      "artifacts/strategy_closures/binance_okx_overlap_taker_flow_momentum_continuation_closure_v1.json",
+      "artifacts/strategy_reviews/crypto_15m_liquidity_sweep_execution_bug_localization_v1.json",
+      "artifacts/strategy_reviews/crypto_15m_liquidity_sweep_filter_kill_audit_v1.json",
+      "artifacts/research_preregistrations/binance_okx_overlap_15m_extreme_move_reversal_preregistration_contract_v1.json",
+      "artifacts/research_preregistrations/binance_okx_overlap_15m_gk_volatility_zscore_squeeze_preregistration_contract_v1.json",
+      "artifacts/research_preregistrations/binance_okx_overlap_pairs_trading_log_spread_preregistration_contract_v1.json",
+      "artifacts/research_preregistrations/binance_okx_overlap_taker_flow_momentum_continuation_preregistration_contract_v1.json",
+      "artifacts/research_preregistrations/cross_exchange_crowded_perp_dislocation_unwind_preregistration_contract_v1.json"
+    ]
+  },
+  "artifact_kind": "INSTITUTIONAL_COST_AND_CAPACITY_REEVALUATION",
+  "capacity_review": {
+    "BETA_NEUTRAL_RESIDUAL_MR": {
+      "classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "top_3_symbol_concentration": 177.0,
+      "top_symbol_concentration": 269.0,
+      "trade_count": 14739.0
+    },
+    "COINALYZE_LONG_LIQUIDATION_FLUSH": {
+      "classification": "LOW_CAPACITY_OR_MICROSTRUCTURE_LIMITED",
+      "top_3_symbol_concentration": 4.0,
+      "top_symbol_concentration": 9.0,
+      "trade_count": 35.0
+    },
+    "FUNDING_OR_BASIS_CARRY": {
+      "classification": "HIGH_CAPACITY_PLAUSIBLE",
+      "top_3_symbol_concentration": 6672.0,
+      "top_symbol_concentration": 7788.0,
+      "trade_count": null
+    },
+    "LIQUIDITY_SWEEP_REVERSAL": {
+      "classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "top_3_symbol_concentration": 204.0,
+      "top_symbol_concentration": 302.0,
+      "trade_count": 13224.0
+    },
+    "LUCIFER_EMA_PIVOT": {
+      "classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "top_3_symbol_concentration": null,
+      "top_symbol_concentration": 278.0,
+      "trade_count": 17714.0
+    },
+    "OLD_SHORT_CLEAN_ROOM": {
+      "classification": "LOW_CAPACITY_OR_MICROSTRUCTURE_LIMITED",
+      "top_3_symbol_concentration": null,
+      "top_symbol_concentration": 522.0,
+      "trade_count": 1904.0
+    },
+    "REGIME_BREAKOUT_MOMENTUM": {
+      "classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "top_3_symbol_concentration": 284.0,
+      "top_symbol_concentration": 383.0,
+      "trade_count": 18114.0
+    },
+    "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY": {
+      "classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "top_3_symbol_concentration": 205.811243,
+      "top_symbol_concentration": 282.795283,
+      "trade_count": 1092.0
+    }
+  },
+  "cost_sensitivity_review": {
+    "BETA_NEUTRAL_RESIDUAL_MR": {
+      "best_gross_pnl_usdt": 289.93587,
+      "best_net_pnl_usdt": -292.620354,
+      "classification": "GROSS_POSITIVE_COST_DOMINATED",
+      "cost_scenario_estimates": {
+        "artifact_derived_linear_cost_scaling_not_new_backtest": true,
+        "artifact_gross_pnl_usdt": 289.93587,
+        "artifact_total_cost_usdt": 2395.339953,
+        "assumed_current_round_trip_cost_bps": 20,
+        "estimates": {
+          "0_bps": {
+            "estimated_cost_usdt": 0.0,
+            "estimated_net_pnl_usdt": 289.93587
+          },
+          "10_bps": {
+            "estimated_cost_usdt": 1197.6699765,
+            "estimated_net_pnl_usdt": -907.7341065
+          },
+          "20_bps": {
+            "estimated_cost_usdt": 2395.339953,
+            "estimated_net_pnl_usdt": -2105.4040830000004
+          },
+          "2_bps": {
+            "estimated_cost_usdt": 239.53399530000002,
+            "estimated_net_pnl_usdt": 50.40187470000001
+          },
+          "5_bps": {
+            "estimated_cost_usdt": 598.83498825,
+            "estimated_net_pnl_usdt": -308.89911825
+          }
+        },
+        "source_artifact": "artifacts/strategy_executions/crypto_15m_beta_neutral_residual_mr_execution_v1.json"
+      },
+      "gross_pnl_available": true,
+      "max_total_cost_usdt": 2395.339953
+    },
+    "COINALYZE_LONG_LIQUIDATION_FLUSH": {
+      "best_gross_pnl_usdt": 5.262155117777986,
+      "best_net_pnl_usdt": 2.487808054528208,
+      "classification": "LOW_SAMPLE_ONLY",
+      "cost_scenario_estimates": {
+        "artifact_derived_linear_cost_scaling_not_new_backtest": true,
+        "artifact_gross_pnl_usdt": 5.262155117777986,
+        "artifact_total_cost_usdt": 3.5,
+        "assumed_current_round_trip_cost_bps": 20,
+        "estimates": {
+          "0_bps": {
+            "estimated_cost_usdt": 0.0,
+            "estimated_net_pnl_usdt": 5.262155117777986
+          },
+          "10_bps": {
+            "estimated_cost_usdt": 1.75,
+            "estimated_net_pnl_usdt": 3.5121551177779864
+          },
+          "20_bps": {
+            "estimated_cost_usdt": 3.5,
+            "estimated_net_pnl_usdt": 1.7621551177779864
+          },
+          "2_bps": {
+            "estimated_cost_usdt": 0.35000000000000003,
+            "estimated_net_pnl_usdt": 4.912155117777987
+          },
+          "5_bps": {
+            "estimated_cost_usdt": 0.875,
+            "estimated_net_pnl_usdt": 4.387155117777986
+          }
+        },
+        "source_artifact": "artifacts/strategy_executions/coinalyze_long_liquidation_flush_strategy_execution_v1.json"
+      },
+      "gross_pnl_available": true,
+      "max_total_cost_usdt": 3.5
+    },
+    "FUNDING_OR_BASIS_CARRY": {
+      "best_gross_pnl_usdt": null,
+      "best_net_pnl_usdt": null,
+      "classification": "UNKNOWN_MISSING_GROSS_COST_FIELDS",
+      "cost_scenario_estimates": null,
+      "gross_pnl_available": false,
+      "max_total_cost_usdt": 30.0
+    },
+    "LIQUIDITY_SWEEP_REVERSAL": {
+      "best_gross_pnl_usdt": 35.686325,
+      "best_net_pnl_usdt": 0.0,
+      "classification": "GROSS_POSITIVE_COST_DOMINATED",
+      "cost_scenario_estimates": {
+        "artifact_derived_linear_cost_scaling_not_new_backtest": true,
+        "artifact_gross_pnl_usdt": 35.686325,
+        "artifact_total_cost_usdt": 2624.366427,
+        "assumed_current_round_trip_cost_bps": 20,
+        "estimates": {
+          "0_bps": {
+            "estimated_cost_usdt": 0.0,
+            "estimated_net_pnl_usdt": 35.686325
+          },
+          "10_bps": {
+            "estimated_cost_usdt": 1312.1832135,
+            "estimated_net_pnl_usdt": -1276.4968885
+          },
+          "20_bps": {
+            "estimated_cost_usdt": 2624.366427,
+            "estimated_net_pnl_usdt": -2588.680102
+          },
+          "2_bps": {
+            "estimated_cost_usdt": 262.4366427,
+            "estimated_net_pnl_usdt": -226.75031769999998
+          },
+          "5_bps": {
+            "estimated_cost_usdt": 656.09160675,
+            "estimated_net_pnl_usdt": -620.40528175
+          }
+        },
+        "source_artifact": "artifacts/strategy_executions/crypto_15m_liquidity_sweep_reversal_execution_repaired_v1.json"
+      },
+      "gross_pnl_available": true,
+      "max_total_cost_usdt": 2624.366427
+    },
+    "LUCIFER_EMA_PIVOT": {
+      "best_gross_pnl_usdt": null,
+      "best_net_pnl_usdt": null,
+      "classification": "UNKNOWN_MISSING_GROSS_COST_FIELDS",
+      "cost_scenario_estimates": null,
+      "gross_pnl_available": false,
+      "max_total_cost_usdt": null
+    },
+    "OLD_SHORT_CLEAN_ROOM": {
+      "best_gross_pnl_usdt": 51.496859,
+      "best_net_pnl_usdt": 48.396859,
+      "classification": "NET_POSITIVE_BUT_NULL_FAILED",
+      "cost_scenario_estimates": null,
+      "gross_pnl_available": true,
+      "max_total_cost_usdt": null
+    },
+    "REGIME_BREAKOUT_MOMENTUM": {
+      "best_gross_pnl_usdt": 216.330934,
+      "best_net_pnl_usdt": 2.561503,
+      "classification": "NET_POSITIVE_BUT_NULL_FAILED",
+      "cost_scenario_estimates": null,
+      "gross_pnl_available": true,
+      "max_total_cost_usdt": null
+    },
+    "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY": {
+      "best_gross_pnl_usdt": 773.531891,
+      "best_net_pnl_usdt": 686.109241,
+      "classification": "NET_POSITIVE_BUT_LOCKBOX_FAILED",
+      "cost_scenario_estimates": {
+        "artifact_derived_linear_cost_scaling_not_new_backtest": true,
+        "artifact_gross_pnl_usdt": 166.636568,
+        "artifact_total_cost_usdt": 116.472345,
+        "assumed_current_round_trip_cost_bps": 20,
+        "estimates": {
+          "0_bps": {
+            "estimated_cost_usdt": 0.0,
+            "estimated_net_pnl_usdt": 166.636568
+          },
+          "10_bps": {
+            "estimated_cost_usdt": 58.2361725,
+            "estimated_net_pnl_usdt": 108.4003955
+          },
+          "20_bps": {
+            "estimated_cost_usdt": 116.472345,
+            "estimated_net_pnl_usdt": 50.16422300000001
+          },
+          "2_bps": {
+            "estimated_cost_usdt": 11.647234500000001,
+            "estimated_net_pnl_usdt": 154.98933350000001
+          },
+          "5_bps": {
+            "estimated_cost_usdt": 29.11808625,
+            "estimated_net_pnl_usdt": 137.51848175
+          }
+        },
+        "source_artifact": "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_market_pump_veto_execution_v1.json"
+      },
+      "gross_pnl_available": true,
+      "max_total_cost_usdt": 205.918942
+    }
+  },
+  "family_summaries": {
+    "BETA_NEUTRAL_RESIDUAL_MR": {
+      "artifact_count": 4,
+      "artifact_paths": [
+        "artifacts/strategy_executions/crypto_15m_beta_neutral_residual_mr_execution_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_beta_neutral_residual_mr_evaluator_v1.json",
+        "artifacts/strategy_closures/crypto_15m_beta_neutral_residual_mr_closure_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_beta_neutral_residual_mr_preregistration_v1.json"
+      ],
+      "artifact_statuses_or_classes": [
+        "?? tools/edge_factory_os_repo_only_crypto_15m_beta_neutral_residual_mr_execution_v1.py",
+        "CRYPTO_15M_BETA_NEUTRAL_RESIDUAL_MR_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_BETA_NEUTRAL_RESIDUAL_MR_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_BETA_NEUTRAL_RESIDUAL_MR_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE"
+      ],
+      "best_cost_as_share_of_gross_pnl": 8.261619898910748,
+      "best_gross_pnl_usdt": 289.93587,
+      "best_holdout_net_bps": -2926.20354,
+      "best_net_pnl_usdt": -292.620354,
+      "best_portfolio_net_bps": -2926.20354,
+      "best_validation_net_bps": -7328.083808,
+      "capacity_classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "cost_scenario_estimates": {
+        "artifact_derived_linear_cost_scaling_not_new_backtest": true,
+        "artifact_gross_pnl_usdt": 289.93587,
+        "artifact_total_cost_usdt": 2395.339953,
+        "assumed_current_round_trip_cost_bps": 20,
+        "estimates": {
+          "0_bps": {
+            "estimated_cost_usdt": 0.0,
+            "estimated_net_pnl_usdt": 289.93587
+          },
+          "10_bps": {
+            "estimated_cost_usdt": 1197.6699765,
+            "estimated_net_pnl_usdt": -907.7341065
+          },
+          "20_bps": {
+            "estimated_cost_usdt": 2395.339953,
+            "estimated_net_pnl_usdt": -2105.4040830000004
+          },
+          "2_bps": {
+            "estimated_cost_usdt": 239.53399530000002,
+            "estimated_net_pnl_usdt": 50.40187470000001
+          },
+          "5_bps": {
+            "estimated_cost_usdt": 598.83498825,
+            "estimated_net_pnl_usdt": -308.89911825
+          }
+        },
+        "source_artifact": "artifacts/strategy_executions/crypto_15m_beta_neutral_residual_mr_execution_v1.json"
+      },
+      "cost_sensitivity_classification": "GROSS_POSITIVE_COST_DOMINATED",
+      "family": "BETA_NEUTRAL_RESIDUAL_MR",
+      "fee_stress_2x_net_bps": null,
+      "gross_pnl_available": true,
+      "institutional_relevance_classification": "INSTITUTIONAL_RESEARCH_WORTHY",
+      "interpretation": {
+        "data_missing": [
+          "Institutional fee schedule, borrow/funding, hedge execution slippage, and post-cost lockbox evidence."
+        ],
+        "evidence_blocking": [
+          "No edge is established; cost-salvage requires institutional fee/slippage proof and fresh validation."
+        ],
+        "evidence_supporting": [
+          "Known artifact interpretation preserved: symbol leg positive, BTC/ETH hedge combined positive or near positive, total cost very large, net rejected."
+        ],
+        "next_allowed_step": "INSTITUTIONAL_RESEARCH_CONTRACT_FOR_TOP_FAMILY_V1",
+        "why_it_may_survive_lower_fees_or_higher_capital": [
+          "Artifacts indicate positive gross components while total transaction costs dominated net results; institutional fees could directly target that failure mode."
+        ]
+      },
+      "lockbox_or_forward_result": {
+        "lockbox_failed": false,
+        "lockbox_portfolio_net_bps": null
+      },
+      "max_drawdown_bps": -22235.172195,
+      "max_total_cost_usdt": 2395.339953,
+      "monthly_positive_rate": 0.142857,
+      "null_pass_any": false,
+      "null_percentile": 0.12,
+      "top_3_symbol_concentration": 177.0,
+      "top_symbol_concentration": 269.0,
+      "trade_count": 14739.0,
+      "worst_month_bps": -2325.47882
+    },
+    "COINALYZE_LONG_LIQUIDATION_FLUSH": {
+      "artifact_count": 7,
+      "artifact_paths": [
+        "artifacts/strategy_executions/coinalyze_long_liquidation_flush_strategy_execution_v1.json",
+        "artifacts/event_studies/coinalyze_liquidation_imbalance_oi_flush_event_study_v1.json",
+        "artifacts/data_builds/coinalyze_max_available_oi_liq_history_dataset_builder_v1.json",
+        "artifacts/data_builds/coinalyze_recent_oi_liquidation_dataset_builder_v1.json",
+        "artifacts/research_preregistrations/coinalyze_long_liquidation_flush_strategy_preregistration_v1.json",
+        "artifacts/research_designs/coinalyze_long_liquidation_flush_strategy_design_v1.json",
+        "artifacts/research_designs/coinalyze_recent_oi_liquidation_hypothesis_design_v1.json"
+      ],
+      "artifact_statuses_or_classes": [
+        "COINALYZE_LONG_LIQUIDATION_FLUSH_EXECUTION_COMPLETE_READY_FOR_EVALUATOR",
+        "COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT_STUDY_PROMISING_FOR_PREREGISTRATION",
+        "COINALYZE_MAX_HISTORY_DATASET_INSUFFICIENT",
+        "COINALYZE_RECENT_OI_LIQUIDATION_DATASET_READY_FOR_EVENT_STUDY",
+        "COINALYZE_LONG_LIQUIDATION_FLUSH_REVERSAL_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+        "COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT_STUDY_PROMISING_FOR_PREREGISTRATION",
+        "COINALYZE_FREE_DATA_READY_FOR_RECENT_OI_LIQUIDATION_RESEARCH"
+      ],
+      "best_cost_as_share_of_gross_pnl": 0.6651267250133669,
+      "best_gross_pnl_usdt": 5.262155117777986,
+      "best_holdout_net_bps": null,
+      "best_net_pnl_usdt": 2.487808054528208,
+      "best_portfolio_net_bps": 17.621551177779867,
+      "best_validation_net_bps": null,
+      "capacity_classification": "LOW_CAPACITY_OR_MICROSTRUCTURE_LIMITED",
+      "cost_scenario_estimates": {
+        "artifact_derived_linear_cost_scaling_not_new_backtest": true,
+        "artifact_gross_pnl_usdt": 5.262155117777986,
+        "artifact_total_cost_usdt": 3.5,
+        "assumed_current_round_trip_cost_bps": 20,
+        "estimates": {
+          "0_bps": {
+            "estimated_cost_usdt": 0.0,
+            "estimated_net_pnl_usdt": 5.262155117777986
+          },
+          "10_bps": {
+            "estimated_cost_usdt": 1.75,
+            "estimated_net_pnl_usdt": 3.5121551177779864
+          },
+          "20_bps": {
+            "estimated_cost_usdt": 3.5,
+            "estimated_net_pnl_usdt": 1.7621551177779864
+          },
+          "2_bps": {
+            "estimated_cost_usdt": 0.35000000000000003,
+            "estimated_net_pnl_usdt": 4.912155117777987
+          },
+          "5_bps": {
+            "estimated_cost_usdt": 0.875,
+            "estimated_net_pnl_usdt": 4.387155117777986
+          }
+        },
+        "source_artifact": "artifacts/strategy_executions/coinalyze_long_liquidation_flush_strategy_execution_v1.json"
+      },
+      "cost_sensitivity_classification": "LOW_SAMPLE_ONLY",
+      "family": "COINALYZE_LONG_LIQUIDATION_FLUSH",
+      "fee_stress_2x_net_bps": -17.378448822220136,
+      "gross_pnl_available": true,
+      "institutional_relevance_classification": "INSTITUTIONAL_RESEARCH_WORTHY_ONLY_WITH_NEW_DATA",
+      "interpretation": {
+        "data_missing": [
+          "Longer aligned liquidation/OI/funding history; max-history Coinalyze artifact found insufficient full alignment."
+        ],
+        "evidence_blocking": [
+          "Only 35 closed trades; 2x fee stress was negative, so it is low-sample and fee-fragile."
+        ],
+        "evidence_supporting": [
+          "Event study was promising and strategy execution baseline percentile was high on recent data."
+        ],
+        "next_allowed_step": "FREE_DATA_SOURCE_ALTERNATIVE_DISCOVERY_V1",
+        "why_it_may_survive_lower_fees_or_higher_capital": []
+      },
+      "lockbox_or_forward_result": {
+        "lockbox_failed": false,
+        "lockbox_portfolio_net_bps": null
+      },
+      "max_drawdown_bps": -39.074925387858464,
+      "max_total_cost_usdt": 3.5,
+      "monthly_positive_rate": 0.42857142857142855,
+      "null_pass_any": false,
+      "null_percentile": null,
+      "top_3_symbol_concentration": 4.0,
+      "top_symbol_concentration": 9.0,
+      "trade_count": 35.0,
+      "worst_month_bps": null
+    },
+    "FUNDING_OR_BASIS_CARRY": {
+      "artifact_count": 35,
+      "artifact_paths": [
+        "artifacts/strategy_executions/binance_okx_group2_funding_extreme_momentum_confirmed_execution_v1.json",
+        "artifacts/strategy_executions/binance_okx_overlap_basis_premium_zscore_mean_reversion_execution_v1.json",
+        "artifacts/strategy_executions/binance_okx_overlap_funding_carry_short_positive_flat_negative_execution_v1.json",
+        "artifacts/strategy_executions/binance_okx_overlap_funding_crowding_reversal_full_range_execution_v1.json",
+        "artifacts/strategy_executions/binance_okx_overlap_funding_crowding_reversal_maker_entry_taker_exit_execution_v1.json",
+        "artifacts/strategy_executions/binance_okx_overlap_funding_extreme_momentum_confirmed_liquidity_filtered_execution_v1.json",
+        "artifacts/strategy_executions/binance_okx_overlap_funding_extreme_volume_surge_filter_execution_v1.json",
+        "artifacts/strategy_executions/binance_okx_overlap_funding_rate_preregistered_9_config_execution_v1.json",
+        "artifacts/strategy_executions/binance_spot_perp_delta_neutral_funding_carry_execution_v1.json",
+        "artifacts/strategy_evaluations/binance_okx_group2_funding_extreme_momentum_confirmed_evaluator_v1.json",
+        "artifacts/strategy_evaluations/binance_okx_overlap_basis_premium_zscore_mean_reversion_evaluator_v1.json",
+        "artifacts/strategy_evaluations/binance_okx_overlap_funding_carry_short_positive_flat_negative_evaluator_v1.json",
+        "artifacts/strategy_evaluations/binance_okx_overlap_funding_crowding_reversal_full_range_evaluator_v1.json",
+        "artifacts/strategy_evaluations/binance_okx_overlap_funding_crowding_reversal_maker_entry_taker_exit_evaluator_v1.json",
+        "artifacts/strategy_evaluations/binance_okx_overlap_funding_extreme_momentum_confirmed_liquidity_filtered_evaluator_v1.json",
+        "artifacts/strategy_evaluations/binance_okx_overlap_funding_extreme_volume_surge_filter_evaluator_v1.json",
+        "artifacts/strategy_evaluations/binance_okx_overlap_funding_rate_execution_evaluator_after_preregistered_9_config_run_v1.json",
+        "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json",
+        "artifacts/strategy_closures/binance_okx_group2_funding_extreme_momentum_confirmed_closure_v1.json",
+        "artifacts/strategy_closures/binance_okx_overlap_basis_premium_zscore_mean_reversion_closure_v1.json",
+        "artifacts/strategy_closures/binance_okx_overlap_funding_carry_short_positive_flat_negative_closure_v1.json",
+        "artifacts/strategy_closures/binance_okx_overlap_funding_crowding_reversal_full_range_closure_v1.json",
+        "artifacts/strategy_closures/binance_okx_overlap_funding_crowding_reversal_maker_entry_taker_exit_closure_v1.json",
+        "artifacts/strategy_closures/binance_okx_overlap_funding_extreme_momentum_confirmed_liquidity_filtered_closure_v1.json",
+        "artifacts/strategy_closures/binance_okx_overlap_funding_extreme_volume_surge_filter_closure_v1.json",
+        "artifacts/strategy_closures/binance_okx_overlap_funding_rate_closure_record_after_evaluator_v1.json",
+        "artifacts/strategy_closures/binance_spot_perp_delta_neutral_funding_carry_closure_v1.json",
+        "artifacts/research_preregistrations/binance_okx_group2_funding_extreme_momentum_confirmed_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/binance_okx_overlap_basis_premium_zscore_mean_reversion_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/binance_okx_overlap_funding_carry_short_positive_flat_negative_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/binance_okx_overlap_funding_crowding_reversal_maker_entry_taker_exit_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/binance_okx_overlap_funding_crowding_reversal_oi_surge_filter_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/binance_okx_overlap_funding_extreme_momentum_confirmed_liquidity_filtered_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/binance_okx_overlap_funding_extreme_volume_surge_filter_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/binance_okx_overlap_funding_rate_hypothesis_preregistration_contract_v1.json"
+      ],
+      "artifact_statuses_or_classes": [
+        "PASS_REPO_CODE_ONLY_BINANCE_OKX_GROUP2_FUNDING_EXTREME_MOMENTUM_CONFIRMED_EXECUTED",
+        "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_BASIS_PREMIUM_ZSCORE_MEAN_REVERSION_EXECUTED",
+        "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_FUNDING_CARRY_SHORT_POSITIVE_FLAT_NEGATIVE_EXECUTED",
+        "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_FUNDING_CROWDING_REVERSAL_FULL_RANGE_EXECUTED",
+        "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_FUNDING_CROWDING_REVERSAL_MAKER_ENTRY_TAKER_EXIT_EXECUTED",
+        "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_FUNDING_EXTREME_MOMENTUM_CONFIRMED_LIQUIDITY_FILTERED_EXECUTED",
+        "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_FUNDING_EXTREME_VOLUME_SURGE_FILTER_EXECUTED",
+        "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_RATE_DATA_REVIEW_AFTER_ACQUISITION_LOCK_CREATED",
+        "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_RATE_FULL_RANGE_202105_202510_REVIEW_CREATED",
+        "group2_funding_extreme_mom24_hold24h",
+        "BASIS_PREMIUM_ZSCORE_MEAN_REVERSION_REJECTED_NO_FOLLOWUP",
+        "funding_carry_short_positive_flat_negative_hold8h",
+        "funding_mean9_hold24h",
+        "funding_mean9_hold24h_maker_entry_1bps_taker_exit_cost10bps",
+        "funding_extreme_mom24_liqtop60_hold24h",
+        "funding_mean9_volume_surge24h_p80_30d_hold24h",
+        "funding_mean9_hold24h",
+        "SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_DIAGNOSTIC_PROMISING_REQUIRES_CLOSURE_NO_CANDIDATE_NO_EDGE",
+        "GROUP2_FUNDING_EXTREME_MOMENTUM_CONFIRMED_REJECTED_NO_FOLLOWUP",
+        "BASIS_PREMIUM_ZSCORE_MEAN_REVERSION_REJECTED_NO_FOLLOWUP"
+      ],
+      "best_cost_as_share_of_gross_pnl": null,
+      "best_gross_pnl_usdt": null,
+      "best_holdout_net_bps": 1268.112469,
+      "best_net_pnl_usdt": null,
+      "best_portfolio_net_bps": null,
+      "best_validation_net_bps": 1360.890655,
+      "capacity_classification": "HIGH_CAPACITY_PLAUSIBLE",
+      "cost_scenario_estimates": null,
+      "cost_sensitivity_classification": "UNKNOWN_MISSING_GROSS_COST_FIELDS",
+      "family": "FUNDING_OR_BASIS_CARRY",
+      "fee_stress_2x_net_bps": null,
+      "gross_pnl_available": false,
+      "institutional_relevance_classification": "INSTITUTIONAL_RESEARCH_WORTHY_ONLY_WITH_NEW_DATA",
+      "interpretation": {
+        "data_missing": [
+          "Longer venue-specific borrow, funding, basis, maker/taker, spread, and inventory-capacity data."
+        ],
+        "evidence_blocking": [
+          "Existing closures/evaluations do not create an edge claim and may be low-return or configuration-fragile."
+        ],
+        "evidence_supporting": [
+          "Funding/carry/basis artifacts exist and are economically interpretable rather than pure OHLCV pattern mining."
+        ],
+        "next_allowed_step": "FUNDING_CARRY_OR_COINALYZE_DATA_COLLECTION_PLAN_V1",
+        "why_it_may_survive_lower_fees_or_higher_capital": [
+          "Carry and basis mechanisms are structurally capital-dependent; low absolute returns may matter more at larger capital and lower execution costs."
+        ]
+      },
+      "lockbox_or_forward_result": {
+        "lockbox_failed": false,
+        "lockbox_portfolio_net_bps": null
+      },
+      "max_drawdown_bps": null,
+      "max_total_cost_usdt": 30.0,
+      "monthly_positive_rate": 1.0,
+      "null_pass_any": true,
+      "null_percentile": 0.97,
+      "top_3_symbol_concentration": 6672.0,
+      "top_symbol_concentration": 7788.0,
+      "trade_count": null,
+      "worst_month_bps": -4308.424064
+    },
+    "LIQUIDITY_SWEEP_REVERSAL": {
+      "artifact_count": 7,
+      "artifact_paths": [
+        "artifacts/strategy_executions/crypto_15m_liquidity_sweep_reversal_execution_repaired_v1.json",
+        "artifacts/strategy_executions/crypto_15m_liquidity_sweep_reversal_execution_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_liquidity_sweep_reversal_evaluator_repaired_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_liquidity_sweep_reversal_evaluator_v1.json",
+        "artifacts/strategy_closures/crypto_15m_liquidity_sweep_reversal_closure_repaired_v1.json",
+        "artifacts/strategy_closures/crypto_15m_liquidity_sweep_reversal_closure_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_liquidity_sweep_reversal_preregistration_v1.json"
+      ],
+      "artifact_statuses_or_classes": [
+        "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_execution_repaired_v1.py",
+        "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_execution_v1.py",
+        "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_REPAIRED_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_INCONCLUSIVE_NEEDS_MORE_DATA",
+        "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_REPAIRED_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_INCONCLUSIVE_NEEDS_MORE_DATA",
+        "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE"
+      ],
+      "best_cost_as_share_of_gross_pnl": 73.53983429226741,
+      "best_gross_pnl_usdt": 35.686325,
+      "best_holdout_net_bps": 0.0,
+      "best_net_pnl_usdt": 0.0,
+      "best_portfolio_net_bps": 0.0,
+      "best_validation_net_bps": 0.0,
+      "capacity_classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "cost_scenario_estimates": {
+        "artifact_derived_linear_cost_scaling_not_new_backtest": true,
+        "artifact_gross_pnl_usdt": 35.686325,
+        "artifact_total_cost_usdt": 2624.366427,
+        "assumed_current_round_trip_cost_bps": 20,
+        "estimates": {
+          "0_bps": {
+            "estimated_cost_usdt": 0.0,
+            "estimated_net_pnl_usdt": 35.686325
+          },
+          "10_bps": {
+            "estimated_cost_usdt": 1312.1832135,
+            "estimated_net_pnl_usdt": -1276.4968885
+          },
+          "20_bps": {
+            "estimated_cost_usdt": 2624.366427,
+            "estimated_net_pnl_usdt": -2588.680102
+          },
+          "2_bps": {
+            "estimated_cost_usdt": 262.4366427,
+            "estimated_net_pnl_usdt": -226.75031769999998
+          },
+          "5_bps": {
+            "estimated_cost_usdt": 656.09160675,
+            "estimated_net_pnl_usdt": -620.40528175
+          }
+        },
+        "source_artifact": "artifacts/strategy_executions/crypto_15m_liquidity_sweep_reversal_execution_repaired_v1.json"
+      },
+      "cost_sensitivity_classification": "GROSS_POSITIVE_COST_DOMINATED",
+      "family": "LIQUIDITY_SWEEP_REVERSAL",
+      "fee_stress_2x_net_bps": null,
+      "gross_pnl_available": true,
+      "institutional_relevance_classification": "RETAIL_ONLY_OR_TOO_FRAGILE",
+      "interpretation": {
+        "data_missing": [],
+        "evidence_blocking": [
+          "Known fact preserved: repaired liquidity sweep execution was heavily negative."
+        ],
+        "evidence_supporting": [],
+        "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP",
+        "why_it_may_survive_lower_fees_or_higher_capital": []
+      },
+      "lockbox_or_forward_result": {
+        "lockbox_failed": false,
+        "lockbox_portfolio_net_bps": null
+      },
+      "max_drawdown_bps": -31025.453534,
+      "max_total_cost_usdt": 2624.366427,
+      "monthly_positive_rate": 0.0,
+      "null_pass_any": false,
+      "null_percentile": 0.05,
+      "top_3_symbol_concentration": 204.0,
+      "top_symbol_concentration": 302.0,
+      "trade_count": 13224.0,
+      "worst_month_bps": -2425.00853
+    },
+    "LUCIFER_EMA_PIVOT": {
+      "artifact_count": 12,
+      "artifact_paths": [
+        "artifacts/strategy_executions/lucifer_15m_ema9_pivot_stable_cross_execution_v1.json",
+        "artifacts/strategy_executions/lucifer_15m_v2_execution_v1.json",
+        "artifacts/strategy_executions/lucifer_15m_v3_horizontal_cross_execution_v1.json",
+        "artifacts/strategy_evaluations/lucifer_15m_ema9_pivot_stable_cross_evaluator_v1.json",
+        "artifacts/strategy_evaluations/lucifer_15m_v2_evaluator_v1.json",
+        "artifacts/strategy_evaluations/lucifer_15m_v3_horizontal_cross_evaluator_v1.json",
+        "artifacts/strategy_closures/lucifer_15m_ema9_pivot_stable_cross_closure_v1.json",
+        "artifacts/strategy_closures/lucifer_15m_v2_closure_v1.json",
+        "artifacts/strategy_closures/lucifer_15m_v3_horizontal_cross_closure_v1.json",
+        "artifacts/research_preregistrations/lucifer_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/lucifer_15m_v2_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/lucifer_15m_v3_horizontal_cross_preregistration_contract_v1.json"
+      ],
+      "artifact_statuses_or_classes": [
+        "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
+        "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
+        "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
+        "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+        "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
+        "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
+        "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+        "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
+        "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
+        "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+        "LUCIFER_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+        "LUCIFER_15M_V3_HORIZONTAL_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE"
+      ],
+      "best_cost_as_share_of_gross_pnl": null,
+      "best_gross_pnl_usdt": null,
+      "best_holdout_net_bps": 180.0,
+      "best_net_pnl_usdt": null,
+      "best_portfolio_net_bps": null,
+      "best_validation_net_bps": 180.0,
+      "capacity_classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "cost_scenario_estimates": null,
+      "cost_sensitivity_classification": "UNKNOWN_MISSING_GROSS_COST_FIELDS",
+      "family": "LUCIFER_EMA_PIVOT",
+      "fee_stress_2x_net_bps": null,
+      "gross_pnl_available": false,
+      "institutional_relevance_classification": "INCONCLUSIVE",
+      "interpretation": {
+        "data_missing": [],
+        "evidence_blocking": [
+          "Known fact preserved: Lucifer variants were negative."
+        ],
+        "evidence_supporting": [],
+        "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP",
+        "why_it_may_survive_lower_fees_or_higher_capital": []
+      },
+      "lockbox_or_forward_result": {
+        "lockbox_failed": false,
+        "lockbox_portfolio_net_bps": null
+      },
+      "max_drawdown_bps": null,
+      "max_total_cost_usdt": null,
+      "monthly_positive_rate": 0.277778,
+      "null_pass_any": false,
+      "null_percentile": 0.22,
+      "top_3_symbol_concentration": null,
+      "top_symbol_concentration": 278.0,
+      "trade_count": 17714.0,
+      "worst_month_bps": -90.0
+    },
+    "OLD_SHORT_CLEAN_ROOM": {
+      "artifact_count": 7,
+      "artifact_paths": [
+        "artifacts/strategy_executions/old_short_clean_room_direct_backtest_execution_v1.json",
+        "artifacts/strategy_executions/old_short_clean_room_direct_backtest_execution_v2.json",
+        "artifacts/strategy_evaluations/old_short_clean_room_direct_backtest_evaluator_v1.json",
+        "artifacts/strategy_evaluations/old_short_clean_room_direct_backtest_evaluator_v2.json",
+        "artifacts/strategy_closures/old_short_clean_room_direct_backtest_closure_v1.json",
+        "artifacts/strategy_closures/old_short_clean_room_direct_backtest_closure_v2.json",
+        "artifacts/strategy_reviews/old_short_clean_room_direct_backtest_v2_error_audit_v1.json"
+      ],
+      "artifact_statuses_or_classes": [
+        "?? artifacts/strategy_executions/old_short_clean_room_direct_backtest_execution_v1.json",
+        "?? artifacts/strategy_executions/old_short_clean_room_direct_backtest_execution_v2.json",
+        "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_INCONCLUSIVE_NEEDS_MORE_DATA",
+        "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_V2_REJECTED_NO_FOLLOWUP",
+        "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_INCONCLUSIVE_NEEDS_MORE_DATA",
+        "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_V2_REJECTED_NO_FOLLOWUP",
+        "?? tools/edge_factory_os_repo_only_old_short_clean_room_direct_backtest_v2_error_audit_v1.py"
+      ],
+      "best_cost_as_share_of_gross_pnl": null,
+      "best_gross_pnl_usdt": 51.496859,
+      "best_holdout_net_bps": 30919.493384462956,
+      "best_net_pnl_usdt": 48.396859,
+      "best_portfolio_net_bps": 326.8308,
+      "best_validation_net_bps": 23.011192,
+      "capacity_classification": "LOW_CAPACITY_OR_MICROSTRUCTURE_LIMITED",
+      "cost_scenario_estimates": null,
+      "cost_sensitivity_classification": "NET_POSITIVE_BUT_NULL_FAILED",
+      "family": "OLD_SHORT_CLEAN_ROOM",
+      "fee_stress_2x_net_bps": null,
+      "gross_pnl_available": true,
+      "institutional_relevance_classification": "RETAIL_ONLY_OR_TOO_FRAGILE",
+      "interpretation": {
+        "data_missing": [],
+        "evidence_blocking": [
+          "Known fact preserved: old_short clean-room V2 was rejected after corrected accounting."
+        ],
+        "evidence_supporting": [],
+        "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP",
+        "why_it_may_survive_lower_fees_or_higher_capital": []
+      },
+      "lockbox_or_forward_result": {
+        "lockbox_failed": false,
+        "lockbox_portfolio_net_bps": null
+      },
+      "max_drawdown_bps": null,
+      "max_total_cost_usdt": null,
+      "monthly_positive_rate": 0.75,
+      "null_pass_any": false,
+      "null_percentile": 0.53,
+      "top_3_symbol_concentration": null,
+      "top_symbol_concentration": 522.0,
+      "trade_count": 1904.0,
+      "worst_month_bps": -55460.01173898818
+    },
+    "REGIME_BREAKOUT_MOMENTUM": {
+      "artifact_count": 4,
+      "artifact_paths": [
+        "artifacts/strategy_executions/crypto_15m_regime_breakout_momentum_execution_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_regime_breakout_momentum_evaluator_v1.json",
+        "artifacts/strategy_closures/crypto_15m_regime_breakout_momentum_closure_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_regime_breakout_momentum_preregistration_v1.json"
+      ],
+      "artifact_statuses_or_classes": [
+        "?? tools/edge_factory_os_repo_only_crypto_15m_regime_breakout_momentum_execution_v1.py",
+        "CRYPTO_15M_REGIME_BREAKOUT_MOMENTUM_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_REGIME_BREAKOUT_MOMENTUM_REJECTED_NO_FOLLOWUP",
+        "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED"
+      ],
+      "best_cost_as_share_of_gross_pnl": null,
+      "best_gross_pnl_usdt": 216.330934,
+      "best_holdout_net_bps": 0.0,
+      "best_net_pnl_usdt": 2.561503,
+      "best_portfolio_net_bps": 0.0,
+      "best_validation_net_bps": -362.480814,
+      "capacity_classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "cost_scenario_estimates": null,
+      "cost_sensitivity_classification": "NET_POSITIVE_BUT_NULL_FAILED",
+      "family": "REGIME_BREAKOUT_MOMENTUM",
+      "fee_stress_2x_net_bps": null,
+      "gross_pnl_available": true,
+      "institutional_relevance_classification": "RETAIL_ONLY_OR_TOO_FRAGILE",
+      "interpretation": {
+        "data_missing": [],
+        "evidence_blocking": [
+          "Known fact preserved: regime breakout momentum was heavily negative."
+        ],
+        "evidence_supporting": [],
+        "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP",
+        "why_it_may_survive_lower_fees_or_higher_capital": []
+      },
+      "lockbox_or_forward_result": {
+        "lockbox_failed": false,
+        "lockbox_portfolio_net_bps": null
+      },
+      "max_drawdown_bps": -35685.772821,
+      "max_total_cost_usdt": null,
+      "monthly_positive_rate": 0.052632,
+      "null_pass_any": false,
+      "null_percentile": 0.0,
+      "top_3_symbol_concentration": 284.0,
+      "top_symbol_concentration": 383.0,
+      "trade_count": 18114.0,
+      "worst_month_bps": -2496.528169
+    },
+    "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY": {
+      "artifact_count": 43,
+      "artifact_paths": [
+        "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_market_pump_veto_execution_v1.json",
+        "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_rejection_depth_required_execution_v1.json",
+        "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_trap_quality_execution_v1.json",
+        "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_trap_quality_risk_tightened_execution_v1.json",
+        "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_trap_quality_time_exit_only_execution_v1.json",
+        "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_trap_quality_wider_stop_execution_v1.json",
+        "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_trap_score4_execution_v1.json",
+        "artifacts/strategy_executions/crypto_15m_residual_sweep_confirmation_execution_v1.json",
+        "artifacts/strategy_executions/crypto_15m_residual_sweep_confirmation_short_only_v2_execution_v1.json",
+        "artifacts/strategy_executions/crypto_15m_residual_sweep_confirmation_short_only_v3_stop_risk_execution_v1.json",
+        "artifacts/strategy_executions/trap_quality_lockbox_forward_test_execution_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_idiosyncratic_sweep_short_market_pump_veto_evaluator_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_idiosyncratic_sweep_short_rejection_depth_required_evaluator_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_idiosyncratic_sweep_short_trap_quality_evaluator_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_idiosyncratic_sweep_short_trap_quality_risk_tightened_evaluator_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_idiosyncratic_sweep_short_trap_quality_time_exit_only_evaluator_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_idiosyncratic_sweep_short_trap_quality_wider_stop_evaluator_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_idiosyncratic_sweep_short_trap_score4_evaluator_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_residual_sweep_confirmation_evaluator_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_residual_sweep_confirmation_short_only_v2_evaluator_v1.json",
+        "artifacts/strategy_evaluations/crypto_15m_residual_sweep_confirmation_short_only_v3_stop_risk_evaluator_v1.json",
+        "artifacts/strategy_closures/crypto_15m_residual_sweep_confirmation_closure_v1.json",
+        "artifacts/strategy_closures/crypto_15m_residual_sweep_confirmation_short_only_v2_closure_v1.json",
+        "artifacts/strategy_closures/crypto_15m_residual_sweep_confirmation_short_only_v3_stop_risk_closure_v1.json",
+        "artifacts/strategy_closures/trap_quality_lockbox_route_closure_v1.json",
+        "artifacts/strategy_reviews/crypto_15m_idiosyncratic_sweep_short_trap_quality_postmortem_diagnostic_v1.json",
+        "artifacts/strategy_reviews/crypto_15m_residual_sweep_confirmation_postmortem_diagnostic_v1.json",
+        "artifacts/strategy_reviews/crypto_15m_residual_sweep_confirmation_postmortem_diagnostic_v2.json",
+        "artifacts/strategy_reviews/crypto_15m_residual_sweep_confirmation_short_only_v2_postmortem_diagnostic_v1.json",
+        "artifacts/strategy_reviews/crypto_15m_residual_sweep_confirmation_short_only_v3_null_failure_audit_v1.json",
+        "artifacts/strategy_reviews/crypto_15m_residual_sweep_confirmation_trade_detail_recovery_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_market_pump_veto_preregistration_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_rejection_depth_required_preregistration_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_trap_quality_preregistration_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_trap_quality_risk_tightened_preregistration_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_trap_quality_time_exit_only_preregistration_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_trap_quality_wider_stop_preregistration_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_trap_score4_preregistration_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_residual_sweep_confirmation_preregistration_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_residual_sweep_confirmation_short_only_v2_preregistration_v1.json",
+        "artifacts/research_preregistrations/crypto_15m_residual_sweep_confirmation_short_only_v3_stop_risk_preregistration_v1.json",
+        "artifacts/research_preregistrations/trap_quality_lockbox_forward_test_preregistration_v1.json",
+        "artifacts/research_preregistrations/trap_quality_lockbox_freeze_contract_v1.json"
+      ],
+      "artifact_statuses_or_classes": [
+        "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_MARKET_PUMP_VETO_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+        "?? tools/edge_factory_os_repo_only_crypto_15m_idiosyncratic_sweep_short_rejection_depth_required_execution_v1.py",
+        "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+        "?? tools/edge_factory_os_repo_only_crypto_15m_idiosyncratic_sweep_short_trap_quality_risk_tightened_execution_v1.py",
+        "?? tools/edge_factory_os_repo_only_crypto_15m_idiosyncratic_sweep_short_trap_quality_time_exit_only_execution_v1.py",
+        "?? tools/edge_factory_os_repo_only_crypto_15m_idiosyncratic_sweep_short_trap_quality_wider_stop_execution_v1.py",
+        "?? tools/edge_factory_os_repo_only_crypto_15m_idiosyncratic_sweep_short_trap_score4_execution_v1.py",
+        "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_execution_v1.py",
+        "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v2_execution_v1.py",
+        "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v3_stop_risk_execution_v1.py",
+        "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_FAIL_ROUTE_CLOSED_NO_EDGE_NO_LIVE",
+        "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_MARKET_PUMP_VETO_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_REJECTION_DEPTH_REQUIRED_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_RISK_TIGHTENED_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_TIME_EXIT_ONLY_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_WIDER_STOP_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_SCORE4_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_REJECTED_NO_FOLLOWUP"
+      ],
+      "best_cost_as_share_of_gross_pnl": 0.25888202691770035,
+      "best_gross_pnl_usdt": 773.531891,
+      "best_holdout_net_bps": 1338.358106,
+      "best_net_pnl_usdt": 686.109241,
+      "best_portfolio_net_bps": 6454.985959,
+      "best_validation_net_bps": 2058.815755,
+      "capacity_classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "cost_scenario_estimates": {
+        "artifact_derived_linear_cost_scaling_not_new_backtest": true,
+        "artifact_gross_pnl_usdt": 166.636568,
+        "artifact_total_cost_usdt": 116.472345,
+        "assumed_current_round_trip_cost_bps": 20,
+        "estimates": {
+          "0_bps": {
+            "estimated_cost_usdt": 0.0,
+            "estimated_net_pnl_usdt": 166.636568
+          },
+          "10_bps": {
+            "estimated_cost_usdt": 58.2361725,
+            "estimated_net_pnl_usdt": 108.4003955
+          },
+          "20_bps": {
+            "estimated_cost_usdt": 116.472345,
+            "estimated_net_pnl_usdt": 50.16422300000001
+          },
+          "2_bps": {
+            "estimated_cost_usdt": 11.647234500000001,
+            "estimated_net_pnl_usdt": 154.98933350000001
+          },
+          "5_bps": {
+            "estimated_cost_usdt": 29.11808625,
+            "estimated_net_pnl_usdt": 137.51848175
+          }
+        },
+        "source_artifact": "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_market_pump_veto_execution_v1.json"
+      },
+      "cost_sensitivity_classification": "NET_POSITIVE_BUT_LOCKBOX_FAILED",
+      "family": "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY",
+      "fee_stress_2x_net_bps": -458.19856,
+      "gross_pnl_available": true,
+      "institutional_relevance_classification": "REJECTED_NOT_WORTHY",
+      "interpretation": {
+        "data_missing": [],
+        "evidence_blocking": [
+          "Trap-quality lockbox failed unseen forward data: portfolio net bps about -333, null percentile about 0.07, route closed, V-next not allowed."
+        ],
+        "evidence_supporting": [],
+        "next_allowed_step": "NO_LOCKBOX_TUNING_ALLOWED",
+        "why_it_may_survive_lower_fees_or_higher_capital": []
+      },
+      "lockbox_or_forward_result": {
+        "lockbox_failed": true,
+        "lockbox_portfolio_net_bps": -333.003836
+      },
+      "max_drawdown_bps": -2681.641497,
+      "max_total_cost_usdt": 205.918942,
+      "monthly_positive_rate": 1.0,
+      "null_pass_any": false,
+      "null_percentile": 760.170262,
+      "top_3_symbol_concentration": 205.811243,
+      "top_symbol_concentration": 282.795283,
+      "trade_count": 1092.0,
+      "worst_month_bps": -769.790629
+    }
+  },
+  "institutional_relevance_review": {
+    "BETA_NEUTRAL_RESIDUAL_MR": {
+      "classification": "INSTITUTIONAL_RESEARCH_WORTHY",
+      "data_missing": [
+        "Institutional fee schedule, borrow/funding, hedge execution slippage, and post-cost lockbox evidence."
+      ],
+      "evidence_blocking": [
+        "No edge is established; cost-salvage requires institutional fee/slippage proof and fresh validation."
+      ],
+      "evidence_supporting": [
+        "Known artifact interpretation preserved: symbol leg positive, BTC/ETH hedge combined positive or near positive, total cost very large, net rejected."
+      ],
+      "next_allowed_step": "INSTITUTIONAL_RESEARCH_CONTRACT_FOR_TOP_FAMILY_V1"
+    },
+    "COINALYZE_LONG_LIQUIDATION_FLUSH": {
+      "classification": "INSTITUTIONAL_RESEARCH_WORTHY_ONLY_WITH_NEW_DATA",
+      "data_missing": [
+        "Longer aligned liquidation/OI/funding history; max-history Coinalyze artifact found insufficient full alignment."
+      ],
+      "evidence_blocking": [
+        "Only 35 closed trades; 2x fee stress was negative, so it is low-sample and fee-fragile."
+      ],
+      "evidence_supporting": [
+        "Event study was promising and strategy execution baseline percentile was high on recent data."
+      ],
+      "next_allowed_step": "FREE_DATA_SOURCE_ALTERNATIVE_DISCOVERY_V1"
+    },
+    "FUNDING_OR_BASIS_CARRY": {
+      "classification": "INSTITUTIONAL_RESEARCH_WORTHY_ONLY_WITH_NEW_DATA",
+      "data_missing": [
+        "Longer venue-specific borrow, funding, basis, maker/taker, spread, and inventory-capacity data."
+      ],
+      "evidence_blocking": [
+        "Existing closures/evaluations do not create an edge claim and may be low-return or configuration-fragile."
+      ],
+      "evidence_supporting": [
+        "Funding/carry/basis artifacts exist and are economically interpretable rather than pure OHLCV pattern mining."
+      ],
+      "next_allowed_step": "FUNDING_CARRY_OR_COINALYZE_DATA_COLLECTION_PLAN_V1"
+    },
+    "LIQUIDITY_SWEEP_REVERSAL": {
+      "classification": "RETAIL_ONLY_OR_TOO_FRAGILE",
+      "data_missing": [],
+      "evidence_blocking": [
+        "Known fact preserved: repaired liquidity sweep execution was heavily negative."
+      ],
+      "evidence_supporting": [],
+      "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP"
+    },
+    "LUCIFER_EMA_PIVOT": {
+      "classification": "INCONCLUSIVE",
+      "data_missing": [],
+      "evidence_blocking": [
+        "Known fact preserved: Lucifer variants were negative."
+      ],
+      "evidence_supporting": [],
+      "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP"
+    },
+    "OLD_SHORT_CLEAN_ROOM": {
+      "classification": "RETAIL_ONLY_OR_TOO_FRAGILE",
+      "data_missing": [],
+      "evidence_blocking": [
+        "Known fact preserved: old_short clean-room V2 was rejected after corrected accounting."
+      ],
+      "evidence_supporting": [],
+      "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP"
+    },
+    "REGIME_BREAKOUT_MOMENTUM": {
+      "classification": "RETAIL_ONLY_OR_TOO_FRAGILE",
+      "data_missing": [],
+      "evidence_blocking": [
+        "Known fact preserved: regime breakout momentum was heavily negative."
+      ],
+      "evidence_supporting": [],
+      "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP"
+    },
+    "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY": {
+      "classification": "REJECTED_NOT_WORTHY",
+      "data_missing": [],
+      "evidence_blocking": [
+        "Trap-quality lockbox failed unseen forward data: portfolio net bps about -333, null percentile about 0.07, route closed, V-next not allowed."
+      ],
+      "evidence_supporting": [],
+      "next_allowed_step": "NO_LOCKBOX_TUNING_ALLOWED"
+    }
+  },
+  "limitations": [
+    "This is a meta-review of existing repo artifacts only; it does not read raw market data or recompute PnL from candles.",
+    "Cost scenarios are produced only where gross/cost fields are present in artifacts and assume linear cost scaling from the artifact cost base.",
+    "Lower fees and higher capital do not create edge; institutional-worthy means worth a constrained research contract, not a candidate or live permission.",
+    "Family grouping and extraction are conservative filename/field based heuristics over available artifact schemas."
+  ],
+  "module": "edge_factory_os_repo_only_institutional_cost_and_capacity_reevaluation_v1",
+  "next_allowed_step": "INSTITUTIONAL_RESEARCH_CONTRACT_FOR_TOP_FAMILY_V1",
+  "overall_classification": "ONE_OR_MORE_FAMILIES_INSTITUTIONAL_RESEARCH_WORTHY",
+  "payload_sha256_excluding_hash": "1b46bd0aac02fe0abb712bd7fb8b5db921c987a5acb5a1e2093ceaaba10c061b",
+  "ranked_family_candidates": [
+    {
+      "capacity_classification": "MEDIUM_CAPACITY_PLAUSIBLE",
+      "cost_sensitivity_classification": "GROSS_POSITIVE_COST_DOMINATED",
+      "family": "BETA_NEUTRAL_RESIDUAL_MR",
+      "institutional_relevance_classification": "INSTITUTIONAL_RESEARCH_WORTHY",
+      "rank_reason": {
+        "data_missing": [
+          "Institutional fee schedule, borrow/funding, hedge execution slippage, and post-cost lockbox evidence."
+        ],
+        "evidence_blocking": [
+          "No edge is established; cost-salvage requires institutional fee/slippage proof and fresh validation."
+        ],
+        "evidence_supporting": [
+          "Known artifact interpretation preserved: symbol leg positive, BTC/ETH hedge combined positive or near positive, total cost very large, net rejected."
+        ],
+        "next_allowed_step": "INSTITUTIONAL_RESEARCH_CONTRACT_FOR_TOP_FAMILY_V1",
+        "why_it_may_survive_lower_fees_or_higher_capital": [
+          "Artifacts indicate positive gross components while total transaction costs dominated net results; institutional fees could directly target that failure mode."
+        ]
+      }
+    },
+    {
+      "capacity_classification": "HIGH_CAPACITY_PLAUSIBLE",
+      "cost_sensitivity_classification": "UNKNOWN_MISSING_GROSS_COST_FIELDS",
+      "family": "FUNDING_OR_BASIS_CARRY",
+      "institutional_relevance_classification": "INSTITUTIONAL_RESEARCH_WORTHY_ONLY_WITH_NEW_DATA",
+      "rank_reason": {
+        "data_missing": [
+          "Longer venue-specific borrow, funding, basis, maker/taker, spread, and inventory-capacity data."
+        ],
+        "evidence_blocking": [
+          "Existing closures/evaluations do not create an edge claim and may be low-return or configuration-fragile."
+        ],
+        "evidence_supporting": [
+          "Funding/carry/basis artifacts exist and are economically interpretable rather than pure OHLCV pattern mining."
+        ],
+        "next_allowed_step": "FUNDING_CARRY_OR_COINALYZE_DATA_COLLECTION_PLAN_V1",
+        "why_it_may_survive_lower_fees_or_higher_capital": [
+          "Carry and basis mechanisms are structurally capital-dependent; low absolute returns may matter more at larger capital and lower execution costs."
+        ]
+      }
+    },
+    {
+      "capacity_classification": "LOW_CAPACITY_OR_MICROSTRUCTURE_LIMITED",
+      "cost_sensitivity_classification": "LOW_SAMPLE_ONLY",
+      "family": "COINALYZE_LONG_LIQUIDATION_FLUSH",
+      "institutional_relevance_classification": "INSTITUTIONAL_RESEARCH_WORTHY_ONLY_WITH_NEW_DATA",
+      "rank_reason": {
+        "data_missing": [
+          "Longer aligned liquidation/OI/funding history; max-history Coinalyze artifact found insufficient full alignment."
+        ],
+        "evidence_blocking": [
+          "Only 35 closed trades; 2x fee stress was negative, so it is low-sample and fee-fragile."
+        ],
+        "evidence_supporting": [
+          "Event study was promising and strategy execution baseline percentile was high on recent data."
+        ],
+        "next_allowed_step": "FREE_DATA_SOURCE_ALTERNATIVE_DISCOVERY_V1",
+        "why_it_may_survive_lower_fees_or_higher_capital": []
+      }
+    }
+  ],
+  "rejected_family_summary": [
+    {
+      "cost_sensitivity_classification": "NET_POSITIVE_BUT_NULL_FAILED",
+      "family": "OLD_SHORT_CLEAN_ROOM",
+      "institutional_relevance_classification": "RETAIL_ONLY_OR_TOO_FRAGILE",
+      "primary_blocker": "Known fact preserved: old_short clean-room V2 was rejected after corrected accounting."
+    },
+    {
+      "cost_sensitivity_classification": "UNKNOWN_MISSING_GROSS_COST_FIELDS",
+      "family": "LUCIFER_EMA_PIVOT",
+      "institutional_relevance_classification": "INCONCLUSIVE",
+      "primary_blocker": "Known fact preserved: Lucifer variants were negative."
+    },
+    {
+      "cost_sensitivity_classification": "NET_POSITIVE_BUT_NULL_FAILED",
+      "family": "REGIME_BREAKOUT_MOMENTUM",
+      "institutional_relevance_classification": "RETAIL_ONLY_OR_TOO_FRAGILE",
+      "primary_blocker": "Known fact preserved: regime breakout momentum was heavily negative."
+    },
+    {
+      "cost_sensitivity_classification": "GROSS_POSITIVE_COST_DOMINATED",
+      "family": "LIQUIDITY_SWEEP_REVERSAL",
+      "institutional_relevance_classification": "RETAIL_ONLY_OR_TOO_FRAGILE",
+      "primary_blocker": "Known fact preserved: repaired liquidity sweep execution was heavily negative."
+    },
+    {
+      "cost_sensitivity_classification": "NET_POSITIVE_BUT_LOCKBOX_FAILED",
+      "family": "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY",
+      "institutional_relevance_classification": "REJECTED_NOT_WORTHY",
+      "primary_blocker": "Trap-quality lockbox failed unseen forward data: portfolio net bps about -333, null percentile about 0.07, route closed, V-next not allowed."
+    }
+  ],
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "meta_review_created": true,
+    "optimization_allowed_now": false,
+    "pnl_computation_from_raw_data_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_checkpoint": "14c572b563a90bc2d3a7769d9ce99c75e8ea993b",
+  "status": "PASS_REPO_ONLY_INSTITUTIONAL_COST_AND_CAPACITY_REEVALUATION_CREATED",
+  "validation_checks": {
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "existing_artifacts_only": true,
+    "no_api_called": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_network_used": true,
+    "no_optimization": true,
+    "no_pnl_computation_from_raw_data": true,
+    "no_raw_market_data_read": true,
+    "no_runtime_live_capital": true,
+    "no_signal_generation": true,
+    "no_strategy_execution": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

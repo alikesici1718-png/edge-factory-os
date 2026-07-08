@@ -1,0 +1,1534 @@
+{
+  "allowed_next_step": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT_V1",
+  "artifact_kind": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_ROBUSTNESS_EVALUATOR",
+  "blocker": null,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "current_head": "91b86049459eff477746d082d61e1e3302a26c1f",
+  "diagnostic_route_promising": true,
+  "evaluator_status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_ROBUSTNESS_EVALUATOR_CREATED",
+  "expected_head": "91b86049459eff477746d082d61e1e3302a26c1f",
+  "final_decision": "promising volatility diagnostic only; eligible only for a pre-registered independent validation contract; strategy, signal, candidate, release, runtime, live, and capital actions remain disallowed",
+  "forbidden_actions_confirmed_false": {
+    "account_api": false,
+    "api_key": false,
+    "backtest": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "entry_exit_rules_created": false,
+    "event_definitions_modified": false,
+    "null_validation_rerun": false,
+    "optimization_against_returns": false,
+    "order_private_account_api_key": false,
+    "pnl": false,
+    "prior_artifacts_modified": false,
+    "private_api": false,
+    "returns_recomputed": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "signed_return_findings_promoted": false,
+    "sizing_rules_created": false,
+    "strategy": false,
+    "trade_simulation": false
+  },
+  "head_matches_expected": true,
+  "independent_validation_required": true,
+  "input_artifact_hashes_after": {
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "95bff40616afdcaa2f1fe40fd1b4753057b0a30cd8386ebae4f2910ffda0fe98",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_diagnostic_robustness_runner_v1.json": "c27845a11721a9d4dd3285d70c233bdd49dcb1d8afd1fb9ad79ad88d918a8698",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_return_diagnostic_v1.json": "6995fd9d1a85a13ec5b47833c396a0200dc1c751699efc3e8c76367e5546be00",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "95bff40616afdcaa2f1fe40fd1b4753057b0a30cd8386ebae4f2910ffda0fe98",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_diagnostic_robustness_runner_v1.json": "c27845a11721a9d4dd3285d70c233bdd49dcb1d8afd1fb9ad79ad88d918a8698",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_return_diagnostic_v1.json": "6995fd9d1a85a13ec5b47833c396a0200dc1c751699efc3e8c76367e5546be00",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_integrity_checks": {
+    "diagnostic_forbidden_false": true,
+    "diagnostic_permissions_false": true,
+    "diagnostic_promising_volatility_only": true,
+    "discovery_ready": true,
+    "robustness_forbidden_false": true,
+    "robustness_permissions_false": true,
+    "robustness_promising": true,
+    "theory_queue_ready": true,
+    "validator_forbidden_false": true,
+    "validator_passed": true,
+    "validator_permissions_false": true
+  },
+  "input_payload_hashes_verified": {
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "dad346c255410ee1406e19f1480d32d8cbcc4bd24de25977b2038dd3e20900df",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "52f9421380375f81616f897163d49e20a275febde00a52e58b0b0f2786df34e5",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_diagnostic_robustness_runner_v1.json": "fe55aab079fa97efdfcb1f3dc8e7110f8a72c44f05900c425b04e81dcd5dcc10",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_return_diagnostic_v1.json": "dcebeeca6fb626e3390e5834dfabd0e7f1d19bdc34ced904c924d9a9a164aad0",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "8d84ede6d6d6128224ad193fe2c390c0bf5cbc36ef0a41c6ac97f09f291ad5cd"
+  },
+  "live_allowed": false,
+  "module": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_ROBUSTNESS_EVALUATOR_V1",
+  "payload_sha256_excluding_hash": "92ee7c7adb2250c82725bb6cfa0954ee49882b345eaef01e59daba89ceef932f",
+  "primary_volatility_finding_summary": {
+    "best_oi_expansion_volatility_compression_break_definition__15m": {
+      "all_primary_robustness_gates_true": true,
+      "alternate_volatility_metrics_passed": true,
+      "alternative_volatility_metric_sensitivity": {
+        "alternate_proxy_supports_direction": true,
+        "forward_range_proxy_p_high": 0.000999000999000999,
+        "realized_vol_proxy_p_high": 0.000999000999000999
+      },
+      "arbusdt_exclusion": {
+        "arbusdt_event_count": 60,
+        "arbusdt_exclusion_pass": true,
+        "direction_preserved": true,
+        "magnitude_ratio_vs_full": 0.9996953874387591,
+        "mean_abs_return_ex_arbusdt": 0.0038717640471173675,
+        "p_abs_high_mean_ex_arbusdt": 0.000999000999000999
+      },
+      "arbusdt_exclusion_passed": true,
+      "bonferroni_p": 0.015984015984015984,
+      "event_count": 585,
+      "fdr_q": 0.005328005328005328,
+      "leave_one_month_passed": true,
+      "leave_one_symbol_passed": true,
+      "p_abs_high_mean": 0.000999000999000999,
+      "primary_metric_family": "forward_abs_return / realized-volatility proxy",
+      "target": "expansion + volatility compression break 15m"
+    },
+    "best_oi_expansion_volatility_expansion_definition__15m": {
+      "all_primary_robustness_gates_true": true,
+      "alternate_volatility_metrics_passed": true,
+      "alternative_volatility_metric_sensitivity": {
+        "alternate_proxy_supports_direction": true,
+        "forward_range_proxy_p_high": 0.000999000999000999,
+        "realized_vol_proxy_p_high": 0.000999000999000999
+      },
+      "arbusdt_exclusion": {
+        "arbusdt_event_count": 60,
+        "arbusdt_exclusion_pass": true,
+        "direction_preserved": true,
+        "magnitude_ratio_vs_full": 0.9996953874387591,
+        "mean_abs_return_ex_arbusdt": 0.0038717640471173675,
+        "p_abs_high_mean_ex_arbusdt": 0.000999000999000999
+      },
+      "arbusdt_exclusion_passed": true,
+      "bonferroni_p": 0.015984015984015984,
+      "event_count": 585,
+      "fdr_q": 0.005328005328005328,
+      "leave_one_month_passed": true,
+      "leave_one_symbol_passed": true,
+      "p_abs_high_mean": 0.000999000999000999,
+      "primary_metric_family": "forward_abs_return / realized-volatility proxy",
+      "target": "expansion + volatility expansion 15m"
+    }
+  },
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "release_allowed": false,
+  "remaining_limitations": [
+    "The same 2023-2025 sample was used for discovery, evaluation, and robustness.",
+    "No independent holdout or prospective validation has been completed yet.",
+    "No cost, slippage, execution, fill, entry, exit, or sizing model exists.",
+    "No live or paper validation exists.",
+    "This is a volatility/range diagnostic, not a directional edge or strategy.",
+    "ARBUSDT 2023-01 and 2023-02 public archive gaps remain, though ARBUSDT exclusion passed.",
+    "Raw cache files were reused and not committed.",
+    "Secondary signed-return findings remain tracking-only and cannot drive route promotion.",
+    "Data-quality warning from robustness runner: Known public kline archive gaps remain: ARBUSDT-2023-01 and ARBUSDT-2023-02.",
+    "Data-quality warning from robustness runner: Raw kline cache files were reused and not committed.",
+    "Data-quality warning from robustness runner: Missing forward rows across definition/horizon tests: 7.",
+    "Data-quality warning from robustness runner: Missing rows are zero for primary 15m robustness targets."
+  ],
+  "replacement_checks_all_true": true,
+  "research_chain_summary": {
+    "event_discovery": {
+      "result_classification": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_DISCOVERY_READY",
+      "selected_clean_event_definitions": [
+        {
+          "arbusdt_count": 60,
+          "cooldown_filtered_count": 585,
+          "definition_id": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT__oi_p95.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+          "meta": {
+            "cooldown_hours": 6,
+            "family": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT",
+            "oi_direction": "expansion",
+            "oi_threshold": "p95.0",
+            "regime_shift_window": "current15m_range_vs_prior4h_median",
+            "uses_forward_returns": false,
+            "uses_outcome_optimization": false,
+            "vol_high_threshold": "p75.0",
+            "vol_low_threshold": "p25.0"
+          },
+          "missing_component_count": 56230,
+          "month_coverage_count": 36,
+          "months": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12",
+            "2025-01",
+            "2025-02",
+            "2025-03",
+            "2025-04",
+            "2025-05",
+            "2025-06",
+            "2025-07",
+            "2025-08",
+            "2025-09",
+            "2025-10",
+            "2025-11",
+            "2025-12"
+          ],
+          "oi_shock_direction_distribution": {
+            "expansion": 2036
+          },
+          "optional_annotation_distribution": {
+            "long_short_ratio_annotation": {
+              "account_only": 299,
+              "both": 39,
+              "none": 1528,
+              "position_only": 170
+            },
+            "taker_pressure_annotation": {
+              "buy_pressure_extreme": 44,
+              "none": 1964,
+              "sell_pressure_extreme": 28
+            },
+            "volume_stress_annotation": {
+              "not_volume_stress": 1138,
+              "volume_stress_p95_or_higher": 898
+            }
+          },
+          "overlap_rate": 0.0,
+          "raw_event_count": 2036,
+          "reason_counts": {
+            "rejected_due_to_cooldown_count": 1451,
+            "rejected_due_to_missing_volatility_regime_count": 0
+          },
+          "selection_score": 1443.1,
+          "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+          "symbol_coverage_count": 10,
+          "symbols": [
+            "APTUSDT",
+            "ARBUSDT",
+            "BNBUSDT",
+            "BTCUSDT",
+            "DOGEUSDT",
+            "ETHUSDT",
+            "LINKUSDT",
+            "OPUSDT",
+            "SOLUSDT",
+            "XRPUSDT"
+          ],
+          "target_event_count_band": "ideal",
+          "top_month": "2025-06",
+          "top_month_concentration": 0.05128205128205128,
+          "top_symbol": "DOGEUSDT",
+          "top_symbol_concentration": 0.11282051282051282,
+          "unique_symbol_timestamp_count": 2036,
+          "unique_timestamp_count": 1893,
+          "volatility_regime_distribution": {
+            "prior4h_compressed_range_to_current15m_range_break": 2036
+          }
+        },
+        {
+          "arbusdt_count": 12,
+          "cooldown_filtered_count": 192,
+          "definition_id": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT__oi_p97.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+          "meta": {
+            "cooldown_hours": 6,
+            "family": "OI_EXPANSION_VOLATILITY_EXPANSION_EVENT",
+            "oi_direction": "expansion",
+            "oi_threshold": "p97.5",
+            "regime_shift_window": "current15m_range_vs_prior4h_median",
+            "uses_forward_returns": false,
+            "uses_outcome_optimization": false,
+            "vol_high_threshold": "p90.0",
+            "vol_low_threshold": "p25.0"
+          },
+          "missing_component_count": 56230,
+          "month_coverage_count": 36,
+          "months": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12",
+            "2025-01",
+            "2025-02",
+            "2025-03",
+            "2025-04",
+            "2025-05",
+            "2025-06",
+            "2025-07",
+            "2025-08",
+            "2025-09",
+            "2025-10",
+            "2025-11",
+            "2025-12"
+          ],
+          "oi_shock_direction_distribution": {
+            "expansion": 597
+          },
+          "optional_annotation_distribution": {
+            "long_short_ratio_annotation": {
+              "account_only": 119,
+              "both": 18,
+              "none": 413,
+              "position_only": 47
+            },
+            "taker_pressure_annotation": {
+              "buy_pressure_extreme": 7,
+              "none": 581,
+              "sell_pressure_extreme": 9
+            },
+            "volume_stress_annotation": {
+              "not_volume_stress": 133,
+              "volume_stress_p95_or_higher": 464
+            }
+          },
+          "overlap_rate": 0.0,
+          "raw_event_count": 597,
+          "reason_counts": {
+            "rejected_due_to_cooldown_count": 405,
+            "rejected_due_to_missing_volatility_regime_count": 0
+          },
+          "selection_score": 839.52,
+          "selection_slot": "optional_stricter_best_oi_expansion_volatility_expansion_definition",
+          "symbol_coverage_count": 10,
+          "symbols": [
+            "APTUSDT",
+            "ARBUSDT",
+            "BNBUSDT",
+            "BTCUSDT",
+            "DOGEUSDT",
+            "ETHUSDT",
+            "LINKUSDT",
+            "OPUSDT",
+            "SOLUSDT",
+            "XRPUSDT"
+          ],
+          "target_event_count_band": "sparse_but_potentially_usable",
+          "top_month": "2023-06",
+          "top_month_concentration": 0.052083333333333336,
+          "top_symbol": "XRPUSDT",
+          "top_symbol_concentration": 0.14583333333333334,
+          "unique_symbol_timestamp_count": 597,
+          "unique_timestamp_count": 569,
+          "volatility_regime_distribution": {
+            "prior4h_compressed_range_to_current15m_range_break": 597
+          }
+        },
+        {
+          "arbusdt_count": 48,
+          "cooldown_filtered_count": 550,
+          "definition_id": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT__oi_p5.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+          "meta": {
+            "cooldown_hours": 6,
+            "family": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT",
+            "oi_direction": "contraction",
+            "oi_threshold": "p5.0",
+            "regime_shift_window": "current15m_range_vs_prior4h_median",
+            "uses_forward_returns": false,
+            "uses_outcome_optimization": false,
+            "vol_high_threshold": "p75.0",
+            "vol_low_threshold": "p25.0"
+          },
+          "missing_component_count": 56230,
+          "month_coverage_count": 36,
+          "months": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12",
+            "2025-01",
+            "2025-02",
+            "2025-03",
+            "2025-04",
+            "2025-05",
+            "2025-06",
+            "2025-07",
+            "2025-08",
+            "2025-09",
+            "2025-10",
+            "2025-11",
+            "2025-12"
+          ],
+          "oi_shock_direction_distribution": {
+            "contraction": 1548
+          },
+          "optional_annotation_distribution": {
+            "long_short_ratio_annotation": {
+              "account_only": 134,
+              "both": 27,
+              "none": 1244,
+              "position_only": 143
+            },
+            "taker_pressure_annotation": {
+              "buy_pressure_extreme": 15,
+              "none": 1506,
+              "sell_pressure_extreme": 27
+            },
+            "volume_stress_annotation": {
+              "not_volume_stress": 948,
+              "volume_stress_p95_or_higher": 600
+            }
+          },
+          "overlap_rate": 0.0,
+          "raw_event_count": 1548,
+          "reason_counts": {
+            "rejected_due_to_cooldown_count": 998,
+            "rejected_due_to_missing_volatility_regime_count": 0
+          },
+          "selection_score": 1441.0,
+          "selection_slot": "best_oi_contraction_volatility_expansion_definition",
+          "symbol_coverage_count": 10,
+          "symbols": [
+            "APTUSDT",
+            "ARBUSDT",
+            "BNBUSDT",
+            "BTCUSDT",
+            "DOGEUSDT",
+            "ETHUSDT",
+            "LINKUSDT",
+            "OPUSDT",
+            "SOLUSDT",
+            "XRPUSDT"
+          ],
+          "target_event_count_band": "ideal",
+          "top_month": "2023-09",
+          "top_month_concentration": 0.04909090909090909,
+          "top_symbol": "ETHUSDT",
+          "top_symbol_concentration": 0.15272727272727274,
+          "unique_symbol_timestamp_count": 1548,
+          "unique_timestamp_count": 1283,
+          "volatility_regime_distribution": {
+            "prior4h_compressed_range_to_current15m_range_break": 1548
+          }
+        },
+        {
+          "arbusdt_count": 13,
+          "cooldown_filtered_count": 162,
+          "definition_id": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT__oi_p2.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+          "meta": {
+            "cooldown_hours": 6,
+            "family": "OI_CONTRACTION_VOLATILITY_EXPANSION_EVENT",
+            "oi_direction": "contraction",
+            "oi_threshold": "p2.5",
+            "regime_shift_window": "current15m_range_vs_prior4h_median",
+            "uses_forward_returns": false,
+            "uses_outcome_optimization": false,
+            "vol_high_threshold": "p90.0",
+            "vol_low_threshold": "p25.0"
+          },
+          "missing_component_count": 56230,
+          "month_coverage_count": 32,
+          "months": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-09",
+            "2023-10",
+            "2023-12",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12",
+            "2025-01",
+            "2025-03",
+            "2025-04",
+            "2025-05",
+            "2025-06",
+            "2025-07",
+            "2025-08",
+            "2025-09",
+            "2025-10",
+            "2025-11",
+            "2025-12"
+          ],
+          "oi_shock_direction_distribution": {
+            "contraction": 360
+          },
+          "optional_annotation_distribution": {
+            "long_short_ratio_annotation": {
+              "account_only": 36,
+              "both": 11,
+              "none": 278,
+              "position_only": 35
+            },
+            "taker_pressure_annotation": {
+              "buy_pressure_extreme": 1,
+              "none": 353,
+              "sell_pressure_extreme": 6
+            },
+            "volume_stress_annotation": {
+              "not_volume_stress": 69,
+              "volume_stress_p95_or_higher": 291
+            }
+          },
+          "overlap_rate": 0.0,
+          "raw_event_count": 360,
+          "reason_counts": {
+            "rejected_due_to_cooldown_count": 198,
+            "rejected_due_to_missing_volatility_regime_count": 0
+          },
+          "selection_score": 817.72,
+          "selection_slot": "optional_stricter_best_oi_contraction_volatility_expansion_definition",
+          "symbol_coverage_count": 10,
+          "symbols": [
+            "APTUSDT",
+            "ARBUSDT",
+            "BNBUSDT",
+            "BTCUSDT",
+            "DOGEUSDT",
+            "ETHUSDT",
+            "LINKUSDT",
+            "OPUSDT",
+            "SOLUSDT",
+            "XRPUSDT"
+          ],
+          "target_event_count_band": "sparse_but_potentially_usable",
+          "top_month": "2023-07",
+          "top_month_concentration": 0.06790123456790123,
+          "top_symbol": "ETHUSDT",
+          "top_symbol_concentration": 0.16049382716049382,
+          "unique_symbol_timestamp_count": 360,
+          "unique_timestamp_count": 310,
+          "volatility_regime_distribution": {
+            "prior4h_compressed_range_to_current15m_range_break": 360
+          }
+        },
+        {
+          "arbusdt_count": 60,
+          "cooldown_filtered_count": 585,
+          "definition_id": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT__oi_p95.0__vol_low_p25.0__vol_high_p75.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+          "meta": {
+            "cooldown_hours": 6,
+            "family": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT",
+            "oi_direction": "expansion",
+            "oi_threshold": "p95.0",
+            "regime_shift_window": "current15m_range_vs_prior4h_median",
+            "uses_forward_returns": false,
+            "uses_outcome_optimization": false,
+            "vol_high_threshold": "p75.0",
+            "vol_low_threshold": "p25.0"
+          },
+          "missing_component_count": 56230,
+          "month_coverage_count": 36,
+          "months": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12",
+            "2025-01",
+            "2025-02",
+            "2025-03",
+            "2025-04",
+            "2025-05",
+            "2025-06",
+            "2025-07",
+            "2025-08",
+            "2025-09",
+            "2025-10",
+            "2025-11",
+            "2025-12"
+          ],
+          "oi_shock_direction_distribution": {
+            "expansion": 2036
+          },
+          "optional_annotation_distribution": {
+            "long_short_ratio_annotation": {
+              "account_only": 299,
+              "both": 39,
+              "none": 1528,
+              "position_only": 170
+            },
+            "taker_pressure_annotation": {
+              "buy_pressure_extreme": 44,
+              "none": 1964,
+              "sell_pressure_extreme": 28
+            },
+            "volume_stress_annotation": {
+              "not_volume_stress": 1138,
+              "volume_stress_p95_or_higher": 898
+            }
+          },
+          "overlap_rate": 0.0,
+          "raw_event_count": 2036,
+          "reason_counts": {
+            "rejected_due_to_cooldown_count": 1451,
+            "rejected_due_to_missing_volatility_regime_count": 0
+          },
+          "selection_score": 1443.1,
+          "selection_slot": "best_oi_expansion_volatility_compression_break_definition",
+          "symbol_coverage_count": 10,
+          "symbols": [
+            "APTUSDT",
+            "ARBUSDT",
+            "BNBUSDT",
+            "BTCUSDT",
+            "DOGEUSDT",
+            "ETHUSDT",
+            "LINKUSDT",
+            "OPUSDT",
+            "SOLUSDT",
+            "XRPUSDT"
+          ],
+          "target_event_count_band": "ideal",
+          "top_month": "2025-06",
+          "top_month_concentration": 0.05128205128205128,
+          "top_symbol": "DOGEUSDT",
+          "top_symbol_concentration": 0.11282051282051282,
+          "unique_symbol_timestamp_count": 2036,
+          "unique_timestamp_count": 1893,
+          "volatility_regime_distribution": {
+            "compressed_range_breakout": 2036
+          }
+        },
+        {
+          "arbusdt_count": 12,
+          "cooldown_filtered_count": 192,
+          "definition_id": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT__oi_p97.5__vol_low_p25.0__vol_high_p90.0__window_current15m_range_vs_prior4h_median__cooldown_6h",
+          "meta": {
+            "cooldown_hours": 6,
+            "family": "OI_EXPANSION_VOLATILITY_COMPRESSION_BREAK_EVENT",
+            "oi_direction": "expansion",
+            "oi_threshold": "p97.5",
+            "regime_shift_window": "current15m_range_vs_prior4h_median",
+            "uses_forward_returns": false,
+            "uses_outcome_optimization": false,
+            "vol_high_threshold": "p90.0",
+            "vol_low_threshold": "p25.0"
+          },
+          "missing_component_count": 56230,
+          "month_coverage_count": 36,
+          "months": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12",
+            "2025-01",
+            "2025-02",
+            "2025-03",
+            "2025-04",
+            "2025-05",
+            "2025-06",
+            "2025-07",
+            "2025-08",
+            "2025-09",
+            "2025-10",
+            "2025-11",
+            "2025-12"
+          ],
+          "oi_shock_direction_distribution": {
+            "expansion": 597
+          },
+          "optional_annotation_distribution": {
+            "long_short_ratio_annotation": {
+              "account_only": 119,
+              "both": 18,
+              "none": 413,
+              "position_only": 47
+            },
+            "taker_pressure_annotation": {
+              "buy_pressure_extreme": 7,
+              "none": 581,
+              "sell_pressure_extreme": 9
+            },
+            "volume_stress_annotation": {
+              "not_volume_stress": 133,
+              "volume_stress_p95_or_higher": 464
+            }
+          },
+          "overlap_rate": 0.0,
+          "raw_event_count": 597,
+          "reason_counts": {
+            "rejected_due_to_cooldown_count": 405,
+            "rejected_due_to_missing_volatility_regime_count": 0
+          },
+          "selection_score": 839.52,
+          "selection_slot": "optional_stricter_best_oi_expansion_volatility_compression_break_definition",
+          "symbol_coverage_count": 10,
+          "symbols": [
+            "APTUSDT",
+            "ARBUSDT",
+            "BNBUSDT",
+            "BTCUSDT",
+            "DOGEUSDT",
+            "ETHUSDT",
+            "LINKUSDT",
+            "OPUSDT",
+            "SOLUSDT",
+            "XRPUSDT"
+          ],
+          "target_event_count_band": "sparse_but_potentially_usable",
+          "top_month": "2023-06",
+          "top_month_concentration": 0.052083333333333336,
+          "top_symbol": "XRPUSDT",
+          "top_symbol_concentration": 0.14583333333333334,
+          "unique_symbol_timestamp_count": 597,
+          "unique_timestamp_count": 569,
+          "volatility_regime_distribution": {
+            "compressed_range_breakout": 597
+          }
+        },
+        {
+          "arbusdt_count": 55,
+          "cooldown_filtered_count": 455,
+          "definition_id": "OI_CONTRACTION_POST_STRESS_VOLATILITY_NORMALIZATION_EVENT__oi_p5.0__vol_low_p25.0__vol_high_p75.0__window_current1h_vs_prior4h__cooldown_6h",
+          "meta": {
+            "cooldown_hours": 6,
+            "family": "OI_CONTRACTION_POST_STRESS_VOLATILITY_NORMALIZATION_EVENT",
+            "oi_direction": "contraction",
+            "oi_threshold": "p5.0",
+            "regime_shift_window": "current1h_vs_prior4h",
+            "uses_forward_returns": false,
+            "uses_outcome_optimization": false,
+            "vol_high_threshold": "p75.0",
+            "vol_low_threshold": "p25.0"
+          },
+          "missing_component_count": 56230,
+          "month_coverage_count": 36,
+          "months": [
+            "2023-01",
+            "2023-02",
+            "2023-03",
+            "2023-04",
+            "2023-05",
+            "2023-06",
+            "2023-07",
+            "2023-08",
+            "2023-09",
+            "2023-10",
+            "2023-11",
+            "2023-12",
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12",
+            "2025-01",
+            "2025-02",
+            "2025-03",
+            "2025-04",
+            "2025-05",
+            "2025-06",
+            "2025-07",
+            "2025-08",
+            "2025-09",
+            "2025-10",
+            "2025-11",
+            "2025-12"
+          ],
+          "oi_shock_direction_distribution": {
+            "contraction": 1181
+          },
+          "optional_annotation_distribution": {
+            "long_short_ratio_annotation": {
+              "account_only": 127,
+              "both": 19,
+              "none": 909,
+              "position_only": 126
+            },
+            "taker_pressure_annotation": {
+              "buy_pressure_extreme": 10,
+              "none": 1159,
+              "sell_pressure_extreme": 12
+            },
+            "volume_stress_annotation": {
+              "not_volume_stress": 1162,
+              "volume_stress_p95_or_higher": 19
+            }
+          },
+          "overlap_rate": 0.0,
+          "raw_event_count": 1181,
+          "reason_counts": {
+            "rejected_due_to_cooldown_count": 726,
+            "rejected_due_to_missing_volatility_regime_count": 0
+          },
+          "selection_score": 1435.3,
+          "selection_slot": "best_oi_contraction_post_stress_volatility_normalization_definition",
+          "symbol_coverage_count": 10,
+          "symbols": [
+            "APTUSDT",
+            "ARBUSDT",
+            "BNBUSDT",
+            "BTCUSDT",
+            "DOGEUSDT",
+            "ETHUSDT",
+            "LINKUSDT",
+            "OPUSDT",
+            "SOLUSDT",
+            "XRPUSDT"
+          ],
+          "target_event_count_band": "ideal",
+          "top_month": "2023-02",
+          "top_month_concentration": 0.046153846153846156,
+          "top_symbol": "OPUSDT",
+          "top_symbol_concentration": 0.13846153846153847,
+          "unique_symbol_timestamp_count": 1181,
+          "unique_timestamp_count": 1129,
+          "volatility_regime_distribution": {
+            "prior4h_high_vol_to_current1h_low": 1181
+          }
+        }
+      ],
+      "status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_DISCOVERY_CREATED",
+      "summary": "Event discovery produced four clean main definitions in the ideal event-count band with 10-symbol and 36-month coverage."
+    },
+    "event_validator": {
+      "forward_return_diagnostic_allowed": true,
+      "result_classification": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_VALIDATOR_PASS_WITH_ATTENTION",
+      "status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_VALIDATOR_CREATED",
+      "summary": "Validator passed with attention; no leakage, outcome-blind selection, and main acceptance gates passed."
+    },
+    "forward_diagnostic": {
+      "result_classification": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_FORWARD_DIAGNOSTIC_PROMISING_VOLATILITY_DIAGNOSTIC_ONLY",
+      "status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_FORWARD_RETURN_DIAGNOSTIC_CREATED",
+      "summary": "Forward diagnostic identified primary volatility/range findings, not directional strategy findings.",
+      "top_signed_return_findings": [
+        {
+          "bonferroni_p_value": 0.03196803196803197,
+          "diagnostic_role": "secondary_signed_return",
+          "fdr_q_value": 0.015984015984015984,
+          "horizon": "24h",
+          "mean": 0.006768536936035514,
+          "p_negative_mean": 0.999000999000999,
+          "p_positive_mean": 0.001998001998001998,
+          "p_two_sided_mean": 0.001998001998001998,
+          "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+          "valid_forward_return_count": 582
+        },
+        {
+          "bonferroni_p_value": 0.04795204795204795,
+          "diagnostic_role": "secondary_signed_return",
+          "fdr_q_value": 0.015984015984015984,
+          "horizon": "24h",
+          "mean": 0.007308031929952461,
+          "p_negative_mean": 0.998001998001998,
+          "p_positive_mean": 0.002997002997002997,
+          "p_two_sided_mean": 0.002997002997002997,
+          "selection_slot": "best_oi_contraction_volatility_expansion_definition",
+          "valid_forward_return_count": 549
+        },
+        {
+          "bonferroni_p_value": 0.015984015984015984,
+          "diagnostic_role": "secondary_signed_return",
+          "fdr_q_value": 0.015984015984015984,
+          "horizon": "24h",
+          "mean": 0.006768536936035514,
+          "p_negative_mean": 1.0,
+          "p_positive_mean": 0.000999000999000999,
+          "p_two_sided_mean": 0.000999000999000999,
+          "selection_slot": "best_oi_expansion_volatility_compression_break_definition",
+          "valid_forward_return_count": 582
+        },
+        {
+          "bonferroni_p_value": 0.3996003996003996,
+          "diagnostic_role": "secondary_signed_return",
+          "fdr_q_value": 0.07992007992007992,
+          "horizon": "4h",
+          "mean": 0.0018370114755931466,
+          "p_negative_mean": 0.977022977022977,
+          "p_positive_mean": 0.023976023976023976,
+          "p_two_sided_mean": 0.024975024975024976,
+          "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+          "valid_forward_return_count": 585
+        },
+        {
+          "bonferroni_p_value": 0.3836163836163836,
+          "diagnostic_role": "secondary_signed_return",
+          "fdr_q_value": 0.07992007992007992,
+          "horizon": "4h",
+          "mean": 0.0018370114755931466,
+          "p_negative_mean": 0.981018981018981,
+          "p_positive_mean": 0.01998001998001998,
+          "p_two_sided_mean": 0.023976023976023976,
+          "selection_slot": "best_oi_expansion_volatility_compression_break_definition",
+          "valid_forward_return_count": 585
+        },
+        {
+          "bonferroni_p_value": 1.0,
+          "diagnostic_role": "secondary_signed_return",
+          "fdr_q_value": 0.4675324675324675,
+          "horizon": "1h",
+          "mean": 0.0005130823657080461,
+          "p_negative_mean": 0.8751248751248751,
+          "p_positive_mean": 0.1258741258741259,
+          "p_two_sided_mean": 0.1968031968031968,
+          "selection_slot": "best_oi_contraction_volatility_expansion_definition",
+          "valid_forward_return_count": 550
+        },
+        {
+          "bonferroni_p_value": 1.0,
+          "diagnostic_role": "secondary_signed_return",
+          "fdr_q_value": 0.4675324675324675,
+          "horizon": "4h",
+          "mean": 0.0009461167782895605,
+          "p_negative_mean": 0.8211788211788211,
+          "p_positive_mean": 0.1798201798201798,
+          "p_two_sided_mean": 0.23376623376623376,
+          "selection_slot": "best_oi_contraction_volatility_expansion_definition",
+          "valid_forward_return_count": 550
+        },
+        {
+          "bonferroni_p_value": 1.0,
+          "diagnostic_role": "secondary_signed_return",
+          "fdr_q_value": 0.4675324675324675,
+          "horizon": "24h",
+          "mean": 0.003014052562697831,
+          "p_negative_mean": 0.7922077922077922,
+          "p_positive_mean": 0.2087912087912088,
+          "p_two_sided_mean": 0.22477522477522477,
+          "selection_slot": "best_oi_contraction_post_stress_volatility_normalization_definition",
+          "valid_forward_return_count": 455
+        }
+      ],
+      "top_volatility_findings": [
+        {
+          "bonferroni_p_value": 0.015984015984015984,
+          "diagnostic_role": "primary_volatility_abs_return",
+          "fdr_q_value": 0.007992007992007992,
+          "forward_range_proxy_mean": 0.007690543606944561,
+          "horizon": "15m",
+          "mean_abs_return": 0.003872943794446136,
+          "p_abs_high_mean": 0.000999000999000999,
+          "p_abs_low_mean": 1.0,
+          "realized_vol_proxy_mean": 0.003872943794446136,
+          "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+          "valid_abs_return_count": 585
+        },
+        {
+          "bonferroni_p_value": 0.015984015984015984,
+          "diagnostic_role": "primary_volatility_abs_return",
+          "fdr_q_value": 0.007992007992007992,
+          "forward_range_proxy_mean": 0.007690543606944561,
+          "horizon": "15m",
+          "mean_abs_return": 0.003872943794446136,
+          "p_abs_high_mean": 0.000999000999000999,
+          "p_abs_low_mean": 1.0,
+          "realized_vol_proxy_mean": 0.003872943794446136,
+          "selection_slot": "best_oi_expansion_volatility_compression_break_definition",
+          "valid_abs_return_count": 585
+        },
+        {
+          "bonferroni_p_value": 0.03196803196803197,
+          "diagnostic_role": "primary_volatility_abs_return",
+          "fdr_q_value": 0.010656010656010656,
+          "forward_range_proxy_mean": 0.015049777216154863,
+          "horizon": "1h",
+          "mean_abs_return": 0.007131677676972027,
+          "p_abs_high_mean": 0.001998001998001998,
+          "p_abs_low_mean": 0.999000999000999,
+          "realized_vol_proxy_mean": 0.00352696588723813,
+          "selection_slot": "best_oi_contraction_post_stress_volatility_normalization_definition",
+          "valid_abs_return_count": 455
+        },
+        {
+          "bonferroni_p_value": 0.07992007992007992,
+          "diagnostic_role": "primary_volatility_abs_return",
+          "fdr_q_value": 0.015984015984015984,
+          "forward_range_proxy_mean": 0.013922869265288679,
+          "horizon": "1h",
+          "mean_abs_return": 0.006461493777739503,
+          "p_abs_high_mean": 0.004995004995004995,
+          "p_abs_low_mean": 0.996003996003996,
+          "realized_vol_proxy_mean": 0.003272202677387783,
+          "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+          "valid_abs_return_count": 585
+        },
+        {
+          "bonferroni_p_value": 0.06393606393606394,
+          "diagnostic_role": "primary_volatility_abs_return",
+          "fdr_q_value": 0.015984015984015984,
+          "forward_range_proxy_mean": 0.013922869265288679,
+          "horizon": "1h",
+          "mean_abs_return": 0.006461493777739503,
+          "p_abs_high_mean": 0.003996003996003996,
+          "p_abs_low_mean": 0.997002997002997,
+          "realized_vol_proxy_mean": 0.003272202677387783,
+          "selection_slot": "best_oi_expansion_volatility_compression_break_definition",
+          "valid_abs_return_count": 585
+        },
+        {
+          "bonferroni_p_value": 0.1918081918081918,
+          "diagnostic_role": "primary_volatility_abs_return",
+          "fdr_q_value": 0.03196803196803197,
+          "forward_range_proxy_mean": 0.0074499698143120725,
+          "horizon": "15m",
+          "mean_abs_return": 0.0032701117436589855,
+          "p_abs_high_mean": 0.011988011988011988,
+          "p_abs_low_mean": 0.989010989010989,
+          "realized_vol_proxy_mean": 0.0032701117436589855,
+          "selection_slot": "best_oi_contraction_volatility_expansion_definition",
+          "valid_abs_return_count": 550
+        },
+        {
+          "bonferroni_p_value": 0.6393606393606394,
+          "diagnostic_role": "primary_volatility_abs_return",
+          "fdr_q_value": 0.06393606393606394,
+          "forward_range_proxy_mean": 0.026244837090093828,
+          "horizon": "4h",
+          "mean_abs_return": 0.012398994852638043,
+          "p_abs_high_mean": 0.03996003996003996,
+          "p_abs_low_mean": 0.961038961038961,
+          "realized_vol_proxy_mean": 0.002878785591480296,
+          "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+          "valid_abs_return_count": 585
+        },
+        {
+          "bonferroni_p_value": 0.7672327672327672,
+          "diagnostic_role": "primary_volatility_abs_return",
+          "fdr_q_value": 0.06393606393606394,
+          "forward_range_proxy_mean": 0.06383163099502195,
+          "horizon": "24h",
+          "mean_abs_return": 0.031772625473491356,
+          "p_abs_high_mean": 0.04795204795204795,
+          "p_abs_low_mean": 0.9530469530469531,
+          "realized_vol_proxy_mean": 0.0026434957071156933,
+          "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+          "valid_abs_return_count": 582
+        }
+      ]
+    },
+    "robustness_runner": {
+      "result_classification": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_ROBUSTNESS_PROMISING_VOLATILITY_DIAGNOSTIC_ONLY",
+      "status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_FORWARD_DIAGNOSTIC_ROBUSTNESS_RUNNER_CREATED",
+      "summary": "Robustness confirmed the two primary volatility targets under month-aware symbol-balanced null, leave-one-symbol-out, leave-one-month-out, ARBUSDT exclusion, and alternate volatility proxy sensitivity."
+    },
+    "theory_queue": {
+      "result_classification": "OUTCOME_BLIND_BINANCE_THEORY_QUEUE_READY",
+      "selection": "outcome-blind queue selected OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT after closing/deprioritizing prior weak routes",
+      "status": "PASS_REPO_ONLY_OUTCOME_BLIND_BINANCE_THEORY_QUEUE_BUILDER_CREATED"
+    }
+  },
+  "result_classification": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_ROBUSTNESS_EVALUATOR_PROMISING_VOLATILITY_DIAGNOSTIC_ONLY",
+  "robustness_gate_summary": {
+    "all_primary_targets_pass": true,
+    "failed_robustness_gates": [],
+    "leave_one_month_out_summary": {
+      "best_oi_expansion_volatility_compression_break_definition__15m": {
+        "all_cases_count": 36,
+        "any_single_month_necessary": false,
+        "full_mean_abs_return": 0.003872943794446136,
+        "worst_cases": [
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 15,
+            "magnitude_ratio_vs_full": 0.9529424698885384,
+            "mean_abs_return": 0.0036906926252189883,
+            "month": "2023-07",
+            "necessary": false,
+            "remaining_event_count": 570
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 20,
+            "magnitude_ratio_vs_full": 0.9823721642337423,
+            "mean_abs_return": 0.0038046721773056925,
+            "month": "2023-02",
+            "necessary": false,
+            "remaining_event_count": 565
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 11,
+            "magnitude_ratio_vs_full": 0.984689195328598,
+            "mean_abs_return": 0.0038136459085060526,
+            "month": "2024-11",
+            "necessary": false,
+            "remaining_event_count": 574
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 27,
+            "magnitude_ratio_vs_full": 0.9861081563435079,
+            "mean_abs_return": 0.003819141464763309,
+            "month": "2023-12",
+            "necessary": false,
+            "remaining_event_count": 558
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 15,
+            "magnitude_ratio_vs_full": 0.9868882888789168,
+            "mean_abs_return": 0.0038221628742251663,
+            "month": "2025-04",
+            "necessary": false,
+            "remaining_event_count": 570
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 12,
+            "magnitude_ratio_vs_full": 0.9869893561279867,
+            "mean_abs_return": 0.003822554302000273,
+            "month": "2025-03",
+            "necessary": false,
+            "remaining_event_count": 573
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 13,
+            "magnitude_ratio_vs_full": 0.9888421843348452,
+            "mean_abs_return": 0.0038297302015062006,
+            "month": "2024-03",
+            "necessary": false,
+            "remaining_event_count": 572
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 17,
+            "magnitude_ratio_vs_full": 0.9935747751426234,
+            "mean_abs_return": 0.003848059259706838,
+            "month": "2024-04",
+            "necessary": false,
+            "remaining_event_count": 568
+          }
+        ]
+      },
+      "best_oi_expansion_volatility_expansion_definition__15m": {
+        "all_cases_count": 36,
+        "any_single_month_necessary": false,
+        "full_mean_abs_return": 0.003872943794446136,
+        "worst_cases": [
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 15,
+            "magnitude_ratio_vs_full": 0.9529424698885384,
+            "mean_abs_return": 0.0036906926252189883,
+            "month": "2023-07",
+            "necessary": false,
+            "remaining_event_count": 570
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 20,
+            "magnitude_ratio_vs_full": 0.9823721642337423,
+            "mean_abs_return": 0.0038046721773056925,
+            "month": "2023-02",
+            "necessary": false,
+            "remaining_event_count": 565
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 11,
+            "magnitude_ratio_vs_full": 0.984689195328598,
+            "mean_abs_return": 0.0038136459085060526,
+            "month": "2024-11",
+            "necessary": false,
+            "remaining_event_count": 574
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 27,
+            "magnitude_ratio_vs_full": 0.9861081563435079,
+            "mean_abs_return": 0.003819141464763309,
+            "month": "2023-12",
+            "necessary": false,
+            "remaining_event_count": 558
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 15,
+            "magnitude_ratio_vs_full": 0.9868882888789168,
+            "mean_abs_return": 0.0038221628742251663,
+            "month": "2025-04",
+            "necessary": false,
+            "remaining_event_count": 570
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 12,
+            "magnitude_ratio_vs_full": 0.9869893561279867,
+            "mean_abs_return": 0.003822554302000273,
+            "month": "2025-03",
+            "necessary": false,
+            "remaining_event_count": 573
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 13,
+            "magnitude_ratio_vs_full": 0.9888421843348452,
+            "mean_abs_return": 0.0038297302015062006,
+            "month": "2024-03",
+            "necessary": false,
+            "remaining_event_count": 572
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 17,
+            "magnitude_ratio_vs_full": 0.9935747751426234,
+            "mean_abs_return": 0.003848059259706838,
+            "month": "2024-04",
+            "necessary": false,
+            "remaining_event_count": 568
+          }
+        ]
+      }
+    },
+    "leave_one_symbol_out_summary": {
+      "best_oi_expansion_volatility_compression_break_definition__15m": {
+        "all_cases_count": 10,
+        "any_single_symbol_necessary": false,
+        "full_mean_abs_return": 0.003872943794446136,
+        "worst_cases": [
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 64,
+            "magnitude_ratio_vs_full": 0.9458734933603695,
+            "mean_abs_return": 0.0036633148764411315,
+            "necessary": false,
+            "remaining_event_count": 521,
+            "symbol": "XRPUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 50,
+            "magnitude_ratio_vs_full": 0.9661158820790074,
+            "mean_abs_return": 0.0037417125102137466,
+            "necessary": false,
+            "remaining_event_count": 535,
+            "symbol": "OPUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 54,
+            "magnitude_ratio_vs_full": 0.9879458574163608,
+            "mean_abs_return": 0.0038262587777294615,
+            "necessary": false,
+            "remaining_event_count": 531,
+            "symbol": "LINKUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 60,
+            "magnitude_ratio_vs_full": 0.9920427454309585,
+            "mean_abs_return": 0.0038421257947421385,
+            "necessary": false,
+            "remaining_event_count": 525,
+            "symbol": "SOLUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 55,
+            "magnitude_ratio_vs_full": 0.9939492120408261,
+            "mean_abs_return": 0.003849509432768144,
+            "necessary": false,
+            "remaining_event_count": 530,
+            "symbol": "APTUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 60,
+            "magnitude_ratio_vs_full": 0.9996953874387591,
+            "mean_abs_return": 0.0038717640471173675,
+            "necessary": false,
+            "remaining_event_count": 525,
+            "symbol": "ARBUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 66,
+            "magnitude_ratio_vs_full": 1.0091551625410158,
+            "mean_abs_return": 0.003908401224396509,
+            "necessary": false,
+            "remaining_event_count": 519,
+            "symbol": "DOGEUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 63,
+            "magnitude_ratio_vs_full": 1.0171320913214048,
+            "mean_abs_return": 0.003939295421215255,
+            "necessary": false,
+            "remaining_event_count": 522,
+            "symbol": "ETHUSDT"
+          }
+        ]
+      },
+      "best_oi_expansion_volatility_expansion_definition__15m": {
+        "all_cases_count": 10,
+        "any_single_symbol_necessary": false,
+        "full_mean_abs_return": 0.003872943794446136,
+        "worst_cases": [
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 64,
+            "magnitude_ratio_vs_full": 0.9458734933603695,
+            "mean_abs_return": 0.0036633148764411315,
+            "necessary": false,
+            "remaining_event_count": 521,
+            "symbol": "XRPUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 50,
+            "magnitude_ratio_vs_full": 0.9661158820790074,
+            "mean_abs_return": 0.0037417125102137466,
+            "necessary": false,
+            "remaining_event_count": 535,
+            "symbol": "OPUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 54,
+            "magnitude_ratio_vs_full": 0.9879458574163608,
+            "mean_abs_return": 0.0038262587777294615,
+            "necessary": false,
+            "remaining_event_count": 531,
+            "symbol": "LINKUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 60,
+            "magnitude_ratio_vs_full": 0.9920427454309585,
+            "mean_abs_return": 0.0038421257947421385,
+            "necessary": false,
+            "remaining_event_count": 525,
+            "symbol": "SOLUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 55,
+            "magnitude_ratio_vs_full": 0.9939492120408261,
+            "mean_abs_return": 0.003849509432768144,
+            "necessary": false,
+            "remaining_event_count": 530,
+            "symbol": "APTUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 60,
+            "magnitude_ratio_vs_full": 0.9996953874387591,
+            "mean_abs_return": 0.0038717640471173675,
+            "necessary": false,
+            "remaining_event_count": 525,
+            "symbol": "ARBUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 66,
+            "magnitude_ratio_vs_full": 1.0091551625410158,
+            "mean_abs_return": 0.003908401224396509,
+            "necessary": false,
+            "remaining_event_count": 519,
+            "symbol": "DOGEUSDT"
+          },
+          {
+            "direction_preserved": true,
+            "excluded_event_count": 63,
+            "magnitude_ratio_vs_full": 1.0171320913214048,
+            "mean_abs_return": 0.003939295421215255,
+            "necessary": false,
+            "remaining_event_count": 522,
+            "symbol": "ETHUSDT"
+          }
+        ]
+      }
+    },
+    "month_aware_symbol_balanced_null": {
+      "completed": 1000,
+      "requested": 1000
+    },
+    "primary_target_gate_summary": {
+      "best_oi_expansion_volatility_compression_break_definition__15m": {
+        "alternate_volatility_proxy_supports_direction": true,
+        "arbusdt_exclusion_preserves_effect": true,
+        "bonferroni_lte_05": true,
+        "input_hashes_unchanged": true,
+        "missing_rows_immaterial": true,
+        "month_aware_symbol_balanced_fdr_lte_05": true,
+        "no_single_month_dependence": true,
+        "no_single_symbol_dependence": true,
+        "primary_target_passes_all_gates": true
+      },
+      "best_oi_expansion_volatility_expansion_definition__15m": {
+        "alternate_volatility_proxy_supports_direction": true,
+        "arbusdt_exclusion_preserves_effect": true,
+        "bonferroni_lte_05": true,
+        "input_hashes_unchanged": true,
+        "missing_rows_immaterial": true,
+        "month_aware_symbol_balanced_fdr_lte_05": true,
+        "no_single_month_dependence": true,
+        "no_single_symbol_dependence": true,
+        "primary_target_passes_all_gates": true
+      }
+    }
+  },
+  "runtime_touch_allowed": false,
+  "signal_allowed": false,
+  "signed_return_handling": {
+    "prior_signed_return_tracking": {
+      "secondary_signed_return_targets": [
+        {
+          "horizon": "24h",
+          "prior_signed_bonferroni_p": 0.03196803196803197,
+          "prior_signed_fdr_q": 0.015984015984015984,
+          "promoted": false,
+          "selection_slot": "best_oi_expansion_volatility_expansion_definition",
+          "tracked_only": true
+        },
+        {
+          "horizon": "24h",
+          "prior_signed_bonferroni_p": 0.015984015984015984,
+          "prior_signed_fdr_q": 0.015984015984015984,
+          "promoted": false,
+          "selection_slot": "best_oi_expansion_volatility_compression_break_definition",
+          "tracked_only": true
+        },
+        {
+          "horizon": "24h",
+          "prior_signed_bonferroni_p": 0.04795204795204795,
+          "prior_signed_fdr_q": 0.015984015984015984,
+          "promoted": false,
+          "selection_slot": "best_oi_contraction_volatility_expansion_definition",
+          "tracked_only": true
+        }
+      ],
+      "signed_return_findings_not_promoted": true,
+      "strategy_signal_candidate_release_allowed": false
+    },
+    "signed_return_findings_not_promoted": true,
+    "signed_return_findings_secondary_only": true,
+    "signed_return_results_cannot_override_volatility_regime_classification": true,
+    "signed_return_strategy_candidate_signal_allowed": false
+  },
+  "status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_ROBUSTNESS_EVALUATOR_CREATED",
+  "strategy_allowed": false,
+  "validation_checks": {
+    "both_primary_volatility_targets_pass": true,
+    "candidate_generation_allowed_false": true,
+    "failed_robustness_gates_none": true,
+    "forbidden_actions_false": true,
+    "independent_validation_not_complete": true,
+    "input_artifact_hashes_unchanged": true,
+    "no_event_definition_modified": true,
+    "no_null_validation_rerun": true,
+    "no_returns_recomputed": true,
+    "no_signed_return_promotion": true,
+    "prior_robustness_promising": true,
+    "release_allowed_false": true,
+    "runtime_live_capital_false": true,
+    "signal_allowed_false": true,
+    "strategy_allowed_false": true
+  }
+}

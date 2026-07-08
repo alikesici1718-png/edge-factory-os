@@ -1,0 +1,1350 @@
+{
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_EXECUTION",
+  "backtest_execution": {
+    "data_file_reviews": [
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2026-02-11T10:30:00Z",
+        "inst_id": "AZTEC-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\AZTEC\\raw\\candles_long_1m\\AZTEC-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 111690,
+        "symbol": "AZTEC"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2026-03-30T10:30:00Z",
+        "inst_id": "BASED-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\BASED\\raw\\candles_long_1m\\BASED-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 44010,
+        "symbol": "BASED"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "BIO-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\BIO\\raw\\candles_long_1m\\BIO-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "BIO"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2026-04-02T10:00:00Z",
+        "inst_id": "BSB-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\BSB\\raw\\candles_long_1m\\BSB-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 39720,
+        "symbol": "BSB"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2026-02-26T08:00:00Z",
+        "inst_id": "CRCL-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\CRCL\\raw\\candles_long_1m\\CRCL-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 90240,
+        "symbol": "CRCL"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "ENS-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\ENS\\raw\\candles_long_1m\\ENS-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "ENS"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-07-03T06:00:00Z",
+        "inst_id": "H-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\H\\raw\\candles_long_1m\\H-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 433080,
+        "symbol": "H"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "ICP-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\ICP\\raw\\candles_long_1m\\ICP-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "ICP"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "INJ-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\INJ\\raw\\candles_long_1m\\INJ-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "INJ"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "IP-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\IP\\raw\\candles_long_1m\\IP-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "IP"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "JTO-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\JTO\\raw\\candles_long_1m\\JTO-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "JTO"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2026-04-09T03:00:00Z",
+        "inst_id": "KITE-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\KITE\\raw\\candles_long_1m\\KITE-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 30060,
+        "symbol": "KITE"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-11-01T12:00:00Z",
+        "inst_id": "LAB-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\LAB\\raw\\candles_long_1m\\LAB-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 258480,
+        "symbol": "LAB"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "LAYER-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\LAYER\\raw\\candles_long_1m\\LAYER-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "LAYER"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2026-03-04T07:15:00Z",
+        "inst_id": "MU-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\MU\\raw\\candles_long_1m\\MU-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 81645,
+        "symbol": "MU"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "NOT-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\NOT\\raw\\candles_long_1m\\NOT-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "NOT"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "ONDO-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\ONDO\\raw\\candles_long_1m\\ONDO-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "ONDO"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-09-17T08:00:00Z",
+        "inst_id": "PENDLE-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\PENDLE\\raw\\candles_long_1m\\PENDLE-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 323520,
+        "symbol": "PENDLE"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-11-16T03:31:00Z",
+        "inst_id": "PIEVERSE-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\PIEVERSE\\raw\\candles_long_1m\\PIEVERSE-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 237389,
+        "symbol": "PIEVERSE"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-12-15T08:00:00Z",
+        "inst_id": "RAVE-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\RAVE\\raw\\candles_long_1m\\RAVE-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 195360,
+        "symbol": "RAVE"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-12-02T15:15:00Z",
+        "inst_id": "RLS-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\RLS\\raw\\candles_long_1m\\RLS-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 213645,
+        "symbol": "RLS"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-06-26T12:30:00Z",
+        "inst_id": "SAHARA-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\SAHARA\\raw\\candles_long_1m\\SAHARA-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 442770,
+        "symbol": "SAHARA"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-12-08T13:30:00Z",
+        "inst_id": "STABLE-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\STABLE\\raw\\candles_long_1m\\STABLE-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 205110,
+        "symbol": "STABLE"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "STRK-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\STRK\\raw\\candles_long_1m\\STRK-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "STRK"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "TRUMP-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\TRUMP\\raw\\candles_long_1m\\TRUMP-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "TRUMP"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-11-28T11:30:00Z",
+        "inst_id": "TRUTH-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\TRUTH\\raw\\candles_long_1m\\TRUTH-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 219630,
+        "symbol": "TRUTH"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "UNI-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\UNI\\raw\\candles_long_1m\\UNI-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "UNI"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-07-25T10:00:00Z",
+        "inst_id": "USELESS-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\USELESS\\raw\\candles_long_1m\\USELESS-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 401160,
+        "symbol": "USELESS"
+      },
+      {
+        "bad_rows_skipped": 0,
+        "duplicate_timestamps_skipped": 0,
+        "first_time_utc": "2025-04-30T00:00:00Z",
+        "inst_id": "YGG-USDT-SWAP",
+        "last_time_utc": "2026-04-29T23:59:00Z",
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\YGG\\raw\\candles_long_1m\\YGG-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "rows_loaded": 525600,
+        "symbol": "YGG"
+      }
+    ],
+    "data_source_summary": {
+      "bad_rows_skipped": 0,
+      "first_data_time_utc": "2025-04-30T00:00:00Z",
+      "last_data_time_utc": "2026-04-29T23:59:00Z",
+      "source_review_artifact": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\old_short\\old_short_proxy_backtest_data_coverage_source_review_v1.json",
+      "source_scope": "recovered OKX 1m CSV paths recorded in old_short source-review artifact",
+      "symbols_loaded": 29,
+      "usable_okx_1m_data_source_readable": true
+    },
+    "execution_metrics": {
+      "average_loss_bps": -1008.378865,
+      "average_win_bps": 835.469473,
+      "best_month": {
+        "closed_trades": 206,
+        "gross_bps": 35039.493384462956,
+        "month": "2025-12",
+        "net_bps": 30919.493384462956
+      },
+      "closed_trades": 1904,
+      "entry_delay_summary": {
+        "count": 1904,
+        "max": 2.0,
+        "median": 2.0,
+        "min": 2.0
+      },
+      "executed_trades": 1904,
+      "fail_closed_signals": 0,
+      "family_split": {
+        "blowoff_short": 0.784139,
+        "mean_reversion_short": 0.215861
+      },
+      "gross_bps": 39416.608757,
+      "hold_duration_summary": {
+        "count": 1904,
+        "max": 120.0,
+        "median": 120.0,
+        "min": 120.0
+      },
+      "monthly_gross_net": {
+        "2025-05": {
+          "closed_trades": 11,
+          "gross_bps": 11375.366402,
+          "net_bps": 11155.366402
+        },
+        "2025-06": {
+          "closed_trades": 12,
+          "gross_bps": 4918.202012,
+          "net_bps": 4678.202012
+        },
+        "2025-07": {
+          "closed_trades": 81,
+          "gross_bps": -19075.437267,
+          "net_bps": -20695.437267
+        },
+        "2025-08": {
+          "closed_trades": 72,
+          "gross_bps": -6499.550565,
+          "net_bps": -7939.550565
+        },
+        "2025-09": {
+          "closed_trades": 60,
+          "gross_bps": 4961.05136,
+          "net_bps": 3761.05136
+        },
+        "2025-10": {
+          "closed_trades": 170,
+          "gross_bps": -14942.5115,
+          "net_bps": -18342.5115
+        },
+        "2025-11": {
+          "closed_trades": 249,
+          "gross_bps": 16926.478514,
+          "net_bps": 11946.478514
+        },
+        "2025-12": {
+          "closed_trades": 206,
+          "gross_bps": 35039.493384,
+          "net_bps": 30919.493384
+        },
+        "2026-01": {
+          "closed_trades": 28,
+          "gross_bps": -3417.623392,
+          "net_bps": -3977.623392
+        },
+        "2026-02": {
+          "closed_trades": 79,
+          "gross_bps": 12476.64772,
+          "net_bps": 10896.64772
+        },
+        "2026-03": {
+          "closed_trades": 29,
+          "gross_bps": -2085.344911,
+          "net_bps": -2665.344911
+        },
+        "2026-04": {
+          "closed_trades": 907,
+          "gross_bps": -260.163001,
+          "net_bps": -18400.163001
+        }
+      },
+      "monthly_positive_rate": 0.5,
+      "net_bps": 1336.608757,
+      "notional_summary": {
+        "count": 1904,
+        "max": 50.0,
+        "median": 50.0,
+        "min": 50.0
+      },
+      "profit_factor": 1.001538,
+      "skipped_no_required_candle_window": 0,
+      "skipped_signals": 0,
+      "symbol_concentration": {
+        "top_symbol": "RAVE",
+        "top_symbol_trade_count": 522,
+        "top_symbol_trade_share": 0.27416,
+        "trade_count_by_symbol": {
+          "AZTEC": 15,
+          "BASED": 99,
+          "BIO": 113,
+          "BSB": 131,
+          "ENS": 1,
+          "H": 277,
+          "ICP": 24,
+          "INJ": 3,
+          "IP": 68,
+          "JTO": 16,
+          "LAB": 53,
+          "LAYER": 28,
+          "NOT": 9,
+          "ONDO": 6,
+          "PIEVERSE": 193,
+          "RAVE": 522,
+          "RLS": 49,
+          "SAHARA": 85,
+          "STABLE": 34,
+          "STRK": 26,
+          "TRUMP": 19,
+          "TRUTH": 39,
+          "UNI": 30,
+          "USELESS": 31,
+          "YGG": 33
+        }
+      },
+      "total_signals": 1904,
+      "trade_count_by_family": {
+        "blowoff_short": 1493,
+        "mean_reversion_short": 411
+      },
+      "unresolved_trades": 0,
+      "win_rate": 0.547269,
+      "worst_month": {
+        "closed_trades": 81,
+        "gross_bps": -19075.437267479534,
+        "month": "2025-07",
+        "net_bps": -20695.437267479534
+      }
+    },
+    "family_metrics": {
+      "blowoff_short": {
+        "average_loss_bps": -999.428633,
+        "average_win_bps": 826.179764,
+        "best_month": {
+          "closed_trades": 178,
+          "gross_bps": 27315.87118387649,
+          "month": "2025-12",
+          "net_bps": 23755.871183876483
+        },
+        "closed_trades": 1493,
+        "gross_bps": -38312.399635,
+        "monthly": {
+          "2025-05": {
+            "closed_trades": 11,
+            "gross_bps": 11375.366402,
+            "net_bps": 11155.366402
+          },
+          "2025-06": {
+            "closed_trades": 6,
+            "gross_bps": 3896.139541,
+            "net_bps": 3776.139541
+          },
+          "2025-07": {
+            "closed_trades": 64,
+            "gross_bps": -21100.272339,
+            "net_bps": -22380.272339
+          },
+          "2025-08": {
+            "closed_trades": 60,
+            "gross_bps": -3881.575647,
+            "net_bps": -5081.575647
+          },
+          "2025-09": {
+            "closed_trades": 52,
+            "gross_bps": 5838.159797,
+            "net_bps": 4798.159797
+          },
+          "2025-10": {
+            "closed_trades": 134,
+            "gross_bps": -23354.238633,
+            "net_bps": -26034.238633
+          },
+          "2025-11": {
+            "closed_trades": 187,
+            "gross_bps": -3238.691194,
+            "net_bps": -6978.691194
+          },
+          "2025-12": {
+            "closed_trades": 178,
+            "gross_bps": 27315.871184,
+            "net_bps": 23755.871184
+          },
+          "2026-01": {
+            "closed_trades": 26,
+            "gross_bps": -2759.975384,
+            "net_bps": -3279.975384
+          },
+          "2026-02": {
+            "closed_trades": 68,
+            "gross_bps": 10311.101531,
+            "net_bps": 8951.101531
+          },
+          "2026-03": {
+            "closed_trades": 18,
+            "gross_bps": -1034.273156,
+            "net_bps": -1394.273156
+          },
+          "2026-04": {
+            "closed_trades": 689,
+            "gross_bps": -41680.011739,
+            "net_bps": -55460.011739
+          }
+        },
+        "monthly_positive_rate": 0.416667,
+        "net_bps": -68172.399635,
+        "profit_factor": 0.904332,
+        "win_rate": 0.522438,
+        "worst_month": {
+          "closed_trades": 689,
+          "gross_bps": -41680.0117389883,
+          "month": "2026-04",
+          "net_bps": -55460.01173898818
+        }
+      },
+      "mean_reversion_short": {
+        "average_loss_bps": -1051.207828,
+        "average_win_bps": 863.125858,
+        "best_month": {
+          "closed_trades": 218,
+          "gross_bps": 41419.84873842789,
+          "month": "2026-04",
+          "net_bps": 37059.8487384279
+        },
+        "closed_trades": 411,
+        "gross_bps": 77729.008392,
+        "monthly": {
+          "2025-06": {
+            "closed_trades": 6,
+            "gross_bps": 1022.062471,
+            "net_bps": 902.062471
+          },
+          "2025-07": {
+            "closed_trades": 17,
+            "gross_bps": 2024.835071,
+            "net_bps": 1684.835071
+          },
+          "2025-08": {
+            "closed_trades": 12,
+            "gross_bps": -2617.974918,
+            "net_bps": -2857.974918
+          },
+          "2025-09": {
+            "closed_trades": 8,
+            "gross_bps": -877.108437,
+            "net_bps": -1037.108437
+          },
+          "2025-10": {
+            "closed_trades": 36,
+            "gross_bps": 8411.727132,
+            "net_bps": 7691.727132
+          },
+          "2025-11": {
+            "closed_trades": 62,
+            "gross_bps": 20165.169708,
+            "net_bps": 18925.169708
+          },
+          "2025-12": {
+            "closed_trades": 28,
+            "gross_bps": 7723.622201,
+            "net_bps": 7163.622201
+          },
+          "2026-01": {
+            "closed_trades": 2,
+            "gross_bps": -657.648008,
+            "net_bps": -697.648008
+          },
+          "2026-02": {
+            "closed_trades": 11,
+            "gross_bps": 2165.546189,
+            "net_bps": 1945.546189
+          },
+          "2026-03": {
+            "closed_trades": 11,
+            "gross_bps": -1051.071755,
+            "net_bps": -1271.071755
+          },
+          "2026-04": {
+            "closed_trades": 218,
+            "gross_bps": 41419.848738,
+            "net_bps": 37059.848738
+          }
+        },
+        "monthly_positive_rate": 0.636364,
+        "net_bps": 69509.008392,
+        "profit_factor": 1.443778,
+        "win_rate": 0.63747,
+        "worst_month": {
+          "closed_trades": 12,
+          "gross_bps": -2617.974918424451,
+          "month": "2025-08",
+          "net_bps": -2857.974918424451
+        }
+      }
+    },
+    "null_baseline": {
+      "feasible": false,
+      "limitation": "validation trade count below 30, deterministic timestamp/block shuffle null not meaningful",
+      "null_pass": null,
+      "runs": 0,
+      "validation_percentile": null
+    },
+    "sample_trades": [
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.02585,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-13T13:11:00Z",
+        "exit_price": 0.02617,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-13T15:11:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": -123.791103,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": -143.791103,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-13T13:09:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.02836,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-13T17:20:00Z",
+        "exit_price": 0.02743,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-13T19:20:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": 327.926657,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": 307.926657,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-13T17:18:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.02599,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T05:03:00Z",
+        "exit_price": 0.0273,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T07:03:00Z",
+        "family": "mean_reversion_short",
+        "family_key": "old_short",
+        "gross_bps": -504.040015,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": -524.040015,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T05:01:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.02591,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T05:09:00Z",
+        "exit_price": 0.02719,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T07:09:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": -494.017754,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": -514.017754,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T05:07:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.02493,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T05:11:00Z",
+        "exit_price": 0.02722,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T07:11:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": -918.572002,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": -938.572002,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T05:09:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.02487,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T05:12:00Z",
+        "exit_price": 0.02719,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T07:12:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": -932.850824,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": -952.850824,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T05:10:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.02802,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T08:11:00Z",
+        "exit_price": 0.02764,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T10:11:00Z",
+        "family": "mean_reversion_short",
+        "family_key": "old_short",
+        "gross_bps": 135.617416,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": 115.617416,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T08:09:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.03263,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T11:44:00Z",
+        "exit_price": 0.03166,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T13:44:00Z",
+        "family": "mean_reversion_short",
+        "family_key": "old_short",
+        "gross_bps": 297.272449,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": 277.272449,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T11:42:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.03259,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T12:04:00Z",
+        "exit_price": 0.03236,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T14:04:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": 70.573796,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": 50.573796,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T12:02:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.03355,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T12:10:00Z",
+        "exit_price": 0.03189,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T14:10:00Z",
+        "family": "mean_reversion_short",
+        "family_key": "old_short",
+        "gross_bps": 494.783905,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": 474.783905,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T12:08:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.03365,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T12:22:00Z",
+        "exit_price": 0.03229,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T14:22:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": 404.160475,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": 384.160475,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T12:20:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.03335,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-20T12:30:00Z",
+        "exit_price": 0.03219,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-20T14:30:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": 347.826087,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": 327.826087,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-20T12:28:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.03467,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-21T01:45:00Z",
+        "exit_price": 0.03327,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-21T03:45:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": 403.807326,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": 383.807326,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-21T01:43:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.0365,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-21T04:31:00Z",
+        "exit_price": 0.03668,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-21T06:31:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": -49.315068,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": -69.315068,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-21T04:29:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.03822,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-02-21T05:02:00Z",
+        "exit_price": 0.03623,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-02-21T07:02:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": 520.669806,
+        "hold_minutes": 120,
+        "inst_id": "AZTEC-USDT-SWAP",
+        "net_bps": 500.669806,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-02-21T05:00:00Z",
+        "split": "holdout",
+        "symbol": "AZTEC"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.07101,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-04-13T12:05:00Z",
+        "exit_price": 0.06555,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-04-13T14:05:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": 768.905788,
+        "hold_minutes": 120,
+        "inst_id": "BASED-USDT-SWAP",
+        "net_bps": 748.905788,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-04-13T12:03:00Z",
+        "split": "holdout",
+        "symbol": "BASED"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.07684,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-04-14T22:55:00Z",
+        "exit_price": 0.07669,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-04-15T00:55:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": 19.521083,
+        "hold_minutes": 120,
+        "inst_id": "BASED-USDT-SWAP",
+        "net_bps": -0.478917,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-04-14T22:53:00Z",
+        "split": "holdout",
+        "symbol": "BASED"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.09207,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-04-15T17:57:00Z",
+        "exit_price": 0.09253,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-04-15T19:57:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": -49.961985,
+        "hold_minutes": 120,
+        "inst_id": "BASED-USDT-SWAP",
+        "net_bps": -69.961985,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-04-15T17:55:00Z",
+        "split": "holdout",
+        "symbol": "BASED"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.11127,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-04-16T07:40:00Z",
+        "exit_price": 0.11393,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-04-16T09:40:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": -239.058147,
+        "hold_minutes": 120,
+        "inst_id": "BASED-USDT-SWAP",
+        "net_bps": -259.058147,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-04-16T07:38:00Z",
+        "split": "holdout",
+        "symbol": "BASED"
+      },
+      {
+        "entry_delay_minutes": 2,
+        "entry_price": 0.1151,
+        "entry_price_policy": "conservative_next_available_open_due_contract_ambiguity",
+        "entry_time": "2026-04-16T07:53:00Z",
+        "exit_price": 0.11564,
+        "exit_price_policy": "conservative_exit_open_due_contract_ambiguity",
+        "exit_time": "2026-04-16T09:53:00Z",
+        "family": "blowoff_short",
+        "family_key": "old_short",
+        "gross_bps": -46.915725,
+        "hold_minutes": 120,
+        "inst_id": "BASED-USDT-SWAP",
+        "net_bps": -66.915725,
+        "notional": 50.0,
+        "side": "short",
+        "signal_time": "2026-04-16T07:51:00Z",
+        "split": "holdout",
+        "symbol": "BASED"
+      }
+    ],
+    "split_metrics": {
+      "holdout": {
+        "average_loss_bps": -1008.378865,
+        "average_win_bps": 835.469473,
+        "best_month": {
+          "closed_trades": 206,
+          "gross_bps": 35039.493384462956,
+          "month": "2025-12",
+          "net_bps": 30919.493384462956
+        },
+        "closed_trades": 1904,
+        "gross_bps": 39416.608757,
+        "monthly": {
+          "2025-05": {
+            "closed_trades": 11,
+            "gross_bps": 11375.366402,
+            "net_bps": 11155.366402
+          },
+          "2025-06": {
+            "closed_trades": 12,
+            "gross_bps": 4918.202012,
+            "net_bps": 4678.202012
+          },
+          "2025-07": {
+            "closed_trades": 81,
+            "gross_bps": -19075.437267,
+            "net_bps": -20695.437267
+          },
+          "2025-08": {
+            "closed_trades": 72,
+            "gross_bps": -6499.550565,
+            "net_bps": -7939.550565
+          },
+          "2025-09": {
+            "closed_trades": 60,
+            "gross_bps": 4961.05136,
+            "net_bps": 3761.05136
+          },
+          "2025-10": {
+            "closed_trades": 170,
+            "gross_bps": -14942.5115,
+            "net_bps": -18342.5115
+          },
+          "2025-11": {
+            "closed_trades": 249,
+            "gross_bps": 16926.478514,
+            "net_bps": 11946.478514
+          },
+          "2025-12": {
+            "closed_trades": 206,
+            "gross_bps": 35039.493384,
+            "net_bps": 30919.493384
+          },
+          "2026-01": {
+            "closed_trades": 28,
+            "gross_bps": -3417.623392,
+            "net_bps": -3977.623392
+          },
+          "2026-02": {
+            "closed_trades": 79,
+            "gross_bps": 12476.64772,
+            "net_bps": 10896.64772
+          },
+          "2026-03": {
+            "closed_trades": 29,
+            "gross_bps": -2085.344911,
+            "net_bps": -2665.344911
+          },
+          "2026-04": {
+            "closed_trades": 907,
+            "gross_bps": -260.163001,
+            "net_bps": -18400.163001
+          }
+        },
+        "monthly_positive_rate": 0.5,
+        "net_bps": 1336.608757,
+        "profit_factor": 1.001538,
+        "win_rate": 0.547269,
+        "worst_month": {
+          "closed_trades": 81,
+          "gross_bps": -19075.437267479534,
+          "month": "2025-07",
+          "net_bps": -20695.437267479534
+        }
+      },
+      "train": {
+        "average_loss_bps": null,
+        "average_win_bps": null,
+        "best_month": null,
+        "closed_trades": 0,
+        "gross_bps": 0.0,
+        "monthly": {},
+        "monthly_positive_rate": null,
+        "net_bps": 0.0,
+        "profit_factor": null,
+        "win_rate": null,
+        "worst_month": null
+      },
+      "validation": {
+        "average_loss_bps": null,
+        "average_win_bps": null,
+        "best_month": null,
+        "closed_trades": 0,
+        "gross_bps": 0.0,
+        "monthly": {},
+        "monthly_positive_rate": null,
+        "net_bps": 0.0,
+        "profit_factor": null,
+        "win_rate": null,
+        "worst_month": null
+      }
+    },
+    "split_trade_counts": {
+      "holdout": 1904
+    }
+  },
+  "clean_room_route_assumptions": {
+    "entry_delay_minutes": 2,
+    "exact_gate_replay_available": false,
+    "exact_replay_claimed": false,
+    "families": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "family_key": "old_short",
+    "global_gate_required_if_gate_replay_available": true,
+    "hold_minutes": 120,
+    "notional_usdt": 50.0,
+    "original_exact_source_recovered": false,
+    "round_trip_cost_bps": 20.0,
+    "side": "short",
+    "timeframe": "1m"
+  },
+  "data_limitations": [
+    "Original exact old_short source is not recovered.",
+    "Exact replay is not claimed.",
+    "Exact global gate replay is unavailable; this is a clean-room historical diagnostic with gate limitations recorded.",
+    "Entry and exit price contract is ambiguous; conservative next available open is used and recorded.",
+    "Costs use fallback 20 bps round-trip assumption because no more specific clean-room historical backtest cost was found in the reviewed contract.",
+    "Recovered OKX 1m source coverage starts in 2025 for this artifact set, leaving train/validation splits absent or sparse under the requested standard split."
+  ],
+  "data_source_review": {
+    "candidate_source_count": 29,
+    "readable_okx_1m_source_count": 29,
+    "readable_symbols": [
+      "AZTEC",
+      "BASED",
+      "BIO",
+      "BSB",
+      "CRCL",
+      "ENS",
+      "H",
+      "ICP",
+      "INJ",
+      "IP",
+      "JTO",
+      "KITE",
+      "LAB",
+      "LAYER",
+      "MU",
+      "NOT",
+      "ONDO",
+      "PENDLE",
+      "PIEVERSE",
+      "RAVE",
+      "RLS",
+      "SAHARA",
+      "STABLE",
+      "STRK",
+      "TRUMP",
+      "TRUTH",
+      "UNI",
+      "USELESS",
+      "YGG"
+    ]
+  },
+  "gate_limitations": [
+    "No exact global gate replay was available.",
+    "No position-level gate allow was used; signals were evaluated as clean-room historical diagnostic trades.",
+    "This diagnostic cannot prove no-position-without-gate behavior from historical gate decisions."
+  ],
+  "module": "edge_factory_os_repo_only_old_short_clean_room_direct_backtest_execution_v1",
+  "null_baseline_result": {
+    "feasible": false,
+    "limitation": "validation trade count below 30, deterministic timestamp/block shuffle null not meaningful",
+    "null_pass": null,
+    "runs": 0,
+    "validation_percentile": null
+  },
+  "payload_sha256_excluding_hash": "8f1aa24755bd4334da5864d8d3fef12c11b063892e6f429e39101122d7cd118a",
+  "replacement_checks_all_true": true,
+  "route_key": "old_short_clean_room_v1",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_allocation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_trading_allowed_now": false,
+    "monitor_allowed_now": false,
+    "real_orders_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "old_short_proxy_backtest_data_coverage_source_review": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\old_short\\old_short_proxy_backtest_data_coverage_source_review_v1.json",
+    "threshold_contract": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\old_short_clean_room\\old_short_clean_room_runner_fixture_threshold_contract_v1.json"
+  },
+  "source_checkpoint": {
+    "allowed_new_paths_at_execution": [
+      "?? artifacts/strategy_executions/old_short_clean_room_direct_backtest_execution_v1.json",
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_direct_backtest_execution_v1.py"
+    ],
+    "git_status_at_execution": [
+      "?? artifacts/strategy_executions/old_short_clean_room_direct_backtest_execution_v1.json",
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_direct_backtest_execution_v1.py"
+    ],
+    "head": "a38cbe072d271d12b27008b545a33ba77c4d7243",
+    "prompt_expected_head": "4b62f8afcb7af43840bdf5b88dbcf303ac35fcfb",
+    "prompt_head_matches_actual": false,
+    "repo_clean_before_run": true,
+    "tracked_python_count": 974,
+    "unexpected_dirty_paths_at_execution": []
+  },
+  "status": "PASS_REPO_CODE_ONLY_OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_EXECUTED",
+  "threshold_contract_review": {
+    "contract_complete": true,
+    "families": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "family_threshold_count": 2,
+    "threshold_rule_summary": {
+      "blowoff_short": {
+        "entry_range_bps": {
+          "operator": ">=",
+          "value": 89.28675
+        },
+        "entry_vol_quote": {
+          "operator": ">=",
+          "value": 190389.09385
+        },
+        "signal_range_bps": {
+          "operator": ">=",
+          "value": 93.220444
+        },
+        "signal_ret1_bps": {
+          "operator": "<=",
+          "value": -40.279703
+        },
+        "signal_ret3_bps": {
+          "operator": "<=",
+          "value": -93.742588
+        },
+        "signal_ret5_bps": {
+          "operator": "<=",
+          "value": -21.744896
+        },
+        "signal_ret60_bps": {
+          "operator": ">=",
+          "value": 585.328222
+        },
+        "signal_vol_quote": {
+          "operator": ">=",
+          "value": 166708.59775
+        }
+      },
+      "mean_reversion_short": {
+        "entry_range_bps": {
+          "operator": ">=",
+          "value": 86.760674
+        },
+        "entry_vol_quote": {
+          "operator": ">=",
+          "value": 310845.080115
+        },
+        "signal_range_bps": {
+          "operator": ">=",
+          "value": 114.060101
+        },
+        "signal_ret1_bps": {
+          "operator": "<=",
+          "value": -23.484387
+        },
+        "signal_ret3_bps": {
+          "operator": ">=",
+          "value": 97.185997
+        },
+        "signal_ret5_bps": {
+          "operator": ">=",
+          "value": 340.637882
+        },
+        "signal_ret60_bps": {
+          "operator": ">=",
+          "value": 270.13461
+        },
+        "signal_vol_quote": {
+          "operator": ">=",
+          "value": 158278.3766
+        }
+      }
+    }
+  },
+  "validation_checks": {
+    "exact_replay_not_claimed": true,
+    "exact_source_not_claimed": true,
+    "market_candles_used_to_simulate_trades": true,
+    "no_account_or_order_endpoint_used": true,
+    "no_api_used": true,
+    "no_binance_data_used": true,
+    "no_candidate_generation": true,
+    "no_capital_allocation": true,
+    "no_edge_claim": true,
+    "no_live_trading": true,
+    "no_logged_closed_trades_used_as_backtest_trades": true,
+    "no_monitor_start": true,
+    "no_network_used": true,
+    "no_private_api_used": true,
+    "no_real_orders": true,
+    "no_runtime_enablement": true,
+    "no_tradingview_labels_used": true,
+    "okx_1m_data_source_readable": true,
+    "repo_clean_before_run": true,
+    "threshold_contract_complete": true,
+    "threshold_contract_loaded": true
+  }
+}

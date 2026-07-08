@@ -1,0 +1,275 @@
+{
+  "artifact_kind": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V3_NULL_FAILURE_AUDIT",
+  "effect_size_audit": {
+    "average_validation_net_per_trade_usdt": 0.131708,
+    "edge_too_small_relative_to_noise_or_cost": true,
+    "effect_size_classification": "EFFECT_SIZE_MODEST",
+    "observed_edge_per_trade_vs_cost_per_trade": {
+      "average_cost_usdt": 0.187832,
+      "average_net_usdt": 0.131708,
+      "net_to_cost_ratio": 0.701201
+    },
+    "observed_validation_net_bps": 321.36711,
+    "validation_cost_usdt": 45.830954,
+    "validation_gross_before_cost_usdt": 77.967665,
+    "validation_trade_count": 244
+  },
+  "exit_cost_audit": {
+    "cost_exit_classification": "MIXED_COST_STOP_DRAG",
+    "cost_explains_null_failure": true,
+    "cost_per_trade_usdt": 0.189593,
+    "cost_total_usdt": 182.578321,
+    "gross_to_net_effect": {
+      "cost_drag_usdt": 182.578321,
+      "gross_pnl_usdt": 87.632612,
+      "net_pnl_usdt": -94.945709
+    },
+    "stop_exits_explain_null_failure": true,
+    "stop_take_time_exit_count": {
+      "stop": 420,
+      "take": 125,
+      "time": 418
+    },
+    "stop_take_time_net_contribution": {
+      "stop": {
+        "average_hold_bars": 10.45,
+        "average_net_pnl_usdt": -3.234624,
+        "count": 420,
+        "net_pnl_usdt": -1358.542178,
+        "portfolio_net_bps": -13585.421776,
+        "win_rate": 0.0
+      },
+      "take": {
+        "average_hold_bars": 16.48,
+        "average_net_pnl_usdt": 4.944783,
+        "count": 125,
+        "net_pnl_usdt": 618.097873,
+        "portfolio_net_bps": 6180.978729,
+        "win_rate": 1.0
+      },
+      "time": {
+        "average_hold_bars": 32.0,
+        "average_net_pnl_usdt": 1.544255,
+        "count": 418,
+        "net_pnl_usdt": 645.498596,
+        "portfolio_net_bps": 6454.985959,
+        "win_rate": 0.76555
+      }
+    }
+  },
+  "limitations": [
+    "The original V3 execution artifact did not persist trade-level rows or the 100-run null distribution; both were recovered inside this audit using the exact same V3 code path and verified against aggregate metrics.",
+    "The null baseline is a documented trade-PnL shuffle proxy and not an exact strategy-state null preserving monthly timing, capacity, and cooldown path.",
+    "No V4, parameter optimization, grid search, candidate generation, or edge claim was performed."
+  ],
+  "module": "edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v3_null_failure_audit_v1",
+  "monthly_instability_audit": {
+    "best_validation_month": {
+      "bps": 168.652673,
+      "month": "2024-08"
+    },
+    "holdout_monthly_net_bps": {
+      "2025-04": 100.555238,
+      "2025-05": 324.636198,
+      "2025-06": 104.162463,
+      "2025-07": -121.492606,
+      "2025-08": -67.849421,
+      "2025-09": 166.881891,
+      "2025-10": -137.299801
+    },
+    "holdout_monthly_positive_rate": 0.571429,
+    "monthly_instability_classification": "MONTHLY_NEAR_PASS",
+    "negative_months_too_large": false,
+    "one_month_dominates_validation": false,
+    "validation_monthly_net_bps": {
+      "2024-07": 96.033497,
+      "2024-08": 168.652673,
+      "2024-09": -147.615149,
+      "2024-10": 132.062488,
+      "2024-11": -190.298839,
+      "2024-12": 30.424576,
+      "2025-01": 75.905414,
+      "2025-02": 144.408041,
+      "2025-03": 11.794409
+    },
+    "validation_monthly_positive_rate": 0.777778,
+    "validation_negative_month_count": 2,
+    "validation_positive_month_count": 7,
+    "worst_validation_month": {
+      "bps": -190.298839,
+      "month": "2024-11"
+    }
+  },
+  "null_distribution_audit": {
+    "null_max_bps": 1326.539375,
+    "null_mean_validation_bps": -204.776718,
+    "null_median_validation_bps": -147.845751,
+    "null_monthly_positive_rate_distribution": {
+      "available": true,
+      "mean": 0.44,
+      "median": 0.444444,
+      "method_note": "Descriptive extension: shuffled net trade PnLs are mapped onto validation trade month slots; the original V3 null summary did not store monthly null detail.",
+      "p95": 0.666667
+    },
+    "null_p75_bps": 158.827515,
+    "null_p90_bps": 387.666724,
+    "null_p95_bps": 546.372258,
+    "null_run_count": 100,
+    "null_runs_beat_observed": 14,
+    "null_runs_positive": 40,
+    "observed_minus_null_p95_bps": -225.005148,
+    "observed_percentile": 0.86,
+    "observed_positive_but_not_extreme": true,
+    "observed_validation_net_bps": 321.36711
+  },
+  "null_model_appropriateness_audit": {
+    "appropriateness_checks": {
+      "methodology_documented": true,
+      "preserves_capacity_cooldown_constraints": false,
+      "preserves_cost": true,
+      "preserves_monthly_distribution": false,
+      "preserves_side_short_only_structure": true,
+      "preserves_trade_count": true,
+      "realistic_random_timing": false
+    },
+    "interpretation": "The null preserves trade count, short-only net-PnL distribution, and costs, but it does not preserve monthly timing, capacity state, or cooldown path. It is a conservative documented shuffle proxy rather than an exact strategy-state null.",
+    "method": "deterministic trade-pnl timestamp/block shuffle proxy",
+    "null_model_appropriateness_classification": "NULL_MODEL_TOO_COMPETITIVE_BUT_VALID"
+  },
+  "payload_sha256_excluding_hash": "333077671a6530b8e114b79fb98cd40c1d7a46879d2000865937c047f7990cff",
+  "prior_v3_result_preserved": {
+    "closure_status": "PASS_REPO_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V3_STOP_RISK_CLOSURE_CREATED",
+    "diagnostic_promising": false,
+    "evaluator_status": "PASS_REPO_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V3_STOP_RISK_EVALUATED",
+    "execution_status": "PASS_REPO_CODE_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V3_STOP_RISK_EXECUTED",
+    "no_edge_candidate_live_capital": {
+      "candidate_created": true,
+      "capital_allocated": true,
+      "edge_claim_created": true,
+      "live_trading_enabled": true,
+      "runtime_enabled": true
+    },
+    "prior_rejection_preserved": true,
+    "result_classification": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V3_STOP_RISK_REJECTED_NO_FOLLOWUP"
+  },
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "null_failure_audit_created": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false,
+    "v4_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "closure": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_closures\\crypto_15m_residual_sweep_confirmation_short_only_v3_stop_risk_closure_v1.json",
+    "evaluator": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_residual_sweep_confirmation_short_only_v3_stop_risk_evaluator_v1.json",
+    "execution": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_residual_sweep_confirmation_short_only_v3_stop_risk_execution_v1.json",
+    "preregistration": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\research_preregistrations\\crypto_15m_residual_sweep_confirmation_short_only_v3_stop_risk_preregistration_v1.json",
+    "v2_postmortem_reference": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_reviews\\crypto_15m_residual_sweep_confirmation_short_only_v2_postmortem_diagnostic_v1.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "ca8201d070e049cd9283c3fa8a2c1aad4e37cbdb",
+    "allowed_new_paths_at_audit": [
+      "?? artifacts/strategy_reviews/crypto_15m_residual_sweep_confirmation_short_only_v3_null_failure_audit_v1.json",
+      "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v3_null_failure_audit_v1.py"
+    ],
+    "git_status_at_audit": [
+      "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v3_null_failure_audit_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 1014,
+    "unexpected_dirty_paths_at_audit": []
+  },
+  "status": "PASS_REPO_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V3_NULL_FAILURE_AUDIT_CREATED",
+  "trade_distribution_audit": {
+    "average_loss_usdt": -2.823732,
+    "average_win_usdt": 3.07359,
+    "distribution_classification": "THIN_EDGE_MANY_SMALL_TRADES",
+    "few_outliers_drive_results": false,
+    "median_trade_net_pnl_usdt": -0.564118,
+    "tail_loss_concentration": {
+      "top_5_losing_contribution_usdt": -25.978164,
+      "top_5_losing_trades_usdt": [
+        -5.197349,
+        -5.196083,
+        -5.195752,
+        -5.194522,
+        -5.194459
+      ],
+      "top_5_winning_contribution_usdt": 49.338071,
+      "top_5_winning_trades_usdt": [
+        9.9108,
+        9.892779,
+        9.860655,
+        9.851265,
+        9.822572
+      ]
+    },
+    "win_rate": 0.462098
+  },
+  "trade_level_data_review": {
+    "aggregate_reproduction_check": {
+      "aggregate_match": true,
+      "comparisons": {
+        "artifact_holdout_net_bps": {
+          "abs_diff": 0.0,
+          "expected": 369.593962,
+          "recovered": 369.593962
+        },
+        "artifact_validation_net_bps": {
+          "abs_diff": 0.0,
+          "expected": 321.36711,
+          "recovered": 321.36711
+        },
+        "closed_trades": {
+          "abs_diff": 0,
+          "expected": 963,
+          "recovered": 963
+        },
+        "holdout_net_bps": {
+          "abs_diff": 0.0,
+          "expected": 369.593962,
+          "recovered": 369.593962
+        },
+        "validation_net_bps": {
+          "abs_diff": 0.0,
+          "expected": 321.36711,
+          "recovered": 321.36711
+        }
+      }
+    },
+    "audit_reliability_classification": "NULL_AUDIT_AGGREGATES_MATCH",
+    "execution_artifact_monthly_breakdown_available": true,
+    "execution_artifact_null_distribution_available": false,
+    "execution_artifact_trade_level_rows_available": false,
+    "null_distribution_reproduced_inside_audit": true,
+    "recovered_trade_count": 963,
+    "trade_level_rows_recovered_inside_audit": true
+  },
+  "v4_decision": {
+    "decision_summary": "Observed validation is positive but not extreme under a documented conservative null; the main blocker is modest effect size with noisy trade PnL distribution and material cost/stop drag.",
+    "no_grid_no_holdout_selection_no_edge_claim": true,
+    "v4_direction_classification": "V4_DIRECTION_NOT_JUSTIFIED_NULL_MODEL_FAIR_AND_FAILED",
+    "v4_execution_allowed_now": false
+  },
+  "validation_checks": {
+    "aggregate_reproduction_match": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_network_used": true,
+    "no_parameter_optimization": true,
+    "no_runtime_live_capital": true,
+    "no_v4_tested": true,
+    "prior_rejection_preserved": true,
+    "prior_v3_artifacts_loaded": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

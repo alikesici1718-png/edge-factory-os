@@ -1,0 +1,141 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from __future__ import annotations
+
+import json
+import re
+import shutil
+from datetime import datetime, timezone
+from pathlib import Path
+
+USERDIR = Path(r"C:\Users\alike")
+WORKSPACE = Path(r"C:\Users\alike\OneDrive\Desktop\edge_lab_new")
+OUT_ROOT = WORKSPACE / "edge_factory_signal_id_fallback_line_patch_v2"
+
+RISK_MANAGER = USERDIR / "global_paper_risk_manager_v3_priority.py"
+
+def now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def main() -> int:
+    out_dir = OUT_ROOT / f"signal_id_fallback_line_patch_v2_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    backup_dir = out_dir / "backup_before_patch"
+    backup_dir.mkdir(parents=True, exist_ok=True)
+
+    result = {
+        "generated_at": now_iso(),
+        "file": str(RISK_MANAGER),
+        "exists": RISK_MANAGER.exists(),
+        "patched": False,
+        "already_patched": False,
+        "start_line": None,
+        "end_line": None,
+        "backup": "",
+        "notes": [],
+        "restart_allowed": False,
+    }
+
+    if not RISK_MANAGER.exists():
+        result["notes"].append("risk manager file missing")
+    else:
+        backup_path = backup_dir / RISK_MANAGER.name
+        shutil.copy2(RISK_MANAGER, backup_path)
+        result["backup"] = str(backup_path)
+
+        txt = RISK_MANAGER.read_text(encoding="utf-8", errors="replace")
+
+        if "EDGE_FACTORY_CANONICAL_SIGNAL_ID_FALLBACK_V1" in txt:
+            result["already_patched"] = True
+            result["notes"].append("marker already exists; no patch needed")
+        else:
+            lines = txt.splitlines(keepends=True)
+
+            start = None
+            end = None
+
+            for i, line in enumerate(lines):
+                if '"signal_id" not in x.columns' in line:
+                    # Find the old else branch that blanked signal_id.
+                    for j in range(i + 1, min(i + 40, len(lines))):
+                        if 'x["signal_id"]' in lines[j] and '= ""' in lines[j]:
+                            start = i
+                            end = j
+                            break
+                    if start is not None:
+                        break
+
+            if start is None or end is None:
+                result["notes"].append("could not locate old signal_id fallback block")
+                result["notes"].append("print nearby source with: Get-Content C:\\Users\\alike\\global_paper_risk_manager_v3_priority.py | Select-Object -Index 185..210")
+            else:
+                indent = re.match(r"^(\s*)", lines[start]).group(1)
+                i1 = indent + "    "
+                i2 = indent + "        "
+
+                block = [
+                    f'{indent}# EDGE_FACTORY_CANONICAL_SIGNAL_ID_FALLBACK_V1\n',
+                    f'{indent}# Canonical fallback must match logger-side IDs: COIN_STRATEGY_OR_FAMILY_YYYYMMDDTHHMMSSZ.\n',
+                    f'{indent}# Preserve existing logger-provided signal_id whenever present; only fill missing/blank rows.\n',
+                    f'{indent}if "target_entry_time" in x.columns:\n',
+                    f'{i1}time_src = x["target_entry_time"]\n',
+                    f'{indent}elif "signal_time" in x.columns:\n',
+                    f'{i1}time_src = x["signal_time"]\n',
+                    f'{indent}elif "log_time" in x.columns:\n',
+                    f'{i1}time_src = x["log_time"]\n',
+                    f'{indent}else:\n',
+                    f'{i1}time_src = pd.Series([""] * len(x), index=x.index)\n',
+                    f'{indent}base_time = pd.to_datetime(time_src, errors="coerce", utc=True).dt.strftime("%Y%m%dT%H%M%SZ").fillna("")\n',
+                    f'{indent}if "strategy" in x.columns:\n',
+                    f'{i1}id_part = x["strategy"].astype(str)\n',
+                    f'{indent}elif "family" in x.columns:\n',
+                    f'{i1}id_part = x["family"].astype(str)\n',
+                    f'{indent}else:\n',
+                    f'{i1}id_part = x["family_key"].astype(str)\n',
+                    f'{indent}if "coin" in x.columns:\n',
+                    f'{i1}coin_part = x["coin"].astype(str)\n',
+                    f'{indent}elif "symbol" in x.columns:\n',
+                    f'{i1}coin_part = x["symbol"].astype(str).str.replace("-USDT-SWAP", "", regex=False)\n',
+                    f'{indent}else:\n',
+                    f'{i1}coin_part = pd.Series(["UNKNOWN"] * len(x), index=x.index)\n',
+                    f'{indent}fallback_signal_id = coin_part + "_" + id_part + "_" + base_time.astype(str)\n',
+                    f'{indent}if "signal_id" not in x.columns:\n',
+                    f'{i1}x["signal_id"] = fallback_signal_id\n',
+                    f'{indent}else:\n',
+                    f'{i1}sid_raw = x["signal_id"]\n',
+                    f'{i1}sid_str = sid_raw.astype(str)\n',
+                    f'{i1}blank_sid = sid_raw.isna() | sid_str.str.strip().isin(["", "nan", "None"])\n',
+                    f'{i1}x["signal_id"] = sid_str\n',
+                    f'{i1}x.loc[blank_sid, "signal_id"] = fallback_signal_id[blank_sid]\n',
+                ]
+
+                new_lines = lines[:start] + block + lines[end + 1:]
+                RISK_MANAGER.write_text("".join(new_lines), encoding="utf-8")
+
+                result["patched"] = True
+                result["start_line"] = start + 1
+                result["end_line"] = end + 1
+                result["notes"].append("line-based replacement applied")
+
+    state_path = out_dir / "signal_id_fallback_line_patch_v2_state.json"
+    state_path.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    print("EDGE FACTORY SIGNAL ID FALLBACK LINE PATCH v2")
+    print("=" * 100)
+    print(f"file: {RISK_MANAGER}")
+    print(f"out_dir: {out_dir}")
+    print(f"patched: {result['patched']}")
+    print(f"already_patched: {result['already_patched']}")
+    print(f"start_line: {result['start_line']}")
+    print(f"end_line: {result['end_line']}")
+    print(f"backup: {result['backup']}")
+    print("restart_allowed: False")
+    print()
+    print("NOTES")
+    print("-" * 100)
+    for n in result["notes"]:
+        print("-", n)
+    print()
+    print(f"State: {state_path}")
+
+if __name__ == "__main__":
+    main()

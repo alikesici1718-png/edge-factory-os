@@ -1,0 +1,333 @@
+{
+  "artifact_kind": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_POSTMORTEM_DIAGNOSTIC",
+  "concentration_diagnostic": {
+    "month_concentration": {
+      "best_month_bps": 311.76027,
+      "max_drawdown_bps": -2681.641497,
+      "worst_month_bps": -746.42047
+    },
+    "side_concentration": {
+      "long": 0.078755,
+      "short": 0.921245
+    },
+    "top_symbol": "DOGEUSDT",
+    "top_symbol_share_lte_0_25": true,
+    "top_symbol_trade_count": 22,
+    "top_symbol_trade_share": 0.020147
+  },
+  "cost_sensitivity_diagnostic": {
+    "average_cost_drag_per_closed_trade_usdt": 0.18857,
+    "cost_as_share_of_abs_gross_pnl": 6.832725,
+    "diagnosis": "full-sample gross PnL is positive but costs flip full-sample net negative; validation and holdout remain net positive but fail robustness gates",
+    "estimated_total_cost_drag_usdt": 205.918941,
+    "gross_pnl_usdt": 30.137164,
+    "net_pnl_usdt": -175.781777,
+    "portfolio_gross_bps": 301.371643,
+    "portfolio_net_bps": -1757.817772
+  },
+  "exit_reason_diagnostic": {
+    "both_hit_same_bar_count": 0,
+    "diagnosis": "stop and time exits dominate by count; take-profit exits are rare by count; contribution cannot be attributed without trade rows",
+    "stop_exits": {
+      "count": 474,
+      "net_contribution_usdt": null,
+      "share": 0.434066
+    },
+    "summary": "stops=474, takes=135, time=483; stop/time exits dominate by count, contribution unavailable without trade rows",
+    "take_profit_exits": {
+      "count": 135,
+      "net_contribution_usdt": null,
+      "share": 0.123626
+    },
+    "time_stop_exits": {
+      "count": 483,
+      "net_contribution_usdt": null,
+      "share": 0.442308
+    }
+  },
+  "feature_bucket_diagnostic": {
+    "available_aggregate_feature_fields": {
+      "average_abs_z_residual": 5.590683,
+      "confirmation_passed_long": 200,
+      "confirmation_passed_short": 1292,
+      "cost_aware_gate_passed_long": 200,
+      "cost_aware_gate_passed_short": 1292,
+      "raw_residual_extremes_long": 28887,
+      "raw_residual_extremes_short": 53806,
+      "raw_sweep_candidates_long": 396,
+      "raw_sweep_candidates_short": 2552
+    },
+    "classification": "inconclusive",
+    "limitation": "No per-trade z_residual, residual_4h, sweep_depth, volume ratio, confirmation strength, BTC return, side, symbol PnL, or entry timestamp rows are present in the execution artifact.",
+    "strongest_feature_bucket_signal": null,
+    "trade_level_feature_buckets_available": false
+  },
+  "limitations": [
+    "No raw panel rows were read.",
+    "No strategy rerun or V2 test was performed.",
+    "No trade-level rows were available in the execution artifact.",
+    "Side PnL, exit PnL, feature buckets, month drivers, and symbol net contribution remain unavailable."
+  ],
+  "module": "edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_postmortem_diagnostic_v1",
+  "monthly_performance_diagnostic": {
+    "all_monthly_net_bps": {
+      "2023-01": -129.8147,
+      "2023-02": 9.73659,
+      "2023-03": -253.73821,
+      "2023-04": -12.05324,
+      "2023-05": 59.31842,
+      "2023-06": -150.74125,
+      "2023-07": -437.10306,
+      "2023-08": -121.20025,
+      "2023-09": -89.04465,
+      "2023-10": -47.34204,
+      "2023-11": 29.21621,
+      "2023-12": -493.99138,
+      "2024-01": -65.58924,
+      "2024-02": -746.42047,
+      "2024-03": 96.49523,
+      "2024-04": -161.72303,
+      "2024-05": 138.13709,
+      "2024-06": 170.07156,
+      "2024-07": -19.99502,
+      "2024-08": 231.21732,
+      "2024-09": -179.80865,
+      "2024-10": 56.98291,
+      "2024-11": -184.37033,
+      "2024-12": 68.18842,
+      "2025-01": 164.14604,
+      "2025-02": -20.57864,
+      "2025-03": -23.63357,
+      "2025-04": 79.23252,
+      "2025-05": 311.76027,
+      "2025-06": 97.02053,
+      "2025-07": -101.4151,
+      "2025-08": -98.74342,
+      "2025-09": 221.19157,
+      "2025-10": -153.22622
+    },
+    "holdout": {
+      "best_month": {
+        "month": "2025-05",
+        "net_bps": 311.76027
+      },
+      "month_count": 7,
+      "negative_or_flat_month_count": 3,
+      "net_bps": 355.82015,
+      "positive_month_count": 4,
+      "positive_rate": 0.571429,
+      "worst_month": {
+        "month": "2025-10",
+        "net_bps": -153.22622
+      }
+    },
+    "overall": {
+      "best_month": {
+        "month": "2025-05",
+        "net_bps": 311.76027
+      },
+      "month_count": 34,
+      "negative_or_flat_month_count": 20,
+      "net_bps": -1757.81779,
+      "positive_month_count": 14,
+      "positive_rate": 0.411765,
+      "worst_month": {
+        "month": "2024-02",
+        "net_bps": -746.42047
+      }
+    },
+    "positive_validation_and_holdout_but_rejected_reason": {
+      "holdout_net_positive": true,
+      "null_baseline_gate_passed": false,
+      "result_depends_on_one_month": "not_proven_from_aggregate_only; holdout best month 2025-05 contributes materially",
+      "validation_monthly_positive_rate_gate_passed": false,
+      "validation_net_positive": true
+    },
+    "train": {
+      "best_month": {
+        "month": "2024-06",
+        "net_bps": 170.07156
+      },
+      "month_count": 18,
+      "negative_or_flat_month_count": 12,
+      "net_bps": -2205.78642,
+      "positive_month_count": 6,
+      "positive_rate": 0.333333,
+      "worst_month": {
+        "month": "2024-02",
+        "net_bps": -746.42047
+      }
+    },
+    "validation": {
+      "best_month": {
+        "month": "2024-08",
+        "net_bps": 231.21732
+      },
+      "month_count": 9,
+      "negative_or_flat_month_count": 5,
+      "net_bps": 92.14848,
+      "positive_month_count": 4,
+      "positive_rate": 0.444444,
+      "worst_month": {
+        "month": "2024-11",
+        "net_bps": -184.37033
+      }
+    }
+  },
+  "null_failure_diagnostic": {
+    "likely_reasons": [
+      "validation_monthly_positive_rate_below_gate",
+      "validation_null_percentile_0_84_below_0_95",
+      "cost_drag_flips_full_sample_from_gross_positive_to_net_negative",
+      "large_full_sample_drawdown_despite_split_positive_net"
+    ],
+    "null_pass": false,
+    "observed_validation_pnl_usdt": 9.214849,
+    "runs": 100,
+    "summary": "validation_monthly_positive_rate_below_gate, validation_null_percentile_0_84_below_0_95, cost_drag_flips_full_sample_from_gross_positive_to_net_negative, large_full_sample_drawdown_despite_split_positive_net",
+    "validation_percentile": 0.84
+  },
+  "payload_sha256_excluding_hash": "385cc642dcd1a3190765cf97155963d23ca26e4bfcaf1c37fbc30fe6c02a9094",
+  "prior_result_preserved": {
+    "accepted_long_trades": 86,
+    "accepted_short_trades": 1006,
+    "closed_trades": 1092,
+    "config_id": "crypto_15m_residual_sweep_confirmation_reversal_z35_48h_confirm1_v1",
+    "diagnostic_promising": false,
+    "evaluator_result_classification": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_REJECTED_NO_FOLLOWUP",
+    "execution_status": "PASS_REPO_CODE_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_EXECUTED",
+    "holdout_monthly_positive_rate": 0.571429,
+    "holdout_net_bps": 355.82015,
+    "metric_integrity": {
+      "checks": {
+        "beta_uses_only_prior_returns": true,
+        "confirmation_uses_next_completed_bar_and_enters_after_confirmation": true,
+        "entry_next_bar_open_after_confirmation": true,
+        "max_concurrent_positions_lte_3": true,
+        "max_new_positions_per_timestamp_lte_1": true,
+        "no_live_runtime_capital_order_action": true,
+        "no_lookahead": true,
+        "portfolio_bps_uses_base_equity_denominator": true,
+        "prior_high_low_excludes_current_bar": true,
+        "residual_z_uses_only_prior_residual_history": true,
+        "stop_take_uses_ohlc_conservatively": true,
+        "symbol_cooldown_enforced": true
+      },
+      "passed": true
+    },
+    "no_edge_candidate_live_capital": true,
+    "null_baseline": {
+      "feasible": true,
+      "method": "deterministic trade-pnl timestamp/block shuffle proxy",
+      "null_pass": false,
+      "observed_validation_pnl_usdt": 9.214849,
+      "runs": 100,
+      "validation_percentile": 0.84
+    },
+    "result_remains_rejected": true,
+    "route_family": "CRYPTO_15M_CONFLUENCE_EVENT_REVERSAL_BASELINE",
+    "strategy": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_REVERSAL_V1",
+    "validation_monthly_positive_rate": 0.444444,
+    "validation_net_bps": 92.148485
+  },
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "postmortem_diagnostic_created": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false,
+    "v2_execution_allowed_now": false
+  },
+  "side_performance_diagnostic": {
+    "conclusion": "short side dominant by count; helpful or harmful cannot be determined without trade-level side PnL",
+    "long_exit_reason_distribution": null,
+    "long_gross_bps": null,
+    "long_net_bps": null,
+    "long_trade_count": 86,
+    "long_trade_share": 0.078755,
+    "long_win_rate": null,
+    "short_exit_reason_distribution": null,
+    "short_gross_bps": null,
+    "short_net_bps": null,
+    "short_trade_count": 1006,
+    "short_trade_share": 0.921245,
+    "short_win_rate": null,
+    "summary": "short side dominates count (1006/1092); side PnL unavailable because execution artifact has no trade-level rows"
+  },
+  "source_artifacts": {
+    "closure": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_closures\\crypto_15m_residual_sweep_confirmation_closure_v1.json",
+    "evaluator": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_residual_sweep_confirmation_evaluator_v1.json",
+    "execution": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_residual_sweep_confirmation_execution_v1.json",
+    "preregistration": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\research_preregistrations\\crypto_15m_residual_sweep_confirmation_preregistration_v1.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "880ec4650f567780b7dd54f6c8c7b120d66d126a",
+    "allowed_new_paths_at_diagnostic": [
+      "?? artifacts/strategy_reviews/crypto_15m_residual_sweep_confirmation_postmortem_diagnostic_v1.json",
+      "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_postmortem_diagnostic_v1.py"
+    ],
+    "git_status_at_diagnostic": [
+      "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_postmortem_diagnostic_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 1002,
+    "unexpected_dirty_paths_at_diagnostic": []
+  },
+  "status": "PASS_REPO_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_POSTMORTEM_DIAGNOSTIC_CREATED",
+  "trade_level_data_availability": {
+    "aggregate_only_fields_available": [
+      "accepted_long_trades",
+      "accepted_short_trades",
+      "exit_counts",
+      "monthly_net_bps",
+      "gross_pnl_usdt",
+      "net_pnl_usdt",
+      "top_symbol_concentration",
+      "null_baseline"
+    ],
+    "limitation": "Execution artifact does not contain per-trade rows, so side PnL, exit contribution, feature buckets, and month-driver attribution cannot be computed safely.",
+    "raw_panel_rows_read": false,
+    "trade_level_data_available": false,
+    "trade_row_keys_found": []
+  },
+  "v2_direction_assessment": {
+    "allowed_descriptive_findings": [
+      "The route was rejected despite positive validation and holdout net bps because validation monthly positive rate was below 0.60 and the validation null percentile was 0.84 rather than at least 0.95.",
+      "Short trades dominate accepted count, but side filtering is not justified without side-level PnL across validation and holdout.",
+      "Stop and time exits dominate exit count, but exit parameter review is not justified without exit-level contribution rows.",
+      "Full-sample costs are material enough to turn gross positive PnL into net negative PnL."
+    ],
+    "bounded_v2_direction": "No V2 execution is justified from this artifact alone because trade-level rows needed for side, exit, and feature-bucket attribution are missing.",
+    "forbidden_actions_preserved": [
+      "no exact z threshold proposal",
+      "no exact hold proposal",
+      "no exact TP/SL proposal",
+      "no parameter grid",
+      "no holdout-selected config",
+      "no edge or candidate claim"
+    ],
+    "v2_direction_classification": "V2_DIRECTION_INCONCLUSIVE_MISSING_TRADE_LEVEL_DATA"
+  },
+  "validation_checks": {
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_network_used": true,
+    "no_new_strategy_executed": true,
+    "no_parameter_optimization": true,
+    "no_runtime_live_capital": true,
+    "no_v2_tested": true,
+    "prior_closure_loaded": true,
+    "prior_evaluator_loaded": true,
+    "prior_execution_loaded": true,
+    "prior_preregistration_loaded": true,
+    "prior_rejection_preserved": true,
+    "repo_clean_before_run": true
+  }
+}

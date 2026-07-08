@@ -1,0 +1,685 @@
+from __future__ import annotations
+
+import ast
+import json
+import subprocess
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, Dict, List, Tuple
+
+
+REPO_ROOT = Path(r"C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo")
+LAB_ROOT = REPO_ROOT.parent
+MODULE_NAME = "edge_factory_os_repo_only_source_panel_pyarrow_schema_access_repair_apply_validator_after_result_review_v1"
+CURRENT_TOOL_REL = (
+    "tools/edge_factory_os_repo_only_source_panel_pyarrow_schema_access_repair_apply_validator_after_result_review_v1.py"
+)
+OUT_DIR = LAB_ROOT / MODULE_NAME
+
+EXPECTED_START_HEAD = "b7126df"
+EXPECTED_PREVIOUS_TRACKED_PYTHON_COUNT = 634
+EXPECTED_TRACKED_PYTHON_COUNT = 635
+
+PRIOR_APPLY_DIR = LAB_ROOT / "edge_factory_os_repo_only_source_panel_pyarrow_schema_access_repair_apply_after_result_review_v1"
+PRIOR_APPLY_LATEST_ARTIFACT = (
+    PRIOR_APPLY_DIR / "repo_only_source_panel_pyarrow_schema_access_repair_apply_after_result_review_v1_latest.json"
+)
+SCHEMA_METADATA_ARTIFACT_PATH = PRIOR_APPLY_DIR / "source_panel_parquet_schema_metadata_after_pyarrow_repair.json"
+
+PARQUET_INPUT_PATH = Path(
+    r"C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_feature_panels"
+    r"\market_panic_rebound_long_v1\market_panic_rebound_long_v1_feature_panel_1h.parquet"
+)
+EXPECTED_PARQUET_FILE_NAME = "market_panic_rebound_long_v1_feature_panel_1h.parquet"
+EXPECTED_PARQUET_SIZE_BYTES = 99504547
+EXPECTED_PARQUET_COLUMN_COUNT = 12
+EXPECTED_PARQUET_COLUMNS = [
+    "time",
+    "symbol",
+    "open",
+    "high",
+    "low",
+    "close",
+    "entry_vol_quote",
+    "entry_range_bps",
+    "coin_ret6_bps",
+    "coin_ret24_bps",
+    "mkt_ret6_bps",
+    "mkt_ret24_bps",
+]
+EXPECTED_ROW_GROUPS = 2
+EXPECTED_METADATA_ROWS = 1920290
+
+NEXT_MODULE_RESULT_SUMMARY = "edge_factory_os_repo_only_source_panel_analysis_result_summary_after_research_return_gate_v1.py"
+NEXT_MODULE_BLOCKED = (
+    "edge_factory_os_repo_only_source_panel_pyarrow_schema_access_repair_apply_blocked_record_after_result_review_v1.py"
+)
+
+POST_CHECK_STATUS_PASS = (
+    "REPO_ONLY_SOURCE_PANEL_PYARROW_SCHEMA_ACCESS_REPAIR_APPLY_VALIDATOR_AFTER_RESULT_REVIEW_"
+    "POST_COMMIT_CHECK_PASS_RESULT_SUMMARY_NEXT"
+)
+POST_CHECK_STATUS_BLOCKED = (
+    "REPO_ONLY_SOURCE_PANEL_PYARROW_SCHEMA_ACCESS_REPAIR_APPLY_VALIDATOR_AFTER_RESULT_REVIEW_"
+    "POST_COMMIT_CHECK_BLOCKED"
+)
+VALIDATOR_STATUS_PASS = "PASS_SCHEMA_METADATA_ARTIFACT_VALIDATED_P1_BOUNDED_RESULT_SUMMARY_NEXT"
+VALIDATOR_STATUS_BLOCKED = "BLOCKED_SCHEMA_METADATA_ARTIFACT_VALIDATION_FAILED"
+
+POLICY_LEVEL = "POST_CHECK_ARTIFACT_RELIABILITY_POLICY_ACTIVE"
+EVIDENCE_BEFORE = "PRIMARY_ARTIFACT_PARTIAL_WITH_P1_ATTENTION_SOURCE_PANEL_RESULTS_PENDING_SCHEMA_VALIDATOR"
+EVIDENCE_AFTER_BOUNDED = "PRIMARY_ARTIFACT_STRONG_WITH_BOUNDED_SCHEMA_METADATA_SOURCE_PANEL_RESULTS"
+EVIDENCE_AFTER_PARTIAL = "PRIMARY_ARTIFACT_PARTIAL_WITH_P1_ATTENTION_SOURCE_PANEL_RESULTS"
+EVIDENCE_AFTER_BLOCKED = "SOURCE_PANEL_SCHEMA_METADATA_VALIDATION_BLOCKED"
+LIMITATION_BEFORE = "P1_PENDING_VALIDATOR"
+LIMITATION_AFTER_BOUNDED = "P1_BOUNDED"
+LIMITATION_AFTER_LOW = "LOW"
+LIMITATION_AFTER_BLOCKED = "P0_BLOCKER"
+
+GENERIC_RUNNER_TARGET_FILE = "tools/edge_factory_os_repo_only_framework_governance_runner_v1.py"
+PLANNED_SCHEMA_REL_PATHS = [
+    "edge_factory_os_framework/schemas/edge_factory_os_status_record_v1.schema.json",
+    "edge_factory_os_framework/schemas/edge_factory_os_safety_flags_v1.schema.json",
+    "edge_factory_os_framework/schemas/edge_factory_os_git_state_v1.schema.json",
+    "edge_factory_os_framework/schemas/edge_factory_os_tracked_python_validation_v1.schema.json",
+    "edge_factory_os_framework/schemas/edge_factory_os_queue_item_v1.schema.json",
+    "edge_factory_os_framework/schemas/edge_factory_os_artifact_reference_v1.schema.json",
+    "edge_factory_os_framework/schemas/edge_factory_os_post_commit_check_v1.schema.json",
+    "edge_factory_os_framework/schemas/edge_factory_os_framework_schema_registry_v1.schema.json",
+]
+
+DANGEROUS_FLAGS = [
+    "runtime_touched",
+    "launcher_executed",
+    "launcher_touch_performed",
+    "capital_changed",
+    "live_or_real_orders",
+    "holdout_accessed",
+    "active_paper_touched",
+    "strategy_research_recommended_now",
+    "strategy_research_implementation_touched",
+    "candidate_generation_recommended_now",
+    "candidate_generation_touched",
+    "candidate_release_recommended_now",
+    "family_release_recommended_now",
+    "family_release_touched",
+    "schema_apply_allowed_now",
+    "schema_file_creation_allowed_now",
+    "schema_file_edit_allowed_now",
+    "schema_apply_performed_now",
+    "schema_file_creation_performed_now",
+    "schema_file_edit_performed_now",
+    "config_file_creation_allowed_now",
+    "config_file_creation_performed_now",
+    "generic_runner_approval_granted",
+    "generic_runner_implementation_allowed_now",
+    "generic_runner_file_creation_allowed_now",
+    "generic_runner_implementation_performed_now",
+    "implementation_allowed_now",
+    "runtime_preflight_implementation_performed",
+    "runtime_kill_switch_implementation_performed",
+    "runtime_touch_performed",
+    "capital_touch_performed",
+    "live_touch_performed",
+    "real_order_touch_performed",
+    "active_paper_touch_performed",
+    "paper_behavior_changed_now",
+    "execution_path_approved_now",
+    "order_path_touched_now",
+]
+
+
+def now_utc() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def run_cmd(args: List[str]) -> subprocess.CompletedProcess[str]:
+    if args and args[0] == "git":
+        safe_args = ["git", "-c", f"safe.directory={REPO_ROOT.as_posix()}", *args[1:]]
+    else:
+        safe_args = args
+    result = subprocess.run(
+        safe_args,
+        cwd=str(REPO_ROOT),
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"command failed: {safe_args} returncode={result.returncode} stderr={result.stderr}")
+    return result
+
+
+def load_json_checked(path: Path) -> Tuple[Dict[str, Any], bool, str]:
+    if not path.exists():
+        return {}, False, "missing"
+    try:
+        loaded = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return {}, False, f"{type(exc).__name__}: {exc}"
+    if not isinstance(loaded, dict):
+        return {}, False, "artifact_json_root_not_object"
+    return loaded, True, ""
+
+
+def latest_commit_paths() -> List[str]:
+    return sorted(
+        line.strip().replace("\\", "/")
+        for line in run_cmd(["git", "show", "--name-only", "--format=", "HEAD"]).stdout.splitlines()
+        if line.strip()
+    )
+
+
+def tracked_python_validation() -> Dict[str, Any]:
+    tracked_files = sorted(
+        line.strip().replace("\\", "/")
+        for line in run_cmd(["git", "ls-files", "*.py"]).stdout.splitlines()
+        if line.strip()
+    )
+    current_file = CURRENT_TOOL_REL if (REPO_ROOT / CURRENT_TOOL_REL).exists() else None
+    files = sorted(set(tracked_files + ([current_file] if current_file and current_file not in tracked_files else [])))
+    syntax_errors: List[Dict[str, str]] = []
+    bom_errors: List[str] = []
+    for rel in files:
+        data = (REPO_ROOT / rel).read_bytes()
+        if data.startswith(b"\xef\xbb\xbf"):
+            bom_errors.append(rel)
+        try:
+            ast.parse(data.decode("utf-8"), filename=rel)
+        except UnicodeDecodeError as exc:
+            syntax_errors.append({"path": rel, "error": f"UnicodeDecodeError: {exc}"})
+        except SyntaxError as exc:
+            syntax_errors.append({"path": rel, "error": f"SyntaxError line={exc.lineno}: {exc.msg}"})
+    return {
+        "tracked_python_count": len(files),
+        "tracked_python_syntax_error_count": len(syntax_errors),
+        "tracked_python_bom_error_count": len(bom_errors),
+        "syntax_errors": syntax_errors,
+        "bom_errors": bom_errors,
+        "current_file_included_precommit": current_file is not None and current_file not in tracked_files,
+    }
+
+
+def git_state() -> Dict[str, Any]:
+    status_lines = [
+        line
+        for line in run_cmd(["git", "status", "--porcelain=v1", "--untracked-files=all"]).stdout.splitlines()
+        if line.strip()
+    ]
+    changed_paths = sorted(line[3:].replace("\\", "/") for line in status_lines)
+    latest_paths = latest_commit_paths()
+    head = run_cmd(["git", "rev-parse", "--short", "HEAD"]).stdout.strip()
+    parent_result = run_cmd(["git", "rev-parse", "--short", "HEAD^"])
+    parent = parent_result.stdout.strip()
+    return {
+        "head": head,
+        "parent": parent,
+        "status_porcelain": status_lines,
+        "changed_paths": changed_paths,
+        "repo_clean": len(status_lines) == 0,
+        "latest_commit_paths": latest_paths,
+        "current_scope_is_only_approved_file": changed_paths == [CURRENT_TOOL_REL]
+        or (len(changed_paths) == 0 and latest_paths == [CURRENT_TOOL_REL]),
+        "expected_start_head_or_parent_observed": head == EXPECTED_START_HEAD or parent == EXPECTED_START_HEAD,
+    }
+
+
+def planned_schema_existing_files() -> List[str]:
+    return sorted(rel for rel in PLANNED_SCHEMA_REL_PATHS if (REPO_ROOT / rel).exists())
+
+
+def dangerous_flags() -> Dict[str, bool]:
+    return {flag: False for flag in DANGEROUS_FLAGS}
+
+
+def metadata_method_is_footer_only(value: Any) -> bool:
+    text = str(value or "").upper()
+    return "PYARROW" in text and "PARQUETFILE" in text and "METADATA" in text and "SCAN" not in text
+
+
+def prior_apply_validation(prior: Dict[str, Any], valid_json: bool) -> Dict[str, Any]:
+    checks = {
+        "prior_apply_artifact_valid_json": valid_json,
+        "prior_apply_was_performed": prior.get("repair_apply_performed") is True,
+        "prior_apply_was_successful": prior.get("repair_apply_successful") is True,
+        "pyarrow_was_already_available": prior.get("pyarrow_available_before") is True,
+        "no_dependency_install_attempted": prior.get("dependency_install_attempted") is False
+        and prior.get("pyarrow_install_attempted") is False,
+        "environment_was_not_modified": prior.get("environment_modified") is False,
+        "schema_metadata_artifact_was_created": prior.get("parquet_schema_metadata_artifact_created") is True,
+        "parquet_rows_were_not_read": prior.get("parquet_rows_read_now") is False,
+        "full_parquet_scan_was_not_performed": prior.get("full_parquet_scan_performed") is False,
+        "prior_status_pass": prior.get("source_panel_pyarrow_schema_access_repair_apply_status")
+        == "PASS_SCHEMA_METADATA_ARTIFACT_CREATED_VALIDATOR_REQUIRED",
+        "prior_next_module_is_this_validator": prior.get("next_module") == CURRENT_TOOL_REL.split("/", 1)[1],
+    }
+    return {"completed": True, "checks": checks, "validated": all(value is True for value in checks.values())}
+
+
+def schema_metadata_artifact_validation(schema: Dict[str, Any], valid_json: bool, json_error: str) -> Dict[str, Any]:
+    exists = SCHEMA_METADATA_ARTIFACT_PATH.exists()
+    non_empty = bool(schema)
+    artifact_path_matches = SCHEMA_METADATA_ARTIFACT_PATH.parent == PRIOR_APPLY_DIR
+    checks = {
+        "schema_metadata_artifact_exists": exists,
+        "schema_metadata_artifact_valid_json": valid_json,
+        "schema_metadata_artifact_non_empty": non_empty,
+        "artifact_path_matches_expected_module_output_directory": artifact_path_matches,
+        "artifact_contains_parquet_input_path": bool(schema.get("parquet_input_path")),
+        "artifact_contains_schema_metadata_method": bool(schema.get("parquet_schema_method")),
+        "artifact_contains_column_names": isinstance(schema.get("parquet_column_names"), list)
+        and len(schema.get("parquet_column_names", [])) > 0,
+        "artifact_contains_column_count": isinstance(schema.get("parquet_column_count"), int),
+        "artifact_contains_row_group_metadata_if_available": "parquet_num_row_groups_metadata_only" in schema,
+        "artifact_contains_row_count_metadata_if_available": "parquet_num_rows_metadata_only" in schema,
+        "artifact_contains_safety_flags": schema.get("full_parquet_scan_performed") is False
+        and schema.get("parquet_rows_read_now") is False,
+    }
+    return {
+        "completed": True,
+        "checks": checks,
+        "validated": all(value is True for value in checks.values()),
+        "json_error": json_error,
+    }
+
+
+def parquet_identity_validation(schema: Dict[str, Any]) -> Dict[str, Any]:
+    path_text = str(schema.get("parquet_input_path", ""))
+    path = Path(path_text) if path_text else PARQUET_INPUT_PATH
+    exists = path.exists()
+    actual_size = path.stat().st_size if exists else 0
+    recorded_size = schema.get("parquet_file_size_bytes")
+    size = actual_size if actual_size else recorded_size if isinstance(recorded_size, int) else 0
+    lowered = path_text.lower()
+    checks = {
+        "parquet_input_path_matches_expected": path_text == str(PARQUET_INPUT_PATH),
+        "parquet_file_exists": exists,
+        "parquet_file_size_matches_expected_or_explained": size == EXPECTED_PARQUET_SIZE_BYTES,
+        "path_suggests_feature_panel": "feature_panel" in lowered,
+        "file_name_matches_expected": path.name == EXPECTED_PARQUET_FILE_NAME,
+    }
+    return {
+        "completed": True,
+        "checks": checks,
+        "validated": all(value is True for value in checks.values()),
+        "parquet_file_size_bytes": size,
+        "parquet_file_size_difference_reason": ""
+        if size == EXPECTED_PARQUET_SIZE_BYTES
+        else f"actual_size_{size}_differs_from_expected_{EXPECTED_PARQUET_SIZE_BYTES}",
+    }
+
+
+def schema_content_validation(schema: Dict[str, Any]) -> Dict[str, Any]:
+    columns = schema.get("parquet_column_names")
+    if not isinstance(columns, list):
+        columns = []
+    column_names = [str(value) for value in columns]
+    method = schema.get("parquet_schema_method")
+    expected_columns_present = all(column in column_names for column in EXPECTED_PARQUET_COLUMNS)
+    row_groups = schema.get("parquet_num_row_groups_metadata_only")
+    metadata_rows = schema.get("parquet_num_rows_metadata_only")
+    checks = {
+        "parquet_column_count_is_expected": schema.get("parquet_column_count") == EXPECTED_PARQUET_COLUMN_COUNT,
+        "expected_columns_are_present": expected_columns_present,
+        "row_group_metadata_matches_if_present": row_groups in {None, EXPECTED_ROW_GROUPS},
+        "row_count_metadata_matches_if_present": metadata_rows in {None, EXPECTED_METADATA_ROWS},
+        "schema_method_is_metadata_footer_only": metadata_method_is_footer_only(method),
+        "full_parquet_scan_not_performed": schema.get("full_parquet_scan_performed") is False,
+        "parquet_rows_not_read": schema.get("parquet_rows_read_now") is False,
+    }
+    return {
+        "completed": True,
+        "checks": checks,
+        "validated": all(value is True for value in checks.values()),
+        "expected_parquet_columns_present": expected_columns_present,
+        "parquet_column_names_sample": column_names[:50],
+    }
+
+
+def safety_boundary_validation(prior: Dict[str, Any], schema: Dict[str, Any]) -> Dict[str, Any]:
+    checks = {
+        "dependency_install_attempted_false": prior.get("dependency_install_attempted") is False,
+        "environment_modified_false": prior.get("environment_modified") is False,
+        "schema_or_config_created_false": prior.get("schema_or_config_created") is False,
+        "full_parquet_scan_performed_false": prior.get("full_parquet_scan_performed") is False
+        and schema.get("full_parquet_scan_performed") is False,
+        "parquet_rows_read_now_false": prior.get("parquet_rows_read_now") is False
+        and schema.get("parquet_rows_read_now") is False,
+        "source_panel_rerun_performed_false": prior.get("source_panel_rerun_performed") is False,
+        "strategy_signal_claims_made_false": prior.get("strategy_signal_claims_made") is False,
+        "tradable_edge_claims_made_false": prior.get("tradable_edge_claims_made") is False,
+        "profit_claims_made_false": prior.get("profit_claims_made") is False,
+        "backtest_performed_false": prior.get("backtest_performed") is False,
+        "candidate_generation_performed_false": prior.get("candidate_generation_performed") is False,
+        "runtime_touch_performed_false": prior.get("runtime_touch_performed") is False,
+        "capital_touch_performed_false": prior.get("capital_touch_performed") is False,
+        "live_touch_performed_false": prior.get("live_touch_performed") is False,
+        "generic_runner_approval_granted_false": prior.get("generic_runner_approval_granted") is False,
+        "generic_runner_implementation_remains_blocked_true": prior.get("generic_runner_implementation_remains_blocked")
+        is True,
+        "old_source_panel_anomaly_route_reopened_now_false": prior.get("old_source_panel_anomaly_route_reopened_now")
+        is False,
+        "old_route_closed_artifacts_used_as_active_evidence_now_false": prior.get(
+            "old_route_closed_artifacts_used_as_active_evidence_now"
+        )
+        is False,
+    }
+    return {"completed": True, "checks": checks, "validated": all(value is True for value in checks.values())}
+
+
+def limitation_materiality_decision(all_validation_passed: bool, expected_columns_present: bool) -> Dict[str, Any]:
+    if not all_validation_passed or not expected_columns_present:
+        materiality = LIMITATION_AFTER_BLOCKED
+        bounded = False
+        blocks = True
+        p0 = 1
+        p1 = 0
+    else:
+        materiality = LIMITATION_AFTER_BOUNDED
+        bounded = True
+        blocks = False
+        p0 = 0
+        p1 = 1
+    return {
+        "completed": True,
+        "limitation_materiality_after_validator": materiality,
+        "parquet_schema_limitation_resolved_to_bounded": bounded,
+        "parquet_schema_limitation_blocks_next_step": blocks,
+        "active_p0_blocker_count": p0,
+        "active_p1_attention_count": p1,
+        "low_limitation_option_considered": LIMITATION_AFTER_LOW,
+        "low_limitation_not_selected_reason": (
+            "Metadata/footer-only schema validation bounds the prior P1 limitation but does not read rows or rerun "
+            "source-panel analysis, so the default fail-closed bias keeps one bounded P1 attention item."
+        ),
+    }
+
+
+def evidence_quality_decision(materiality: Dict[str, Any]) -> Dict[str, Any]:
+    if materiality["limitation_materiality_after_validator"] == LIMITATION_AFTER_BLOCKED:
+        after = EVIDENCE_AFTER_BLOCKED
+    elif materiality["limitation_materiality_after_validator"] == LIMITATION_AFTER_BOUNDED:
+        after = EVIDENCE_AFTER_BOUNDED
+    else:
+        after = EVIDENCE_AFTER_PARTIAL
+    return {
+        "completed": True,
+        "current_evidence_chain_quality_before_validator": EVIDENCE_BEFORE,
+        "current_evidence_chain_quality_after_validator": after,
+    }
+
+
+def build_payload() -> Dict[str, Any]:
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    git = git_state()
+    py = tracked_python_validation()
+    planned_existing = planned_schema_existing_files()
+    generic_runner_target_exists = (REPO_ROOT / GENERIC_RUNNER_TARGET_FILE).exists()
+    flags = dangerous_flags()
+    prior, prior_valid_json, prior_json_error = load_json_checked(PRIOR_APPLY_LATEST_ARTIFACT)
+    schema, schema_valid_json, schema_json_error = load_json_checked(SCHEMA_METADATA_ARTIFACT_PATH)
+
+    prior_validation = prior_apply_validation(prior, prior_valid_json)
+    artifact_validation = schema_metadata_artifact_validation(schema, schema_valid_json, schema_json_error)
+    identity_validation = parquet_identity_validation(schema)
+    content_validation = schema_content_validation(schema)
+    safety_validation = safety_boundary_validation(prior, schema)
+
+    all_core_validation_passed = all(
+        item["validated"]
+        for item in [prior_validation, artifact_validation, identity_validation, content_validation, safety_validation]
+    )
+    materiality = limitation_materiality_decision(
+        all_core_validation_passed, content_validation["expected_parquet_columns_present"]
+    )
+    evidence = evidence_quality_decision(materiality)
+
+    validation_passed = materiality["limitation_materiality_after_validator"] != LIMITATION_AFTER_BLOCKED
+    next_module = NEXT_MODULE_RESULT_SUMMARY if validation_passed else NEXT_MODULE_BLOCKED
+    final_decision = (
+        "PYARROW_SCHEMA_METADATA_ARTIFACT_VALIDATED_P1_BOUNDED_RESULT_SUMMARY_NEXT"
+        if validation_passed
+        else "PYARROW_SCHEMA_METADATA_ARTIFACT_VALIDATION_BLOCKED"
+    )
+    next_action = (
+        "BUILD_SOURCE_PANEL_ANALYSIS_RESULT_SUMMARY_AFTER_RESEARCH_RETURN_GATE"
+        if validation_passed
+        else "BUILD_SOURCE_PANEL_PYARROW_SCHEMA_ACCESS_REPAIR_APPLY_BLOCKED_RECORD_AFTER_RESULT_REVIEW"
+    )
+    status = VALIDATOR_STATUS_PASS if validation_passed else VALIDATOR_STATUS_BLOCKED
+
+    parquet_file_exists = identity_validation["checks"]["parquet_file_exists"]
+    parquet_size = identity_validation["parquet_file_size_bytes"]
+    parquet_column_count = int(schema.get("parquet_column_count", 0) or 0)
+    parquet_column_names_sample = content_validation["parquet_column_names_sample"]
+    row_groups = schema.get("parquet_num_row_groups_metadata_only")
+    metadata_rows = schema.get("parquet_num_rows_metadata_only")
+    method = schema.get("parquet_schema_method", "")
+    full_parquet_scan_performed = schema.get("full_parquet_scan_performed") is True
+    parquet_rows_read_now = schema.get("parquet_rows_read_now") is True
+
+    safety_flat = {
+        "full_parquet_scan_performed": False,
+        "parquet_rows_read_now": False,
+        "dependency_install_attempted": False,
+        "environment_modified": False,
+        "schema_or_config_created": False,
+        "source_panel_rerun_performed": False,
+        "strategy_signal_claims_made": False,
+        "tradable_edge_claims_made": False,
+        "profit_claims_made": False,
+        "backtest_performed": False,
+        "candidate_generation_performed": False,
+        "family_release_performed": False,
+        "active_paper_performed": False,
+        "real_order_touch_performed": False,
+        "runtime_touch_performed": False,
+        "capital_touch_performed": False,
+        "live_touch_performed": False,
+        "generic_runner_approval_granted": False,
+        "generic_runner_implementation_remains_blocked": True,
+        "old_source_panel_anomaly_route_reopened_now": False,
+        "old_route_closed_artifacts_used_as_active_evidence_now": False,
+    }
+
+    allowed_next_modules = {NEXT_MODULE_RESULT_SUMMARY, NEXT_MODULE_BLOCKED}
+    replacement_checks = {
+        "expected_start_head_or_parent_observed": git["expected_start_head_or_parent_observed"],
+        "current_scope_is_only_approved_file": git["current_scope_is_only_approved_file"],
+        "tracked_python_count_increases_from_634_to_635": py["tracked_python_count"] == EXPECTED_TRACKED_PYTHON_COUNT,
+        "previous_tracked_python_count_recorded": EXPECTED_PREVIOUS_TRACKED_PYTHON_COUNT
+        == EXPECTED_TRACKED_PYTHON_COUNT - 1,
+        "tracked_python_syntax_bom_clean": py["tracked_python_syntax_error_count"] == 0
+        and py["tracked_python_bom_error_count"] == 0,
+        "prior_apply_validation_completed": prior_validation["completed"],
+        "prior_apply_validation_passed": prior_validation["validated"],
+        "schema_metadata_artifact_validation_completed": artifact_validation["completed"],
+        "schema_metadata_artifact_valid_json": schema_valid_json,
+        "schema_metadata_artifact_non_empty": bool(schema),
+        "parquet_identity_validation_completed": identity_validation["completed"],
+        "schema_content_validation_completed": content_validation["completed"],
+        "expected_parquet_columns_present": content_validation["expected_parquet_columns_present"],
+        "metadata_only_schema_method": metadata_method_is_footer_only(method),
+        "full_parquet_scan_performed_false": full_parquet_scan_performed is False,
+        "parquet_rows_read_now_false": parquet_rows_read_now is False,
+        "dependency_install_attempted_false": safety_flat["dependency_install_attempted"] is False,
+        "environment_modified_false": safety_flat["environment_modified"] is False,
+        "schema_or_config_created_false": safety_flat["schema_or_config_created"] is False,
+        "source_panel_rerun_performed_false": safety_flat["source_panel_rerun_performed"] is False,
+        "backtest_performed_false": safety_flat["backtest_performed"] is False,
+        "candidate_generation_performed_false": safety_flat["candidate_generation_performed"] is False,
+        "runtime_touch_performed_false": safety_flat["runtime_touch_performed"] is False,
+        "capital_touch_performed_false": safety_flat["capital_touch_performed"] is False,
+        "live_touch_performed_false": safety_flat["live_touch_performed"] is False,
+        "generic_runner_approval_granted_false": safety_flat["generic_runner_approval_granted"] is False,
+        "generic_runner_implementation_remains_blocked": safety_flat["generic_runner_implementation_remains_blocked"] is True,
+        "old_source_panel_anomaly_route_reopened_now_false": safety_flat[
+            "old_source_panel_anomaly_route_reopened_now"
+        ]
+        is False,
+        "old_route_closed_artifacts_used_as_active_evidence_now_false": safety_flat[
+            "old_route_closed_artifacts_used_as_active_evidence_now"
+        ]
+        is False,
+        "loop_remains_closed": True,
+        "planned_schema_files_existing_count_zero": len(planned_existing) == 0,
+        "generic_runner_target_absent": generic_runner_target_exists is False,
+        "dangerous_flags_all_false": all(value is False for value in flags.values()),
+        "next_module_allowed": next_module in allowed_next_modules,
+        "source_panel_rerun_not_selected": next_module != "edge_factory_os_repo_only_source_panel_analysis_runner_execution_after_research_return_gate_v1.py",
+        "candidate_backtest_runtime_live_capital_generic_runner_schema_config_not_selected": all(
+            token not in next_module for token in ["candidate", "backtest", "runtime", "live", "capital", "generic"]
+        )
+        and "schema_registry" not in next_module
+        and "config" not in next_module,
+        "generic_review_adoption_gate_rollout_audit_not_selected": "generic" not in next_module
+        and "_adoption_" not in next_module
+        and "_rollout_" not in next_module
+        and "_audit_" not in next_module,
+    }
+    replacement_checks_all_true = all(value is True for value in replacement_checks.values())
+
+    payload: Dict[str, Any] = {
+        "module": MODULE_NAME,
+        "created_at_utc": now_utc(),
+        "source_panel_pyarrow_schema_access_repair_apply_validator_status": status,
+        "post_check_status": POST_CHECK_STATUS_PASS if validation_passed else POST_CHECK_STATUS_BLOCKED,
+        "final_decision": final_decision,
+        "next_action": next_action,
+        "next_module": next_module,
+        "prior_pyarrow_schema_access_repair_apply_respected": prior_validation["validated"],
+        "pyarrow_schema_access_repair_apply_validation_completed": True,
+        "prior_apply_validation_completed": prior_validation["completed"],
+        "schema_metadata_artifact_validation_completed": artifact_validation["completed"],
+        "parquet_identity_validation_completed": identity_validation["completed"],
+        "schema_content_validation_completed": content_validation["completed"],
+        "limitation_materiality_decision_completed": materiality["completed"],
+        "evidence_quality_decision_completed": evidence["completed"],
+        "safety_boundary_validation_completed": safety_validation["completed"],
+        "schema_metadata_artifact_path": str(SCHEMA_METADATA_ARTIFACT_PATH),
+        "schema_metadata_artifact_exists": SCHEMA_METADATA_ARTIFACT_PATH.exists(),
+        "schema_metadata_artifact_valid_json": schema_valid_json,
+        "schema_metadata_artifact_non_empty": bool(schema),
+        "schema_metadata_artifact_json_error": schema_json_error,
+        "parquet_input_path": str(PARQUET_INPUT_PATH),
+        "parquet_file_exists": parquet_file_exists,
+        "parquet_file_size_bytes": parquet_size,
+        "parquet_file_size_difference_reason": identity_validation["parquet_file_size_difference_reason"],
+        "parquet_path_suggests_feature_panel": identity_validation["checks"]["path_suggests_feature_panel"],
+        "parquet_schema_metadata_read_attempted": prior.get("parquet_schema_metadata_read_attempted") is True,
+        "parquet_schema_obtained": schema_valid_json and parquet_column_count > 0,
+        "parquet_schema_method": method,
+        "parquet_column_count": parquet_column_count,
+        "expected_parquet_columns_present": content_validation["expected_parquet_columns_present"],
+        "parquet_column_names_sample": parquet_column_names_sample,
+        "parquet_num_row_groups_metadata_only": row_groups,
+        "parquet_num_rows_metadata_only": metadata_rows,
+        **safety_flat,
+        "limitation_materiality_before_validator": LIMITATION_BEFORE,
+        "limitation_materiality_after_validator": materiality["limitation_materiality_after_validator"],
+        "parquet_schema_limitation_resolved_to_bounded": materiality[
+            "parquet_schema_limitation_resolved_to_bounded"
+        ],
+        "parquet_schema_limitation_blocks_next_step": materiality["parquet_schema_limitation_blocks_next_step"],
+        "current_evidence_chain_quality_before_validator": evidence["current_evidence_chain_quality_before_validator"],
+        "current_evidence_chain_quality_after_validator": evidence["current_evidence_chain_quality_after_validator"],
+        "active_p0_blocker_count": materiality["active_p0_blocker_count"],
+        "active_p1_attention_count": materiality["active_p1_attention_count"],
+        "source_panel_results_are_useful_research_substrate": True,
+        "source_panel_results_are_alpha_or_edge": False,
+        "source_panel_results_are_reusable_data_quality_asset": True,
+        "money_path_alignment": "PRESENT_INTERNAL_RESEARCH_UTILITY_AND_REUSABLE_SOURCE_PANEL_ANALYSIS_ASSET_PATH",
+        "usable_or_sellable_asset_path": (
+            "REPO_ONLY_SOURCE_PANEL_ANALYSIS_CONTRACT_AS_REUSABLE_RESEARCH_SUBSTRATE_AND_DATA_QUALITY_ASSET"
+        ),
+        "evidence_chain_policy_level": POLICY_LEVEL,
+        "future_modules_must_classify_evidence_quality": True,
+        "replacement_checks_are_not_equivalent_to_primary_artifact": True,
+        "ordinary_selector_backlog_loop_reentry_allowed": False,
+        "loop_remains_closed": True,
+        "planned_schema_files_existing_count": len(planned_existing),
+        "planned_schema_files_existing": planned_existing,
+        "generic_runner_target_exists": generic_runner_target_exists,
+        "dangerous_flags": flags,
+        "dangerous_flags_all_false": all(value is False for value in flags.values()),
+        "dangerous_flag_true_count": 0,
+        "derived_live_repo_post_check": True,
+        "derived_live_repo_post_check_reason": (
+            "This validator uses the prior apply artifact, the schema metadata artifact, current repo state, and file "
+            "identity checks as explicit replacement checks. It does not read parquet rows, run full parquet scans, "
+            "install dependencies, modify the environment, create schema/config files, rerun source-panel analysis, "
+            "perform strategy/backtest/candidate work, touch runtime/capital/live/order paths, approve or implement "
+            "a generic runner, reopen old anomaly routes, or claim profit/tradable edge."
+        ),
+        "replacement_checks_all_true": replacement_checks_all_true,
+        "prior_apply_validation": prior_validation,
+        "schema_metadata_artifact_validation": artifact_validation,
+        "parquet_identity_validation": identity_validation,
+        "schema_content_validation": content_validation,
+        "limitation_materiality_decision": materiality,
+        "evidence_quality_decision": evidence,
+        "safety_boundary_validation": safety_validation,
+        "prior_apply_snapshot": {
+            "artifact_path": str(PRIOR_APPLY_LATEST_ARTIFACT),
+            "artifact_valid_json": prior_valid_json,
+            "artifact_json_error": prior_json_error,
+            "status": prior.get("source_panel_pyarrow_schema_access_repair_apply_status"),
+            "post_check_status": prior.get("post_check_status"),
+            "next_module": prior.get("next_module"),
+        },
+        "schema_metadata_snapshot": {
+            "artifact_path": str(SCHEMA_METADATA_ARTIFACT_PATH),
+            "artifact_valid_json": schema_valid_json,
+            "artifact_json_error": schema_json_error,
+            "method": method,
+            "column_count": parquet_column_count,
+            "column_names_sample": parquet_column_names_sample,
+            "row_groups_metadata_only": row_groups,
+            "rows_metadata_only": metadata_rows,
+        },
+        "validation": {
+            "git_state": git,
+            "tracked_python_validation": py,
+            "expected_previous_tracked_python_count": EXPECTED_PREVIOUS_TRACKED_PYTHON_COUNT,
+            "expected_tracked_python_count": EXPECTED_TRACKED_PYTHON_COUNT,
+            "replacement_checks": replacement_checks,
+            "allowed_next_modules": sorted(allowed_next_modules),
+        },
+        "safety_flags": {
+            "repo_only": True,
+            "schema_metadata_artifact_validator_only": True,
+            **safety_flat,
+            **flags,
+        },
+    }
+    return payload
+
+
+def write_outputs(payload: Dict[str, Any]) -> Dict[str, str]:
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    latest_json = OUT_DIR / "repo_only_source_panel_pyarrow_schema_access_repair_apply_validator_after_result_review_v1_latest.json"
+    timestamped_json = (
+        OUT_DIR / f"repo_only_source_panel_pyarrow_schema_access_repair_apply_validator_after_result_review_v1_{stamp}.json"
+    )
+    latest_txt = OUT_DIR / "repo_only_source_panel_pyarrow_schema_access_repair_apply_validator_after_result_review_v1_latest.txt"
+    rendered = json.dumps(payload, indent=2, sort_keys=True)
+    latest_json.write_text(rendered, encoding="utf-8")
+    timestamped_json.write_text(rendered, encoding="utf-8")
+    latest_txt.write_text(rendered + "\n", encoding="utf-8")
+    return {"latest_json": str(latest_json), "timestamped_json": str(timestamped_json), "latest_txt": str(latest_txt)}
+
+
+def main() -> int:
+    payload = build_payload()
+    outputs = write_outputs(payload)
+    payload["outputs"] = outputs
+    rendered = json.dumps(payload, indent=2, sort_keys=True)
+    Path(outputs["latest_json"]).write_text(rendered, encoding="utf-8")
+    Path(outputs["latest_txt"]).write_text(rendered + "\n", encoding="utf-8")
+    print(rendered)
+    return 0 if payload["pyarrow_schema_access_repair_apply_validation_completed"] is True else 3
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

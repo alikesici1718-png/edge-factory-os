@@ -1,0 +1,340 @@
+{
+  "artifact_kind": "COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT_STUDY",
+  "baseline_results": {
+    "LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT": {
+      "baseline_percentile": 0.79,
+      "baseline_percentile_by_horizon": {
+        "1h": 0.37,
+        "2h": 0.79,
+        "4h": 0.5
+      },
+      "event_type": "LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT",
+      "feasible": true,
+      "null_average_expected_direction_return_mean": {
+        "1h": -0.00011914435122012035,
+        "2h": -0.0002071168765648409,
+        "4h": -0.0005741545978121695
+      },
+      "observed_average_expected_direction_return": {
+        "1h": -0.00019705988373073662,
+        "2h": 0.0002776451276820739,
+        "4h": -0.0006058620613486525
+      },
+      "preserved_same_symbol_event_counts": true,
+      "runs": 100
+    },
+    "LONG_LIQUIDATION_FLUSH_EVENT": {
+      "baseline_percentile": 1.0,
+      "baseline_percentile_by_horizon": {
+        "1h": 0.96,
+        "2h": 1.0,
+        "4h": 1.0
+      },
+      "event_type": "LONG_LIQUIDATION_FLUSH_EVENT",
+      "feasible": true,
+      "null_average_expected_direction_return_mean": {
+        "1h": -0.00024417596649013354,
+        "2h": -0.0005618116150683325,
+        "4h": -0.0012082765483383885
+      },
+      "observed_average_expected_direction_return": {
+        "1h": 0.0009723631936903506,
+        "2h": 0.002301022675196707,
+        "4h": 0.0029388089152527614
+      },
+      "preserved_same_symbol_event_counts": true,
+      "runs": 100
+    },
+    "SHORT_LIQUIDATION_FLUSH_EVENT": {
+      "baseline_percentile": 1.0,
+      "baseline_percentile_by_horizon": {
+        "1h": 1.0,
+        "2h": 0.97,
+        "4h": 0.75
+      },
+      "event_type": "SHORT_LIQUIDATION_FLUSH_EVENT",
+      "feasible": true,
+      "null_average_expected_direction_return_mean": {
+        "1h": 0.0003087779217008341,
+        "2h": 0.0005547491758000029,
+        "4h": 0.0013238557820430547
+      },
+      "observed_average_expected_direction_return": {
+        "1h": 0.002784446965209644,
+        "2h": 0.003464560953308795,
+        "4h": 0.00264307855583374
+      },
+      "preserved_same_symbol_event_counts": true,
+      "runs": 100
+    }
+  },
+  "concentration_review": {
+    "LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT": {
+      "max_day_share": 0.12807881773399016,
+      "max_symbol_share": 0.15763546798029557,
+      "severe_concentration": false
+    },
+    "LONG_LIQUIDATION_FLUSH_EVENT": {
+      "max_day_share": 0.2087912087912088,
+      "max_symbol_share": 0.18681318681318682,
+      "severe_concentration": false
+    },
+    "SHORT_LIQUIDATION_FLUSH_EVENT": {
+      "max_day_share": 0.32,
+      "max_symbol_share": 0.16,
+      "severe_concentration": false
+    }
+  },
+  "dataset_review": {
+    "data_integrity_passed": true,
+    "dataset_symbol_count": 10,
+    "integrity_counts": {
+      "duplicate_timestamp_count": 0,
+      "non_monotonic_timestamp_symbols": 0,
+      "rows_missing_close": 0,
+      "rows_missing_liquidation": 7159,
+      "rows_missing_oi_change_pct": 10
+    },
+    "timestamp_max": "2026-05-27T19:15:00Z",
+    "timestamp_min": "2026-05-13T19:15:00Z",
+    "total_rows": 13450
+  },
+  "event_counts": {
+    "imbalance_oi_flush_event_count": 203,
+    "long_liq_flush_event_count": 91,
+    "short_liq_flush_event_count": 25,
+    "skipped_counts": {
+      "ambiguous_imbalance_events": 10,
+      "insufficient_rolling_history": 480,
+      "missing_forward_return": 160
+    }
+  },
+  "event_definitions": {
+    "LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT": {
+      "abs_liquidation_imbalance": ">= 0.60",
+      "expected_direction": "up if long-liquidation dominant after price fall; down if short-liquidation dominant after price rise; otherwise ambiguous",
+      "liquidation_total": ">= 3 * previous_24h_rolling_median_liquidation_total",
+      "oi_change_pct": "<= -0.005"
+    },
+    "LONG_LIQUIDATION_FLUSH_EVENT": {
+      "expected_direction": "upward_reversal",
+      "liquidation_long": "> 0 and >= 3 * previous_24h_rolling_median_liquidation_long",
+      "oi_change_pct": "<= -0.005",
+      "ret_1h_past": "<= -0.01"
+    },
+    "SHORT_LIQUIDATION_FLUSH_EVENT": {
+      "expected_direction": "downward_reversal",
+      "liquidation_short": "> 0 and >= 3 * previous_24h_rolling_median_liquidation_short",
+      "oi_change_pct": "<= -0.005",
+      "ret_1h_past": ">= +0.01"
+    },
+    "forward_returns": {
+      "horizons": [
+        "1h",
+        "2h",
+        "4h"
+      ],
+      "no_trading_simulation": true,
+      "use_future_close_for_ex_post_outcome_only": true
+    },
+    "rolling_medians": {
+      "exclude_current_bar": true,
+      "lookback_bars": 96,
+      "minimum_prior_bars": 48
+    },
+    "threshold_policy": "round_structural_thresholds_only_no_optimization"
+  },
+  "event_study_results": {
+    "LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT": {
+      "average_expected_direction_return_1h": -0.00019705988373073662,
+      "average_expected_direction_return_2h": 0.0002776451276820739,
+      "average_expected_direction_return_4h": -0.0006058620613486525,
+      "average_forward_return_1h": -0.00013966631551941844,
+      "average_forward_return_2h": 0.00013079864681657443,
+      "average_forward_return_4h": 0.00027987713693596045,
+      "concentration_warning": false,
+      "event_count": 203,
+      "event_type": "LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT",
+      "events_by_month_or_day": {
+        "2026-05-14": 16,
+        "2026-05-15": 26,
+        "2026-05-16": 19,
+        "2026-05-17": 14,
+        "2026-05-18": 16,
+        "2026-05-19": 4,
+        "2026-05-20": 5,
+        "2026-05-21": 14,
+        "2026-05-22": 26,
+        "2026-05-23": 26,
+        "2026-05-24": 12,
+        "2026-05-25": 5,
+        "2026-05-26": 14,
+        "2026-05-27": 6
+      },
+      "events_by_symbol": {
+        "APTUSDT": 27,
+        "ARBUSDT": 12,
+        "BNBUSDT": 12,
+        "BTCUSDT": 14,
+        "DOGEUSDT": 32,
+        "ETHUSDT": 20,
+        "LINKUSDT": 23,
+        "OPUSDT": 23,
+        "SOLUSDT": 24,
+        "XRPUSDT": 16
+      },
+      "expected_direction_hit_rate_1h": 0.5566502463054187,
+      "expected_direction_hit_rate_2h": 0.5123152709359606,
+      "expected_direction_hit_rate_4h": 0.4876847290640394,
+      "median_expected_direction_return_1h": 0.0006865437426442078,
+      "median_expected_direction_return_2h": 0.00028285595188459745,
+      "median_expected_direction_return_4h": -0.00035570310647381476,
+      "median_forward_return_1h": 0.0006787227945279639,
+      "median_forward_return_2h": 0.00010738831615131339,
+      "median_forward_return_4h": 0.0003950617283949853,
+      "sample_size_warning": false,
+      "symbol_count": 10
+    },
+    "LONG_LIQUIDATION_FLUSH_EVENT": {
+      "average_expected_direction_return_1h": 0.0009723631936903506,
+      "average_expected_direction_return_2h": 0.002301022675196707,
+      "average_expected_direction_return_4h": 0.0029388089152527614,
+      "average_forward_return_1h": 0.0009723631936903506,
+      "average_forward_return_2h": 0.002301022675196707,
+      "average_forward_return_4h": 0.0029388089152527614,
+      "concentration_warning": false,
+      "event_count": 91,
+      "event_type": "LONG_LIQUIDATION_FLUSH_EVENT",
+      "events_by_month_or_day": {
+        "2026-05-14": 2,
+        "2026-05-15": 18,
+        "2026-05-16": 9,
+        "2026-05-17": 12,
+        "2026-05-18": 3,
+        "2026-05-19": 1,
+        "2026-05-20": 1,
+        "2026-05-21": 3,
+        "2026-05-22": 19,
+        "2026-05-23": 12,
+        "2026-05-24": 6,
+        "2026-05-26": 1,
+        "2026-05-27": 4
+      },
+      "events_by_symbol": {
+        "APTUSDT": 17,
+        "ARBUSDT": 5,
+        "BNBUSDT": 6,
+        "BTCUSDT": 5,
+        "DOGEUSDT": 14,
+        "ETHUSDT": 5,
+        "LINKUSDT": 9,
+        "OPUSDT": 14,
+        "SOLUSDT": 10,
+        "XRPUSDT": 6
+      },
+      "expected_direction_hit_rate_1h": 0.6153846153846154,
+      "expected_direction_hit_rate_2h": 0.5494505494505495,
+      "expected_direction_hit_rate_4h": 0.6483516483516484,
+      "median_expected_direction_return_1h": 0.0011026709139916324,
+      "median_expected_direction_return_2h": 0.0011921137093076073,
+      "median_expected_direction_return_4h": 0.0027793835877525375,
+      "median_forward_return_1h": 0.0011026709139916324,
+      "median_forward_return_2h": 0.0011921137093076073,
+      "median_forward_return_4h": 0.0027793835877525375,
+      "sample_size_warning": false,
+      "symbol_count": 10
+    },
+    "SHORT_LIQUIDATION_FLUSH_EVENT": {
+      "average_expected_direction_return_1h": 0.002784446965209644,
+      "average_expected_direction_return_2h": 0.003464560953308795,
+      "average_expected_direction_return_4h": 0.00264307855583374,
+      "average_forward_return_1h": -0.002784446965209644,
+      "average_forward_return_2h": -0.003464560953308795,
+      "average_forward_return_4h": -0.00264307855583374,
+      "concentration_warning": false,
+      "event_count": 25,
+      "event_type": "SHORT_LIQUIDATION_FLUSH_EVENT",
+      "events_by_month_or_day": {
+        "2026-05-14": 3,
+        "2026-05-18": 3,
+        "2026-05-20": 1,
+        "2026-05-21": 6,
+        "2026-05-23": 8,
+        "2026-05-26": 3,
+        "2026-05-27": 1
+      },
+      "events_by_symbol": {
+        "APTUSDT": 2,
+        "ARBUSDT": 2,
+        "BTCUSDT": 2,
+        "DOGEUSDT": 4,
+        "ETHUSDT": 4,
+        "LINKUSDT": 3,
+        "OPUSDT": 3,
+        "SOLUSDT": 4,
+        "XRPUSDT": 1
+      },
+      "expected_direction_hit_rate_1h": 0.8,
+      "expected_direction_hit_rate_2h": 0.72,
+      "expected_direction_hit_rate_4h": 0.56,
+      "median_expected_direction_return_1h": 0.002524721228697735,
+      "median_expected_direction_return_2h": 0.00376811594202886,
+      "median_expected_direction_return_4h": 0.0016666666666665941,
+      "median_forward_return_1h": -0.002524721228697735,
+      "median_forward_return_2h": -0.00376811594202886,
+      "median_forward_return_4h": -0.0016666666666665941,
+      "sample_size_warning": false,
+      "symbol_count": 9
+    }
+  },
+  "limitations": [
+    "This is ex-post event outcome analysis, not signal generation or trading simulation.",
+    "Liquidation imbalance sign is inferred from builder fields: long minus short divided by total. If Coinalyze side semantics differ, directional interpretation requires review.",
+    "Rolling liquidation medians may be zero in sparse histories, making the 3x median condition permissive whenever positive liquidation appears.",
+    "Recent dataset covers only the short Coinalyze free-history window."
+  ],
+  "module": "edge_factory_os_repo_only_coinalyze_liquidation_imbalance_oi_flush_event_study_v1",
+  "next_allowed_step": "COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_PREREGISTERED_STRATEGY_DESIGN_V1",
+  "payload_sha256_excluding_hash": "e6d1df467d80e70cb1411cc4f69d8006bb28dc4f5ee3d3dd9d889e7b4ec5e5e6",
+  "replacement_checks_all_true": true,
+  "result_classification": "COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT_STUDY_PROMISING_FOR_PREREGISTRATION",
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "event_study_created": true,
+    "live_permission_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "dataset_builder": "artifacts/data_builds/coinalyze_recent_oi_liquidation_dataset_builder_v1.json",
+    "hypothesis_design": "artifacts/research_designs/coinalyze_recent_oi_liquidation_hypothesis_design_v1.json",
+    "normalized_external_dataset": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol"
+  },
+  "source_checkpoint": "1552fb9f39540046745a5f2e0d56aab46e55a03f",
+  "status": "PASS_REPO_ONLY_COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT_STUDY_CREATED",
+  "validation_checks": {
+    "dataset_builder_loaded": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "external_dataset_loaded": true,
+    "hypothesis_design_loaded": true,
+    "no_api_call_made": true,
+    "no_api_key_used": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_optimization": true,
+    "no_pnl_computation": true,
+    "no_runtime_live_capital": true,
+    "no_signal_generation": true,
+    "no_strategy_execution": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

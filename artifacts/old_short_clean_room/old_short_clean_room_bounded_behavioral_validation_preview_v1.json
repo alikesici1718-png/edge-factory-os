@@ -1,0 +1,703 @@
+{
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_PREVIEW_CREATED",
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_PREVIEW",
+  "module": {
+    "name": "edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_preview_v1",
+    "path": "tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_preview_v1.py",
+    "standard_library_only": true,
+    "classes_defined": [
+      "OldShortBehavioralValidationConfigPreview",
+      "OldShortBoundedSampleLoaderPreview",
+      "OldShortMasterProxySamplePreview",
+      "OldShortCleanRoomSamplePreview",
+      "OldShortBehaviorDimensionCheckerPreview",
+      "OldShortSimilarityMetricPreview",
+      "OldShortFailClosedPolicyPreview",
+      "OldShortBehavioralValidationReportPreview",
+      "OldShortBoundedBehavioralValidationPreview"
+    ],
+    "created_files": [
+      "tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_preview_v1.py",
+      "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_preview_v1.json"
+    ],
+    "modified_existing_files": [],
+    "code_changed": true
+  },
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-27T06:46:00Z",
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "expected_head": "ca7aff4ce8ee258c9a52e6c32212e60620b64fde",
+    "actual_head": "ca7aff4ce8ee258c9a52e6c32212e60620b64fde",
+    "expected_tracked_python_count": 952,
+    "actual_tracked_python_count": 952,
+    "repo_clean_before_run": true,
+    "git_status_before_run": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_preview_v1.py"
+    ],
+    "dirty_tracked_before_run": [],
+    "allowed_pending_before_run": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_preview_v1.py"
+    ],
+    "unexpected_untracked_before_run": []
+  },
+  "source_artifacts": {
+    "bounded_behavioral_validation_design": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_design_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DESIGN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DESIGN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "1650f2e3462be33e5d3e57d726f16fca163728906082637727a50700ce03b77b",
+      "replacement_checks_all_true": true,
+      "sha256": "2b1dc06e27b79f023bb55d98d2e4dbbe909a4074a5cd02c3929f5a7f1abc96fb"
+    },
+    "feature_fixture_validator_check": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_feature_fixture_validator_check_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "650b896125ca6509320e8340eff0deea64fa13a5b688e9713b4e26e584687bdd",
+      "replacement_checks_all_true": true,
+      "sha256": "774bbca11a43e378bfc9d80af324a0db42da76eab4ed2f1f383aa3e8c90d0d15"
+    },
+    "runner_feature_fixture_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_feature_fixture_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "15bc81a734982e975399c25b1775760e97cfef3f73fde0cdff714713800c3284",
+      "replacement_checks_all_true": true,
+      "sha256": "35d57c85b59f97d93c1c87bc30c81af6a25fa70812fbd116ca84034cf6e238b3"
+    },
+    "runner_fixture_threshold_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_fixture_threshold_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "308b63488abb4b40ee4e23d128a2aa82d96f1efa43c49d0ba6a32fb434298b11",
+      "replacement_checks_all_true": true,
+      "sha256": "e533fc89374724d0e63a61b4a87081012c17624679857c7a3e7f31b31e1f2d68"
+    },
+    "threshold_behavioral_proposal": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "9cf7be3706095fa4e8c8bfd4586e40a4714631250118fd67cc4d94cb47f62461",
+      "replacement_checks_all_true": true,
+      "sha256": "63220c1cce0a22b83dbc630599a23e5855cd682c0d0dec19d2a799841c4a15ff"
+    },
+    "threshold_proposal_review": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_proposal_review_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "bc0e5a2994a978b582488bfeb3d05f1898836ced3d6684474d6c7cedbd68ccda",
+      "replacement_checks_all_true": true,
+      "sha256": "f3e78cda956787bb83b2d69e882219658c118371c7e4b476a5bb31e2d54f1f04"
+    },
+    "clean_room_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REBUILD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_CONTRACT_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "02d0c3ff2f905be2df695a7ca52bfd931c94a4720cb3c883f8fd5d7ad00f5e6d",
+      "replacement_checks_all_true": true,
+      "sha256": "dc04d75bdd5882a2952a0a1e0a3ce7855d736d4b6882b689dcc20b41fc7cc68d"
+    },
+    "runner_preview": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_preview_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "31f36fb36bc02fe059faa3fccb141074afe5f12f4e49933de6ee82cd0acd767b",
+      "replacement_checks_all_true": true,
+      "sha256": "3689b60472bff3734499542c487bcaeae38caaa30d067569321f3fbecb1dc1d1"
+    }
+  },
+  "preview_identity": {
+    "route_key": "old_short_clean_room_v1",
+    "preview_only": true,
+    "behavioral_validation_allowed_now": false,
+    "full_dataset_comparison_allowed_now": false,
+    "original_exact_source_recovered": false,
+    "clean_room_behavioral_reconstruction": true,
+    "no_exact_replay_claim": true,
+    "no_edge_claim": true,
+    "no_live_capital": true
+  },
+  "no_live_guard_constants": {
+    "BEHAVIORAL_VALIDATION_ALLOWED": false,
+    "FULL_DATASET_COMPARISON_ALLOWED": false,
+    "RUNNER_EXECUTION_ALLOWED": false,
+    "SIGNAL_GENERATION_ALLOWED": false,
+    "BACKTEST_ALLOWED": false,
+    "PNL_COMPUTATION_ALLOWED": false,
+    "RUNTIME_ALLOWED": false,
+    "MONITOR_ALLOWED": false,
+    "LIVE_TRADING_ALLOWED": false,
+    "CAPITAL_ALLOCATION_ALLOWED": false,
+    "ORDER_PLACEMENT_ALLOWED": false,
+    "CANDIDATE_GENERATION_ALLOWED": false,
+    "EDGE_CLAIM_ALLOWED": false
+  },
+  "preview_module_structure": {
+    "OldShortBehavioralValidationConfigPreview": {
+      "methods": [
+        "__init__(row_limit=100)",
+        "preview_schema()"
+      ],
+      "return_shape": {
+        "route_key": "old_short_clean_room_v1",
+        "row_limit_default": 100,
+        "expected_files": [
+          "signals.csv",
+          "pending_entries.csv",
+          "open_positions.csv",
+          "closed_trades.csv",
+          "rejected_entries.csv",
+          "heartbeat.csv",
+          "state.json"
+        ],
+        "guards": {
+          "BEHAVIORAL_VALIDATION_ALLOWED": false,
+          "FULL_DATASET_COMPARISON_ALLOWED": false,
+          "RUNNER_EXECUTION_ALLOWED": false,
+          "SIGNAL_GENERATION_ALLOWED": false,
+          "BACKTEST_ALLOWED": false,
+          "PNL_COMPUTATION_ALLOWED": false,
+          "RUNTIME_ALLOWED": false,
+          "MONITOR_ALLOWED": false,
+          "LIVE_TRADING_ALLOWED": false,
+          "CAPITAL_ALLOCATION_ALLOWED": false,
+          "ORDER_PLACEMENT_ALLOWED": false,
+          "CANDIDATE_GENERATION_ALLOWED": false,
+          "EDGE_CLAIM_ALLOWED": false
+        }
+      }
+    },
+    "OldShortBoundedSampleLoaderPreview": {
+      "methods": [
+        "describe_inputs()",
+        "load(*args, **kwargs) raises PREVIEW_ONLY_NO_SAMPLE_LOAD_EXECUTION"
+      ],
+      "return_shape": {
+        "bounded_rows_only": true,
+        "full_dataset_comparison_allowed": false,
+        "raw_market_data_allowed": false,
+        "load_method": "metadata/header/small-sample loader contract only"
+      }
+    },
+    "OldShortMasterProxySamplePreview": {
+      "methods": [
+        "source_contract()"
+      ],
+      "return_shape": {
+        "sample_type": "MASTER proxy bounded sample",
+        "root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic",
+        "files": [
+          "signals.csv",
+          "pending_entries.csv",
+          "open_positions.csv",
+          "closed_trades.csv",
+          "rejected_entries.csv",
+          "heartbeat.csv",
+          "state.json"
+        ],
+        "metadata_header_small_samples_only": true
+      }
+    },
+    "OldShortCleanRoomSamplePreview": {
+      "methods": [
+        "source_contract()"
+      ],
+      "return_shape": {
+        "sample_type": "clean-room bounded output sample",
+        "root": "approved clean-room runner dry-run output root",
+        "must_not_be_synthetic_schema_only": true,
+        "must_be_bounded_feature_or_replay_fixture": true,
+        "must_include_safety_labels": true
+      }
+    },
+    "OldShortBehaviorDimensionCheckerPreview": {
+      "methods": [
+        "dimensions()",
+        "check(*args, **kwargs) raises PREVIEW_ONLY_NO_DIMENSION_CHECK_EXECUTION"
+      ],
+      "return_shape": {
+        "behavior_dimensions": [
+          "schema compatibility",
+          "family_key old_short",
+          "subfamily blowoff_short / mean_reversion_short presence",
+          "side short",
+          "signal feature availability",
+          "entry delay near 2 minutes",
+          "hold near 120 minutes",
+          "notional near 50 USDT at 1000 USDT base-equity policy",
+          "rejected gate behavior",
+          "no position without gate allow",
+          "same coin overlap behavior if fields exist",
+          "heartbeat/state compatibility",
+          "safety label compatibility"
+        ]
+      }
+    },
+    "OldShortSimilarityMetricPreview": {
+      "methods": [
+        "metrics()",
+        "compute(*args, **kwargs) raises PREVIEW_ONLY_NO_METRIC_COMPUTATION"
+      ],
+      "return_shape": {
+        "similarity_metrics": [
+          "schema_match_rate",
+          "family_key_match_rate",
+          "subfamily_presence_match",
+          "side_match_rate",
+          "signal_feature_presence_rate",
+          "entry_delay_median_abs_error_seconds",
+          "hold_minutes_median_abs_error",
+          "notional_median_abs_error",
+          "rejected_reason_overlap_rate",
+          "gate_behavior_consistency_rate",
+          "no_position_without_gate_violation_count",
+          "safety_label_match_rate",
+          "state_heartbeat_schema_match",
+          "coin_overlap_rate",
+          "timestamp_alignment_rate"
+        ]
+      }
+    },
+    "OldShortFailClosedPolicyPreview": {
+      "methods": [
+        "conditions()",
+        "evaluate(*args, **kwargs) raises PREVIEW_ONLY_NO_FAIL_CLOSED_EVALUATION"
+      ],
+      "return_shape": {
+        "fail_closed_conditions": [
+          "clean-room sample missing",
+          "MASTER sample missing",
+          "full dataset comparison requested",
+          "raw market data path supplied",
+          "PnL/outcome field used for validation",
+          "live/order/private fields present",
+          "safety labels missing",
+          "route_key mismatch",
+          "family_key mismatch",
+          "no-live guard false",
+          "runtime path supplied",
+          "sample row limit exceeded"
+        ]
+      }
+    },
+    "OldShortBehavioralValidationReportPreview": {
+      "methods": [
+        "report_shape()"
+      ],
+      "return_shape": {
+        "status": null,
+        "route_key": "old_short_clean_room_v1",
+        "sample_paths": {},
+        "sample_row_counts": {},
+        "behavior_dimensions_checked": [
+          "schema compatibility",
+          "family_key old_short",
+          "subfamily blowoff_short / mean_reversion_short presence",
+          "side short",
+          "signal feature availability",
+          "entry delay near 2 minutes",
+          "hold near 120 minutes",
+          "notional near 50 USDT at 1000 USDT base-equity policy",
+          "rejected gate behavior",
+          "no position without gate allow",
+          "same coin overlap behavior if fields exist",
+          "heartbeat/state compatibility",
+          "safety label compatibility"
+        ],
+        "similarity_metrics": {
+          "schema_match_rate": null,
+          "family_key_match_rate": null,
+          "subfamily_presence_match": null,
+          "side_match_rate": null,
+          "signal_feature_presence_rate": null,
+          "entry_delay_median_abs_error_seconds": null,
+          "hold_minutes_median_abs_error": null,
+          "notional_median_abs_error": null,
+          "rejected_reason_overlap_rate": null,
+          "gate_behavior_consistency_rate": null,
+          "no_position_without_gate_violation_count": null,
+          "safety_label_match_rate": null,
+          "state_heartbeat_schema_match": null,
+          "coin_overlap_rate": null,
+          "timestamp_alignment_rate": null
+        },
+        "threshold_results": {},
+        "fail_closed_checks": {},
+        "unresolved_fields_preserved": [
+          "exact original thresholds unknown",
+          "exact original implementation unknown",
+          "exact frozen replay source unavailable",
+          "missing gate details",
+          "unverified 8/8 evidence"
+        ],
+        "result_classification": null,
+        "limitations": [],
+        "no_edge_no_live_permissions": {
+          "BEHAVIORAL_VALIDATION_ALLOWED": false,
+          "FULL_DATASET_COMPARISON_ALLOWED": false,
+          "RUNNER_EXECUTION_ALLOWED": false,
+          "SIGNAL_GENERATION_ALLOWED": false,
+          "BACKTEST_ALLOWED": false,
+          "PNL_COMPUTATION_ALLOWED": false,
+          "RUNTIME_ALLOWED": false,
+          "MONITOR_ALLOWED": false,
+          "LIVE_TRADING_ALLOWED": false,
+          "CAPITAL_ALLOCATION_ALLOWED": false,
+          "ORDER_PLACEMENT_ALLOWED": false,
+          "CANDIDATE_GENERATION_ALLOWED": false,
+          "EDGE_CLAIM_ALLOWED": false
+        },
+        "payload_sha256_excluding_hash": null
+      }
+    },
+    "OldShortBoundedBehavioralValidationPreview": {
+      "methods": [
+        "__init__()",
+        "preview_contract()",
+        "run(*args, **kwargs) raises PREVIEW_ONLY_NO_BEHAVIORAL_VALIDATION_EXECUTION"
+      ],
+      "return_shape": {
+        "config": {
+          "route_key": "old_short_clean_room_v1",
+          "row_limit_default": 100,
+          "expected_files": [
+            "signals.csv",
+            "pending_entries.csv",
+            "open_positions.csv",
+            "closed_trades.csv",
+            "rejected_entries.csv",
+            "heartbeat.csv",
+            "state.json"
+          ],
+          "guards": {
+            "BEHAVIORAL_VALIDATION_ALLOWED": false,
+            "FULL_DATASET_COMPARISON_ALLOWED": false,
+            "RUNNER_EXECUTION_ALLOWED": false,
+            "SIGNAL_GENERATION_ALLOWED": false,
+            "BACKTEST_ALLOWED": false,
+            "PNL_COMPUTATION_ALLOWED": false,
+            "RUNTIME_ALLOWED": false,
+            "MONITOR_ALLOWED": false,
+            "LIVE_TRADING_ALLOWED": false,
+            "CAPITAL_ALLOCATION_ALLOWED": false,
+            "ORDER_PLACEMENT_ALLOWED": false,
+            "CANDIDATE_GENERATION_ALLOWED": false,
+            "EDGE_CLAIM_ALLOWED": false
+          }
+        },
+        "master_proxy_sample": {
+          "sample_type": "MASTER proxy bounded sample",
+          "root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic",
+          "files": [
+            "signals.csv",
+            "pending_entries.csv",
+            "open_positions.csv",
+            "closed_trades.csv",
+            "rejected_entries.csv",
+            "heartbeat.csv",
+            "state.json"
+          ],
+          "metadata_header_small_samples_only": true
+        },
+        "clean_room_sample": {
+          "sample_type": "clean-room bounded output sample",
+          "root": "approved clean-room runner dry-run output root",
+          "must_not_be_synthetic_schema_only": true,
+          "must_be_bounded_feature_or_replay_fixture": true,
+          "must_include_safety_labels": true
+        },
+        "behavior_dimensions": [
+          "schema compatibility",
+          "family_key old_short",
+          "subfamily blowoff_short / mean_reversion_short presence",
+          "side short",
+          "signal feature availability",
+          "entry delay near 2 minutes",
+          "hold near 120 minutes",
+          "notional near 50 USDT at 1000 USDT base-equity policy",
+          "rejected gate behavior",
+          "no position without gate allow",
+          "same coin overlap behavior if fields exist",
+          "heartbeat/state compatibility",
+          "safety label compatibility"
+        ],
+        "similarity_metrics": [
+          "schema_match_rate",
+          "family_key_match_rate",
+          "subfamily_presence_match",
+          "side_match_rate",
+          "signal_feature_presence_rate",
+          "entry_delay_median_abs_error_seconds",
+          "hold_minutes_median_abs_error",
+          "notional_median_abs_error",
+          "rejected_reason_overlap_rate",
+          "gate_behavior_consistency_rate",
+          "no_position_without_gate_violation_count",
+          "safety_label_match_rate",
+          "state_heartbeat_schema_match",
+          "coin_overlap_rate",
+          "timestamp_alignment_rate"
+        ],
+        "fail_closed_conditions": [
+          "clean-room sample missing",
+          "MASTER sample missing",
+          "full dataset comparison requested",
+          "raw market data path supplied",
+          "PnL/outcome field used for validation",
+          "live/order/private fields present",
+          "safety labels missing",
+          "route_key mismatch",
+          "family_key mismatch",
+          "no-live guard false",
+          "runtime path supplied",
+          "sample row limit exceeded"
+        ],
+        "report_shape": {
+          "status": null,
+          "route_key": "old_short_clean_room_v1",
+          "sample_paths": {},
+          "sample_row_counts": {},
+          "behavior_dimensions_checked": [
+            "schema compatibility",
+            "family_key old_short",
+            "subfamily blowoff_short / mean_reversion_short presence",
+            "side short",
+            "signal feature availability",
+            "entry delay near 2 minutes",
+            "hold near 120 minutes",
+            "notional near 50 USDT at 1000 USDT base-equity policy",
+            "rejected gate behavior",
+            "no position without gate allow",
+            "same coin overlap behavior if fields exist",
+            "heartbeat/state compatibility",
+            "safety label compatibility"
+          ],
+          "similarity_metrics": {
+            "schema_match_rate": null,
+            "family_key_match_rate": null,
+            "subfamily_presence_match": null,
+            "side_match_rate": null,
+            "signal_feature_presence_rate": null,
+            "entry_delay_median_abs_error_seconds": null,
+            "hold_minutes_median_abs_error": null,
+            "notional_median_abs_error": null,
+            "rejected_reason_overlap_rate": null,
+            "gate_behavior_consistency_rate": null,
+            "no_position_without_gate_violation_count": null,
+            "safety_label_match_rate": null,
+            "state_heartbeat_schema_match": null,
+            "coin_overlap_rate": null,
+            "timestamp_alignment_rate": null
+          },
+          "threshold_results": {},
+          "fail_closed_checks": {},
+          "unresolved_fields_preserved": [
+            "exact original thresholds unknown",
+            "exact original implementation unknown",
+            "exact frozen replay source unavailable",
+            "missing gate details",
+            "unverified 8/8 evidence"
+          ],
+          "result_classification": null,
+          "limitations": [],
+          "no_edge_no_live_permissions": {
+            "BEHAVIORAL_VALIDATION_ALLOWED": false,
+            "FULL_DATASET_COMPARISON_ALLOWED": false,
+            "RUNNER_EXECUTION_ALLOWED": false,
+            "SIGNAL_GENERATION_ALLOWED": false,
+            "BACKTEST_ALLOWED": false,
+            "PNL_COMPUTATION_ALLOWED": false,
+            "RUNTIME_ALLOWED": false,
+            "MONITOR_ALLOWED": false,
+            "LIVE_TRADING_ALLOWED": false,
+            "CAPITAL_ALLOCATION_ALLOWED": false,
+            "ORDER_PLACEMENT_ALLOWED": false,
+            "CANDIDATE_GENERATION_ALLOWED": false,
+            "EDGE_CLAIM_ALLOWED": false
+          },
+          "payload_sha256_excluding_hash": null
+        }
+      }
+    }
+  },
+  "sample_source_preview": {
+    "master_proxy_bounded_sample_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic",
+    "clean_room_output_bounded_sample_root": "approved clean-room runner dry-run output root",
+    "validator_config_json": {
+      "row_limit_default": 100,
+      "route_key": "old_short_clean_room_v1",
+      "family_key": "old_short",
+      "subfamilies": [
+        "blowoff_short",
+        "mean_reversion_short"
+      ],
+      "side": "short",
+      "no_live_permissions_required": true
+    },
+    "expected_files": [
+      "signals.csv",
+      "pending_entries.csv",
+      "open_positions.csv",
+      "closed_trades.csv",
+      "rejected_entries.csv",
+      "heartbeat.csv",
+      "state.json"
+    ],
+    "read_policy": "future preview/dry-run may inspect bounded metadata/header/small samples only"
+  },
+  "behavior_dimension_preview": [
+    "schema compatibility",
+    "family_key old_short",
+    "subfamily blowoff_short / mean_reversion_short presence",
+    "side short",
+    "signal feature availability",
+    "entry delay near 2 minutes",
+    "hold near 120 minutes",
+    "notional near 50 USDT at 1000 USDT base-equity policy",
+    "rejected gate behavior",
+    "no position without gate allow",
+    "same coin overlap behavior if fields exist",
+    "heartbeat/state compatibility",
+    "safety label compatibility"
+  ],
+  "similarity_metric_preview": [
+    "schema_match_rate",
+    "family_key_match_rate",
+    "subfamily_presence_match",
+    "side_match_rate",
+    "signal_feature_presence_rate",
+    "entry_delay_median_abs_error_seconds",
+    "hold_minutes_median_abs_error",
+    "notional_median_abs_error",
+    "rejected_reason_overlap_rate",
+    "gate_behavior_consistency_rate",
+    "no_position_without_gate_violation_count",
+    "safety_label_match_rate",
+    "state_heartbeat_schema_match",
+    "coin_overlap_rate",
+    "timestamp_alignment_rate"
+  ],
+  "threshold_policy_preview": {
+    "schema_match_rate": ">= 0.95",
+    "family_key_match_rate": ">= 0.99",
+    "side_match_rate": ">= 0.99",
+    "median_entry_delay_error": "<= 60 seconds",
+    "median_hold_error": "<= 10 minutes",
+    "notional_median_error": "<= 5 USDT",
+    "no_position_without_gate_allow": true,
+    "no_live_order_fields": true,
+    "closed_trades_schema_compatible": true,
+    "safety_label_match_rate": "= 1.0",
+    "no_position_without_gate_violation_count": "= 0",
+    "live_order_private_field_count": "= 0"
+  },
+  "fail_closed_preview": [
+    "clean-room sample missing",
+    "MASTER sample missing",
+    "full dataset comparison requested",
+    "raw market data path supplied",
+    "PnL/outcome field used for validation",
+    "live/order/private fields present",
+    "safety labels missing",
+    "route_key mismatch",
+    "family_key mismatch",
+    "no-live guard false",
+    "runtime path supplied",
+    "sample row limit exceeded"
+  ],
+  "future_execution_contract": {
+    "may_execute_only_after_this_preview": true,
+    "samples_must_be_bounded": true,
+    "full_dataset_compare_allowed": false,
+    "raw_market_data_allowed": false,
+    "pnl_or_outcome_fields_allowed_for_validation": false,
+    "live_capital_candidate_edge_permission": false,
+    "output_report_only": true,
+    "next_step_still_no_backtest_live_capital_candidate_edge": true
+  },
+  "result_classes": [
+    "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIOR_MATCH_PASS_NO_EDGE_NO_LIVE",
+    "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIOR_MATCH_PARTIAL_NO_EDGE_NO_LIVE",
+    "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIOR_MATCH_FAIL_NO_EDGE_NO_LIVE",
+    "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIOR_MATCH_INCONCLUSIVE_NO_EDGE_NO_LIVE"
+  ],
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence"
+  ],
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DRY_RUN_V1",
+  "safety_permissions": {
+    "bounded_behavioral_validation_preview_created": true,
+    "behavioral_validation_allowed_now": false,
+    "full_dataset_comparison_allowed_now": false,
+    "runner_execution_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "backtest_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "bounded_behavioral_validation_design_loaded": true,
+    "prior_next_allowed_step_verified": true,
+    "original_exact_source_not_claimed": true,
+    "clean_room_reconstruction_preserved": true,
+    "no_behavioral_validation_execution": true,
+    "no_full_dataset_comparison": true,
+    "no_runner_execution": true,
+    "no_signal_generation": true,
+    "no_backtest_run": true,
+    "no_pnl_computation": true,
+    "no_runtime_touched": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "no_live_guard_constants_false": true,
+    "behavior_dimensions_preserved": true,
+    "similarity_metrics_preserved": true,
+    "fail_closed_conditions_preserved": true,
+    "unresolved_fields_preserved": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "ad8ac9bea86e3d9d6d245ed1255ba9b0bc80c4eba21d9376b82108590a218d07"
+}

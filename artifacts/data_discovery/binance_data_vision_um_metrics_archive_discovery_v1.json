@@ -1,0 +1,2236 @@
+{
+  "status": "PASS_REPO_ONLY_BINANCE_DATA_VISION_UM_METRICS_ARCHIVE_DISCOVERY_CREATED",
+  "artifact_kind": "BINANCE_DATA_VISION_UM_METRICS_ARCHIVE_DISCOVERY",
+  "module": "BINANCE_DATA_VISION_UM_METRICS_ARCHIVE_DISCOVERY_V1",
+  "source_checkpoint": {
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "repo_head_before_tool_creation": "efb4780f1957a7221438a02b7e6108d30fcb6643",
+    "repo_clean_before_tool_creation": true,
+    "git_status_short_before_tool_creation": [],
+    "tracked_python_count_before_tool_creation": 1055,
+    "tracked_python_count_at_run": 1055,
+    "git_status_short_at_run_start": [
+      "?? artifacts/data_discovery/binance_data_vision_um_metrics_archive_discovery_v1.json",
+      "?? artifacts/research_contracts/",
+      "?? tools/edge_factory_os_repo_only_binance_data_vision_um_metrics_archive_discovery_v1.py",
+      "?? tools/edge_factory_os_repo_only_institutional_research_contract_for_top_family_v1.py"
+    ],
+    "created_python_tool": "tools/edge_factory_os_repo_only_binance_data_vision_um_metrics_archive_discovery_v1.py",
+    "created_json_artifact": "artifacts/data_discovery/binance_data_vision_um_metrics_archive_discovery_v1.json",
+    "run_started_at_utc": "2026-05-27T21:31:08Z"
+  },
+  "archive_root": {
+    "listing_root": "https://data.binance.vision/?prefix=data/futures/um/daily/metrics",
+    "direct_archive_root": "https://data.binance.vision/data/futures/um/daily/metrics/",
+    "archive_prefix": "data/futures/um/daily/metrics",
+    "host_allowlist": [
+      "data.binance.vision"
+    ],
+    "public_archive_only": true
+  },
+  "listing_discovery": {
+    "archive_prefix": "data/futures/um/daily/metrics",
+    "listing_urls_checked": [
+      "https://data.binance.vision/?prefix=data/futures/um/daily/metrics",
+      "https://data.binance.vision/?prefix=data%2Ffutures%2Fum%2Fdaily%2Fmetrics%2F",
+      "https://data.binance.vision/data/futures/um/daily/metrics/"
+    ],
+    "listing_fetches": [
+      {
+        "url": "https://data.binance.vision/?prefix=data/futures/um/daily/metrics",
+        "ok": true,
+        "http_status": 200,
+        "bytes_read": 2591,
+        "truncated_at_limit": false,
+        "content_type": "text/html",
+        "last_modified": "Thu, 07 Mar 2024 06:54:45 GMT",
+        "fetched_at_utc": "2026-05-27T21:30:03Z",
+        "error": null,
+        "sample_text_prefix": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Binance Data Collection</title>\n  <link href=\"bootstrap.min.css\" rel=\"stylesheet\">\n</head>\n<body>\n  <nav class=\"navbar navbar-dark bg-dark\">\n    <div class=\"container-md\">\n      <div class=\"row justify-content-between\" style=\"width: 100%\">\n        <div class=\"col-sm\">\n          <a href=\"/\"><img src=\"logo.png\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\"></a>\n          <span class=\"navbar-brand\" style=\"padding-left: 10px;\">Market Data</span>\n        <",
+        "symbol_count_parsed_from_limited_text": 0
+      },
+      {
+        "url": "https://data.binance.vision/?prefix=data%2Ffutures%2Fum%2Fdaily%2Fmetrics%2F",
+        "ok": true,
+        "http_status": 200,
+        "bytes_read": 2591,
+        "truncated_at_limit": false,
+        "content_type": "text/html",
+        "last_modified": "Thu, 07 Mar 2024 06:54:45 GMT",
+        "fetched_at_utc": "2026-05-27T21:30:04Z",
+        "error": null,
+        "sample_text_prefix": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Binance Data Collection</title>\n  <link href=\"bootstrap.min.css\" rel=\"stylesheet\">\n</head>\n<body>\n  <nav class=\"navbar navbar-dark bg-dark\">\n    <div class=\"container-md\">\n      <div class=\"row justify-content-between\" style=\"width: 100%\">\n        <div class=\"col-sm\">\n          <a href=\"/\"><img src=\"logo.png\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\"></a>\n          <span class=\"navbar-brand\" style=\"padding-left: 10px;\">Market Data</span>\n        <",
+        "symbol_count_parsed_from_limited_text": 0
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/",
+        "ok": false,
+        "http_status": 404,
+        "bytes_read": 321,
+        "truncated_at_limit": false,
+        "content_type": null,
+        "last_modified": null,
+        "fetched_at_utc": "2026-05-27T21:30:04Z",
+        "error": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>data/futures/um/daily/metrics/</Key><RequestId>TEFV25Z2W8ADJYJ6</RequestId><HostId>WQBgZv+Zqq8mnNfsppaOBnvNgJtiw58NHwjHx1gYBrhJGFdwbLs+SDdCuFDAHfzOmCYzh5OSMG7lr54slCu0O5F/+p34+p0I</HostId></Error>",
+        "sample_text_prefix": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>data/futures/um/daily/metrics/</Key><RequestId>TEFV25Z2W8ADJYJ6</RequestId><HostId>WQBgZv+Zqq8mnNfsppaOBnvNgJtiw58NHwjHx1gYBrhJGFdwbLs+SDdCuFDAHfzOmCYzh5OSMG7lr54slCu0O5F/+p34+p0I</HostId></Error>",
+        "symbol_count_parsed_from_limited_text": 0
+      }
+    ],
+    "symbols_parsed_from_listing_limited_text": [],
+    "symbols_parsed_from_listing_count": 0,
+    "direct_pattern_probe_used": true,
+    "observed_or_tested_url_pattern": "https://data.binance.vision/data/futures/um/daily/metrics/SYMBOL/SYMBOL-metrics-YYYY-MM-DD.zip",
+    "structure_summary": "The usable archive object pattern is SYMBOL-level combined daily metrics ZIP files, not separate metric folders per openInterestHist/takerlongshortRatio/etc.",
+    "recent_available_date_discovery": {
+      "symbol": "BTCUSDT",
+      "recent_available_date": "2026-05-26",
+      "lookback_days_checked": 1,
+      "found": true,
+      "attempts_preview": [
+        {
+          "date": "2026-05-26",
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11110,
+          "last_modified": "Wed, 27 May 2026 07:42:47 GMT"
+        }
+      ],
+      "found_head": {
+        "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2026-05-26.zip",
+        "exists": true,
+        "ok": true,
+        "http_status": 200,
+        "content_length_bytes": 11110,
+        "last_modified": "Wed, 27 May 2026 07:42:47 GMT",
+        "error": null
+      }
+    },
+    "sample_dates_used": [
+      "2023-01-01",
+      "2024-01-01",
+      "2025-01-01",
+      "2026-05-26"
+    ]
+  },
+  "metric_availability": {
+    "metric_count": 5,
+    "available_metric_names": [
+      "openInterestHist",
+      "takerlongshortRatio",
+      "globalLongShortAccountRatio",
+      "topLongShortAccountRatio",
+      "topLongShortPositionRatio"
+    ],
+    "observed_columns": [
+      "count_long_short_ratio",
+      "count_toptrader_long_short_ratio",
+      "create_time",
+      "sum_open_interest",
+      "sum_open_interest_value",
+      "sum_taker_long_short_vol_ratio",
+      "sum_toptrader_long_short_ratio",
+      "symbol"
+    ],
+    "metrics": {
+      "openInterestHist": {
+        "available": true,
+        "matched_columns": [
+          "sum_open_interest",
+          "sum_open_interest_value"
+        ],
+        "column_match_terms": [
+          "sum_open_interest",
+          "sum_open_interest_value"
+        ],
+        "description": "Open interest history fields in combined daily metrics ZIP files.",
+        "evidence_file_count": 39
+      },
+      "takerlongshortRatio": {
+        "available": true,
+        "matched_columns": [
+          "sum_taker_long_short_vol_ratio"
+        ],
+        "column_match_terms": [
+          "sum_taker_long_short_vol_ratio"
+        ],
+        "description": "Taker buy/sell volume ratio field in combined daily metrics ZIP files.",
+        "evidence_file_count": 39
+      },
+      "globalLongShortAccountRatio": {
+        "available": true,
+        "matched_columns": [
+          "count_long_short_ratio"
+        ],
+        "column_match_terms": [
+          "count_long_short_ratio"
+        ],
+        "description": "All-account long/short ratio field in combined daily metrics ZIP files.",
+        "evidence_file_count": 39
+      },
+      "topLongShortAccountRatio": {
+        "available": true,
+        "matched_columns": [
+          "count_toptrader_long_short_ratio"
+        ],
+        "column_match_terms": [
+          "count_toptrader_long_short_ratio"
+        ],
+        "description": "Top-trader account long/short ratio field in combined daily metrics ZIP files.",
+        "evidence_file_count": 39
+      },
+      "topLongShortPositionRatio": {
+        "available": true,
+        "matched_columns": [
+          "sum_toptrader_long_short_ratio"
+        ],
+        "column_match_terms": [
+          "sum_toptrader_long_short_ratio"
+        ],
+        "description": "Top-trader position long/short ratio field in combined daily metrics ZIP files.",
+        "evidence_file_count": 39
+      },
+      "funding_like_metric": {
+        "available": false,
+        "matched_columns": [],
+        "column_match_terms": [
+          "funding",
+          "funding_rate",
+          "last_funding_rate",
+          "premium"
+        ],
+        "description": "Funding-like fields, if present inside the daily metrics ZIP files.",
+        "evidence_file_count": 0
+      },
+      "liquidation_or_force_order_metric": {
+        "available": false,
+        "matched_columns": [],
+        "column_match_terms": [
+          "liquidation",
+          "force_order",
+          "forceorder",
+          "adl"
+        ],
+        "description": "Liquidation or force-order fields, if present inside the daily metrics ZIP files.",
+        "evidence_file_count": 0
+      }
+    },
+    "oi_available": true,
+    "taker_ratio_available": true,
+    "long_short_ratio_available": true
+  },
+  "symbol_probe_results": {
+    "BTCUSDT": {
+      "symbol": "BTCUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": true,
+      "coverage_note": "available for all static 2023/2024/2025 probe dates"
+    },
+    "ETHUSDT": {
+      "symbol": "ETHUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": true,
+      "coverage_note": "available for all static 2023/2024/2025 probe dates"
+    },
+    "SOLUSDT": {
+      "symbol": "SOLUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": true,
+      "coverage_note": "available for all static 2023/2024/2025 probe dates"
+    },
+    "DOGEUSDT": {
+      "symbol": "DOGEUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": true,
+      "coverage_note": "available for all static 2023/2024/2025 probe dates"
+    },
+    "XRPUSDT": {
+      "symbol": "XRPUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": true,
+      "coverage_note": "available for all static 2023/2024/2025 probe dates"
+    },
+    "BNBUSDT": {
+      "symbol": "BNBUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": true,
+      "coverage_note": "available for all static 2023/2024/2025 probe dates"
+    },
+    "LINKUSDT": {
+      "symbol": "LINKUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": true,
+      "coverage_note": "available for all static 2023/2024/2025 probe dates"
+    },
+    "APTUSDT": {
+      "symbol": "APTUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": true,
+      "coverage_note": "available for all static 2023/2024/2025 probe dates"
+    },
+    "ARBUSDT": {
+      "symbol": "ARBUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [
+        "2023-01-01"
+      ],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": false,
+      "coverage_note": "one or more static probe dates unavailable; likely symbol inception/delist or archive gap"
+    },
+    "OPUSDT": {
+      "symbol": "OPUSDT",
+      "dates_checked": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "available_dates": [
+        "2023-01-01",
+        "2024-01-01",
+        "2025-01-01",
+        "2026-05-26"
+      ],
+      "missing_dates": [],
+      "exists_any_probe": true,
+      "exists_all_static_2023_2025_dates": true,
+      "coverage_note": "available for all static 2023/2024/2025 probe dates"
+    }
+  },
+  "date_probe_results": {
+    "2023-01-01": {
+      "date": "2023-01-01",
+      "symbols_checked": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "SOLUSDT",
+        "DOGEUSDT",
+        "XRPUSDT",
+        "BNBUSDT",
+        "LINKUSDT",
+        "APTUSDT",
+        "ARBUSDT",
+        "OPUSDT"
+      ],
+      "available_count": 9,
+      "missing_count": 1,
+      "file_results": {
+        "BTCUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 14337,
+          "last_modified": "Wed, 28 Jun 2023 04:44:56 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2023-01-01.zip",
+          "error": null
+        },
+        "ETHUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 14677,
+          "last_modified": "Wed, 28 Jun 2023 04:44:56 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2023-01-01.zip",
+          "error": null
+        },
+        "SOLUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 13999,
+          "last_modified": "Wed, 28 Jun 2023 04:44:57 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2023-01-01.zip",
+          "error": null
+        },
+        "DOGEUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 14510,
+          "last_modified": "Wed, 28 Jun 2023 04:44:56 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/DOGEUSDT/DOGEUSDT-metrics-2023-01-01.zip",
+          "error": null
+        },
+        "XRPUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 14598,
+          "last_modified": "Wed, 28 Jun 2023 04:44:58 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/XRPUSDT/XRPUSDT-metrics-2023-01-01.zip",
+          "error": null
+        },
+        "BNBUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 14261,
+          "last_modified": "Wed, 28 Jun 2023 04:44:56 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNBUSDT/BNBUSDT-metrics-2023-01-01.zip",
+          "error": null
+        },
+        "LINKUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 14510,
+          "last_modified": "Wed, 28 Jun 2023 04:44:57 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINKUSDT/LINKUSDT-metrics-2023-01-01.zip",
+          "error": null
+        },
+        "APTUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 14190,
+          "last_modified": "Wed, 28 Jun 2023 04:44:55 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/APTUSDT/APTUSDT-metrics-2023-01-01.zip",
+          "error": null
+        },
+        "ARBUSDT": {
+          "exists": false,
+          "http_status": 404,
+          "content_length_bytes": null,
+          "last_modified": null,
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/ARBUSDT/ARBUSDT-metrics-2023-01-01.zip",
+          "error": "HTTP Error 404: Not Found"
+        },
+        "OPUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 13911,
+          "last_modified": "Wed, 28 Jun 2023 04:44:57 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/OPUSDT/OPUSDT-metrics-2023-01-01.zip",
+          "error": null
+        }
+      }
+    },
+    "2024-01-01": {
+      "date": "2024-01-01",
+      "symbols_checked": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "SOLUSDT",
+        "DOGEUSDT",
+        "XRPUSDT",
+        "BNBUSDT",
+        "LINKUSDT",
+        "APTUSDT",
+        "ARBUSDT",
+        "OPUSDT"
+      ],
+      "available_count": 10,
+      "missing_count": 0,
+      "file_results": {
+        "BTCUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11521,
+          "last_modified": "Tue, 02 Jan 2024 06:24:59 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-01.zip",
+          "error": null
+        },
+        "ETHUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11842,
+          "last_modified": "Tue, 02 Jan 2024 06:25:00 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-01.zip",
+          "error": null
+        },
+        "SOLUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11271,
+          "last_modified": "Tue, 02 Jan 2024 06:25:01 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2024-01-01.zip",
+          "error": null
+        },
+        "DOGEUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11748,
+          "last_modified": "Tue, 02 Jan 2024 06:24:59 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/DOGEUSDT/DOGEUSDT-metrics-2024-01-01.zip",
+          "error": null
+        },
+        "XRPUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11887,
+          "last_modified": "Tue, 02 Jan 2024 06:25:02 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/XRPUSDT/XRPUSDT-metrics-2024-01-01.zip",
+          "error": null
+        },
+        "BNBUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11367,
+          "last_modified": "Tue, 02 Jan 2024 06:24:59 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNBUSDT/BNBUSDT-metrics-2024-01-01.zip",
+          "error": null
+        },
+        "LINKUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11696,
+          "last_modified": "Tue, 02 Jan 2024 06:25:00 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINKUSDT/LINKUSDT-metrics-2024-01-01.zip",
+          "error": null
+        },
+        "APTUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11325,
+          "last_modified": "Tue, 02 Jan 2024 06:24:59 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/APTUSDT/APTUSDT-metrics-2024-01-01.zip",
+          "error": null
+        },
+        "ARBUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11944,
+          "last_modified": "Tue, 02 Jan 2024 06:24:59 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/ARBUSDT/ARBUSDT-metrics-2024-01-01.zip",
+          "error": null
+        },
+        "OPUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11707,
+          "last_modified": "Tue, 02 Jan 2024 06:25:01 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/OPUSDT/OPUSDT-metrics-2024-01-01.zip",
+          "error": null
+        }
+      }
+    },
+    "2025-01-01": {
+      "date": "2025-01-01",
+      "symbols_checked": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "SOLUSDT",
+        "DOGEUSDT",
+        "XRPUSDT",
+        "BNBUSDT",
+        "LINKUSDT",
+        "APTUSDT",
+        "ARBUSDT",
+        "OPUSDT"
+      ],
+      "available_count": 10,
+      "missing_count": 0,
+      "file_results": {
+        "BTCUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11211,
+          "last_modified": "Thu, 02 Jan 2025 07:27:31 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-01-01.zip",
+          "error": null
+        },
+        "ETHUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11651,
+          "last_modified": "Thu, 02 Jan 2025 07:27:32 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-01-01.zip",
+          "error": null
+        },
+        "SOLUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11038,
+          "last_modified": "Thu, 02 Jan 2025 07:27:33 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2025-01-01.zip",
+          "error": null
+        },
+        "DOGEUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11637,
+          "last_modified": "Thu, 02 Jan 2025 07:27:31 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/DOGEUSDT/DOGEUSDT-metrics-2025-01-01.zip",
+          "error": null
+        },
+        "XRPUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11725,
+          "last_modified": "Thu, 02 Jan 2025 07:27:34 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/XRPUSDT/XRPUSDT-metrics-2025-01-01.zip",
+          "error": null
+        },
+        "BNBUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 10953,
+          "last_modified": "Thu, 02 Jan 2025 07:27:31 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNBUSDT/BNBUSDT-metrics-2025-01-01.zip",
+          "error": null
+        },
+        "LINKUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11674,
+          "last_modified": "Thu, 02 Jan 2025 07:27:32 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINKUSDT/LINKUSDT-metrics-2025-01-01.zip",
+          "error": null
+        },
+        "APTUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11395,
+          "last_modified": "Thu, 02 Jan 2025 07:27:30 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/APTUSDT/APTUSDT-metrics-2025-01-01.zip",
+          "error": null
+        },
+        "ARBUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11519,
+          "last_modified": "Thu, 02 Jan 2025 07:27:31 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/ARBUSDT/ARBUSDT-metrics-2025-01-01.zip",
+          "error": null
+        },
+        "OPUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11398,
+          "last_modified": "Thu, 02 Jan 2025 07:27:33 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/OPUSDT/OPUSDT-metrics-2025-01-01.zip",
+          "error": null
+        }
+      }
+    },
+    "2026-05-26": {
+      "date": "2026-05-26",
+      "symbols_checked": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "SOLUSDT",
+        "DOGEUSDT",
+        "XRPUSDT",
+        "BNBUSDT",
+        "LINKUSDT",
+        "APTUSDT",
+        "ARBUSDT",
+        "OPUSDT"
+      ],
+      "available_count": 10,
+      "missing_count": 0,
+      "file_results": {
+        "BTCUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11110,
+          "last_modified": "Wed, 27 May 2026 07:42:47 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2026-05-26.zip",
+          "error": null
+        },
+        "ETHUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11644,
+          "last_modified": "Wed, 27 May 2026 07:42:48 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2026-05-26.zip",
+          "error": null
+        },
+        "SOLUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11417,
+          "last_modified": "Wed, 27 May 2026 07:42:51 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2026-05-26.zip",
+          "error": null
+        },
+        "DOGEUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11428,
+          "last_modified": "Wed, 27 May 2026 07:42:48 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/DOGEUSDT/DOGEUSDT-metrics-2026-05-26.zip",
+          "error": null
+        },
+        "XRPUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11454,
+          "last_modified": "Wed, 27 May 2026 07:42:53 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/XRPUSDT/XRPUSDT-metrics-2026-05-26.zip",
+          "error": null
+        },
+        "BNBUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11014,
+          "last_modified": "Wed, 27 May 2026 07:42:47 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNBUSDT/BNBUSDT-metrics-2026-05-26.zip",
+          "error": null
+        },
+        "LINKUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11523,
+          "last_modified": "Wed, 27 May 2026 07:42:50 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINKUSDT/LINKUSDT-metrics-2026-05-26.zip",
+          "error": null
+        },
+        "APTUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11272,
+          "last_modified": "Wed, 27 May 2026 07:42:46 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/APTUSDT/APTUSDT-metrics-2026-05-26.zip",
+          "error": null
+        },
+        "ARBUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11269,
+          "last_modified": "Wed, 27 May 2026 07:42:46 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/ARBUSDT/ARBUSDT-metrics-2026-05-26.zip",
+          "error": null
+        },
+        "OPUSDT": {
+          "exists": true,
+          "http_status": 200,
+          "content_length_bytes": 11210,
+          "last_modified": "Wed, 27 May 2026 07:42:50 GMT",
+          "url": "https://data.binance.vision/data/futures/um/daily/metrics/OPUSDT/OPUSDT-metrics-2026-05-26.zip",
+          "error": null
+        }
+      }
+    }
+  },
+  "sample_file_reviews": [
+    {
+      "symbol": "BTCUSDT",
+      "date": "2023-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2023-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 14337,
+      "zip_members": [
+        "BTCUSDT-metrics-2023-01-01.csv"
+      ],
+      "reviewed_member": "BTCUSDT-metrics-2023-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2022-12-31T21:00:00Z",
+      "timestamp_max_utc": "2023-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "ETHUSDT",
+      "date": "2023-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2023-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 14677,
+      "zip_members": [
+        "ETHUSDT-metrics-2023-01-01.csv"
+      ],
+      "reviewed_member": "ETHUSDT-metrics-2023-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2022-12-31T21:00:00Z",
+      "timestamp_max_utc": "2023-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "SOLUSDT",
+      "date": "2023-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2023-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 13999,
+      "zip_members": [
+        "SOLUSDT-metrics-2023-01-01.csv"
+      ],
+      "reviewed_member": "SOLUSDT-metrics-2023-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2022-12-31T21:00:00Z",
+      "timestamp_max_utc": "2023-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "date": "2023-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/DOGEUSDT/DOGEUSDT-metrics-2023-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 14510,
+      "zip_members": [
+        "DOGEUSDT-metrics-2023-01-01.csv"
+      ],
+      "reviewed_member": "DOGEUSDT-metrics-2023-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2022-12-31T21:00:00Z",
+      "timestamp_max_utc": "2023-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "XRPUSDT",
+      "date": "2023-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/XRPUSDT/XRPUSDT-metrics-2023-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 14598,
+      "zip_members": [
+        "XRPUSDT-metrics-2023-01-01.csv"
+      ],
+      "reviewed_member": "XRPUSDT-metrics-2023-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2022-12-31T21:00:00Z",
+      "timestamp_max_utc": "2023-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "BNBUSDT",
+      "date": "2023-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNBUSDT/BNBUSDT-metrics-2023-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 14261,
+      "zip_members": [
+        "BNBUSDT-metrics-2023-01-01.csv"
+      ],
+      "reviewed_member": "BNBUSDT-metrics-2023-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2022-12-31T21:00:00Z",
+      "timestamp_max_utc": "2023-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "LINKUSDT",
+      "date": "2023-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINKUSDT/LINKUSDT-metrics-2023-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 14510,
+      "zip_members": [
+        "LINKUSDT-metrics-2023-01-01.csv"
+      ],
+      "reviewed_member": "LINKUSDT-metrics-2023-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2022-12-31T21:00:00Z",
+      "timestamp_max_utc": "2023-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "APTUSDT",
+      "date": "2023-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/APTUSDT/APTUSDT-metrics-2023-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 14190,
+      "zip_members": [
+        "APTUSDT-metrics-2023-01-01.csv"
+      ],
+      "reviewed_member": "APTUSDT-metrics-2023-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2022-12-31T21:00:00Z",
+      "timestamp_max_utc": "2023-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "OPUSDT",
+      "date": "2023-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/OPUSDT/OPUSDT-metrics-2023-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 13911,
+      "zip_members": [
+        "OPUSDT-metrics-2023-01-01.csv"
+      ],
+      "reviewed_member": "OPUSDT-metrics-2023-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2022-12-31T21:00:00Z",
+      "timestamp_max_utc": "2023-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "BTCUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11521,
+      "zip_members": [
+        "BTCUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "BTCUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "ETHUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11842,
+      "zip_members": [
+        "ETHUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "ETHUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "SOLUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11271,
+      "zip_members": [
+        "SOLUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "SOLUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/DOGEUSDT/DOGEUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11748,
+      "zip_members": [
+        "DOGEUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "DOGEUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "XRPUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/XRPUSDT/XRPUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11887,
+      "zip_members": [
+        "XRPUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "XRPUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "BNBUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNBUSDT/BNBUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11367,
+      "zip_members": [
+        "BNBUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "BNBUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "LINKUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINKUSDT/LINKUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11696,
+      "zip_members": [
+        "LINKUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "LINKUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "APTUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/APTUSDT/APTUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11325,
+      "zip_members": [
+        "APTUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "APTUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "ARBUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/ARBUSDT/ARBUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11944,
+      "zip_members": [
+        "ARBUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "ARBUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "OPUSDT",
+      "date": "2024-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/OPUSDT/OPUSDT-metrics-2024-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11707,
+      "zip_members": [
+        "OPUSDT-metrics-2024-01-01.csv"
+      ],
+      "reviewed_member": "OPUSDT-metrics-2024-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2023-12-31T21:00:00Z",
+      "timestamp_max_utc": "2024-01-01T20:55:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "BTCUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11211,
+      "zip_members": [
+        "BTCUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "BTCUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:01Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "ETHUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11651,
+      "zip_members": [
+        "ETHUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "ETHUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "SOLUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11038,
+      "zip_members": [
+        "SOLUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "SOLUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:01Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/DOGEUSDT/DOGEUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11637,
+      "zip_members": [
+        "DOGEUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "DOGEUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "XRPUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/XRPUSDT/XRPUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11725,
+      "zip_members": [
+        "XRPUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "XRPUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:01Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "BNBUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNBUSDT/BNBUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 10953,
+      "zip_members": [
+        "BNBUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "BNBUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "LINKUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINKUSDT/LINKUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11674,
+      "zip_members": [
+        "LINKUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "LINKUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:01Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "APTUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/APTUSDT/APTUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11395,
+      "zip_members": [
+        "APTUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "APTUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "ARBUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/ARBUSDT/ARBUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11519,
+      "zip_members": [
+        "ARBUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "ARBUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "OPUSDT",
+      "date": "2025-01-01",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/OPUSDT/OPUSDT-metrics-2025-01-01.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11398,
+      "zip_members": [
+        "OPUSDT-metrics-2025-01-01.csv"
+      ],
+      "reviewed_member": "OPUSDT-metrics-2025-01-01.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2024-12-31T21:05:00Z",
+      "timestamp_max_utc": "2025-01-01T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "BTCUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11110,
+      "zip_members": [
+        "BTCUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "BTCUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "ETHUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11644,
+      "zip_members": [
+        "ETHUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "ETHUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "SOLUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11417,
+      "zip_members": [
+        "SOLUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "SOLUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/DOGEUSDT/DOGEUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11428,
+      "zip_members": [
+        "DOGEUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "DOGEUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "XRPUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/XRPUSDT/XRPUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11454,
+      "zip_members": [
+        "XRPUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "XRPUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "BNBUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNBUSDT/BNBUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11014,
+      "zip_members": [
+        "BNBUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "BNBUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "LINKUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINKUSDT/LINKUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11523,
+      "zip_members": [
+        "LINKUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "LINKUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "APTUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/APTUSDT/APTUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11272,
+      "zip_members": [
+        "APTUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "APTUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "ARBUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/ARBUSDT/ARBUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11269,
+      "zip_members": [
+        "ARBUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "ARBUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    },
+    {
+      "symbol": "OPUSDT",
+      "date": "2026-05-26",
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/OPUSDT/OPUSDT-metrics-2026-05-26.zip",
+      "file_exists": true,
+      "opened": true,
+      "skip_reason": null,
+      "downloaded_bytes": 11210,
+      "zip_members": [
+        "OPUSDT-metrics-2026-05-26.csv"
+      ],
+      "reviewed_member": "OPUSDT-metrics-2026-05-26.csv",
+      "columns": [
+        "create_time",
+        "symbol",
+        "sum_open_interest",
+        "sum_open_interest_value",
+        "count_toptrader_long_short_ratio",
+        "sum_toptrader_long_short_ratio",
+        "count_long_short_ratio",
+        "sum_taker_long_short_vol_ratio"
+      ],
+      "row_count": 288,
+      "timestamp_column": "create_time",
+      "timestamp_min_utc": "2026-05-25T21:05:00Z",
+      "timestamp_max_utc": "2026-05-26T21:00:00Z",
+      "interval_granularity": "5m",
+      "granularity_review": {
+        "inferred_interval": "5m",
+        "median_interval_seconds": 300,
+        "basis": "288 rows and timestamp deltas"
+      },
+      "error": null
+    }
+  ],
+  "historical_feasibility": {
+    "historical_2023_2025_feasible": true,
+    "open_interest_history_2023_2025_feasible": true,
+    "taker_buy_sell_ratio_history_2023_2025_feasible": true,
+    "long_short_ratio_history_2023_2025_feasible": true,
+    "core_2023_symbols_checked": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "DOGEUSDT",
+      "XRPUSDT",
+      "BNBUSDT",
+      "LINKUSDT"
+    ],
+    "core_static_dates_available": true,
+    "newer_symbol_limitation": "Newer listings such as ARBUSDT may not have files for 2023-01-01; dataset builder must use per-symbol archive start dates."
+  },
+  "liquidation_availability": {
+    "available": false,
+    "archive_metric_found": false,
+    "terms_checked": [
+      "liquidation",
+      "force_order",
+      "forceorder",
+      "adl"
+    ],
+    "conclusion": "no liquidation or force-order fields were found in sampled daily metrics ZIP columns"
+  },
+  "funding_availability": {
+    "available": false,
+    "archive_metric_found": false,
+    "terms_checked": [
+      "funding",
+      "funding_rate",
+      "last_funding_rate",
+      "premium"
+    ],
+    "conclusion": "no funding-like fields were found in sampled daily metrics ZIP columns"
+  },
+  "recommended_proxy_package": {
+    "classification": "USABLE_FOR_OI_TAKER_CROWDING_PROXY_RESEARCH",
+    "components": [
+      "open_interest",
+      "taker_buy_sell_volume_ratio",
+      "global_long_short_account_ratio",
+      "top_trader_long_short_account_ratio",
+      "top_trader_long_short_position_ratio"
+    ],
+    "explicit_liquidation_limitation": "True liquidation flush cannot be directly tested from this metrics archive; only OI/taker/crowding proxy flush research is supported by discovered fields."
+  },
+  "result_classification": "BINANCE_DATA_VISION_METRICS_READY_FOR_OI_TAKER_CROWDING_DATASET",
+  "next_allowed_step": "BINANCE_DATA_VISION_UM_METRICS_DATASET_BUILDER_V1",
+  "limitations": [
+    "This is archive discovery only and does not build a dataset.",
+    "Only small listing responses, HEAD probes, and capped daily ZIP samples were downloaded.",
+    "The archive pattern discovered is combined per-symbol daily metrics files, not separate metric folders.",
+    "Per-symbol historical coverage can begin after instrument listing; builder must not assume every symbol exists on 2023-01-01.",
+    "Funding history was not found inside this metrics archive.",
+    "Liquidation or force-order history was not found inside this metrics archive.",
+    "No strategy, signal, backtest, PnL, candidate, edge, runtime, live, or capital action was performed or permitted."
+  ],
+  "safety_permissions": {
+    "data_archive_discovery_created": true,
+    "dataset_builder_allowed_next": true,
+    "strategy_execution_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "backtest_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "public_archive_only": true,
+    "no_private_api_used": true,
+    "no_account_api_used": true,
+    "no_order_endpoint_used": true,
+    "no_api_key_used": true,
+    "no_strategy_execution": true,
+    "no_signal_generation": true,
+    "no_backtest_run": true,
+    "no_pnl_computation": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "huge_download_avoided": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_repo_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "8a313aaf03eeca565f9bf2f71d02ee69b69c87fd5ed14671d3fc7acc22da657b"
+}

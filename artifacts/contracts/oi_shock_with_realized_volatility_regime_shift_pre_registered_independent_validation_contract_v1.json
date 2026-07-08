@@ -1,0 +1,223 @@
+{
+  "allowed_next_step": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_RUNNER_V1",
+  "artifact_kind": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT",
+  "blocker": null,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "contract_status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT_CREATED",
+  "current_head": "5571dbb230a181a035c4d893a136fa73faba0825",
+  "expected_head": "5571dbb230a181a035c4d893a136fa73faba0825",
+  "failure_rules": {
+    "data_quality_insufficient": "data_quality_attention_or_inconclusive",
+    "event_count_too_low": "inconclusive_or_fail_depending_on_severity",
+    "event_reconstruction_not_reproducible": "failed_stop",
+    "forbidden_actions_occur": "failed_stop",
+    "p_abs_high_mean_fails": "fail",
+    "signed_return_only_result": "cannot_pass_primary_volatility_validation",
+    "validation_data_inspected_or_optimized_before_freezing": "failed_stop",
+    "volatility_effect_disappears": "fail"
+  },
+  "forbidden_actions_confirmed_false": {
+    "account_api": false,
+    "api_key": false,
+    "backtest": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "event_definitions_modified": false,
+    "history_rewritten": false,
+    "new_returns_computed": false,
+    "null_validation_rerun": false,
+    "optimization_against_validation_outcomes": false,
+    "order_private_account_api_key": false,
+    "p_values_recomputed": false,
+    "pnl": false,
+    "prior_artifacts_modified": false,
+    "prior_artifacts_renamed": false,
+    "private_api": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "signed_return_findings_promoted": false,
+    "strategy": false,
+    "trade_simulation": false,
+    "validation_run": false
+  },
+  "frozen_event_definition_policy": {
+    "cooldown_changes_allowed": false,
+    "event_definition_edits_after_validation_outcomes_allowed": false,
+    "oi_shock_rule_changes_allowed": false,
+    "optimization_on_validation_data_allowed": false,
+    "reconstruct_exactly_from_validated_artifacts": true,
+    "signed_return_promotion_allowed": false,
+    "source_of_truth": [
+      "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json",
+      "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json"
+    ],
+    "strict_variant_promotion_allowed": false,
+    "threshold_changes_allowed": false,
+    "volatility_regime_rule_changes_allowed": false
+  },
+  "frozen_hypothesis": {
+    "diagnostic_family": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT",
+    "expected_direction": "future_absolute_return_or_realized_volatility_higher_than_null",
+    "horizon": "15m_only",
+    "primary_event_targets": [
+      {
+        "event_label": "expansion + volatility expansion",
+        "horizon": "15m",
+        "prior_bonferroni_p": 0.015984015984015984,
+        "prior_fdr_q": 0.005328005328005328,
+        "prior_p_abs_high_mean": 0.000999000999000999,
+        "research_sample_event_count": 585,
+        "target_id": "best_oi_expansion_volatility_expansion_definition"
+      },
+      {
+        "event_label": "expansion + volatility compression break",
+        "horizon": "15m",
+        "prior_bonferroni_p": 0.015984015984015984,
+        "prior_fdr_q": 0.005328005328005328,
+        "prior_p_abs_high_mean": 0.000999000999000999,
+        "research_sample_event_count": 585,
+        "target_id": "best_oi_expansion_volatility_compression_break_definition"
+      }
+    ],
+    "primary_metric_family": "forward_abs_return / realized-volatility proxy",
+    "primary_null_model": "month-aware symbol-balanced null",
+    "primary_p_value": "p_abs_high_mean",
+    "primary_statistic": "mean_15m_forward_abs_return_or_equivalent_realized_volatility_proxy",
+    "primary_test_scope": "two_pre_registered_primary_volatility_tests",
+    "signed_return_findings": {
+      "pass_fail_allowed": false,
+      "role": "secondary_tracking_only",
+      "strategy_candidate_signal_allowed": false
+    }
+  },
+  "future_runner_scope": {
+    "allowed_next_step": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_RUNNER_V1",
+    "may_change_thresholds_or_horizon": false,
+    "may_create_candidate_logic": false,
+    "may_create_live_or_capital_logic": false,
+    "may_create_release_logic": false,
+    "may_create_signal_logic": false,
+    "may_create_strategy_logic": false,
+    "may_evaluate_only_frozen_hypothesis": true,
+    "may_promote_signed_return_findings": false
+  },
+  "head_matches_expected": true,
+  "independent_validation_data_policy": {
+    "acceptable_sources": [
+      "2026+ public Binance Data Vision data",
+      "pre-frozen untouched symbol_or_universe_expansion",
+      "both, only if frozen before inspecting validation outcomes"
+    ],
+    "expansion_symbol_policy": "If expansion symbols are used, the symbol list must be frozen before any return or volatility computation.",
+    "future_2026_plus_data_policy": "If 2026+ public data is used, acquisition and validation must happen in a separate future runner.",
+    "independent_validation_must_be": "outside_or_untouched_relative_to_2023_2025_research_sample",
+    "private_account_api_key_order_data_allowed": false,
+    "research_evaluation_sample": {
+      "end": "2025-12-31",
+      "start": "2023-01-01",
+      "timezone": "UTC",
+      "usage": "research_evaluation_and_robustness_only_not_independent_validation"
+    },
+    "research_evaluation_sample_reuse_as_independent_validation": false,
+    "validation_outcome_inspection_before_freeze_allowed": false
+  },
+  "independent_validation_required": true,
+  "input_artifact_hashes_after": {
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "95bff40616afdcaa2f1fe40fd1b4753057b0a30cd8386ebae4f2910ffda0fe98",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_diagnostic_robustness_runner_v1.json": "c27845a11721a9d4dd3285d70c233bdd49dcb1d8afd1fb9ad79ad88d918a8698",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_return_diagnostic_v1.json": "6995fd9d1a85a13ec5b47833c396a0200dc1c751699efc3e8c76367e5546be00",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "e5360f6f3516ea31a9af1c4ccf5990a4b8aeb423752372709f9f501c2a7c684e"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "37655d345a3b583a3d2babd8fbd55d9c9e3319114637083d13d36d450794275d",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "95bff40616afdcaa2f1fe40fd1b4753057b0a30cd8386ebae4f2910ffda0fe98",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_diagnostic_robustness_runner_v1.json": "c27845a11721a9d4dd3285d70c233bdd49dcb1d8afd1fb9ad79ad88d918a8698",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_return_diagnostic_v1.json": "6995fd9d1a85a13ec5b47833c396a0200dc1c751699efc3e8c76367e5546be00",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "e5360f6f3516ea31a9af1c4ccf5990a4b8aeb423752372709f9f501c2a7c684e"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_integrity_checks": {
+    "diagnostic_promising_volatility_only": true,
+    "diagnostic_route_promising_true": true,
+    "discovery_ready": true,
+    "evaluator_candidate_generation_false": true,
+    "evaluator_promising_volatility_diagnostic_only": true,
+    "evaluator_release_false": true,
+    "evaluator_signal_false": true,
+    "evaluator_strategy_false": true,
+    "forbidden_flags_false": true,
+    "independent_validation_required_true": true,
+    "permissions_false": true,
+    "robustness_promising": true,
+    "validator_passed": true
+  },
+  "input_payload_hashes_verified": {
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_discovery_v1.json": "dad346c255410ee1406e19f1480d32d8cbcc4bd24de25977b2038dd3e20900df",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_event_validator_v1.json": "52f9421380375f81616f897163d49e20a275febde00a52e58b0b0f2786df34e5",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_diagnostic_robustness_runner_v1.json": "fe55aab079fa97efdfcb1f3dc8e7110f8a72c44f05900c425b04e81dcd5dcc10",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_forward_return_diagnostic_v1.json": "dcebeeca6fb626e3390e5834dfabd0e7f1d19bdc34ced904c924d9a9a164aad0",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "92ee7c7adb2250c82725bb6cfa0954ee49882b345eaef01e59daba89ceef932f"
+  },
+  "live_allowed": false,
+  "minimum_sample_rules": {
+    "attention_band_rule": "do_not_pass_automatically_even_if_effect_appears_clear",
+    "attention_or_inconclusive_band": "50 <= primary_target_event_count <= 99",
+    "inconclusive_insufficient_sample_threshold": "primary_target_event_count < 50",
+    "month_coverage_must_be_recorded": true,
+    "normal_evaluation_threshold": "each_primary_target_event_count >= 100",
+    "symbol_coverage_must_be_recorded": true
+  },
+  "module": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT_V1",
+  "payload_sha256_excluding_hash": "3510f64766e0d7c5fb84d821d6ec0d9815fae0cffa27c0bee79f66fdbe9cc492",
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "release_allowed": false,
+  "replacement_checks_all_true": true,
+  "research_sample_window": {
+    "end": "2025-12-31",
+    "start": "2023-01-01",
+    "timezone": "UTC",
+    "usage": "research_evaluation_and_robustness_only_not_independent_validation"
+  },
+  "result_classification": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT_READY",
+  "runtime_touch_allowed": false,
+  "signal_allowed": false,
+  "status": "PASS_REPO_ONLY_OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_PRE_REGISTERED_INDEPENDENT_VALIDATION_CONTRACT_CREATED",
+  "strategy_allowed": false,
+  "theory_id": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT",
+  "validation_checks": {
+    "candidate_generation_allowed_false": true,
+    "diagnostic_route_promising": true,
+    "independent_validation_required": true,
+    "input_artifact_hashes_unchanged": true,
+    "no_event_definitions_modified": true,
+    "no_new_returns_computed": true,
+    "no_null_validation_rerun": true,
+    "no_p_values_recomputed": true,
+    "no_validation_run": true,
+    "release_allowed_false": true,
+    "robustness_evaluator_promising": true,
+    "runtime_live_capital_false": true,
+    "signal_allowed_false": true,
+    "signed_return_findings_not_promoted": true,
+    "strategy_allowed_false": true
+  },
+  "validation_gates": {
+    "alternate_volatility_proxy_sensitivity_recorded_when_feasible": true,
+    "arbusdt_missing_archive_sensitivity_recorded_if_relevant": true,
+    "both_primary_targets_must_be_reported": true,
+    "data_quality_warnings_recorded": true,
+    "event_reconstruction_current_or_prior_bar_only": true,
+    "fdr_and_bonferroni_recorded_across_two_primary_tests": true,
+    "input_hashes_must_be_unchanged": true,
+    "leave_one_month_diagnostics_required_when_enough_months": true,
+    "leave_one_symbol_diagnostics_required_when_enough_events": true,
+    "observed_primary_volatility_metric_higher_than_null_required": true,
+    "primary_p_abs_high_mean_lte_0_05_required_for_at_least_one_primary_target": true,
+    "private_account_api_key_order_data_allowed": false,
+    "public_archive_only": true,
+    "strategy_candidate_release_action_allowed": false,
+    "sufficient_event_count_required_for_each_primary_target": true
+  }
+}

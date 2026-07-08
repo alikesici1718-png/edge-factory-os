@@ -1,0 +1,47 @@
+{
+  "plugin_key": "GUARDED_FEATURE_SPACE_EXPANSION_PLUGIN_V1",
+  "plugin_type": "READ_ONLY_DIAGNOSTIC_RESEARCH",
+  "research_key": "GUARDED_FEATURE_SPACE_EXPANSION_AND_NEGATIVE_CONTROL_SEARCH_V1",
+  "must_consume_guard_feed": true,
+  "must_not_reopen_blocked_routes": true,
+  "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+  "canonical_policy_month_count": 12,
+  "feature_families": [
+    "pre_outcome_multi_horizon_return_shape",
+    "pre_outcome_realized_volatility_surface",
+    "pre_outcome_range_compression_expansion",
+    "pre_outcome_liquidity_state_and_rank_stability",
+    "pre_outcome_cross_sectional_dispersion",
+    "pre_outcome_market_beta_correlation",
+    "pre_outcome_symbol_lifecycle_and_coverage",
+    "gap_aware_feature_resets"
+  ],
+  "negative_controls": [
+    "random_symbol_feature_control",
+    "month_shuffled_feature_control",
+    "time_shifted_feature_control",
+    "random_noise_feature_control",
+    "direction_flipped_label_control"
+  ],
+  "null_models": [
+    "within_month_symbol_shuffle",
+    "month_order_shuffle",
+    "feature_rank_shuffle",
+    "side_label_shuffle",
+    "cost_perturbation_null"
+  ],
+  "forbidden_inputs": [
+    "future_return_as_feature",
+    "future_pnl_as_feature",
+    "future_win_loss_as_feature",
+    "manual_symbol_whitelist",
+    "manual_month_blacklist",
+    "blocked_route_hash_reuse"
+  ],
+  "candidate_generation_allowed": false,
+  "family_release_allowed": false,
+  "runtime_touch_allowed": false,
+  "capital_change_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false
+}

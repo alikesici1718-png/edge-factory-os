@@ -1,0 +1,67 @@
+{
+  "active_paper_allowed": false,
+  "archive_allowed_now": false,
+  "archive_performed": false,
+  "backup_delete_allowed_now": false,
+  "backup_move_allowed_now": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T06:29:27.706183+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "git_untracked_or_dirty_count": 4,
+  "hygiene_rows": [
+    {
+      "archive_allowed_now": false,
+      "classification": "KNOWN_TECHNICAL_FIX_BACKUP",
+      "delete_allowed_now": false,
+      "git_status_line": "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "move_allowed_now": false,
+      "path": "tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "recommendation": "Keep until backup hygiene approval; safe to ignore/delete only after explicit user approval.",
+      "risk": "LOW"
+    },
+    {
+      "archive_allowed_now": false,
+      "classification": "UNTRACKED_BACKUP_REVIEW_REQUIRED",
+      "delete_allowed_now": false,
+      "git_status_line": "?? tools/edge_factory_os_runtime_family_status_panel_and_backup_hygiene_v1.py",
+      "move_allowed_now": false,
+      "path": "tools/edge_factory_os_runtime_family_status_panel_and_backup_hygiene_v1.py",
+      "recommendation": "Do not delete automatically.",
+      "risk": "ATTENTION"
+    },
+    {
+      "archive_allowed_now": false,
+      "classification": "KNOWN_POLICY_SENSITIVE_PATCH_BACKUP",
+      "delete_allowed_now": false,
+      "git_status_line": "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+      "move_allowed_now": false,
+      "path": "tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+      "recommendation": "Keep until policy-sensitive patch audit remains committed; do not delete automatically.",
+      "risk": "ATTENTION"
+    },
+    {
+      "archive_allowed_now": false,
+      "classification": "UNTRACKED_LEGACY_OR_SUPERSEDED_TOOL_REVIEW_REQUIRED",
+      "delete_allowed_now": false,
+      "git_status_line": "?? tools/edge_factory_os_universe_coverage_guard_v1.py",
+      "move_allowed_now": false,
+      "path": "tools/edge_factory_os_universe_coverage_guard_v1.py",
+      "recommendation": "Do not delete automatically; classify as legacy/superseded/uncommitted guard before action.",
+      "risk": "ATTENTION"
+    }
+  ],
+  "known_backup_count": 3,
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "report_name": "edge_factory_os_backup_hygiene_report_v1",
+  "report_status": "BACKUP_HYGIENE_REPORT_READY_NO_DELETE",
+  "runtime_touch_allowed": false
+}

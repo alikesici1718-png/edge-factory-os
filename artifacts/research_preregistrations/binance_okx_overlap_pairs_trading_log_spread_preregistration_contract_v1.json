@@ -1,0 +1,208 @@
+{
+  "artifact_kind": "BINANCE_OKX_OVERLAP_PAIRS_TRADING_LOG_SPREAD_PREREGISTRATION_CONTRACT",
+  "execution_contract": {
+    "aggregate_result": "equal-weight average across active pair trades",
+    "cross_pair_overlapping_allowed": true,
+    "entry_price": "open at E",
+    "exit_price": "open at E + 24h",
+    "future_execution_window": {
+      "full_window_end_exclusive_utc": "2025-11-01T00:00:00Z",
+      "full_window_start_utc": "2021-05-01T00:00:00Z",
+      "holdout_window_end_exclusive_utc": "2025-11-01T00:00:00Z",
+      "holdout_window_start_utc": "2025-01-01T00:00:00Z",
+      "train_window_end_exclusive_utc": "2024-01-01T00:00:00Z",
+      "train_window_start_utc": "2021-05-01T00:00:00Z",
+      "validation_window_end_exclusive_utc": "2025-01-01T00:00:00Z",
+      "validation_window_start_utc": "2024-01-01T00:00:00Z"
+    },
+    "holding_period_hours": 24,
+    "holdout_reported_separately": true,
+    "holdout_used_for_selection": false,
+    "minimum_active_pair_trades_per_timestamp": 1,
+    "no_stop_loss": true,
+    "no_strategy_execution_now": true,
+    "pair_level_returns_computed_separately": true,
+    "round_trip_portfolio_cost_bps": 20
+  },
+  "forbidden_actions_confirmed_false": {
+    "binance_api_called": false,
+    "candidates_generated": false,
+    "capital_permission_granted": false,
+    "edge_claimed": false,
+    "existing_files_modified_by_module": false,
+    "family_released": false,
+    "funding_rows_read": false,
+    "live_permission_granted": false,
+    "network_used": false,
+    "okx_api_called": false,
+    "panel_rows_read": false,
+    "runtime_permission_granted": false,
+    "strategy_executed": false,
+    "strategy_search_executed": false
+  },
+  "future_evaluation_policy": {
+    "diagnostic_promising_requires_all": [
+      "validation_net_metric_bps > 0",
+      "validation_positive_after_cost true",
+      "null_baseline_review_preliminary_passed true",
+      "monthly_stability_review_preliminary_passed true",
+      "pair_level_consistency_review_passed true",
+      "hedge_stability_review_passed true",
+      "metric_integrity_passed true",
+      "safety_review_passed true"
+    ],
+    "execution_alone_cannot_create_candidate_edge_release_live_capital": true,
+    "required_future_diagnostics": [
+      "pair-level train/validation/holdout gross/net metrics",
+      "monthly validation gross/net",
+      "trade count per pair",
+      "average z-score at entry",
+      "validation null baseline",
+      "hedge beta values from train",
+      "spread mean/std from train",
+      "pair-level consistency",
+      "holdout separately reported"
+    ]
+  },
+  "hedge_ratio_contract": {
+    "hedge_ratio_estimation_window": "train only",
+    "hedge_ratio_reestimation_outside_train": false,
+    "hedge_ratio_reestimation_requires_separate_preregistration": true,
+    "model": "log(A) = alpha + beta * log(B)",
+    "required_future_diagnostics": [
+      "hedge beta values from train",
+      "spread mean and standard deviation from train",
+      "hedge stability review"
+    ],
+    "train_window_end_exclusive_utc": "2024-01-01T00:00:00Z",
+    "train_window_start_utc": "2021-05-01T00:00:00Z"
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_okx_overlap_pairs_trading_log_spread_preregistration_contract_v1.py",
+  "pair_selection_contract": {
+    "no_candidate_generation_from_pair_selection": true,
+    "no_pair_scanning": true,
+    "no_universe_search": true,
+    "pair_count": 2,
+    "pair_selection": "a_priori_not_scanned",
+    "pairs": [
+      {
+        "asset_a": "BTCUSDT",
+        "asset_b": "ETHUSDT",
+        "pair_id": "BTCUSDT_ETHUSDT"
+      },
+      {
+        "asset_a": "SOLUSDT",
+        "asset_b": "AVAXUSDT",
+        "pair_id": "SOLUSDT_AVAXUSDT"
+      }
+    ]
+  },
+  "pairs_trading_hypothesis_preregistration": {
+    "config_count": 1,
+    "config_id": "log_spread_z2_rolling168h_hold24h_btceth_solavax",
+    "diagnostic_only": true,
+    "hypothesis_name": "btc_eth_sol_avax_log_spread_mean_reversion",
+    "hypothesis_statement": "A priori selected crypto pairs may show mean reversion in train-estimated log-price residual spreads. This contract tests only BTCUSDT/ETHUSDT and SOLUSDT/AVAXUSDT using a fixed z-score and holding policy.",
+    "pairs": [
+      {
+        "asset_a": "BTCUSDT",
+        "asset_b": "ETHUSDT",
+        "pair_id": "BTCUSDT_ETHUSDT"
+      },
+      {
+        "asset_a": "SOLUSDT",
+        "asset_b": "AVAXUSDT",
+        "pair_id": "SOLUSDT_AVAXUSDT"
+      }
+    ],
+    "route_family": "BINANCE_OKX_OVERLAP_PAIRS_TRADING_LOG_SPREAD_MEAN_REVERSION_BASELINE",
+    "route_type": "pairwise_relative_value_statistical_arbitrage",
+    "symbol_count": 81,
+    "universe": "Binance/OKX exact overlap 81 Binance symbols"
+  },
+  "payload_sha256_excluding_hash": "74dd0e7e5abe8aaa3c7d99f0c6eccfd53a14084eca7756a5856b88208f01aec7",
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "data_acquisition_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "immediate_next_module_required": false,
+    "live_permission_allowed_now": false,
+    "preregistration_contract_created": true,
+    "project_can_pause_after_preregistration": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false,
+    "strategy_search_allowed_now": false
+  },
+  "signal_construction_contract": {
+    "entry_long_a_short_b_condition": "z <= -2.0",
+    "entry_short_a_long_b_condition": "z >= +2.0",
+    "no_dynamic_exit_threshold": true,
+    "no_parameter_expansion": true,
+    "no_threshold_grid": true,
+    "price_field": "close for signal/spread construction",
+    "rolling_zscore_lookback_hours": 168,
+    "rolling_zscore_uses_only_past_completed_bars_before_entry": true,
+    "row_policy": "complete 1h rows only",
+    "spread": "spread_t = log(A_t) - alpha - beta * log(B_t)"
+  },
+  "source_artifacts": {
+    "panel_build_manifest": {
+      "artifact_kind": "BINANCE_OKX_EXACT_OVERLAP_NEAR_5Y_1M_TO_1H_PANEL_BUILD_MANIFEST",
+      "path": "artifacts/panel_build_manifests/binance_okx_overlap_near_5y_1m_to_1h_panel_build_manifest_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "bf4d4d681f36fab3a2131701e25ebc45c94ddb757f92874498ef425d698f40a7",
+      "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_NEAR_5Y_1M_TO_1H_PANEL_BUILD_EXECUTED"
+    },
+    "panel_review": {
+      "artifact_kind": "BINANCE_OKX_EXACT_OVERLAP_NEAR_5Y_PANEL_BUILD_REVIEW",
+      "path": "artifacts/panel_build_reviews/binance_okx_overlap_near_5y_panel_build_review_after_execution_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "34b88a3ff0870c708e2df034c243cf639b711ebce3c6a4f32edffb92a2229112",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_NEAR_5Y_PANEL_BUILD_REVIEW_AFTER_EXECUTION_CREATED"
+    },
+    "second_source_readiness": {
+      "artifact_kind": "BINANCE_OKX_OVERLAP_NEAR_5Y_SECOND_SOURCE_READINESS_ALIGNMENT_SUMMARY",
+      "path": "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "0cfe239f6f5ad2d20bda64b827416851de8f5b959066902b59f1f00f44eba716",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_NEAR_5Y_SECOND_SOURCE_READINESS_ALIGNMENT_SUMMARY_CREATED"
+    }
+  },
+  "source_checkpoint": {
+    "actual_head_before_preregistration": "2676f8379055cf79214c2f64c0229186fa77b048",
+    "repo_clean_before_preregistration": true,
+    "tracked_python_count_before_preregistration": 853
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_PAIRS_TRADING_LOG_SPREAD_PREREGISTRATION_CONTRACT_CREATED",
+  "validation_checks": {
+    "config_count_is_one": true,
+    "exact_overlap_symbol_count_verified_81": true,
+    "exactly_one_new_tracked_json_preregistration_artifact_expected": true,
+    "exactly_one_new_tracked_python_tool_file_expected": true,
+    "module_path_equals_required_path": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified_expected": true,
+    "no_funding_rows_read": true,
+    "no_network_used": true,
+    "no_other_tracked_files_expected": true,
+    "no_panel_rows_read": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_execution": true,
+    "no_strategy_search": true,
+    "pair_count_is_two": true,
+    "pairs_selected_a_priori_not_scanned": true,
+    "panel_review_passed_verified": true,
+    "payload_sha256_excluding_hash_present": true,
+    "preregistration_artifact_path_equals_required_path": true,
+    "replacement_checks_all_true": true,
+    "required_pair_symbols_present": true,
+    "route_family_count_is_one": true,
+    "source_artifacts_loaded": true,
+    "source_payload_hashes_verified": true,
+    "status_equals_required_status": true
+  }
+}

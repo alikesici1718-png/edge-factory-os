@@ -1,0 +1,311 @@
+{
+  "artifact_kind": "BINANCE_OKX_OVERLAP_FUNDING_CROWDING_REVERSAL_OI_SURGE_FILTER_PREREGISTRATION_CONTRACT",
+  "config_grid": {
+    "config_count": 1,
+    "config_id": "funding_mean9_oi_surge24h_p80_30d_hold24h",
+    "funding_transform": "rolling_mean_9_funding_events",
+    "holding_period_hours": 24,
+    "minimum_long_symbols": 3,
+    "minimum_oi_anomaly_eligible_symbols": 20,
+    "minimum_short_symbols": 3,
+    "no_parameter_expansion_without_new_contract": true,
+    "oi_anomaly": "24h OI change > symbol trailing 30d 80th percentile and > 0"
+  },
+  "forbidden_actions_confirmed_false": {
+    "binance_funding_rows_read": false,
+    "binance_panel_rows_read": false,
+    "boundary_buffer_accessed": false,
+    "candidates_generated": false,
+    "capital_permission_granted": false,
+    "edge_claimed": false,
+    "existing_files_modified_by_module": false,
+    "family_released": false,
+    "funding_data_fetched": false,
+    "funding_rate_endpoint_called": false,
+    "holdout_accessed": false,
+    "live_permission_granted": false,
+    "oi_data_fetched": false,
+    "oi_endpoint_called": false,
+    "okx_panel_rows_read": false,
+    "runtime_permission_granted": false,
+    "strategy_executed": false,
+    "strategy_search_executed": false
+  },
+  "funding_crowding_oi_surge_hypothesis_preregistration": {
+    "critical_interpretation": "This preregistration records a route idea only; execution is blocked until historical OI data availability, acquisition, and review are separately locked.",
+    "hypothesis_name": "funding_crowding_reversal_with_oi_surge_filter",
+    "hypothesis_statement": "Funding crowding reversal is more likely to work when open interest is rising anomalously. A positive open-interest surge indicates that positioning/crowding is actively building. Therefore, low-funding and high-funding extremes should only be traded when the symbol also has a recent OI surge anomaly.",
+    "route_family": "CROSS_SECTIONAL_FUNDING_CROWDING_REVERSAL_OI_SURGE_FILTER_BASELINE",
+    "route_type": "cross_sectional_long_short_funding_crowding_reversal_with_oi_confirmation"
+  },
+  "future_execution_controls": {
+    "execution_blocked_until_oi_data_lock": true,
+    "no_additional_configs": true,
+    "no_boundary_buffer": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_funding_transform_grid": true,
+    "no_holding_period_grid": true,
+    "no_holdout": true,
+    "no_network_during_execution": true,
+    "no_oi_threshold_optimization": true,
+    "no_okx_panel_rows": true,
+    "no_runtime_live_capital": true,
+    "use_aligned_window_only": true,
+    "use_exact_81_symbol_universe": true,
+    "use_reviewed_binance_1h_panel_only": true,
+    "use_reviewed_binance_funding_rate_data_only": true,
+    "use_reviewed_oi_history_data_only": true
+  },
+  "future_metric_and_evaluation_policy": {
+    "diagnostic_promising_requires_all": [
+      "validation_net_metric_bps > 0",
+      "validation_positive_after_cost is true",
+      "null_baseline_review_preliminary_passed is true",
+      "monthly_stability_review_preliminary_passed is true",
+      "turnover_concentration_review_preliminary_passed is true",
+      "oi_anomaly_coverage_review_passed is true",
+      "metric_integrity_passed is true",
+      "safety_review_passed is true"
+    ],
+    "positive_result_still_requires_evaluator_closure_and_governance": true
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_okx_overlap_funding_crowding_reversal_oi_surge_filter_preregistration_contract_v1.py",
+  "oi_anomaly_filter_contract": {
+    "forbidden_without_separate_contract": [
+      "paid/vendor data",
+      "exchange-private data",
+      "inferred OI from price/volume",
+      "reconstructed OI from non-OI fields"
+    ],
+    "no_cross_sectional_oi_threshold_search": true,
+    "no_oi_percentile_grid": true,
+    "no_oi_z_score_grid": true,
+    "oi_anomaly_definition": "oi_change_24h = log(oi_value_t / oi_value_t_minus_24h); require oi_change_24h > 0 and greater than the symbol-local trailing 30 calendar day 80th percentile, using OI observations available with a 1 hour lag",
+    "oi_lookback_for_percentile": "30 calendar days",
+    "oi_observation_lag_hours": 1,
+    "oi_period_preferred": "1h",
+    "primary_oi_field": "sumOpenInterestValue",
+    "primary_oi_field_reason": "sumOpenInterestValue is more comparable across symbols because it is notional-like, while sumOpenInterest is contract/base-unit dependent.",
+    "secondary_oi_field": "sumOpenInterest"
+  },
+  "oi_data_availability_warning": {
+    "binance_current_open_interest_limitation": "Binance current open interest endpoint gives only present open interest.",
+    "binance_open_interest_hist_limitation": "Binance openInterestHist endpoint is documented as providing only latest 1 month of data.",
+    "execution_blocked_until_oi_data_lock": true,
+    "fallback_source_candidate": "Binance openInterestHist endpoint only for future/live-forward or latest-one-month diagnostics, not for the historical aligned window.",
+    "preferred_source_candidate": "Binance public historical OI metrics archive if discoverable and containing symbol/time/sumOpenInterestValue.",
+    "route_not_executable_over_aligned_window_until_oi_lock": true,
+    "this_preregistration_authorizes_execution": false
+  },
+  "payload_sha256_excluding_hash": "11ded46ff57e7343558ac6482d9dd5043981a62c5861f3a7ec0deb73a5abcc0b",
+  "prior_route_closures_preserved": {
+    "latest_funding_carry_route": {
+      "path": "artifacts/strategy_closures/binance_okx_overlap_funding_carry_short_positive_flat_negative_closure_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "198029ab2d5c0bded6f78c1a6d26517b44506f645f572a1dee28734fd70785a6",
+      "result_class_verified": "FUNDING_CARRY_SHORT_POSITIVE_FLAT_NEGATIVE_REJECTED_NO_FOLLOWUP",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_CARRY_SHORT_POSITIVE_FLAT_NEGATIVE_CLOSURE_CREATED"
+    },
+    "latest_group2_route": {
+      "path": "artifacts/strategy_closures/binance_okx_group2_funding_extreme_momentum_confirmed_closure_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "8bddb11159022e8b4d057169ab203a315716f2c310b6a30fe825a774af76e896",
+      "result_class_verified": "GROUP2_FUNDING_EXTREME_MOMENTUM_CONFIRMED_REJECTED_NO_FOLLOWUP",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_GROUP2_FUNDING_EXTREME_MOMENTUM_CONFIRMED_CLOSURE_CREATED"
+    },
+    "prior_funding_extreme_momentum_liquidity_route": {
+      "path": "artifacts/strategy_closures/binance_okx_overlap_funding_extreme_momentum_confirmed_liquidity_filtered_closure_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "a4824ed55c95ab3a0dcfcd1f37d49fffcd1453f3bd69bc1d866edd609da610cc",
+      "result_class_verified": "FUNDING_EXTREME_MOMENTUM_LIQUIDITY_REJECTED_NO_FOLLOWUP",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_EXTREME_MOMENTUM_CONFIRMED_LIQUIDITY_FILTERED_CLOSURE_CREATED"
+    },
+    "prior_plain_funding_route": {
+      "path": "artifacts/strategy_closures/binance_okx_overlap_funding_rate_closure_record_after_evaluator_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "8eacb2decacac50140de27b6c84a9a5338e2473e62ccce54be5d07770a576b02",
+      "result_class_verified": "FUNDING_RATE_CROWDING_REVERSAL_REJECTED_NO_FOLLOWUP",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_RATE_CLOSURE_RECORD_AFTER_EVALUATOR_CREATED"
+    }
+  },
+  "replacement_checks_all_true": true,
+  "repo_scope": {
+    "api_key_used": false,
+    "binance_funding_rows_read": false,
+    "binance_panel_rows_read": false,
+    "candidate_generation": false,
+    "code_changes_repo_only": true,
+    "edge_claim": false,
+    "funding_data_fetched_by_this_module": false,
+    "funding_rate_endpoint_called_by_this_module": false,
+    "oi_data_fetched_by_this_module": false,
+    "oi_endpoint_called_by_this_module": false,
+    "okx_panel_rows_read": false,
+    "preregistration_artifact_created_in_repo": true,
+    "private_api_used": false,
+    "public_network_used": false,
+    "runtime_live_capital": false,
+    "strategy_executed": false
+  },
+  "safety_permissions": {
+    "binance_panel_row_access_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "funding_row_access_allowed_now": false,
+    "holdout_access_allowed_now": false,
+    "immediate_next_module_required": false,
+    "live_permission_allowed_now": false,
+    "oi_data_acquisition_allowed_now": false,
+    "oi_row_access_allowed_now": false,
+    "oi_surge_hypothesis_preregistered": true,
+    "okx_panel_access_allowed_now": false,
+    "preregistration_contract_created": true,
+    "project_can_pause_after_preregistration": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false,
+    "strategy_search_allowed_now": false
+  },
+  "signal_construction_contract": {
+    "base_funding_signal": "rolling_mean_9_funding_events",
+    "funding_direction": "long low/negative funding, short high/positive funding",
+    "funding_lag_hours": 1,
+    "oi_anomaly_filter": "require positive 24h OI change anomaly",
+    "oi_observation_lag_hours": 1,
+    "trading_rule": [
+      "Compute rolling_mean_9_funding_events using funding observations available with 1h lag.",
+      "Compute OI 24h change using OI observations available with 1h lag.",
+      "Compute OI anomaly using symbol-local trailing 30d 80th percentile.",
+      "Restrict to symbols with OI anomaly true.",
+      "Rank remaining symbols by funding signal ascending.",
+      "Long leg: bottom 20 percent funding signal.",
+      "Short leg: top 20 percent funding signal.",
+      "Require at least 20 OI-anomaly eligible symbols.",
+      "Require at least 3 long symbols and 3 short symbols.",
+      "Use equal-weight dollar-neutral long/short spread."
+    ]
+  },
+  "source_artifacts": {
+    "all_source_artifacts_loaded": true,
+    "all_source_payload_hashes_verified": true,
+    "coverage_lock": {
+      "path": "artifacts/coverage_locks/binance_usdt_perpetual_1m_coverage_discovery_lock_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "18a84b71c649b0462fdb0d511597dcb701448fe06184ef9c8da93d6911ada4e0",
+      "status": "PASS_REPO_CODE_ONLY_BINANCE_USDT_PERPETUAL_1M_COVERAGE_DISCOVERY_LOCK_CREATED"
+    },
+    "funding_acquisition_lock": {
+      "path": "artifacts/funding_rate_locks/binance_okx_overlap_funding_rate_data_acquisition_lock_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "dd5877b101c9a1e8d73f35f6032381cbdfd5435578abacf97b9db0c11c28e252",
+      "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_FUNDING_RATE_DATA_ACQUISITION_LOCK_CREATED"
+    },
+    "funding_data_review": {
+      "path": "artifacts/funding_rate_reviews/binance_okx_overlap_funding_rate_data_review_after_acquisition_lock_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "a579feb0472efbf03ffa955008dfabc0b526fa37029fc81dddd0195b4054d849",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_RATE_DATA_REVIEW_AFTER_ACQUISITION_LOCK_CREATED"
+    },
+    "latest_funding_carry_closure": {
+      "path": "artifacts/strategy_closures/binance_okx_overlap_funding_carry_short_positive_flat_negative_closure_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "198029ab2d5c0bded6f78c1a6d26517b44506f645f572a1dee28734fd70785a6",
+      "result_class_verified": "FUNDING_CARRY_SHORT_POSITIVE_FLAT_NEGATIVE_REJECTED_NO_FOLLOWUP",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_CARRY_SHORT_POSITIVE_FLAT_NEGATIVE_CLOSURE_CREATED"
+    },
+    "latest_group2_closure": {
+      "path": "artifacts/strategy_closures/binance_okx_group2_funding_extreme_momentum_confirmed_closure_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "8bddb11159022e8b4d057169ab203a315716f2c310b6a30fe825a774af76e896",
+      "result_class_verified": "GROUP2_FUNDING_EXTREME_MOMENTUM_CONFIRMED_REJECTED_NO_FOLLOWUP",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_GROUP2_FUNDING_EXTREME_MOMENTUM_CONFIRMED_CLOSURE_CREATED"
+    },
+    "no_source_artifact_grants_candidate_edge_release_live_capital": true,
+    "panel_review": {
+      "path": "artifacts/panel_build_reviews/binance_okx_overlap_near_5y_panel_build_review_after_execution_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "34b88a3ff0870c708e2df034c243cf639b711ebce3c6a4f32edffb92a2229112",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_NEAR_5Y_PANEL_BUILD_REVIEW_AFTER_EXECUTION_CREATED"
+    },
+    "prior_funding_extreme_momentum_liquidity_closure": {
+      "path": "artifacts/strategy_closures/binance_okx_overlap_funding_extreme_momentum_confirmed_liquidity_filtered_closure_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "a4824ed55c95ab3a0dcfcd1f37d49fffcd1453f3bd69bc1d866edd609da610cc",
+      "result_class_verified": "FUNDING_EXTREME_MOMENTUM_LIQUIDITY_REJECTED_NO_FOLLOWUP",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_EXTREME_MOMENTUM_CONFIRMED_LIQUIDITY_FILTERED_CLOSURE_CREATED"
+    },
+    "prior_plain_funding_closure": {
+      "path": "artifacts/strategy_closures/binance_okx_overlap_funding_rate_closure_record_after_evaluator_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "8eacb2decacac50140de27b6c84a9a5338e2473e62ccce54be5d07770a576b02",
+      "result_class_verified": "FUNDING_RATE_CROWDING_REVERSAL_REJECTED_NO_FOLLOWUP",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_RATE_CLOSURE_RECORD_AFTER_EVALUATOR_CREATED"
+    },
+    "second_source_readiness": {
+      "path": "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json",
+      "payload_hash_verified": true,
+      "payload_sha256_excluding_hash": "0cfe239f6f5ad2d20bda64b827416851de8f5b959066902b59f1f00f44eba716",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_NEAR_5Y_SECOND_SOURCE_READINESS_ALIGNMENT_SUMMARY_CREATED"
+    }
+  },
+  "source_checkpoint": {
+    "latest_completed_route": "funding_carry_short_positive_flat_negative",
+    "latest_completed_route_result": "FUNDING_CARRY_SHORT_POSITIVE_FLAT_NEGATIVE_REJECTED_NO_FOLLOWUP",
+    "prior_head": "b245a8a18cbd70d019d5186ef9d333618e3cbf14",
+    "prior_tracked_python_count": 829,
+    "project": "Edge Factory OS / Binance OKX overlap funding-crowding OI-surge preregistration",
+    "repo_clean_before_preregistration": true
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_CROWDING_REVERSAL_OI_SURGE_FILTER_PREREGISTRATION_CONTRACT_CREATED",
+  "universe_and_window_contract": {
+    "aligned_window_end_exclusive_utc": "2025-10-31T16:00:00Z",
+    "aligned_window_start_utc": "2023-07-01T00:00:00Z",
+    "exact_overlap_symbol_count": 81,
+    "okx_boundary_buffer_excluded": true,
+    "okx_sealed_holdout_excluded": true,
+    "train_window_end_exclusive_utc": "2025-01-01T00:00:00Z",
+    "train_window_start_utc": "2023-07-01T00:00:00Z",
+    "universe": "Binance/OKX exact overlap 81 Binance symbols",
+    "validation_window_end_exclusive_utc": "2025-10-31T16:00:00Z",
+    "validation_window_start_utc": "2025-01-01T00:00:00Z"
+  },
+  "validation_checks": {
+    "aligned_window_verified": true,
+    "config_count_is_one": true,
+    "config_id_deterministic": true,
+    "exact_overlap_symbol_count_verified_81": true,
+    "exactly_one_new_tracked_json_preregistration_artifact_expected": true,
+    "exactly_one_new_tracked_python_tool_file_expected": true,
+    "execution_blocked_until_oi_data_lock": true,
+    "funding_data_review_loaded": true,
+    "funding_data_valid_for_signal_construction_verified": true,
+    "latest_funding_carry_closure_loaded": true,
+    "latest_funding_carry_closure_rejected_no_followup_verified": true,
+    "module_path_equals_required_path": true,
+    "no_binance_panel_rows_read": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified_expected": true,
+    "no_funding_data_fetched": true,
+    "no_funding_endpoint_called": true,
+    "no_funding_rows_read": true,
+    "no_network_used": true,
+    "no_oi_data_fetched": true,
+    "no_oi_endpoint_called": true,
+    "no_okx_panel_rows_read": true,
+    "no_other_tracked_files_expected": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_execution": true,
+    "oi_data_availability_warning_recorded": true,
+    "payload_sha256_excluding_hash_present": true,
+    "preregistration_artifact_json_valid": true,
+    "preregistration_artifact_path_equals_required_path": true,
+    "prior_funding_closures_loaded": true,
+    "prior_funding_closures_rejected_no_followup_verified": true,
+    "replacement_checks_all_true": true,
+    "route_family_count_is_one": true,
+    "status_equals_required_status": true
+  }
+}

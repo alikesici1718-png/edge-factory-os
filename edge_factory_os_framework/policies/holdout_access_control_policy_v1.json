@@ -1,0 +1,45 @@
+{
+  "policy_name": "edge_factory_os_holdout_access_control_policy_v1",
+  "policy_status": "HOLDOUT_ACCESS_CONTROL_POLICY_READY_ACCESS_BLOCKED",
+  "created_at_utc": "2026-05-14T01:38:24.686616+00:00",
+  "holdout_access_allowed_now": false,
+  "authorized_access_stage": "NONE_CURRENTLY",
+  "required_before_access": [
+    "pre_registered_contract_frozen",
+    "route_budget_spent_and_closed",
+    "search_results_locked",
+    "validation_results_locked",
+    "global_alpha_accounting_pass",
+    "procedural_null_pass",
+    "manual_governance_review_or_os_authorization"
+  ],
+  "forbidden_access_reasons": [
+    "strategy_search",
+    "feature_selection",
+    "threshold_selection",
+    "route_selection",
+    "debugging_strategy_performance",
+    "post_hoc_explanation"
+  ],
+  "access_log_required": true,
+  "release_gate_feed": {
+    "HOLDOUT_ACCESS_CONTROL_READY": true,
+    "HOLDOUT_ACCESS_ALLOWED_NOW": false,
+    "RELEASE_PASS_FROM_ACCESS_CONTROL": false
+  },
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

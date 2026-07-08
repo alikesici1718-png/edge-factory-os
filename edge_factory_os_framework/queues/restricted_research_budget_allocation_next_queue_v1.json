@@ -1,0 +1,42 @@
+{
+  "queue_name": "edge_factory_os_restricted_research_budget_allocation_next_queue_v1",
+  "created_at_utc": "2026-05-14T01:47:10.056062+00:00",
+  "queue_status": "RESTRICTED_RESEARCH_BUDGET_ALLOCATION_NEXT_QUEUE_READY",
+  "research_execution_allowed_now": false,
+  "budget_allocation_created": true,
+  "top_next_research_key": "RD7_08_RESTRICTED_RESEARCH_EXECUTION_GATE",
+  "top_next_module": "edge_factory_os_restricted_research_execution_gate_v1.py",
+  "next_steps": [
+    {
+      "research_key": "RD7_08_RESTRICTED_RESEARCH_EXECUTION_GATE",
+      "module": "edge_factory_os_restricted_research_execution_gate_v1.py",
+      "priority": 100,
+      "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+      "purpose": "Decide whether the restricted pre-registered research runner may be built/executed under tiny research-only budget, without candidates or release.",
+      "research_execution_allowed_now": false,
+      "broad_strategy_search_allowed": false,
+      "candidate_generation_allowed": false,
+      "family_release_allowed": false,
+      "runtime_touch_allowed": false,
+      "capital_change_allowed": false,
+      "active_paper_allowed": false,
+      "live_allowed": false,
+      "real_orders_allowed": false
+    }
+  ],
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

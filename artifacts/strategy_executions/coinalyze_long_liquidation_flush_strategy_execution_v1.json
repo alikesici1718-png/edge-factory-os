@@ -1,0 +1,235 @@
+{
+  "artifact_kind": "COINALYZE_LONG_LIQUIDATION_FLUSH_STRATEGY_EXECUTION",
+  "baseline_results": {
+    "baseline_pass": true,
+    "baseline_percentile": 1.0,
+    "feasible": true,
+    "null_portfolio_net_bps_max": 17.067036196643574,
+    "null_portfolio_net_bps_mean": -53.64568668613375,
+    "null_portfolio_net_bps_median": -47.641514829312264,
+    "null_portfolio_net_bps_min": -132.32328866455302,
+    "observed_portfolio_net_bps": 17.621551177779867,
+    "preserved_trade_count_by_symbol": true,
+    "runs": 100
+  },
+  "daily_or_monthly_results": {
+    "daily_net_bps": {
+      "2026-05-14": -3.4065320154705248,
+      "2026-05-15": -9.51640595227948,
+      "2026-05-16": -4.111716077714547,
+      "2026-05-17": -5.81430536451169,
+      "2026-05-18": -10.750062990479243,
+      "2026-05-19": -5.4759029874049405,
+      "2026-05-20": 18.615692554043243,
+      "2026-05-21": 1.1448001673990569,
+      "2026-05-22": -12.226752190007751,
+      "2026-05-23": 6.6210952836776045,
+      "2026-05-24": -4.741401546799606,
+      "2026-05-25": 16.291359663247402,
+      "2026-05-26": 2.512880562060936,
+      "2026-05-27": 28.478802072019406
+    },
+    "negative_day_count": 8,
+    "positive_day_count": 6,
+    "positive_day_rate": 0.42857142857142855
+  },
+  "dataset_review": {
+    "data_integrity_passed": true,
+    "dataset_symbol_count": 10,
+    "external_dataset_not_modified": true,
+    "integrity_counts": {
+      "duplicate_timestamp_count": 0,
+      "non_monotonic_timestamp_symbols": 0,
+      "rows_missing_close": 0,
+      "rows_missing_liquidation_long": 7159,
+      "rows_missing_oi_change_pct": 10,
+      "rows_missing_open": 0
+    },
+    "timestamp_max": "2026-05-27T19:15:00Z",
+    "timestamp_min": "2026-05-13T19:15:00Z",
+    "total_rows": 13450
+  },
+  "event_definition": {
+    "entry": "next 15m open after signal bar close",
+    "event_key": "LONG_LIQUIDATION_FLUSH_EVENT",
+    "exit": "fixed hold 16 bars, exit at next available 15m open",
+    "liquidation_long": "> 0",
+    "liquidation_long_vs_rolling_median": "liquidation_long >= 3 * rolling_median_liquidation_long_24h",
+    "oi_change_pct": "<= -0.005",
+    "ret_1h_past": "<= -0.01",
+    "rolling_median": {
+      "exclude_current_bar": true,
+      "lookback_bars": 96,
+      "minimum_prior_bars": 48
+    },
+    "stop_loss": null,
+    "take_profit": null
+  },
+  "execution_summary": {
+    "accepted_trade_count": 35,
+    "closed_trade_count": 35,
+    "event_count": 91,
+    "event_strength_summary": {
+      "average_liquidation_ratio": 4806.239367822177,
+      "average_oi_change_pct": -0.011105636686620717,
+      "average_ret_1h_past": -0.015534316760596594,
+      "median_liquidation_ratio": 5298.506172839507
+    },
+    "skipped_due_capacity": 49,
+    "skipped_due_cooldown": 2,
+    "skipped_due_missing_exit_bar": 1,
+    "skipped_due_missing_next_bar": 0,
+    "skipped_due_same_symbol_open": 5
+  },
+  "fee_stress_results": {
+    "fee_stress_2x_net_bps": -17.378448822220136,
+    "fee_stress_3x_net_bps": -52.37844882222015
+  },
+  "limitations": [
+    "Execution uses a short recent Coinalyze free-history dataset and remains diagnostic only.",
+    "This module executes the frozen preregistered rules once and does not optimize thresholds or add filters.",
+    "No candidate, edge claim, runtime permission, live permission, or capital permission is granted."
+  ],
+  "metric_integrity": {
+    "entry_is_next_bar_open": true,
+    "event_uses_only_current_or_past_data": true,
+    "exit_is_fixed_16_bars_later_at_next_available_open": true,
+    "frozen_strategy_key_matches": true,
+    "max_concurrent_positions_lte_3": true,
+    "max_new_positions_per_timestamp_lte_1": true,
+    "metric_integrity_passed": true,
+    "no_api_calls_made": true,
+    "no_api_key_used": true,
+    "no_runtime_live_capital_order_action": true,
+    "no_short_trades": true,
+    "no_stop_or_take_logic": true,
+    "one_open_position_per_symbol": true,
+    "portfolio_bps_uses_base_equity_denominator": true,
+    "preregistration_loaded": true,
+    "rolling_median_excludes_current_bar": true,
+    "symbol_cooldown_enforced": true
+  },
+  "module": "edge_factory_os_repo_only_coinalyze_long_liquidation_flush_strategy_execution_v1",
+  "next_allowed_step": "COINALYZE_LONG_LIQUIDATION_FLUSH_STRATEGY_EVALUATOR_V1",
+  "payload_sha256_excluding_hash": "8f9a9cbc3669e0bd73901a27e2661ed351c01bdc96d61b9d67ac90e57d537b8d",
+  "replacement_checks_all_true": true,
+  "result_classification": "COINALYZE_LONG_LIQUIDATION_FLUSH_EXECUTION_COMPLETE_READY_FOR_EVALUATOR",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "evaluator_allowed_next": true,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_created": true
+  },
+  "source_artifacts": {
+    "dataset_builder": "artifacts/data_builds/coinalyze_recent_oi_liquidation_dataset_builder_v1.json",
+    "event_study": "artifacts/event_studies/coinalyze_liquidation_imbalance_oi_flush_event_study_v1.json",
+    "external_normalized_dataset": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol",
+    "preregistration": "artifacts/research_preregistrations/coinalyze_long_liquidation_flush_strategy_preregistration_v1.json",
+    "strategy_design": "artifacts/research_designs/coinalyze_long_liquidation_flush_strategy_design_v1.json"
+  },
+  "source_checkpoint": "4fbb234f88ac51b992437451bd71bde921924e06",
+  "status": "PASS_REPO_CODE_ONLY_COINALYZE_LONG_LIQUIDATION_FLUSH_STRATEGY_EXECUTED",
+  "strategy_identity": {
+    "candidate_generation": false,
+    "config_id": "coinalyze_long_liquidation_flush_reversal_15m_hold4h_v1",
+    "direction": "long_only",
+    "edge_claim": false,
+    "event_definition_key": "LONG_LIQUIDATION_FLUSH_EVENT",
+    "route_family": "COINALYZE_RECENT_LIQUIDATION_OI_FLUSH_EVENT_REVERSAL",
+    "short_trades_allowed": false,
+    "strategy_key": "COINALYZE_LONG_LIQUIDATION_FLUSH_REVERSAL_V1"
+  },
+  "symbol_concentration": {
+    "symbol_net_pnl": {
+      "APTUSDT": -1.2364408295896512,
+      "ARBUSDT": 1.5956895259363284,
+      "BNBUSDT": 0.10786476504195763,
+      "DOGEUSDT": -2.0797547224360913,
+      "ETHUSDT": 0.4764733169685169,
+      "LINKUSDT": -1.0166200539875623,
+      "OPUSDT": 2.487808054528208,
+      "SOLUSDT": 1.1271029840581894,
+      "XRPUSDT": 0.30003207725809145
+    },
+    "symbol_trade_counts": {
+      "APTUSDT": 9,
+      "ARBUSDT": 2,
+      "BNBUSDT": 2,
+      "DOGEUSDT": 7,
+      "ETHUSDT": 1,
+      "LINKUSDT": 3,
+      "OPUSDT": 5,
+      "SOLUSDT": 4,
+      "XRPUSDT": 2
+    },
+    "top_3_symbol_concentration": 0.6,
+    "top_symbol_concentration": 0.2571428571428571,
+    "top_symbols": [
+      {
+        "share": 0.2571428571428571,
+        "symbol": "APTUSDT",
+        "trade_count": 9
+      },
+      {
+        "share": 0.2,
+        "symbol": "DOGEUSDT",
+        "trade_count": 7
+      },
+      {
+        "share": 0.14285714285714285,
+        "symbol": "OPUSDT",
+        "trade_count": 5
+      },
+      {
+        "share": 0.11428571428571428,
+        "symbol": "SOLUSDT",
+        "trade_count": 4
+      },
+      {
+        "share": 0.08571428571428572,
+        "symbol": "LINKUSDT",
+        "trade_count": 3
+      }
+    ]
+  },
+  "trade_summary": {
+    "accepted_trade_count": 35,
+    "average_gross_pnl_per_trade": 0.15034728907937103,
+    "average_hold_bars": 16.0,
+    "average_loss": -0.5371745099649738,
+    "average_net_pnl_per_trade": 0.05034728907937105,
+    "average_win": 0.49098863836262974,
+    "closed_trade_count": 35,
+    "concurrent_position_average": 0.4163568773234201,
+    "concurrent_position_max": 3,
+    "gross_pnl_usdt": 5.262155117777986,
+    "max_drawdown_bps": -39.074925387858464,
+    "net_pnl_usdt": 1.7621551177779866,
+    "portfolio_net_bps": 17.621551177779867,
+    "profit_factor": 1.218694308223087,
+    "total_cost_usdt": 3.5,
+    "win_rate": 0.5714285714285714
+  },
+  "validation_checks": {
+    "dataset_builder_loaded": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "external_dataset_loaded": true,
+    "external_dataset_not_modified": true,
+    "no_api_call_made": true,
+    "no_api_key_used": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_optimization": true,
+    "no_order_endpoint_used": true,
+    "no_private_exchange_api_used": true,
+    "no_runtime_live_capital": true,
+    "preregistration_loaded": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

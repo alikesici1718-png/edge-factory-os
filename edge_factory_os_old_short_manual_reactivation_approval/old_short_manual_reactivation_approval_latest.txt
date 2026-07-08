@@ -1,0 +1,84 @@
+EDGE FACTORY OS OLD_SHORT MANUAL REACTIVATION APPROVAL v1
+====================================================================================================
+approval_status: OLD_SHORT_MANUAL_REACTIVATION_APPROVAL_READY_FOR_GUARDED_PLAN
+severity: ATTENTION
+allowed_scope: REPO_ONLY_OS_INTELLIGENCE
+final_decision: MANUAL_APPROVAL_RECORDED_BUILD_GUARDED_OLD_SHORT_RUNTIME_REENABLE_PLAN_NEXT
+next_action: BUILD_GUARDED_RUNTIME_REENABLE_PLAN_NO_RUNTIME_EXECUTION_YET
+next_module: edge_factory_os_old_short_guarded_runtime_reenable_plan_v1.py
+
+MANUAL APPROVAL
+----------------------------------------------------------------------------------------------------
+manual_approval_present: True
+manual_approval_valid: True
+approval_text: I explicitly approve repo-only preparation for old_short reactivation gate. Do not enable live trading, real orders, or capital changes. Only prepare a separate guarded runtime re-enable plan for old_short monitoring/active-paper restoration.
+approval_scope: OLD_SHORT_MONITORING_ACTIVE_PAPER_RESTORATION_PLAN_ONLY
+capital_change_approved: False
+live_trading_approved: False
+real_orders_approved: False
+runtime_enable_approved_now: False
+
+PREVIOUS GATE
+----------------------------------------------------------------------------------------------------
+path: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_old_short_reactivation_gate\old_short_reactivation_gate_latest.json
+found: True
+gate_status: OLD_SHORT_REACTIVATION_GATE_BLOCKED_MANUAL_APPROVAL_REQUIRED
+final_decision: DO_NOT_REOPEN_OLD_SHORT_YET_CREATE_EXPLICIT_MANUAL_REACTIVATION_APPROVAL_FIRST
+old_short_can_be_reopened_now: False
+old_short_status: {'old_short_capital_action_allowed': False, 'old_short_capital_ready': False, 'old_short_capital_review_threshold': 50, 'old_short_closed_trades': 20, 'old_short_final_decision': 'OLD_SHORT_MONITORING_READY_CONTINUE_COLLECT_NO_CAPITAL', 'old_short_monitoring_ready': True, 'old_short_next_required_closed_trades_for_capital_review': 30}
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+repo_only: True
+runtime_touch_allowed: False
+launcher_allowed: False
+runtime_patch_allowed: False
+backup_delete_allowed: False
+backup_move_allowed: False
+gitignore_change_allowed: False
+strategy_research_allowed: False
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+file_delete_allowed: False
+file_move_allowed: False
+archive_allowed: False
+execution_allowed: False
+old_short_reactivation_approval_record_allowed: True
+old_short_runtime_enable_allowed_now: False
+
+POLICY GATES
+----------------------------------------------------------------------------------------------------
+REPO_ONLY_APPROVAL_RECORD: PASS
+  observed: True
+  required: True
+  evidence: This module only records explicit manual approval for planning; it does not touch runtime.
+PREVIOUS_REACTIVATION_GATE_FOUND: PASS
+  observed: True
+  required: True
+  evidence: The old_short reactivation gate output must exist before approval is accepted.
+PREVIOUS_GATE_BLOCKED_AS_EXPECTED: PASS
+  observed: OLD_SHORT_REACTIVATION_GATE_BLOCKED_MANUAL_APPROVAL_REQUIRED
+  required: OLD_SHORT_REACTIVATION_GATE_BLOCKED_MANUAL_APPROVAL_REQUIRED
+  evidence: Approval is only valid after the gate blocked due missing manual approval.
+MANUAL_APPROVAL_TEXT_PRESENT: PASS
+  observed: {'approval_present': True, 'approval_valid': True, 'approval_text': 'I explicitly approve repo-only preparation for old_short reactivation gate. Do not enable live trading, real orders, or capital changes. Only prepare a separate guarded runtime re-enable plan for old_short monitoring/active-paper restoration.'}
+  required: {'approval_present': True, 'approval_valid': True}
+  evidence: Explicit approval is recorded for guarded old_short restoration planning only.
+NO_RUNTIME_OR_EXECUTION_ACTION: BLOCKED_AS_REQUIRED
+  observed: {'runtime_touch_allowed': False, 'launcher_allowed': False, 'runtime_patch_allowed': False, 'execution_allowed': False, 'old_short_runtime_enable_allowed_now': False}
+  required: {'runtime_touch_allowed': False, 'launcher_allowed': False, 'runtime_patch_allowed': False, 'execution_allowed': False, 'old_short_runtime_enable_allowed_now': False}
+  evidence: This step does not reopen old_short and does not run any runtime command.
+NO_CAPITAL_LIVE_REAL_ORDER: BLOCKED_AS_REQUIRED
+  observed: {'capital_change_allowed': False, 'live_allowed': False, 'real_orders_allowed': False}
+  required: {'capital_change_allowed': False, 'live_allowed': False, 'real_orders_allowed': False}
+  evidence: Approval does not authorize capital change, live trading, or real orders.
+
+FAILED GATES
+----------------------------------------------------------------------------------------------------
+none

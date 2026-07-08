@@ -1,0 +1,71 @@
+====================================================================================================
+EDGE FACTORY OS STRONGER NULL MODEL BASELINE CONTRACT v1
+====================================================================================================
+contract_status: STRONGER_NULL_MODEL_BASELINE_CONTRACT_READY
+allowed_scope: READ_ONLY_RESEARCH
+next_action: BUILD_STRONGER_NULL_MODEL_BASELINE_RUNNER
+contract_id: STRONGER_NULL_MODEL_BASELINE_CONTRACT_V1_48e30b3afef7ff72_20260513_203242
+contract_hash: 48e30b3afef7ff72
+route_hash: 130c22b78830f69c
+route_hash_blocked: False
+research_key: STRONGER_NULL_MODEL_BASELINE_REBUILD_V1
+direction_queue_key: RD5_04_STRONGER_NULL_MODEL_BASELINE_REBUILD
+plugin_key: STRONGER_NULL_MODEL_BASELINE_PLUGIN_V1
+policy_hash: e4a85ce55a1fdee0
+strict_policy_key: STRICT_MONTH_STABILITY_12_OF_12
+canonical_policy_month_count: 12
+minimum_permutation_runs: 1000
+required_independent_null_models: 8
+next_module: edge_factory_os_stronger_null_model_baseline_runner_v1.py
+
+BASELINE TESTS
+----------------------------------------------------------------------------------------------------
+- within_month_symbol_shuffle
+- cross_section_symbol_resample
+- month_label_permutation
+- time_block_bootstrap
+- side_flip_null
+- hold_period_shuffle
+- feature_rank_shuffle
+- cost_stress_permutation
+
+GATE CAPS
+----------------------------------------------------------------------------------------------------
+max_allowed_strict_12_any_random_hit_rate: 0.01
+max_allowed_null_adjusted_any_random_hit_rate: 0.005
+empirical_p_value_required_lte: 0.01
+minimum_actual_vs_null_margin_bps: 2500.0
+
+REQUIRED RUNNER OUTPUTS
+----------------------------------------------------------------------------------------------------
+- policy_consumption_report
+- guard_consumption_report
+- independent_null_model_inventory
+- permutation_run_summary
+- false_positive_rate_by_null_model
+- strict_12_random_hit_rate_by_null_model
+- null_adjusted_random_hit_rate_by_null_model
+- empirical_p_value_table
+- policy_gate_pass_fail_table
+- recommendation_for_future_plugin_expansion
+- latest_json
+- latest_txt
+- csv_outputs
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

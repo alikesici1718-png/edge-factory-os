@@ -1,0 +1,33 @@
+{
+  "active_paper_allowed": false,
+  "archive_allowed_now": false,
+  "archive_performed": false,
+  "backup_delete_allowed_now": false,
+  "backup_move_allowed_now": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T06:29:27.706183+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "gitignore_modification_allowed_now": false,
+  "known_backup_count": 3,
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "patch_runtime_allowed": false,
+  "policy_name": "edge_factory_os_backup_hygiene_policy_v1",
+  "policy_status": "BACKUP_HYGIENE_POLICY_ACTIVE_NO_DELETE_WITHOUT_APPROVAL",
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "rules": [
+    "Do not delete backup files automatically.",
+    "Do not move backup files automatically.",
+    "Do not modify .gitignore automatically.",
+    "Known technical fix backup may be ignored/deleted only after explicit approval.",
+    "Policy-sensitive patch backup must remain until audit trail is accepted.",
+    "Untracked legacy guard must be classified before any action."
+  ],
+  "runtime_touch_allowed": false
+}

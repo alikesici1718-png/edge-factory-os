@@ -1,0 +1,170 @@
+{
+  "anti_overfit_policy": {
+    "event_study_promising_but_short_window": true,
+    "if_strategy_fails_do_not_retune_same_14_day_dataset": true,
+    "if_strategy_passes_next_step_is_extend_data_or_paper_forward_not_live": true,
+    "no_additional_filters_from_2026_05_event_study": true,
+    "no_edge_claim": true,
+    "no_threshold_tuning": true,
+    "requires_future_lockbox_or_paper_forward_before_any_stronger_claim": true
+  },
+  "artifact_kind": "COINALYZE_LONG_LIQUIDATION_FLUSH_STRATEGY_DESIGN",
+  "economic_mechanism": {
+    "evidence_limit": "The event study used only a short recent Coinalyze window from 2026-05-13T19:15:00Z to 2026-05-27T19:15:00Z, so this is design-only and not evidence of edge.",
+    "summary": "After a strong sell move, a large long liquidation spike plus falling open interest may indicate forced selling exhaustion. After forced selling ends, price may mean-revert upward over 2h to 4h.",
+    "why_not_immediately_arbitraged": [
+      "Liquidation cascades are balance-sheet constrained and uncertain while forced selling is active.",
+      "Participants may not know whether OI has fully flushed until after the event bar closes.",
+      "The rule combines liquidation intensity, OI contraction, and prior price stress rather than a simple price indicator."
+    ]
+  },
+  "entry_exit_rules": {
+    "candidate_ranking": [
+      "liquidation_long / rolling_median_liquidation_long_24h descending",
+      "abs(oi_change_pct) descending",
+      "take one per timestamp until capacity"
+    ],
+    "costs": {
+      "applied_to": "notional",
+      "round_trip_bps": 20
+    },
+    "entry": {
+      "missing_next_bar": "skip",
+      "price": "next 15m open after signal bar",
+      "side": "long"
+    },
+    "exit": {
+      "hold_bars": 16,
+      "hold_duration": "4h",
+      "price": "next available 15m open after hold",
+      "rationale": "Prior event study showed stronger 4h hit rate than 2h; no additional exit tuning.",
+      "stop_loss": null,
+      "take_profit": null,
+      "type": "fixed_hold"
+    },
+    "signal_evaluation": "Evaluate event at 15m bar close."
+  },
+  "frozen_event_definition": {
+    "event_key": "LONG_LIQUIDATION_FLUSH_EVENT",
+    "liquidation_long": "> 0",
+    "liquidation_long_vs_rolling_median": "liquidation_long >= 3 * rolling_median_liquidation_long_24h",
+    "oi_change_pct": "<= -0.005",
+    "ret_1h_past": "<= -0.01",
+    "rolling_median_lookback": {
+      "bars": 96,
+      "duration": "24h",
+      "exclude_current_bar": true,
+      "minimum_prior_bars": 48
+    },
+    "threshold_source": "round structural thresholds from prior event study; no bucket tuning."
+  },
+  "future_execution_pass_criteria": {
+    "average_net_per_trade": "> 0",
+    "closed_trades_minimum_for_interpretable_diagnostic": 20,
+    "diagnostic_scope_only": true,
+    "edge_claim_allowed_if_passed": false,
+    "live_or_capital_allowed_if_passed": false,
+    "metric_integrity": true,
+    "monthly_or_daily_stability": "evaluate if feasible",
+    "net_bps": "> 0",
+    "random_same_symbol_timestamp_baseline_percentile": ">= 0.80",
+    "top_symbol_concentration": "<= 0.40"
+  },
+  "future_result_classes": [
+    "COINALYZE_LONG_LIQUIDATION_FLUSH_REVERSAL_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+    "COINALYZE_LONG_LIQUIDATION_FLUSH_REVERSAL_REJECTED_NO_FOLLOWUP",
+    "COINALYZE_LONG_LIQUIDATION_FLUSH_REVERSAL_INCONCLUSIVE_LOW_SAMPLE",
+    "COINALYZE_LONG_LIQUIDATION_FLUSH_REVERSAL_INVALIDATED_BY_DATA_OR_INTEGRITY_FAILURE"
+  ],
+  "limitations": [
+    "Design only; no strategy execution, signals, backtest, PnL, or candidate was produced.",
+    "The selected event is based on a 14-day recent Coinalyze event study and is not long-history evidence.",
+    "No additional filters are introduced because that would tune on the same short event-study window."
+  ],
+  "module": "edge_factory_os_repo_only_coinalyze_long_liquidation_flush_strategy_design_v1",
+  "next_allowed_step": "COINALYZE_LONG_LIQUIDATION_FLUSH_STRATEGY_PREREGISTRATION_V1",
+  "payload_sha256_excluding_hash": "b51def118b44520f389cac49f713a421ed1433b0a2c4bd1780882a6d51c09c45",
+  "portfolio_rules": {
+    "base_equity_usdt": 1000,
+    "compounding_allowed": false,
+    "fixed_notional_usdt": 50,
+    "leverage_allowed": false,
+    "max_concurrent_positions": 3,
+    "max_new_positions_per_timestamp": 1,
+    "one_open_position_per_symbol": true,
+    "symbol_cooldown_after_exit": {
+      "bars": 16,
+      "duration": "4h"
+    }
+  },
+  "preregistered_strategy_design": {
+    "config_id": "coinalyze_long_liquidation_flush_reversal_15m_hold4h_v1",
+    "one_config_rule": "Trade only long reversal after LONG_LIQUIDATION_FLUSH_EVENT.",
+    "parameter_grid_allowed": false,
+    "route_family": "COINALYZE_RECENT_LIQUIDATION_OI_FLUSH_EVENT_REVERSAL",
+    "short_trades_allowed": false,
+    "strategy_key": "COINALYZE_LONG_LIQUIDATION_FLUSH_REVERSAL_V1",
+    "threshold_optimization_allowed": false,
+    "trade_side": "long_only",
+    "uses_imbalance_event_directly": false,
+    "uses_short_liquidation_event": false
+  },
+  "prior_event_study_summary": {
+    "commit": "d0c4289711931bc887f118f52489482492db6e1c",
+    "dataset_symbol_count": 10,
+    "imbalance_oi_flush_event_count": 203,
+    "long_liq_flush_event_count": 91,
+    "next_allowed_step": "COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_PREREGISTERED_STRATEGY_DESIGN_V1",
+    "result_classification": "COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT_STUDY_PROMISING_FOR_PREREGISTRATION",
+    "selected_event_2h_hit_rate": 0.5494505494505495,
+    "selected_event_4h_hit_rate": 0.6483516483516484,
+    "selected_event_baseline_percentile": 1.0,
+    "selected_event_count": 91,
+    "short_liq_flush_event_count": 25,
+    "status": "PASS_REPO_ONLY_COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT_STUDY_CREATED",
+    "total_rows": 13450
+  },
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "strategy_design_created": true,
+    "strategy_execution_allowed_now": false
+  },
+  "selected_hypothesis": {
+    "hypothesis_key": "LONG_LIQUIDATION_FLUSH_EVENT",
+    "selected_for_design": true,
+    "selection_reason": "Best event type from prior event study with 91 events, 0.648352 4h expected-direction hit rate, and 1.0 same-symbol timestamp baseline percentile."
+  },
+  "source_artifacts": {
+    "event_study": "artifacts/event_studies/coinalyze_liquidation_imbalance_oi_flush_event_study_v1.json"
+  },
+  "source_checkpoint": "d0c4289711931bc887f118f52489482492db6e1c",
+  "status": "PASS_REPO_ONLY_COINALYZE_LONG_LIQUIDATION_FLUSH_STRATEGY_DESIGN_CREATED",
+  "validation_checks": {
+    "event_study_loaded": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_call_made": true,
+    "no_api_key_used": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_optimization": true,
+    "no_pnl_computation": true,
+    "no_runtime_live_capital": true,
+    "no_signal_generation": true,
+    "no_strategy_execution": true,
+    "promising_event_verified": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "selected_hypothesis_verified_long_liquidation_flush": true
+  }
+}

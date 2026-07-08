@@ -1,0 +1,58 @@
+====================================================================================================
+EDGE FACTORY OS NULL MODEL PERMUTATION BASELINE CONTRACT v1
+====================================================================================================
+contract_status: CONTRACT_READY
+allowed_scope: READ_ONLY_RESEARCH
+next_action: BUILD_NULL_MODEL_PERMUTATION_BASELINE_RUNNER
+contract_id: NULL_MODEL_PERMUTATION_BASELINE_CONTRACT_V1_206960555cc359be_20260513_202543
+contract_hash: 206960555cc359be
+research_key: NULL_MODEL_AND_PERMUTATION_BASELINE_V1
+direction_queue_key: RD5_02_NULL_MODEL_AND_PERMUTATION_BASELINE
+plugin_key: NULL_MODEL_PERMUTATION_BASELINE_PLUGIN_V1
+route_hash: 8eff441193c814fb
+strict_policy_key: STRICT_MONTH_STABILITY_12_OF_12
+canonical_policy_month_count: 12
+next_module: edge_factory_os_null_model_permutation_baseline_runner_v1.py
+
+BASELINE TESTS
+----------------------------------------------------------------------------------------------------
+- random_feature_decile_baseline
+- within_month_symbol_shuffle_baseline
+- month_label_permutation_baseline
+- time_block_permutation_baseline
+- side_flip_baseline
+- hold_period_shuffle_baseline
+- cost_perturbation_baseline
+- feature_rank_shuffle_baseline
+
+REQUIRED OUTPUTS
+----------------------------------------------------------------------------------------------------
+- guard_consumption_report
+- permutation_run_summary
+- baseline_false_positive_rate
+- strict_12_random_hit_rate
+- null_adjusted_random_hit_rate
+- feature_vs_null_threshold_table
+- empirical_p_value_table
+- recommendation_for_plugin_expansion
+- latest_json
+- latest_txt
+- csv_outputs
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

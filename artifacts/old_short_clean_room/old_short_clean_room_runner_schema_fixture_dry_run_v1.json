@@ -1,0 +1,182 @@
+{
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_SCHEMA_FIXTURE_DRY_RUN_CREATED",
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_SCHEMA_FIXTURE_DRY_RUN",
+  "module": "edge_factory_os_repo_only_old_short_clean_room_runner_schema_fixture_dry_run_v1",
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-26T07:05:37Z",
+    "git_head": "82da1d17f87846ad611322a0dd47996f3f6ae86b",
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "preflight_repo_status": {
+      "repo_clean_before_run": true,
+      "dirty_tracked_before_run": [],
+      "allowed_pending_before_run": [
+        "?? tools/edge_factory_os_repo_only_old_short_clean_room_runner_schema_fixture_dry_run_v1.py"
+      ],
+      "no_existing_repo_files_modified": true,
+      "target_tool_present_as_new_untracked_file": true,
+      "target_artifact_preexisting_before_run": false
+    }
+  },
+  "source_artifacts": {
+    "clean_room_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REBUILD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_CONTRACT_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "02d0c3ff2f905be2df695a7ca52bfd931c94a4720cb3c883f8fd5d7ad00f5e6d",
+      "replacement_checks_all_true": true
+    },
+    "runner_dry_run_design": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_dry_run_design_v1.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_DESIGN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_DESIGN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "e5a73d750033e5cce8d8ababece2f8f383860c740fc1bfd4e5be1434662e2c56",
+      "replacement_checks_all_true": true
+    },
+    "runner_dry_run_implementation_preview": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_dry_run_implementation_preview_v1.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_IMPLEMENTATION_PREVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_IMPLEMENTATION_PREVIEW_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "1232ad3cce1e2e23a6f7907c07abc3d6a1b4ba8621efa7d6420d77b679ac8c4a",
+      "replacement_checks_all_true": true
+    },
+    "schema_sample_generator_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_schema_sample_generator_dry_run_v1.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_SCHEMA_SAMPLE_GENERATOR_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_SCHEMA_SAMPLE_GENERATOR_DRY_RUN_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "5d7831982683bfe98102ba47306112535c2e753a4026fe5609def5eb53e58a14",
+      "replacement_checks_all_true": true
+    },
+    "validator_bounded_sample_v2": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_validator_bounded_sample_dry_run_v2.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_VALIDATOR_BOUNDED_SAMPLE_DRY_RUN_V2",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_VALIDATOR_BOUNDED_SAMPLE_DRY_RUN_V2_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "8c3ee5cf12e299234a7c62392ed07f50129e18409e145d892cdfc4ad931fea0e",
+      "replacement_checks_all_true": true
+    }
+  },
+  "dry_run_mode": "SCHEMA_FIXTURE_DRY_RUN",
+  "output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\schema_fixture_dry_run_v1",
+  "generated_files": [
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\schema_fixture_dry_run_v1\\signals.csv",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\schema_fixture_dry_run_v1\\pending_entries.csv",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\schema_fixture_dry_run_v1\\open_positions.csv",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\schema_fixture_dry_run_v1\\closed_trades.csv",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\schema_fixture_dry_run_v1\\rejected_entries.csv",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\schema_fixture_dry_run_v1\\heartbeat.csv",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\schema_fixture_dry_run_v1\\state.json"
+  ],
+  "generated_row_counts": {
+    "signals.csv": 1,
+    "pending_entries.csv": 1,
+    "open_positions.csv": 1,
+    "closed_trades.csv": 1,
+    "rejected_entries.csv": 1,
+    "heartbeat.csv": 1,
+    "state.json": 1
+  },
+  "safety_label_audit": {
+    "required_labels": [
+      "GENERATED_BY_CLEAN_ROOM",
+      "NOT_ORIGINAL_OLD_SHORT",
+      "PAPER_ONLY",
+      "NOT_LIVE",
+      "NOT_EDGE_EVIDENCE",
+      "SYNTHETIC_SCHEMA_FIXTURE",
+      "NOT_BACKTEST",
+      "NOT_REAL_TRADE"
+    ],
+    "all_generated_rows_labeled": true,
+    "state_object_labeled": true,
+    "safety_labels_present": true
+  },
+  "schema_fixture_summary": {
+    "output_file_count": 7,
+    "total_synthetic_rows": 7,
+    "signals_rows": 1,
+    "pending_entries_rows": 1,
+    "open_positions_rows": 1,
+    "closed_trades_rows": 1,
+    "rejected_entries_rows": 1,
+    "heartbeat_rows": 1,
+    "state_object_count": 1,
+    "synthetic_entry_delay_minutes": 2,
+    "synthetic_hold_minutes": 120,
+    "synthetic_notional_usdt": 50,
+    "schema_fixture_only": true,
+    "real_signal_claim": false,
+    "real_trade_claim": false,
+    "pnl_evidence_claim": false,
+    "market_data_used": false
+  },
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence"
+  ],
+  "result_classification": "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_SCHEMA_PASS_NO_EDGE_NO_LIVE",
+  "next_allowed_step": {
+    "step": "OLD_SHORT_CLEAN_ROOM_RUNNER_SCHEMA_FIXTURE_VALIDATOR_CHECK_V1",
+    "bounded_schema_fixture_only": true,
+    "real_signal_generation_allowed": false,
+    "market_data_allowed": false,
+    "backtest_allowed": false,
+    "runtime_allowed": false,
+    "live_allowed": false,
+    "capital_allowed": false,
+    "candidate_generation_allowed": false,
+    "edge_claim_allowed": false
+  },
+  "safety_permissions": {
+    "runner_schema_fixture_dry_run_created": true,
+    "runner_execution_allowed_now": false,
+    "real_signal_generation_allowed_now": false,
+    "backtest_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "prior_runner_dry_run_implementation_preview_loaded": true,
+    "dry_run_mode_schema_fixture_only": true,
+    "no_raw_market_data_read": true,
+    "no_okx_1m_data_read": true,
+    "no_network_used": true,
+    "no_api_called": true,
+    "no_real_signal_generation": true,
+    "no_backtest_run": true,
+    "no_runtime_touched": true,
+    "no_monitor_enabled": true,
+    "no_orders_placed": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "external_output_root_used": true,
+    "no_master_upper_system_modified": true,
+    "no_runtime_directory_modified": true,
+    "all_7_output_files_created": true,
+    "safety_labels_present": true,
+    "unresolved_fields_preserved": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_repo_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "4dd3d7a76bac35dd2c873542ddc10f4223c39543888653ed701ebb26a044807a"
+}

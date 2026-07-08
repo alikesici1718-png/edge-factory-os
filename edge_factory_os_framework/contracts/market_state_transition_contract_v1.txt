@@ -1,0 +1,91 @@
+====================================================================================================
+EDGE FACTORY OS MARKET STATE TRANSITION CONTRACT v1
+====================================================================================================
+contract_status: MARKET_STATE_TRANSITION_CONTRACT_READY
+allowed_scope: READ_ONLY_RESEARCH
+next_action: BUILD_MARKET_STATE_TRANSITION_RUNNER
+contract_id: MARKET_STATE_TRANSITION_CONTRACT_V1_97c3549237fe5e14_20260513_213905
+contract_hash: 97c3549237fe5e14
+route_hash: ec2550ab1d3cfcff
+route_hash_blocked: False
+source_failed_route_hash: a7111fc8752a3e15
+source_failed_decision_class: ANOMALY_PREVIEW_FAILED_DEEP_VALIDATION_UNSTABLE_AND_NULL_UNSAFE
+research_key: OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH_V1
+direction_queue_key: RD6_02_OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH
+plugin_key: MARKET_STATE_TRANSITION_PLUGIN_V1
+policy_hash: e4a85ce55a1fdee0
+source_panel_path: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_feature_panels\post_impulse_drift_long_v1\post_impulse_drift_long_v1_feature_panel_1h_dynamic.parquet
+source_panel_exists: True
+state_feature_group_count: 5
+transition_method_count: 8
+negative_control_count: 8
+release_allowed: False
+next_module: edge_factory_os_market_state_transition_runner_v1.py
+
+STATE FEATURE GROUPS
+----------------------------------------------------------------------------------------------------
+- market_volatility_state: Outcome-agnostic volatility/range regime state using current and historical candle/range features only.
+- market_liquidity_state: Liquidity/participation state using volume/quote-volume/turnover style features.
+- cross_sectional_dispersion_state: Cross-sectional dispersion/breadth state across symbols at each timestamp.
+- market_beta_residual_state: Coin-vs-market residual or co-movement state without using forward returns.
+- time_structure_state: Intraday/day-of-week transition structure as control or state descriptor.
+
+TRANSITION METHODS
+----------------------------------------------------------------------------------------------------
+- rolling_state_quantile_bucket_transition
+- cross_sectional_state_rank_transition
+- volatility_liquidity_joint_transition
+- state_persistence_break_detection
+- state_transition_matrix_asymmetry
+- state_duration_and_reentry_profile
+- state_change_point_candidate_scan
+- state_cluster_transition_graph
+
+NEGATIVE CONTROLS
+----------------------------------------------------------------------------------------------------
+- timestamp_shuffle_control
+- month_shuffle_control
+- symbol_shuffle_control
+- state_label_permutation_control
+- transition_direction_flip_control
+- feature_group_shuffle_control
+- calendar_block_shuffle_control
+- null_transition_matrix_control
+
+HARD REQUIREMENTS
+----------------------------------------------------------------------------------------------------
+- read full source panel parquet
+- consume failed anomaly deep validation state
+- consume framework status panel
+- consume true source-panel null baseline state
+- consume research gate policy
+- consume data quality guard feed
+- consume route blocklist
+- prove route hash not blocked
+- prove material difference from failed source-panel anomaly route
+- exclude future return/pnl/outcome/label features from state discovery
+- build outcome-agnostic market state features
+- build state transition summaries across canonical 12 months
+- run negative controls
+- run true source-panel null replay before signal claim
+- produce policy gate table
+- keep plugin expansion false
+- keep candidate/family/runtime/capital/live false
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

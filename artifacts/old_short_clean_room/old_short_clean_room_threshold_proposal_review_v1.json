@@ -1,0 +1,472 @@
+{
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW",
+  "evidence_basis_review": {
+    "evidence_quality_recorded": true,
+    "family_reviews": {
+      "blowoff_short": {
+        "direction_notes": [
+          "emitted evidence shows negative short-window return direction for signal_ret1_bps, signal_ret3_bps, signal_ret5_bps; dry-run preserves observed behavior instead of inventing positive thresholds"
+        ],
+        "entry_confirmation_features_limited": [
+          "entry_range_bps",
+          "entry_vol_quote"
+        ],
+        "evidence_quality": "limited",
+        "evidence_quality_recorded": true,
+        "feature_evidence_references_quantiles_or_summaries": true,
+        "features_with_evidence_basis": [
+          "entry_range_bps",
+          "entry_vol_quote",
+          "signal_range_bps",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote"
+        ],
+        "features_with_missing_field_records": [
+          "entry_range_bps",
+          "entry_vol_quote",
+          "signal_range_bps",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote"
+        ],
+        "features_with_quantile_references": [
+          "entry_range_bps",
+          "entry_vol_quote",
+          "signal_range_bps",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote"
+        ],
+        "missing_fields_recorded": true
+      },
+      "mean_reversion_short": {
+        "direction_notes": [],
+        "entry_confirmation_features_limited": [
+          "entry_range_bps",
+          "entry_vol_quote"
+        ],
+        "evidence_quality": "limited",
+        "evidence_quality_recorded": true,
+        "feature_evidence_references_quantiles_or_summaries": true,
+        "features_with_evidence_basis": [
+          "entry_range_bps",
+          "entry_vol_quote",
+          "signal_range_bps",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote"
+        ],
+        "features_with_missing_field_records": [
+          "entry_range_bps",
+          "entry_vol_quote",
+          "signal_range_bps",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote"
+        ],
+        "features_with_quantile_references": [
+          "entry_range_bps",
+          "entry_vol_quote",
+          "signal_range_bps",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote"
+        ],
+        "missing_fields_recorded": true
+      }
+    },
+    "feature_evidence_references_quantiles_or_summaries": true,
+    "missing_fields_recorded": true,
+    "unresolved_fields_preserved": true
+  },
+  "family_coverage_review": {
+    "blowoff_short_proposal_exists": true,
+    "both_family_proposals_exist": true,
+    "both_short_only": true,
+    "family_reviews": {
+      "blowoff_short": {
+        "expected_feature_group": [
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_range_bps",
+          "signal_vol_quote",
+          "entry_range_bps",
+          "entry_vol_quote"
+        ],
+        "feature_groups_preserved": true,
+        "missing_feature_group_members": [],
+        "observed_threshold_rule_features": [
+          "entry_range_bps",
+          "entry_vol_quote",
+          "signal_range_bps",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote"
+        ],
+        "proposal_exists": true,
+        "short_only": true,
+        "side": "short"
+      },
+      "mean_reversion_short": {
+        "expected_feature_group": [
+          "signal_ret60_bps",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_range_bps",
+          "signal_vol_quote",
+          "entry_range_bps",
+          "entry_vol_quote"
+        ],
+        "feature_groups_preserved": true,
+        "missing_feature_group_members": [],
+        "observed_threshold_rule_features": [
+          "entry_range_bps",
+          "entry_vol_quote",
+          "signal_range_bps",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote"
+        ],
+        "proposal_exists": true,
+        "short_only": true,
+        "side": "short"
+      }
+    },
+    "known_feature_groups_preserved": true,
+    "mean_reversion_short_proposal_exists": true
+  },
+  "forbidden_evidence_review": {
+    "closed_trade_profitability_used": false,
+    "forbidden_evidence_used": false,
+    "forbidden_optimization_used": false,
+    "forbidden_terms_reviewed": [
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "PnL",
+        "used_for_threshold_review": false
+      },
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "net_ret",
+        "used_for_threshold_review": false
+      },
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "pnl",
+        "used_for_threshold_review": false
+      },
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "stress_pnl",
+        "used_for_threshold_review": false
+      },
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "win/loss",
+        "used_for_threshold_review": false
+      },
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "validation return",
+        "used_for_threshold_review": false
+      },
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "holdout return",
+        "used_for_threshold_review": false
+      },
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "monthly stability selection",
+        "used_for_threshold_review": false
+      },
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "grid search",
+        "used_for_threshold_review": false
+      },
+      {
+        "basis": "prior dry-run forbidden optimization checks and labels were false",
+        "term": "threshold optimization",
+        "used_for_threshold_review": false
+      }
+    ],
+    "monthly_stability_selection_used": false,
+    "pnl_fields_used_for_thresholds": false,
+    "review_passed": true,
+    "threshold_grid_search_used": false,
+    "threshold_optimization_used": false,
+    "validation_or_holdout_returns_used": false
+  },
+  "module": {
+    "code_changed": true,
+    "created_files": [
+      "tools/edge_factory_os_repo_only_old_short_clean_room_threshold_proposal_review_v1.py",
+      "artifacts/old_short_clean_room/old_short_clean_room_threshold_proposal_review_v1.json"
+    ],
+    "modified_existing_files": [],
+    "path": "tools/edge_factory_os_repo_only_old_short_clean_room_threshold_proposal_review_v1.py",
+    "standard_library_only": true
+  },
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_V1",
+  "payload_sha256_excluding_hash": "bc0e5a2994a978b582488bfeb3d05f1898836ced3d6684474d6c7cedbd68ccda",
+  "prior_proposal_preserved": {
+    "family_proposal_count": 2,
+    "forbidden_optimization_used": false,
+    "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW_V1",
+    "next_allowed_step_verified": true,
+    "pnl_fields_used_for_thresholds": false,
+    "proposal_family_count_verified_2": true,
+    "result_classification": "THRESHOLD_BEHAVIORAL_PROPOSAL_PARTIAL_NO_EDGE_NO_LIVE",
+    "result_classification_partial_or_ready": true,
+    "route_key": "old_short_clean_room_v1",
+    "route_key_verified": true,
+    "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN_CREATED",
+    "status_verified": true
+  },
+  "proposal_label_review": {
+    "family_reviews": {
+      "blowoff_short": {
+        "labels": [
+          "BEHAVIORAL_RECONSTRUCTION_THRESHOLD",
+          "NOT_ORIGINAL_THRESHOLD",
+          "NOT_PNL_OPTIMIZED",
+          "NOT_EDGE_EVIDENCE",
+          "NO_LIVE_CAPITAL"
+        ],
+        "labels_verified": true,
+        "missing_labels": [],
+        "proposal_exists": true,
+        "required_labels": [
+          "BEHAVIORAL_RECONSTRUCTION_THRESHOLD",
+          "NOT_ORIGINAL_THRESHOLD",
+          "NOT_PNL_OPTIMIZED",
+          "NOT_EDGE_EVIDENCE",
+          "NO_LIVE_CAPITAL"
+        ]
+      },
+      "mean_reversion_short": {
+        "labels": [
+          "BEHAVIORAL_RECONSTRUCTION_THRESHOLD",
+          "NOT_ORIGINAL_THRESHOLD",
+          "NOT_PNL_OPTIMIZED",
+          "NOT_EDGE_EVIDENCE",
+          "NO_LIVE_CAPITAL"
+        ],
+        "labels_verified": true,
+        "missing_labels": [],
+        "proposal_exists": true,
+        "required_labels": [
+          "BEHAVIORAL_RECONSTRUCTION_THRESHOLD",
+          "NOT_ORIGINAL_THRESHOLD",
+          "NOT_PNL_OPTIMIZED",
+          "NOT_EDGE_EVIDENCE",
+          "NO_LIVE_CAPITAL"
+        ]
+      }
+    },
+    "proposal_labels_verified": true
+  },
+  "proposal_limitations_review": {
+    "not_edge_evidence": true,
+    "not_exact_original": true,
+    "not_live_capital_ready": true,
+    "original_exact_thresholds_unknown_preserved": true,
+    "proposal_is_behavioral_reconstruction": true,
+    "proposal_limitations": [
+      "Behavioral threshold proposal dry-run only; not original threshold recovery.",
+      "Quantiles are descriptive evidence from emitted old_short rows and are not PnL selected.",
+      "No runner, validator, signal generation, backtest, raw market data, runtime, monitor, API, live, or capital action was used.",
+      "Both family proposals are marked limited because entry confirmation evidence is sparse; blowoff_short short-window direction differs from the positive-pressure goal text in emitted evidence."
+    ]
+  },
+  "replacement_checks_all_true": true,
+  "result_classification": "THRESHOLD_PROPOSAL_REVIEW_PASS_WITH_P1_ATTENTION_NO_EDGE_NO_LIVE",
+  "review_findings": {
+    "p0_findings": [],
+    "p0_issue_count": 0,
+    "p1_attention_count": 4,
+    "p1_findings": [
+      {
+        "finding": "prior proposal classification is partial",
+        "severity": "P1"
+      },
+      {
+        "families": [
+          "blowoff_short",
+          "mean_reversion_short"
+        ],
+        "finding": "family evidence quality is limited",
+        "severity": "P1"
+      },
+      {
+        "families": [
+          "blowoff_short",
+          "mean_reversion_short"
+        ],
+        "finding": "entry confirmation fields are sparsely observed",
+        "severity": "P1"
+      },
+      {
+        "families": [
+          "blowoff_short"
+        ],
+        "finding": "direction note preserved for review attention",
+        "severity": "P1"
+      }
+    ],
+    "summary": "P1 attention retained because prior proposal was partial and evidence quality is limited."
+  },
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "runner_execution_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "threshold_proposal_review_created": true,
+    "threshold_selection_allowed_now": false
+  },
+  "source_artifacts": {
+    "old_short_clean_room_contract": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REBUILD_CONTRACT",
+      "exists": true,
+      "loaded": true,
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "payload_sha256_excluding_hash": "02d0c3ff2f905be2df695a7ca52bfd931c94a4720cb3c883f8fd5d7ad00f5e6d",
+      "replacement_checks_all_true": true,
+      "required": false,
+      "route_key": null,
+      "sha256": "dc04d75bdd5882a2952a0a1e0a3ce7855d736d4b6882b689dcc20b41fc7cc68d",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_CONTRACT_CREATED"
+    },
+    "old_short_clean_room_runner_preview": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW",
+      "exists": true,
+      "loaded": true,
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_preview_v1.json",
+      "payload_sha256_excluding_hash": "31f36fb36bc02fe059faa3fccb141074afe5f12f4e49933de6ee82cd0acd767b",
+      "replacement_checks_all_true": true,
+      "required": false,
+      "route_key": null,
+      "sha256": "3689b60472bff3734499542c487bcaeae38caaa30d067569321f3fbecb1dc1d1",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW_CREATED"
+    },
+    "threshold_behavioral_proposal_contract": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_CONTRACT",
+      "exists": true,
+      "loaded": true,
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_contract_v1.json",
+      "payload_sha256_excluding_hash": "f61bf16346618b7e0677d080cbd975ab86552abe33dd559158aa94f32481df6a",
+      "replacement_checks_all_true": true,
+      "required": true,
+      "route_key": "old_short_clean_room_v1",
+      "sha256": "a766daa52bcbb760d594bbb9edc661a77b006d3841472c8245a49d3ba4bc719a",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_CONTRACT_CREATED"
+    },
+    "threshold_behavioral_proposal_dry_run": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN",
+      "exists": true,
+      "loaded": true,
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_dry_run_v1.json",
+      "payload_sha256_excluding_hash": "9cf7be3706095fa4e8c8bfd4586e40a4714631250118fd67cc4d94cb47f62461",
+      "replacement_checks_all_true": true,
+      "required": true,
+      "route_key": "old_short_clean_room_v1",
+      "sha256": "63220c1cce0a22b83dbc630599a23e5855cd682c0d0dec19d2a799841c4a15ff",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN_CREATED"
+    },
+    "threshold_evidence_extraction_dry_run": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_EVIDENCE_EXTRACTION_DRY_RUN",
+      "exists": true,
+      "loaded": true,
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_evidence_extraction_dry_run_v1.json",
+      "payload_sha256_excluding_hash": "75a4bfffc8365e9246bc9f818cbdab2a6cfaabbe5c38bc41999e6f0e9d6c1246",
+      "replacement_checks_all_true": true,
+      "required": true,
+      "route_key": "old_short_clean_room_v1",
+      "sha256": "22daf9b25585c339d4767c97ecc54d18077127fd3bba7800c7768745d0f0c9b8",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_EVIDENCE_EXTRACTION_DRY_RUN_CREATED"
+    },
+    "threshold_reconstruction_contract": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_RECONSTRUCTION_CONTRACT",
+      "exists": true,
+      "loaded": true,
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_reconstruction_contract_v1.json",
+      "payload_sha256_excluding_hash": "ba311d58bfefafd6eff14371a49eb3cbf9e8cd178688eb3431cbb2f71702605c",
+      "replacement_checks_all_true": true,
+      "required": true,
+      "route_key": "old_short_clean_room_v1",
+      "sha256": "77a613949a36c3edfd48033296ef4bb0eed3110e88b2296e5149db2301bf47b0",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_RECONSTRUCTION_CONTRACT_CREATED"
+    }
+  },
+  "source_checkpoint": {
+    "actual_head": "858c39cdde7b65068ed42c1cda02637213f05daf",
+    "actual_tracked_python_count": 947,
+    "allowed_dirty_paths_at_build": [
+      "artifacts/old_short_clean_room/old_short_clean_room_threshold_proposal_review_v1.json",
+      "tools/edge_factory_os_repo_only_old_short_clean_room_threshold_proposal_review_v1.py"
+    ],
+    "dirty_paths_at_build": [
+      "artifacts/old_short_clean_room/old_short_clean_room_threshold_proposal_review_v1.json",
+      "tools/edge_factory_os_repo_only_old_short_clean_room_threshold_proposal_review_v1.py"
+    ],
+    "expected_head": "858c39cdde7b65068ed42c1cda02637213f05daf",
+    "expected_tracked_python_count": 947,
+    "repo_clean_before_run": true,
+    "unexpected_dirty_paths_at_build": []
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_PROPOSAL_REVIEW_CREATED",
+  "validation_checks": {
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "forbidden_evidence_not_used": true,
+    "forbidden_optimization_false_verified": true,
+    "no_api_called": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_edge_live_capital_permission": true,
+    "no_existing_files_modified": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_pnl_computation": true,
+    "no_runner_execution": true,
+    "no_runtime_live_capital": true,
+    "no_runtime_touched": true,
+    "no_signal_generation": true,
+    "original_thresholds_not_claimed": true,
+    "pnl_fields_used_false_verified": true,
+    "prior_next_allowed_step_verified": true,
+    "proposal_family_count_verified_2": true,
+    "proposal_labels_verified": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "route_key_verified": true,
+    "threshold_proposal_artifact_loaded": true,
+    "unresolved_fields_preserved": true
+  }
+}

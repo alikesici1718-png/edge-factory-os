@@ -1,0 +1,37 @@
+{
+  "active_paper_allowed": false,
+  "archive_performed": false,
+  "blocked_route_count": 19,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T02:29:02.560554+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "launcher_allowed": false,
+  "lesson_count": 25,
+  "live_allowed": false,
+  "manifest_name": "edge_factory_os_holdout_trigger_and_vault_status_repair_manifest_v1",
+  "manifest_status": "HOLDOUT_VAULT_REPAIR_MANIFEST_READY",
+  "old_files_preserved": {
+    "old_holdout_access_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\holdout_access_control_policy_v1.json",
+    "old_holdout_registry_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\registries\\untouched_holdout_registry_v1.json",
+    "old_vault_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\promising_signal_vault_v1.json"
+  },
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "repair_files": {
+    "holdout_access_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\holdout_access_enforcement_state_v1.json",
+    "holdout_trigger_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\holdout_trigger_protocol_enforced_v1.json",
+    "repair_state_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\holdout_trigger_and_vault_status_repair_state_v1.json",
+    "vault_validation_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\promising_signal_vault_validation_status_v1.json"
+  },
+  "repair_mapping": {
+    "repair_04_holdout_trigger_protocol": "implemented",
+    "repair_05_vault_validation_status": "implemented"
+  },
+  "runtime_touch_allowed": false
+}

@@ -1,0 +1,618 @@
+{
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_ACCEPTED_LIFECYCLE_FIXTURE_DISCOVERY_DRY_RUN_CREATED",
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_ACCEPTED_LIFECYCLE_FIXTURE_DISCOVERY_DRY_RUN",
+  "module": {
+    "name": "edge_factory_os_repo_only_old_short_clean_room_accepted_lifecycle_fixture_discovery_dry_run_v1",
+    "path": "tools/edge_factory_os_repo_only_old_short_clean_room_accepted_lifecycle_fixture_discovery_dry_run_v1.py",
+    "standard_library_only": true,
+    "created_files": [
+      "tools/edge_factory_os_repo_only_old_short_clean_room_accepted_lifecycle_fixture_discovery_dry_run_v1.py",
+      "artifacts/old_short_clean_room/old_short_clean_room_accepted_lifecycle_fixture_discovery_dry_run_v1.json"
+    ],
+    "modified_existing_files": [],
+    "code_changed": true
+  },
+  "source_checkpoint": {
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "expected_head": "741df2068d25581ecebc5b2badabce324bff7a87",
+    "actual_head": "741df2068d25581ecebc5b2badabce324bff7a87",
+    "head_verified": true,
+    "expected_tracked_python_count": 962,
+    "actual_tracked_python_count": 962,
+    "tracked_python_count_verified": true,
+    "repo_clean_before_run": true,
+    "git_status_at_dry_run_start": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_accepted_lifecycle_fixture_discovery_dry_run_v1.py"
+    ],
+    "allowed_pending_at_dry_run_start": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_accepted_lifecycle_fixture_discovery_dry_run_v1.py"
+    ],
+    "dirty_tracked_at_dry_run_start": [],
+    "unexpected_untracked_at_dry_run_start": [],
+    "no_existing_repo_files_modified": true
+  },
+  "source_artifacts": {
+    "accepted_lifecycle_fixture_discovery_design": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_accepted_lifecycle_fixture_discovery_design_v1.json",
+      "sha256": "7982d2becf966eca738e594c0a736cc9bcd1299c038f4be33dd571037f0cd110",
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_ACCEPTED_LIFECYCLE_FIXTURE_DISCOVERY_DESIGN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_ACCEPTED_LIFECYCLE_FIXTURE_DISCOVERY_DESIGN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_ACCEPTED_LIFECYCLE_FIXTURE_DISCOVERY_DRY_RUN_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "5e81b5b8864c15d8c81565c108e87b4e104fc70e414833bf40f25e465d918202"
+    },
+    "runner_realistic_fixture_dry_run_review": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_realistic_fixture_dry_run_review_v1.json",
+      "sha256": "eedfdc5bf847e318a55a269c03e1080b5046a11e5ec8cda6e1623a938dd725ad",
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_REVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_REVIEW_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_ACCEPTED_LIFECYCLE_FIXTURE_DISCOVERY_DESIGN_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "acb1511616fe9970561f8a74089b651a16605b8c82e324a5ee16d52bfc0507a0"
+    },
+    "realistic_bounded_fixture_generation_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1.json",
+      "sha256": "fc3e5c1fee83c6d432a77e184d072299f5e53d3329f7c25c3c77a4c8000806f7",
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_GENERATION_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_GENERATION_DRY_RUN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_DESIGN_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "474fd909870b16ba291f9f67e8546eb330c96fad2baa0303472bb67ac9e17e9d"
+    },
+    "old_short_clean_room_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "sha256": "dc04d75bdd5882a2952a0a1e0a3ce7855d736d4b6882b689dcc20b41fc7cc68d",
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REBUILD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_CONTRACT_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW_V1",
+      "replacement_checks_all_true": true,
+      "payload_sha256_excluding_hash": "02d0c3ff2f905be2df695a7ca52bfd931c94a4720cb3c883f8fd5d7ad00f5e6d"
+    }
+  },
+  "discovery_identity": {
+    "route_key": "old_short_clean_room_v1",
+    "accepted_lifecycle_fixture_discovery_dry_run_only": true,
+    "runner_execution": false,
+    "fixture_runner_execution": false,
+    "behavioral_validation": false,
+    "full_dataset_comparison": false,
+    "backtest": false,
+    "pnl_computation": false,
+    "runtime_live_capital": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "clean_room_behavioral_reconstruction": true,
+    "exact_gate_replay_claimed": false,
+    "original_exact_source_recovered": false
+  },
+  "master_sample_review": {
+    "master_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic",
+    "sample_policy": {
+      "row_cap_per_csv": 100,
+      "full_scan_large_files": false,
+      "raw_market_data_read": false
+    },
+    "file_summaries": {
+      "signals.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\signals.csv",
+        "headers": [
+          "type",
+          "signal_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "created_at"
+        ],
+        "row_count_read": 100,
+        "row_cap": 100,
+        "truncated_at_row_cap": true
+      },
+      "pending_entries.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\pending_entries.csv",
+        "headers": [
+          "status",
+          "signal_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "created_at"
+        ],
+        "row_count_read": 0,
+        "row_cap": 100,
+        "truncated_at_row_cap": false
+      },
+      "open_positions.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\open_positions.csv",
+        "headers": [
+          "position_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_id",
+          "signal_time",
+          "entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "raw_entry_close",
+          "entry_price",
+          "notional",
+          "equity_before",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "entry_vol_quote",
+          "entry_range_bps",
+          "entry_slip_bps",
+          "exit_slip_bps",
+          "fee_bps_total",
+          "stress_extra_bps"
+        ],
+        "row_count_read": 0,
+        "row_cap": 100,
+        "truncated_at_row_cap": false
+      },
+      "closed_trades.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\closed_trades.csv",
+        "headers": [
+          "close_id",
+          "position_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_id",
+          "signal_time",
+          "entry_time",
+          "exit_time",
+          "planned_exit_time",
+          "hold_minutes_actual",
+          "raw_entry_close",
+          "raw_exit_close",
+          "entry_price",
+          "exit_price",
+          "entry_slip_bps",
+          "exit_slip_bps",
+          "fee_bps_total",
+          "stress_extra_bps",
+          "gross_ret",
+          "realistic_net_ret",
+          "stress_net_ret",
+          "net_ret",
+          "notional",
+          "pnl",
+          "stress_pnl",
+          "equity_before",
+          "equity_after",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "entry_vol_quote",
+          "entry_range_bps"
+        ],
+        "row_count_read": 7,
+        "row_cap": 100,
+        "truncated_at_row_cap": false
+      },
+      "rejected_entries.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\rejected_entries.csv",
+        "headers": [
+          "type",
+          "reason",
+          "log_time",
+          "signal_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "created_at"
+        ],
+        "row_count_read": 100,
+        "row_cap": 100,
+        "truncated_at_row_cap": true
+      },
+      "heartbeat.csv": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\heartbeat.csv",
+        "headers": [
+          "log_time",
+          "equity",
+          "open_positions",
+          "pending_entries",
+          "closed_count",
+          "errors",
+          "coins",
+          "strategy_family",
+          "require_global_gate"
+        ],
+        "row_count_read": 100,
+        "row_cap": 100,
+        "truncated_at_row_cap": true
+      },
+      "state.json": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic\\state.json",
+        "headers": [
+          "closed_count",
+          "coins",
+          "equity",
+          "errors",
+          "open",
+          "pending",
+          "require_global_gate",
+          "updated_at"
+        ],
+        "row_count_read": 1,
+        "row_cap": 1,
+        "truncated_at_row_cap": false
+      }
+    },
+    "master_snapshots_before": {
+      "signals.csv": {
+        "exists": true,
+        "size": 49380,
+        "mtime_ns": 1778697253587480300,
+        "sha256": "bc1540088066fa98b6f5f0be1aa0259519cefd3f61beff0378b6a4d4c75cf388"
+      },
+      "pending_entries.csv": {
+        "exists": true,
+        "size": 267,
+        "mtime_ns": 1778725486612692100,
+        "sha256": "04453c71692818b710f4a92d85fbabb3e6b2de952c940e133a374d5ae633b057"
+      },
+      "open_positions.csv": {
+        "exists": true,
+        "size": 397,
+        "mtime_ns": 1778725486614423200,
+        "sha256": "32e272292572a8e0118c159e61cebf3936e027bcad48b912fbc2888da6c5a77a"
+      },
+      "closed_trades.csv": {
+        "exists": true,
+        "size": 5103,
+        "mtime_ns": 1778699483215810000,
+        "sha256": "a1ace5a13385a2f1c2a277e4b0b53aee23f611a70c6f32499a8ae4fb01fdc88e"
+      },
+      "rejected_entries.csv": {
+        "exists": true,
+        "size": 68634,
+        "mtime_ns": 1778723958353977000,
+        "sha256": "49bd2b2b3bd49e1ff8d69284e73b1ca631eb53df163b52614de394897f171a09"
+      },
+      "heartbeat.csv": {
+        "exists": true,
+        "size": 109898,
+        "mtime_ns": 1778725486610692900,
+        "sha256": "2f2ba9e8a2c12ef0082873f3b22ecec12e7a6fe3e798437eac052985b20c54d3"
+      },
+      "state.json": {
+        "exists": true,
+        "size": 203,
+        "mtime_ns": 1778725486614423200,
+        "sha256": "88630ca27398cf7cae091aa9616254d855942944ff5a1566057a5aef27f89669"
+      }
+    },
+    "master_snapshots_after": {
+      "signals.csv": {
+        "exists": true,
+        "size": 49380,
+        "mtime_ns": 1778697253587480300,
+        "sha256": "bc1540088066fa98b6f5f0be1aa0259519cefd3f61beff0378b6a4d4c75cf388"
+      },
+      "pending_entries.csv": {
+        "exists": true,
+        "size": 267,
+        "mtime_ns": 1778725486612692100,
+        "sha256": "04453c71692818b710f4a92d85fbabb3e6b2de952c940e133a374d5ae633b057"
+      },
+      "open_positions.csv": {
+        "exists": true,
+        "size": 397,
+        "mtime_ns": 1778725486614423200,
+        "sha256": "32e272292572a8e0118c159e61cebf3936e027bcad48b912fbc2888da6c5a77a"
+      },
+      "closed_trades.csv": {
+        "exists": true,
+        "size": 5103,
+        "mtime_ns": 1778699483215810000,
+        "sha256": "a1ace5a13385a2f1c2a277e4b0b53aee23f611a70c6f32499a8ae4fb01fdc88e"
+      },
+      "rejected_entries.csv": {
+        "exists": true,
+        "size": 68634,
+        "mtime_ns": 1778723958353977000,
+        "sha256": "49bd2b2b3bd49e1ff8d69284e73b1ca631eb53df163b52614de394897f171a09"
+      },
+      "heartbeat.csv": {
+        "exists": true,
+        "size": 109898,
+        "mtime_ns": 1778725486610692900,
+        "sha256": "2f2ba9e8a2c12ef0082873f3b22ecec12e7a6fe3e798437eac052985b20c54d3"
+      },
+      "state.json": {
+        "exists": true,
+        "size": 203,
+        "mtime_ns": 1778725486614423200,
+        "sha256": "88630ca27398cf7cae091aa9616254d855942944ff5a1566057a5aef27f89669"
+      }
+    },
+    "master_unmodified": true
+  },
+  "accepted_lifecycle_candidate_summary": {
+    "accepted_lifecycle_candidate_count": 2,
+    "considered_closed_trade_rows": 7,
+    "rejected_closed_trade_rows": 0,
+    "candidate_ids": [
+      "old_short_accepted_lifecycle_case_001_mean_reversion_short",
+      "old_short_accepted_lifecycle_case_002_blowoff_short"
+    ],
+    "selection_basis_used": [
+      "lifecycle completeness",
+      "family coverage",
+      "accepted/open/closed coverage",
+      "schema completeness",
+      "timestamp/linkage availability",
+      "feature field availability"
+    ],
+    "pnl_outcome_used_for_selection": false
+  },
+  "lifecycle_linkage_summary": {
+    "direct_lifecycle_link_count": 2,
+    "candidate_count": 2,
+    "direct_links_complete": true,
+    "linkage_methods_attempted": [
+      "signals by signal_id",
+      "pending_entries by signal_id",
+      "open_positions by position_id",
+      "open_positions by inst_id"
+    ],
+    "closed_trade_proxy_used_when_direct_link_missing": true
+  },
+  "family_coverage_summary": {
+    "family_coverage": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "blowoff_short_found": true,
+    "mean_reversion_short_found": true,
+    "both_required_families_found": true
+  },
+  "gate_allowed_evidence_summary": {
+    "explicit_gate_allowed_field_count": 0,
+    "gate_allowed_inferred_count": 2,
+    "gate_allowed_inferred_from_closed_trade": true,
+    "exact_gate_replay_claimed": false,
+    "absence_from_rejected_entries_used_as_gate_allow_evidence": false
+  },
+  "generated_fixture_files": {
+    "output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\accepted_lifecycle_fixture_discovery_v1",
+    "approved_external_output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1",
+    "generated_fixture_file_count": 4,
+    "files": {
+      "accepted_lifecycle_fixture_index.json": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\accepted_lifecycle_fixture_discovery_v1\\accepted_lifecycle_fixture_index.json",
+        "sha256": "daa13e03bf07c91e1d6b9651b610bf3352bbabef20eb210394f1f3a75f25ce80",
+        "row_count": 1
+      },
+      "accepted_lifecycle_pairing_plan.json": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\accepted_lifecycle_fixture_discovery_v1\\accepted_lifecycle_pairing_plan.json",
+        "sha256": "80f5e0c922c6935f98a2f16d018ead4a171d4f5a0e955b5c98ba726bfef34be3",
+        "row_count": 1
+      },
+      "accepted_lifecycle_discovery_summary.json": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\accepted_lifecycle_fixture_discovery_v1\\accepted_lifecycle_discovery_summary.json",
+        "sha256": "dd7e97f7f104ca9e78bf5819e27c3d495a9b8b4caeef2e2308000617b7cb9c3a",
+        "row_count": 1
+      },
+      "accepted_lifecycle_master_cases.jsonl": {
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\accepted_lifecycle_fixture_discovery_v1\\accepted_lifecycle_master_cases.jsonl",
+        "sha256": "4270fb08ac18096b712d341329251091aa8f5054b44dc78063a7d74042a2e41d",
+        "row_count": 2
+      }
+    },
+    "all_outputs_under_approved_root": true,
+    "wrote_to_master_upper_system": false,
+    "wrote_to_runtime_directory": false,
+    "overwrote_existing_external_files": false
+  },
+  "missing_metric_recovery_summary": [
+    {
+      "missing_metric": "entry delay comparability",
+      "recovery_state": "partially recovered",
+      "reason": "signal_time and entry_time are present in accepted lifecycle proxy cases"
+    },
+    {
+      "missing_metric": "hold duration comparability",
+      "recovery_state": "recovered",
+      "reason": "hold_minutes_actual is near 120 where available"
+    },
+    {
+      "missing_metric": "notional comparability",
+      "recovery_state": "recovered",
+      "reason": "notional is near 50 USDT where available"
+    },
+    {
+      "missing_metric": "accepted lifecycle coverage",
+      "recovery_state": "recovered",
+      "reason": "closed_trades accepted lifecycle proxy cases were found by family coverage"
+    },
+    {
+      "missing_metric": "gate_allowed path coverage",
+      "recovery_state": "partially recovered",
+      "reason": "closed trade existence implies accepted lifecycle but exact gate replay remains unrecovered",
+      "not_recoverable_without_exact_gate_replay_or_raw_market_data": false
+    }
+  ],
+  "selection_guardrail_audit": {
+    "no_selection_by_pnl": true,
+    "forbidden_selection_fields": [
+      "pnl",
+      "net_ret",
+      "stress_pnl",
+      "realistic_net_ret",
+      "gross_ret",
+      "win",
+      "loss",
+      "best_trade",
+      "worst_trade",
+      "future_return",
+      "validation_return",
+      "holdout_result"
+    ],
+    "forbidden_selection_fields_excluded_from_fixture_outputs": true,
+    "allowed_selection_basis_only": [
+      "lifecycle completeness",
+      "family coverage",
+      "accepted/open/closed coverage",
+      "schema completeness",
+      "timestamp/linkage availability",
+      "feature field availability"
+    ],
+    "validation_holdout_returns_used": false,
+    "selection_guardrail_audit_passed": true
+  },
+  "safety_label_audit": {
+    "required_labels": [
+      "GENERATED_BY_CLEAN_ROOM",
+      "PROXY_BEHAVIOR_FIXTURE",
+      "ACCEPTED_LIFECYCLE_FIXTURE",
+      "NOT_ORIGINAL_OLD_SHORT",
+      "NOT_EXACT_REPLAY",
+      "NOT_REAL_TRADE",
+      "NOT_BACKTEST",
+      "NOT_RUNTIME",
+      "NOT_EDGE_EVIDENCE",
+      "NO_LIVE_CAPITAL"
+    ],
+    "fixture_case_count_checked": 2,
+    "safety_label_audit_passed": true,
+    "missing_label_cases": []
+  },
+  "result_classification": "OLD_SHORT_ACCEPTED_LIFECYCLE_FIXTURE_DISCOVERY_PASS_NO_EDGE_NO_LIVE",
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_ACCEPTED_LIFECYCLE_FIXTURE_REVIEW_V1",
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence",
+    "explicit gate_allowed field absent in selected closed_trades rows",
+    "exact gate decision replay remains unrecovered"
+  ],
+  "limitations": [
+    "Accepted lifecycle fixture discovery dry-run only; no runner or fixture runner execution occurred.",
+    "Bounded MASTER output samples only, capped at 100 CSV rows per file.",
+    "Closed trade existence is accepted lifecycle proxy evidence, not exact gate replay.",
+    "PnL/outcome columns may exist in source CSV rows but were not used for selection and were excluded from fixture case outputs.",
+    "No raw market data, OKX 1m data, full dataset comparison, backtest, PnL computation, runtime, live, capital, candidate generation, or edge claim was used."
+  ],
+  "safety_permissions": {
+    "accepted_lifecycle_fixture_discovery_dry_run_created": true,
+    "fixture_generation_created": true,
+    "runner_execution_allowed_now": false,
+    "behavioral_validation_allowed_now": false,
+    "full_dataset_comparison_allowed_now": false,
+    "backtest_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "prior_accepted_lifecycle_discovery_design_loaded": true,
+    "prior_next_allowed_step_verified": true,
+    "master_sample_loaded_bounded": true,
+    "sample_row_limit_enforced": true,
+    "no_selection_by_pnl": true,
+    "no_raw_market_data_read": true,
+    "no_okx_1m_data_read": true,
+    "no_full_dataset_comparison": true,
+    "no_behavioral_validation_execution": true,
+    "no_runner_execution": true,
+    "no_signal_generation": true,
+    "no_backtest_run": true,
+    "no_pnl_computation": true,
+    "no_runtime_touched": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_api_called": true,
+    "no_orders_placed": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "external_output_root_used": true,
+    "no_master_upper_system_modified": true,
+    "no_runtime_directory_modified": true,
+    "fixture_files_created": true,
+    "safety_labels_present": true,
+    "unresolved_fields_preserved": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_repo_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "6691cef521744b26efad4e1ffde64af66756ee44c9205d0c72e1b3f794d27953"
+}

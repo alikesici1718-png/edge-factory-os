@@ -1,0 +1,917 @@
+{
+  "artifact_kind": "BINANCE_OKX_OVERLAP_FUNDING_EXTREME_VOLUME_SURGE_FILTER_EXECUTION",
+  "config_id": "funding_mean9_volume_surge24h_p80_30d_hold24h",
+  "config_result": {
+    "config_id": "funding_mean9_volume_surge24h_p80_30d_hold24h",
+    "executed_timestamp_count": 5608,
+    "hypothesis_name": "funding_extreme_volume_surge_reversal",
+    "train_entry_count": 3507,
+    "train_gross_metric_bps": 4.316048,
+    "train_net_metric_bps": -15.683952,
+    "validation_entry_count": 2101,
+    "validation_gross_metric_bps": 2.621405,
+    "validation_net_metric_bps": -17.378595,
+    "validation_positive_after_cost": false
+  },
+  "diagnostic_interpretation_limits": {
+    "diagnostic_execution_only": true,
+    "future_closure_required": true,
+    "future_evaluator_required": true,
+    "grants_no_runtime_live_capital_permission": true,
+    "not_candidate_generation": true,
+    "not_edge_claim": true,
+    "not_family_release": true
+  },
+  "execution_safety_controls": {
+    "cross_window_holding_return_skipped_count": 3888,
+    "cross_window_holding_returns_included": false,
+    "exactly_one_config_executed": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_family_release": true,
+    "no_non_preregistered_config_tested": true,
+    "no_parameter_expansion": true,
+    "no_runtime_live_capital": true
+  },
+  "forbidden_actions_confirmed_false": {
+    "binance_1m_source_rows_read": false,
+    "binance_api_called": false,
+    "binance_coverage_discovery_rerun": false,
+    "binance_panel_build_rerun": false,
+    "boundary_buffer_accessed": false,
+    "candidates_generated": false,
+    "capital_permission_granted": false,
+    "edge_claimed": false,
+    "existing_files_modified_by_module": false,
+    "family_released": false,
+    "funding_data_fetched": false,
+    "funding_rate_endpoint_called": false,
+    "holdout_accessed": false,
+    "live_permission_granted": false,
+    "network_used": false,
+    "non_preregistered_config_tested": false,
+    "okx_panel_rows_read": false,
+    "okx_whitelisted_artifact_read": false,
+    "runtime_permission_granted": false,
+    "strategy_search_executed": false
+  },
+  "input_data_validation": {
+    "external_funding_rows_read_for_execution": true,
+    "external_panel_rows_read_for_execution": true,
+    "funding_files_read": 81,
+    "funding_rows_read": 228383,
+    "okx_panel_rows_read": false,
+    "panel_complete_rows_read": 3149492,
+    "panel_files_read": 81,
+    "preregistration_artifact_loaded": true,
+    "preregistration_payload_hash_verified": true,
+    "symbol_count": 81,
+    "symbols": [
+      "1INCHUSDT",
+      "AAVEUSDT",
+      "ADAUSDT",
+      "AGLDUSDT",
+      "ALGOUSDT",
+      "APEUSDT",
+      "API3USDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "ARUSDT",
+      "ATOMUSDT",
+      "AVAXUSDT",
+      "AXSUSDT",
+      "BANDUSDT",
+      "BATUSDT",
+      "BCHUSDT",
+      "BICOUSDT",
+      "BLURUSDT",
+      "BNBUSDT",
+      "BTCUSDT",
+      "CELOUSDT",
+      "CFXUSDT",
+      "CHZUSDT",
+      "COMPUSDT",
+      "CRVUSDT",
+      "DOGEUSDT",
+      "DOTUSDT",
+      "DYDXUSDT",
+      "EGLDUSDT",
+      "ENSUSDT",
+      "ETCUSDT",
+      "ETHUSDT",
+      "ETHWUSDT",
+      "FILUSDT",
+      "GALAUSDT",
+      "GMTUSDT",
+      "GMXUSDT",
+      "GRTUSDT",
+      "ICPUSDT",
+      "IMXUSDT",
+      "IOSTUSDT",
+      "IOTAUSDT",
+      "KSMUSDT",
+      "LDOUSDT",
+      "LINKUSDT",
+      "LPTUSDT",
+      "LRCUSDT",
+      "LTCUSDT",
+      "MAGICUSDT",
+      "MANAUSDT",
+      "MINAUSDT",
+      "NEARUSDT",
+      "NEOUSDT",
+      "ONTUSDT",
+      "OPUSDT",
+      "ORDIUSDT",
+      "PEOPLEUSDT",
+      "QTUMUSDT",
+      "RSRUSDT",
+      "RVNUSDT",
+      "SANDUSDT",
+      "SNXUSDT",
+      "SOLUSDT",
+      "STXUSDT",
+      "SUIUSDT",
+      "SUSHIUSDT",
+      "THETAUSDT",
+      "TONUSDT",
+      "TRBUSDT",
+      "TRXUSDT",
+      "UMAUSDT",
+      "UNIUSDT",
+      "USDCUSDT",
+      "WOOUSDT",
+      "XLMUSDT",
+      "XRPUSDT",
+      "XTZUSDT",
+      "YFIUSDT",
+      "YGGUSDT",
+      "ZILUSDT",
+      "ZRXUSDT"
+    ],
+    "used_only_complete_1h_rows": true
+  },
+  "metric_integrity_summary": {
+    "config_id_matches_preregistration": true,
+    "exactly_one_config_executed": true,
+    "metric_integrity_issue_count": 0,
+    "metric_integrity_issues": [],
+    "metric_integrity_passed": true,
+    "no_candidate_edge_release_runtime": true,
+    "no_cross_window_returns_included": true,
+    "no_lookahead": true,
+    "no_nan_or_infinite_metrics": true,
+    "no_non_preregistered_config": true,
+    "no_timestamp_outside_aligned_window": true
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_okx_overlap_funding_extreme_volume_surge_filter_execution_v1.py",
+  "monthly_stability_summary": {
+    "monthly_positive_rate": 0.3,
+    "monthly_stability_review_preliminary_passed": false,
+    "validation_month_count": 10,
+    "validation_monthly_entry_count_by_month": {
+      "2025-01": 248,
+      "2025-02": 187,
+      "2025-03": 173,
+      "2025-04": 195,
+      "2025-05": 236,
+      "2025-06": 231,
+      "2025-07": 243,
+      "2025-08": 196,
+      "2025-09": 215,
+      "2025-10": 177
+    },
+    "validation_monthly_gross_metric_bps_by_month": {
+      "2025-01": -13.206148,
+      "2025-02": -19.911934,
+      "2025-03": 19.803622,
+      "2025-04": 19.680597,
+      "2025-05": 2.73827,
+      "2025-06": -16.883079,
+      "2025-07": -26.673175,
+      "2025-08": 29.37371,
+      "2025-09": 21.353501,
+      "2025-10": 26.155792
+    },
+    "validation_monthly_net_metric_bps_by_month": {
+      "2025-01": -33.206148,
+      "2025-02": -39.911934,
+      "2025-03": -0.196378,
+      "2025-04": -0.319403,
+      "2025-05": -17.26173,
+      "2025-06": -36.883079,
+      "2025-07": -46.673175,
+      "2025-08": 9.37371,
+      "2025-09": 1.353501,
+      "2025-10": 6.155792
+    },
+    "validation_positive_month_count": 3
+  },
+  "null_baseline_summary": {
+    "block_length_hours": 168,
+    "null_baseline": "deterministic_signal_timestamp_block_shuffle_null",
+    "null_baseline_review_preliminary_passed": false,
+    "null_run_count": 100,
+    "train_null_net_metric_bps_mean": -17.090576,
+    "valid_train_null_run_count": 100,
+    "valid_validation_null_run_count": 100,
+    "validation_null_net_metric_bps_mean": -12.684633,
+    "validation_null_percentile": 0.38
+  },
+  "payload_sha256_excluding_hash": "59da56218164c952cc3dd7551a5dd0f72cd4a6d5d82cc9cf4323fe760031e58b",
+  "per_symbol_input_summary": {
+    "1INCHUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4077
+    },
+    "AAVEUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4101
+    },
+    "ADAUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4077
+    },
+    "AGLDUSDT": {
+      "complete_panel_rows_read": 24164,
+      "funding_rows_read": 2478,
+      "valid_forward_return_rows": 19765,
+      "volume_anomaly_and_funding_feature_rows": 3859
+    },
+    "ALGOUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4090
+    },
+    "APEUSDT": {
+      "complete_panel_rows_read": 36128,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4189
+    },
+    "API3USDT": {
+      "complete_panel_rows_read": 36691,
+      "funding_rows_read": 5401,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4241
+    },
+    "APTUSDT": {
+      "complete_panel_rows_read": 30957,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4153
+    },
+    "ARBUSDT": {
+      "complete_panel_rows_read": 27223,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4127
+    },
+    "ARUSDT": {
+      "complete_panel_rows_read": 40219,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4168
+    },
+    "ATOMUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4132
+    },
+    "AVAXUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4110
+    },
+    "AXSUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4095
+    },
+    "BANDUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4169
+    },
+    "BATUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4227
+    },
+    "BCHUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4182
+    },
+    "BICOUSDT": {
+      "complete_panel_rows_read": 22690,
+      "funding_rows_read": 2293,
+      "valid_forward_return_rows": 18291,
+      "volume_anomaly_and_funding_feature_rows": 3518
+    },
+    "BLURUSDT": {
+      "complete_panel_rows_read": 26363,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4180
+    },
+    "BNBUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4113
+    },
+    "BTCUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4018
+    },
+    "CELOUSDT": {
+      "complete_panel_rows_read": 40243,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4163
+    },
+    "CFXUSDT": {
+      "complete_panel_rows_read": 27968,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4202
+    },
+    "CHZUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4118
+    },
+    "COMPUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4097
+    },
+    "CRVUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4125
+    },
+    "DOGEUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4100
+    },
+    "DOTUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4083
+    },
+    "DYDXUSDT": {
+      "complete_panel_rows_read": 40651,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4171
+    },
+    "EGLDUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4133
+    },
+    "ENSUSDT": {
+      "complete_panel_rows_read": 38707,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4133
+    },
+    "ETCUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 3974
+    },
+    "ETHUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4090
+    },
+    "ETHWUSDT": {
+      "complete_panel_rows_read": 21226,
+      "funding_rows_read": 4218,
+      "valid_forward_return_rows": 16827,
+      "volume_anomaly_and_funding_feature_rows": 3200
+    },
+    "FILUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4171
+    },
+    "GALAUSDT": {
+      "complete_panel_rows_read": 40459,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4150
+    },
+    "GMTUSDT": {
+      "complete_panel_rows_read": 36139,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4248
+    },
+    "GMXUSDT": {
+      "complete_panel_rows_read": 28040,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4153
+    },
+    "GRTUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4090
+    },
+    "ICPUSDT": {
+      "complete_panel_rows_read": 41732,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4169
+    },
+    "IMXUSDT": {
+      "complete_panel_rows_read": 36835,
+      "funding_rows_read": 4812,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4175
+    },
+    "IOSTUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4206
+    },
+    "IOTAUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4107
+    },
+    "KSMUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4224
+    },
+    "LDOUSDT": {
+      "complete_panel_rows_read": 31595,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4136
+    },
+    "LINKUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4112
+    },
+    "LPTUSDT": {
+      "complete_panel_rows_read": 39163,
+      "funding_rows_read": 5724,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4222
+    },
+    "LRCUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4206
+    },
+    "LTCUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4184
+    },
+    "MAGICUSDT": {
+      "complete_panel_rows_read": 28604,
+      "funding_rows_read": 3140,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4101
+    },
+    "MANAUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4169
+    },
+    "MINAUSDT": {
+      "complete_panel_rows_read": 28284,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4129
+    },
+    "NEARUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4192
+    },
+    "NEOUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4124
+    },
+    "ONTUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4196
+    },
+    "OPUSDT": {
+      "complete_panel_rows_read": 34304,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4146
+    },
+    "ORDIUSDT": {
+      "complete_panel_rows_read": 21730,
+      "funding_rows_read": 4344,
+      "valid_forward_return_rows": 17331,
+      "volume_anomaly_and_funding_feature_rows": 3370
+    },
+    "PEOPLEUSDT": {
+      "complete_panel_rows_read": 38011,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4149
+    },
+    "QTUMUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4027
+    },
+    "RSRUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4138
+    },
+    "RVNUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 3779,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4138
+    },
+    "SANDUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4108
+    },
+    "SNXUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4176
+    },
+    "SOLUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4118
+    },
+    "STXUSDT": {
+      "complete_panel_rows_read": 27944,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4151
+    },
+    "SUIUSDT": {
+      "complete_panel_rows_read": 26239,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4084
+    },
+    "SUSHIUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4170
+    },
+    "THETAUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4095
+    },
+    "TONUSDT": {
+      "complete_panel_rows_read": 18970,
+      "funding_rows_read": 3655,
+      "valid_forward_return_rows": 14571,
+      "volume_anomaly_and_funding_feature_rows": 2785
+    },
+    "TRBUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4812,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4211
+    },
+    "TRXUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4156
+    },
+    "UMAUSDT": {
+      "complete_panel_rows_read": 26074,
+      "funding_rows_read": 4513,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4228
+    },
+    "UNIUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4116
+    },
+    "USDCUSDT": {
+      "complete_panel_rows_read": 27486,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4114
+    },
+    "WOOUSDT": {
+      "complete_panel_rows_read": 35611,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4121
+    },
+    "XLMUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4182
+    },
+    "XRPUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4120
+    },
+    "XTZUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2910,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4144
+    },
+    "YFIUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4179
+    },
+    "YGGUSDT": {
+      "complete_panel_rows_read": 23995,
+      "funding_rows_read": 4717,
+      "valid_forward_return_rows": 19596,
+      "volume_anomaly_and_funding_feature_rows": 3835
+    },
+    "ZILUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4236
+    },
+    "ZRXUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 2561,
+      "valid_forward_return_rows": 20440,
+      "volume_anomaly_and_funding_feature_rows": 4240
+    }
+  },
+  "replacement_checks_all_true": true,
+  "return_and_cost_policy": {
+    "annualized": false,
+    "compounded": false,
+    "entry_price": "open at entry timestamp",
+    "exit_price": "open at entry timestamp + 24h",
+    "gross_spread_return": "mean(long open-to-open returns) - mean(short open-to-open returns)",
+    "holding_period_hours": 24,
+    "metric_units": "bps per eligible entry timestamp",
+    "net_spread_return": "gross_spread_return - 0.0020",
+    "round_trip_cost_bps": 20
+  },
+  "route_family": "CROSS_SECTIONAL_FUNDING_EXTREME_VOLUME_SURGE_FILTER_REVERSAL_BASELINE",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "closure_required_after_evaluator": true,
+    "edge_claim_allowed_now": false,
+    "evaluator_required_next": true,
+    "family_release_allowed_now": false,
+    "holdout_access_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "okx_panel_access_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_completed": true,
+    "strategy_execution_is_diagnostic_only": true,
+    "strategy_search_allowed_now": false
+  },
+  "signal_alignment_policy": {
+    "funding_events_required": 9,
+    "funding_observation_lag_hours": 1,
+    "funding_time_policy": "funding_time <= entry_time - 1h",
+    "funding_transform": "rolling_mean_9_funding_events",
+    "no_backfill": true,
+    "no_forward_fill": true
+  },
+  "source_artifacts": {
+    "funding_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_funding_rate_data_acquisition_lock_v1\\funding_by_symbol",
+    "panel_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_near_5y_1m_to_1h_panel_build_execution_v1\\panel_1h_by_symbol",
+    "payload_hashes": {
+      "artifacts/coverage_locks/binance_usdt_perpetual_1m_coverage_discovery_lock_v1.json": "18a84b71c649b0462fdb0d511597dcb701448fe06184ef9c8da93d6911ada4e0",
+      "artifacts/funding_rate_locks/binance_okx_overlap_funding_rate_data_acquisition_lock_v1.json": "dd5877b101c9a1e8d73f35f6032381cbdfd5435578abacf97b9db0c11c28e252",
+      "artifacts/funding_rate_reviews/binance_okx_overlap_funding_rate_data_review_after_acquisition_lock_v1.json": "a579feb0472efbf03ffa955008dfabc0b526fa37029fc81dddd0195b4054d849",
+      "artifacts/oi_data_availability_locks/binance_okx_overlap_oi_historical_data_availability_discovery_lock_v1.json": "b50672275c645246347ce43cbab7d269194767ce4496c5a91e9c5c2d6a87c81c",
+      "artifacts/panel_build_manifests/binance_okx_overlap_near_5y_1m_to_1h_panel_build_manifest_v1.json": "bf4d4d681f36fab3a2131701e25ebc45c94ddb757f92874498ef425d698f40a7",
+      "artifacts/panel_build_previews/binance_near_5y_coverage_lock_review_okx_overlap_panel_build_preview_v1.json": "16e93ca05fe28f0d101d5228e299306bad3aea171f22bc6901f770b0ecf3a3d9",
+      "artifacts/panel_build_reviews/binance_okx_overlap_near_5y_panel_build_review_after_execution_v1.json": "34b88a3ff0870c708e2df034c243cf639b711ebce3c6a4f32edffb92a2229112",
+      "artifacts/research_preregistrations/binance_okx_overlap_funding_extreme_volume_surge_filter_preregistration_contract_v1.json": "227f02d39d48012749e0881046ae64d50b254c70fd1dc91148c45a00bee2c763",
+      "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json": "0cfe239f6f5ad2d20bda64b827416851de8f5b959066902b59f1f00f44eba716",
+      "artifacts/strategy_closures/binance_okx_group2_funding_extreme_momentum_confirmed_closure_v1.json": "8bddb11159022e8b4d057169ab203a315716f2c310b6a30fe825a774af76e896",
+      "artifacts/strategy_closures/binance_okx_overlap_funding_carry_short_positive_flat_negative_closure_v1.json": "198029ab2d5c0bded6f78c1a6d26517b44506f645f572a1dee28734fd70785a6",
+      "artifacts/strategy_closures/binance_okx_overlap_funding_extreme_momentum_confirmed_liquidity_filtered_closure_v1.json": "a4824ed55c95ab3a0dcfcd1f37d49fffcd1453f3bd69bc1d866edd609da610cc",
+      "artifacts/strategy_closures/binance_okx_overlap_funding_rate_closure_record_after_evaluator_v1.json": "8eacb2decacac50140de27b6c84a9a5338e2473e62ccce54be5d07770a576b02"
+    }
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_FUNDING_EXTREME_VOLUME_SURGE_FILTER_EXECUTED",
+  "train_validation_summary": {
+    "aligned_window_end_exclusive_utc": "2025-10-31T16:00:00Z",
+    "aligned_window_start_utc": "2023-07-01T00:00:00Z",
+    "train": {
+      "entry_count": 3507,
+      "gross_metric_bps": 4.316048,
+      "net_metric_bps": -15.683952,
+      "positive_after_cost": false
+    },
+    "train_window_end_exclusive_utc": "2025-01-01T00:00:00Z",
+    "train_window_start_utc": "2023-07-01T00:00:00Z",
+    "validation": {
+      "entry_count": 2101,
+      "gross_metric_bps": 2.621405,
+      "net_metric_bps": -17.378595,
+      "positive_after_cost": false
+    },
+    "validation_window_end_exclusive_utc": "2025-10-31T16:00:00Z",
+    "validation_window_start_utc": "2025-01-01T00:00:00Z"
+  },
+  "turnover_concentration_summary": {
+    "average_turnover": 0.232028,
+    "max_turnover": 1.0,
+    "median_turnover": 0.181818,
+    "symbol_exposure_share_top10": [
+      {
+        "exposure_share": 0.025774,
+        "selection_count": 2298,
+        "symbol": "AXSUSDT"
+      },
+      {
+        "exposure_share": 0.024204,
+        "selection_count": 2158,
+        "symbol": "BCHUSDT"
+      },
+      {
+        "exposure_share": 0.023329,
+        "selection_count": 2080,
+        "symbol": "BNBUSDT"
+      },
+      {
+        "exposure_share": 0.023228,
+        "selection_count": 2071,
+        "symbol": "ATOMUSDT"
+      },
+      {
+        "exposure_share": 0.019201,
+        "selection_count": 1712,
+        "symbol": "USDCUSDT"
+      },
+      {
+        "exposure_share": 0.017328,
+        "selection_count": 1545,
+        "symbol": "IMXUSDT"
+      },
+      {
+        "exposure_share": 0.017261,
+        "selection_count": 1539,
+        "symbol": "RVNUSDT"
+      },
+      {
+        "exposure_share": 0.017183,
+        "selection_count": 1532,
+        "symbol": "XTZUSDT"
+      },
+      {
+        "exposure_share": 0.016712,
+        "selection_count": 1490,
+        "symbol": "LPTUSDT"
+      },
+      {
+        "exposure_share": 0.016633,
+        "selection_count": 1483,
+        "symbol": "APTUSDT"
+      }
+    ],
+    "top_symbol_exposure_share": 0.025774,
+    "turnover_concentration_review_preliminary_passed": true
+  },
+  "validation_checks": {
+    "aligned_window_verified": true,
+    "binance_1h_panel_rows_read_for_execution": true,
+    "config_count_verified_1": true,
+    "config_id_matches_preregistration": true,
+    "exact_overlap_symbol_count_verified_81": true,
+    "exactly_one_new_tracked_json_execution_artifact_expected": true,
+    "exactly_one_new_tracked_python_tool_file_expected": true,
+    "execution_artifact_json_valid": true,
+    "execution_artifact_path_equals_required_path": true,
+    "funding_data_valid_for_signal_construction_verified": true,
+    "funding_review_loaded": true,
+    "metric_integrity_checks_created": true,
+    "module_path_equals_required_path": true,
+    "monthly_stability_created": true,
+    "no_binance_1m_source_rows_read": true,
+    "no_binance_api_call": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified_expected": true,
+    "no_funding_data_fetched": true,
+    "no_funding_endpoint_called": true,
+    "no_network_used": true,
+    "no_okx_panel_rows_read": true,
+    "no_other_tracked_files_expected": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_search": true,
+    "null_baseline_complete": true,
+    "panel_review_loaded": true,
+    "panel_valid_for_read_only_second_source_analysis_verified": true,
+    "payload_sha256_excluding_hash_present": true,
+    "preregistration_artifact_loaded": true,
+    "preregistration_payload_hash_verified": true,
+    "replacement_checks_all_true": true,
+    "reviewed_funding_rows_read_for_execution": true,
+    "route_family_verified": true,
+    "status_equals_required_status": true,
+    "turnover_concentration_created": true,
+    "volume_anomaly_coverage_created": true
+  },
+  "volume_anomaly_coverage_summary": {
+    "average_volume_anomaly_symbols_per_timestamp": 41.663873,
+    "insufficient_funding_context_after_volume_anomaly_count": 1125,
+    "insufficient_volume_context_symbol_timestamp_count": 4608,
+    "max_volume_anomaly_symbols_per_timestamp": 80,
+    "median_volume_anomaly_symbols_per_timestamp": 39.0,
+    "min_volume_anomaly_symbols_per_timestamp": 20,
+    "percentile_context_days": 30,
+    "percentile_threshold": 0.8,
+    "skipped_timestamps_insufficient_leg_symbols": 0,
+    "skipped_timestamps_insufficient_volume_anomaly_symbols": 14832,
+    "train_volume_anomaly_eligible_timestamp_count": 3507,
+    "validation_volume_anomaly_eligible_timestamp_count": 2101,
+    "volume_anomaly_coverage_review_preliminary_passed": true,
+    "volume_anomaly_field": "quote_volume",
+    "volume_anomaly_filter_created": true,
+    "volume_anomaly_symbol_events": 332541,
+    "volume_change_definition": "log(trailing_24h_quote_volume_t / trailing_24h_quote_volume_t_minus_24h)"
+  },
+  "volume_anomaly_policy": {
+    "no_current_hour_volume": true,
+    "no_future_volume": true,
+    "percentile_context_days": 30,
+    "percentile_context_hours": 720,
+    "percentile_method": "nearest_rank_on_prior_defined_symbol_local_values",
+    "percentile_threshold": 0.8,
+    "trailing_24h_quote_volume_t": "sum quote_volume over prior 24 complete 1h rows ending at E - 1h",
+    "trailing_24h_quote_volume_t_minus_24h": "same trailing 24h value measured 24 hours earlier",
+    "volume_anomaly_field": "quote_volume",
+    "volume_anomaly_filter_created": true,
+    "volume_change_definition": "log(trailing_24h_quote_volume_t / trailing_24h_quote_volume_t_minus_24h)"
+  }
+}

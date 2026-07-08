@@ -1,0 +1,2325 @@
+{
+  "acquisition_scope": {
+    "interval": "1h",
+    "row_data_written_outside_repo_only": true,
+    "symbol_count": 81,
+    "symbols": [
+      "1INCHUSDT",
+      "AAVEUSDT",
+      "ADAUSDT",
+      "AGLDUSDT",
+      "ALGOUSDT",
+      "APEUSDT",
+      "API3USDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "ARUSDT",
+      "ATOMUSDT",
+      "AVAXUSDT",
+      "AXSUSDT",
+      "BANDUSDT",
+      "BATUSDT",
+      "BCHUSDT",
+      "BICOUSDT",
+      "BLURUSDT",
+      "BNBUSDT",
+      "BTCUSDT",
+      "CELOUSDT",
+      "CFXUSDT",
+      "CHZUSDT",
+      "COMPUSDT",
+      "CRVUSDT",
+      "DOGEUSDT",
+      "DOTUSDT",
+      "DYDXUSDT",
+      "EGLDUSDT",
+      "ENSUSDT",
+      "ETCUSDT",
+      "ETHUSDT",
+      "ETHWUSDT",
+      "FILUSDT",
+      "GALAUSDT",
+      "GMTUSDT",
+      "GMXUSDT",
+      "GRTUSDT",
+      "ICPUSDT",
+      "IMXUSDT",
+      "IOSTUSDT",
+      "IOTAUSDT",
+      "KSMUSDT",
+      "LDOUSDT",
+      "LINKUSDT",
+      "LPTUSDT",
+      "LRCUSDT",
+      "LTCUSDT",
+      "MAGICUSDT",
+      "MANAUSDT",
+      "MINAUSDT",
+      "NEARUSDT",
+      "NEOUSDT",
+      "ONTUSDT",
+      "OPUSDT",
+      "ORDIUSDT",
+      "PEOPLEUSDT",
+      "QTUMUSDT",
+      "RSRUSDT",
+      "RVNUSDT",
+      "SANDUSDT",
+      "SNXUSDT",
+      "SOLUSDT",
+      "STXUSDT",
+      "SUIUSDT",
+      "SUSHIUSDT",
+      "THETAUSDT",
+      "TONUSDT",
+      "TRBUSDT",
+      "TRXUSDT",
+      "UMAUSDT",
+      "UNIUSDT",
+      "USDCUSDT",
+      "WOOUSDT",
+      "XLMUSDT",
+      "XRPUSDT",
+      "XTZUSDT",
+      "YFIUSDT",
+      "YGGUSDT",
+      "ZILUSDT",
+      "ZRXUSDT"
+    ],
+    "window_end_exclusive_utc": "2025-11-01T00:00:00Z",
+    "window_start_utc": "2023-01-01T00:00:00Z"
+  },
+  "acquisition_summary": {
+    "data_valid_for_future_basis_premium_research": true,
+    "endpoint_missing_row_counts": {
+      "index": 0,
+      "mark": 31405,
+      "premium": 31646
+    },
+    "errors": [],
+    "max_timestamp_utc": "2025-10-31T23:00:00Z",
+    "min_timestamp_utc": "2023-01-01T00:00:00Z",
+    "output_files_count": 81,
+    "retries": 0,
+    "symbol_count": 81,
+    "symbols_with_rows_count": 81,
+    "symbols_with_zero_rows_count": 0,
+    "total_requests": 4059,
+    "total_rows": 1952156
+  },
+  "artifact_kind": "BINANCE_OKX_OVERLAP_BASIS_PREMIUM_1H_DATA_PACK",
+  "endpoint_contracts": {
+    "index": {
+      "api_key_used": false,
+      "endpoint_name": "index_price_klines",
+      "interval": "1h",
+      "limit": 1500,
+      "public_market_data_endpoint": true,
+      "symbol_parameter": "pair",
+      "url": "https://fapi.binance.com/fapi/v1/indexPriceKlines"
+    },
+    "mark": {
+      "api_key_used": false,
+      "endpoint_name": "mark_price_klines",
+      "interval": "1h",
+      "limit": 1500,
+      "public_market_data_endpoint": true,
+      "symbol_parameter": "symbol",
+      "url": "https://fapi.binance.com/fapi/v1/markPriceKlines"
+    },
+    "premium": {
+      "api_key_used": false,
+      "endpoint_name": "premium_index_klines",
+      "interval": "1h",
+      "limit": 1500,
+      "public_market_data_endpoint": true,
+      "symbol_parameter": "symbol",
+      "url": "https://fapi.binance.com/fapi/v1/premiumIndexKlines"
+    }
+  },
+  "endpoint_probe_results": {
+    "endpoint_old_range_available": {
+      "index": true,
+      "mark": true,
+      "premium": true
+    },
+    "endpoint_recent_range_available": {
+      "index": true,
+      "mark": true,
+      "premium": true
+    },
+    "probe_records": [
+      {
+        "available": true,
+        "endpoint_key": "premium",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "BTCUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "premium",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "BTCUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "mark",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "BTCUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "mark",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "BTCUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "index",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "BTCUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "index",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "BTCUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "premium",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "ETHUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "premium",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "ETHUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "mark",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "ETHUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "mark",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "ETHUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "index",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "ETHUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "index",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "ETHUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "premium",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "SOLUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "premium",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "SOLUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "mark",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "SOLUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "mark",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "SOLUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "index",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "SOLUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "index",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "SOLUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "premium",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "XRPUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "premium",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "XRPUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "mark",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "XRPUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "mark",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "XRPUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "index",
+        "max_timestamp_utc": "2023-01-02T23:00:00Z",
+        "min_timestamp_utc": "2023-01-01T00:00:00Z",
+        "range": "old_2023_01_01_to_2023_01_03",
+        "row_count": 48,
+        "symbol": "XRPUSDT"
+      },
+      {
+        "available": true,
+        "endpoint_key": "index",
+        "max_timestamp_utc": "2026-05-24T18:00:00Z",
+        "min_timestamp_utc": "2026-05-24T09:00:00Z",
+        "range": "recent_no_start_end",
+        "row_count": 10,
+        "symbol": "XRPUSDT"
+      }
+    ],
+    "representative_endpoint_probes_passed": true,
+    "representative_symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "XRPUSDT"
+    ]
+  },
+  "limitations": [
+    "This is an acquisition and validation manifest only.",
+    "Rows are retained only where premium, mark, and index endpoint timestamps intersect.",
+    "No trading signal, strategy return, candidate, edge, release, or runtime/live/capital permission is created."
+  ],
+  "module": "tools/edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1.py",
+  "non_repo_artifacts": {
+    "basis_premium_by_symbol_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol",
+    "basis_premium_index_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_index\\binance_okx_overlap_basis_premium_1h_index_v1.json",
+    "basis_premium_index_sha256": "84aeaf0bec2cde8df307cfe7762efec6e29f5a7fa8c58e60b3f15fb5228a2fe0",
+    "external_artifact_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1",
+    "output_files_sha256": {
+      "1INCHUSDT": "915410831ef7b3bd2d09bf061bc809d44b1433439b378f1e84e76e57e38140ba",
+      "AAVEUSDT": "ee5fb4f55515baf6ea8f0606a154550a154028a1561bb2b42a481b6119752615",
+      "ADAUSDT": "715112905181a109d2c315ca92ed2712420b651a42470b3b3e63cc77c7d12578",
+      "AGLDUSDT": "bbe54aa110de33da9fd7e762639ed33d3b9475abaad7ba6114495e37e9148707",
+      "ALGOUSDT": "f2d791848713751bb084eadd6eb78c2e651282bf984501f8979e12b2e58b1127",
+      "APEUSDT": "3e9af3bcb7c1cefed0a29a7527b5a34391d12a9fc068fba4879e81d9a23a5272",
+      "API3USDT": "301595cec49edb4805797c256d9c46c317da0a3c42e313a352d6ac28ef14bacb",
+      "APTUSDT": "328c9d958bcd00299e9d7fb22207ca469f603a221f4aa13d859e1f063bdca0a7",
+      "ARBUSDT": "060e2eb51df3dfc9b02dce3c9921105e9f0a6a3ad6d1b063b95d47b04d513b97",
+      "ARUSDT": "2082e86416d955fa419ffdc9a23d10f75b9bbc8845a70fe12fa89849c63f482d",
+      "ATOMUSDT": "89e4978cc35be14336a17e6c98b731ceec1515b1ab4756afb3059b86020292f8",
+      "AVAXUSDT": "7906ac6d6ec09539ad3ede52d7f6319792e8a196a7c1171f42cb13d778c03fc5",
+      "AXSUSDT": "c1b4e6308cb804c576e936e09da04f59a6fdde71d12f5e22eee1eb79b3d3e910",
+      "BANDUSDT": "456e7c0faee9648f85ed1b7163a71ec90a6ef1cec68f4735c27a9483fb814824",
+      "BATUSDT": "c85a01d8547f5d35252cedb6b4492f4dfb2dbafd47838c99dd0761586b6f82f5",
+      "BCHUSDT": "90e33cb02966e37cf283e693b732a45325d7722ed414c3bef43a9a37cf8022cd",
+      "BICOUSDT": "1477b36ba0a9436c7a10b16ff5b93914b0ce514f95685ec3db74c46d7f32399b",
+      "BLURUSDT": "27024fa1adb4dfe893b76e579c1289e31d153a9ff5bf28572d022bb3a31c69cc",
+      "BNBUSDT": "a9a47042a302fe7120c530c2eb29ac310b4bac0c64afd499a43d5ef83c407439",
+      "BTCUSDT": "3db1ff6f127e5f42c507295d86e1f0e9c9da72e388d87aefb18126cb5179b097",
+      "CELOUSDT": "b8d2ee4d6fe6004278ac7d4e4f3f3602fa9151b80a6ac108b359c09882b7f74a",
+      "CFXUSDT": "24cd552a2f9af43c7a7a90bf6bf948e9ff39f41897e80043cadc4da97bd2d7b6",
+      "CHZUSDT": "afff0d9585f4db297c46375de2e644ab225b335351a98d683dfe462a8d00d008",
+      "COMPUSDT": "9000daa2537df9510a59a898ccec49744319aff3b484d24e42346db8677b24d9",
+      "CRVUSDT": "e6872027681c15a2440e0945a900c3603bf5330b381282d2c54a22a5afd24cf3",
+      "DOGEUSDT": "08da2a92d80b52855cac1204261566dbd2f1510f83ecce629fad580ef89cf2ff",
+      "DOTUSDT": "6bdb951f81e8f95b8a48fcb15c19af45820f6f9ccdb735e38a0370f0f26c6a4e",
+      "DYDXUSDT": "d122a3fd2affd7346ff10f8775ba449d0f532a7b6fd9130fc3980b00764667ec",
+      "EGLDUSDT": "abca8b147375aa8d92e3510071fb30ed9279d63ef89f5bfa1b34253f89975509",
+      "ENSUSDT": "57e55c126358fe5811d21eaf8c1257e3fba5ab167efcfba53f90327154d0708b",
+      "ETCUSDT": "ed9ee09f854c57544d043274ff55be0eadaeb7abaf92fc298e07fd77a85dc67c",
+      "ETHUSDT": "6b2bc1ed7db420ebf5439120deed12215db688984728151f5d557686cccea42c",
+      "ETHWUSDT": "37564f4032f5ed68194b3e905fda1dd8720cbcf3cf70b85d3e7f244f9a7c30e2",
+      "FILUSDT": "361a9a0a26ba852be9a54a5441504a973d0d909a99f46c2d28b8c0b576ecd702",
+      "GALAUSDT": "baf8dc8a4a9cdb288d14bb8eabd1a046568adf3484985c8f660a9093c7ddc597",
+      "GMTUSDT": "58a76b08efb6cb7f8af204821552b12eb529ef6c2719ebcee4145e2a7eee6847",
+      "GMXUSDT": "26f072837eb0c8926a8a29431a7d70f1f1625e013cf3b63bc1da163f3e07f524",
+      "GRTUSDT": "ccb53e6f552f8eb79c7fb5ac82964a83b25241530e926ed6748d94fd80fd7c2c",
+      "ICPUSDT": "a9497cb2279b1f25ca53c2aacabb70e856f311987a47055f8dfb1cf47b34827c",
+      "IMXUSDT": "f948a31a0f50936089cc0d424ec7b71b15dcf17217aa85398b3edd56ffa2636a",
+      "IOSTUSDT": "623c7d442727cbea6558d8dbe214f6e6c2753376e426cfd6ce86610c25f2564b",
+      "IOTAUSDT": "6ef5e8e68eee47e9ffa93dea63169054792e459105b6ae2e2f588d00e24e2325",
+      "KSMUSDT": "1c55347af695ce4655d9dcba222a8259ad2194a6c03ed58f4b3412129f7b0146",
+      "LDOUSDT": "75782870694f371f4cdb671255a80f813e33633d8961c35d755aa223a90b4b48",
+      "LINKUSDT": "f96b4c7aa8b490495c75c2821d918f196d494d1af67d9d9a526321b8445537c5",
+      "LPTUSDT": "82899cb41ced2a433198a0c5a4d40af575252a2764ff590fc97b56bfd4fead53",
+      "LRCUSDT": "b4a33c09c9553da5b703cff5aa795b25812c4a75bf7ed12b8c6d7ace53f79b56",
+      "LTCUSDT": "dcb39a9c890cbb64a4575f6847dcff4144b535f9d5e5f547b15054e9760453bf",
+      "MAGICUSDT": "e2a6508c9b82fe931ddf9a648d3c34ed32c4b9380aad1bb4d9fe88f6dde938a2",
+      "MANAUSDT": "579bf88bbcbbc662d80c8f94cb500a0c176012eb2df4b9795fc20fcdb111cbeb",
+      "MINAUSDT": "423eb52c9b6ccdfc7bf0d9c02e169074f42ac0b6d9f4c63af12f502bd46030fc",
+      "NEARUSDT": "dd1d4666908842c289908033aaf7d5be1b39f1545e8dce8259da5605256c57bf",
+      "NEOUSDT": "0098d4b7209dadcc4e882d8159d493e4942ecb565a4614239a48a413a507aa98",
+      "ONTUSDT": "2362ac9876e0ac3a25885916ffeffeef510cda87faf3c7f17662e98ebd6db0a6",
+      "OPUSDT": "6ef817d030395a759703cdd4ffcab786cffbf75ec7740d0834c351a50bde7325",
+      "ORDIUSDT": "2d1b643793c826d06f1a8feab46e8d0ca1177f78539f4f5dac732a95533d1796",
+      "PEOPLEUSDT": "f0ec37412190ca8f5de4e5418965008661fa7d6f9067f4fa7597d968287d8faf",
+      "QTUMUSDT": "dbae40f63ef9529f5c2bbaa132fe47d7389e395574f1e3b1f0b3f73fd1118fff",
+      "RSRUSDT": "405ab6fe7069013d8d23e2c8cfa96e718ef332c3445c5790dd808365da3d7bca",
+      "RVNUSDT": "ca543f1f7def9eed92c082cd38fbeadefff87095091545ec67d128c188b2e9ff",
+      "SANDUSDT": "b4ca396a608ec36a423a4ea52f2f0ad1a3d7841b1059af2cdeb834caae3da59c",
+      "SNXUSDT": "45a543730d9bcaf31eb77fee56b45010b66c16654a596fb057ac75565513033b",
+      "SOLUSDT": "63dd622c90797071a0f3f685e6b4b930f0c47ea5e9ef7c96fb9e8b6795cfabb5",
+      "STXUSDT": "d9440e148ebdd6d019771f7d1a36200b1dfb35c49bea44e977382c861f27804e",
+      "SUIUSDT": "35a8f18f8e6aeee3af278ab76a78865be99d93ac283504e52f3a87b6ee852b94",
+      "SUSHIUSDT": "964e7f88ce7d8559218ff9dca7fac9a0134f7eec180d30bb5d30cece9f722871",
+      "THETAUSDT": "287fd3140a28eb2526603650d609cea66c09b066d53fd2fb8d022f0b1122652a",
+      "TONUSDT": "6f4cd8fdd376c4b2b6798318ec7feb4a4dd58ff905068ee20d5108393970d99f",
+      "TRBUSDT": "22f6136f758449163060aff9b9d2ddc143a1574923028633dcca555e55c22b18",
+      "TRXUSDT": "bca6dd5fc2ca9164c2368396f394e14d5404329e151a84f045eef55404b79c8c",
+      "UMAUSDT": "f27098d22937b3b92b19fe8d8b8995b70e8a19c46cfdaff711c30ad78cb4a519",
+      "UNIUSDT": "8ef1246370538b1be4651d2e1956ba780223956aaa779db1be1c1c6bc193dcd5",
+      "USDCUSDT": "5eb08c460c19f1df086e66fbae25339ef724c59ae6f8fbeb7c37e7742d93ed34",
+      "WOOUSDT": "26f0c0aa51ad6483615b1d2b63ddff91f8d8eeb43997e9f62716598d4efbb6e7",
+      "XLMUSDT": "a7dc558a704a5185e612281fe32d1e06b91df352157eeb50b0f5bf9b28d8bf16",
+      "XRPUSDT": "6b7eb9e8f9ea20a1cc78205e009e9893584f40cb3d21a87a938fdae693f4de92",
+      "XTZUSDT": "6e8c82f9626710dda30c406a4e74496458f102bd60e4bfe0ad4b354e1d54dfef",
+      "YFIUSDT": "3816117c12e8d004dfbd78b90938304ead03a5314eb4a51e938f364d1145756f",
+      "YGGUSDT": "e95a832e6e4e2c6a9652d9a748cafdeeefad01d798ef5529b56354a855129341",
+      "ZILUSDT": "affb8db41fd5ec06bdb832aba0fad3e0d4bd22cdc738b0a4072a5d2490f1cbda",
+      "ZRXUSDT": "45ef2a1f123faa56bb59ec475706fbce7129cb46feb759c88a791dcf7595f7ca"
+    },
+    "row_data_written_outside_repo": true
+  },
+  "payload_sha256_excluding_hash": "9fb2943502e37c2d288e09d7daadf97ff9f9e63d90ebcb2d02c1f29029508b9b",
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "basis_premium_data_pack_created": true,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false,
+    "valid_for_future_basis_premium_feature_construction": true
+  },
+  "source_artifacts": {
+    "coverage_lock": {
+      "path": "artifacts/coverage_locks/binance_usdt_perpetual_1m_coverage_discovery_lock_v1.json",
+      "payload_sha256_excluding_hash": "18a84b71c649b0462fdb0d511597dcb701448fe06184ef9c8da93d6911ada4e0",
+      "status": "PASS_REPO_CODE_ONLY_BINANCE_USDT_PERPETUAL_1M_COVERAGE_DISCOVERY_LOCK_CREATED"
+    },
+    "panel_build_manifest": {
+      "path": "artifacts/panel_build_manifests/binance_okx_overlap_near_5y_1m_to_1h_panel_build_manifest_v1.json",
+      "payload_sha256_excluding_hash": "bf4d4d681f36fab3a2131701e25ebc45c94ddb757f92874498ef425d698f40a7",
+      "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_NEAR_5Y_1M_TO_1H_PANEL_BUILD_EXECUTED"
+    },
+    "second_source_readiness": {
+      "path": "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json",
+      "payload_sha256_excluding_hash": "0cfe239f6f5ad2d20bda64b827416851de8f5b959066902b59f1f00f44eba716",
+      "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_NEAR_5Y_SECOND_SOURCE_READINESS_ALIGNMENT_SUMMARY_CREATED"
+    }
+  },
+  "source_checkpoint": {
+    "actual_head_before_run": "5511f38abb55059328f671c86316314325d0b208",
+    "repo_clean_before_run": true,
+    "tracked_python_count_before_run": 867
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_BASIS_PREMIUM_1H_DATA_PACK_CREATED",
+  "symbol_records": [
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\1INCHUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "915410831ef7b3bd2d09bf061bc809d44b1433439b378f1e84e76e57e38140ba",
+      "symbol": "1INCHUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\AAVEUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "ee5fb4f55515baf6ea8f0606a154550a154028a1561bb2b42a481b6119752615",
+      "symbol": "AAVEUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ADAUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "715112905181a109d2c315ca92ed2712420b651a42470b3b3e63cc77c7d12578",
+      "symbol": "ADAUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 5004,
+        "premium": 5018
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 19836,
+        "premium": 19822
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-07-29T02:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\AGLDUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 19822,
+      "rows_outside_window_count": 0,
+      "sha256": "bbe54aa110de33da9fd7e762639ed33d3b9475abaad7ba6114495e37e9148707",
+      "symbol": "AGLDUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ALGOUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "f2d791848713751bb084eadd6eb78c2e651282bf984501f8979e12b2e58b1127",
+      "symbol": "ALGOUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\APEUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "3e9af3bcb7c1cefed0a29a7527b5a34391d12a9fc068fba4879e81d9a23a5272",
+      "symbol": "APEUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\API3USDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "301595cec49edb4805797c256d9c46c317da0a3c42e313a352d6ac28ef14bacb",
+      "symbol": "API3USDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\APTUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "328c9d958bcd00299e9d7fb22207ca469f603a221f4aa13d859e1f063bdca0a7",
+      "symbol": "APTUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 2
+      },
+      "endpoint_row_counts": {
+        "index": 22883,
+        "mark": 22883,
+        "premium": 22881
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-03-23T15:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ARBUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 22881,
+      "rows_outside_window_count": 0,
+      "sha256": "060e2eb51df3dfc9b02dce3c9921105e9f0a6a3ad6d1b063b95d47b04d513b97",
+      "symbol": "ARBUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ARUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "2082e86416d955fa419ffdc9a23d10f75b9bbc8845a70fe12fa89849c63f482d",
+      "symbol": "ARUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ATOMUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "89e4978cc35be14336a17e6c98b731ceec1515b1ab4756afb3059b86020292f8",
+      "symbol": "ATOMUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\AVAXUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "7906ac6d6ec09539ad3ede52d7f6319792e8a196a7c1171f42cb13d778c03fc5",
+      "symbol": "AVAXUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\AXSUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "c1b4e6308cb804c576e936e09da04f59a6fdde71d12f5e22eee1eb79b3d3e910",
+      "symbol": "AXSUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\BANDUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "456e7c0faee9648f85ed1b7163a71ec90a6ef1cec68f4735c27a9483fb814824",
+      "symbol": "BANDUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\BATUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "c85a01d8547f5d35252cedb6b4492f4dfb2dbafd47838c99dd0761586b6f82f5",
+      "symbol": "BATUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\BCHUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "90e33cb02966e37cf283e693b732a45325d7722ed414c3bef43a9a37cf8022cd",
+      "symbol": "BCHUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 6484,
+        "premium": 6492
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 18356,
+        "premium": 18348
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-09-28T12:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\BICOUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 18348,
+      "rows_outside_window_count": 0,
+      "sha256": "1477b36ba0a9436c7a10b16ff5b93914b0ce514f95685ec3db74c46d7f32399b",
+      "symbol": "BICOUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 21
+      },
+      "endpoint_row_counts": {
+        "index": 22041,
+        "mark": 22041,
+        "premium": 22020
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-04-28T12:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\BLURUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 22020,
+      "rows_outside_window_count": 0,
+      "sha256": "27024fa1adb4dfe893b76e579c1289e31d153a9ff5bf28572d022bb3a31c69cc",
+      "symbol": "BLURUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\BNBUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "a9a47042a302fe7120c530c2eb29ac310b4bac0c64afd499a43d5ef83c407439",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\BTCUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "3db1ff6f127e5f42c507295d86e1f0e9c9da72e388d87aefb18126cb5179b097",
+      "symbol": "BTCUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\CELOUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "b8d2ee4d6fe6004278ac7d4e4f3f3602fa9151b80a6ac108b359c09882b7f74a",
+      "symbol": "CELOUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 1206,
+        "premium": 1214
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 23634,
+        "premium": 23626
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-02-20T14:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\CFXUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 23626,
+      "rows_outside_window_count": 0,
+      "sha256": "24cd552a2f9af43c7a7a90bf6bf948e9ff39f41897e80043cadc4da97bd2d7b6",
+      "symbol": "CFXUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\CHZUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "afff0d9585f4db297c46375de2e644ab225b335351a98d683dfe462a8d00d008",
+      "symbol": "CHZUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\COMPUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "9000daa2537df9510a59a898ccec49744319aff3b484d24e42346db8677b24d9",
+      "symbol": "COMPUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\CRVUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "e6872027681c15a2440e0945a900c3603bf5330b381282d2c54a22a5afd24cf3",
+      "symbol": "CRVUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\DOGEUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "08da2a92d80b52855cac1204261566dbd2f1510f83ecce629fad580ef89cf2ff",
+      "symbol": "DOGEUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\DOTUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "6bdb951f81e8f95b8a48fcb15c19af45820f6f9ccdb735e38a0370f0f26c6a4e",
+      "symbol": "DOTUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\DYDXUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "d122a3fd2affd7346ff10f8775ba449d0f532a7b6fd9130fc3980b00764667ec",
+      "symbol": "DYDXUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\EGLDUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "abca8b147375aa8d92e3510071fb30ed9279d63ef89f5bfa1b34253f89975509",
+      "symbol": "EGLDUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ENSUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "57e55c126358fe5811d21eaf8c1257e3fba5ab167efcfba53f90327154d0708b",
+      "symbol": "ENSUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ETCUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "ed9ee09f854c57544d043274ff55be0eadaeb7abaf92fc298e07fd77a85dc67c",
+      "symbol": "ETCUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ETHUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "6b2bc1ed7db420ebf5439120deed12215db688984728151f5d557686cccea42c",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 5068,
+        "premium": 5072
+      },
+      "endpoint_row_counts": {
+        "index": 21956,
+        "mark": 16888,
+        "premium": 16884
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-11-28T12:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ETHWUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 16884,
+      "rows_outside_window_count": 0,
+      "sha256": "37564f4032f5ed68194b3e905fda1dd8720cbcf3cf70b85d3e7f244f9a7c30e2",
+      "symbol": "ETHWUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\FILUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "361a9a0a26ba852be9a54a5441504a973d0d909a99f46c2d28b8c0b576ecd702",
+      "symbol": "FILUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\GALAUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "baf8dc8a4a9cdb288d14bb8eabd1a046568adf3484985c8f660a9093c7ddc597",
+      "symbol": "GALAUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\GMTUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "58a76b08efb6cb7f8af204821552b12eb529ef6c2719ebcee4145e2a7eee6847",
+      "symbol": "GMTUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 1130,
+        "premium": 1142
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 23710,
+        "premium": 23698
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-02-17T14:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\GMXUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 23698,
+      "rows_outside_window_count": 0,
+      "sha256": "26f072837eb0c8926a8a29431a7d70f1f1625e013cf3b63bc1da163f3e07f524",
+      "symbol": "GMXUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\GRTUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "ccb53e6f552f8eb79c7fb5ac82964a83b25241530e926ed6748d94fd80fd7c2c",
+      "symbol": "GRTUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ICPUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "a9497cb2279b1f25ca53c2aacabb70e856f311987a47055f8dfb1cf47b34827c",
+      "symbol": "ICPUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\IMXUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "f948a31a0f50936089cc0d424ec7b71b15dcf17217aa85398b3edd56ffa2636a",
+      "symbol": "IMXUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\IOSTUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "623c7d442727cbea6558d8dbe214f6e6c2753376e426cfd6ce86610c25f2564b",
+      "symbol": "IOSTUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\IOTAUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "6ef5e8e68eee47e9ffa93dea63169054792e459105b6ae2e2f588d00e24e2325",
+      "symbol": "IOTAUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\KSMUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "1c55347af695ce4655d9dcba222a8259ad2194a6c03ed58f4b3412129f7b0146",
+      "symbol": "KSMUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\LDOUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "75782870694f371f4cdb671255a80f813e33633d8961c35d755aa223a90b4b48",
+      "symbol": "LDOUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\LINKUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "f96b4c7aa8b490495c75c2821d918f196d494d1af67d9d9a526321b8445537c5",
+      "symbol": "LINKUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\LPTUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "82899cb41ced2a433198a0c5a4d40af575252a2764ff590fc97b56bfd4fead53",
+      "symbol": "LPTUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\LRCUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "b4a33c09c9553da5b703cff5aa795b25812c4a75bf7ed12b8c6d7ace53f79b56",
+      "symbol": "LRCUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\LTCUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "dcb39a9c890cbb64a4575f6847dcff4144b535f9d5e5f547b15054e9760453bf",
+      "symbol": "LTCUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 540,
+        "premium": 579
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24300,
+        "premium": 24261
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-25T03:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\MAGICUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24261,
+      "rows_outside_window_count": 0,
+      "sha256": "e2a6508c9b82fe931ddf9a648d3c34ed32c4b9380aad1bb4d9fe88f6dde938a2",
+      "symbol": "MAGICUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\MANAUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "579bf88bbcbbc662d80c8f94cb500a0c176012eb2df4b9795fc20fcdb111cbeb",
+      "symbol": "MANAUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 799,
+        "premium": 866
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24041,
+        "premium": 23974
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-02-06T02:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\MINAUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 23974,
+      "rows_outside_window_count": 0,
+      "sha256": "423eb52c9b6ccdfc7bf0d9c02e169074f42ac0b6d9f4c63af12f502bd46030fc",
+      "symbol": "MINAUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\NEARUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "dd1d4666908842c289908033aaf7d5be1b39f1545e8dce8259da5605256c57bf",
+      "symbol": "NEARUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\NEOUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "0098d4b7209dadcc4e882d8159d493e4942ecb565a4614239a48a413a507aa98",
+      "symbol": "NEOUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ONTUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "2362ac9876e0ac3a25885916ffeffeef510cda87faf3c7f17662e98ebd6db0a6",
+      "symbol": "ONTUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\OPUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "6ef817d030395a759703cdd4ffcab786cffbf75ec7740d0834c351a50bde7325",
+      "symbol": "OPUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 1
+      },
+      "endpoint_row_counts": {
+        "index": 17389,
+        "mark": 17389,
+        "premium": 17388
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-11-07T12:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ORDIUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 17388,
+      "rows_outside_window_count": 0,
+      "sha256": "2d1b643793c826d06f1a8feab46e8d0ca1177f78539f4f5dac732a95533d1796",
+      "symbol": "ORDIUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\PEOPLEUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "f0ec37412190ca8f5de4e5418965008661fa7d6f9067f4fa7597d968287d8faf",
+      "symbol": "PEOPLEUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\QTUMUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "dbae40f63ef9529f5c2bbaa132fe47d7389e395574f1e3b1f0b3f73fd1118fff",
+      "symbol": "QTUMUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\RSRUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "405ab6fe7069013d8d23e2c8cfa96e718ef332c3445c5790dd808365da3d7bca",
+      "symbol": "RSRUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\RVNUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "ca543f1f7def9eed92c082cd38fbeadefff87095091545ec67d128c188b2e9ff",
+      "symbol": "RVNUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\SANDUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "b4ca396a608ec36a423a4ea52f2f0ad1a3d7841b1059af2cdeb834caae3da59c",
+      "symbol": "SANDUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\SNXUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "45a543730d9bcaf31eb77fee56b45010b66c16654a596fb057ac75565513033b",
+      "symbol": "SNXUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\SOLUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "63dd622c90797071a0f3f685e6b4b930f0c47ea5e9ef7c96fb9e8b6795cfabb5",
+      "symbol": "SOLUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 1227,
+        "premium": 1238
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 23613,
+        "premium": 23602
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-02-21T14:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\STXUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 23602,
+      "rows_outside_window_count": 0,
+      "sha256": "d9440e148ebdd6d019771f7d1a36200b1dfb35c49bea44e977382c861f27804e",
+      "symbol": "STXUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 4
+      },
+      "endpoint_row_counts": {
+        "index": 21900,
+        "mark": 21900,
+        "premium": 21896
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-05-03T16:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\SUIUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 21896,
+      "rows_outside_window_count": 0,
+      "sha256": "35a8f18f8e6aeee3af278ab76a78865be99d93ac283504e52f3a87b6ee852b94",
+      "symbol": "SUIUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\SUSHIUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "964e7f88ce7d8559218ff9dca7fac9a0134f7eec180d30bb5d30cece9f722871",
+      "symbol": "SUSHIUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\THETAUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "287fd3140a28eb2526603650d609cea66c09b066d53fd2fb8d022f0b1122652a",
+      "symbol": "THETAUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 5
+      },
+      "endpoint_row_counts": {
+        "index": 14633,
+        "mark": 14633,
+        "premium": 14628
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2024-03-01T12:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\TONUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 14628,
+      "rows_outside_window_count": 0,
+      "sha256": "6f4cd8fdd376c4b2b6798318ec7feb4a4dd58ff905068ee20d5108393970d99f",
+      "symbol": "TONUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\TRBUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "22f6136f758449163060aff9b9d2ddc143a1574923028633dcca555e55c22b18",
+      "symbol": "TRBUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\TRXUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "bca6dd5fc2ca9164c2368396f394e14d5404329e151a84f045eef55404b79c8c",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 3079,
+        "premium": 3108
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 21761,
+        "premium": 21732
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-05-10T12:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\UMAUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 21732,
+      "rows_outside_window_count": 0,
+      "sha256": "f27098d22937b3b92b19fe8d8b8995b70e8a19c46cfdaff711c30ad78cb4a519",
+      "symbol": "UMAUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\UNIUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "8ef1246370538b1be4651d2e1956ba780223956aaa779db1be1c1c6bc193dcd5",
+      "symbol": "UNIUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 1696,
+        "premium": 1697
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 23144,
+        "premium": 23143
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-03-12T17:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\USDCUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 23143,
+      "rows_outside_window_count": 0,
+      "sha256": "5eb08c460c19f1df086e66fbae25339ef724c59ae6f8fbeb7c37e7742d93ed34",
+      "symbol": "USDCUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\WOOUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "26f0c0aa51ad6483615b1d2b63ddff91f8d8eeb43997e9f62716598d4efbb6e7",
+      "symbol": "WOOUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\XLMUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "a7dc558a704a5185e612281fe32d1e06b91df352157eeb50b0f5bf9b28d8bf16",
+      "symbol": "XLMUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\XRPUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "6b7eb9e8f9ea20a1cc78205e009e9893584f40cb3d21a87a938fdae693f4de92",
+      "symbol": "XRPUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\XTZUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "6e8c82f9626710dda30c406a4e74496458f102bd60e4bfe0ad4b354e1d54dfef",
+      "symbol": "XTZUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\YFIUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "3816117c12e8d004dfbd78b90938304ead03a5314eb4a51e938f364d1145756f",
+      "symbol": "YFIUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 5172,
+        "premium": 5187
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 19668,
+        "premium": 19653
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-08-05T03:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\YGGUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 19653,
+      "rows_outside_window_count": 0,
+      "sha256": "e95a832e6e4e2c6a9652d9a748cafdeeefad01d798ef5529b56354a855129341",
+      "symbol": "YGGUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ZILUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "affb8db41fd5ec06bdb832aba0fad3e0d4bd22cdc738b0a4072a5d2490f1cbda",
+      "symbol": "ZILUSDT"
+    },
+    {
+      "duplicate_symbol_hour_count": 0,
+      "endpoint_missing_row_counts": {
+        "index": 0,
+        "mark": 0,
+        "premium": 0
+      },
+      "endpoint_row_counts": {
+        "index": 24840,
+        "mark": 24840,
+        "premium": 24840
+      },
+      "mark_index_nonpositive_count": 0,
+      "max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "min_timestamp_utc": "2023-01-01T00:00:00Z",
+      "numeric_invalid_count": 0,
+      "output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_basis_premium_1h_data_pack_v1\\basis_premium_by_symbol\\ZRXUSDT_basis_premium_1h.jsonl.gz",
+      "row_count": 24840,
+      "rows_outside_window_count": 0,
+      "sha256": "45ef2a1f123faa56bb59ec475706fbce7129cb46feb759c88a791dcf7595f7ca",
+      "symbol": "ZRXUSDT"
+    }
+  ],
+  "validation_checks": {
+    "all_required_endpoint_rows_acquired_or_missing_recorded": true,
+    "exact_overlap_symbol_count_verified_81": true,
+    "exactly_one_json_manifest_created": true,
+    "exactly_one_python_tool_created": true,
+    "mark_index_price_positive": true,
+    "no_candidate_generation": true,
+    "no_duplicate_symbol_hour": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_rows_outside_window": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_execution": true,
+    "numeric_sanity_valid": true,
+    "premium_numeric_valid": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "representative_endpoint_probes_passed": true,
+    "row_data_written_outside_repo": true
+  },
+  "validation_summary": {
+    "duplicate_symbol_hour_count": 0,
+    "mark_index_nonpositive_count": 0,
+    "mark_index_price_positive": true,
+    "no_duplicate_symbol_hour": true,
+    "no_rows_outside_window": true,
+    "numeric_invalid_count": 0,
+    "numeric_sanity_valid": true,
+    "premium_numeric_valid": true,
+    "rows_outside_window_count": 0,
+    "symbols_with_zero_rows": []
+  }
+}

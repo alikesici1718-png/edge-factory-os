@@ -1,0 +1,33 @@
+{
+  "state_name": "edge_factory_os_true_source_panel_empirical_null_baseline_state_v1",
+  "created_at_utc": "2026-05-13T20:57:00.405565+00:00",
+  "state_status": "TRUE_SOURCE_PANEL_NULL_BASELINE_FALSE_POSITIVE_REPAIRED_NO_SIGNAL",
+  "decision_class": "TRUE_SOURCE_PANEL_NULL_BASELINE_FALSE_POSITIVE_REPAIRED_NO_ACTUAL_SIGNAL",
+  "policy_hash": "e4a85ce55a1fdee0",
+  "source_runner_status": "TRUE_SOURCE_PANEL_EMPIRICAL_NULL_BASELINE_RUNNER_POLICY_GATES_FAIL",
+  "source_route_hash": "895192a06fdf4c90",
+  "false_positive_methodology_repaired": true,
+  "actual_signal_present": false,
+  "panel_empirical_policy_gate_pass": false,
+  "failed_gate_keys": [
+    "ACTUAL_SIGNAL_PRESENT"
+  ],
+  "max_strict_12_any_random_hit_rate": 0.0,
+  "max_null_adjusted_any_random_hit_rate": 0.0,
+  "row_count": 1919435,
+  "symbol_count": 285,
+  "raw_calendar_month_count": 13,
+  "canonical_policy_month_count": 12,
+  "outcome_column": "coin_ret3_bps",
+  "plugin_expansion_allowed": false,
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "runtime_touch_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "next_recommended_research_key": "RD5_07_FRAMEWORK_STATUS_PANEL_AND_STACK_INTEGRATION",
+  "next_module": "edge_factory_os_framework_status_panel_builder_v1.py"
+}

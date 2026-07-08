@@ -1,0 +1,419 @@
+{
+  "allowed_next_step": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_FORWARD_RETURN_DIAGNOSTIC_V1",
+  "artifact_kind": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_VALIDATOR",
+  "blocker": null,
+  "candidate_generation_allowed": false,
+  "current_head": "20fda87112190d64c0ad8ed78a1bc538ea9926f9",
+  "data_quality_warnings": [
+    "56,231 global missing components recorded by refinement, mainly 56,230 missing 1h OI-delta rows.",
+    "Known public kline archive gaps remain: ARBUSDT-2023-01 and ARBUSDT-2023-02.",
+    "Raw data/cache files were not committed.",
+    "Missing component counts are global input-row quality warnings; selected events pass required component gates by construction."
+  ],
+  "event_quality_validation": {
+    "long_capitulation_rebound": {
+      "arbusdt_count": 67,
+      "cooldown_filtered_event_count": 541,
+      "cooldown_rejection_count": 31,
+      "definition_id": "LONG_CAPITULATION_REBOUND_CANDIDATE__oi_p5.0__taker_p98.0__rejection_score_gte_1__cooldown_6h",
+      "missing_component_count_recorded": 56231,
+      "month_coverage_count": 36,
+      "optional_annotation_distribution": {
+        "absolute_taker_ratio_annotations": {
+          "ratio_gte_0.70+ratio_gte_0.75": 572
+        },
+        "long_short_ratio_annotation": {
+          "account_only": 59,
+          "both": 10,
+          "none": 455,
+          "position_only": 48
+        },
+        "realized_volatility_regime_annotation": {
+          "high_abs_return": 75,
+          "low_abs_return": 160,
+          "normal_abs_return": 271,
+          "very_high_abs_return": 66
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 510,
+          "volume_stress_p95_or_higher": 62
+        }
+      },
+      "overlap_rate": 0.0,
+      "price_rejection_rejection_count": 987,
+      "raw_event_count": 572,
+      "rejection_variant_distribution": {
+        "close_location_upper": 507,
+        "failed_breakdown": 153,
+        "large_downside_range_recovery": 32,
+        "lower_wick_rejection": 507
+      },
+      "selection_slot": "best_long_capitulation_candidate",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "top_month": "2025-06",
+      "top_month_concentration": 0.04990757855822551,
+      "top_symbol": "APTUSDT",
+      "top_symbol_concentration": 0.14048059149722736,
+      "unique_symbol_timestamp_count": 572,
+      "unique_timestamp_count": 563
+    },
+    "optional_strict_long_capitulation_rebound": {
+      "arbusdt_count": 23,
+      "cooldown_filtered_event_count": 207,
+      "cooldown_rejection_count": 10,
+      "definition_id": "LONG_CAPITULATION_REBOUND_CANDIDATE__oi_p2.5__taker_p98.0__rejection_score_gte_1__cooldown_6h",
+      "missing_component_count_recorded": 56231,
+      "month_coverage_count": 35,
+      "optional_annotation_distribution": {
+        "absolute_taker_ratio_annotations": {
+          "ratio_gte_0.70+ratio_gte_0.75": 217
+        },
+        "long_short_ratio_annotation": {
+          "account_only": 21,
+          "both": 4,
+          "none": 176,
+          "position_only": 16
+        },
+        "realized_volatility_regime_annotation": {
+          "high_abs_return": 28,
+          "low_abs_return": 54,
+          "normal_abs_return": 102,
+          "very_high_abs_return": 33
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 174,
+          "volume_stress_p95_or_higher": 43
+        }
+      },
+      "overlap_rate": 0.0,
+      "price_rejection_rejection_count": 396,
+      "raw_event_count": 217,
+      "rejection_variant_distribution": {
+        "close_location_upper": 187,
+        "failed_breakdown": 68,
+        "large_downside_range_recovery": 23,
+        "lower_wick_rejection": 187
+      },
+      "selection_slot": "optional_strict_best_long_capitulation_candidate",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "sparse_but_potentially_usable",
+      "top_month": "2025-06",
+      "top_month_concentration": 0.06280193236714976,
+      "top_symbol": "APTUSDT",
+      "top_symbol_concentration": 0.1642512077294686,
+      "unique_symbol_timestamp_count": 217,
+      "unique_timestamp_count": 211
+    },
+    "optional_strict_short_cover_exhaustion_downside": {
+      "arbusdt_count": 17,
+      "cooldown_filtered_event_count": 153,
+      "cooldown_rejection_count": 1,
+      "definition_id": "SHORT_COVER_EXHAUSTION_DOWNSIDE_CANDIDATE__oi_p2.5__taker_p98.0__rejection_score_gte_1__cooldown_6h",
+      "missing_component_count_recorded": 56231,
+      "month_coverage_count": 33,
+      "optional_annotation_distribution": {
+        "absolute_taker_ratio_annotations": {
+          "ratio_gte_0.70+ratio_gte_0.75": 154
+        },
+        "long_short_ratio_annotation": {
+          "account_only": 19,
+          "both": 1,
+          "none": 117,
+          "position_only": 17
+        },
+        "realized_volatility_regime_annotation": {
+          "high_abs_return": 23,
+          "low_abs_return": 33,
+          "normal_abs_return": 84,
+          "very_high_abs_return": 14
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 145,
+          "volume_stress_p95_or_higher": 9
+        }
+      },
+      "overlap_rate": 0.0,
+      "price_rejection_rejection_count": 313,
+      "raw_event_count": 154,
+      "rejection_variant_distribution": {
+        "close_location_lower": 146,
+        "failed_breakout": 21,
+        "large_upside_range_rejection": 2,
+        "upper_wick_rejection": 146
+      },
+      "selection_slot": "optional_strict_best_short_cover_exhaustion_candidate",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "sparse_but_potentially_usable",
+      "top_month": "2025-06",
+      "top_month_concentration": 0.06535947712418301,
+      "top_symbol": "APTUSDT",
+      "top_symbol_concentration": 0.1503267973856209,
+      "unique_symbol_timestamp_count": 154,
+      "unique_timestamp_count": 150
+    },
+    "short_cover_exhaustion_downside": {
+      "arbusdt_count": 44,
+      "cooldown_filtered_event_count": 392,
+      "cooldown_rejection_count": 19,
+      "definition_id": "SHORT_COVER_EXHAUSTION_DOWNSIDE_CANDIDATE__oi_p5.0__taker_p98.0__rejection_score_gte_1__cooldown_6h",
+      "missing_component_count_recorded": 56231,
+      "month_coverage_count": 36,
+      "optional_annotation_distribution": {
+        "absolute_taker_ratio_annotations": {
+          "ratio_gte_0.70+ratio_gte_0.75": 411
+        },
+        "long_short_ratio_annotation": {
+          "account_only": 42,
+          "both": 6,
+          "none": 326,
+          "position_only": 37
+        },
+        "realized_volatility_regime_annotation": {
+          "high_abs_return": 67,
+          "low_abs_return": 121,
+          "normal_abs_return": 196,
+          "very_high_abs_return": 27
+        },
+        "volume_stress_annotation": {
+          "not_volume_stress": 394,
+          "volume_stress_p95_or_higher": 17
+        }
+      },
+      "overlap_rate": 0.0,
+      "price_rejection_rejection_count": 834,
+      "raw_event_count": 411,
+      "rejection_variant_distribution": {
+        "close_location_lower": 374,
+        "failed_breakout": 70,
+        "large_upside_range_rejection": 4,
+        "upper_wick_rejection": 374
+      },
+      "selection_slot": "best_short_cover_exhaustion_candidate",
+      "symbol_coverage_count": 10,
+      "target_event_count_band": "ideal",
+      "top_month": "2025-06",
+      "top_month_concentration": 0.061224489795918366,
+      "top_symbol": "APTUSDT",
+      "top_symbol_concentration": 0.14030612244897958,
+      "unique_symbol_timestamp_count": 411,
+      "unique_timestamp_count": 401
+    }
+  },
+  "expected_head": "20fda87112190d64c0ad8ed78a1bc538ea9926f9",
+  "final_event_definition_decision": "Main OI contraction/taker capitulation definitions pass validator gates with data-quality and threshold-degree attention.",
+  "forbidden_actions_confirmed_false": {
+    "account_api": false,
+    "api_key": false,
+    "backtest": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "event_definitions_modified": false,
+    "forward_returns_computed": false,
+    "null_validation_run": false,
+    "optimization_against_returns": false,
+    "order_private_account_api_key": false,
+    "p_values_computed": false,
+    "pnl": false,
+    "private_api": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "strategy": false,
+    "trade_simulation": false
+  },
+  "forward_return_diagnostic_allowed": true,
+  "head_matches_expected": true,
+  "input_artifact_hashes_after": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_definition_refinement_v1.json": "fa15a19b1f2b5dcc9d3d5e6859123a4eb6758807770e86b58c0a057e6278ea6d",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_discovery_v1.json": "877a0817397aa8c5460a94e72c4a6ac998cdaad62cd73613321c97dbe2a79529",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_definition_refinement_v1.json": "fa15a19b1f2b5dcc9d3d5e6859123a4eb6758807770e86b58c0a057e6278ea6d",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_discovery_v1.json": "877a0817397aa8c5460a94e72c4a6ac998cdaad62cd73613321c97dbe2a79529",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_payload_hashes_verified": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "01469f54853ee0e9c07c6897f170617564a333f7df2f33e46ba5a127f8fbf9a6",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_definition_refinement_v1.json": "f0197b785b9932a437887b344aae42da8897c16cb7a775fcd1f8831f9ca991f1",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_discovery_v1.json": "22879299f65955bb3038a81f02920c2b6202866e8020ca66f3501ebaa2ff0f47",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "8d84ede6d6d6128224ad193fe2c390c0bf5cbc36ef0a41c6ac97f09f291ad5cd"
+  },
+  "main_acceptance_gates": {
+    "both_main_definitions_pass": true,
+    "long_capitulation_rebound": {
+      "all_required_gates_pass": true,
+      "cooldown_event_count_300_to_1500": true,
+      "global_missing_component_count_recorded_as_attention": true,
+      "material_difference_from_failed_routes": true,
+      "month_coverage_at_least_24": true,
+      "overlap_near_zero": true,
+      "selected_events_have_required_components_by_construction": true,
+      "symbol_coverage_at_least_8_and_target_10": true,
+      "symbol_coverage_equals_10": true,
+      "top_month_concentration_lte_15pct": true,
+      "top_symbol_concentration_lte_25pct": true
+    },
+    "short_cover_exhaustion_downside": {
+      "all_required_gates_pass": true,
+      "cooldown_event_count_300_to_1500": true,
+      "global_missing_component_count_recorded_as_attention": true,
+      "material_difference_from_failed_routes": true,
+      "month_coverage_at_least_24": true,
+      "overlap_near_zero": true,
+      "selected_events_have_required_components_by_construction": true,
+      "symbol_coverage_at_least_8_and_target_10": true,
+      "symbol_coverage_equals_10": true,
+      "top_month_concentration_lte_15pct": true,
+      "top_symbol_concentration_lte_25pct": true
+    }
+  },
+  "material_difference_from_failed_routes": {
+    "different_from_failed_broad_oi_taker_crowding_route": true,
+    "different_from_prior_short_pressure_diagnostic_route": true,
+    "funding_and_liquidation_unavailable_routes_not_used": true,
+    "long_short_ratios_are_annotations_only": true,
+    "requires_capitulation_or_rejection_price_bar": true,
+    "uses_oi_contraction_not_oi_expansion": true
+  },
+  "module": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_VALIDATOR_V1",
+  "no_leakage_validation": {
+    "cooldown_uses_event_time_only_not_future_returns": true,
+    "no_forward_return_fields_used": true,
+    "no_future_high_low_close_used_for_event_construction": true,
+    "no_leakage_detected": true,
+    "oi_contraction_current_prior_only": true,
+    "price_rejection_current_prior_bar_only": true,
+    "taker_pressure_current_prior_only": true
+  },
+  "outcome_blind_selection_validation": {
+    "definitions_evaluated": 192,
+    "no_forward_returns_used": true,
+    "no_p_values_used": true,
+    "no_pnl_hit_rate_sharpe_or_backtest_metrics_used": true,
+    "selection_basis": [
+      "event cleanliness",
+      "event count",
+      "symbol/month coverage",
+      "concentration",
+      "overlap",
+      "missingness",
+      "material difference from failed routes",
+      "simplicity / low degrees of freedom"
+    ],
+    "threshold_degrees_of_freedom_attention_but_acceptable": true
+  },
+  "payload_sha256_excluding_hash": "93becb2b4cba42fdcf90f358946afb4a4a5aeeb6ce3fe66e32a0a5728ce44413",
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "release_allowed": false,
+  "replacement_checks_all_true": true,
+  "result_classification": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_VALIDATOR_PASS_WITH_ATTENTION",
+  "secondary_tier_warnings": {
+    "not_primary_for_forward_return_diagnostic": true,
+    "optional_strict_long_cooldown_event_count": 207,
+    "optional_strict_short_cooldown_event_count": 153,
+    "small_sample_diagnostics_only_unless_future_validator_promotes": true,
+    "strict_variants_are_secondary": true
+  },
+  "selected_main_definitions": {
+    "long_capitulation_rebound": {
+      "cooldown_filtered_event_count": 541,
+      "cooldown_hours": 6,
+      "definition_id": "LONG_CAPITULATION_REBOUND_CANDIDATE__oi_p5.0__taker_p98.0__rejection_score_gte_1__cooldown_6h",
+      "family": "LONG_CAPITULATION_REBOUND_CANDIDATE",
+      "month_coverage_count": 36,
+      "oi_contraction_percentile": "p5.0",
+      "overlap_rate": 0.0,
+      "rejection_score_min": 1,
+      "selection_slot": "best_long_capitulation_candidate",
+      "symbol_coverage_count": 10,
+      "taker_pressure_percentile": "p98.0",
+      "target_event_count_band": "ideal"
+    },
+    "short_cover_exhaustion_downside": {
+      "cooldown_filtered_event_count": 392,
+      "cooldown_hours": 6,
+      "definition_id": "SHORT_COVER_EXHAUSTION_DOWNSIDE_CANDIDATE__oi_p5.0__taker_p98.0__rejection_score_gte_1__cooldown_6h",
+      "family": "SHORT_COVER_EXHAUSTION_DOWNSIDE_CANDIDATE",
+      "month_coverage_count": 36,
+      "oi_contraction_percentile": "p5.0",
+      "overlap_rate": 0.0,
+      "rejection_score_min": 1,
+      "selection_slot": "best_short_cover_exhaustion_candidate",
+      "symbol_coverage_count": 10,
+      "taker_pressure_percentile": "p98.0",
+      "target_event_count_band": "ideal"
+    }
+  },
+  "selected_secondary_definitions": {
+    "optional_strict_long_capitulation_rebound": {
+      "cooldown_filtered_event_count": 207,
+      "cooldown_hours": 6,
+      "definition_id": "LONG_CAPITULATION_REBOUND_CANDIDATE__oi_p2.5__taker_p98.0__rejection_score_gte_1__cooldown_6h",
+      "family": "LONG_CAPITULATION_REBOUND_CANDIDATE",
+      "month_coverage_count": 35,
+      "oi_contraction_percentile": "p2.5",
+      "overlap_rate": 0.0,
+      "rejection_score_min": 1,
+      "selection_slot": "optional_strict_best_long_capitulation_candidate",
+      "symbol_coverage_count": 10,
+      "taker_pressure_percentile": "p98.0",
+      "target_event_count_band": "sparse_but_potentially_usable"
+    },
+    "optional_strict_short_cover_exhaustion_downside": {
+      "cooldown_filtered_event_count": 153,
+      "cooldown_hours": 6,
+      "definition_id": "SHORT_COVER_EXHAUSTION_DOWNSIDE_CANDIDATE__oi_p2.5__taker_p98.0__rejection_score_gte_1__cooldown_6h",
+      "family": "SHORT_COVER_EXHAUSTION_DOWNSIDE_CANDIDATE",
+      "month_coverage_count": 33,
+      "oi_contraction_percentile": "p2.5",
+      "overlap_rate": 0.0,
+      "rejection_score_min": 1,
+      "selection_slot": "optional_strict_best_short_cover_exhaustion_candidate",
+      "symbol_coverage_count": 10,
+      "taker_pressure_percentile": "p98.0",
+      "target_event_count_band": "sparse_but_potentially_usable"
+    }
+  },
+  "signal_allowed": false,
+  "source_artifact_summary": {
+    "dataset_result_classification": "BINANCE_DATA_VISION_UM_METRICS_DATASET_READY_FOR_PROXY_EVENT_STUDY",
+    "discovery_result_classification": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_DISCOVERY_TOO_SPARSE",
+    "kline_result_classification": "BINANCE_PUBLIC_KLINE_FORWARD_RETURN_DIAGNOSTIC_DATA_QUALITY_ATTENTION",
+    "refinement_result_classification": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_REFINEMENT_READY",
+    "theory_queue_result_classification": "OUTCOME_BLIND_BINANCE_THEORY_QUEUE_READY"
+  },
+  "status": "PASS_REPO_ONLY_OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_VALIDATOR_CREATED",
+  "strategy_allowed": false,
+  "theory_id": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION",
+  "threshold_degrees_of_freedom_attention": {
+    "acceptable_for_next_diagnostic": true,
+    "attention": "Multiple OI, taker, rejection score, and cooldown thresholds were evaluated, but selection was outcome-blind and did not inspect returns, p-values, PnL, hit rate, Sharpe, or backtest metrics.",
+    "definition_grid_count_evaluated": 192,
+    "degrees_of_freedom_recorded": true
+  },
+  "validation_checks": {
+    "all_inputs_found_and_hash_verified": true,
+    "artifacts_data_builds_not_written": true,
+    "both_main_definitions_pass_acceptance_gates": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "head_matches_expected": true,
+    "input_artifact_hashes_unchanged": true,
+    "no_forward_returns_pvalues_null_backtest_pnl": true,
+    "no_leakage_validated": true,
+    "no_runtime_live_capital_order_private_account_api_key": true,
+    "no_strategy_signal_candidate_release": true,
+    "outcome_blind_selection_validated": true,
+    "prior_refinement_ready": true,
+    "repo_clean_or_only_outputs_during_run": true,
+    "selected_main_definitions_exact": true
+  },
+  "validator_status": "PASS_REPO_ONLY_OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_VALIDATOR_CREATED"
+}

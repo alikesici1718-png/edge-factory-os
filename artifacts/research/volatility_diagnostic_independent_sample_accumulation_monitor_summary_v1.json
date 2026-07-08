@@ -1,0 +1,241 @@
+{
+  "allowed_next_step": "OUTCOME_BLIND_BINANCE_THEORY_QUEUE_REFRESH_V1",
+  "blocker": null,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "combined_route_policy": {
+    "current_status": "too_sparse_monitor_or_deprioritized",
+    "options_availability_diagnostic_allowed_now": false,
+    "overlap_window_broadened": false,
+    "unique_combined_event_count": 15,
+    "validator_allowed_now": false
+  },
+  "comparative_route_ranking": [
+    {
+      "priority": "highest_monitor_priority",
+      "rank": 1,
+      "reason": "2026 result supportive across 15m/1h/4h, sensitivity passed, no data quality warnings, but sample remains below 100.",
+      "route": "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT"
+    },
+    {
+      "priority": "second_monitor_priority",
+      "rank": 2,
+      "reason": "2026 result supportive with 70 events per target and FDR support, but Bonferroni did not fully pass and sample remains below 100.",
+      "route": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT"
+    },
+    {
+      "priority": "deprioritized",
+      "rank": 3,
+      "reason": "Directional drift is cost-sensitive and independent/historical evidence is weak or inconclusive.",
+      "route": "SHORT_PRESSURE_FAILURE_DELAYED_DOWNSIDE_CONTINUATION_DIAGNOSTIC"
+    },
+    {
+      "priority": "too_sparse_or_blocked",
+      "rank": 4,
+      "reason": "Only 15 unique combined overlaps; validator/options route not allowed.",
+      "route": "COMBINED_VOLATILITY_STRESS_EVENT"
+    }
+  ],
+  "current_head": "04224f042125d0f77444b8d8f515d639ffb79914",
+  "directional_route_policy": {
+    "SHORT_PRESSURE_FAILURE_DELAYED_DOWNSIDE_CONTINUATION_DIAGNOSTIC": {
+      "candidate_generation_allowed": false,
+      "current_status": "monitor_only_or_deprioritized",
+      "reason": "independent validation did not pass, historical holdout inconclusive, and gross drift is likely cost-sensitive",
+      "release_allowed": false,
+      "strategy_allowed": false
+    }
+  },
+  "do_not_rerun_independent_validation_until_event_count_threshold_met": true,
+  "expected_head": "04224f042125d0f77444b8d8f515d639ffb79914",
+  "forbidden_actions_confirmed_false": {
+    "backtest": false,
+    "candidate_generation": false,
+    "combined_overlap_window_broadened": false,
+    "data_downloaded": false,
+    "edge_claim": false,
+    "event_definitions_changed": false,
+    "implied_move_calculation": false,
+    "implied_volatility_lookup": false,
+    "new_p_values_computed": false,
+    "new_returns_computed": false,
+    "null_validation_run": false,
+    "optimization_against_returns": false,
+    "options_chain_lookup": false,
+    "pnl": false,
+    "runtime_live_capital_order_private_api_account_api_key": false,
+    "signal": false,
+    "strategy": false,
+    "trade_simulation": false
+  },
+  "forward_return_diagnostic_allowed_now": false,
+  "head_matches_expected": true,
+  "implied_move_diagnostic_allowed_now": false,
+  "independent_sample_accumulation_thresholds": {
+    "applies_to": [
+      "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT",
+      "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT"
+    ],
+    "rerun_policy": "do not rerun independent validation until event-count threshold is met",
+    "volatility_diagnostic_thresholds": {
+      "100_events": "early review",
+      "150_events": "stronger review",
+      "250_events": "serious independent validation rerun",
+      "300_plus_events": "high-priority validation rerun"
+    }
+  },
+  "input_artifact_hashes_after": {
+    "artifacts/contracts/long_short_ratio_extreme_normalization_pre_registered_independent_validation_contract_v1.json": "194e919d6a322e7ccbd1a7f255c00daa553382e5e0eaeb054eed84a3b5eab947",
+    "artifacts/contracts/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_contract_v1.json": "10a1201daf070a7ce6848a6de891ccc852f3a60eb5f3cd1f1cce6b3850958257",
+    "artifacts/research/combined_volatility_stress_event_discovery_v1.json": "150dc989ac45826e38e346260a4db3a26b9b73021ce4b824fc8a3f358b7a9ef0",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_frozen_historical_holdout_backtest_v1.json": "543f7d4fa84fe0933d62da875986e689543314d3fc3a2018b476cd90eb175ed9",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_runner_v1.json": "08a898fd52eafefd3ce09ce921e2c62bddb604fcfd088a64685c448aa840560a",
+    "artifacts/research/long_short_ratio_extreme_normalization_pre_registered_independent_validation_runner_v1.json": "e5a5e097d258e1396828f3e18313d7d6dc03e0f15b72cb195ed146849dca2f79",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_evaluator_v1.json": "b3d6436e52d40f1f76660bdc0323c043b4bd889d60d0f07d8273f50cf9a8767e",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_runner_v1.json": "2d3a52882f111bda9ed0ca5d239f7948d38c10547ae83d18852851f321390759",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "e5360f6f3516ea31a9af1c4ccf5990a4b8aeb423752372709f9f501c2a7c684e",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/contracts/long_short_ratio_extreme_normalization_pre_registered_independent_validation_contract_v1.json": "194e919d6a322e7ccbd1a7f255c00daa553382e5e0eaeb054eed84a3b5eab947",
+    "artifacts/contracts/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_contract_v1.json": "10a1201daf070a7ce6848a6de891ccc852f3a60eb5f3cd1f1cce6b3850958257",
+    "artifacts/research/combined_volatility_stress_event_discovery_v1.json": "150dc989ac45826e38e346260a4db3a26b9b73021ce4b824fc8a3f358b7a9ef0",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_frozen_historical_holdout_backtest_v1.json": "543f7d4fa84fe0933d62da875986e689543314d3fc3a2018b476cd90eb175ed9",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_pre_registered_independent_validation_runner_v1.json": "08a898fd52eafefd3ce09ce921e2c62bddb604fcfd088a64685c448aa840560a",
+    "artifacts/research/long_short_ratio_extreme_normalization_pre_registered_independent_validation_runner_v1.json": "e5a5e097d258e1396828f3e18313d7d6dc03e0f15b72cb195ed146849dca2f79",
+    "artifacts/research/long_short_ratio_extreme_normalization_volatility_robustness_evaluator_v1.json": "b3d6436e52d40f1f76660bdc0323c043b4bd889d60d0f07d8273f50cf9a8767e",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_pre_registered_independent_validation_runner_v1.json": "2d3a52882f111bda9ed0ca5d239f7948d38c10547ae83d18852851f321390759",
+    "artifacts/research/oi_shock_with_realized_volatility_regime_shift_robustness_evaluator_v1.json": "e5360f6f3516ea31a9af1c4ccf5990a4b8aeb423752372709f9f501c2a7c684e",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "live_allowed": false,
+  "monitor_summary_status": "READY",
+  "monitoring_thresholds_pending": true,
+  "next_action_selector": {
+    "alternatives": [
+      "WAIT_FOR_MORE_2026_DATA_MONITOR_ONLY",
+      "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_INDEPENDENT_SAMPLE_ACCUMULATION_MONITOR_V1",
+      "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_INDEPENDENT_SAMPLE_ACCUMULATION_MONITOR_V1"
+    ],
+    "reason": "repo-only staged research should return to outcome-blind theory queue while monitor thresholds remain pending",
+    "recommended_next_action": "OUTCOME_BLIND_BINANCE_THEORY_QUEUE_REFRESH_V1"
+  },
+  "no_options_route_until_independent_validation_strengthens": true,
+  "options_availability_diagnostic_allowed_now": false,
+  "options_route_policy": {
+    "combined_event_options_route_allowed": false,
+    "implied_move_calculation_now": false,
+    "options_chain_lookup_now": false,
+    "options_route_allowed_now": false,
+    "reason": "combined event unique count is below 100 and no validator is allowed yet",
+    "requirements_before_options_route": [
+      "independent validation event count is sufficient",
+      "validation remains supportive",
+      "options availability and implied-move diagnostic is explicitly authorized"
+    ]
+  },
+  "recovery_audit_status": "PASS",
+  "release_allowed": false,
+  "result_classification": "VOLATILITY_DIAGNOSTIC_MONITOR_SUMMARY_READY",
+  "route_inventory": {
+    "COMBINED_VOLATILITY_STRESS_EVENT": {
+      "candidate_generation_allowed": false,
+      "current_status": "too_sparse_monitor_or_deprioritized",
+      "forward_return_diagnostic_allowed": false,
+      "options_availability_diagnostic_allowed": false,
+      "reason": [
+        "too sparse for validator",
+        "too sparse for options availability diagnostic",
+        "options route not allowed"
+      ],
+      "release_allowed": false,
+      "route_type": "combined confirmation event",
+      "strategy_allowed": false,
+      "unique_combined_event_count": 15
+    },
+    "LONG_SHORT_RATIO_EXTREME_NORMALIZATION_EVENT": {
+      "alternate_volatility_proxies_supportive": true,
+      "arbusdt_exclusion_passed": true,
+      "bonferroni": {
+        "15m": 0.056943056943056944,
+        "1h": 0.026973026973026976,
+        "4h": 0.1018981018981019
+      },
+      "candidate_generation_allowed": false,
+      "current_status": "independent_sample_accumulation_monitor",
+      "event_count": 82,
+      "fdr": {
+        "15m": 0.013486513486513488,
+        "1h": 0.013486513486513488,
+        "4h": 0.03396603396603397
+      },
+      "independent_validation_result": "inconclusive_insufficient_sample",
+      "leave_one_month_passed": true,
+      "leave_one_symbol_passed": true,
+      "monitor_thresholds": {
+        "100_events": "early review",
+        "150_events": "stronger review",
+        "250_events": "serious independent validation rerun",
+        "300_plus_events": "high-priority validation rerun"
+      },
+      "p_abs_high_mean": {
+        "15m": 0.01898101898101898,
+        "1h": 0.008991008991008992,
+        "4h": 0.03396603396603397
+      },
+      "release_allowed": false,
+      "route_type": "volatility diagnostic",
+      "strategy_allowed": false
+    },
+    "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT": {
+      "bonferroni": {
+        "best_oi_expansion_volatility_compression_break_definition": 0.057942057942057944,
+        "best_oi_expansion_volatility_expansion_definition": 0.07192807192807193
+      },
+      "candidate_generation_allowed": false,
+      "current_status": "independent_sample_accumulation_monitor",
+      "event_count": {
+        "best_oi_expansion_volatility_compression_break_definition": 70,
+        "best_oi_expansion_volatility_expansion_definition": 70
+      },
+      "fdr_q": {
+        "best_oi_expansion_volatility_compression_break_definition": 0.03596403596403597,
+        "best_oi_expansion_volatility_expansion_definition": 0.03596403596403597
+      },
+      "independent_validation_result": "inconclusive_insufficient_sample",
+      "monitor_thresholds": {
+        "100_events": "early review",
+        "150_events": "stronger review",
+        "250_events": "serious independent validation rerun",
+        "300_plus_events": "high-priority validation rerun"
+      },
+      "p_abs_high_mean": {
+        "best_oi_expansion_volatility_compression_break_definition": 0.028971028971028972,
+        "best_oi_expansion_volatility_expansion_definition": 0.03596403596403597
+      },
+      "release_allowed": false,
+      "route_type": "volatility diagnostic",
+      "strategy_allowed": false
+    },
+    "SHORT_PRESSURE_FAILURE_DELAYED_DOWNSIDE_CONTINUATION_DIAGNOSTIC": {
+      "candidate_generation_allowed": false,
+      "current_status": "monitor_only_or_deprioritized",
+      "historical_holdout_event_count": 98,
+      "historical_holdout_result": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_HISTORICAL_HOLDOUT_INCONCLUSIVE_INSUFFICIENT_SAMPLE",
+      "independent_event_count": 81,
+      "independent_validation_result": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_INDEPENDENT_VALIDATION_INCONCLUSIVE_INSUFFICIENT_SAMPLE",
+      "reason": [
+        "2026 independent validation did not pass",
+        "historical holdout inconclusive",
+        "gross directional drift likely not enough after 20 bps cost"
+      ],
+      "release_allowed": false,
+      "route_type": "directional diagnostic",
+      "strategy_allowed": false
+    }
+  },
+  "runtime_touch_allowed": false,
+  "signal_allowed": false,
+  "strategy_allowed": false
+}

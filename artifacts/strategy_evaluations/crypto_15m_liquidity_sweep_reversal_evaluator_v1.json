@@ -1,0 +1,113 @@
+{
+  "artifact_kind": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_EVALUATION",
+  "config_id": "crypto_15m_liquidity_sweep_48h_reversal_r2_timestop8h_v1",
+  "diagnostic_promising": false,
+  "diagnostic_promising_criteria": {
+    "holdout_monthly_positive_rate_gte_0_50": false,
+    "holdout_portfolio_net_bps_positive": false,
+    "metric_integrity_passes": true,
+    "no_candidate_edge_live_capital": true,
+    "null_baseline_passes": false,
+    "top_symbol_trade_share_lte_0_25": false,
+    "validation_closed_trades_gte_50": false,
+    "validation_monthly_positive_rate_gte_0_60": false,
+    "validation_portfolio_net_bps_positive": false,
+    "worst_month_gt_minus_1000_bps": false
+  },
+  "execution_metric_summary": {
+    "accepted_long_trades": 0,
+    "accepted_short_trades": 0,
+    "closed_trades": 0,
+    "exit_counts": {
+      "stop": 0,
+      "take_profit": 0,
+      "time": 0
+    },
+    "holdout_closed_trades": 0,
+    "holdout_monthly_positive_rate": null,
+    "holdout_net_bps": 0.0,
+    "max_drawdown_bps": null,
+    "null_baseline": {
+      "feasible": false,
+      "null_pass": false,
+      "reason": "validation closed trades < 50",
+      "runs": 0,
+      "validation_percentile": null
+    },
+    "top_symbol_concentration": {
+      "top_symbol": null,
+      "top_symbol_trade_count": 0,
+      "top_symbol_trade_share": null,
+      "trade_count_by_symbol": {}
+    },
+    "validation_closed_trades": 0,
+    "validation_monthly_positive_rate": null,
+    "validation_net_bps": 0.0,
+    "worst_month_bps": null
+  },
+  "execution_status_preserved": "PASS_REPO_CODE_ONLY_CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_EXECUTED",
+  "metric_integrity_result": {
+    "execution_integrity": {
+      "checks": {
+        "entry_next_bar_open": true,
+        "max_concurrent_positions_lte_5": true,
+        "no_live_runtime_capital_order_action": true,
+        "no_lookahead": true,
+        "notional_cap_applied": true,
+        "portfolio_bps_uses_base_equity_denominator": true,
+        "prior_high_low_excludes_current_bar": true,
+        "rank_uses_only_current_or_past_completed_returns": true,
+        "stop_take_uses_ohlc_conservatively": true
+      },
+      "passed": true
+    },
+    "invalidated_reasons": [],
+    "passed": true
+  },
+  "module": "edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_evaluator_v1",
+  "payload_sha256_excluding_hash": "a996cb86412f092a4b300b578f8188b7a0ad078a7dd9813afcb6b21de6169d64",
+  "replacement_checks_all_true": true,
+  "result_classification": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_INCONCLUSIVE_NEEDS_MORE_DATA",
+  "route_family": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_BASELINE",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "real_orders_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "execution": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_liquidity_sweep_reversal_execution_v1.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "a26e99ea5d72d29931f8c86569293d0f7be745fb",
+    "allowed_new_paths_at_evaluation": [
+      "?? artifacts/strategy_evaluations/crypto_15m_liquidity_sweep_reversal_evaluator_v1.json",
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_evaluator_v1.py"
+    ],
+    "git_status_at_evaluation": [
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_evaluator_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 991,
+    "unexpected_dirty_paths_at_evaluation": []
+  },
+  "status": "PASS_REPO_ONLY_CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_EVALUATED",
+  "strategy": "CRYPTO_15M_LIQUIDITY_SWEEP_FAILED_BREAKOUT_REVERSAL_V1",
+  "validation_checks": {
+    "execution_artifact_loaded": true,
+    "execution_status_verified": true,
+    "no_backtest_rerun": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_optimization": true,
+    "no_parameter_grid": true,
+    "no_runtime_live_capital": true,
+    "repo_clean_before_run": true,
+    "route_family_verified": true,
+    "strategy_verified": true
+  }
+}

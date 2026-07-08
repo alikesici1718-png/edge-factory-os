@@ -1,0 +1,109 @@
+====================================================================================================
+EDGE FACTORY OS PRE-REGISTERED RESEARCH REDESIGN + HOLDOUT GOVERNANCE CONTRACT v1
+====================================================================================================
+contract_status: PRE_REGISTERED_RESEARCH_REDESIGN_CONTRACT_READY
+allowed_scope: REPO_ONLY_OS_INTELLIGENCE
+next_action: BUILD_PRE_REGISTERED_RESEARCH_REDESIGN_GOVERNANCE_RUNNER
+contract_id: PRE_REGISTERED_RESEARCH_REDESIGN_CONTRACT_V1_337082f4d01d7e82_20260514_013036
+contract_hash: 337082f4d01d7e82
+route_hash: f184391da20b4955
+research_key: PRE_REGISTERED_RESEARCH_REDESIGN_AND_HOLDOUT_GOVERNANCE_V1
+direction_queue_key: RD7_01_PRE_REGISTERED_RESEARCH_REDESIGN_AND_HOLDOUT_GOVERNANCE
+plugin_key: PRE_REGISTERED_RESEARCH_REDESIGN_PLUGIN_V1
+strategy_search_allowed_now: False
+methodology_repair_allowed_now: True
+vault_item_count: 1
+blocked_route_count: 18
+lesson_count: 24
+next_module: edge_factory_os_pre_registered_research_redesign_governance_runner_v1.py
+
+GOVERNANCE REQUIREMENTS
+----------------------------------------------------------------------------------------------------
+- pre_registered_contract_before_any_search
+- route_budget_allocation_before_any_search
+- global_multiple_testing_ledger_consumed_before_any_search
+- promising_signal_vault_consumed_before_redesign
+- blocked_route_hash_preflight
+- nested_search_validation_split_required
+- untouched_final_holdout_registry_required
+- procedural_joint_null_required_for_search_procedure
+- familywise_or_route_family_alpha_correction_required
+- no_release_from_diagnostic_or_preview_only
+- all_candidate_family_runtime_capital_live_flags_false
+
+ROUTE BUDGET RULES
+----------------------------------------------------------------------------------------------------
+{
+  "strategy_search_allowed_now": false,
+  "methodology_repair_allowed_now": true,
+  "default_new_route_budget": 0,
+  "redesign_budget_requires_manual_governance_contract": true,
+  "promising_vault_redesign_budget_requires": [
+    "new_route_hash",
+    "material_difference_report",
+    "explicit alpha allocation",
+    "nested validation plan",
+    "untouched holdout plan",
+    "procedural null plan"
+  ],
+  "budget_spend_events": [
+    "route_family_created",
+    "feature_family_scanned",
+    "threshold_grid_scanned",
+    "axis_family_scanned",
+    "null_model_family_added",
+    "evaluator_or_deep_validation_run"
+  ]
+}
+
+NESTED VALIDATION REQUIREMENTS
+----------------------------------------------------------------------------------------------------
+{
+  "search_set": {
+    "purpose": "allowed to explore within pre-registered route budget only",
+    "may_influence_hypothesis": true,
+    "may_influence_release": false
+  },
+  "validation_set": {
+    "purpose": "test pre-registered hypothesis after search is fixed",
+    "may_influence_hypothesis": false,
+    "may_influence_release": false
+  },
+  "untouched_final_holdout": {
+    "purpose": "single-use final examination after full governance chain passes",
+    "may_influence_hypothesis": false,
+    "may_be_reused": false,
+    "required_before_any_candidate_release": true
+  }
+}
+
+ALPHA POLICY
+----------------------------------------------------------------------------------------------------
+{
+  "familywise_alpha": 0.05,
+  "diagnostic_alpha_source": "global_multiple_testing_ledger_v1",
+  "effective_comparison_count": 2880,
+  "diagnostic_alpha_after_pressure": 1.736111111111111e-05,
+  "future_alpha_must_be_allocated_before_run": true,
+  "post_hoc_alpha_allocation_allowed": false,
+  "procedural_null_p_value_required": true,
+  "single_axis_null_not_sufficient_after_search": true
+}
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

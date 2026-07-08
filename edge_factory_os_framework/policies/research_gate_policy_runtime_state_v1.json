@@ -1,0 +1,36 @@
+{
+  "state_name": "edge_factory_os_research_gate_policy_runtime_state_v1",
+  "created_at_utc": "2026-05-13T20:36:24.245492+00:00",
+  "state_status": "RESEARCH_GATE_POLICY_ACTIVE_PLUGIN_EXPANSION_BLOCKED",
+  "policy_hash": "e4a85ce55a1fdee0",
+  "policy_status": "RESEARCH_GATE_ENFORCEMENT_POLICY_ACTIVE",
+  "source_runner_status": "STRONGER_NULL_MODEL_BASELINE_RUNNER_POLICY_GATES_FAIL",
+  "source_policy_gate_pass": false,
+  "source_failed_gate_keys": [
+    "STRICT_12_RANDOM_HIT_RATE_CAP",
+    "NULL_ADJUSTED_RANDOM_HIT_RATE_CAP",
+    "ACTUAL_SIGNAL_PRESENT"
+  ],
+  "max_strict_12_any_random_hit_rate": 1.0,
+  "max_null_adjusted_any_random_hit_rate": 1.0,
+  "decision_class": "STRONGER_NULL_BASELINE_POLICY_GATES_FAIL_FULL_BLOCK",
+  "plugin_expansion_allowed": false,
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "runtime_touch_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "hard_blocks_active": [
+    "NO_PLUGIN_EXPANSION_UNTIL_GATE_ENFORCEMENT_VALIDATOR",
+    "NO_CANDIDATE_GENERATION",
+    "NO_FAMILY_RELEASE",
+    "NO_RUNTIME_TOUCH",
+    "NO_CAPITAL_CHANGE",
+    "NO_ACTIVE_PAPER",
+    "NO_LIVE",
+    "NO_REAL_ORDERS"
+  ]
+}

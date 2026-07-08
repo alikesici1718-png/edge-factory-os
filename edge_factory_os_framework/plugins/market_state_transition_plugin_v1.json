@@ -1,0 +1,174 @@
+{
+  "plugin_key": "MARKET_STATE_TRANSITION_PLUGIN_V1",
+  "plugin_type": "READ_ONLY_OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH",
+  "research_key": "OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH_V1",
+  "direction_queue_key": "RD6_02_OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH",
+  "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+  "canonical_policy_month_count": 12,
+  "source_panel_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_feature_panels\\post_impulse_drift_long_v1\\post_impulse_drift_long_v1_feature_panel_1h_dynamic.parquet",
+  "must_consume_failed_anomaly_deep_validation_state": true,
+  "must_consume_framework_status_panel": true,
+  "must_consume_true_source_panel_null_state": true,
+  "must_consume_research_gate_policy": true,
+  "must_consume_guard_feed": true,
+  "must_consume_route_blocklist": true,
+  "must_be_materially_different_from_blocked_routes": true,
+  "must_keep_plugin_expansion_blocked": true,
+  "must_not_generate_candidate": true,
+  "must_not_release_family": true,
+  "must_not_touch_runtime": true,
+  "must_not_change_capital": true,
+  "must_not_enable_live": true,
+  "source_closed_route_hash": "a7111fc8752a3e15",
+  "source_failed_gates": [
+    "FEATURE_THRESHOLD_PERTURBATION",
+    "NEGATIVE_CONTROLS_RERUN",
+    "TRUE_SOURCE_PANEL_NULL_RERUN_PASS"
+  ],
+  "state_feature_groups": [
+    {
+      "group_key": "market_volatility_state",
+      "description": "Outcome-agnostic volatility/range regime state using current and historical candle/range features only.",
+      "candidate_features": [
+        "derived_candle_range_bps",
+        "entry_range_bps",
+        "range_bps",
+        "atr_bps",
+        "realized_vol_bps"
+      ]
+    },
+    {
+      "group_key": "market_liquidity_state",
+      "description": "Liquidity/participation state using volume/quote-volume/turnover style features.",
+      "candidate_features": [
+        "volume",
+        "quote_volume",
+        "entry_vol_quote",
+        "vol_quote",
+        "turnover"
+      ]
+    },
+    {
+      "group_key": "cross_sectional_dispersion_state",
+      "description": "Cross-sectional dispersion/breadth state across symbols at each timestamp.",
+      "candidate_features": [
+        "cross_sectional_rank",
+        "symbol_percentile",
+        "market_dispersion",
+        "breadth_proxy"
+      ]
+    },
+    {
+      "group_key": "market_beta_residual_state",
+      "description": "Coin-vs-market residual or co-movement state without using forward returns.",
+      "candidate_features": [
+        "market_beta_proxy",
+        "market_residual_proxy",
+        "market_relative_level"
+      ]
+    },
+    {
+      "group_key": "time_structure_state",
+      "description": "Intraday/day-of-week transition structure as control or state descriptor.",
+      "candidate_features": [
+        "derived_hour_utc",
+        "derived_dayofweek_utc"
+      ]
+    }
+  ],
+  "transition_methods": [
+    "rolling_state_quantile_bucket_transition",
+    "cross_sectional_state_rank_transition",
+    "volatility_liquidity_joint_transition",
+    "state_persistence_break_detection",
+    "state_transition_matrix_asymmetry",
+    "state_duration_and_reentry_profile",
+    "state_change_point_candidate_scan",
+    "state_cluster_transition_graph"
+  ],
+  "negative_controls": [
+    "timestamp_shuffle_control",
+    "month_shuffle_control",
+    "symbol_shuffle_control",
+    "state_label_permutation_control",
+    "transition_direction_flip_control",
+    "feature_group_shuffle_control",
+    "calendar_block_shuffle_control",
+    "null_transition_matrix_control"
+  ],
+  "minimum_state_feature_group_count": 4,
+  "minimum_transition_method_count": 6,
+  "minimum_negative_control_count": 6,
+  "minimum_empirical_null_runs": 1000,
+  "preferred_empirical_null_runs": 2000,
+  "gate_caps": {
+    "max_allowed_strict_12_any_random_hit_rate": 0.01,
+    "max_allowed_null_adjusted_any_random_hit_rate": 0.005,
+    "empirical_p_value_required_lte": 0.01,
+    "minimum_actual_vs_null_margin_bps": 2500.0
+  },
+  "transition_preview_requirements": {
+    "must_be_outcome_agnostic": true,
+    "must_have_canonical_12_month_presence": true,
+    "must_pass_true_source_panel_null": true,
+    "must_pass_negative_controls": true,
+    "must_not_reuse_failed_anomaly_axis": true,
+    "minimum_transition_stability_months": 12,
+    "minimum_symbol_coverage": 200,
+    "minimum_row_coverage": 1000000
+  },
+  "required_guard_keys": [
+    "CANONICAL_MONTH_POLICY_GUARD",
+    "FULL_UNIVERSE_IDENTITY_GUARD",
+    "HIGH_MISSINGNESS_FEATURE_USAGE_GUARD",
+    "SYMBOL_LIFECYCLE_COVERAGE_GUARD",
+    "EXTREME_RETURN_OUTLIER_GUARD"
+  ],
+  "forbidden_inputs": [
+    "future_return_as_feature",
+    "future_pnl_as_feature",
+    "outcome_label_first_selection",
+    "post_outcome_filtering",
+    "manual_symbol_whitelist",
+    "manual_month_blacklist",
+    "reuse_failed_source_panel_anomaly_route",
+    "reuse_failed_derived_candle_body_high_extreme_route",
+    "summary_row_only_replay",
+    "synthetic_month_generation_only",
+    "candidate_generation",
+    "family_release",
+    "runtime_touch",
+    "capital_change",
+    "active_paper",
+    "live_or_real_orders"
+  ],
+  "required_runner_outputs": [
+    "input_consumption_report",
+    "state_feature_inventory",
+    "state_transition_method_inventory",
+    "market_state_transition_summary",
+    "market_state_transition_month_stability",
+    "market_state_transition_negative_controls",
+    "true_source_panel_null_rerun",
+    "policy_gate_pass_fail_table",
+    "material_difference_report",
+    "latest_json",
+    "latest_txt",
+    "csv_outputs"
+  ],
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

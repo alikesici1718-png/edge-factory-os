@@ -1,0 +1,430 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from __future__ import annotations
+
+import csv
+import json
+import subprocess
+from collections import Counter
+from datetime import datetime, timezone
+from pathlib import Path
+
+WORKSPACE = Path(r"C:\Users\alike\OneDrive\Desktop\edge_lab_new")
+REPO = WORKSPACE / "edge_factory_os_repo"
+OUT_ROOT = WORKSPACE / "edge_factory_os_repo_cleanup_plan_v1"
+
+SOURCE_MAP_ROOT = WORKSPACE / "edge_factory_os_repo_source_map_v1"
+SOURCE_MAP_PATH = SOURCE_MAP_ROOT / "os_repo_source_map_latest.json"
+DEPENDENCY_GRAPH_PATH = WORKSPACE / "edge_factory_os_dependency_graph_v1" / "os_dependency_graph_latest.json"
+DANGEROUS_REVIEW_PATH = WORKSPACE / "edge_factory_os_dangerous_marker_review_index_v1" / "dangerous_marker_review_index_latest.json"
+TEST_HARNESS_PATH = WORKSPACE / "edge_factory_os_test_harness_manifest_v1" / "os_test_harness_manifest_latest.json"
+STACK_PATH = WORKSPACE / "edge_factory_os_standard_stack_runner_v1" / "os_standard_stack_latest.json"
+
+PROTECTED_CATEGORIES = {
+    "ACTIVE_RUNTIME",
+    "CORE_OS_TOOL",
+    "RISK_MANAGER",
+    "LOGGER",
+    "LAUNCHER_SCRIPT",
+}
+
+REVIEW_CATEGORIES = {
+    "PATCH_OR_REPAIR_TOOL",
+    "DIAGNOSTIC_OR_GUARD",
+    "OS_SUPERVISION",
+    "RESEARCH_CANDIDATE_OS",
+    "OFFLINE_RESEARCH",
+    "ARCHIVE_OR_BACKUP",
+    "UNCATEGORIZED",
+}
+
+def now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def read_json(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8", errors="replace"))
+    except Exception as e:
+        return {"__read_error__": repr(e), "__path__": str(path)}
+
+def run(cmd: list[str], cwd: Path | None = None, timeout: int = 40) -> dict:
+    try:
+        p = subprocess.run(
+            cmd,
+            cwd=str(cwd) if cwd else None,
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+        )
+        return {
+            "ok": p.returncode == 0,
+            "returncode": p.returncode,
+            "stdout": p.stdout,
+            "stderr": p.stderr,
+        }
+    except Exception as e:
+        return {
+            "ok": False,
+            "returncode": None,
+            "stdout": "",
+            "stderr": repr(e),
+        }
+
+def latest_file(root: Path, pattern: str) -> Path | None:
+    if not root.exists():
+        return None
+    files = list(root.rglob(pattern))
+    if not files:
+        return None
+    return sorted(files, key=lambda p: p.stat().st_mtime, reverse=True)[0]
+
+def read_csv_rows(path: Path | None) -> list[dict]:
+    if not path or not path.exists():
+        return []
+    try:
+        with path.open("r", encoding="utf-8", errors="replace", newline="") as f:
+            return list(csv.DictReader(f))
+    except Exception:
+        return []
+
+def add_plan(
+    rows: list[dict],
+    priority: int,
+    path: str,
+    category: str,
+    proposed_action: str,
+    allowed_to_execute: bool,
+    reason: str,
+    safety: str,
+) -> None:
+    rows.append({
+        "priority": priority,
+        "path": path,
+        "category": category,
+        "proposed_action": proposed_action,
+        "allowed_to_execute": bool(allowed_to_execute),
+        "reason": reason,
+        "safety": safety,
+    })
+
+def main() -> int:
+    out_dir = OUT_ROOT / f"os_repo_cleanup_plan_v1_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    source_map = read_json(SOURCE_MAP_PATH)
+    dependency_graph = read_json(DEPENDENCY_GRAPH_PATH)
+    dangerous_review = read_json(DANGEROUS_REVIEW_PATH)
+    test_harness = read_json(TEST_HARNESS_PATH)
+    stack = read_json(STACK_PATH)
+
+    source_files_csv = latest_file(SOURCE_MAP_ROOT, "os_repo_source_map_v1_files.csv")
+    duplicate_csv = latest_file(SOURCE_MAP_ROOT, "os_repo_source_map_v1_duplicate_groups.csv")
+    risky_csv = latest_file(SOURCE_MAP_ROOT, "os_repo_source_map_v1_risky_files.csv")
+
+    files = read_csv_rows(source_files_csv)
+    duplicates = read_csv_rows(duplicate_csv)
+    risky = read_csv_rows(risky_csv)
+
+    git_status = run(["git", "status", "--short"], cwd=REPO)
+    git_dirty = bool(git_status["stdout"].strip())
+
+    source_map_ready = source_map.get("map_status") == "REPO_SOURCE_MAP_READY"
+    dependency_graph_ready = dependency_graph.get("dependency_graph_status") == "DEPENDENCY_GRAPH_READY"
+    dangerous_review_ready = dangerous_review.get("review_status") == "DANGEROUS_MARKER_REVIEW_READY"
+    dangerous_critical = int(dangerous_review.get("critical_marker_count") or 0)
+    test_harness_ready = test_harness.get("test_harness_status") == "TEST_HARNESS_MANIFEST_READY"
+    stack_pass = stack.get("stack_status") == "STACK_PASS"
+
+    plan_rows: list[dict] = []
+
+    category_counts = Counter(row.get("category", "UNKNOWN") for row in files)
+
+    risky_paths = {row.get("path", "") for row in risky if row.get("path")}
+    duplicate_paths = set()
+    for row in duplicates:
+        raw = row.get("paths", "")
+        for p in raw.split("|"):
+            if p:
+                duplicate_paths.add(p)
+
+    for row in files:
+        path = row.get("path", "")
+        category = row.get("category", "UNKNOWN")
+        risky_hit_count = int(row.get("risky_hit_count") or 0)
+        is_active_runtime = str(row.get("is_active_runtime", "")).lower() == "true"
+        is_core_os_tool = str(row.get("is_core_os_tool", "")).lower() == "true"
+
+        if is_active_runtime or is_core_os_tool or category in PROTECTED_CATEGORIES:
+            add_plan(
+                plan_rows,
+                1000,
+                path,
+                category,
+                "KEEP_PROTECTED_NO_MOVE_NO_DELETE",
+                False,
+                "Protected active runtime/core OS/risk/logger/launcher file.",
+                "No execution. No move. No delete.",
+            )
+            continue
+
+        if category == "ARCHIVE_OR_BACKUP":
+            add_plan(
+                plan_rows,
+                700,
+                path,
+                category,
+                "PLAN_ARCHIVE_REVIEW_LATER_NO_ACTION_NOW",
+                False,
+                "Looks like archive/backup. Can be reviewed later, but no automatic cleanup.",
+                "Plan only. No delete. No move.",
+            )
+            continue
+
+        if category == "PATCH_OR_REPAIR_TOOL":
+            add_plan(
+                plan_rows,
+                680,
+                path,
+                category,
+                "PLAN_PATCH_TOOL_REVIEW_LATER_NO_ACTION_NOW",
+                False,
+                "Patch/repair tool should remain review-only unless runtime apply gate allows.",
+                "Plan only. Runtime patch forbidden.",
+            )
+            continue
+
+        if path in duplicate_paths:
+            add_plan(
+                plan_rows,
+                650,
+                path,
+                category,
+                "PLAN_DUPLICATE_GROUP_REVIEW_LATER_NO_ACTION_NOW",
+                False,
+                "Part of duplicate/versioned family. Need manual review before any consolidation.",
+                "Plan only. No delete. No move.",
+            )
+            continue
+
+        if path in risky_paths or risky_hit_count > 0:
+            add_plan(
+                plan_rows,
+                640,
+                path,
+                category,
+                "PLAN_RISK_MARKER_REVIEW_LATER_NO_ACTION_NOW",
+                False,
+                "Contains risky marker(s), but Dangerous Marker Review found no critical marker.",
+                "Plan only. No execution.",
+            )
+            continue
+
+        if category == "UNCATEGORIZED":
+            add_plan(
+                plan_rows,
+                600,
+                path,
+                category,
+                "PLAN_CLASSIFY_UNCATEGORIZED_LATER_NO_ACTION_NOW",
+                False,
+                "Uncategorized file. Needs classification before cleanup.",
+                "Plan only.",
+            )
+            continue
+
+        if category in REVIEW_CATEGORIES:
+            add_plan(
+                plan_rows,
+                550,
+                path,
+                category,
+                "PLAN_REVIEW_CATEGORY_LATER_NO_ACTION_NOW",
+                False,
+                "Review category. Keep for now.",
+                "Plan only.",
+            )
+            continue
+
+        add_plan(
+            plan_rows,
+            500,
+            path,
+            category,
+            "KEEP_NO_ACTION",
+            False,
+            "No cleanup action recommended.",
+            "Plan only.",
+        )
+
+    planned_actions = Counter(row["proposed_action"] for row in plan_rows)
+
+    critical = []
+    attention = []
+
+    if not source_map_ready:
+        critical.append("SOURCE_MAP_NOT_READY")
+    if not dependency_graph_ready:
+        critical.append("DEPENDENCY_GRAPH_NOT_READY")
+    if not dangerous_review_ready:
+        critical.append("DANGEROUS_MARKER_REVIEW_NOT_READY")
+    if dangerous_critical > 0:
+        critical.append("DANGEROUS_MARKER_CRITICAL_EXISTS")
+    if not test_harness_ready:
+        attention.append("TEST_HARNESS_NOT_READY")
+    if not stack_pass:
+        attention.append("STANDARD_STACK_NOT_PASS")
+    if git_dirty:
+        attention.append("REPO_DIRTY_EXPECTED_IF_NEW_CLEANUP_PLAN_UNCOMMITTED")
+
+    # This module is intentionally plan-only.
+    executable_plan_count = sum(1 for r in plan_rows if r["allowed_to_execute"] is True)
+    if executable_plan_count > 0:
+        critical.append("CLEANUP_PLAN_CONTAINS_EXECUTABLE_ACTIONS")
+
+    if critical:
+        repo_cleanup_plan_status = "REPO_CLEANUP_PLAN_CRITICAL"
+        next_action = "FIX_CLEANUP_PLAN_CRITICALS"
+    else:
+        repo_cleanup_plan_status = "REPO_CLEANUP_PLAN_READY"
+        next_action = "NO_REPO_CLEANUP_EXECUTION_CONTINUE_OR_WAIT"
+
+    state = {
+        "generated_at": now_iso(),
+        "workspace": str(WORKSPACE),
+        "repo": str(REPO),
+        "repo_cleanup_plan_status": repo_cleanup_plan_status,
+        "file_count": len(files),
+        "plan_row_count": len(plan_rows),
+        "duplicate_group_count": len(duplicates),
+        "risky_file_count": len(risky),
+        "category_counts": dict(category_counts),
+        "planned_actions": dict(planned_actions),
+        "critical": critical,
+        "attention": sorted(set(attention)),
+        "source_map_ready": source_map_ready,
+        "dependency_graph_ready": dependency_graph_ready,
+        "dangerous_review_ready": dangerous_review_ready,
+        "dangerous_critical_marker_count": dangerous_critical,
+        "test_harness_ready": test_harness_ready,
+        "stack_pass": stack_pass,
+        "git_dirty": git_dirty,
+        "git_status_short": git_status["stdout"].strip(),
+        "next_action": next_action,
+        "plan_only": True,
+        "delete_allowed": False,
+        "move_allowed": False,
+        "runtime_touch_allowed": False,
+        "launcher_allowed": False,
+        "patch_runtime_allowed": False,
+        "active_paper_allowed": False,
+        "live_allowed": False,
+        "capital_change_allowed": False,
+        "execution_performed": False,
+        "source_files": {
+            "source_files_csv": str(source_files_csv) if source_files_csv else "",
+            "duplicate_csv": str(duplicate_csv) if duplicate_csv else "",
+            "risky_csv": str(risky_csv) if risky_csv else "",
+        },
+    }
+
+    state_path = out_dir / "os_repo_cleanup_plan_v1_state.json"
+    latest_path = OUT_ROOT / "os_repo_cleanup_plan_latest.json"
+    plan_csv = out_dir / "os_repo_cleanup_plan_v1_plan.csv"
+    report_path = out_dir / "os_repo_cleanup_plan_v1_report.md"
+
+    state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
+    latest_path.write_text(json.dumps(state, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
+
+    with plan_csv.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=[
+                "priority", "path", "category", "proposed_action",
+                "allowed_to_execute", "reason", "safety",
+            ],
+        )
+        writer.writeheader()
+        writer.writerows(sorted(plan_rows, key=lambda x: x["priority"], reverse=True))
+
+    md = []
+    md.append("# Edge Factory OS Repo Cleanup Plan v1")
+    md.append("")
+    md.append(f"repo_cleanup_plan_status: `{repo_cleanup_plan_status}`")
+    md.append(f"file_count: `{len(files)}`")
+    md.append(f"plan_row_count: `{len(plan_rows)}`")
+    md.append(f"duplicate_group_count: `{len(duplicates)}`")
+    md.append(f"risky_file_count: `{len(risky)}`")
+    md.append("")
+    md.append("## Planned actions")
+    for k, v in planned_actions.most_common():
+        md.append(f"- `{k}`: `{v}`")
+    md.append("")
+    md.append("## Critical")
+    if critical:
+        for x in critical:
+            md.append(f"- `{x}`")
+    else:
+        md.append("- `NONE`")
+    md.append("")
+    md.append("## Attention")
+    if attention:
+        for x in sorted(set(attention)):
+            md.append(f"- `{x}`")
+    else:
+        md.append("- `NONE`")
+    md.append("")
+    md.append("## Safety")
+    md.append("- plan_only: `True`")
+    md.append("- delete_allowed: `False`")
+    md.append("- move_allowed: `False`")
+    md.append("- runtime_touch_allowed: `False`")
+    md.append("- launcher_allowed: `False`")
+    md.append("- patch_runtime_allowed: `False`")
+    md.append("- active_paper_allowed: `False`")
+    md.append("- live_allowed: `False`")
+    md.append("- capital_change_allowed: `False`")
+    md.append("- execution_performed: `False`")
+    report_path.write_text("\n".join(md) + "\n", encoding="utf-8")
+
+    print("EDGE FACTORY OS REPO CLEANUP PLAN v1")
+    print("=" * 100)
+    print(f"repo_cleanup_plan_status: {repo_cleanup_plan_status}")
+    print(f"file_count: {len(files)}")
+    print(f"plan_row_count: {len(plan_rows)}")
+    print(f"duplicate_group_count: {len(duplicates)}")
+    print(f"risky_file_count: {len(risky)}")
+    print(f"critical: {critical}")
+    print(f"attention: {sorted(set(attention))}")
+    print(f"source_map_ready={source_map_ready}")
+    print(f"dependency_graph_ready={dependency_graph_ready}")
+    print(f"dangerous_review_ready={dangerous_review_ready}")
+    print(f"dangerous_critical_marker_count={dangerous_critical}")
+    print(f"test_harness_ready={test_harness_ready}")
+    print(f"stack_pass={stack_pass}")
+    print(f"git_dirty={git_dirty}")
+    print(f"next_action: {next_action}")
+    print("plan_only: True")
+    print("delete_allowed: False")
+    print("move_allowed: False")
+    print("runtime_touch_allowed: False")
+    print("launcher_allowed     : False")
+    print("patch_runtime_allowed: False")
+    print("active_paper_allowed : False")
+    print("live_allowed         : False")
+    print("capital_change_allowed: False")
+    print("execution_performed  : False")
+    print()
+    print("PLANNED ACTIONS")
+    print("-" * 100)
+    for k, v in planned_actions.most_common():
+        print(f"{k}: {v}")
+    print()
+    print(f"State : {state_path}")
+    print(f"Latest: {latest_path}")
+    print(f"Plan  : {plan_csv}")
+    print(f"Report: {report_path}")
+
+if __name__ == "__main__":
+    main()

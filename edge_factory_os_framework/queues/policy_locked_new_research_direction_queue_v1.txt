@@ -1,0 +1,118 @@
+====================================================================================================
+EDGE FACTORY OS POLICY LOCKED NEW RESEARCH DIRECTION QUEUE v1
+====================================================================================================
+queue_status: POLICY_LOCKED_NEW_RESEARCH_DIRECTION_QUEUE_READY
+severity: ATTENTION
+allowed_scope: READ_ONLY_RESEARCH
+next_action: BUILD_SELECTED_POLICY_LOCKED_RESEARCH_CONTRACT_NO_RELEASE
+reason: framework_ready=True; false_positive_methodology_repaired=True; actual_signal_present=False; selected=RD6_01_SOURCE_PANEL_ANOMALY_DISCOVERY_WITH_TRUE_NULLS; route_hash_blocked=False
+policy_active: True
+guard_pass: True
+validator_pass: True
+false_positive_methodology_repaired: True
+actual_signal_present: False
+plugin_expansion_allowed: False
+candidate_generation_allowed: False
+family_release_allowed: False
+runtime_touch_allowed: False
+capital_change_allowed: False
+live_allowed: False
+real_orders_allowed: False
+lesson_count: 20
+blocked_route_count: 16
+candidate_direction_count: 3
+selected_research_key: RD6_01_SOURCE_PANEL_ANOMALY_DISCOVERY_WITH_TRUE_NULLS
+selected_route_hash: b7d5e9b3d9f28c12
+selected_next_module: edge_factory_os_source_panel_anomaly_discovery_contract_builder_v1.py
+
+SELECTED DIRECTION
+----------------------------------------------------------------------------------------------------
+{
+  "research_key": "RD6_01_SOURCE_PANEL_ANOMALY_DISCOVERY_WITH_TRUE_NULLS",
+  "priority": 100,
+  "next_module_recommendation": "edge_factory_os_source_panel_anomaly_discovery_contract_builder_v1.py",
+  "archetype": "source_panel_anomaly_discovery_with_true_nulls",
+  "allowed_scope": "READ_ONLY_RESEARCH",
+  "why": "Previous route failed because actual signal was absent. This direction starts from full source-panel anomaly discovery, uses true source-panel empirical nulls from the beginning, and avoids reopening closed impulse/feature/plugin routes.",
+  "uses": [
+    "full_source_panel_rows",
+    "canonical_12_policy_months",
+    "true_source_panel_empirical_null_baseline",
+    "unsupervised_or_outcome_agnostic_feature_discovery",
+    "post_discovery_outcome_validation_only"
+  ],
+  "forbidden": [
+    "summary_row_only_replay",
+    "synthetic_month_generation_only",
+    "manual_symbol_whitelist",
+    "manual_month_blacklist",
+    "future_return_as_feature",
+    "post_outcome_filtering",
+    "blocked_route_hash_reuse",
+    "candidate_generation",
+    "family_release",
+    "runtime_touch",
+    "capital_change",
+    "live_or_real_orders"
+  ],
+  "null_baseline": "true_source_panel_empirical_null_required_before_any_signal_claim",
+  "required_prerequisites": [
+    "must_consume_framework_status_panel_v1",
+    "must_consume_true_source_panel_empirical_null_baseline_state_v1",
+    "must_consume_research_gate_enforcement_policy_v1",
+    "must_consume_data_quality_guard_feed",
+    "must_consume_candidate_route_blocklist",
+    "must_be_materially_different_from_blocked_routes",
+    "must_keep_plugin_expansion_blocked",
+    "must_keep_candidate_family_runtime_capital_live_blocked"
+  ],
+  "material_difference_claim": "New path is not entry-rule/feature-sweep first. It begins with source-panel anomaly discovery under true nulls, then only later may evaluate outcomes.",
+  "lesson_count_seen": 20,
+  "blocked_route_count_seen": 16,
+  "plugin_expansion_allowed_now": false,
+  "candidate_generation_allowed_now": false,
+  "candidate_contract_allowed_now": false,
+  "family_release_allowed_now": false,
+  "runtime_touch_allowed_now": false,
+  "capital_change_allowed_now": false,
+  "active_paper_allowed_now": false,
+  "live_allowed_now": false,
+  "real_orders_allowed_now": false,
+  "route_hash": "b7d5e9b3d9f28c12",
+  "route_hash_blocked": false,
+  "materially_different_required": true,
+  "policy_locked": true
+}
+
+DIRECTION CANDIDATES
+----------------------------------------------------------------------------------------------------
+100 | RD6_01_SOURCE_PANEL_ANOMALY_DISCOVERY_WITH_TRUE_NULLS | route_hash=b7d5e9b3d9f28c12 | blocked=False | Previous route failed because actual signal was absent. This direction starts from full source-panel anomaly discovery, uses true source-panel empirical nulls from the beginning, and avoids reopening closed impulse/feature/plugin routes.
+90 | RD6_02_OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH | route_hash=eed3db72e57eb995 | blocked=False | Search for market-state transitions without using outcome labels first; then validate against true source-panel null baseline.
+75 | RD6_03_PANEL_DATA_GENERATING_PROCESS_AUDIT | route_hash=58ee230f3c0b7e67 | blocked=False | Before more alpha research, audit whether the panel's return/process structure has exploitable non-random structure under true nulls.
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False
+
+OUTPUT PATHS
+----------------------------------------------------------------------------------------------------
+output_json: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_policy_locked_new_research_direction_queue\policy_locked_new_research_direction_queue_latest.json
+output_txt: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_policy_locked_new_research_direction_queue\policy_locked_new_research_direction_queue_latest.txt
+output_csv: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_policy_locked_new_research_direction_queue\policy_locked_new_research_direction_candidates_latest.csv
+repo_queue_json: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\queues\policy_locked_new_research_direction_queue_v1.json
+repo_queue_txt: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\queues\policy_locked_new_research_direction_queue_v1.txt
+specific_lesson_path: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_lesson_memory\policy_locked_new_research_direction_queue_lesson_latest.json

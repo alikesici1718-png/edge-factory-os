@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-05-12T09:08:00.100222+00:00",
+  "workspace": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new",
+  "status": "ERROR_ACKNOWLEDGER_NETWORK_WARNINGS_ACKNOWLEDGED",
+  "acknowledged": true,
+  "classifier_state_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_error_classifier_v1\\error_classifier_v1_20260512_120513\\error_classifier_v1_state.json",
+  "blockers": [],
+  "total_errors": 6,
+  "network_warning_count": 6,
+  "logic_or_safety_error_count": 0,
+  "unknown_error_count": 0,
+  "os_error_severity": "ACKNOWLEDGED_WARNING",
+  "command_center_overlay_status": "RUNTIME_HEALTHY_WITH_ACKNOWLEDGED_NETWORK_WARNINGS",
+  "notes": [
+    "Does not delete errors.csv.",
+    "Does not modify family logs.",
+    "Only creates an acknowledgement artifact for OS-level interpretation.",
+    "Future new logic/safety/unknown errors must still trigger attention.",
+    "Network/exchange fetch warnings are acknowledged as non-logic blockers."
+  ],
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "capital_change_allowed": false
+}

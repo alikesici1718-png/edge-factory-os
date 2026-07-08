@@ -1,0 +1,140 @@
+{
+  "artifact_kind": "OLD_SHORT_EXACT_RERUN_UNAVAILABLE_CLOSURE_RECORD",
+  "final_closure_decision": {
+    "capital_allowed_now": false,
+    "decision_reason": "The exact frozen rerun remains unavailable because no gate candidate passed the deterministic source-selection rule. old_short remains not invalidated and monitoring-only with no capital/live/runtime permission.",
+    "exact_frozen_backtest_allowed_now": false,
+    "exact_frozen_backtest_completed": false,
+    "final_state": "OLD_SHORT_MONITORING_ONLY_EXACT_REPLAY_UNAVAILABLE_NO_CAPITAL",
+    "gate_rebuilt_or_inferred": false,
+    "live_allowed_now": false,
+    "manual_gate_source_override_used": false,
+    "old_short_invalidated": false,
+    "reviewed_1h_panel_substituted": false,
+    "runtime_reenable_allowed_now": false
+  },
+  "forbidden_actions_confirmed_false": {
+    "backtest_run": false,
+    "candidate_generated": false,
+    "capital_permission_granted": false,
+    "edge_claimed": false,
+    "family_released": false,
+    "gate_rebuilt_or_inferred": false,
+    "launcher_created": false,
+    "live_permission_granted": false,
+    "manual_gate_override_used": false,
+    "monitor_enabled": false,
+    "one_hour_panel_substitution_used": false,
+    "runtime_touched": false,
+    "strategy_executed": false
+  },
+  "frozen_contract_summary": {
+    "contract_complete": true,
+    "execution_allowed_next": true,
+    "global_gate_dependency_preserved": true,
+    "reviewed_1h_panel_substitution_allowed": false,
+    "route_name": "old_short_gate_aware",
+    "timeframe": "1m"
+  },
+  "gate_disambiguation_summary": {
+    "classification": "OLD_SHORT_GATE_SOURCE_DISAMBIGUATION_NO_VALID_SOURCE",
+    "frozen_backtest_allowed_next": false,
+    "gate_candidate_count": 8,
+    "reason": "No gate candidate satisfied all deterministic source-selection conditions. The paper_run_gate_v4_priority gate has old_short rows but is not directly referenced by the frozen contract or recovered evidence; the frozen contract gate path is directly referenced but has no old_short rows.",
+    "selected_gate_source_path": null,
+    "status": "PASS_REPO_ONLY_OLD_SHORT_GATE_SOURCE_DISAMBIGUATION_NO_VALID_SOURCE"
+  },
+  "missing_source_recovery_summary": {
+    "both_required_sources_found": true,
+    "classification": "OLD_SHORT_EXACT_DATA_SOURCES_FOUND_READY_FOR_FROZEN_BACKTEST",
+    "exact_global_gate_candidate_count": 8,
+    "exact_global_gate_decisions_found": true,
+    "exact_okx_1m_source_found": true,
+    "status": "PASS_REPO_ONLY_OLD_SHORT_MISSING_DATA_SOURCE_RECOVERY_FOUND"
+  },
+  "module": "edge_factory_os_repo_only_old_short_exact_rerun_unavailable_closure_v1",
+  "payload_sha256_excluding_hash": "c57f4d6c229f98fde7947e178ade72c8ceed8b9e537988752cbe0e76584db6c8",
+  "recovered_old_short_status": {
+    "closed_trade_count_recovered": 20,
+    "eight_of_eight_evidence_found": false,
+    "final_decision": "OLD_SHORT_MONITORING_READY_CONTINUE_COLLECT_NO_CAPITAL",
+    "monitoring_ready": true,
+    "old_short_invalidated": false,
+    "runtime_live_capital_status": {
+      "candidate_or_edge_approved": false,
+      "capital_approved": false,
+      "live_approved": false,
+      "real_orders_approved": false,
+      "runtime_approved": false
+    }
+  },
+  "reopen_conditions": [
+    "exact frozen-contract referenced global gate replay source must be recovered",
+    "exact OKX 1m source must remain available",
+    "deterministic source selection must pass",
+    "frozen rerun must be performed without substitutions",
+    "evaluator and closure must pass under current self-deception-resistant policy",
+    "manual user approval required before any later runtime/capital discussion",
+    "no automatic reopen"
+  ],
+  "replacement_checks_all_true": true,
+  "route_state_after_closure": {
+    "invalidated": false,
+    "may_reopen_if_exact_referenced_gate_source_found": true,
+    "monitoring_only": true,
+    "needs_exact_gate_source_recovery": true,
+    "no_capital_until_new_valid_replay_and_review": true,
+    "rejected_no_followup": false
+  },
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "closure_created": true,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "monitoring_only_recorded": true,
+    "next_immediate_module_required": false,
+    "project_can_pause_after_closure": true,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "old_short_evidence_recovery_status_refresh": "artifacts/old_short/old_short_evidence_recovery_status_refresh_v1.json",
+    "old_short_frozen_route_contract_reconstruction": "artifacts/old_short/old_short_frozen_route_contract_reconstruction_v1.json",
+    "old_short_gate_source_disambiguation_review": "artifacts/old_short/old_short_gate_source_disambiguation_review_v1.json",
+    "old_short_missing_data_source_recovery_discovery": "artifacts/old_short/old_short_missing_data_source_recovery_discovery_v1.json"
+  },
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-25T17:36:51Z",
+    "head": "49f6fe84d19f7a66a93c705b14a72bc90f4c86c3",
+    "repo_clean_before_run": true,
+    "tracked_python_count_before": 910
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_EXACT_RERUN_UNAVAILABLE_CLOSURE_CREATED",
+  "validation_checks": {
+    "evidence_recovery_artifact_loaded": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "frozen_backtest_allowed_next_false_verified": true,
+    "frozen_contract_artifact_loaded": true,
+    "gate_disambiguation_artifact_loaded": true,
+    "gate_disambiguation_no_valid_source_verified": true,
+    "missing_source_recovery_artifact_loaded": true,
+    "no_api_called": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_gate_rebuild_or_inference": true,
+    "no_manual_gate_override": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_panel_substitution": true,
+    "no_runtime_live_capital": true,
+    "no_runtime_touched": true,
+    "old_short_invalidated_false_preserved": true,
+    "recovered_closed_trade_count_preserved_20": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

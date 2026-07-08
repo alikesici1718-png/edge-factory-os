@@ -1,0 +1,1194 @@
+{
+  "discovery_status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_DISCOVERY_CREATED",
+  "status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_DISCOVERY_CREATED",
+  "artifact_kind": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_DISCOVERY",
+  "module": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_DISCOVERY_V1",
+  "result_classification": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_DISCOVERY_TOO_SPARSE",
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "current_head": "8341d3659878b833c32f502142d7436678e4f865",
+  "expected_head": "8341d3659878b833c32f502142d7436678e4f865",
+  "head_matches_expected": true,
+  "input_artifact_hashes_before": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/binance_oi_taker_crowding_forward_return_robustness_runner_v1.json": "0fd21e8f4741f895dd86af8c567890d5138f3f4347a10ecaf71886a5a4580ca8",
+    "artifacts/research/binance_oi_taker_crowding_forward_return_null_validation_runner_v1.json": "1a08f6e8f15d77f7b4e1beb48d447a859bf8312c77ad32cb9011d52d5d4dc634",
+    "artifacts/research/binance_oi_taker_crowding_proxy_event_study_v1.json": "aae545f2baaf343dfe7636a35cdf33901245a6bf8251653aa4a97cb5a45b3275",
+    "artifacts/contracts/binance_oi_taker_crowding_proxy_validation_contract_v1.json": "1d2f1b4f7411d1f77d40569ddfb1a58e7a38db4ac0bf0cbf66c8683347d22a77"
+  },
+  "input_artifact_hashes_after": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/binance_oi_taker_crowding_forward_return_robustness_runner_v1.json": "0fd21e8f4741f895dd86af8c567890d5138f3f4347a10ecaf71886a5a4580ca8",
+    "artifacts/research/binance_oi_taker_crowding_forward_return_null_validation_runner_v1.json": "1a08f6e8f15d77f7b4e1beb48d447a859bf8312c77ad32cb9011d52d5d4dc634",
+    "artifacts/research/binance_oi_taker_crowding_proxy_event_study_v1.json": "aae545f2baaf343dfe7636a35cdf33901245a6bf8251653aa4a97cb5a45b3275",
+    "artifacts/contracts/binance_oi_taker_crowding_proxy_validation_contract_v1.json": "1d2f1b4f7411d1f77d40569ddfb1a58e7a38db4ac0bf0cbf66c8683347d22a77"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "source_artifacts": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": {
+      "status": "PASS_REPO_ONLY_BINANCE_DATA_VISION_UM_METRICS_DATASET_BUILDER_CREATED",
+      "payload_sha256_excluding_hash": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc"
+    },
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": {
+      "status": "PASS_REPO_ONLY_BINANCE_PUBLIC_KLINE_FORWARD_RETURN_DIAGNOSTIC_CREATED",
+      "payload_sha256_excluding_hash": "01469f54853ee0e9c07c6897f170617564a333f7df2f33e46ba5a127f8fbf9a6"
+    },
+    "artifacts/research/binance_oi_taker_crowding_forward_return_robustness_runner_v1.json": {
+      "status": "PASS_REPO_ONLY_BINANCE_OI_TAKER_CROWDING_FORWARD_RETURN_ROBUSTNESS_RUNNER_CREATED",
+      "result_classification": "BINANCE_OI_TAKER_CROWDING_FORWARD_RETURN_ROBUSTNESS_WEAK_OR_NOT_ROBUST",
+      "payload_sha256_excluding_hash": "1080ffd33dc3cdd5720c50670dcefc9c07ff519a2414d368c3a1eef81d4c4c63"
+    },
+    "artifacts/research/binance_oi_taker_crowding_forward_return_null_validation_runner_v1.json": {
+      "status": "PASS_REPO_ONLY_BINANCE_OI_TAKER_CROWDING_FORWARD_RETURN_NULL_VALIDATION_RUNNER_CREATED",
+      "payload_sha256_excluding_hash": "6a34b7a6b4c8bc822ec73e452f69fb652c4d123aaf014b75fe036102b2422293"
+    },
+    "artifacts/research/binance_oi_taker_crowding_proxy_event_study_v1.json": {
+      "status": "PASS_REPO_ONLY_BINANCE_OI_TAKER_CROWDING_PROXY_EVENT_STUDY_CREATED",
+      "payload_sha256_excluding_hash": "ce40de1164eac6c9fde1d7c52b59493767f52194b5d818438818ab8b9e08b780"
+    },
+    "artifacts/contracts/binance_oi_taker_crowding_proxy_validation_contract_v1.json": {
+      "status": "PASS_REPO_ONLY_BINANCE_OI_TAKER_CROWDING_PROXY_VALIDATION_CONTRACT_CREATED",
+      "payload_sha256_excluding_hash": "d8589237effb885207669c0a006ee46a34e66d98d438676170430957362e9d11"
+    }
+  },
+  "event_definition_family": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_DISCOVERY_V1",
+  "material_difference_from_failed_broad_route": {
+    "prior_route_result": "BINANCE_OI_TAKER_CROWDING_FORWARD_RETURN_ROBUSTNESS_WEAK_OR_NOT_ROBUST",
+    "difference": "This discovery requires symbol-month extreme OI expansion, extreme same-side taker aggression, extreme top-trader crowding, current/prior-bar price failure, and 24h cooldown-filtered unique events. It does not test forward returns or revive the broad route."
+  },
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "APTUSDT",
+    "ARBUSDT",
+    "OPUSDT"
+  ],
+  "timestamp_range": {
+    "metrics_min": "2023-01-01T00:00:00Z",
+    "metrics_max": "2025-12-31T23:55:00Z",
+    "uses_current_and_prior_price_bars_only": true
+  },
+  "threshold_grid": {
+    "strict": {
+      "oi_quantile": 0.99,
+      "taker_quantile": 0.99,
+      "long_crowding_quantile": 0.975,
+      "short_crowding_quantile": 0.025
+    },
+    "very_strict": {
+      "oi_quantile": 0.995,
+      "taker_quantile": 0.995,
+      "long_crowding_quantile": 0.99,
+      "short_crowding_quantile": 0.01
+    },
+    "ultra_strict": {
+      "oi_quantile": 0.9975,
+      "taker_quantile": 0.9975,
+      "long_crowding_quantile": 0.995,
+      "short_crowding_quantile": 0.005
+    }
+  },
+  "event_definitions_tested": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "side": "long_failure",
+      "description": "Extreme OI expansion, extreme taker buy aggression, extreme long crowding, and same-direction price failure/rejection."
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "side": "short_failure",
+      "description": "Extreme OI expansion, extreme taker sell aggression, extreme short crowding, and same-direction price failure/rejection."
+    }
+  },
+  "event_counts_by_definition_and_strictness": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "strict": 6,
+      "very_strict": 0,
+      "ultra_strict": 0
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "strict": 6,
+      "very_strict": 0,
+      "ultra_strict": 0
+    }
+  },
+  "cooldown_filtered_counts": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "strict": 6,
+      "very_strict": 0,
+      "ultra_strict": 0
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "strict": 6,
+      "very_strict": 0,
+      "ultra_strict": 0
+    }
+  },
+  "symbol_coverage_summary": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "strict": {
+        "symbol_coverage_count": 5,
+        "symbols": [
+          "APTUSDT",
+          "BNBUSDT",
+          "LINKUSDT",
+          "OPUSDT",
+          "XRPUSDT"
+        ]
+      },
+      "very_strict": {
+        "symbol_coverage_count": 0,
+        "symbols": []
+      },
+      "ultra_strict": {
+        "symbol_coverage_count": 0,
+        "symbols": []
+      }
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "strict": {
+        "symbol_coverage_count": 3,
+        "symbols": [
+          "APTUSDT",
+          "DOGEUSDT",
+          "OPUSDT"
+        ]
+      },
+      "very_strict": {
+        "symbol_coverage_count": 0,
+        "symbols": []
+      },
+      "ultra_strict": {
+        "symbol_coverage_count": 0,
+        "symbols": []
+      }
+    }
+  },
+  "month_coverage_summary": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "strict": {
+        "month_coverage_count": 5,
+        "months": [
+          "2023-05",
+          "2024-04",
+          "2025-03",
+          "2025-11",
+          "2025-12"
+        ]
+      },
+      "very_strict": {
+        "month_coverage_count": 0,
+        "months": []
+      },
+      "ultra_strict": {
+        "month_coverage_count": 0,
+        "months": []
+      }
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "strict": {
+        "month_coverage_count": 6,
+        "months": [
+          "2023-11",
+          "2024-08",
+          "2024-11",
+          "2025-02",
+          "2025-06",
+          "2025-09"
+        ]
+      },
+      "very_strict": {
+        "month_coverage_count": 0,
+        "months": []
+      },
+      "ultra_strict": {
+        "month_coverage_count": 0,
+        "months": []
+      }
+    }
+  },
+  "concentration_summary": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "strict": {
+        "top_symbol": "APTUSDT",
+        "top_symbol_concentration": 0.3333333333333333,
+        "top_month": "2025-12",
+        "top_month_concentration": 0.3333333333333333
+      },
+      "very_strict": {
+        "top_symbol": null,
+        "top_symbol_concentration": null,
+        "top_month": null,
+        "top_month_concentration": null
+      },
+      "ultra_strict": {
+        "top_symbol": null,
+        "top_symbol_concentration": null,
+        "top_month": null,
+        "top_month_concentration": null
+      }
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "strict": {
+        "top_symbol": "OPUSDT",
+        "top_symbol_concentration": 0.5,
+        "top_month": "2023-11",
+        "top_month_concentration": 0.16666666666666666
+      },
+      "very_strict": {
+        "top_symbol": null,
+        "top_symbol_concentration": null,
+        "top_month": null,
+        "top_month_concentration": null
+      },
+      "ultra_strict": {
+        "top_symbol": null,
+        "top_symbol_concentration": null,
+        "top_month": null,
+        "top_month_concentration": null
+      }
+    }
+  },
+  "arbusdt_summary": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "strict": 0,
+      "very_strict": 0,
+      "ultra_strict": 0
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "strict": 0,
+      "very_strict": 0,
+      "ultra_strict": 0
+    }
+  },
+  "overlap_summary": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "strict": 0.0,
+      "very_strict": 0.0,
+      "ultra_strict": 0.0
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "strict": 0.0,
+      "very_strict": 0.0,
+      "ultra_strict": 0.0
+    }
+  },
+  "missing_data_summary": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "strict": 56313,
+      "very_strict": 56313,
+      "ultra_strict": 56313
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "strict": 56332,
+      "very_strict": 56332,
+      "ultra_strict": 56332
+    }
+  },
+  "rejection_reason_summary": {
+    "EXTREME_CROWDED_LONG_FAILURE": {
+      "strict": {
+        "rejected_due_to_cooldown_count": 0,
+        "rejected_due_to_missing_price_failure_confirmation_count": 3,
+        "rejected_due_to_missing_oi_taker_crowding_components_count": 56313
+      },
+      "very_strict": {
+        "rejected_due_to_cooldown_count": 0,
+        "rejected_due_to_missing_price_failure_confirmation_count": 1,
+        "rejected_due_to_missing_oi_taker_crowding_components_count": 56313
+      },
+      "ultra_strict": {
+        "rejected_due_to_cooldown_count": 0,
+        "rejected_due_to_missing_price_failure_confirmation_count": 0,
+        "rejected_due_to_missing_oi_taker_crowding_components_count": 56313
+      }
+    },
+    "EXTREME_CROWDED_SHORT_FAILURE": {
+      "strict": {
+        "rejected_due_to_cooldown_count": 0,
+        "rejected_due_to_missing_price_failure_confirmation_count": 1,
+        "rejected_due_to_missing_oi_taker_crowding_components_count": 56332
+      },
+      "very_strict": {
+        "rejected_due_to_cooldown_count": 0,
+        "rejected_due_to_missing_price_failure_confirmation_count": 0,
+        "rejected_due_to_missing_oi_taker_crowding_components_count": 56332
+      },
+      "ultra_strict": {
+        "rejected_due_to_cooldown_count": 0,
+        "rejected_due_to_missing_price_failure_confirmation_count": 0,
+        "rejected_due_to_missing_oi_taker_crowding_components_count": 56332
+      }
+    }
+  },
+  "selected_clean_event_definitions": [
+    {
+      "event_definition": "EXTREME_CROWDED_LONG_FAILURE",
+      "strictness": "strict",
+      "cooldown_filtered_event_count": 6,
+      "raw_event_count": 6
+    },
+    {
+      "event_definition": "EXTREME_CROWDED_SHORT_FAILURE",
+      "strictness": "strict",
+      "cooldown_filtered_event_count": 6,
+      "raw_event_count": 6
+    }
+  ],
+  "selected_definition_reason": "All levels are too sparse; maximum cooldown-filtered total is 12.",
+  "target_event_count_interpretation": {
+    "ideal_range": "300 to 1500 cooldown-filtered events",
+    "acceptable_range": "1500 to 5000 cooldown-filtered events",
+    "too_broad": "over 5000 cooldown-filtered events",
+    "too_sparse": "under 100 cooldown-filtered events",
+    "observed_cooldown_totals_by_strictness": {
+      "strict": 12,
+      "very_strict": 0,
+      "ultra_strict": 0
+    },
+    "interpretation": "Cooldown-filtered event counts are below the desired usable range and likely too sparse."
+  },
+  "symbol_month_threshold_preview": {
+    "APTUSDT": {
+      "2023-01": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.06695837843246592,
+          "p99.5": 0.08307062357815694,
+          "p99.75": 0.10425132190438634
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.9427673035059976,
+          "p99.5": 3.62306233546549,
+          "p99.75": 4.392054836499611,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.8975876477402998,
+          "p99.5": 3.4349918915495974,
+          "p99.75": 4.277630676260928,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 1.388630856553108,
+          "top_account_p99.0": 1.4326248417671905,
+          "top_account_p99.5": 1.4583943466892797,
+          "top_position_p97.5": 1.2202895639875,
+          "top_position_p99.0": 1.2428973827649998,
+          "top_position_p99.5": 1.253964228131
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.47880477987103937,
+          "top_account_p1.0": 0.46517049951340395,
+          "top_account_p0.5": 0.45624612258929054,
+          "top_position_p2.5": 0.9573853732700001,
+          "top_position_p1.0": 0.951080863558,
+          "top_position_p0.5": 0.9478894506334999
+        }
+      },
+      "2023-02": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.03117747993813785,
+          "p99.5": 0.040616301850853354,
+          "p99.75": 0.046875675475661176
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.236549962399999,
+          "p99.5": 2.4982129433055102,
+          "p99.75": 2.8710736664532557,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.490860755274899,
+          "p99.5": 2.7136118329718,
+          "p99.75": 3.010158997864859,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 2.446008744681345,
+          "top_account_p99.0": 2.4631753409762562,
+          "top_account_p99.5": 2.4704462374055414,
+          "top_position_p97.5": 1.01876018527,
+          "top_position_p99.0": 1.02251953772,
+          "top_position_p99.5": 1.024965839272
+        },
+        "short_crowding": {
+          "top_account_p2.5": 1.0396497040721262,
+          "top_account_p1.0": 1.0162584302020705,
+          "top_account_p0.5": 1.0086383247196984,
+          "top_position_p2.5": 0.95587219395,
+          "top_position_p1.0": 0.952120146,
+          "top_position_p0.5": 0.9503629641570001
+        }
+      }
+    },
+    "ARBUSDT": {
+      "2023-03": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.13724450701194577,
+          "p99.5": 0.41624366862059675,
+          "p99.75": 0.7320177581166941
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.0550164519200007,
+          "p99.5": 2.2501154818149987,
+          "p99.75": 2.449228810882499,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.1906455696910005,
+          "p99.5": 2.293050129757999,
+          "p99.75": 2.361534574509747,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 3.895830321616896,
+          "top_account_p99.0": 3.9753748898149937,
+          "top_account_p99.5": 4.010098030592874,
+          "top_position_p97.5": 1.169432650025,
+          "top_position_p99.0": 1.17233556065,
+          "top_position_p99.5": 1.174559685175
+        },
+        "short_crowding": {
+          "top_account_p2.5": 1.1885980283626174,
+          "top_account_p1.0": 1.0954011855983554,
+          "top_account_p0.5": 1.043377348425228,
+          "top_position_p2.5": 0.9594796356,
+          "top_position_p1.0": 0.9436653398,
+          "top_position_p0.5": 0.93870726407
+        }
+      },
+      "2023-04": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.04240267741490654,
+          "p99.5": 0.07108710068657709,
+          "p99.75": 0.08233562799245796
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.1766752462980006,
+          "p99.5": 2.485634542069501,
+          "p99.75": 2.7104577798055054,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.440863134297205,
+          "p99.5": 2.7057836783143507,
+          "p99.75": 3.0442731851337785,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 4.150321582813067,
+          "top_account_p99.0": 4.241397613065327,
+          "top_account_p99.5": 4.3058357290111955,
+          "top_position_p97.5": 1.3119450470599998,
+          "top_position_p99.0": 1.3212128440220001,
+          "top_position_p99.5": 1.3234723075615
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.9526994815246578,
+          "top_account_p1.0": 0.9126823191983143,
+          "top_account_p0.5": 0.892575123824657,
+          "top_position_p2.5": 0.969572360515,
+          "top_position_p1.0": 0.965517012847,
+          "top_position_p0.5": 0.960324831187
+        }
+      }
+    },
+    "BNBUSDT": {
+      "2023-01": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.025086238095002152,
+          "p99.5": 0.03545595700250095,
+          "p99.75": 0.05479661695424777
+        },
+        "taker_buy_aggression": {
+          "p99.0": 3.110099163548999,
+          "p99.5": 3.6589761529599887,
+          "p99.75": 4.263892147782283,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 3.2638693416753988,
+          "p99.5": 3.9135036901810256,
+          "p99.75": 4.75533813687223,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 1.917580578159157,
+          "top_account_p99.0": 1.9779356880560695,
+          "top_account_p99.5": 2.005584498170412,
+          "top_position_p97.5": 1.0434323931774991,
+          "top_position_p99.0": 1.0600566784269998,
+          "top_position_p99.5": 1.066057298281
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.9684989564619452,
+          "top_account_p1.0": 0.9605842552470026,
+          "top_account_p0.5": 0.9576239947567996,
+          "top_position_p2.5": 0.87204600321,
+          "top_position_p1.0": 0.8696442294600001,
+          "top_position_p0.5": 0.8684979214535
+        }
+      },
+      "2023-02": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.03654861943278962,
+          "p99.5": 0.05738547646819606,
+          "p99.75": 0.08703158078361002
+        },
+        "taker_buy_aggression": {
+          "p99.0": 3.081517473890002,
+          "p99.5": 3.579009617803994,
+          "p99.75": 4.221414354426032,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 3.016109781929801,
+          "p99.5": 3.4088356940843876,
+          "p99.75": 3.829665482911251,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 2.096747984492409,
+          "top_account_p99.0": 2.131247639761761,
+          "top_account_p99.5": 2.1450211850171295,
+          "top_position_p97.5": 1.0744390698350001,
+          "top_position_p99.0": 1.0868039954,
+          "top_position_p99.5": 1.0901333662059998
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.9806970851924666,
+          "top_account_p1.0": 0.9386873315029569,
+          "top_account_p0.5": 0.933117982553576,
+          "top_position_p2.5": 0.904893174065,
+          "top_position_p1.0": 0.89731900992,
+          "top_position_p0.5": 0.8943498426640001
+        }
+      }
+    },
+    "BTCUSDT": {
+      "2023-01": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.019122898585907322,
+          "p99.5": 0.022933980214363634,
+          "p99.75": 0.030213828559819033
+        },
+        "taker_buy_aggression": {
+          "p99.0": 3.177454343153997,
+          "p99.5": 3.8349348492765,
+          "p99.75": 4.385464357765519,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 3.3472853868455994,
+          "p99.5": 4.038549594623095,
+          "p99.75": 4.951897476492425,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 2.0557031067891307,
+          "top_account_p99.0": 2.0801922720563386,
+          "top_account_p99.5": 2.0960258399806015,
+          "top_position_p97.5": 1.1667595219325,
+          "top_position_p99.0": 1.176132968145,
+          "top_position_p99.5": 1.180408747969
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.7546589773237384,
+          "top_account_p1.0": 0.732563645188458,
+          "top_account_p0.5": 0.7224967508012512,
+          "top_position_p2.5": 1.0523327973375,
+          "top_position_p1.0": 1.0485636053310001,
+          "top_position_p0.5": 1.0455216973745
+        }
+      },
+      "2023-02": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.02526693114648871,
+          "p99.5": 0.03272963238042598,
+          "p99.75": 0.03750091512158001
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.8202874197970003,
+          "p99.5": 3.172252275505007,
+          "p99.75": 3.618350479748524,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.7938264396566996,
+          "p99.5": 3.1417921304845007,
+          "p99.75": 3.4451807149526292,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 1.880084867698245,
+          "top_account_p99.0": 1.9760723785622092,
+          "top_account_p99.5": 2.001140926883129,
+          "top_position_p97.5": 1.28435222992,
+          "top_position_p99.0": 1.296757323508,
+          "top_position_p99.5": 1.303257965269
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.9100304123484244,
+          "top_account_p1.0": 0.8733808513450835,
+          "top_account_p0.5": 0.8574855042452442,
+          "top_position_p2.5": 1.1189439645650001,
+          "top_position_p1.0": 1.115654038778,
+          "top_position_p0.5": 1.113420830676
+        }
+      }
+    },
+    "DOGEUSDT": {
+      "2023-01": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.041211147611696676,
+          "p99.5": 0.06425315558631793,
+          "p99.75": 0.08195027926611675
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.5111035061769997,
+          "p99.5": 2.864559219566996,
+          "p99.75": 3.249210159830255,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.7310072673255963,
+          "p99.5": 3.2172337919883374,
+          "p99.75": 3.6972860195065906,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 3.437727868724995,
+          "top_account_p99.0": 3.5405496573851094,
+          "top_account_p99.5": 3.6115199135923213,
+          "top_position_p97.5": 1.7174327860599998,
+          "top_position_p99.0": 1.7414516119189998,
+          "top_position_p99.5": 1.756402298479
+        },
+        "short_crowding": {
+          "top_account_p2.5": 2.382823288404494,
+          "top_account_p1.0": 2.175299905618492,
+          "top_account_p0.5": 2.034494289971105,
+          "top_position_p2.5": 1.043473834195,
+          "top_position_p1.0": 1.0392155181979998,
+          "top_position_p0.5": 1.03655522108
+        }
+      },
+      "2023-02": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.04410466245680231,
+          "p99.5": 0.05859734485041294,
+          "p99.75": 0.0746400120684767
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.7661959733860004,
+          "p99.5": 3.2496326088589997,
+          "p99.75": 3.8881075692330014,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.7920503137846016,
+          "p99.5": 3.1957248696480995,
+          "p99.75": 3.601238487252302,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 5.135460815497174,
+          "top_account_p99.0": 5.291611501504126,
+          "top_account_p99.5": 5.346384518604742,
+          "top_position_p97.5": 1.876617882445,
+          "top_position_p99.0": 1.895988118298,
+          "top_position_p99.5": 1.90492852816
+        },
+        "short_crowding": {
+          "top_account_p2.5": 2.7717502819898243,
+          "top_account_p1.0": 2.6954862142790135,
+          "top_account_p0.5": 2.371223037805034,
+          "top_position_p2.5": 1.4879251792,
+          "top_position_p1.0": 1.456078405386,
+          "top_position_p0.5": 1.445376589745
+        }
+      }
+    },
+    "ETHUSDT": {
+      "2023-01": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.020147078348329565,
+          "p99.5": 0.024402919008208956,
+          "p99.75": 0.028564843232119035
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.7399362408289996,
+          "p99.5": 3.154610172845999,
+          "p99.75": 3.4167521576677546,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.8853525335670978,
+          "p99.5": 3.258530215635998,
+          "p99.75": 3.645140027090029,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 1.5182358601412351,
+          "top_account_p99.0": 1.5587739717843374,
+          "top_account_p99.5": 1.5657561423718531,
+          "top_position_p97.5": 1.3691742753924998,
+          "top_position_p99.0": 1.372361470389,
+          "top_position_p99.5": 1.3758136622725001
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.670920707566752,
+          "top_account_p1.0": 0.6623603297607451,
+          "top_account_p0.5": 0.6570148396926548,
+          "top_position_p2.5": 1.1623676210375,
+          "top_position_p1.0": 1.159928608601,
+          "top_position_p0.5": 1.158351400589
+        }
+      },
+      "2023-02": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.022945629012327582,
+          "p99.5": 0.028816480038131035,
+          "p99.75": 0.037988239335889254
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.952059457936,
+          "p99.5": 3.315608100881015,
+          "p99.75": 3.6977355971095065,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.921648267814,
+          "p99.5": 3.2228665143800503,
+          "p99.75": 3.578639564549585,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 1.7137183247291574,
+          "top_account_p99.0": 1.736620668714684,
+          "top_account_p99.5": 1.7901432899616245,
+          "top_position_p97.5": 1.35584568147,
+          "top_position_p99.0": 1.3653099871280001,
+          "top_position_p99.5": 1.36742733986
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.9353547704950703,
+          "top_account_p1.0": 0.9100085299768188,
+          "top_account_p0.5": 0.8982280165183849,
+          "top_position_p2.5": 1.132059097765,
+          "top_position_p1.0": 1.127040667278,
+          "top_position_p0.5": 1.120992387302
+        }
+      }
+    },
+    "LINKUSDT": {
+      "2023-01": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.027313374994694693,
+          "p99.5": 0.034637002731949654,
+          "p99.75": 0.04330744940369669
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.6109049488469998,
+          "p99.5": 2.9419641573115123,
+          "p99.75": 3.4183389710227563,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.9919479103199995,
+          "p99.5": 3.5056813049479976,
+          "p99.75": 3.886743824208018,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 3.252644231451899,
+          "top_account_p99.0": 3.3696928839763625,
+          "top_account_p99.5": 3.468634517290408,
+          "top_position_p97.5": 1.5080807447075,
+          "top_position_p99.0": 1.52532252697,
+          "top_position_p99.5": 1.5291097123595
+        },
+        "short_crowding": {
+          "top_account_p2.5": 1.4744799470855003,
+          "top_account_p1.0": 1.4498481572612447,
+          "top_account_p0.5": 1.4401139197797854,
+          "top_position_p2.5": 1.0577289147525,
+          "top_position_p1.0": 1.053076456382,
+          "top_position_p0.5": 1.0509918314139999
+        }
+      },
+      "2023-02": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.038415985401768486,
+          "p99.5": 0.06548109151754394,
+          "p99.75": 0.13986489174288802
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.6073596434679986,
+          "p99.5": 3.014936898871522,
+          "p99.75": 3.551123392800609,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.8362028394509995,
+          "p99.5": 3.417435401601411,
+          "p99.75": 3.9006082569032037,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 2.95185010632795,
+          "top_account_p99.0": 3.0066666712204526,
+          "top_account_p99.5": 3.0390011702659177,
+          "top_position_p97.5": 1.785403584755,
+          "top_position_p99.0": 1.8015661474640001,
+          "top_position_p99.5": 1.8089929376429998
+        },
+        "short_crowding": {
+          "top_account_p2.5": 1.3535376085841162,
+          "top_account_p1.0": 1.275759810025637,
+          "top_account_p0.5": 1.2511824277951376,
+          "top_position_p2.5": 1.27369554955,
+          "top_position_p1.0": 1.261083021122,
+          "top_position_p0.5": 1.254555453282
+        }
+      }
+    },
+    "OPUSDT": {
+      "2023-01": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.042078476737325086,
+          "p99.5": 0.0462343956562951,
+          "p99.75": 0.050426800540866415
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.6327261052559985,
+          "p99.5": 3.111369708766009,
+          "p99.75": 3.629213055657548,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.775235331895003,
+          "p99.5": 3.329895324174196,
+          "p99.75": 4.139519762786536,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 1.6121446717375434,
+          "top_account_p99.0": 1.7352051052863426,
+          "top_account_p99.5": 1.8205363112947799,
+          "top_position_p97.5": 1.1159521536875,
+          "top_position_p99.0": 1.121617411359,
+          "top_position_p99.5": 1.124646067812
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.5884011664814549,
+          "top_account_p1.0": 0.5381065167548663,
+          "top_account_p0.5": 0.5343916929604511,
+          "top_position_p2.5": 0.9241621839025,
+          "top_position_p1.0": 0.92153439059,
+          "top_position_p0.5": 0.918608126421
+        }
+      },
+      "2023-02": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.06097503687416383,
+          "p99.5": 0.08983815513915341,
+          "p99.75": 0.11282264071010406
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.1298443918219987,
+          "p99.5": 2.3602216403655025,
+          "p99.75": 2.629421891234254,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.2588934466754,
+          "p99.5": 2.5011921428289,
+          "p99.75": 2.753804592443305,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 2.005171277340949,
+          "top_account_p99.0": 2.053110179322683,
+          "top_account_p99.5": 2.0720296357217856,
+          "top_position_p97.5": 1.134143398225,
+          "top_position_p99.0": 1.1448035509599999,
+          "top_position_p99.5": 1.148994856591
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.6443331360620256,
+          "top_account_p1.0": 0.6276117650148231,
+          "top_account_p0.5": 0.6188274839547733,
+          "top_position_p2.5": 0.81317667726,
+          "top_position_p1.0": 0.806084837122,
+          "top_position_p0.5": 0.803660660024
+        }
+      }
+    },
+    "SOLUSDT": {
+      "2023-01": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.0345403960984289,
+          "p99.5": 0.04951965037608054,
+          "p99.75": 0.08729463235384817
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.0204345040250002,
+          "p99.5": 2.2406769253125,
+          "p99.75": 2.4437734430124998,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.178724501996003,
+          "p99.5": 2.4633168082318004,
+          "p99.75": 2.7575847391143076,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 1.7518159303433345,
+          "top_account_p99.0": 1.7707931142429645,
+          "top_account_p99.5": 1.7772537680469618,
+          "top_position_p97.5": 1.0600562096075,
+          "top_position_p99.0": 1.068490439047,
+          "top_position_p99.5": 1.0717079358925
+        },
+        "short_crowding": {
+          "top_account_p2.5": 0.7516824824294304,
+          "top_account_p1.0": 0.7397166125577945,
+          "top_account_p0.5": 0.7317937610820897,
+          "top_position_p2.5": 0.948051087545,
+          "top_position_p1.0": 0.938110796805,
+          "top_position_p0.5": 0.9340275176575
+        }
+      },
+      "2023-02": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.03326854768460187,
+          "p99.5": 0.04304143746073932,
+          "p99.75": 0.053549815306967945
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.258579380493,
+          "p99.5": 2.4715235124275092,
+          "p99.75": 2.662330046770507,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.1913098743679003,
+          "p99.5": 2.3979935224030515,
+          "p99.75": 2.6396816510575376,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 2.398505429231926,
+          "top_account_p99.0": 2.4349816650680323,
+          "top_account_p99.5": 2.46232294828966,
+          "top_position_p97.5": 1.171008350495,
+          "top_position_p99.0": 1.1761661610679999,
+          "top_position_p99.5": 1.1800164578949999
+        },
+        "short_crowding": {
+          "top_account_p2.5": 1.4935217903415783,
+          "top_account_p1.0": 1.442230905352962,
+          "top_account_p0.5": 1.400456250838065,
+          "top_position_p2.5": 0.918057404335,
+          "top_position_p1.0": 0.911267580072,
+          "top_position_p0.5": 0.909400739868
+        }
+      }
+    },
+    "XRPUSDT": {
+      "2023-01": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.029236772990837365,
+          "p99.5": 0.05085033190177401,
+          "p99.75": 0.06666127304762184
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.563893717825,
+          "p99.5": 3.0354516257124997,
+          "p99.75": 3.65332541826875,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.7322141195475,
+          "p99.5": 3.40117292765375,
+          "p99.75": 4.17161790163875,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 2.799225111377508,
+          "top_account_p99.0": 2.8827176737393536,
+          "top_account_p99.5": 2.9582332722273144,
+          "top_position_p97.5": 1.0583138198,
+          "top_position_p99.0": 1.0663582836599999,
+          "top_position_p99.5": 1.0693215031744998
+        },
+        "short_crowding": {
+          "top_account_p2.5": 1.5739667867589684,
+          "top_account_p1.0": 1.4732697664136232,
+          "top_account_p0.5": 1.4414560929469034,
+          "top_position_p2.5": 0.9480940521675,
+          "top_position_p1.0": 0.940585966125,
+          "top_position_p0.5": 0.9345859017729999
+        }
+      },
+      "2023-02": {
+        "oi_delta_log_1h": {
+          "p99.0": 0.016211588244153204,
+          "p99.5": 0.020236576609438915,
+          "p99.75": 0.05237002668886653
+        },
+        "taker_buy_aggression": {
+          "p99.0": 2.8758351031409983,
+          "p99.5": 3.667345604137502,
+          "p99.75": 5.042927573493046,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "taker_sell_aggression": {
+          "p99.0": 2.946370819609899,
+          "p99.5": 3.504620638483454,
+          "p99.75": 4.251024587680954,
+          "absolute_ratio_0.70": 0.7,
+          "absolute_ratio_0.75": 0.75
+        },
+        "long_crowding": {
+          "top_account_p97.5": 3.776461113229127,
+          "top_account_p99.0": 3.8248739842177764,
+          "top_account_p99.5": 3.8788197544642857,
+          "top_position_p97.5": 1.062594702145,
+          "top_position_p99.0": 1.066545761028,
+          "top_position_p99.5": 1.069477871543
+        },
+        "short_crowding": {
+          "top_account_p2.5": 2.1260006435006433,
+          "top_account_p1.0": 2.0927658632475175,
+          "top_account_p0.5": 2.080414856083416,
+          "top_position_p2.5": 0.93010505621,
+          "top_position_p1.0": 0.919143293256,
+          "top_position_p0.5": 0.9151215783100001
+        }
+      }
+    }
+  },
+  "kline_cache_summary": {
+    "cache_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\cache\\binance_public_kline_forward_return_diagnostic_v1",
+    "archive_count_available": 358,
+    "archive_count_missing": 2,
+    "checksum_available": 358,
+    "checksum_verified": 358,
+    "raw_data_committed": false,
+    "cache_files_staged": false
+  },
+  "validation_limits": [
+    "This is event discovery only, not a strategy, signal, backtest, PnL computation, candidate, or edge claim.",
+    "No forward returns, p-values, null validation, or optimization against future returns were computed.",
+    "Price failure/rejection uses only the current 15m bar and prior bars.",
+    "Thresholds are symbol-month percentiles for event cleanliness and coverage, not future-return performance."
+  ],
+  "forbidden_actions_confirmed_false": {
+    "strategy": false,
+    "signal": false,
+    "backtest": false,
+    "pnl": false,
+    "trade_simulation": false,
+    "optimization_against_future_returns": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "runtime_live_capital": false,
+    "order_private_account_api_key": false,
+    "private_api": false,
+    "account_api": false,
+    "api_key": false,
+    "forward_return_impact": false,
+    "p_values": false,
+    "null_validation": false
+  },
+  "forbidden_failed_strategy_routes_not_reused": {
+    "not_reused": true,
+    "routes": [
+      "funding crowding reversal",
+      "funding carry",
+      "funding extreme volume surge",
+      "taker-buy exhaustion",
+      "taker-flow momentum continuation"
+    ]
+  },
+  "allowed_next_step": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_DEFINITION_REFINEMENT_V1",
+  "blocker": null,
+  "validation_checks": {
+    "recovery_audit_clean_continue": true,
+    "head_matches_expected": true,
+    "input_artifacts_loaded": true,
+    "input_payload_hashes_verified": true,
+    "input_artifact_hashes_unchanged": true,
+    "used_existing_public_data_vision_metrics_and_kline_cache_only": true,
+    "no_network_used": true,
+    "no_api_key_used": true,
+    "no_private_api_used": true,
+    "no_account_api_used": true,
+    "no_order_endpoint_used": true,
+    "no_forward_returns_used": true,
+    "no_p_values_computed": true,
+    "no_null_validation_run": true,
+    "no_strategy_execution": true,
+    "no_signal_generation": true,
+    "no_backtest_run": true,
+    "no_pnl_computation": true,
+    "no_trade_simulation": true,
+    "no_optimization_against_future_returns": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "artifacts_data_builds_not_written": true,
+    "raw_data_committed": false,
+    "cache_files_staged": false,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "c43410adf785e54ffc18b9c6beaf8b5b7ac1f29fb362edc4c3de749b092264db"
+}

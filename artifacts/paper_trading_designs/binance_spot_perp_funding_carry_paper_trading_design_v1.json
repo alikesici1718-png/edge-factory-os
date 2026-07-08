@@ -1,0 +1,212 @@
+{
+  "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_PAPER_TRADING_DESIGN",
+  "explicit_non_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "paper_trading_enabled_now": false,
+    "real_orders_allowed_now": false,
+    "runtime_launcher_created": false,
+    "runtime_permission_allowed_now": false
+  },
+  "limitations": [
+    "This is a design artifact only and does not connect to Binance or any exchange.",
+    "No API keys, account endpoints, order endpoints, runtime launcher, paper-trading process, live trading, or capital allocation are created.",
+    "Risk thresholds are named as future requirements and are not tuned or enabled here.",
+    "A dry-run simulator remains a separate future module and must not place real orders."
+  ],
+  "module": "tools/edge_factory_os_repo_only_binance_spot_perp_funding_carry_paper_trading_design_v1.py",
+  "next_step_after_design": {
+    "live_or_capital_allowed": false,
+    "paper_trading_dry_run_simulator_only": true,
+    "step": "PAPER_TRADING_DRY_RUN_SIMULATOR_ONLY"
+  },
+  "paper_system_state_machine": {
+    "live_order_state_present": false,
+    "runtime_launcher_created": false,
+    "states": [
+      "IDLE",
+      "SNAPSHOT_RULES",
+      "SNAPSHOT_PRICES",
+      "SIZE_ORDERS",
+      "SIMULATE_ENTRY",
+      "MONITOR_FUNDING",
+      "SIMULATE_EXIT_OR_REBALANCE",
+      "RISK_HALT",
+      "REPORT_ONLY"
+    ],
+    "terminal_or_safe_states": [
+      "RISK_HALT",
+      "REPORT_ONLY"
+    ]
+  },
+  "paper_trading_metrics": [
+    "simulated_spot_quantity",
+    "simulated_perp_quantity",
+    "notional_mismatch",
+    "funding_received_paid",
+    "price_hedge_residual",
+    "fees_slippage_estimate",
+    "monthly_carry",
+    "negative_funding_events",
+    "max_simulated_drawdown_proxy",
+    "per_symbol_contribution"
+  ],
+  "payload_sha256_excluding_hash": "67aca1c1e11d62cec04d5c05c1ec963868f04d095f84714c6c39110320ee8b63",
+  "prior_sizing_repair_preserved": {
+    "classification": "ORDER_SIZING_REPAIR_SIM_PASS_READY_FOR_PAPER_TRADING_DESIGN_NO_LIVE_PERMISSION",
+    "classification_grants_live_or_capital_permission": false,
+    "minimum_passing_capital_all3": "235",
+    "minimum_passing_capital_btc_eth_only": "2500",
+    "root_cause_repaired": true,
+    "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_ORDER_SIZING_REPAIR_SIM_CREATED"
+  },
+  "replacement_checks_all_true": true,
+  "required_data_feeds_for_future_paper_trading": {
+    "exchange_info_rules": {
+      "private_account_data_required_in_design_step": false,
+      "required": true
+    },
+    "funding_history_current_funding": {
+      "private_account_data_required_in_design_step": false,
+      "required": true
+    },
+    "private_account_data": {
+      "api_keys_used_now": false,
+      "required_in_design_step": false
+    },
+    "public_futures_price_snapshot": {
+      "private_account_data_required_in_design_step": false,
+      "required": true
+    },
+    "public_spot_price_snapshot": {
+      "private_account_data_required_in_design_step": false,
+      "required": true
+    }
+  },
+  "risk_controls": [
+    {
+      "action": "RISK_HALT",
+      "control": "no_order_if_symbol_status_not_trading"
+    },
+    {
+      "action": "RISK_HALT",
+      "control": "no_order_if_sizing_fails"
+    },
+    {
+      "action": "RISK_HALT",
+      "control": "no_order_if_price_snapshot_stale"
+    },
+    {
+      "action": "RISK_HALT",
+      "control": "no_order_if_funding_missing"
+    },
+    {
+      "action": "RISK_HALT",
+      "control": "halt_if_funding_negative_beyond_threshold",
+      "threshold_defined_now": false
+    },
+    {
+      "action": "RISK_HALT",
+      "control": "halt_if_mark_spot_divergence_exceeds_threshold",
+      "threshold_defined_now": false
+    },
+    {
+      "action": "RISK_HALT",
+      "control": "halt_if_simulated_margin_buffer_below_threshold",
+      "threshold_defined_now": false
+    },
+    {
+      "action": "RISK_HALT",
+      "control": "halt_if_api_unavailable"
+    },
+    {
+      "action": "RISK_HALT",
+      "control": "halt_if_one_leg_simulated_fill_missing"
+    },
+    {
+      "action": "RISK_HALT",
+      "control": "halt_on_symbol_delisting_or_maintenance"
+    }
+  ],
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "next_step_may_be_paper_trading_dry_run_simulator_only": true,
+    "next_step_must_not_be_live_or_capital": true,
+    "paper_trading_design_created": true,
+    "real_orders_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "sizing_policy": {
+    "capital_pass_fail_not_assumed_monotonic": true,
+    "common_base_quantity_for_spot_and_perp": true,
+    "decimal_arithmetic_required": true,
+    "fail_closed_if_mismatch_or_filters_fail": true,
+    "no_orders_if_sizing_fails": true,
+    "required_filters": [
+      "minQty",
+      "stepSize",
+      "minNotional",
+      "tickSize"
+    ],
+    "sizing_runs_at_each_snapshot": true,
+    "source_repair_algorithm": {
+      "candidate_search": "near target common quantity and target average-notional quantity, with small overspend cap",
+      "common_step_size_method": "least_common_multiple_of_spot_and_futures_decimal_step_sizes",
+      "leg_mismatch_threshold_bps": 25.0,
+      "max_overspend_bps": 25.0,
+      "orders_placed": false,
+      "principle": "choose one common base asset quantity per symbol for both spot long and futures short",
+      "target_common_qty_formula": "min(target_notional / spot_price, target_notional / futures_price)",
+      "unused_notional_threshold_bps": 500.0,
+      "uses_common_quantity_for_both_legs": true,
+      "uses_decimal_arithmetic_only": true
+    }
+  },
+  "source_artifacts": {
+    "order_sizing_repair_payload_sha256_excluding_hash": "0f189c4b8999d7d9a1018cf988952e630d554ed898fc29a61510af93a906d822",
+    "order_sizing_repair_simulation": "artifacts/order_sizing_simulations/binance_spot_perp_funding_carry_order_sizing_repair_sim_v1.json"
+  },
+  "source_checkpoint": {
+    "repo_clean_before_run": true,
+    "repo_head_at_run": "9ffc2fe272c7c08a76ec75e3ff9e9d5dde75f8ef",
+    "tracked_python_count_at_start": 888
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_PAPER_TRADING_DESIGN_CREATED",
+  "strategy_identity": {
+    "capital_allocation_allowed": false,
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "leverage_assumption": "no leverage assumption beyond an explicit simulated margin buffer",
+    "live_orders_allowed": false,
+    "position_definition": "long Binance spot and short Binance USD-M perpetual for the same base asset",
+    "quantity_policy": "same base quantity per symbol on spot and USD-M perp",
+    "route_family": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_BASELINE",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "validation_checks": {
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_used": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_order_endpoint": true,
+    "no_orders_placed": true,
+    "no_runtime_live_capital": true,
+    "prior_sizing_repair_artifact_loaded": true,
+    "prior_sizing_repair_classification_verified": true,
+    "prior_sizing_repair_payload_hash_verified": true,
+    "prior_sizing_repair_status_verified": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

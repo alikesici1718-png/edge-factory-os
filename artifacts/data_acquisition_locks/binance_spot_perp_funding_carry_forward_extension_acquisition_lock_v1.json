@@ -1,0 +1,1135 @@
+{
+  "acquisition_scope": {
+    "backward_extension_acquired": false,
+    "months": [
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04"
+    ],
+    "partial_may_2026_daily_acquired": false,
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "window_end_exclusive_utc": "2026-05-01T00:00:00Z",
+    "window_start_utc": "2025-11-01T00:00:00Z"
+  },
+  "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_FORWARD_EXTENSION_ACQUISITION_LOCK",
+  "download_summary": {
+    "archive_records": [
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2025-11.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "1f28f02e33e1f19e5163cd45b67c07b3b75870e78dbbf9f861d1348ca372d942",
+        "layer": "spot",
+        "month": "2025-11",
+        "observed_sha256": "1f28f02e33e1f19e5163cd45b67c07b3b75870e78dbbf9f861d1348ca372d942",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-11.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2025-11.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2025-11.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "75c4069b8ff93aa5e4064e885077426fd60f1cf6239a728b2d4ca543c0210d5a",
+        "layer": "perp",
+        "month": "2025-11",
+        "observed_sha256": "75c4069b8ff93aa5e4064e885077426fd60f1cf6239a728b2d4ca543c0210d5a",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-11.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2025-11.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2025-12.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "d546c6e44b443e34cef5122043c5cdd3b9c76980e23cc408dafd9f6f76d65c05",
+        "layer": "spot",
+        "month": "2025-12",
+        "observed_sha256": "d546c6e44b443e34cef5122043c5cdd3b9c76980e23cc408dafd9f6f76d65c05",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-12.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2025-12.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2025-12.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "41e977a06b7806ce1398aca5f9075befffd1e6303db891795f3b179c762709ec",
+        "layer": "perp",
+        "month": "2025-12",
+        "observed_sha256": "41e977a06b7806ce1398aca5f9075befffd1e6303db891795f3b179c762709ec",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-12.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2025-12.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-01.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "a40e86beb4f1e6d4b19ca022c87b8b2f0e4e40874d349a5a75b27baa9634c858",
+        "layer": "spot",
+        "month": "2026-01",
+        "observed_sha256": "a40e86beb4f1e6d4b19ca022c87b8b2f0e4e40874d349a5a75b27baa9634c858",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-01.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-01.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-01.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "6c15ac5fd895f26bf8e12b99df6ab9aff637dc94b37128e92c75c19887d0e3b3",
+        "layer": "perp",
+        "month": "2026-01",
+        "observed_sha256": "6c15ac5fd895f26bf8e12b99df6ab9aff637dc94b37128e92c75c19887d0e3b3",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-01.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-01.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-02.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "0be4e5c92892495c5da5b371fe8755f2d508b28a58414b4171284480806ed6c4",
+        "layer": "spot",
+        "month": "2026-02",
+        "observed_sha256": "0be4e5c92892495c5da5b371fe8755f2d508b28a58414b4171284480806ed6c4",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-02.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-02.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-02.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "886fca9764139a1d71d97ca28e0a2cb30fe7d6f44df9be2539452c02e3c4e775",
+        "layer": "perp",
+        "month": "2026-02",
+        "observed_sha256": "886fca9764139a1d71d97ca28e0a2cb30fe7d6f44df9be2539452c02e3c4e775",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-02.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-02.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-03.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "44f383f9423f96cdc29e03b4ba8062296763dd740ab1d93f04b62c88bac30aa6",
+        "layer": "spot",
+        "month": "2026-03",
+        "observed_sha256": "44f383f9423f96cdc29e03b4ba8062296763dd740ab1d93f04b62c88bac30aa6",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-03.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-03.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-03.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "41199df2dd62c333ea306d28de331bfffbbfed03609d100c63b2de1d173f7414",
+        "layer": "perp",
+        "month": "2026-03",
+        "observed_sha256": "41199df2dd62c333ea306d28de331bfffbbfed03609d100c63b2de1d173f7414",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-03.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-03.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-04.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "9f8e49b70978177414a005a6e84b1cf891f97b0196526cbd579535449c14b6f6",
+        "layer": "spot",
+        "month": "2026-04",
+        "observed_sha256": "9f8e49b70978177414a005a6e84b1cf891f97b0196526cbd579535449c14b6f6",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-04.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-04.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-04.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "c822801b16eb317f4672e376a73664f2e5f9180409c57b6c7517707f4f873e8c",
+        "layer": "perp",
+        "month": "2026-04",
+        "observed_sha256": "c822801b16eb317f4672e376a73664f2e5f9180409c57b6c7517707f4f873e8c",
+        "symbol": "BTCUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-04.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-04.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2025-11.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "3c0171cdd5eef1ece36c818ace3a07cc48e331cb9d991488a8db917bc496b78d",
+        "layer": "spot",
+        "month": "2025-11",
+        "observed_sha256": "3c0171cdd5eef1ece36c818ace3a07cc48e331cb9d991488a8db917bc496b78d",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-11.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2025-11.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2025-11.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "4b5622c5a4021b1a0bbd2d1fa754bb9d13f16b996d79b153b423bce0ec154f26",
+        "layer": "perp",
+        "month": "2025-11",
+        "observed_sha256": "4b5622c5a4021b1a0bbd2d1fa754bb9d13f16b996d79b153b423bce0ec154f26",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-11.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2025-11.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2025-12.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "7a7a35ce7b9be9bafa0a00c47370acc57a48329a3289c21cb19f1185f6430fdb",
+        "layer": "spot",
+        "month": "2025-12",
+        "observed_sha256": "7a7a35ce7b9be9bafa0a00c47370acc57a48329a3289c21cb19f1185f6430fdb",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-12.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2025-12.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2025-12.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "80080e1303ab2c291e53103d703b5364ef7a3da36dff5eaf45044cca74e764ca",
+        "layer": "perp",
+        "month": "2025-12",
+        "observed_sha256": "80080e1303ab2c291e53103d703b5364ef7a3da36dff5eaf45044cca74e764ca",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-12.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2025-12.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-01.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "eb060da7fb1adc65c7999f7d1f4f3b004edf2335311bb32d05a86f9577c21106",
+        "layer": "spot",
+        "month": "2026-01",
+        "observed_sha256": "eb060da7fb1adc65c7999f7d1f4f3b004edf2335311bb32d05a86f9577c21106",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-01.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-01.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-01.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "d710e68cf0dc90759814647dff64be482b4ddd05bf332adb73126885cb2979d7",
+        "layer": "perp",
+        "month": "2026-01",
+        "observed_sha256": "d710e68cf0dc90759814647dff64be482b4ddd05bf332adb73126885cb2979d7",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-01.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-01.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-02.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "8c8c6e664688497711832add90349b8617caf7e8892f085e97fe4290989fe78b",
+        "layer": "spot",
+        "month": "2026-02",
+        "observed_sha256": "8c8c6e664688497711832add90349b8617caf7e8892f085e97fe4290989fe78b",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-02.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-02.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-02.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "97a6c569361290917a525d54d5f964af1642dc2d281e162834b4685157016540",
+        "layer": "perp",
+        "month": "2026-02",
+        "observed_sha256": "97a6c569361290917a525d54d5f964af1642dc2d281e162834b4685157016540",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-02.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-02.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-03.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "0bf4dc37f2b201a8891f63dd76164742ed7d4fa24c24065a2e7709f34488ff74",
+        "layer": "spot",
+        "month": "2026-03",
+        "observed_sha256": "0bf4dc37f2b201a8891f63dd76164742ed7d4fa24c24065a2e7709f34488ff74",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-03.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-03.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-03.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "9ec5e28db1e0cf093d5c756b85329b43db730d6f95d6ed142a9717044b1423c2",
+        "layer": "perp",
+        "month": "2026-03",
+        "observed_sha256": "9ec5e28db1e0cf093d5c756b85329b43db730d6f95d6ed142a9717044b1423c2",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-03.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-03.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-04.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "46d62ed100717d8195bce4c07a41dc7606f41abc491ca71f9bfe653d2b92bfc0",
+        "layer": "spot",
+        "month": "2026-04",
+        "observed_sha256": "46d62ed100717d8195bce4c07a41dc7606f41abc491ca71f9bfe653d2b92bfc0",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-04.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-04.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-04.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "b72f5a102bd468d1e3d0c3b88619f1354a29e81616f9a55935d2e00837958e4b",
+        "layer": "perp",
+        "month": "2026-04",
+        "observed_sha256": "b72f5a102bd468d1e3d0c3b88619f1354a29e81616f9a55935d2e00837958e4b",
+        "symbol": "ETHUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-04.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-04.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2025-11.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "311effa24632be0dfc523980554d876d5516e6acd6c08c7aa7daa3000ba393b9",
+        "layer": "spot",
+        "month": "2025-11",
+        "observed_sha256": "311effa24632be0dfc523980554d876d5516e6acd6c08c7aa7daa3000ba393b9",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2025-11.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2025-11.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2025-11.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "2a74a61262338c2cf49d65d3c2d8e5a27ccda3aadedeaeed87da0544b13fb372",
+        "layer": "perp",
+        "month": "2025-11",
+        "observed_sha256": "2a74a61262338c2cf49d65d3c2d8e5a27ccda3aadedeaeed87da0544b13fb372",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2025-11.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2025-11.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2025-12.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "d8259dd2f6758b7cd4166564bf8aa7219d6aa140ecf68a3667749da41d4c2560",
+        "layer": "spot",
+        "month": "2025-12",
+        "observed_sha256": "d8259dd2f6758b7cd4166564bf8aa7219d6aa140ecf68a3667749da41d4c2560",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2025-12.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2025-12.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2025-12.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "7c25b753fd893dc697b5e7e8a1d0db904150181be7b7991cc05ba5b08f81cdf8",
+        "layer": "perp",
+        "month": "2025-12",
+        "observed_sha256": "7c25b753fd893dc697b5e7e8a1d0db904150181be7b7991cc05ba5b08f81cdf8",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2025-12.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2025-12.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-01.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "949d8838cf48d6bd348762534e6307601574f82d58126dc26f0d91740622c27c",
+        "layer": "spot",
+        "month": "2026-01",
+        "observed_sha256": "949d8838cf48d6bd348762534e6307601574f82d58126dc26f0d91740622c27c",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-01.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-01.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-01.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "cc16e807c075689a73f096b7603c34f1eb289bb2d782ca8f6147e4c42632ed0e",
+        "layer": "perp",
+        "month": "2026-01",
+        "observed_sha256": "cc16e807c075689a73f096b7603c34f1eb289bb2d782ca8f6147e4c42632ed0e",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-01.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-01.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-02.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "5e219b1a7d7384327e40b27b8accb7f1ae797f3c6ee628441de3035bc1fa3964",
+        "layer": "spot",
+        "month": "2026-02",
+        "observed_sha256": "5e219b1a7d7384327e40b27b8accb7f1ae797f3c6ee628441de3035bc1fa3964",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-02.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-02.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-02.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "fa733e5400163477fa7eb544a9a7e04b5c679656720ccb7f92787fcf33b739a3",
+        "layer": "perp",
+        "month": "2026-02",
+        "observed_sha256": "fa733e5400163477fa7eb544a9a7e04b5c679656720ccb7f92787fcf33b739a3",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-02.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-02.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-03.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "5bfab930f6e73e8a486ad1281de8df114d2c6a71cc08f7a449e6c6697af369b6",
+        "layer": "spot",
+        "month": "2026-03",
+        "observed_sha256": "5bfab930f6e73e8a486ad1281de8df114d2c6a71cc08f7a449e6c6697af369b6",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-03.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-03.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-03.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "5e9440665d3e4209c320e2dab897b5c3cec578800e669e1c8fd3503f157e49f1",
+        "layer": "perp",
+        "month": "2026-03",
+        "observed_sha256": "5e9440665d3e4209c320e2dab897b5c3cec578800e669e1c8fd3503f157e49f1",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-03.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-03.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-04.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "7266fae3d30b6b693bb731e7d392cdf132066b2e71a86b1695b0ab0c8a6b8507",
+        "layer": "spot",
+        "month": "2026-04",
+        "observed_sha256": "7266fae3d30b6b693bb731e7d392cdf132066b2e71a86b1695b0ab0c8a6b8507",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-04.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-04.zip"
+      },
+      {
+        "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-04.zip.CHECKSUM",
+        "checksum_verified": true,
+        "expected_sha256": "2f466580c7e6d2e02a67a968428c0f9b987108cc1a3d2ba73061e329aacc208d",
+        "layer": "perp",
+        "month": "2026-04",
+        "observed_sha256": "2f466580c7e6d2e02a67a968428c0f9b987108cc1a3d2ba73061e329aacc208d",
+        "symbol": "SOLUSDT",
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-04.zip",
+        "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-04.zip"
+      }
+    ],
+    "cached_file_count": 72,
+    "checksum_verified_zip_count": 36,
+    "downloaded_file_count": 0,
+    "downloaded_zip_count": 36,
+    "error_count": 0,
+    "required_checksum_count": 36,
+    "required_zip_count": 36,
+    "retry_count": 0
+  },
+  "funding_endpoint_summary": {
+    "error_count": 0,
+    "funding_request_count": 3
+  },
+  "limitations": [
+    "This is an acquisition lock only; row-level strategy metrics are not computed.",
+    "Only the forward closed-month extension 2025-11 through 2026-04 was acquired.",
+    "Backward 2020/2021 data and partial May 2026 daily archives were not acquired.",
+    "No strategy execution, candidate generation, edge claim, runtime, live, or capital permission is created."
+  ],
+  "module": "edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1",
+  "non_repo_artifacts": {
+    "download_cache": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache",
+    "extension_index": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\extension_index\\binance_spot_perp_funding_carry_forward_extension_index_v1.json",
+    "extension_index_file_sha256": "6ecade3fd981319878fafcb54e650fbc8fe88567ea551ea0112f9527a0d55cd3",
+    "extension_index_sha256": "01ddc9e75da418696fa92f18d7bd12745b8a9f3b1382507b36e73979233e18a8",
+    "external_data_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1",
+    "funding_by_symbol": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol",
+    "output_file_sha256_map": {
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol\\BTCUSDT_funding_forward_202511_202604.jsonl.gz": "9b719664b5070a3144f44389e8b239cca8578035b7d3c30a8dc9aff0a2bc39d9",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol\\ETHUSDT_funding_forward_202511_202604.jsonl.gz": "4d064151f648ffea1f4027a211daad69a5fd35cd250d9009eb565b553dd1af0b",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol\\SOLUSDT_funding_forward_202511_202604.jsonl.gz": "6e7bc3dd6b4c80e364ba1a15511d086dfabead70356510a278fcc219808308dc",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol\\BTCUSDT_perp_1h_forward_202511_202604.csv.gz": "5fd60be1fc4e39bb59a89602c5bee694709fa3b59daf89a1f7704f450e77402d",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol\\ETHUSDT_perp_1h_forward_202511_202604.csv.gz": "00910dcb9c25e63ba6b7b60acca3b55ad8452a30a04ffc189b431bbfc7ef4940",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol\\SOLUSDT_perp_1h_forward_202511_202604.csv.gz": "a5a0b145c68f929973d42a9b385eba3922e4e4c17546d453fa2a4767a0f30a9d",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol\\BTCUSDT_spot_1h_forward_202511_202604.csv.gz": "3b2e5a7cf2cb4279db18155093dce47b5a52f46f144791a42a55ee3f1e4bbed2",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol\\ETHUSDT_spot_1h_forward_202511_202604.csv.gz": "cd44a34ed275b263a2a48a3da26b78dc4260f1b39d9148dc2624f0bc01b18be8",
+      "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol\\SOLUSDT_spot_1h_forward_202511_202604.csv.gz": "91410d8207727e89a933bf1871bca356c51b4c3b28c4675a1f7798a16c3c8a3c"
+    },
+    "perp_1h_by_symbol": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol",
+    "spot_1h_by_symbol": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol"
+  },
+  "output_data_summary": {
+    "all_symbols_perp_aligned": true,
+    "all_symbols_spot_aligned": true,
+    "funding_total_records": 1629,
+    "minmax_summary": {
+      "funding": {
+        "max_funding_time_utc": "2026-04-30T16:00:00Z",
+        "min_funding_time_utc": "2025-11-01T00:00:00Z"
+      },
+      "perp": {
+        "max_timestamp_utc": "2026-04-30T23:00:00Z",
+        "min_timestamp_utc": "2025-11-01T00:00:00Z"
+      },
+      "spot": {
+        "max_timestamp_utc": "2026-04-30T23:00:00Z",
+        "min_timestamp_utc": "2025-11-01T00:00:00Z"
+      }
+    },
+    "perp_total_rows": 13032,
+    "spot_perp_timestamp_alignment_all_symbols": true,
+    "spot_total_rows": 13032
+  },
+  "payload_sha256_excluding_hash": "96c75d66548228a590a603ca0c226db04e578c35231b420f82004d0c29d8532b",
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "data_extension_acquisition_created": true,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "next_step_may_be_forward_extension_data_review_only": true,
+    "next_step_must_not_be_live_or_capital": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "extension_availability": {
+      "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_DATA_EXTENSION_AVAILABILITY_DISCOVERY",
+      "expected_payload_sha256_excluding_hash": "2ca8e99fc66c1f3fe17a306694d77a488bbdfe0df0f2f892bdf06a3b9d3ed81b",
+      "name": "extension_availability",
+      "path": "artifacts/data_availability/binance_spot_perp_funding_carry_data_extension_availability_discovery_v1.json",
+      "payload_sha256_excluding_hash": "2ca8e99fc66c1f3fe17a306694d77a488bbdfe0df0f2f892bdf06a3b9d3ed81b",
+      "status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_DATA_EXTENSION_AVAILABILITY_PARTIAL"
+    },
+    "strategy_closure": {
+      "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_CLOSURE_RECORD",
+      "expected_payload_sha256_excluding_hash": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8",
+      "name": "strategy_closure",
+      "path": "artifacts/strategy_closures/binance_spot_perp_delta_neutral_funding_carry_closure_v1.json",
+      "payload_sha256_excluding_hash": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_CLOSURE_CREATED"
+    },
+    "strategy_evaluation": {
+      "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EVALUATION",
+      "expected_payload_sha256_excluding_hash": "94bfdeb3cbe2bfd79ea77ae86c96427790f87a78ff4377972d4b1476ad4ee52b",
+      "name": "strategy_evaluation",
+      "path": "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json",
+      "payload_sha256_excluding_hash": "94bfdeb3cbe2bfd79ea77ae86c96427790f87a78ff4377972d4b1476ad4ee52b",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EVALUATED"
+    },
+    "strategy_execution": {
+      "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EXECUTION",
+      "expected_payload_sha256_excluding_hash": "7855d599b8fa331cbbea2f380c23306889ae486369761d900d7aed36e7191378",
+      "name": "strategy_execution",
+      "path": "artifacts/strategy_executions/binance_spot_perp_delta_neutral_funding_carry_execution_v1.json",
+      "payload_sha256_excluding_hash": "7855d599b8fa331cbbea2f380c23306889ae486369761d900d7aed36e7191378",
+      "status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EXECUTED"
+    }
+  },
+  "source_checkpoint": {
+    "artifact_path": "artifacts/data_acquisition_locks/binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1.json",
+    "created_at_utc": "2026-05-25T15:16:53Z",
+    "expected_head": "ff7f67b0783c9c9033d17900908ece12f498d7a0",
+    "tool_path": "tools/edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1.py",
+    "tracked_python_count_before": 903
+  },
+  "source_contracts": {
+    "checksum_required_before_zip_open": true,
+    "funding_rate_endpoint": "https://fapi.binance.com/fapi/v1/fundingRate",
+    "perp_um_monthly_klines": "https://data.binance.vision/data/futures/um/monthly/klines/{SYMBOL}/1h/{SYMBOL}-1h-{YYYY-MM}.zip",
+    "spot_monthly_klines": "https://data.binance.vision/data/spot/monthly/klines/{SYMBOL}/1h/{SYMBOL}-1h-{YYYY-MM}.zip"
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_FORWARD_EXTENSION_ACQUISITION_LOCK_CREATED",
+  "symbol_records": {
+    "BTCUSDT": {
+      "archive_records": [
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2025-11.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "1f28f02e33e1f19e5163cd45b67c07b3b75870e78dbbf9f861d1348ca372d942",
+          "layer": "spot",
+          "month": "2025-11",
+          "observed_sha256": "1f28f02e33e1f19e5163cd45b67c07b3b75870e78dbbf9f861d1348ca372d942",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-11.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2025-11.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2025-11.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "75c4069b8ff93aa5e4064e885077426fd60f1cf6239a728b2d4ca543c0210d5a",
+          "layer": "perp",
+          "month": "2025-11",
+          "observed_sha256": "75c4069b8ff93aa5e4064e885077426fd60f1cf6239a728b2d4ca543c0210d5a",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-11.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2025-11.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2025-12.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "d546c6e44b443e34cef5122043c5cdd3b9c76980e23cc408dafd9f6f76d65c05",
+          "layer": "spot",
+          "month": "2025-12",
+          "observed_sha256": "d546c6e44b443e34cef5122043c5cdd3b9c76980e23cc408dafd9f6f76d65c05",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-12.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2025-12.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2025-12.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "41e977a06b7806ce1398aca5f9075befffd1e6303db891795f3b179c762709ec",
+          "layer": "perp",
+          "month": "2025-12",
+          "observed_sha256": "41e977a06b7806ce1398aca5f9075befffd1e6303db891795f3b179c762709ec",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-12.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2025-12.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-01.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "a40e86beb4f1e6d4b19ca022c87b8b2f0e4e40874d349a5a75b27baa9634c858",
+          "layer": "spot",
+          "month": "2026-01",
+          "observed_sha256": "a40e86beb4f1e6d4b19ca022c87b8b2f0e4e40874d349a5a75b27baa9634c858",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-01.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-01.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-01.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "6c15ac5fd895f26bf8e12b99df6ab9aff637dc94b37128e92c75c19887d0e3b3",
+          "layer": "perp",
+          "month": "2026-01",
+          "observed_sha256": "6c15ac5fd895f26bf8e12b99df6ab9aff637dc94b37128e92c75c19887d0e3b3",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-01.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-01.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-02.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "0be4e5c92892495c5da5b371fe8755f2d508b28a58414b4171284480806ed6c4",
+          "layer": "spot",
+          "month": "2026-02",
+          "observed_sha256": "0be4e5c92892495c5da5b371fe8755f2d508b28a58414b4171284480806ed6c4",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-02.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-02.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-02.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "886fca9764139a1d71d97ca28e0a2cb30fe7d6f44df9be2539452c02e3c4e775",
+          "layer": "perp",
+          "month": "2026-02",
+          "observed_sha256": "886fca9764139a1d71d97ca28e0a2cb30fe7d6f44df9be2539452c02e3c4e775",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-02.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-02.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-03.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "44f383f9423f96cdc29e03b4ba8062296763dd740ab1d93f04b62c88bac30aa6",
+          "layer": "spot",
+          "month": "2026-03",
+          "observed_sha256": "44f383f9423f96cdc29e03b4ba8062296763dd740ab1d93f04b62c88bac30aa6",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-03.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-03.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-03.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "41199df2dd62c333ea306d28de331bfffbbfed03609d100c63b2de1d173f7414",
+          "layer": "perp",
+          "month": "2026-03",
+          "observed_sha256": "41199df2dd62c333ea306d28de331bfffbbfed03609d100c63b2de1d173f7414",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-03.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-03.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-04.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "9f8e49b70978177414a005a6e84b1cf891f97b0196526cbd579535449c14b6f6",
+          "layer": "spot",
+          "month": "2026-04",
+          "observed_sha256": "9f8e49b70978177414a005a6e84b1cf891f97b0196526cbd579535449c14b6f6",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-04.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_BTCUSDT_1h_2026-04.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-04.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "c822801b16eb317f4672e376a73664f2e5f9180409c57b6c7517707f4f873e8c",
+          "layer": "perp",
+          "month": "2026-04",
+          "observed_sha256": "c822801b16eb317f4672e376a73664f2e5f9180409c57b6c7517707f4f873e8c",
+          "symbol": "BTCUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2026-04.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_BTCUSDT_1h_2026-04.zip"
+        }
+      ],
+      "funding_output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol\\BTCUSDT_funding_forward_202511_202604.jsonl.gz",
+      "funding_output_sha256": "9b719664b5070a3144f44389e8b239cca8578035b7d3c30a8dc9aff0a2bc39d9",
+      "funding_validation": {
+        "duplicate_funding_time_count": 0,
+        "max_funding_time_utc": "2026-04-30T16:00:00Z",
+        "min_funding_time_utc": "2025-11-01T00:00:00Z",
+        "numeric_sanity_valid": true,
+        "record_count": 543,
+        "rows_outside_window": 0,
+        "symbol": "BTCUSDT"
+      },
+      "perp_output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol\\BTCUSDT_perp_1h_forward_202511_202604.csv.gz",
+      "perp_output_sha256": "5fd60be1fc4e39bb59a89602c5bee694709fa3b59daf89a1f7704f450e77402d",
+      "perp_validation": {
+        "complete_1h_count": 4344,
+        "consecutive_hourly_window": true,
+        "duplicate_timestamp_count": 0,
+        "expected_row_count": 4344,
+        "hourly_aligned": true,
+        "layer": "perp",
+        "max_timestamp_utc": "2026-04-30T23:00:00Z",
+        "min_timestamp_utc": "2025-11-01T00:00:00Z",
+        "numeric_sanity_valid": true,
+        "ohlc_sanity_valid": true,
+        "row_count": 4344,
+        "rows_outside_window": 0,
+        "symbol": "BTCUSDT"
+      },
+      "spot_output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol\\BTCUSDT_spot_1h_forward_202511_202604.csv.gz",
+      "spot_output_sha256": "3b2e5a7cf2cb4279db18155093dce47b5a52f46f144791a42a55ee3f1e4bbed2",
+      "spot_perp_timestamp_alignment": true,
+      "spot_validation": {
+        "complete_1h_count": 4344,
+        "consecutive_hourly_window": true,
+        "duplicate_timestamp_count": 0,
+        "expected_row_count": 4344,
+        "hourly_aligned": true,
+        "layer": "spot",
+        "max_timestamp_utc": "2026-04-30T23:00:00Z",
+        "min_timestamp_utc": "2025-11-01T00:00:00Z",
+        "numeric_sanity_valid": true,
+        "ohlc_sanity_valid": true,
+        "row_count": 4344,
+        "rows_outside_window": 0,
+        "symbol": "BTCUSDT"
+      },
+      "symbol": "BTCUSDT"
+    },
+    "ETHUSDT": {
+      "archive_records": [
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2025-11.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "3c0171cdd5eef1ece36c818ace3a07cc48e331cb9d991488a8db917bc496b78d",
+          "layer": "spot",
+          "month": "2025-11",
+          "observed_sha256": "3c0171cdd5eef1ece36c818ace3a07cc48e331cb9d991488a8db917bc496b78d",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-11.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2025-11.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2025-11.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "4b5622c5a4021b1a0bbd2d1fa754bb9d13f16b996d79b153b423bce0ec154f26",
+          "layer": "perp",
+          "month": "2025-11",
+          "observed_sha256": "4b5622c5a4021b1a0bbd2d1fa754bb9d13f16b996d79b153b423bce0ec154f26",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-11.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2025-11.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2025-12.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "7a7a35ce7b9be9bafa0a00c47370acc57a48329a3289c21cb19f1185f6430fdb",
+          "layer": "spot",
+          "month": "2025-12",
+          "observed_sha256": "7a7a35ce7b9be9bafa0a00c47370acc57a48329a3289c21cb19f1185f6430fdb",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-12.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2025-12.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2025-12.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "80080e1303ab2c291e53103d703b5364ef7a3da36dff5eaf45044cca74e764ca",
+          "layer": "perp",
+          "month": "2025-12",
+          "observed_sha256": "80080e1303ab2c291e53103d703b5364ef7a3da36dff5eaf45044cca74e764ca",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-12.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2025-12.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-01.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "eb060da7fb1adc65c7999f7d1f4f3b004edf2335311bb32d05a86f9577c21106",
+          "layer": "spot",
+          "month": "2026-01",
+          "observed_sha256": "eb060da7fb1adc65c7999f7d1f4f3b004edf2335311bb32d05a86f9577c21106",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-01.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-01.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-01.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "d710e68cf0dc90759814647dff64be482b4ddd05bf332adb73126885cb2979d7",
+          "layer": "perp",
+          "month": "2026-01",
+          "observed_sha256": "d710e68cf0dc90759814647dff64be482b4ddd05bf332adb73126885cb2979d7",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-01.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-01.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-02.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "8c8c6e664688497711832add90349b8617caf7e8892f085e97fe4290989fe78b",
+          "layer": "spot",
+          "month": "2026-02",
+          "observed_sha256": "8c8c6e664688497711832add90349b8617caf7e8892f085e97fe4290989fe78b",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-02.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-02.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-02.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "97a6c569361290917a525d54d5f964af1642dc2d281e162834b4685157016540",
+          "layer": "perp",
+          "month": "2026-02",
+          "observed_sha256": "97a6c569361290917a525d54d5f964af1642dc2d281e162834b4685157016540",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-02.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-02.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-03.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "0bf4dc37f2b201a8891f63dd76164742ed7d4fa24c24065a2e7709f34488ff74",
+          "layer": "spot",
+          "month": "2026-03",
+          "observed_sha256": "0bf4dc37f2b201a8891f63dd76164742ed7d4fa24c24065a2e7709f34488ff74",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-03.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-03.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-03.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "9ec5e28db1e0cf093d5c756b85329b43db730d6f95d6ed142a9717044b1423c2",
+          "layer": "perp",
+          "month": "2026-03",
+          "observed_sha256": "9ec5e28db1e0cf093d5c756b85329b43db730d6f95d6ed142a9717044b1423c2",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-03.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-03.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-04.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "46d62ed100717d8195bce4c07a41dc7606f41abc491ca71f9bfe653d2b92bfc0",
+          "layer": "spot",
+          "month": "2026-04",
+          "observed_sha256": "46d62ed100717d8195bce4c07a41dc7606f41abc491ca71f9bfe653d2b92bfc0",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-04.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_ETHUSDT_1h_2026-04.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-04.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "b72f5a102bd468d1e3d0c3b88619f1354a29e81616f9a55935d2e00837958e4b",
+          "layer": "perp",
+          "month": "2026-04",
+          "observed_sha256": "b72f5a102bd468d1e3d0c3b88619f1354a29e81616f9a55935d2e00837958e4b",
+          "symbol": "ETHUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2026-04.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_ETHUSDT_1h_2026-04.zip"
+        }
+      ],
+      "funding_output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol\\ETHUSDT_funding_forward_202511_202604.jsonl.gz",
+      "funding_output_sha256": "4d064151f648ffea1f4027a211daad69a5fd35cd250d9009eb565b553dd1af0b",
+      "funding_validation": {
+        "duplicate_funding_time_count": 0,
+        "max_funding_time_utc": "2026-04-30T16:00:00Z",
+        "min_funding_time_utc": "2025-11-01T00:00:00Z",
+        "numeric_sanity_valid": true,
+        "record_count": 543,
+        "rows_outside_window": 0,
+        "symbol": "ETHUSDT"
+      },
+      "perp_output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol\\ETHUSDT_perp_1h_forward_202511_202604.csv.gz",
+      "perp_output_sha256": "00910dcb9c25e63ba6b7b60acca3b55ad8452a30a04ffc189b431bbfc7ef4940",
+      "perp_validation": {
+        "complete_1h_count": 4344,
+        "consecutive_hourly_window": true,
+        "duplicate_timestamp_count": 0,
+        "expected_row_count": 4344,
+        "hourly_aligned": true,
+        "layer": "perp",
+        "max_timestamp_utc": "2026-04-30T23:00:00Z",
+        "min_timestamp_utc": "2025-11-01T00:00:00Z",
+        "numeric_sanity_valid": true,
+        "ohlc_sanity_valid": true,
+        "row_count": 4344,
+        "rows_outside_window": 0,
+        "symbol": "ETHUSDT"
+      },
+      "spot_output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol\\ETHUSDT_spot_1h_forward_202511_202604.csv.gz",
+      "spot_output_sha256": "cd44a34ed275b263a2a48a3da26b78dc4260f1b39d9148dc2624f0bc01b18be8",
+      "spot_perp_timestamp_alignment": true,
+      "spot_validation": {
+        "complete_1h_count": 4344,
+        "consecutive_hourly_window": true,
+        "duplicate_timestamp_count": 0,
+        "expected_row_count": 4344,
+        "hourly_aligned": true,
+        "layer": "spot",
+        "max_timestamp_utc": "2026-04-30T23:00:00Z",
+        "min_timestamp_utc": "2025-11-01T00:00:00Z",
+        "numeric_sanity_valid": true,
+        "ohlc_sanity_valid": true,
+        "row_count": 4344,
+        "rows_outside_window": 0,
+        "symbol": "ETHUSDT"
+      },
+      "symbol": "ETHUSDT"
+    },
+    "SOLUSDT": {
+      "archive_records": [
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2025-11.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "311effa24632be0dfc523980554d876d5516e6acd6c08c7aa7daa3000ba393b9",
+          "layer": "spot",
+          "month": "2025-11",
+          "observed_sha256": "311effa24632be0dfc523980554d876d5516e6acd6c08c7aa7daa3000ba393b9",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2025-11.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2025-11.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2025-11.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "2a74a61262338c2cf49d65d3c2d8e5a27ccda3aadedeaeed87da0544b13fb372",
+          "layer": "perp",
+          "month": "2025-11",
+          "observed_sha256": "2a74a61262338c2cf49d65d3c2d8e5a27ccda3aadedeaeed87da0544b13fb372",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2025-11.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2025-11.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2025-12.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "d8259dd2f6758b7cd4166564bf8aa7219d6aa140ecf68a3667749da41d4c2560",
+          "layer": "spot",
+          "month": "2025-12",
+          "observed_sha256": "d8259dd2f6758b7cd4166564bf8aa7219d6aa140ecf68a3667749da41d4c2560",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2025-12.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2025-12.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2025-12.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "7c25b753fd893dc697b5e7e8a1d0db904150181be7b7991cc05ba5b08f81cdf8",
+          "layer": "perp",
+          "month": "2025-12",
+          "observed_sha256": "7c25b753fd893dc697b5e7e8a1d0db904150181be7b7991cc05ba5b08f81cdf8",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2025-12.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2025-12.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-01.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "949d8838cf48d6bd348762534e6307601574f82d58126dc26f0d91740622c27c",
+          "layer": "spot",
+          "month": "2026-01",
+          "observed_sha256": "949d8838cf48d6bd348762534e6307601574f82d58126dc26f0d91740622c27c",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-01.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-01.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-01.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "cc16e807c075689a73f096b7603c34f1eb289bb2d782ca8f6147e4c42632ed0e",
+          "layer": "perp",
+          "month": "2026-01",
+          "observed_sha256": "cc16e807c075689a73f096b7603c34f1eb289bb2d782ca8f6147e4c42632ed0e",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-01.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-01.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-02.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "5e219b1a7d7384327e40b27b8accb7f1ae797f3c6ee628441de3035bc1fa3964",
+          "layer": "spot",
+          "month": "2026-02",
+          "observed_sha256": "5e219b1a7d7384327e40b27b8accb7f1ae797f3c6ee628441de3035bc1fa3964",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-02.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-02.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-02.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "fa733e5400163477fa7eb544a9a7e04b5c679656720ccb7f92787fcf33b739a3",
+          "layer": "perp",
+          "month": "2026-02",
+          "observed_sha256": "fa733e5400163477fa7eb544a9a7e04b5c679656720ccb7f92787fcf33b739a3",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-02.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-02.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-03.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "5bfab930f6e73e8a486ad1281de8df114d2c6a71cc08f7a449e6c6697af369b6",
+          "layer": "spot",
+          "month": "2026-03",
+          "observed_sha256": "5bfab930f6e73e8a486ad1281de8df114d2c6a71cc08f7a449e6c6697af369b6",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-03.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-03.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-03.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "5e9440665d3e4209c320e2dab897b5c3cec578800e669e1c8fd3503f157e49f1",
+          "layer": "perp",
+          "month": "2026-03",
+          "observed_sha256": "5e9440665d3e4209c320e2dab897b5c3cec578800e669e1c8fd3503f157e49f1",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-03.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-03.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-04.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "7266fae3d30b6b693bb731e7d392cdf132066b2e71a86b1695b0ab0c8a6b8507",
+          "layer": "spot",
+          "month": "2026-04",
+          "observed_sha256": "7266fae3d30b6b693bb731e7d392cdf132066b2e71a86b1695b0ab0c8a6b8507",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/spot/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-04.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\spot_SOLUSDT_1h_2026-04.zip"
+        },
+        {
+          "checksum_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-04.zip.CHECKSUM",
+          "checksum_verified": true,
+          "expected_sha256": "2f466580c7e6d2e02a67a968428c0f9b987108cc1a3d2ba73061e329aacc208d",
+          "layer": "perp",
+          "month": "2026-04",
+          "observed_sha256": "2f466580c7e6d2e02a67a968428c0f9b987108cc1a3d2ba73061e329aacc208d",
+          "symbol": "SOLUSDT",
+          "url": "https://data.binance.vision/data/futures/um/monthly/klines/SOLUSDT/1h/SOLUSDT-1h-2026-04.zip",
+          "zip_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\download_cache\\perp_SOLUSDT_1h_2026-04.zip"
+        }
+      ],
+      "funding_output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\funding_by_symbol\\SOLUSDT_funding_forward_202511_202604.jsonl.gz",
+      "funding_output_sha256": "6e7bc3dd6b4c80e364ba1a15511d086dfabead70356510a278fcc219808308dc",
+      "funding_validation": {
+        "duplicate_funding_time_count": 0,
+        "max_funding_time_utc": "2026-04-30T16:00:00Z",
+        "min_funding_time_utc": "2025-11-01T00:00:00Z",
+        "numeric_sanity_valid": true,
+        "record_count": 543,
+        "rows_outside_window": 0,
+        "symbol": "SOLUSDT"
+      },
+      "perp_output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\perp_1h_by_symbol\\SOLUSDT_perp_1h_forward_202511_202604.csv.gz",
+      "perp_output_sha256": "a5a0b145c68f929973d42a9b385eba3922e4e4c17546d453fa2a4767a0f30a9d",
+      "perp_validation": {
+        "complete_1h_count": 4344,
+        "consecutive_hourly_window": true,
+        "duplicate_timestamp_count": 0,
+        "expected_row_count": 4344,
+        "hourly_aligned": true,
+        "layer": "perp",
+        "max_timestamp_utc": "2026-04-30T23:00:00Z",
+        "min_timestamp_utc": "2025-11-01T00:00:00Z",
+        "numeric_sanity_valid": true,
+        "ohlc_sanity_valid": true,
+        "row_count": 4344,
+        "rows_outside_window": 0,
+        "symbol": "SOLUSDT"
+      },
+      "spot_output_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\spot_1h_by_symbol\\SOLUSDT_spot_1h_forward_202511_202604.csv.gz",
+      "spot_output_sha256": "91410d8207727e89a933bf1871bca356c51b4c3b28c4675a1f7798a16c3c8a3c",
+      "spot_perp_timestamp_alignment": true,
+      "spot_validation": {
+        "complete_1h_count": 4344,
+        "consecutive_hourly_window": true,
+        "duplicate_timestamp_count": 0,
+        "expected_row_count": 4344,
+        "hourly_aligned": true,
+        "layer": "spot",
+        "max_timestamp_utc": "2026-04-30T23:00:00Z",
+        "min_timestamp_utc": "2025-11-01T00:00:00Z",
+        "numeric_sanity_valid": true,
+        "ohlc_sanity_valid": true,
+        "row_count": 4344,
+        "rows_outside_window": 0,
+        "symbol": "SOLUSDT"
+      },
+      "symbol": "SOLUSDT"
+    }
+  },
+  "validation_checks": {
+    "all_required_checksums_verified": true,
+    "all_required_perp_zips_downloaded_or_cached": true,
+    "all_required_spot_zips_downloaded_or_cached": true,
+    "backward_extension_not_acquired": true,
+    "data_written_outside_repo": true,
+    "exact_symbol_count_3": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "forward_extension_availability_verified": true,
+    "funding_records_acquired_all_symbols": true,
+    "no_candidate_generation": true,
+    "no_duplicate_funding_symbol_time": true,
+    "no_duplicate_perp_symbol_hour": true,
+    "no_duplicate_spot_symbol_hour": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_rows_outside_window": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_execution": true,
+    "numeric_sanity_valid": true,
+    "ohlc_sanity_valid": true,
+    "partial_may_2026_daily_not_acquired": true,
+    "prior_extension_availability_loaded": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  },
+  "validation_summary": {
+    "checksums_ok": true,
+    "funding_records_ok": true,
+    "no_duplicate_funding_symbol_time": true,
+    "no_duplicate_perp_symbol_hour": true,
+    "no_duplicate_spot_symbol_hour": true,
+    "no_rows_outside_window": true,
+    "numeric_sanity_valid": true,
+    "ohlc_sanity_valid": true,
+    "perp_row_counts_ok": true,
+    "spot_row_counts_ok": true
+  }
+}

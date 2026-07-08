@@ -1,0 +1,292 @@
+{
+  "validation_contract_status": "PASS_REPO_ONLY_BINANCE_OI_TAKER_CROWDING_PROXY_VALIDATION_CONTRACT_CREATED",
+  "status": "PASS_REPO_ONLY_BINANCE_OI_TAKER_CROWDING_PROXY_VALIDATION_CONTRACT_CREATED",
+  "artifact_kind": "BINANCE_OI_TAKER_CROWDING_PROXY_VALIDATION_CONTRACT",
+  "module": "BINANCE_OI_TAKER_CROWDING_PROXY_VALIDATION_CONTRACT_V1",
+  "source_checkpoint": {
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "source_event_study_commit": "67b664d1cb437692ccfdba6e4872e9f331c3cf25",
+    "source_dataset_commit": "f419728037c3650a00b0491ccdc8e551cff21653",
+    "repo_head_before_tool_creation": "67b664d1cb437692ccfdba6e4872e9f331c3cf25",
+    "tracked_python_count_before_tool_creation": 1058,
+    "tracked_python_count_at_run": 1058,
+    "git_status_short_before_tool_creation": [],
+    "git_status_short_at_run_start": [
+      "?? tools/edge_factory_os_repo_only_binance_oi_taker_crowding_proxy_validation_contract_v1.py"
+    ],
+    "run_started_at_utc": "2026-05-27T23:52:52Z"
+  },
+  "result_classification": "BINANCE_OI_TAKER_CROWDING_PROXY_DEFINITIONS_VALID_PRICE_RETURN_DATA_REQUIRED",
+  "input_artifacts_found": {
+    "artifacts/research/binance_oi_taker_crowding_proxy_event_study_v1.json": true,
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": true
+  },
+  "source_artifacts": {
+    "event_study": {
+      "path": "artifacts/research/binance_oi_taker_crowding_proxy_event_study_v1.json",
+      "status": "PASS_REPO_ONLY_BINANCE_OI_TAKER_CROWDING_PROXY_EVENT_STUDY_CREATED",
+      "result_classification": "BINANCE_OI_TAKER_CROWDING_PROXY_EVENT_STUDY_READY_FOR_DEEPER_PROXY_VALIDATION",
+      "payload_sha256_excluding_hash": "ce40de1164eac6c9fde1d7c52b59493767f52194b5d818438818ab8b9e08b780"
+    },
+    "dataset_builder": {
+      "path": "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json",
+      "status": "PASS_REPO_ONLY_BINANCE_DATA_VISION_UM_METRICS_DATASET_BUILDER_CREATED",
+      "result_classification": "BINANCE_DATA_VISION_UM_METRICS_DATASET_READY_FOR_PROXY_EVENT_STUDY",
+      "payload_sha256_excluding_hash": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc"
+    }
+  },
+  "proxy_event_definitions_validated": {
+    "definitions_present": true,
+    "definition_count": 5,
+    "validated_event_ids": [
+      "oi_expansion_taker_buy_global_crowding_high",
+      "oi_expansion_taker_sell_global_crowding_low",
+      "oi_expansion_top_account_crowding_high",
+      "oi_expansion_top_position_crowding_high",
+      "broad_proxy_alignment_extreme"
+    ],
+    "all_definitions_have_events": true,
+    "all_definitions_cover_all_symbols": true,
+    "counts_match_event_study": true,
+    "usable_for_deeper_diagnostic_validation": true
+  },
+  "event_overlap_summary": {
+    "rows_scanned": 3131587,
+    "event_counts_recomputed": {
+      "oi_expansion_taker_buy_global_crowding_high": 3907,
+      "oi_expansion_taker_sell_global_crowding_low": 2216,
+      "oi_expansion_top_account_crowding_high": 26548,
+      "oi_expansion_top_position_crowding_high": 25501,
+      "broad_proxy_alignment_extreme": 41698
+    },
+    "event_counts_match_reported": {
+      "oi_expansion_taker_buy_global_crowding_high": {
+        "reported": 3907,
+        "recomputed": 3907,
+        "matches": true
+      },
+      "oi_expansion_taker_sell_global_crowding_low": {
+        "reported": 2216,
+        "recomputed": 2216,
+        "matches": true
+      },
+      "oi_expansion_top_account_crowding_high": {
+        "reported": 26548,
+        "recomputed": 26548,
+        "matches": true
+      },
+      "oi_expansion_top_position_crowding_high": {
+        "reported": 25501,
+        "recomputed": 25501,
+        "matches": true
+      },
+      "broad_proxy_alignment_extreme": {
+        "reported": 41698,
+        "recomputed": 41698,
+        "matches": true
+      }
+    },
+    "unique_symbol_timestamp_event_rows": 75467,
+    "total_event_rows_counting_overlaps": 99870,
+    "overlap_row_count": 13690,
+    "overlap_share_of_unique_event_rows": 0.18140379238607604,
+    "overlap_multiplicity_distribution_all_rows": {
+      "0": 3056120,
+      "1": 61777,
+      "2": 4179,
+      "3": 8309,
+      "4": 1202,
+      "5": 0
+    },
+    "pairwise_overlap_counts": {
+      "broad_proxy_alignment_extreme|oi_expansion_taker_buy_global_crowding_high": 2970,
+      "broad_proxy_alignment_extreme|oi_expansion_taker_sell_global_crowding_low": 1761,
+      "broad_proxy_alignment_extreme|oi_expansion_top_account_crowding_high": 9381,
+      "broad_proxy_alignment_extreme|oi_expansion_top_position_crowding_high": 7863,
+      "oi_expansion_taker_buy_global_crowding_high|oi_expansion_top_account_crowding_high": 2850,
+      "oi_expansion_taker_buy_global_crowding_high|oi_expansion_top_position_crowding_high": 1322,
+      "oi_expansion_taker_sell_global_crowding_low|oi_expansion_top_position_crowding_high": 44,
+      "oi_expansion_top_account_crowding_high|oi_expansion_top_position_crowding_high": 10127
+    },
+    "duplicate_event_keys": {
+      "oi_expansion_taker_buy_global_crowding_high": 0,
+      "oi_expansion_taker_sell_global_crowding_low": 0,
+      "oi_expansion_top_account_crowding_high": 0,
+      "oi_expansion_top_position_crowding_high": 0,
+      "broad_proxy_alignment_extreme": 0
+    },
+    "duplicate_event_key_total": 0
+  },
+  "symbol_concentration_summary": {
+    "aggregate": {
+      "total": 99870,
+      "top_key": "XRPUSDT",
+      "top_count": 11654,
+      "top_share": 0.11669169920897167,
+      "max_min_ratio": 1.4578433825369026
+    },
+    "per_event": {
+      "oi_expansion_taker_buy_global_crowding_high": {
+        "total": 3907,
+        "top_key": "XRPUSDT",
+        "top_count": 453,
+        "top_share": 0.1159457384182237,
+        "max_min_ratio": 1.3685800604229608
+      },
+      "oi_expansion_taker_sell_global_crowding_low": {
+        "total": 2216,
+        "top_key": "APTUSDT",
+        "top_count": 317,
+        "top_share": 0.1430505415162455,
+        "max_min_ratio": 2.24822695035461
+      },
+      "oi_expansion_top_account_crowding_high": {
+        "total": 26548,
+        "top_key": "BNBUSDT",
+        "top_count": 3234,
+        "top_share": 0.12181708603284616,
+        "max_min_ratio": 1.5290780141843971
+      },
+      "oi_expansion_top_position_crowding_high": {
+        "total": 25501,
+        "top_key": "BNBUSDT",
+        "top_count": 4118,
+        "top_share": 0.16148386337790674,
+        "max_min_ratio": 2.2104133118625873
+      },
+      "broad_proxy_alignment_extreme": {
+        "total": 41698,
+        "top_key": "SOLUSDT",
+        "top_count": 6279,
+        "top_share": 0.1505827617631541,
+        "max_min_ratio": 2.6890792291220555
+      }
+    },
+    "concentration_flag": false
+  },
+  "timestamp_concentration_summary": {
+    "per_event_year_concentration": {
+      "oi_expansion_taker_buy_global_crowding_high": {
+        "total": 3907,
+        "top_key": "2024",
+        "top_count": 2088,
+        "top_share": 0.5344253903250575,
+        "max_min_ratio": 2.3434343434343434
+      },
+      "oi_expansion_taker_sell_global_crowding_low": {
+        "total": 2216,
+        "top_key": "2023",
+        "top_count": 801,
+        "top_share": 0.36146209386281586,
+        "max_min_ratio": 1.241860465116279
+      },
+      "oi_expansion_top_account_crowding_high": {
+        "total": 26548,
+        "top_key": "2024",
+        "top_count": 13591,
+        "top_share": 0.511940635829441,
+        "max_min_ratio": 3.174725531417893
+      },
+      "oi_expansion_top_position_crowding_high": {
+        "total": 25501,
+        "top_key": "2024",
+        "top_count": 16225,
+        "top_share": 0.6362495588408298,
+        "max_min_ratio": 19.47779111644658
+      },
+      "broad_proxy_alignment_extreme": {
+        "total": 41698,
+        "top_key": "2024",
+        "top_count": 17625,
+        "top_share": 0.4226821430284426,
+        "max_min_ratio": 2.078419811320755
+      }
+    },
+    "aggregate_day_concentration": {
+      "total": 99870,
+      "top_key": "2024-12-05",
+      "top_count": 1063,
+      "top_share": 0.01064383698808451,
+      "max_min_ratio": 1063.0
+    },
+    "timestamp_instability_flag": true
+  },
+  "missing_dependency_summary": {
+    "forward_return_diagnostic_status": "skipped_missing_dependency",
+    "forward_return_impact_computed": false,
+    "missing_dependency": "public price dataset aligned by symbol and timestamp",
+    "reason": "normalized Binance Data Vision UM metrics dataset has no public price/return fields",
+    "public_kline_return_data_required_before_forward_return_diagnostic": true
+  },
+  "public_price_return_dependency_required": true,
+  "allowed_next_step": "BINANCE_PUBLIC_KLINE_RETURN_DATASET_CONTRACT_V1",
+  "forbidden_actions": [
+    "strategy",
+    "signal",
+    "backtest",
+    "PnL",
+    "trade_simulation",
+    "optimization",
+    "candidate_generation",
+    "edge_claim",
+    "runtime/live/capital/order/private_api/account_api/api_key"
+  ],
+  "forbidden_failed_strategy_routes_not_reused": {
+    "not_reused": true,
+    "routes": [
+      "funding crowding reversal",
+      "funding carry",
+      "funding extreme volume surge",
+      "taker-buy exhaustion",
+      "taker-flow momentum continuation"
+    ]
+  },
+  "safety_flags": {
+    "strategy": false,
+    "signal": false,
+    "backtest": false,
+    "pnl": false,
+    "trade_simulation": false,
+    "optimization": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "runtime_live_capital": false,
+    "order_private_account_api_key": false
+  },
+  "validation_limits": [
+    "This is a validation contract only, not an evaluator with forward returns.",
+    "Forward-return diagnostics require a public kline/return dataset before any return impact study.",
+    "Overlap and concentration are descriptive validation checks, not tradable signals.",
+    "No strategy, signal, backtest, PnL, simulation, optimization, candidate generation, or edge claim is authorized."
+  ],
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "input_artifacts_found": true,
+    "input_artifact_hashes_verified": true,
+    "proxy_event_definitions_validated": true,
+    "event_counts_recomputed_match_input": true,
+    "duplicate_event_key_total_zero": true,
+    "public_price_return_dependency_required": true,
+    "read_only_validation_contract": true,
+    "no_private_api_used": true,
+    "no_account_api_used": true,
+    "no_order_endpoint_used": true,
+    "no_api_key_used": true,
+    "no_strategy_execution": true,
+    "no_signal_generation": true,
+    "no_backtest_run": true,
+    "no_pnl_computation": true,
+    "no_trade_simulation": true,
+    "no_optimization": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "no_failed_strategy_route_reuse": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_tracked_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "d8589237effb885207669c0a006ee46a34e66d98d438676170430957362e9d11"
+}

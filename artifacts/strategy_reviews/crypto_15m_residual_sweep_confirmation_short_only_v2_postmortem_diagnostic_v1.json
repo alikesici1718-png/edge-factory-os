@@ -1,0 +1,2129 @@
+{
+  "aggregate_reproduction_check": {
+    "aggregate_match": true,
+    "difference_count": 0,
+    "differences": [],
+    "source": "same_config_reconstruction_inside_diagnostic"
+  },
+  "artifact_kind": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_POSTMORTEM_DIAGNOSTIC",
+  "concentration_diagnostic": {
+    "concentration_classification": "CONCENTRATION_OK",
+    "diagnosis": "Symbol concentration is low; the remaining blocker is robustness rather than dependence on one symbol.",
+    "top_symbol_month_combos_by_loss": [
+      {
+        "count": 3,
+        "net_bps": -149.502508,
+        "net_pnl_usdt": -14.950251,
+        "symbol_month": "CFXUSDT::2025-07"
+      },
+      {
+        "count": 3,
+        "net_bps": -119.690893,
+        "net_pnl_usdt": -11.969089,
+        "symbol_month": "TRBUSDT::2025-05"
+      },
+      {
+        "count": 2,
+        "net_bps": -103.678015,
+        "net_pnl_usdt": -10.367802,
+        "symbol_month": "THETAUSDT::2024-11"
+      },
+      {
+        "count": 2,
+        "net_bps": -102.857527,
+        "net_pnl_usdt": -10.285753,
+        "symbol_month": "ORDIUSDT::2023-12"
+      },
+      {
+        "count": 4,
+        "net_bps": -99.731551,
+        "net_pnl_usdt": -9.973155,
+        "symbol_month": "THETAUSDT::2024-02"
+      },
+      {
+        "count": 2,
+        "net_bps": -98.275881,
+        "net_pnl_usdt": -9.827588,
+        "symbol_month": "IMXUSDT::2023-02"
+      },
+      {
+        "count": 3,
+        "net_bps": -97.702551,
+        "net_pnl_usdt": -9.770255,
+        "symbol_month": "ADAUSDT::2024-11"
+      },
+      {
+        "count": 2,
+        "net_bps": -96.444622,
+        "net_pnl_usdt": -9.644462,
+        "symbol_month": "LPTUSDT::2024-02"
+      },
+      {
+        "count": 2,
+        "net_bps": -95.338396,
+        "net_pnl_usdt": -9.53384,
+        "symbol_month": "ARUSDT::2024-02"
+      },
+      {
+        "count": 2,
+        "net_bps": -91.121138,
+        "net_pnl_usdt": -9.112114,
+        "symbol_month": "APTUSDT::2024-02"
+      }
+    ],
+    "top_symbol_month_combos_by_net": [
+      {
+        "count": 2,
+        "net_bps": 152.854949,
+        "net_pnl_usdt": 15.285495,
+        "symbol_month": "IOTAUSDT::2024-12"
+      },
+      {
+        "count": 3,
+        "net_bps": 151.550415,
+        "net_pnl_usdt": 15.155042,
+        "symbol_month": "SNXUSDT::2025-09"
+      },
+      {
+        "count": 3,
+        "net_bps": 136.058788,
+        "net_pnl_usdt": 13.605879,
+        "symbol_month": "GMXUSDT::2024-05"
+      },
+      {
+        "count": 2,
+        "net_bps": 109.408034,
+        "net_pnl_usdt": 10.940803,
+        "symbol_month": "YGGUSDT::2025-09"
+      },
+      {
+        "count": 1,
+        "net_bps": 99.108,
+        "net_pnl_usdt": 9.9108,
+        "symbol_month": "AGLDUSDT::2024-11"
+      },
+      {
+        "count": 1,
+        "net_bps": 98.927789,
+        "net_pnl_usdt": 9.892779,
+        "symbol_month": "LPTUSDT::2025-05"
+      },
+      {
+        "count": 1,
+        "net_bps": 98.210879,
+        "net_pnl_usdt": 9.821088,
+        "symbol_month": "ICPUSDT::2024-01"
+      },
+      {
+        "count": 1,
+        "net_bps": 98.188465,
+        "net_pnl_usdt": 9.818847,
+        "symbol_month": "LDOUSDT::2025-05"
+      },
+      {
+        "count": 1,
+        "net_bps": 98.173138,
+        "net_pnl_usdt": 9.817314,
+        "symbol_month": "IOSTUSDT::2025-06"
+      },
+      {
+        "count": 1,
+        "net_bps": 98.160763,
+        "net_pnl_usdt": 9.816076,
+        "symbol_month": "RSRUSDT::2024-07"
+      }
+    ],
+    "top_symbols_by_loss": [
+      {
+        "count": 12,
+        "net_bps": -262.409875,
+        "net_pnl_usdt": -26.240988,
+        "value": "THETAUSDT"
+      },
+      {
+        "count": 10,
+        "net_bps": -241.409102,
+        "net_pnl_usdt": -24.14091,
+        "value": "GRTUSDT"
+      },
+      {
+        "count": 19,
+        "net_bps": -208.038792,
+        "net_pnl_usdt": -20.803879,
+        "value": "APTUSDT"
+      },
+      {
+        "count": 16,
+        "net_bps": -205.809533,
+        "net_pnl_usdt": -20.580953,
+        "value": "IMXUSDT"
+      },
+      {
+        "count": 10,
+        "net_bps": -201.193502,
+        "net_pnl_usdt": -20.11935,
+        "value": "ALGOUSDT"
+      },
+      {
+        "count": 8,
+        "net_bps": -195.423507,
+        "net_pnl_usdt": -19.542351,
+        "value": "GALAUSDT"
+      },
+      {
+        "count": 17,
+        "net_bps": -178.059619,
+        "net_pnl_usdt": -17.805962,
+        "value": "SUIUSDT"
+      },
+      {
+        "count": 10,
+        "net_bps": -177.587563,
+        "net_pnl_usdt": -17.758756,
+        "value": "RVNUSDT"
+      },
+      {
+        "count": 19,
+        "net_bps": -157.811427,
+        "net_pnl_usdt": -15.781143,
+        "value": "LDOUSDT"
+      },
+      {
+        "count": 12,
+        "net_bps": -155.420657,
+        "net_pnl_usdt": -15.542066,
+        "value": "BICOUSDT"
+      }
+    ],
+    "top_symbols_by_net_contribution": [
+      {
+        "count": 14,
+        "net_bps": 282.795283,
+        "net_pnl_usdt": 28.279528,
+        "value": "IOTAUSDT"
+      },
+      {
+        "count": 14,
+        "net_bps": 282.192721,
+        "net_pnl_usdt": 28.219272,
+        "value": "AGLDUSDT"
+      },
+      {
+        "count": 15,
+        "net_bps": 249.851153,
+        "net_pnl_usdt": 24.985115,
+        "value": "MANAUSDT"
+      },
+      {
+        "count": 17,
+        "net_bps": 205.811243,
+        "net_pnl_usdt": 20.581124,
+        "value": "MAGICUSDT"
+      },
+      {
+        "count": 16,
+        "net_bps": 169.641578,
+        "net_pnl_usdt": 16.964158,
+        "value": "SNXUSDT"
+      },
+      {
+        "count": 18,
+        "net_bps": 165.201172,
+        "net_pnl_usdt": 16.520117,
+        "value": "GMXUSDT"
+      },
+      {
+        "count": 14,
+        "net_bps": 155.4099,
+        "net_pnl_usdt": 15.54099,
+        "value": "UMAUSDT"
+      },
+      {
+        "count": 17,
+        "net_bps": 149.396351,
+        "net_pnl_usdt": 14.939635,
+        "value": "CELOUSDT"
+      },
+      {
+        "count": 8,
+        "net_bps": 142.822264,
+        "net_pnl_usdt": 14.282226,
+        "value": "IOSTUSDT"
+      },
+      {
+        "count": 11,
+        "net_bps": 137.011628,
+        "net_pnl_usdt": 13.701163,
+        "value": "XTZUSDT"
+      }
+    ],
+    "top_symbols_by_trade_count": [
+      {
+        "count": 22,
+        "share": 0.021847,
+        "symbol": "CFXUSDT"
+      },
+      {
+        "count": 21,
+        "share": 0.020854,
+        "symbol": "DOGEUSDT"
+      },
+      {
+        "count": 20,
+        "share": 0.019861,
+        "symbol": "RSRUSDT"
+      },
+      {
+        "count": 19,
+        "share": 0.018868,
+        "symbol": "LDOUSDT"
+      },
+      {
+        "count": 19,
+        "share": 0.018868,
+        "symbol": "APTUSDT"
+      },
+      {
+        "count": 18,
+        "share": 0.017875,
+        "symbol": "GMXUSDT"
+      },
+      {
+        "count": 18,
+        "share": 0.017875,
+        "symbol": "LPTUSDT"
+      },
+      {
+        "count": 17,
+        "share": 0.016882,
+        "symbol": "1INCHUSDT"
+      },
+      {
+        "count": 17,
+        "share": 0.016882,
+        "symbol": "CELOUSDT"
+      },
+      {
+        "count": 17,
+        "share": 0.016882,
+        "symbol": "LTCUSDT"
+      }
+    ]
+  },
+  "cost_diagnostic": {
+    "cost_as_share_of_gross_pnl": 4.467286,
+    "cost_by_exit_reason": {
+      "stop": {
+        "cost_per_trade_usdt": 0.193535,
+        "cost_usdt": 84.187531,
+        "count": 435
+      },
+      "take": {
+        "cost_per_trade_usdt": 0.196633,
+        "cost_usdt": 24.775707,
+        "count": 126
+      },
+      "time": {
+        "cost_per_trade_usdt": 0.181505,
+        "cost_usdt": 80.951029,
+        "count": 446
+      }
+    },
+    "cost_by_month": {
+      "2023-01": 2.491859,
+      "2023-02": 6.565122,
+      "2023-03": 4.294347,
+      "2023-04": 4.510235,
+      "2023-05": 4.180422,
+      "2023-06": 7.076901,
+      "2023-07": 4.952221,
+      "2023-08": 3.781713,
+      "2023-09": 2.874412,
+      "2023-10": 9.821752,
+      "2023-11": 9.309673,
+      "2023-12": 11.417244,
+      "2024-01": 5.913267,
+      "2024-02": 11.501634,
+      "2024-03": 10.410724,
+      "2024-04": 2.318651,
+      "2024-05": 6.325561,
+      "2024-06": 3.2,
+      "2024-07": 2.583924,
+      "2024-08": 4.590969,
+      "2024-09": 6.703617,
+      "2024-10": 5.225707,
+      "2024-11": 13.930801,
+      "2024-12": 6.186831,
+      "2025-01": 3.327999,
+      "2025-02": 2.486173,
+      "2025-03": 2.096876,
+      "2025-04": 4.008318,
+      "2025-05": 4.096885,
+      "2025-06": 2.343214,
+      "2025-07": 9.190889,
+      "2025-08": 5.126284,
+      "2025-09": 3.714126,
+      "2025-10": 3.355918
+    },
+    "cost_diagnostic_classification": "COST_DOMINATES_EDGE",
+    "cost_per_trade_usdt": 0.188594,
+    "diagnosis": "Costs remain larger than full-sample gross PnL, so sparse-quality improvement would need to be structural and preregistered.",
+    "gross_pnl_usdt": 42.512227,
+    "net_pnl_usdt": -147.402041,
+    "total_cost_usdt": 189.914268
+  },
+  "exit_reason_diagnostic": {
+    "by_exit_reason": {
+      "stop": {
+        "average_hold_bars": 10.731034,
+        "average_net_pnl_usdt": -3.275085,
+        "cost_pnl_usdt": 84.187531,
+        "count": 435,
+        "gross_pnl_usdt": -1340.47433,
+        "holdout_net_bps": -1863.357745,
+        "monthly_contribution_bps": {
+          "2023-01": -292.308345,
+          "2023-02": -558.844312,
+          "2023-03": -340.97495,
+          "2023-04": -324.050951,
+          "2023-05": -122.126728,
+          "2023-06": -463.638584,
+          "2023-07": -560.859539,
+          "2023-08": -338.457262,
+          "2023-09": -178.933016,
+          "2023-10": -662.567714,
+          "2023-11": -715.679698,
+          "2023-12": -1070.652689,
+          "2024-01": -559.794723,
+          "2024-02": -1095.178174,
+          "2024-03": -911.219679,
+          "2024-04": -260.105698,
+          "2024-05": -526.830844,
+          "2024-06": -135.787552,
+          "2024-07": -116.93305,
+          "2024-08": -139.124179,
+          "2024-09": -333.344621,
+          "2024-10": -263.187375,
+          "2024-11": -1355.226497,
+          "2024-12": -535.521734,
+          "2025-01": -224.334105,
+          "2025-02": -88.590269,
+          "2025-03": -208.988577,
+          "2025-04": -154.010402,
+          "2025-05": -251.696296,
+          "2025-06": -134.417641,
+          "2025-07": -533.340671,
+          "2025-08": -322.450353,
+          "2025-09": -202.164663,
+          "2025-10": -265.277719
+        },
+        "monthly_positive_rate": 0.0,
+        "net_bps": -14246.61861,
+        "net_pnl_usdt": -1424.661861,
+        "validation_net_bps": -3265.250407,
+        "win_rate": 0.0
+      },
+      "take": {
+        "average_hold_bars": 16.531746,
+        "average_net_pnl_usdt": 4.957278,
+        "cost_pnl_usdt": 24.775707,
+        "count": 126,
+        "gross_pnl_usdt": 649.392687,
+        "holdout_net_bps": 1056.412432,
+        "monthly_contribution_bps": {
+          "2023-01": 66.773174,
+          "2023-02": 287.663147,
+          "2023-03": 157.062196,
+          "2023-04": 119.358335,
+          "2023-05": 54.833839,
+          "2023-06": 139.323785,
+          "2023-08": 126.072902,
+          "2023-09": 89.168453,
+          "2023-10": 144.996588,
+          "2023-11": 366.701617,
+          "2023-12": 251.322304,
+          "2024-01": 332.476711,
+          "2024-02": 117.399804,
+          "2024-03": 614.986709,
+          "2024-04": 55.590339,
+          "2024-05": 290.300332,
+          "2024-06": 258.022042,
+          "2024-07": 163.002496,
+          "2024-08": 23.103324,
+          "2024-09": 76.173575,
+          "2024-10": 63.510918,
+          "2024-11": 738.951826,
+          "2024-12": 219.915558,
+          "2025-01": 208.090946,
+          "2025-02": 126.349895,
+          "2025-03": 98.60655,
+          "2025-04": 31.948339,
+          "2025-05": 410.768435,
+          "2025-06": 184.933434,
+          "2025-07": 126.967196,
+          "2025-08": 74.145536,
+          "2025-09": 177.827108,
+          "2025-10": 49.822383
+        },
+        "monthly_positive_rate": 1.0,
+        "net_bps": 6246.169797,
+        "net_pnl_usdt": 624.61698,
+        "validation_net_bps": 1717.705089,
+        "win_rate": 1.0
+      },
+      "time": {
+        "average_hold_bars": 32.0,
+        "average_net_pnl_usdt": 1.463325,
+        "cost_pnl_usdt": 80.951029,
+        "count": 446,
+        "gross_pnl_usdt": 733.59387,
+        "holdout_net_bps": 1194.834904,
+        "monthly_contribution_bps": {
+          "2023-01": 95.720473,
+          "2023-02": 280.917758,
+          "2023-03": -25.33174,
+          "2023-04": 175.167826,
+          "2023-05": 128.70958,
+          "2023-06": 209.406231,
+          "2023-07": 152.131679,
+          "2023-08": 65.270999,
+          "2023-09": 86.628665,
+          "2023-10": 470.229088,
+          "2023-11": 329.778048,
+          "2023-12": 304.047275,
+          "2024-01": 161.728771,
+          "2024-02": 231.357901,
+          "2024-03": 396.907933,
+          "2024-04": 108.382593,
+          "2024-05": 352.727549,
+          "2024-06": 71.1621,
+          "2024-07": 49.964051,
+          "2024-08": 267.61394,
+          "2024-09": 77.36239,
+          "2024-10": 315.237584,
+          "2024-11": 394.06046,
+          "2024-12": 346.030752,
+          "2025-01": 57.556744,
+          "2025-02": 106.648415,
+          "2025-03": 122.176436,
+          "2025-04": 219.276158,
+          "2025-05": 165.564058,
+          "2025-06": 73.403842,
+          "2025-07": 298.904115,
+          "2025-08": 195.877941,
+          "2025-09": 163.653254,
+          "2025-10": 78.155535
+        },
+        "monthly_positive_rate": 0.970588,
+        "net_bps": 6526.428407,
+        "net_pnl_usdt": 652.642841,
+        "validation_net_bps": 1736.650773,
+        "win_rate": 0.744395
+      }
+    },
+    "diagnosis": "Stop exits are the main loss source; take and time exits are positive in validation and holdout but not enough to clear the null baseline.",
+    "exit_diagnostic_classification": "STOP_EXITS_DOMINATE_LOSSES"
+  },
+  "feature_bucket_diagnostic": {
+    "diagnosis": "Feature buckets are informative but not strong or monotonic enough to justify an exact V3 threshold without optimization.",
+    "feature_bucket_results": {
+      "abs_z_residual": {
+        "bucket_edges": [
+          3.5011730161,
+          3.9671220668,
+          4.6937710135,
+          6.1136386343,
+          27.2529183947
+        ],
+        "buckets": [
+          {
+            "average_hold_bars": 20.219124,
+            "average_net_pnl_usdt": -0.172709,
+            "bucket": "q1",
+            "cost_pnl_usdt": 49.299382,
+            "count": 251,
+            "gross_pnl_usdt": 5.949345,
+            "holdout_net_bps": 35.439868,
+            "lower_bound": 3.5011730161,
+            "monthly_positive_rate": 0.454545,
+            "net_bps": -433.500368,
+            "net_pnl_usdt": -43.350037,
+            "upper_bound": 3.9671220668,
+            "validation_net_bps": -130.383391,
+            "win_rate": 0.454183
+          },
+          {
+            "average_hold_bars": 19.557769,
+            "average_net_pnl_usdt": -0.365703,
+            "bucket": "q2",
+            "cost_pnl_usdt": 48.925782,
+            "count": 251,
+            "gross_pnl_usdt": -42.865771,
+            "holdout_net_bps": -124.434253,
+            "lower_bound": 3.9671220668,
+            "monthly_positive_rate": 0.411765,
+            "net_bps": -917.915531,
+            "net_pnl_usdt": -91.791553,
+            "upper_bound": 4.6937710135,
+            "validation_net_bps": 37.396245,
+            "win_rate": 0.406375
+          },
+          {
+            "average_hold_bars": 21.623016,
+            "average_net_pnl_usdt": -0.068646,
+            "bucket": "q3",
+            "cost_pnl_usdt": 47.652038,
+            "count": 252,
+            "gross_pnl_usdt": 30.353289,
+            "holdout_net_bps": 54.096181,
+            "lower_bound": 4.6937710135,
+            "monthly_positive_rate": 0.411765,
+            "net_bps": -172.987486,
+            "net_pnl_usdt": -17.298749,
+            "upper_bound": 6.1136386343,
+            "validation_net_bps": 337.881294,
+            "win_rate": 0.448413
+          },
+          {
+            "average_hold_bars": 22.166667,
+            "average_net_pnl_usdt": 0.025418,
+            "bucket": "q4",
+            "cost_pnl_usdt": 43.837066,
+            "count": 252,
+            "gross_pnl_usdt": 50.242381,
+            "holdout_net_bps": 422.787796,
+            "lower_bound": 6.1136386343,
+            "monthly_positive_rate": 0.575758,
+            "net_bps": 64.053152,
+            "net_pnl_usdt": 6.405315,
+            "upper_bound": 27.2529183947,
+            "validation_net_bps": -55.788693,
+            "win_rate": 0.511905
+          }
+        ],
+        "diagnostic_signal": "bucket behavior is not stable enough to support a no-grid V3 feature threshold",
+        "feature": "abs_z_residual",
+        "feature_classification": "NOISY_OR_INCONCLUSIVE"
+      },
+      "btc_24h_return": {
+        "bucket_edges": [
+          -0.0815696282,
+          -0.0044077888,
+          0.0051698747,
+          0.0194733477,
+          0.1774767268
+        ],
+        "buckets": [
+          {
+            "average_hold_bars": 20.390438,
+            "average_net_pnl_usdt": -0.384959,
+            "bucket": "q1",
+            "cost_pnl_usdt": 46.613538,
+            "count": 251,
+            "gross_pnl_usdt": -50.011137,
+            "holdout_net_bps": 85.62831,
+            "lower_bound": -0.0815696282,
+            "monthly_positive_rate": 0.411765,
+            "net_bps": -966.246751,
+            "net_pnl_usdt": -96.624675,
+            "upper_bound": -0.0044077888,
+            "validation_net_bps": 149.549557,
+            "win_rate": 0.414343
+          },
+          {
+            "average_hold_bars": 20.095238,
+            "average_net_pnl_usdt": -0.32861,
+            "bucket": "q2",
+            "cost_pnl_usdt": 47.958764,
+            "count": 252,
+            "gross_pnl_usdt": -34.850955,
+            "holdout_net_bps": -253.344774,
+            "lower_bound": -0.0044077888,
+            "monthly_positive_rate": 0.352941,
+            "net_bps": -828.097189,
+            "net_pnl_usdt": -82.809719,
+            "upper_bound": 0.0051698747,
+            "validation_net_bps": -21.063151,
+            "win_rate": 0.440476
+          },
+          {
+            "average_hold_bars": 21.768924,
+            "average_net_pnl_usdt": 0.254655,
+            "bucket": "q3",
+            "cost_pnl_usdt": 48.095476,
+            "count": 251,
+            "gross_pnl_usdt": 112.013938,
+            "holdout_net_bps": 450.955775,
+            "lower_bound": 0.0051698747,
+            "monthly_positive_rate": 0.617647,
+            "net_bps": 639.184622,
+            "net_pnl_usdt": 63.918462,
+            "upper_bound": 0.0194733477,
+            "validation_net_bps": -33.035343,
+            "win_rate": 0.505976
+          },
+          {
+            "average_hold_bars": 21.210317,
+            "average_net_pnl_usdt": -0.11746,
+            "bucket": "q4",
+            "cost_pnl_usdt": 47.15072,
+            "count": 252,
+            "gross_pnl_usdt": 17.550682,
+            "holdout_net_bps": 127.510987,
+            "lower_bound": 0.0194733477,
+            "monthly_positive_rate": 0.46875,
+            "net_bps": -296.000382,
+            "net_pnl_usdt": -29.600038,
+            "upper_bound": 0.1774767268,
+            "validation_net_bps": 93.654392,
+            "win_rate": 0.460317
+          }
+        ],
+        "diagnostic_signal": "multiple positive buckets exist, but ordering is noisy",
+        "feature": "btc_24h_return",
+        "feature_classification": "WEAK_DISCRIMINATOR"
+      },
+      "confirmation_strength": {
+        "bucket_edges": [
+          5.98337e-05,
+          0.0032842813,
+          0.0069981584,
+          0.0121475813,
+          0.0954195443
+        ],
+        "buckets": [
+          {
+            "average_hold_bars": 17.984064,
+            "average_net_pnl_usdt": 0.092914,
+            "bucket": "q1",
+            "cost_pnl_usdt": 49.444825,
+            "count": 251,
+            "gross_pnl_usdt": 72.766358,
+            "holdout_net_bps": -204.006979,
+            "lower_bound": 5.98337e-05,
+            "monthly_positive_rate": 0.5,
+            "net_bps": 233.215328,
+            "net_pnl_usdt": 23.321533,
+            "upper_bound": 0.0032842813,
+            "validation_net_bps": 330.985334,
+            "win_rate": 0.442231
+          },
+          {
+            "average_hold_bars": 19.18254,
+            "average_net_pnl_usdt": -0.146193,
+            "bucket": "q2",
+            "cost_pnl_usdt": 49.527787,
+            "count": 252,
+            "gross_pnl_usdt": 12.687263,
+            "holdout_net_bps": 6.109983,
+            "lower_bound": 0.0032842813,
+            "monthly_positive_rate": 0.5,
+            "net_bps": -368.405242,
+            "net_pnl_usdt": -36.840524,
+            "upper_bound": 0.0069981584,
+            "validation_net_bps": 88.919632,
+            "win_rate": 0.420635
+          },
+          {
+            "average_hold_bars": 22.593625,
+            "average_net_pnl_usdt": -0.207239,
+            "bucket": "q3",
+            "cost_pnl_usdt": 48.514525,
+            "count": 251,
+            "gross_pnl_usdt": -3.502452,
+            "holdout_net_bps": 435.310946,
+            "lower_bound": 0.0069981584,
+            "monthly_positive_rate": 0.5,
+            "net_bps": -520.169771,
+            "net_pnl_usdt": -52.016977,
+            "upper_bound": 0.0121475813,
+            "validation_net_bps": -221.020041,
+            "win_rate": 0.478088
+          },
+          {
+            "average_hold_bars": 23.665339,
+            "average_net_pnl_usdt": -0.34575,
+            "bucket": "q4",
+            "cost_pnl_usdt": 42.185479,
+            "count": 251,
+            "gross_pnl_usdt": -44.597765,
+            "holdout_net_bps": 142.542659,
+            "lower_bound": 0.0121475813,
+            "monthly_positive_rate": 0.411765,
+            "net_bps": -867.832435,
+            "net_pnl_usdt": -86.783244,
+            "upper_bound": 0.0954195443,
+            "validation_net_bps": -9.77947,
+            "win_rate": 0.474104
+          }
+        ],
+        "diagnostic_signal": "bucket behavior is not stable enough to support a no-grid V3 feature threshold",
+        "feature": "confirmation_strength",
+        "feature_classification": "NOISY_OR_INCONCLUSIVE"
+      },
+      "residual_4h": {
+        "bucket_edges": [
+          0.0161577227,
+          0.0485850842,
+          0.0658401299,
+          0.0938107714,
+          1.0788387727
+        ],
+        "buckets": [
+          {
+            "average_hold_bars": 19.876494,
+            "average_net_pnl_usdt": -0.303569,
+            "bucket": "q1",
+            "cost_pnl_usdt": 49.996356,
+            "count": 251,
+            "gross_pnl_usdt": -26.199411,
+            "holdout_net_bps": 38.740695,
+            "lower_bound": 0.0161577227,
+            "monthly_positive_rate": 0.4375,
+            "net_bps": -761.957673,
+            "net_pnl_usdt": -76.195767,
+            "upper_bound": 0.0485850842,
+            "validation_net_bps": -359.370423,
+            "win_rate": 0.406375
+          },
+          {
+            "average_hold_bars": 20.816733,
+            "average_net_pnl_usdt": -0.227359,
+            "bucket": "q2",
+            "cost_pnl_usdt": 49.326614,
+            "count": 251,
+            "gross_pnl_usdt": -7.740505,
+            "holdout_net_bps": -182.955836,
+            "lower_bound": 0.0485850842,
+            "monthly_positive_rate": 0.441176,
+            "net_bps": -570.671181,
+            "net_pnl_usdt": -57.067118,
+            "upper_bound": 0.0658401299,
+            "validation_net_bps": -164.274077,
+            "win_rate": 0.446215
+          },
+          {
+            "average_hold_bars": 20.666667,
+            "average_net_pnl_usdt": -0.122952,
+            "bucket": "q3",
+            "cost_pnl_usdt": 48.993109,
+            "count": 252,
+            "gross_pnl_usdt": 18.009295,
+            "holdout_net_bps": -14.832014,
+            "lower_bound": 0.0658401299,
+            "monthly_positive_rate": 0.529412,
+            "net_bps": -309.838141,
+            "net_pnl_usdt": -30.983814,
+            "upper_bound": 0.0938107714,
+            "validation_net_bps": 94.685233,
+            "win_rate": 0.448413
+          },
+          {
+            "average_hold_bars": 22.199203,
+            "average_net_pnl_usdt": 0.035265,
+            "bucket": "q4",
+            "cost_pnl_usdt": 41.308989,
+            "count": 251,
+            "gross_pnl_usdt": 50.160385,
+            "holdout_net_bps": 546.936746,
+            "lower_bound": 0.0938107714,
+            "monthly_positive_rate": 0.545455,
+            "net_bps": 88.513957,
+            "net_pnl_usdt": 8.851396,
+            "upper_bound": 1.0788387727,
+            "validation_net_bps": 518.956722,
+            "win_rate": 0.517928
+          }
+        ],
+        "diagnostic_signal": "highest residual_4h bucket is positive in validation and holdout, but lower buckets are noisy",
+        "feature": "residual_4h",
+        "feature_classification": "WEAK_DISCRIMINATOR"
+      },
+      "sweep_depth": {
+        "bucket_edges": [
+          4.62984e-05,
+          0.0018828184,
+          0.0042553191,
+          0.0083660723,
+          0.1728547855
+        ],
+        "buckets": [
+          {
+            "average_hold_bars": 17.896825,
+            "average_net_pnl_usdt": -0.057292,
+            "bucket": "q1",
+            "cost_pnl_usdt": 49.553638,
+            "count": 252,
+            "gross_pnl_usdt": 35.115987,
+            "holdout_net_bps": 410.262553,
+            "lower_bound": 4.62984e-05,
+            "monthly_positive_rate": 0.470588,
+            "net_bps": -144.37651,
+            "net_pnl_usdt": -14.437651,
+            "upper_bound": 0.0018828184,
+            "validation_net_bps": -300.499696,
+            "win_rate": 0.444444
+          },
+          {
+            "average_hold_bars": 19.474104,
+            "average_net_pnl_usdt": -0.316302,
+            "bucket": "q2",
+            "cost_pnl_usdt": 48.864468,
+            "count": 251,
+            "gross_pnl_usdt": -30.527288,
+            "holdout_net_bps": -252.276571,
+            "lower_bound": 0.0018828184,
+            "monthly_positive_rate": 0.382353,
+            "net_bps": -793.917562,
+            "net_pnl_usdt": -79.391756,
+            "upper_bound": 0.0042553191,
+            "validation_net_bps": -133.536363,
+            "win_rate": 0.418327
+          },
+          {
+            "average_hold_bars": 20.825397,
+            "average_net_pnl_usdt": -0.022104,
+            "bucket": "q3",
+            "cost_pnl_usdt": 48.628259,
+            "count": 252,
+            "gross_pnl_usdt": 43.058021,
+            "holdout_net_bps": 176.370172,
+            "lower_bound": 0.0042553191,
+            "monthly_positive_rate": 0.470588,
+            "net_bps": -55.702375,
+            "net_pnl_usdt": -5.570237,
+            "upper_bound": 0.0083660723,
+            "validation_net_bps": 236.090926,
+            "win_rate": 0.464286
+          },
+          {
+            "average_hold_bars": 25.305556,
+            "average_net_pnl_usdt": -0.190486,
+            "bucket": "q4",
+            "cost_pnl_usdt": 42.867902,
+            "count": 252,
+            "gross_pnl_usdt": -5.134494,
+            "holdout_net_bps": 53.533437,
+            "lower_bound": 0.0083660723,
+            "monthly_positive_rate": 0.484848,
+            "net_bps": -480.023959,
+            "net_pnl_usdt": -48.002396,
+            "upper_bound": 0.1728547855,
+            "validation_net_bps": 387.050588,
+            "win_rate": 0.492063
+          }
+        ],
+        "diagnostic_signal": "multiple positive buckets exist, but ordering is noisy",
+        "feature": "sweep_depth",
+        "feature_classification": "WEAK_DISCRIMINATOR"
+      },
+      "volume_ratio": {
+        "bucket_edges": [
+          1.005407799,
+          1.6342767812,
+          2.4563201549,
+          3.9795285542,
+          31.7398632019
+        ],
+        "buckets": [
+          {
+            "average_hold_bars": 18.170635,
+            "average_net_pnl_usdt": -0.325548,
+            "bucket": "q1",
+            "cost_pnl_usdt": 49.375328,
+            "count": 252,
+            "gross_pnl_usdt": -32.662817,
+            "holdout_net_bps": 143.021899,
+            "lower_bound": 1.005407799,
+            "monthly_positive_rate": 0.515152,
+            "net_bps": -820.381449,
+            "net_pnl_usdt": -82.038145,
+            "upper_bound": 1.6342767812,
+            "validation_net_bps": -125.365546,
+            "win_rate": 0.412698
+          },
+          {
+            "average_hold_bars": 19.266932,
+            "average_net_pnl_usdt": -0.267623,
+            "bucket": "q2",
+            "cost_pnl_usdt": 48.37595,
+            "count": 251,
+            "gross_pnl_usdt": -18.797403,
+            "holdout_net_bps": 48.40512,
+            "lower_bound": 1.6342767812,
+            "monthly_positive_rate": 0.441176,
+            "net_bps": -671.733524,
+            "net_pnl_usdt": -67.173352,
+            "upper_bound": 2.4563201549,
+            "validation_net_bps": -124.064633,
+            "win_rate": 0.434263
+          },
+          {
+            "average_hold_bars": 21.849206,
+            "average_net_pnl_usdt": 0.094404,
+            "bucket": "q3",
+            "cost_pnl_usdt": 47.48045,
+            "count": 252,
+            "gross_pnl_usdt": 71.270299,
+            "holdout_net_bps": 150.612643,
+            "lower_bound": 2.4563201549,
+            "monthly_positive_rate": 0.558824,
+            "net_bps": 237.898489,
+            "net_pnl_usdt": 23.789849,
+            "upper_bound": 3.9795285542,
+            "validation_net_bps": 296.765673,
+            "win_rate": 0.480159
+          },
+          {
+            "average_hold_bars": 24.214286,
+            "average_net_pnl_usdt": -0.087224,
+            "bucket": "q4",
+            "cost_pnl_usdt": 44.68254,
+            "count": 252,
+            "gross_pnl_usdt": 22.702148,
+            "holdout_net_bps": 45.84993,
+            "lower_bound": 3.9795285542,
+            "monthly_positive_rate": 0.515152,
+            "net_bps": -219.803922,
+            "net_pnl_usdt": -21.980392,
+            "upper_bound": 31.7398632019,
+            "validation_net_bps": 141.769961,
+            "win_rate": 0.492063
+          }
+        ],
+        "diagnostic_signal": "multiple positive buckets exist, but ordering is noisy",
+        "feature": "volume_ratio",
+        "feature_classification": "WEAK_DISCRIMINATOR"
+      },
+      "z_residual": {
+        "bucket_edges": [
+          3.5011730161,
+          3.9671220668,
+          4.6937710135,
+          6.1136386343,
+          27.2529183947
+        ],
+        "buckets": [
+          {
+            "average_hold_bars": 20.219124,
+            "average_net_pnl_usdt": -0.172709,
+            "bucket": "q1",
+            "cost_pnl_usdt": 49.299382,
+            "count": 251,
+            "gross_pnl_usdt": 5.949345,
+            "holdout_net_bps": 35.439868,
+            "lower_bound": 3.5011730161,
+            "monthly_positive_rate": 0.454545,
+            "net_bps": -433.500368,
+            "net_pnl_usdt": -43.350037,
+            "upper_bound": 3.9671220668,
+            "validation_net_bps": -130.383391,
+            "win_rate": 0.454183
+          },
+          {
+            "average_hold_bars": 19.557769,
+            "average_net_pnl_usdt": -0.365703,
+            "bucket": "q2",
+            "cost_pnl_usdt": 48.925782,
+            "count": 251,
+            "gross_pnl_usdt": -42.865771,
+            "holdout_net_bps": -124.434253,
+            "lower_bound": 3.9671220668,
+            "monthly_positive_rate": 0.411765,
+            "net_bps": -917.915531,
+            "net_pnl_usdt": -91.791553,
+            "upper_bound": 4.6937710135,
+            "validation_net_bps": 37.396245,
+            "win_rate": 0.406375
+          },
+          {
+            "average_hold_bars": 21.623016,
+            "average_net_pnl_usdt": -0.068646,
+            "bucket": "q3",
+            "cost_pnl_usdt": 47.652038,
+            "count": 252,
+            "gross_pnl_usdt": 30.353289,
+            "holdout_net_bps": 54.096181,
+            "lower_bound": 4.6937710135,
+            "monthly_positive_rate": 0.411765,
+            "net_bps": -172.987486,
+            "net_pnl_usdt": -17.298749,
+            "upper_bound": 6.1136386343,
+            "validation_net_bps": 337.881294,
+            "win_rate": 0.448413
+          },
+          {
+            "average_hold_bars": 22.166667,
+            "average_net_pnl_usdt": 0.025418,
+            "bucket": "q4",
+            "cost_pnl_usdt": 43.837066,
+            "count": 252,
+            "gross_pnl_usdt": 50.242381,
+            "holdout_net_bps": 422.787796,
+            "lower_bound": 6.1136386343,
+            "monthly_positive_rate": 0.575758,
+            "net_bps": 64.053152,
+            "net_pnl_usdt": 6.405315,
+            "upper_bound": 27.2529183947,
+            "validation_net_bps": -55.788693,
+            "win_rate": 0.511905
+          }
+        ],
+        "diagnostic_signal": "bucket behavior is not stable enough to support a no-grid V3 feature threshold",
+        "feature": "z_residual",
+        "feature_classification": "NOISY_OR_INCONCLUSIVE"
+      }
+    },
+    "features_analyzed": [
+      "z_residual",
+      "abs_z_residual",
+      "residual_4h",
+      "sweep_depth",
+      "volume_ratio",
+      "confirmation_strength",
+      "btc_24h_return"
+    ],
+    "strongest_feature_bucket_signal": "multiple positive buckets exist, but ordering is noisy"
+  },
+  "limitations": [
+    "This diagnostic reconstructs exact same-config V2 trade rows because the V2 execution artifact was aggregate-only.",
+    "No V3 was tested or run.",
+    "No parameter, threshold, TP/SL, hold, universe, cost, ranking, or split was changed.",
+    "Bucket diagnostics are descriptive and do not select thresholds."
+  ],
+  "module": "edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v2_postmortem_diagnostic_v1",
+  "monthly_stability_diagnostic": {
+    "best_month": {
+      "month": "2025-05",
+      "net_bps": 324.636198
+    },
+    "diagnosis": "Validation and holdout monthly positive rates pass, but large historical drawdowns and a weak null percentile show remaining instability.",
+    "exit_reason_by_month_bps": {
+      "2023-01": {
+        "stop": -292.308345,
+        "take": 66.773174,
+        "time": 95.720473
+      },
+      "2023-02": {
+        "stop": -558.844312,
+        "take": 287.663147,
+        "time": 280.917758
+      },
+      "2023-03": {
+        "stop": -340.97495,
+        "take": 157.062196,
+        "time": -25.33174
+      },
+      "2023-04": {
+        "stop": -324.050951,
+        "take": 119.358335,
+        "time": 175.167826
+      },
+      "2023-05": {
+        "stop": -122.126728,
+        "take": 54.833839,
+        "time": 128.70958
+      },
+      "2023-06": {
+        "stop": -463.638584,
+        "take": 139.323785,
+        "time": 209.406231
+      },
+      "2023-07": {
+        "stop": -560.859539,
+        "time": 152.131679
+      },
+      "2023-08": {
+        "stop": -338.457262,
+        "take": 126.072902,
+        "time": 65.270999
+      },
+      "2023-09": {
+        "stop": -178.933016,
+        "take": 89.168453,
+        "time": 86.628665
+      },
+      "2023-10": {
+        "stop": -662.567714,
+        "take": 144.996588,
+        "time": 470.229088
+      },
+      "2023-11": {
+        "stop": -715.679698,
+        "take": 366.701617,
+        "time": 329.778048
+      },
+      "2023-12": {
+        "stop": -1070.652689,
+        "take": 251.322304,
+        "time": 304.047275
+      },
+      "2024-01": {
+        "stop": -559.794723,
+        "take": 332.476711,
+        "time": 161.728771
+      },
+      "2024-02": {
+        "stop": -1095.178174,
+        "take": 117.399804,
+        "time": 231.357901
+      },
+      "2024-03": {
+        "stop": -911.219679,
+        "take": 614.986709,
+        "time": 396.907933
+      },
+      "2024-04": {
+        "stop": -260.105698,
+        "take": 55.590339,
+        "time": 108.382593
+      },
+      "2024-05": {
+        "stop": -526.830844,
+        "take": 290.300332,
+        "time": 352.727549
+      },
+      "2024-06": {
+        "stop": -135.787552,
+        "take": 258.022042,
+        "time": 71.1621
+      },
+      "2024-07": {
+        "stop": -116.93305,
+        "take": 163.002496,
+        "time": 49.964051
+      },
+      "2024-08": {
+        "stop": -139.124179,
+        "take": 23.103324,
+        "time": 267.61394
+      },
+      "2024-09": {
+        "stop": -333.344621,
+        "take": 76.173575,
+        "time": 77.36239
+      },
+      "2024-10": {
+        "stop": -263.187375,
+        "take": 63.510918,
+        "time": 315.237584
+      },
+      "2024-11": {
+        "stop": -1355.226497,
+        "take": 738.951826,
+        "time": 394.06046
+      },
+      "2024-12": {
+        "stop": -535.521734,
+        "take": 219.915558,
+        "time": 346.030752
+      },
+      "2025-01": {
+        "stop": -224.334105,
+        "take": 208.090946,
+        "time": 57.556744
+      },
+      "2025-02": {
+        "stop": -88.590269,
+        "take": 126.349895,
+        "time": 106.648415
+      },
+      "2025-03": {
+        "stop": -208.988577,
+        "take": 98.60655,
+        "time": 122.176436
+      },
+      "2025-04": {
+        "stop": -154.010402,
+        "take": 31.948339,
+        "time": 219.276158
+      },
+      "2025-05": {
+        "stop": -251.696296,
+        "take": 410.768435,
+        "time": 165.564058
+      },
+      "2025-06": {
+        "stop": -134.417641,
+        "take": 184.933434,
+        "time": 73.403842
+      },
+      "2025-07": {
+        "stop": -533.340671,
+        "take": 126.967196,
+        "time": 298.904115
+      },
+      "2025-08": {
+        "stop": -322.450353,
+        "take": 74.145536,
+        "time": 195.877941
+      },
+      "2025-09": {
+        "stop": -202.164663,
+        "take": 177.827108,
+        "time": 163.653254
+      },
+      "2025-10": {
+        "stop": -265.277719,
+        "take": 49.822383,
+        "time": 78.155535
+      }
+    },
+    "full_sample_monthly_net_bps": {
+      "2023-01": -129.814698,
+      "2023-02": 9.736593,
+      "2023-03": -209.244494,
+      "2023-04": -29.52479,
+      "2023-05": 61.41669,
+      "2023-06": -114.908567,
+      "2023-07": -408.727859,
+      "2023-08": -147.113361,
+      "2023-09": -3.135899,
+      "2023-10": -47.342037,
+      "2023-11": -19.200033,
+      "2023-12": -515.28311,
+      "2024-01": -65.589241,
+      "2024-02": -746.420469,
+      "2024-03": 100.674962,
+      "2024-04": -96.132766,
+      "2024-05": 116.197038,
+      "2024-06": 193.39659,
+      "2024-07": 96.033497,
+      "2024-08": 151.593085,
+      "2024-09": -179.808655,
+      "2024-10": 115.561127,
+      "2024-11": -222.214211,
+      "2024-12": 30.424576,
+      "2025-01": 41.313586,
+      "2025-02": 144.408041,
+      "2025-03": 11.794409,
+      "2025-04": 97.214096,
+      "2025-05": 324.636198,
+      "2025-06": 123.919636,
+      "2025-07": -107.46936,
+      "2025-08": -52.426876,
+      "2025-09": 139.315699,
+      "2025-10": -137.299801
+    },
+    "holdout_monthly_net_bps": {
+      "2025-04": 97.214096,
+      "2025-05": 324.636198,
+      "2025-06": 123.919636,
+      "2025-07": -107.46936,
+      "2025-08": -52.426876,
+      "2025-09": 139.315699,
+      "2025-10": -137.299801
+    },
+    "holdout_positive_rate": 0.571429,
+    "monthly_stability_classification": "MONTHLY_STABILITY_NEAR_PASS",
+    "top_symbol_by_month": {
+      "2023-01": [
+        {
+          "count": 1,
+          "net_bps": 66.773174,
+          "net_pnl_usdt": 6.677317,
+          "value": "BANDUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 63.675341,
+          "net_pnl_usdt": 6.367534,
+          "value": "CELOUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 24.045236,
+          "net_pnl_usdt": 2.404524,
+          "value": "PEOPLEUSDT"
+        }
+      ],
+      "2023-02": [
+        {
+          "count": 3,
+          "net_bps": 97.335795,
+          "net_pnl_usdt": 9.733579,
+          "value": "FILUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 64.582118,
+          "net_pnl_usdt": 6.458212,
+          "value": "SUSHIUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 49.029973,
+          "net_pnl_usdt": 4.902997,
+          "value": "UNIUSDT"
+        }
+      ],
+      "2023-03": [
+        {
+          "count": 1,
+          "net_bps": 49.236201,
+          "net_pnl_usdt": 4.92362,
+          "value": "MINAUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 33.911035,
+          "net_pnl_usdt": 3.391104,
+          "value": "PEOPLEUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 22.786528,
+          "net_pnl_usdt": 2.278653,
+          "value": "APEUSDT"
+        }
+      ],
+      "2023-04": [
+        {
+          "count": 2,
+          "net_bps": 55.610986,
+          "net_pnl_usdt": 5.561099,
+          "value": "ZILUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 51.764692,
+          "net_pnl_usdt": 5.176469,
+          "value": "YFIUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 39.80572,
+          "net_pnl_usdt": 3.980572,
+          "value": "ADAUSDT"
+        }
+      ],
+      "2023-05": [
+        {
+          "count": 1,
+          "net_bps": 47.433107,
+          "net_pnl_usdt": 4.743311,
+          "value": "IOTAUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 39.215658,
+          "net_pnl_usdt": 3.921566,
+          "value": "QTUMUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 22.056967,
+          "net_pnl_usdt": 2.205697,
+          "value": "MANAUSDT"
+        }
+      ],
+      "2023-06": [
+        {
+          "count": 1,
+          "net_bps": 87.089654,
+          "net_pnl_usdt": 8.708965,
+          "value": "XLMUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 55.47802,
+          "net_pnl_usdt": 5.547802,
+          "value": "BANDUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 52.234131,
+          "net_pnl_usdt": 5.223413,
+          "value": "GMTUSDT"
+        }
+      ],
+      "2023-07": [
+        {
+          "count": 1,
+          "net_bps": 51.817119,
+          "net_pnl_usdt": 5.181712,
+          "value": "IMXUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 19.922912,
+          "net_pnl_usdt": 1.992291,
+          "value": "DOGEUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 14.504854,
+          "net_pnl_usdt": 1.450485,
+          "value": "APEUSDT"
+        }
+      ],
+      "2023-08": [
+        {
+          "count": 1,
+          "net_bps": 42.034465,
+          "net_pnl_usdt": 4.203446,
+          "value": "RSRUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 32.534535,
+          "net_pnl_usdt": 3.253453,
+          "value": "APEUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 28.845157,
+          "net_pnl_usdt": 2.884516,
+          "value": "IOTAUSDT"
+        }
+      ],
+      "2023-09": [
+        {
+          "count": 1,
+          "net_bps": 58.069099,
+          "net_pnl_usdt": 5.80691,
+          "value": "1INCHUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 34.237844,
+          "net_pnl_usdt": 3.423784,
+          "value": "BCHUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 31.099354,
+          "net_pnl_usdt": 3.109935,
+          "value": "MAGICUSDT"
+        }
+      ],
+      "2023-10": [
+        {
+          "count": 1,
+          "net_bps": 76.760795,
+          "net_pnl_usdt": 7.676079,
+          "value": "UMAUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 67.237566,
+          "net_pnl_usdt": 6.723757,
+          "value": "BANDUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 53.003384,
+          "net_pnl_usdt": 5.300338,
+          "value": "DYDXUSDT"
+        }
+      ],
+      "2023-11": [
+        {
+          "count": 2,
+          "net_bps": 89.320922,
+          "net_pnl_usdt": 8.932092,
+          "value": "MANAUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 83.20545,
+          "net_pnl_usdt": 8.320545,
+          "value": "ADAUSDT"
+        },
+        {
+          "count": 3,
+          "net_bps": 79.073491,
+          "net_pnl_usdt": 7.907349,
+          "value": "CELOUSDT"
+        }
+      ],
+      "2023-12": [
+        {
+          "count": 1,
+          "net_bps": 71.423518,
+          "net_pnl_usdt": 7.142352,
+          "value": "IOTAUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 59.14953,
+          "net_pnl_usdt": 5.914953,
+          "value": "GMXUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 46.967552,
+          "net_pnl_usdt": 4.696755,
+          "value": "IOSTUSDT"
+        }
+      ],
+      "2024-01": [
+        {
+          "count": 1,
+          "net_bps": 98.210879,
+          "net_pnl_usdt": 9.821088,
+          "value": "ICPUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 88.667272,
+          "net_pnl_usdt": 8.866727,
+          "value": "ETCUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 59.47109,
+          "net_pnl_usdt": 5.947109,
+          "value": "BLURUSDT"
+        }
+      ],
+      "2024-02": [
+        {
+          "count": 1,
+          "net_bps": 45.053449,
+          "net_pnl_usdt": 4.505345,
+          "value": "STXUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 40.247685,
+          "net_pnl_usdt": 4.024768,
+          "value": "ORDIUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 37.764591,
+          "net_pnl_usdt": 3.776459,
+          "value": "ETHWUSDT"
+        }
+      ],
+      "2024-03": [
+        {
+          "count": 3,
+          "net_bps": 93.956728,
+          "net_pnl_usdt": 9.395673,
+          "value": "DOGEUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 88.371094,
+          "net_pnl_usdt": 8.837109,
+          "value": "AXSUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 80.525833,
+          "net_pnl_usdt": 8.052583,
+          "value": "ZILUSDT"
+        }
+      ],
+      "2024-04": [
+        {
+          "count": 1,
+          "net_bps": 55.590339,
+          "net_pnl_usdt": 5.559034,
+          "value": "ARUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 46.593656,
+          "net_pnl_usdt": 4.659366,
+          "value": "AGLDUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 42.85107,
+          "net_pnl_usdt": 4.285107,
+          "value": "GMXUSDT"
+        }
+      ],
+      "2024-05": [
+        {
+          "count": 3,
+          "net_bps": 136.058788,
+          "net_pnl_usdt": 13.605879,
+          "value": "GMXUSDT"
+        },
+        {
+          "count": 3,
+          "net_bps": 85.109072,
+          "net_pnl_usdt": 8.510907,
+          "value": "RSRUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 63.926508,
+          "net_pnl_usdt": 6.392651,
+          "value": "BICOUSDT"
+        }
+      ],
+      "2024-06": [
+        {
+          "count": 1,
+          "net_bps": 58.587266,
+          "net_pnl_usdt": 5.858727,
+          "value": "AGLDUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 51.070914,
+          "net_pnl_usdt": 5.107091,
+          "value": "YFIUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 46.817033,
+          "net_pnl_usdt": 4.681703,
+          "value": "ENSUSDT"
+        }
+      ],
+      "2024-07": [
+        {
+          "count": 1,
+          "net_bps": 98.160763,
+          "net_pnl_usdt": 9.816076,
+          "value": "RSRUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 45.870845,
+          "net_pnl_usdt": 4.587085,
+          "value": "ARBUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 33.18335,
+          "net_pnl_usdt": 3.318335,
+          "value": "BATUSDT"
+        }
+      ],
+      "2024-08": [
+        {
+          "count": 1,
+          "net_bps": 55.585539,
+          "net_pnl_usdt": 5.558554,
+          "value": "APEUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 53.860332,
+          "net_pnl_usdt": 5.386033,
+          "value": "TRBUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 44.934141,
+          "net_pnl_usdt": 4.493414,
+          "value": "BICOUSDT"
+        }
+      ],
+      "2024-09": [
+        {
+          "count": 1,
+          "net_bps": 38.822789,
+          "net_pnl_usdt": 3.882279,
+          "value": "TRBUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 33.700962,
+          "net_pnl_usdt": 3.370096,
+          "value": "MINAUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 30.204606,
+          "net_pnl_usdt": 3.020461,
+          "value": "LTCUSDT"
+        }
+      ],
+      "2024-10": [
+        {
+          "count": 3,
+          "net_bps": 67.236733,
+          "net_pnl_usdt": 6.723673,
+          "value": "WOOUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 63.510918,
+          "net_pnl_usdt": 6.351092,
+          "value": "CELOUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 38.901816,
+          "net_pnl_usdt": 3.890182,
+          "value": "CFXUSDT"
+        }
+      ],
+      "2024-11": [
+        {
+          "count": 1,
+          "net_bps": 99.108,
+          "net_pnl_usdt": 9.9108,
+          "value": "AGLDUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 95.466119,
+          "net_pnl_usdt": 9.546612,
+          "value": "LPTUSDT"
+        },
+        {
+          "count": 3,
+          "net_bps": 86.259422,
+          "net_pnl_usdt": 8.625942,
+          "value": "ZRXUSDT"
+        }
+      ],
+      "2024-12": [
+        {
+          "count": 2,
+          "net_bps": 152.854949,
+          "net_pnl_usdt": 15.285495,
+          "value": "IOTAUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 98.050301,
+          "net_pnl_usdt": 9.80503,
+          "value": "ZRXUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 75.602709,
+          "net_pnl_usdt": 7.560271,
+          "value": "SANDUSDT"
+        }
+      ],
+      "2025-01": [
+        {
+          "count": 1,
+          "net_bps": 69.466611,
+          "net_pnl_usdt": 6.946661,
+          "value": "AAVEUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 45.166461,
+          "net_pnl_usdt": 4.516646,
+          "value": "LINKUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 35.882678,
+          "net_pnl_usdt": 3.588268,
+          "value": "ETHWUSDT"
+        }
+      ],
+      "2025-02": [
+        {
+          "count": 2,
+          "net_bps": 68.058694,
+          "net_pnl_usdt": 6.805869,
+          "value": "QTUMUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 39.68635,
+          "net_pnl_usdt": 3.968635,
+          "value": "OPUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 36.167848,
+          "net_pnl_usdt": 3.616785,
+          "value": "YFIUSDT"
+        }
+      ],
+      "2025-03": [
+        {
+          "count": 2,
+          "net_bps": 46.796738,
+          "net_pnl_usdt": 4.679674,
+          "value": "API3USDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 46.267666,
+          "net_pnl_usdt": 4.626767,
+          "value": "IMXUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 39.816871,
+          "net_pnl_usdt": 3.981687,
+          "value": "APEUSDT"
+        }
+      ],
+      "2025-04": [
+        {
+          "count": 1,
+          "net_bps": 42.396579,
+          "net_pnl_usdt": 4.239658,
+          "value": "GMTUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 41.174496,
+          "net_pnl_usdt": 4.11745,
+          "value": "PEOPLEUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 40.56603,
+          "net_pnl_usdt": 4.056603,
+          "value": "AGLDUSDT"
+        }
+      ],
+      "2025-05": [
+        {
+          "count": 1,
+          "net_bps": 98.927789,
+          "net_pnl_usdt": 9.892779,
+          "value": "LPTUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 98.188465,
+          "net_pnl_usdt": 9.818847,
+          "value": "LDOUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 72.162182,
+          "net_pnl_usdt": 7.216218,
+          "value": "KSMUSDT"
+        }
+      ],
+      "2025-06": [
+        {
+          "count": 1,
+          "net_bps": 98.173138,
+          "net_pnl_usdt": 9.817314,
+          "value": "IOSTUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 44.469112,
+          "net_pnl_usdt": 4.446911,
+          "value": "APTUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 36.542213,
+          "net_pnl_usdt": 3.654221,
+          "value": "APEUSDT"
+        }
+      ],
+      "2025-07": [
+        {
+          "count": 1,
+          "net_bps": 52.182086,
+          "net_pnl_usdt": 5.218209,
+          "value": "API3USDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 37.534884,
+          "net_pnl_usdt": 3.753488,
+          "value": "BATUSDT"
+        },
+        {
+          "count": 3,
+          "net_bps": 36.509815,
+          "net_pnl_usdt": 3.650981,
+          "value": "ETCUSDT"
+        }
+      ],
+      "2025-08": [
+        {
+          "count": 2,
+          "net_bps": 63.971632,
+          "net_pnl_usdt": 6.397163,
+          "value": "MAGICUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 58.812845,
+          "net_pnl_usdt": 5.881284,
+          "value": "ADAUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 47.010787,
+          "net_pnl_usdt": 4.701079,
+          "value": "AGLDUSDT"
+        }
+      ],
+      "2025-09": [
+        {
+          "count": 3,
+          "net_bps": 151.550415,
+          "net_pnl_usdt": 15.155042,
+          "value": "SNXUSDT"
+        },
+        {
+          "count": 2,
+          "net_bps": 109.408034,
+          "net_pnl_usdt": 10.940803,
+          "value": "YGGUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 40.016807,
+          "net_pnl_usdt": 4.001681,
+          "value": "COMPUSDT"
+        }
+      ],
+      "2025-10": [
+        {
+          "count": 2,
+          "net_bps": 64.360169,
+          "net_pnl_usdt": 6.436017,
+          "value": "LRCUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 33.990154,
+          "net_pnl_usdt": 3.399015,
+          "value": "MINAUSDT"
+        },
+        {
+          "count": 1,
+          "net_bps": 18.251431,
+          "net_pnl_usdt": 1.825143,
+          "value": "MAGICUSDT"
+        }
+      ]
+    },
+    "validation_monthly_net_bps": {
+      "2024-07": 96.033497,
+      "2024-08": 151.593085,
+      "2024-09": -179.808655,
+      "2024-10": 115.561127,
+      "2024-11": -222.214211,
+      "2024-12": 30.424576,
+      "2025-01": 41.313586,
+      "2025-02": 144.408041,
+      "2025-03": 11.794409
+    },
+    "validation_positive_rate": 0.777778,
+    "worst_month": {
+      "month": "2024-02",
+      "net_bps": -746.420469
+    }
+  },
+  "null_failure_diagnostic": {
+    "likely_causes": {
+      "cost_drag": true,
+      "effect_size_too_small": true,
+      "feature_buckets_not_discriminative_enough": true,
+      "monthly_instability": true,
+      "randomization_remains_competitive": true,
+      "sample_too_small_or_noisy": true,
+      "stop_losses_too_large": true,
+      "time_exits_noisy": false
+    },
+    "null_failure_reason": "validation percentile was 0.86 instead of >=0.95 because the validation effect remains modest versus shuffled trade PnL; full-sample costs dominate gross PnL; stop exits dominate losses; and historical monthly drawdowns remain large even though validation and holdout are positive.",
+    "null_pass": false,
+    "validation_percentile": 0.86
+  },
+  "payload_sha256_excluding_hash": "bd25ce0923d59208d58971a101c248f83c680a8ee708fa2eff87b95f4afb2ace",
+  "prior_v2_result_preserved": {
+    "closure_status": "PASS_REPO_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_CLOSURE_CREATED",
+    "diagnostic_promising": false,
+    "evaluator_result": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_REJECTED_NO_FOLLOWUP",
+    "execution_status": "PASS_REPO_CODE_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_EXECUTED",
+    "no_edge_candidate_live_capital": true,
+    "prior_rejection_preserved": true
+  },
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "postmortem_diagnostic_created": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false,
+    "v3_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "closure": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_closures\\crypto_15m_residual_sweep_confirmation_short_only_v2_closure_v1.json",
+    "evaluator": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_residual_sweep_confirmation_short_only_v2_evaluator_v1.json",
+    "execution": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_residual_sweep_confirmation_short_only_v2_execution_v1.json",
+    "postmortem_v2": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_reviews\\crypto_15m_residual_sweep_confirmation_postmortem_diagnostic_v2.json",
+    "preregistration": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\research_preregistrations\\crypto_15m_residual_sweep_confirmation_short_only_v2_preregistration_v1.json",
+    "v1_trade_detail_recovery_schema_reference": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_reviews\\crypto_15m_residual_sweep_confirmation_trade_detail_recovery_v1.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "bc1226d5273e95f7055767de4c4859f8f5e11c7d",
+    "allowed_new_paths_at_diagnostic": [
+      "?? artifacts/strategy_reviews/crypto_15m_residual_sweep_confirmation_short_only_v2_postmortem_diagnostic_v1.json",
+      "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v2_postmortem_diagnostic_v1.py"
+    ],
+    "git_status_at_diagnostic": [
+      "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v2_postmortem_diagnostic_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 1009,
+    "unexpected_dirty_paths_at_diagnostic": []
+  },
+  "status": "PASS_REPO_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_POSTMORTEM_DIAGNOSTIC_CREATED",
+  "suggested_v3_boundaries": {
+    "not_allowed_now": [
+      "no V3 execution",
+      "no grid search",
+      "no TP/SL optimization",
+      "no exact threshold from best bucket",
+      "no holdout-selected config",
+      "no candidate, edge, runtime, live, or capital claim"
+    ],
+    "suggested_v3_boundary": "A bounded V3 design may preregister a structural stop-risk repair for short-only setups while keeping the residual/sweep/confirmation entry stack single-config and without grid search."
+  },
+  "trade_level_data_review": {
+    "execution_artifact_had_trade_rows": false,
+    "raw_panel_read_reason": "V2 execution artifact did not contain trade rows; exact same-config reconstruction was required for postmortem diagnostics.",
+    "recovered_trade_count": 1007,
+    "trade_level_data_available": true,
+    "trade_level_data_recovered_inside_diagnostic": true
+  },
+  "v3_direction_assessment": {
+    "justified": true,
+    "no_grid_search_needed": true,
+    "no_holdout_selected_parameter": true,
+    "v1_postmortem_context": {
+      "justified": true,
+      "no_edge_or_candidate_claim": true,
+      "no_holdout_selected_config": true,
+      "no_parameter_grid": true,
+      "structural_pattern_validation": {
+        "long_holdout_net_bps": -32.069442,
+        "long_validation_net_bps": -96.797042,
+        "short_holdout_net_bps": 387.889591,
+        "short_validation_net_bps": 188.945527
+      },
+      "v2_direction_classification": "V2_DIRECTION_JUSTIFIED_SHORT_ONLY"
+    },
+    "v1_recovery_schema_reference_loaded": true,
+    "v3_direction_classification": "V3_DIRECTION_JUSTIFIED_STOP_EXIT_RISK_REPAIR"
+  },
+  "validation_checks": {
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_network_used": true,
+    "no_parameter_optimization": true,
+    "no_runtime_live_capital": true,
+    "no_v3_tested": true,
+    "prior_rejection_preserved": true,
+    "prior_short_only_v2_artifacts_loaded": true,
+    "repo_clean_before_run": true,
+    "trade_level_data_available_or_recovered": true
+  }
+}

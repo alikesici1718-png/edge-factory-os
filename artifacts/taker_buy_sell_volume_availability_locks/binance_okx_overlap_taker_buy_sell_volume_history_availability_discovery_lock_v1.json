@@ -1,0 +1,467 @@
+{
+  "artifact_kind": "BINANCE_OKX_OVERLAP_TAKER_BUY_SELL_VOLUME_HISTORY_AVAILABILITY_DISCOVERY_LOCK",
+  "availability_classification": "TAKER_BUY_SELL_API_HISTORY_UNAVAILABLE_LATEST_30_DAYS_ONLY_PANEL_DERIVED_AVAILABLE",
+  "continuation_decision": {
+    "api_acquisition_allowed_next": false,
+    "immediate_next_module_required": false,
+    "panel_derived_feature_execution_requires_separate_preregistration": true,
+    "panel_derived_taker_buy_sell_available_for_future_feature_construction": true,
+    "project_can_pause_after_availability_lock": true,
+    "strategy_execution_allowed_next": false
+  },
+  "endpoint_contract": {
+    "endpoint_name": "Taker Buy/Sell Volume",
+    "endpoint_url": "https://fapi.binance.com/futures/data/takerlongshortRatio",
+    "if_startTime_endTime_not_sent_most_recent_data_returned": true,
+    "max_limit": 500,
+    "official_limitation": {
+      "ip_rate_limit": "1000 requests / 5 min",
+      "only_latest_30_days_available": true
+    },
+    "period_supported_values": [
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "4h",
+      "6h",
+      "12h",
+      "1d"
+    ],
+    "period_tested": "1h",
+    "request_path": "/futures/data/takerlongshortRatio",
+    "response_fields_expected": [
+      "buySellRatio",
+      "buyVol",
+      "sellVol",
+      "timestamp"
+    ],
+    "startTime_endTime_supported": true
+  },
+  "full_81_probe_results_if_needed": {
+    "performed": false,
+    "reason": "Representative old 2023 target-window probes did not prove old aligned-window API availability."
+  },
+  "limitations": [
+    "This discovery lock does not acquire full taker buy/sell history.",
+    "This discovery lock does not read Binance panel rows.",
+    "This discovery lock does not read Binance funding rows.",
+    "This discovery lock does not read OKX rows.",
+    "Panel-derived taker sell availability is inferred from reviewed panel schema and manifest only.",
+    "This discovery lock does not run strategy logic or compute returns.",
+    "This discovery lock grants no candidate, edge, release, or runtime/live/capital permission."
+  ],
+  "module": "tools/edge_factory_os_repo_only_binance_okx_overlap_taker_buy_sell_volume_history_availability_discovery_lock_v1.py",
+  "panel_derived_taker_buy_sell_availability": {
+    "aligned_window_covered_by_panel_derived_data": true,
+    "panel_derived_availability_window_end_exclusive_utc": "2026-05-01T00:00:00Z",
+    "panel_derived_availability_window_start_utc": "2021-05-01T00:00:00Z",
+    "panel_derived_feature_requires_new_preregistration_before_execution": true,
+    "panel_rows_read_by_this_module": false,
+    "panel_schema_has_taker_buy_base_volume": true,
+    "panel_schema_has_taker_buy_quote_volume": true,
+    "panel_schema_has_total_quote_volume": true,
+    "panel_schema_has_total_volume": true,
+    "reviewed_panel_available": true,
+    "taker_sell_derivable_from_panel": true
+  },
+  "payload_sha256_excluding_hash": "c38473ac64e04264f89e5838886d415b6b3537a7885f9a5f477b968b75cb767c",
+  "replacement_checks_all_true": true,
+  "repo_scope": {
+    "api_key_used": false,
+    "availability_lock_created_in_repo": true,
+    "bulk_history_downloaded": false,
+    "candidate_generation": false,
+    "code_changes_repo_only": true,
+    "edge_claim": false,
+    "funding_rows_read": false,
+    "okx_panel_rows_read": false,
+    "panel_rows_read": false,
+    "private_api_used": false,
+    "public_binance_network_used_for_endpoint_probe": true,
+    "runtime_live_capital": false,
+    "strategy_executed": false
+  },
+  "representative_probe_results": [
+    {
+      "old_2023_target_window": {
+        "earliest_timestamp_utc": null,
+        "end_utc": "2023-07-03T00:00:00Z",
+        "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+        "expected_response_fields_seen": {
+          "buySellRatio": false,
+          "buyVol": false,
+          "sellVol": false,
+          "timestamp": false
+        },
+        "latest_timestamp_utc": null,
+        "limit": 500,
+        "ok": false,
+        "period": "1h",
+        "range_name": "old_2023_target_window",
+        "row_count": 0,
+        "schema_keys_observed": [],
+        "start_utc": "2023-07-01T00:00:00Z",
+        "status_code": 400,
+        "symbol": "BTCUSDT"
+      },
+      "recent_no_start_end": {
+        "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+        "end_utc": null,
+        "error": null,
+        "expected_response_fields_seen": {
+          "buySellRatio": true,
+          "buyVol": true,
+          "sellVol": true,
+          "timestamp": true
+        },
+        "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+        "limit": 500,
+        "ok": true,
+        "period": "1h",
+        "range_name": "recent_no_start_end",
+        "row_count": 500,
+        "schema_keys_observed": [
+          "buySellRatio",
+          "buyVol",
+          "sellVol",
+          "timestamp"
+        ],
+        "start_utc": null,
+        "status_code": 200,
+        "symbol": "BTCUSDT"
+      },
+      "symbol": "BTCUSDT"
+    },
+    {
+      "old_2023_target_window": {
+        "earliest_timestamp_utc": null,
+        "end_utc": "2023-07-03T00:00:00Z",
+        "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+        "expected_response_fields_seen": {
+          "buySellRatio": false,
+          "buyVol": false,
+          "sellVol": false,
+          "timestamp": false
+        },
+        "latest_timestamp_utc": null,
+        "limit": 500,
+        "ok": false,
+        "period": "1h",
+        "range_name": "old_2023_target_window",
+        "row_count": 0,
+        "schema_keys_observed": [],
+        "start_utc": "2023-07-01T00:00:00Z",
+        "status_code": 400,
+        "symbol": "ETHUSDT"
+      },
+      "recent_no_start_end": {
+        "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+        "end_utc": null,
+        "error": null,
+        "expected_response_fields_seen": {
+          "buySellRatio": true,
+          "buyVol": true,
+          "sellVol": true,
+          "timestamp": true
+        },
+        "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+        "limit": 500,
+        "ok": true,
+        "period": "1h",
+        "range_name": "recent_no_start_end",
+        "row_count": 500,
+        "schema_keys_observed": [
+          "buySellRatio",
+          "buyVol",
+          "sellVol",
+          "timestamp"
+        ],
+        "start_utc": null,
+        "status_code": 200,
+        "symbol": "ETHUSDT"
+      },
+      "symbol": "ETHUSDT"
+    },
+    {
+      "old_2023_target_window": {
+        "earliest_timestamp_utc": null,
+        "end_utc": "2023-07-03T00:00:00Z",
+        "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+        "expected_response_fields_seen": {
+          "buySellRatio": false,
+          "buyVol": false,
+          "sellVol": false,
+          "timestamp": false
+        },
+        "latest_timestamp_utc": null,
+        "limit": 500,
+        "ok": false,
+        "period": "1h",
+        "range_name": "old_2023_target_window",
+        "row_count": 0,
+        "schema_keys_observed": [],
+        "start_utc": "2023-07-01T00:00:00Z",
+        "status_code": 400,
+        "symbol": "SOLUSDT"
+      },
+      "recent_no_start_end": {
+        "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+        "end_utc": null,
+        "error": null,
+        "expected_response_fields_seen": {
+          "buySellRatio": true,
+          "buyVol": true,
+          "sellVol": true,
+          "timestamp": true
+        },
+        "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+        "limit": 500,
+        "ok": true,
+        "period": "1h",
+        "range_name": "recent_no_start_end",
+        "row_count": 500,
+        "schema_keys_observed": [
+          "buySellRatio",
+          "buyVol",
+          "sellVol",
+          "timestamp"
+        ],
+        "start_utc": null,
+        "status_code": 200,
+        "symbol": "SOLUSDT"
+      },
+      "symbol": "SOLUSDT"
+    },
+    {
+      "old_2023_target_window": {
+        "earliest_timestamp_utc": null,
+        "end_utc": "2023-07-03T00:00:00Z",
+        "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+        "expected_response_fields_seen": {
+          "buySellRatio": false,
+          "buyVol": false,
+          "sellVol": false,
+          "timestamp": false
+        },
+        "latest_timestamp_utc": null,
+        "limit": 500,
+        "ok": false,
+        "period": "1h",
+        "range_name": "old_2023_target_window",
+        "row_count": 0,
+        "schema_keys_observed": [],
+        "start_utc": "2023-07-01T00:00:00Z",
+        "status_code": 400,
+        "symbol": "XRPUSDT"
+      },
+      "recent_no_start_end": {
+        "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+        "end_utc": null,
+        "error": null,
+        "expected_response_fields_seen": {
+          "buySellRatio": true,
+          "buyVol": true,
+          "sellVol": true,
+          "timestamp": true
+        },
+        "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+        "limit": 500,
+        "ok": true,
+        "period": "1h",
+        "range_name": "recent_no_start_end",
+        "row_count": 500,
+        "schema_keys_observed": [
+          "buySellRatio",
+          "buyVol",
+          "sellVol",
+          "timestamp"
+        ],
+        "start_utc": null,
+        "status_code": 200,
+        "symbol": "XRPUSDT"
+      },
+      "symbol": "XRPUSDT"
+    },
+    {
+      "old_2023_target_window": {
+        "earliest_timestamp_utc": null,
+        "end_utc": "2023-07-03T00:00:00Z",
+        "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+        "expected_response_fields_seen": {
+          "buySellRatio": false,
+          "buyVol": false,
+          "sellVol": false,
+          "timestamp": false
+        },
+        "latest_timestamp_utc": null,
+        "limit": 500,
+        "ok": false,
+        "period": "1h",
+        "range_name": "old_2023_target_window",
+        "row_count": 0,
+        "schema_keys_observed": [],
+        "start_utc": "2023-07-01T00:00:00Z",
+        "status_code": 400,
+        "symbol": "DOGEUSDT"
+      },
+      "recent_no_start_end": {
+        "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+        "end_utc": null,
+        "error": null,
+        "expected_response_fields_seen": {
+          "buySellRatio": true,
+          "buyVol": true,
+          "sellVol": true,
+          "timestamp": true
+        },
+        "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+        "limit": 500,
+        "ok": true,
+        "period": "1h",
+        "range_name": "recent_no_start_end",
+        "row_count": 500,
+        "schema_keys_observed": [
+          "buySellRatio",
+          "buyVol",
+          "sellVol",
+          "timestamp"
+        ],
+        "start_utc": null,
+        "status_code": 200,
+        "symbol": "DOGEUSDT"
+      },
+      "symbol": "DOGEUSDT"
+    },
+    {
+      "old_2023_target_window": {
+        "earliest_timestamp_utc": null,
+        "end_utc": "2023-07-03T00:00:00Z",
+        "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+        "expected_response_fields_seen": {
+          "buySellRatio": false,
+          "buyVol": false,
+          "sellVol": false,
+          "timestamp": false
+        },
+        "latest_timestamp_utc": null,
+        "limit": 500,
+        "ok": false,
+        "period": "1h",
+        "range_name": "old_2023_target_window",
+        "row_count": 0,
+        "schema_keys_observed": [],
+        "start_utc": "2023-07-01T00:00:00Z",
+        "status_code": 400,
+        "symbol": "1INCHUSDT"
+      },
+      "recent_no_start_end": {
+        "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+        "end_utc": null,
+        "error": null,
+        "expected_response_fields_seen": {
+          "buySellRatio": true,
+          "buyVol": true,
+          "sellVol": true,
+          "timestamp": true
+        },
+        "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+        "limit": 500,
+        "ok": true,
+        "period": "1h",
+        "range_name": "recent_no_start_end",
+        "row_count": 500,
+        "schema_keys_observed": [
+          "buySellRatio",
+          "buyVol",
+          "sellVol",
+          "timestamp"
+        ],
+        "start_utc": null,
+        "status_code": 200,
+        "symbol": "1INCHUSDT"
+      },
+      "symbol": "1INCHUSDT"
+    }
+  ],
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "immediate_next_module_required": false,
+    "live_permission_allowed_now": false,
+    "panel_derived_taker_buy_sell_feature_available_for_future_preregistration": true,
+    "project_can_pause_after_availability_lock": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_next": false,
+    "taker_buy_sell_api_acquisition_allowed_next": false
+  },
+  "source_artifacts": {
+    "build_manifest_artifact": "artifacts/panel_build_manifests/binance_okx_overlap_near_5y_1m_to_1h_panel_build_manifest_v1.json",
+    "coverage_lock_artifact": "artifacts/coverage_locks/binance_usdt_perpetual_1m_coverage_discovery_lock_v1.json",
+    "long_short_ratio_availability_lock_artifact": "artifacts/long_short_ratio_availability_locks/binance_okx_overlap_long_short_ratio_history_availability_discovery_lock_v1.json",
+    "panel_review_artifact": "artifacts/panel_build_reviews/binance_okx_overlap_near_5y_panel_build_review_after_execution_v1.json",
+    "payload_hashes": {
+      "artifacts/coverage_locks/binance_usdt_perpetual_1m_coverage_discovery_lock_v1.json": "18a84b71c649b0462fdb0d511597dcb701448fe06184ef9c8da93d6911ada4e0",
+      "artifacts/long_short_ratio_availability_locks/binance_okx_overlap_long_short_ratio_history_availability_discovery_lock_v1.json": "f7ea298a2b32c9f007fa1a4b908bcddedcc54e49279108246a7bd2a164f78ece",
+      "artifacts/panel_build_manifests/binance_okx_overlap_near_5y_1m_to_1h_panel_build_manifest_v1.json": "bf4d4d681f36fab3a2131701e25ebc45c94ddb757f92874498ef425d698f40a7",
+      "artifacts/panel_build_previews/binance_near_5y_coverage_lock_review_okx_overlap_panel_build_preview_v1.json": "16e93ca05fe28f0d101d5228e299306bad3aea171f22bc6901f770b0ecf3a3d9",
+      "artifacts/panel_build_reviews/binance_okx_overlap_near_5y_panel_build_review_after_execution_v1.json": "34b88a3ff0870c708e2df034c243cf639b711ebce3c6a4f32edffb92a2229112",
+      "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json": "0cfe239f6f5ad2d20bda64b827416851de8f5b959066902b59f1f00f44eba716"
+    },
+    "preview_artifact": "artifacts/panel_build_previews/binance_near_5y_coverage_lock_review_okx_overlap_panel_build_preview_v1.json",
+    "readiness_artifact": "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json"
+  },
+  "source_checkpoint": {
+    "latest_long_short_ratio_availability_classification": "LONG_SHORT_RATIO_HISTORY_UNAVAILABLE_LATEST_30_DAYS_ONLY",
+    "prior_head": "b686563198b11bd42b850b5e9e1b8dd5af11eb8b",
+    "prior_tracked_python_count": 836,
+    "repo_clean_before_discovery": true
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_TAKER_BUY_SELL_VOLUME_HISTORY_AVAILABILITY_DISCOVERY_LOCK_API_UNAVAILABLE_PANEL_DERIVED_AVAILABLE",
+  "summary_counts": {
+    "endpoint_tested": "https://fapi.binance.com/futures/data/takerlongshortRatio",
+    "exact_overlap_symbol_count": 81,
+    "global_earliest_timestamp_observed_from_endpoint": "2026-05-03T16:00:00Z",
+    "global_latest_timestamp_observed_from_endpoint": "2026-05-24T11:00:00Z",
+    "old_range_available_count": 0,
+    "recent_range_available_count": 6,
+    "representative_symbols_tested": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "DOGEUSDT",
+      "1INCHUSDT"
+    ]
+  },
+  "validation_checks": {
+    "artifact_json_valid": true,
+    "artifact_path_equals_required_path": true,
+    "exact_overlap_symbol_count_verified_81": true,
+    "exactly_one_new_tracked_json_availability_artifact_expected": true,
+    "exactly_one_new_tracked_python_tool_file_expected": true,
+    "module_path_equals_required_path": true,
+    "no_bulk_download": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified_expected": true,
+    "no_funding_rows_read": true,
+    "no_okx_panel_rows_read": true,
+    "no_other_tracked_files_expected": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_execution": true,
+    "old_2023_window_not_available_if_api_unavailable": true,
+    "panel_derived_taker_buy_sell_availability_recorded": true,
+    "panel_rows_not_read": true,
+    "panel_schema_checked_from_artifacts": true,
+    "payload_sha256_excluding_hash_present": true,
+    "recent_data_available_if_latest_30_days_behavior_confirmed": true,
+    "replacement_checks_all_true": true,
+    "representative_old_range_probe_performed": true,
+    "representative_recent_range_probe_performed": true,
+    "status_equals_expected_status": true
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "contract_name": "edge_factory_os_restricted_pre_registered_research_contract_proposal_v1",
+  "created_at_utc": "2026-05-14T01:43:47.491612+00:00",
+  "contract_status": "RESTRICTED_RESEARCH_CONTRACT_PROPOSAL_READY_NOT_EXECUTABLE",
+  "contract_id": "RESTRICTED_PRE_REGISTERED_RESEARCH_CONTRACT_PROPOSAL_V1_fb99b6c3b9af761d_20260514_014347",
+  "contract_hash": "fb99b6c3b9af761d",
+  "route_hash": "9596f6d3a0fa7a0b",
+  "route_hash_payload": {
+    "proposal_type": "restricted_pre_registered_research_contract",
+    "research_key": "RESTRICTED_MARKET_STATE_STRUCTURE_RETEST_V1",
+    "route_family": "MARKET_STATE_TRANSITION_FAMILY",
+    "source_vault_item_id": "PROMISING_STRUCTURE_HINT_0a26d87c025e3178",
+    "source_route_hash": "ec2550ab1d3cfcff",
+    "feature_family": [
+      "market_state_time_aggregate_features_only"
+    ],
+    "axis_family": [
+      "narrow_market_state_transition_retest_only"
+    ],
+    "null_models": [
+      "procedural_joint_null_full_search",
+      "month_block_shuffle",
+      "time_block_shuffle",
+      "state_col_independent_block_shuffle",
+      "within_month_time_shuffle"
+    ],
+    "holdout_access": "FORBIDDEN",
+    "broad_search": false,
+    "created_under_gate": "GOVERNED_RESEARCH_REOPEN_GATE_PASS_RESTRICTED_CONTRACT_FACTORY_ALLOWED"
+  },
+  "research_key": "RESTRICTED_MARKET_STATE_STRUCTURE_RETEST_V1",
+  "route_family": "MARKET_STATE_TRANSITION_FAMILY",
+  "source_vault_item_id": "PROMISING_STRUCTURE_HINT_0a26d87c025e3178",
+  "source_route_hash": "ec2550ab1d3cfcff",
+  "source_research_key": "OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH_V1",
+  "hypothesis_plain_english": "A narrow retest of whether market-state transition structure contains non-random information, without broad axis search, without holdout access, and with full procedural null validation.",
+  "broad_strategy_search_allowed": false,
+  "research_execution_allowed_now": false,
+  "contract_preflight_required": true,
+  "holdout_access_allowed": false,
+  "holdout_access_policy": "FORBIDDEN",
+  "feature_family_pre_declared": [
+    "market-level candle body/range aggregate states",
+    "time-state aggregate transition states",
+    "no future returns",
+    "no pnl labels",
+    "no outcome leakage features"
+  ],
+  "threshold_grid_pre_declared": [
+    "fixed tertile bucket transitions only",
+    "no post-hoc threshold tuning",
+    "no adaptive threshold expansion"
+  ],
+  "axis_family_pre_declared": [
+    "restricted market-state transition axes only",
+    "no symbol-level expansion",
+    "no event-motif expansion",
+    "no new archetype expansion"
+  ],
+  "null_models_pre_declared": [
+    "procedural_joint_null_full_search",
+    "month_block_shuffle",
+    "time_block_shuffle",
+    "state_col_independent_block_shuffle",
+    "within_month_time_shuffle"
+  ],
+  "success_criteria_pre_declared": {
+    "procedural_joint_null_max_p_count_required": "<= 0.01",
+    "procedural_joint_null_max_p_joint_required": "<= diagnostic_alpha_after_pressure",
+    "nested_validation_required": true,
+    "holdout_access_required": false,
+    "no_candidate_generation_even_if_pass": true,
+    "no_family_release_even_if_pass": true
+  },
+  "failure_criteria_pre_declared": {
+    "any_post_hoc_feature_or_threshold_change": "route_invalid",
+    "proposed_route_hash_blocked": "route_invalid",
+    "procedural_null_fail": "route_closed_or_redesign_required",
+    "holdout_access_attempt": "critical_failure",
+    "candidate_or_runtime_flag_true": "critical_failure"
+  },
+  "budget_allocation_pre_declared": {
+    "alpha_budget_requested": 0.0,
+    "route_budget_requested": 0,
+    "reason": "Factory only creates proposal. Separate preflight must allocate nonzero research budget before execution."
+  },
+  "nested_validation_plan": {
+    "search_set": "not allocated by factory",
+    "validation_set": "not allocated by factory",
+    "untouched_final_holdout": "forbidden/unselected/unpeeked",
+    "preflight_validator_required": true
+  },
+  "blocked_route_preflight_required": true,
+  "procedural_null_required": true,
+  "same_route_hash_reuse_allowed": false,
+  "contract_mutation_after_start_invalidates_route": true,
+  "release_gate_feed": {
+    "RESTRICTED_RESEARCH_CONTRACT_PROPOSAL_READY": true,
+    "RESEARCH_EXECUTION_ALLOWED_NOW": false,
+    "BROAD_STRATEGY_SEARCH_ALLOWED": false,
+    "HOLDOUT_ACCESS_ALLOWED": false,
+    "CANDIDATE_GENERATION_ALLOWED_FROM_THIS_CONTRACT": false,
+    "CANDIDATE_CONTRACT_ALLOWED_FROM_THIS_CONTRACT": false,
+    "FAMILY_RELEASE_ALLOWED_FROM_THIS_CONTRACT": false,
+    "RUNTIME_CHANGE_ALLOWED_FROM_THIS_CONTRACT": false,
+    "CAPITAL_CHANGE_ALLOWED_FROM_THIS_CONTRACT": false,
+    "ACTIVE_PAPER_ALLOWED_FROM_THIS_CONTRACT": false,
+    "LIVE_ALLOWED_FROM_THIS_CONTRACT": false,
+    "REAL_ORDERS_ALLOWED_FROM_THIS_CONTRACT": false
+  },
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

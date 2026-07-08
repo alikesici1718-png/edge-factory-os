@@ -1,0 +1,114 @@
+{
+  "module": "edge_factory_os_gate_metadata_patch_approval_v1.py",
+  "generated_at_utc": "2026-05-14T10:18:09.660269+00:00",
+  "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+  "approval_status": "GATE_METADATA_PATCH_APPROVAL_READY_FOR_APPLY_MODULE",
+  "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+  "final_decision": "APPROVAL_RECORDED_BUILD_METADATA_PATCH_APPLY_MODULE_NEXT",
+  "next_action": "BUILD_METADATA_PATCH_APPLY_MODULE_DO_NOT_RUN_RUNTIME_OR_LAUNCHER",
+  "next_module": "edge_factory_os_gate_metadata_patch_apply_v1.py",
+  "approval_scope": "NON_BEHAVIORAL_GATE_METADATA_COMMENT_BLOCKS_ONLY",
+  "target_file_mutation_approved_now": false,
+  "runtime_launcher_capital_live_real_order_approved": false,
+  "preview_input": {
+    "path": "edge_factory_os_gate_metadata_patch_preview/gate_metadata_patch_preview_latest.json",
+    "preview_status": "GATE_METADATA_PATCH_PREVIEW_READY_NO_APPLY",
+    "final_decision": "METADATA_PATCH_PREVIEW_READY_REQUIRE_APPROVAL_BEFORE_APPLY",
+    "counts": {
+      "candidate_count": 11,
+      "metadata_preview_possible_count": 11,
+      "metadata_preview_blocked_count": 0,
+      "direct_apply_recommended_now": 0
+    },
+    "classification_counts": {
+      "GATE_REVIEW_FAIL_DANGEROUS_PATTERN_NO_CLEAR_GATE": 2,
+      "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA": 9
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "observed": {
+      "preview_status": "GATE_METADATA_PATCH_PREVIEW_READY_NO_APPLY",
+      "final_decision": "METADATA_PATCH_PREVIEW_READY_REQUIRE_APPROVAL_BEFORE_APPLY",
+      "direct_apply_recommended_now": false,
+      "candidate_count": 11,
+      "metadata_preview_possible_count": 11,
+      "metadata_preview_blocked_count": 0,
+      "direct_apply_count": 0,
+      "possible_rows": 11,
+      "blocked_rows": 0
+    }
+  },
+  "approved_future_apply_constraints": {
+    "future_apply_may_only_touch": "metadata_preview_possible.relative_path files",
+    "future_apply_patch_type": "non_behavioral_gate_metadata_comment_block",
+    "future_apply_must_preserve_behavior": true,
+    "future_apply_must_recheck_hashes": true,
+    "future_apply_must_compile_python_targets": true,
+    "future_apply_must_create_backups": true,
+    "future_apply_must_not_touch_runtime_launcher_capital_live_real_orders": true
+  },
+  "safety_flags": {
+    "repo_only": true,
+    "approval_only": true,
+    "non_behavioral_metadata_only": true,
+    "runtime_touch_allowed": false,
+    "launcher_allowed": false,
+    "runtime_patch_allowed": false,
+    "backup_delete_allowed": false,
+    "backup_move_allowed": false,
+    "gitignore_change_allowed": false,
+    "strategy_research_allowed": false,
+    "candidate_generation_allowed": false,
+    "family_release_allowed": false,
+    "capital_change_allowed": false,
+    "active_paper_allowed": false,
+    "live_allowed": false,
+    "real_orders_allowed": false,
+    "file_delete_allowed": false,
+    "file_move_allowed": false,
+    "execution_allowed": false,
+    "target_file_mutation_allowed_now": false,
+    "old_short_guarded_apply_allowed": false
+  },
+  "forbidden_actions": [
+    "Do not modify target files.",
+    "Do not apply metadata patches from this module.",
+    "Do not create backup files.",
+    "Do not delete or move backup files.",
+    "Do not change .gitignore.",
+    "Do not use git add -f.",
+    "Do not run launcher.",
+    "Do not touch runtime.",
+    "Do not start processes.",
+    "Do not run strategy research.",
+    "Do not generate candidates.",
+    "Do not change capital.",
+    "Do not enable active paper.",
+    "Do not enable live trading.",
+    "Do not enable or send real orders.",
+    "Do not touch holdout.",
+    "Do not run old_short guarded apply."
+  ],
+  "git_state": {
+    "status_ok": true,
+    "head_short": "bd53a04",
+    "last_commit": "bd53a04 Add gate metadata patch preview",
+    "git_status_lines": [
+      "?? tools/edge_factory_os_gate_metadata_patch_approval_v1.py",
+      "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "?? tools/edge_factory_os_old_short_guarded_runtime_reenable_apply_v1.py",
+      "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+      "?? tools/edge_factory_os_universe_coverage_guard_v1.py"
+    ],
+    "untracked_or_dirty_count": 5,
+    "known_backup_pending_count": 2,
+    "old_short_guarded_apply_untracked": true,
+    "universe_guard_review_required": true
+  },
+  "outputs": {
+    "json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_gate_metadata_patch_approval\\gate_metadata_patch_approval_latest.json",
+    "txt": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_gate_metadata_patch_approval\\gate_metadata_patch_approval_latest.txt"
+  }
+}

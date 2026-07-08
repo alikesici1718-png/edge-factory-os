@@ -1,0 +1,76 @@
+====================================================================================================
+EDGE FACTORY OS GENERIC RESEARCH CONTRACT v1
+====================================================================================================
+contract_status: GENERIC_RESEARCH_CONTRACT_READY
+allowed_scope: READ_ONLY_RESEARCH
+contract_id: GENERIC_RESEARCH_CONTRACT_V1_9244c8c73f131d0f_20260513_201521
+contract_hash: 9244c8c73f131d0f
+route_hash: 7a588b49e8e6548a
+plugin_key: GUARDED_FEATURE_SPACE_EXPANSION_PLUGIN_V1
+research_key: GUARDED_FEATURE_SPACE_EXPANSION_AND_NEGATIVE_CONTROL_SEARCH_V1
+strict_policy_key: STRICT_MONTH_STABILITY_12_OF_12
+canonical_policy_month_count: 12
+guard_pass: True
+route_hash_blocked: False
+next_module: edge_factory_os_generic_research_runner_v1.py
+
+FEATURE FAMILIES
+----------------------------------------------------------------------------------------------------
+- pre_outcome_multi_horizon_return_shape
+- pre_outcome_realized_volatility_surface
+- pre_outcome_range_compression_expansion
+- pre_outcome_liquidity_state_and_rank_stability
+- pre_outcome_cross_sectional_dispersion
+- pre_outcome_market_beta_correlation
+- pre_outcome_symbol_lifecycle_and_coverage
+- gap_aware_feature_resets
+
+NEGATIVE CONTROLS
+----------------------------------------------------------------------------------------------------
+- random_symbol_feature_control
+- month_shuffled_feature_control
+- time_shifted_feature_control
+- random_noise_feature_control
+- direction_flipped_label_control
+
+NULL MODELS
+----------------------------------------------------------------------------------------------------
+- within_month_symbol_shuffle
+- month_order_shuffle
+- feature_rank_shuffle
+- side_label_shuffle
+- cost_perturbation_null
+
+HARD BLOCKS
+----------------------------------------------------------------------------------------------------
+- candidate_generation_forbidden
+- candidate_contract_forbidden
+- family_release_forbidden
+- runtime_touch_forbidden
+- capital_change_forbidden
+- active_paper_forbidden
+- live_trading_forbidden
+- real_orders_forbidden
+- blocked_route_hash_reuse_forbidden
+- missing_guard_feed_forbidden
+- future_return_as_feature_forbidden
+- manual_symbol_whitelist_forbidden
+- manual_month_blacklist_forbidden
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

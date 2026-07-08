@@ -1,0 +1,91 @@
+====================================================================================================
+EDGE FACTORY OS RESTRICTED PRE-REGISTERED RESEARCH CONTRACT PROPOSAL v1
+====================================================================================================
+contract_status: RESTRICTED_RESEARCH_CONTRACT_PROPOSAL_READY_NOT_EXECUTABLE
+contract_id: RESTRICTED_PRE_REGISTERED_RESEARCH_CONTRACT_PROPOSAL_V1_fb99b6c3b9af761d_20260514_014347
+contract_hash: fb99b6c3b9af761d
+route_hash: 9596f6d3a0fa7a0b
+research_key: RESTRICTED_MARKET_STATE_STRUCTURE_RETEST_V1
+route_family: MARKET_STATE_TRANSITION_FAMILY
+hypothesis_plain_english: A narrow retest of whether market-state transition structure contains non-random information, without broad axis search, without holdout access, and with full procedural null validation.
+research_execution_allowed_now: False
+broad_strategy_search_allowed: False
+holdout_access_allowed: False
+candidate_generation_allowed: False
+family_release_allowed: False
+runtime_touch_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+
+PRE-REGISTERED FEATURE FAMILY
+----------------------------------------------------------------------------------------------------
+- market-level candle body/range aggregate states
+- time-state aggregate transition states
+- no future returns
+- no pnl labels
+- no outcome leakage features
+
+PRE-REGISTERED AXIS FAMILY
+----------------------------------------------------------------------------------------------------
+- restricted market-state transition axes only
+- no symbol-level expansion
+- no event-motif expansion
+- no new archetype expansion
+
+PRE-REGISTERED NULL MODELS
+----------------------------------------------------------------------------------------------------
+- procedural_joint_null_full_search
+- month_block_shuffle
+- time_block_shuffle
+- state_col_independent_block_shuffle
+- within_month_time_shuffle
+
+SUCCESS CRITERIA
+----------------------------------------------------------------------------------------------------
+{
+  "procedural_joint_null_max_p_count_required": "<= 0.01",
+  "procedural_joint_null_max_p_joint_required": "<= diagnostic_alpha_after_pressure",
+  "nested_validation_required": true,
+  "holdout_access_required": false,
+  "no_candidate_generation_even_if_pass": true,
+  "no_family_release_even_if_pass": true
+}
+
+FAILURE CRITERIA
+----------------------------------------------------------------------------------------------------
+{
+  "any_post_hoc_feature_or_threshold_change": "route_invalid",
+  "proposed_route_hash_blocked": "route_invalid",
+  "procedural_null_fail": "route_closed_or_redesign_required",
+  "holdout_access_attempt": "critical_failure",
+  "candidate_or_runtime_flag_true": "critical_failure"
+}
+
+NESTED VALIDATION PLAN
+----------------------------------------------------------------------------------------------------
+{
+  "search_set": "not allocated by factory",
+  "validation_set": "not allocated by factory",
+  "untouched_final_holdout": "forbidden/unselected/unpeeked",
+  "preflight_validator_required": true
+}
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

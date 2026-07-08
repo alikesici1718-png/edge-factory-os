@@ -1,0 +1,148 @@
+{
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_EVALUATION",
+  "diagnostic_promising": false,
+  "diagnostic_promising_criteria": {
+    "concentration_acceptable": false,
+    "holdout_net_positive": true,
+    "metric_integrity_passes": true,
+    "no_edge_live_capital_permission": true,
+    "no_exact_source_false_claim": true,
+    "no_lookahead_detected": true,
+    "validation_closed_trades_at_least_30": false,
+    "validation_monthly_positive_rate_at_least_0_60": false,
+    "validation_net_positive": false
+  },
+  "execution_metric_summary": {
+    "executed_trades": 1904,
+    "family_split": {
+      "blowoff_short": 0.784139,
+      "mean_reversion_short": 0.215861
+    },
+    "holdout_monthly_positive_rate": 0.5,
+    "holdout_net": 1336.608757,
+    "null_baseline_result": {
+      "feasible": false,
+      "limitation": "validation trade count below 30, deterministic timestamp/block shuffle null not meaningful",
+      "null_pass": null,
+      "runs": 0,
+      "validation_percentile": null
+    },
+    "symbol_concentration": {
+      "top_symbol": "RAVE",
+      "top_symbol_trade_count": 522,
+      "top_symbol_trade_share": 0.27416,
+      "trade_count_by_symbol": {
+        "AZTEC": 15,
+        "BASED": 99,
+        "BIO": 113,
+        "BSB": 131,
+        "ENS": 1,
+        "H": 277,
+        "ICP": 24,
+        "INJ": 3,
+        "IP": 68,
+        "JTO": 16,
+        "LAB": 53,
+        "LAYER": 28,
+        "NOT": 9,
+        "ONDO": 6,
+        "PIEVERSE": 193,
+        "RAVE": 522,
+        "RLS": 49,
+        "SAHARA": 85,
+        "STABLE": 34,
+        "STRK": 26,
+        "TRUMP": 19,
+        "TRUTH": 39,
+        "UNI": 30,
+        "USELESS": 31,
+        "YGG": 33
+      }
+    },
+    "total_signals": 1904,
+    "validation_monthly_positive_rate": null,
+    "validation_net": 0.0,
+    "worst_month": {
+      "closed_trades": 81,
+      "gross_bps": -19075.437267479534,
+      "month": "2025-07",
+      "net_bps": -20695.437267479534
+    }
+  },
+  "execution_status_preserved": "PASS_REPO_CODE_ONLY_OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_EXECUTED",
+  "limitations": [
+    "Original exact old_short source is not recovered.",
+    "Exact replay is not claimed.",
+    "Exact global gate replay is unavailable; this is a clean-room historical diagnostic with gate limitations recorded.",
+    "Entry and exit price contract is ambiguous; conservative next available open is used and recorded.",
+    "Costs use fallback 20 bps round-trip assumption because no more specific clean-room historical backtest cost was found in the reviewed contract.",
+    "Recovered OKX 1m source coverage starts in 2025 for this artifact set, leaving train/validation splits absent or sparse under the requested standard split.",
+    "No exact global gate replay was available.",
+    "No position-level gate allow was used; signals were evaluated as clean-room historical diagnostic trades.",
+    "This diagnostic cannot prove no-position-without-gate behavior from historical gate decisions.",
+    "Standard validation split has fewer than 30 closed trades in recovered OKX 1m source coverage."
+  ],
+  "metric_integrity_result": {
+    "checks": {
+      "execution_status_passed": true,
+      "market_candles_used_to_simulate_trades": true,
+      "no_binance_or_tradingview_substitution": true,
+      "no_edge_live_capital_permission": true,
+      "no_exact_source_false_claim": true,
+      "no_logged_closed_trades_as_backtest_trades": true,
+      "no_network_api_private_order_endpoint": true,
+      "replacement_checks_all_true": true,
+      "route_key_verified": true
+    },
+    "passed": true
+  },
+  "module": "edge_factory_os_repo_only_old_short_clean_room_direct_backtest_evaluator_v1",
+  "payload_sha256_excluding_hash": "707a41506cd67160cd137271d0b70c69fe42ef167d120306e38fa6bdaef88d62",
+  "replacement_checks_all_true": true,
+  "result_classification": "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_INCONCLUSIVE_NEEDS_MORE_DATA",
+  "route_key": "old_short_clean_room_v1",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_allocation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_trading_allowed_now": false,
+    "monitor_allowed_now": false,
+    "real_orders_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "execution_artifact": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\old_short_clean_room_direct_backtest_execution_v1.json"
+  },
+  "source_checkpoint": {
+    "allowed_new_paths_at_evaluation": [
+      "?? artifacts/strategy_evaluations/old_short_clean_room_direct_backtest_evaluator_v1.json",
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_direct_backtest_evaluator_v1.py"
+    ],
+    "git_status_at_evaluation": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_direct_backtest_evaluator_v1.py"
+    ],
+    "head": "41162a76fe01db4a85f05076e1e6a1364aec876f",
+    "repo_clean_before_run": true,
+    "tracked_python_count": 975,
+    "unexpected_dirty_paths_at_evaluation": []
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_EVALUATED",
+  "validation_checks": {
+    "execution_artifact_loaded": true,
+    "execution_status_verified": true,
+    "no_api_used": true,
+    "no_backtest_rerun": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_full_dataset_comparison": true,
+    "no_live_runtime_capital": true,
+    "no_network_used": true,
+    "no_pnl_recomputation": true,
+    "no_runner_execution": true,
+    "no_signal_generation": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "route_key_verified": true
+  }
+}

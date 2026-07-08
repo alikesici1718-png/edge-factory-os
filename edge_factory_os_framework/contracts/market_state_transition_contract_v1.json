@@ -1,0 +1,250 @@
+{
+  "contract_name": "edge_factory_os_market_state_transition_contract_v1",
+  "created_at_utc": "2026-05-13T21:39:05.981125+00:00",
+  "contract_status": "MARKET_STATE_TRANSITION_CONTRACT_READY",
+  "contract_id": "MARKET_STATE_TRANSITION_CONTRACT_V1_97c3549237fe5e14_20260513_213905",
+  "contract_hash": "97c3549237fe5e14",
+  "route_hash": "ec2550ab1d3cfcff",
+  "route_hash_payload": {
+    "research_key": "OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH_V1",
+    "direction_queue_key": "RD6_02_OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH",
+    "plugin_key": "MARKET_STATE_TRANSITION_PLUGIN_V1",
+    "policy_hash": "e4a85ce55a1fdee0",
+    "source_failed_route_hash": "a7111fc8752a3e15",
+    "source_failed_decision_class": "ANOMALY_PREVIEW_FAILED_DEEP_VALIDATION_UNSTABLE_AND_NULL_UNSAFE",
+    "source_failed_gates": [
+      "FEATURE_THRESHOLD_PERTURBATION",
+      "NEGATIVE_CONTROLS_RERUN",
+      "TRUE_SOURCE_PANEL_NULL_RERUN_PASS"
+    ],
+    "state_feature_groups": [
+      "market_volatility_state",
+      "market_liquidity_state",
+      "cross_sectional_dispersion_state",
+      "market_beta_residual_state",
+      "time_structure_state"
+    ],
+    "transition_methods": [
+      "rolling_state_quantile_bucket_transition",
+      "cross_sectional_state_rank_transition",
+      "volatility_liquidity_joint_transition",
+      "state_persistence_break_detection",
+      "state_transition_matrix_asymmetry",
+      "state_duration_and_reentry_profile",
+      "state_change_point_candidate_scan",
+      "state_cluster_transition_graph"
+    ],
+    "negative_controls": [
+      "timestamp_shuffle_control",
+      "month_shuffle_control",
+      "symbol_shuffle_control",
+      "state_label_permutation_control",
+      "transition_direction_flip_control",
+      "feature_group_shuffle_control",
+      "calendar_block_shuffle_control",
+      "null_transition_matrix_control"
+    ],
+    "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+    "canonical_policy_month_count": 12,
+    "release_allowed": false,
+    "material_difference": "market_state_transition_not_single_feature_anomaly"
+  },
+  "route_hash_blocked": false,
+  "source_failed_route_hash": "a7111fc8752a3e15",
+  "source_failed_decision_class": "ANOMALY_PREVIEW_FAILED_DEEP_VALIDATION_UNSTABLE_AND_NULL_UNSAFE",
+  "source_failed_gates": [
+    "FEATURE_THRESHOLD_PERTURBATION",
+    "NEGATIVE_CONTROLS_RERUN",
+    "TRUE_SOURCE_PANEL_NULL_RERUN_PASS"
+  ],
+  "research_key": "OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH_V1",
+  "direction_queue_key": "RD6_02_OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH",
+  "plugin_key": "MARKET_STATE_TRANSITION_PLUGIN_V1",
+  "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+  "canonical_policy_month_count": 12,
+  "allowed_scope": "READ_ONLY_RESEARCH",
+  "next_action": "BUILD_MARKET_STATE_TRANSITION_RUNNER",
+  "next_module": "edge_factory_os_market_state_transition_runner_v1.py",
+  "policy_hash": "e4a85ce55a1fdee0",
+  "source_panel_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_feature_panels\\post_impulse_drift_long_v1\\post_impulse_drift_long_v1_feature_panel_1h_dynamic.parquet",
+  "source_panel_exists": true,
+  "state_feature_group_count": 5,
+  "transition_method_count": 8,
+  "negative_control_count": 8,
+  "state_feature_groups": [
+    {
+      "group_key": "market_volatility_state",
+      "description": "Outcome-agnostic volatility/range regime state using current and historical candle/range features only.",
+      "candidate_features": [
+        "derived_candle_range_bps",
+        "entry_range_bps",
+        "range_bps",
+        "atr_bps",
+        "realized_vol_bps"
+      ]
+    },
+    {
+      "group_key": "market_liquidity_state",
+      "description": "Liquidity/participation state using volume/quote-volume/turnover style features.",
+      "candidate_features": [
+        "volume",
+        "quote_volume",
+        "entry_vol_quote",
+        "vol_quote",
+        "turnover"
+      ]
+    },
+    {
+      "group_key": "cross_sectional_dispersion_state",
+      "description": "Cross-sectional dispersion/breadth state across symbols at each timestamp.",
+      "candidate_features": [
+        "cross_sectional_rank",
+        "symbol_percentile",
+        "market_dispersion",
+        "breadth_proxy"
+      ]
+    },
+    {
+      "group_key": "market_beta_residual_state",
+      "description": "Coin-vs-market residual or co-movement state without using forward returns.",
+      "candidate_features": [
+        "market_beta_proxy",
+        "market_residual_proxy",
+        "market_relative_level"
+      ]
+    },
+    {
+      "group_key": "time_structure_state",
+      "description": "Intraday/day-of-week transition structure as control or state descriptor.",
+      "candidate_features": [
+        "derived_hour_utc",
+        "derived_dayofweek_utc"
+      ]
+    }
+  ],
+  "transition_methods": [
+    "rolling_state_quantile_bucket_transition",
+    "cross_sectional_state_rank_transition",
+    "volatility_liquidity_joint_transition",
+    "state_persistence_break_detection",
+    "state_transition_matrix_asymmetry",
+    "state_duration_and_reentry_profile",
+    "state_change_point_candidate_scan",
+    "state_cluster_transition_graph"
+  ],
+  "negative_controls": [
+    "timestamp_shuffle_control",
+    "month_shuffle_control",
+    "symbol_shuffle_control",
+    "state_label_permutation_control",
+    "transition_direction_flip_control",
+    "feature_group_shuffle_control",
+    "calendar_block_shuffle_control",
+    "null_transition_matrix_control"
+  ],
+  "transition_preview_requirements": {
+    "must_be_outcome_agnostic": true,
+    "must_have_canonical_12_month_presence": true,
+    "must_pass_true_source_panel_null": true,
+    "must_pass_negative_controls": true,
+    "must_not_reuse_failed_anomaly_axis": true,
+    "minimum_transition_stability_months": 12,
+    "minimum_symbol_coverage": 200,
+    "minimum_row_coverage": 1000000
+  },
+  "gate_caps": {
+    "max_allowed_strict_12_any_random_hit_rate": 0.01,
+    "max_allowed_null_adjusted_any_random_hit_rate": 0.005,
+    "empirical_p_value_required_lte": 0.01,
+    "minimum_actual_vs_null_margin_bps": 2500.0
+  },
+  "hard_requirements_for_runner": [
+    "read full source panel parquet",
+    "consume failed anomaly deep validation state",
+    "consume framework status panel",
+    "consume true source-panel null baseline state",
+    "consume research gate policy",
+    "consume data quality guard feed",
+    "consume route blocklist",
+    "prove route hash not blocked",
+    "prove material difference from failed source-panel anomaly route",
+    "exclude future return/pnl/outcome/label features from state discovery",
+    "build outcome-agnostic market state features",
+    "build state transition summaries across canonical 12 months",
+    "run negative controls",
+    "run true source-panel null replay before signal claim",
+    "produce policy gate table",
+    "keep plugin expansion false",
+    "keep candidate/family/runtime/capital/live false"
+  ],
+  "required_runner_outputs": [
+    "input_consumption_report",
+    "state_feature_inventory",
+    "state_transition_method_inventory",
+    "market_state_transition_summary",
+    "market_state_transition_month_stability",
+    "market_state_transition_negative_controls",
+    "true_source_panel_null_rerun",
+    "policy_gate_pass_fail_table",
+    "material_difference_report",
+    "latest_json",
+    "latest_txt",
+    "csv_outputs"
+  ],
+  "release_allowed": false,
+  "plugin_expansion_allowed": false,
+  "source_artifacts": {
+    "evaluator_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_source_panel_anomaly_deep_validation_evaluator\\source_panel_anomaly_deep_validation_evaluator_latest.json",
+    "next_queue_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_source_panel_anomaly_deep_validation_evaluator\\source_panel_anomaly_deep_validation_next_queue_latest.json",
+    "failed_deep_state_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\source_panel_anomaly_deep_validation_state_v1.json",
+    "framework_status_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\status\\framework_status_panel_v1.json",
+    "true_panel_state_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\true_source_panel_empirical_null_baseline_state_v1.json",
+    "policy_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\research_gate_enforcement_policy_v1.json",
+    "policy_runtime_state_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\research_gate_policy_runtime_state_v1.json",
+    "policy_validation_state_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\research_gate_validation_state_v1.json",
+    "guard_feed_json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_data_quality_guard_runner\\data_quality_guard_feed_latest.json",
+    "lesson_index_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_lesson_memory\\lesson_memory_index.json",
+    "blocklist_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_lesson_memory\\candidate_route_blocklist.json"
+  },
+  "downstream_rules": {
+    "if_transition_preview_found": "build evaluator/deep validation contract; no candidate release",
+    "if_no_transition_preview": "close route and queue next policy-locked direction",
+    "if_true_null_or_negative_control_fails": "close route and lesson/blocklist",
+    "release_allowed_from_this_contract": false
+  },
+  "release_gate_feed": {
+    "MARKET_STATE_TRANSITION_CONTRACT_READY": true,
+    "FAILED_ANOMALY_DEEP_VALIDATION_STATE_CONSUMED": true,
+    "FRAMEWORK_STATUS_CONSUMED": true,
+    "TRUE_SOURCE_PANEL_STATE_CONSUMED": true,
+    "RESEARCH_GATE_POLICY_CONSUMED": true,
+    "DATA_QUALITY_GUARD_CONSUMED": true,
+    "ROUTE_BLOCKLIST_CONSUMED": true,
+    "CONTRACT_ROUTE_HASH_BLOCKED": false,
+    "PLUGIN_EXPANSION_ALLOWED_FROM_THIS_CONTRACT": false,
+    "RELEASE_PASS_FROM_THIS_CONTRACT": false,
+    "CANDIDATE_GENERATION_ALLOWED_FROM_THIS_CONTRACT": false,
+    "CANDIDATE_CONTRACT_ALLOWED_FROM_THIS_CONTRACT": false,
+    "FAMILY_RELEASE_ALLOWED_FROM_THIS_CONTRACT": false,
+    "RUNTIME_CHANGE_ALLOWED_FROM_THIS_CONTRACT": false,
+    "CAPITAL_CHANGE_ALLOWED_FROM_THIS_CONTRACT": false,
+    "ACTIVE_PAPER_ALLOWED_FROM_THIS_CONTRACT": false,
+    "LIVE_ALLOWED_FROM_THIS_CONTRACT": false,
+    "REAL_ORDERS_ALLOWED_FROM_THIS_CONTRACT": false
+  },
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

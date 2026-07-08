@@ -1,0 +1,4275 @@
+EDGE FACTORY OS RUNTIME RISK AND MUTATION POLICY REVIEW v1
+====================================================================================================
+review_status: RUNTIME_RISK_AND_MUTATION_POLICY_REVIEW_READY_NO_FIXES_APPLIED
+allowed_scope: REPO_ONLY_OS_INTELLIGENCE
+final_decision: NO_DIRECT_APPLY_BUILD_GATE_REVIEW_CANDIDATE_PREVIEW_NEXT
+next_action: BUILD_GATE_REVIEW_CANDIDATE_PREVIEW_NO_RUNTIME_ACTION
+next_module: edge_factory_os_gate_review_candidate_preview_v1.py
+direct_apply_recommended_now: False
+
+BUCKET COUNTS
+----------------------------------------------------------------------------------------------------
+{
+  "DANGEROUS_PATTERN_MANUAL_REVIEW": 293,
+  "GATE_REVIEW_CANDIDATE": 25,
+  "HYGIENE_APPROVAL_REQUIRED": 11,
+  "LIKELY_FALSE_POSITIVE_NO_FIX": 66,
+  "RUNTIME_SURFACE_MANUAL_REVIEW": 61,
+  "UNCLASSIFIED_POLICY_REVIEW": 87
+}
+
+NEXT RECOMMENDED MODULES
+----------------------------------------------------------------------------------------------------
+[
+  {
+    "priority": 1,
+    "module": "edge_factory_os_gate_review_candidate_preview_v1.py",
+    "scope": "repo-only preview",
+    "reason": "Review 23 apply/repair/patch/hygiene tools for explicit gate metadata before changing anything.",
+    "input_bucket": "GATE_REVIEW_CANDIDATE",
+    "row_count": 25
+  },
+  {
+    "priority": 2,
+    "module": "edge_factory_os_runtime_surface_manual_review_packet_v1.py",
+    "scope": "read-only review packet",
+    "reason": "Runtime/src surfaces require manual review, not patching.",
+    "input_bucket": "RUNTIME_SURFACE_MANUAL_REVIEW",
+    "row_count": 61
+  },
+  {
+    "priority": 3,
+    "module": "edge_factory_os_dangerous_pattern_manual_review_packet_v1.py",
+    "scope": "read-only review packet",
+    "reason": "Dangerous mutation/start patterns require review before any policy metadata or code changes.",
+    "input_bucket": "DANGEROUS_PATTERN_MANUAL_REVIEW",
+    "row_count": 293
+  },
+  {
+    "priority": 4,
+    "module": "edge_factory_os_backup_hygiene_manual_approval_gate_v1.py",
+    "scope": "manual approval only",
+    "reason": "Duplicate/superseded modules and backup files require explicit hygiene approval before delete/move/archive.",
+    "input_bucket": "HYGIENE_APPROVAL_REQUIRED",
+    "row_count": 11
+  },
+  {
+    "priority": 5,
+    "module": "edge_factory_os_audit_false_positive_suppression_preview_v1.py",
+    "scope": "preview only",
+    "reason": "Likely false positives may be suppressed later via audit-policy metadata, not by editing historical reports.",
+    "input_bucket": "LIKELY_FALSE_POSITIVE_NO_FIX",
+    "row_count": 66
+  }
+]
+
+GATE REVIEW CANDIDATES
+----------------------------------------------------------------------------------------------------
+[
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_bom_syntax_repair_apply_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_bom_syntax_repair_apply_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, .write_bytes(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_bom_syntax_repair_remaining_apply_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_bom_syntax_repair_remaining_apply_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, .write_bytes(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_registry_and_lesson_enforcer_repair_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_registry_and_lesson_enforcer_repair_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_gate_metadata_patch_apply_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_gate_metadata_patch_apply_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, .write_bytes(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_gate_metadata_patch_approval_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_gate_metadata_patch_approval_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_governance_repair_suite_ledger_alpha_prereg_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_governance_repair_suite_ledger_alpha_prereg_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_holdout_trigger_and_vault_status_repair_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_holdout_trigger_and_vault_status_repair_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_stability_repair_diagnostic_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_month_stability_repair_diagnostic_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_baseline_method_repair_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_null_baseline_method_repair_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_baseline_method_repair_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_null_baseline_method_repair_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_baseline_method_repair_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_null_baseline_method_repair_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_old_short_guarded_runtime_reenable_apply_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_old_short_guarded_runtime_reenable_apply_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, .write_bytes(, unlink(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_patch_integrity_and_explicit_flag_policy_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_patch_integrity_and_explicit_flag_policy_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_repo_cleanup_plan_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_repo_cleanup_plan_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_runtime_family_status_panel_and_backup_hygiene_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_runtime_family_status_panel_and_backup_hygiene_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_claude_critical_patch_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_claude_critical_patch_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_master_gate_compatibility_repair_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_master_gate_compatibility_repair_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_master_gate_compatibility_repair_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_master_gate_compatibility_repair_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_master_launcher_gate_repair_v3.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_master_launcher_gate_repair_v3.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_master_upper_system_boot_repair_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_master_upper_system_boot_repair_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_patch_launcher_remove_blocking_risk_line_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_patch_launcher_remove_blocking_risk_line_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_patch_master_launcher_risk_args_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_patch_master_launcher_risk_args_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_risk_manager_v4_wrapper_patch_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_risk_manager_v4_wrapper_patch_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_signal_id_fallback_line_patch_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_signal_id_fallback_line_patch_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "mutating_tool_requires_gate_or_manual_approval",
+    "risk_level": "ATTENTION",
+    "reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  }
+]
+
+RUNTIME SURFACE MANUAL REVIEW SAMPLE
+----------------------------------------------------------------------------------------------------
+[
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_autopilot.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_autopilot.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_claude_runtime_confirmation_exporter_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_claude_runtime_confirmation_exporter_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_live_decision_dashboard.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_live_decision_dashboard.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_live_performance_analyzer.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_live_performance_analyzer.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_live_performance_analyzer_v3.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_live_performance_analyzer_v3.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_live_vs_backtest_drift_monitor.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_live_vs_backtest_drift_monitor.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_autopilot_loop.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_os_autopilot_loop.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_autopilot_loop_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_os_autopilot_loop_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_autopilot_loop_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_os_autopilot_loop_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_autopilot_loop_v3.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_os_autopilot_loop_v3.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_autopilot_loop_v4.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_os_autopilot_loop_v4.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_command_center_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_command_center_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_command_center_v2_overlay.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_command_center_v2_overlay.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_paper_runtime_observer.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_paper_runtime_observer.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_process_watchdog_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_process_watchdog_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_process_watchdog_v1_backup_autopilot_v4_20260511_214912.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_process_watchdog_v1_backup_autopilot_v4_20260511_214912.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_os_supervisor_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_supervisor_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_rel_extreme_shadow_runtime_engine_auditor_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_rel_extreme_shadow_runtime_engine_auditor_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_rel_extreme_shadow_runtime_engine_auditor_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_rel_extreme_shadow_runtime_engine_auditor_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_rel_extreme_shadow_runtime_engine_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_rel_extreme_shadow_runtime_engine_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_rel_extreme_shadow_runtime_engine_builder_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_rel_extreme_shadow_runtime_engine_builder_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_ret60_shadow_runtime_engine_auditor_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_ret60_shadow_runtime_engine_auditor_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_ret60_shadow_runtime_engine_builder.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_ret60_shadow_runtime_engine_builder.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_ret60_shadow_runtime_engine_builder_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_ret60_shadow_runtime_engine_builder_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_ret60_shadow_runtime_observer_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_ret60_shadow_runtime_observer_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_risk_manager_candidate_auditor_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_risk_manager_candidate_auditor_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_risk_manager_v4_wrapper_patch.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_risk_manager_v4_wrapper_patch.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/global_paper_risk_manager.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/global_paper_risk_manager.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/global_paper_risk_manager_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/global_paper_risk_manager_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/global_paper_risk_manager_v3_priority.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/global_paper_risk_manager_v3_priority.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/impulse_event_long_live_paper_logger.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/impulse_event_long_live_paper_logger.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/impulse_long_gate_aware_live_paper_logger.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/impulse_long_gate_aware_live_paper_logger.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/market_relative_live_paper_logger.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/market_relative_live_paper_logger.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/okx_event_impulse_live_paper_logger.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/okx_event_impulse_live_paper_logger.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/old_short_gate_aware_live_paper_logger.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/old_short_gate_aware_live_paper_logger.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/session_ret60_reversal_live_paper_logger.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/session_ret60_reversal_live_paper_logger.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/session_short_gate_aware_live_paper_logger.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/session_short_gate_aware_live_paper_logger.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/weak_market_breakdown_short_live_paper_logger.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/weak_market_breakdown_short_live_paper_logger.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "runtime_surface_mutation_risk_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "src runtime/launcher/paper/live/risk surface should not be patched automatically.",
+    "signals": {
+      "has_safe_governance": false,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_autopilot.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_autopilot.py",
+    "evidence": "Matched: start_edge_factory, subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_claude_runtime_confirmation_exporter_v2.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_claude_runtime_confirmation_exporter_v2.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM, subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_live_vs_backtest_drift_monitor.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_live_vs_backtest_drift_monitor.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_os_command_center_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_command_center_v1.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM, subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_os_command_center_v2_overlay.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_command_center_v2_overlay.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM, subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_os_paper_runtime_observer.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_paper_runtime_observer.py",
+    "evidence": "Matched: start_edge_factory, MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_os_process_watchdog_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_process_watchdog_v1.py",
+    "evidence": "Matched: start_edge_factory, MASTER_UPPER_SYSTEM, subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_os_process_watchdog_v1_backup_autopilot_v4_20260511_214912.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_process_watchdog_v1_backup_autopilot_v4_20260511_214912.py",
+    "evidence": "Matched: start_edge_factory, MASTER_UPPER_SYSTEM, subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_os_supervisor_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_os_supervisor_v1.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_rel_extreme_shadow_runtime_engine_auditor_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_rel_extreme_shadow_runtime_engine_auditor_v1.py",
+    "evidence": "Matched: subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_rel_extreme_shadow_runtime_engine_auditor_v2.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_rel_extreme_shadow_runtime_engine_auditor_v2.py",
+    "evidence": "Matched: subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_rel_extreme_shadow_runtime_engine_builder_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_rel_extreme_shadow_runtime_engine_builder_v1.py",
+    "evidence": "Matched: subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_rel_extreme_shadow_runtime_engine_builder_v2.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_rel_extreme_shadow_runtime_engine_builder_v2.py",
+    "evidence": "Matched: subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_ret60_shadow_runtime_engine_auditor_v2.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_ret60_shadow_runtime_engine_auditor_v2.py",
+    "evidence": "Matched: subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_ret60_shadow_runtime_engine_builder.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_ret60_shadow_runtime_engine_builder.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_risk_manager_candidate_auditor_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_risk_manager_candidate_auditor_v1.py",
+    "evidence": "Matched: subprocess.run",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/edge_factory_risk_manager_v4_wrapper_patch.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_risk_manager_v4_wrapper_patch.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/global_paper_risk_manager_v2.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/global_paper_risk_manager_v2.py",
+    "evidence": "Matched: Start-Process",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/global_paper_risk_manager_v4_config.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/global_paper_risk_manager_v4_config.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/impulse_long_gate_aware_live_paper_logger.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/impulse_long_gate_aware_live_paper_logger.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/market_relative_live_paper_logger.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/market_relative_live_paper_logger.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/old_short_gate_aware_live_paper_logger.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/old_short_gate_aware_live_paper_logger.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:src/weak_market_breakdown_short_live_paper_logger.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "src/weak_market_breakdown_short_live_paper_logger.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM",
+    "classification": "real_runtime_surface_requires_strict_manual_gate",
+    "risk_level": "ATTENTION",
+    "reason": "Runtime/launcher source surface should be reviewed manually; no automatic patch.",
+    "signals": {
+      "has_safe_block_flags": false,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": true,
+      "is_governance_tool": false,
+      "text_read": true
+    }
+  }
+]
+
+DANGEROUS PATTERN MANUAL REVIEW SAMPLE
+----------------------------------------------------------------------------------------------------
+[
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_action_discipline_policy_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_action_discipline_policy_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_active_core_manifest_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_active_core_manifest_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_artifact_freshness_index_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_artifact_freshness_index_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_autopilot_decision_adapter_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_autopilot_decision_adapter_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_calm_market_low_vol_continuation_archetype_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_calm_market_low_vol_continuation_archetype_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_calm_market_low_vol_continuation_archetype_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_calm_market_low_vol_continuation_archetype_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_control_tower_cycle_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_control_tower_cycle_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_control_tower_decision_journal_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_control_tower_decision_journal_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_control_tower_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_control_tower_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_cost_sensitivity_matrix_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_cost_sensitivity_matrix_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_cycle_operator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_cycle_operator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_cycle_operator_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_cycle_operator_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_cycle_operator_v3.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_cycle_operator_v3.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_cycle_operator_v4.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_cycle_operator_v4.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_cycle_scheduler_policy_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_cycle_scheduler_policy_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_dangerous_marker_review_index_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_dangerous_marker_review_index_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_data_quality_guard_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_data_quality_guard_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_data_quality_guard_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_data_quality_guard_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_data_quality_panel_bias_audit_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_data_quality_panel_bias_audit_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_data_quality_panel_bias_audit_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_data_quality_panel_bias_audit_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_data_quality_panel_bias_audit_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_data_quality_panel_bias_audit_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_dependency_graph_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_dependency_graph_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_error_inventory_v4.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_error_inventory_v4.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_execution_router_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_execution_router_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_exit_risk_shape_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_exit_risk_shape_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_exit_risk_shape_deep_validation_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_exit_risk_shape_deep_validation_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_exit_risk_shape_deep_validation_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_exit_risk_shape_deep_validation_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_exit_risk_shape_deep_validation_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_exit_risk_shape_deep_validation_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_exit_risk_shape_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_exit_risk_shape_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_exit_risk_shape_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_exit_risk_shape_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_external_audit_packet_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_external_audit_packet_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_external_audit_packet_refresh_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_external_audit_packet_refresh_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_drift_review_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_drift_review_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_drift_review_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_drift_review_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_drift_review_v3.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_drift_review_v3.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_exposure_profiler_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_exposure_profiler_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_exposure_trend_watcher_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_exposure_trend_watcher_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_performance_discipline_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_performance_discipline_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_performance_profiler_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_performance_profiler_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_sample_balance_watcher_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_family_sample_balance_watcher_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_framework_router_spec_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_framework_router_spec_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_framework_status_panel_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_framework_status_panel_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_full_prerequisite_chain_orchestrator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_full_prerequisite_chain_orchestrator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_full_universe_offline_backtest_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_full_universe_offline_backtest_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_generic_framework_skeleton_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_generic_framework_skeleton_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_generic_research_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_generic_research_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_generic_research_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_generic_research_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_generic_research_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_generic_research_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_global_multiple_testing_ledger_and_research_budget_policy_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_global_multiple_testing_ledger_and_research_budget_policy_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_global_route_family_alpha_accountant_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_global_route_family_alpha_accountant_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_governed_research_reopen_gate_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_governed_research_reopen_gate_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_guarded_feature_space_expansion_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_guarded_feature_space_expansion_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_impulse_long_evidence_locator_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_impulse_long_evidence_locator_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_impulse_long_failure_attribution_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_impulse_long_failure_attribution_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_impulse_long_row_level_diagnostic_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_impulse_long_row_level_diagnostic_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_impulse_long_row_level_diagnostic_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_impulse_long_row_level_diagnostic_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_joint_null_distribution_validator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_joint_null_distribution_validator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_label_free_event_motif_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_label_free_event_motif_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_label_free_event_motif_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_label_free_event_motif_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_label_free_event_motif_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_label_free_event_motif_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_market_neutral_relative_value_archetype_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_market_neutral_relative_value_archetype_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_market_neutral_relative_value_archetype_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_market_neutral_relative_value_archetype_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_market_state_transition_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_market_state_transition_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_market_state_transition_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_market_state_transition_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_module_consolidation_planner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_module_consolidation_planner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_monitoring_stack_runner_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_monitoring_stack_runner_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_monitoring_stack_runner_v4.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_monitoring_stack_runner_v4.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_monitoring_stack_runner_v5.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_monitoring_stack_runner_v5.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_monitoring_stack_runner_v6.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_monitoring_stack_runner_v6.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_regime_instability_diagnostic_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_month_regime_instability_diagnostic_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_next_action_planner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_next_action_planner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_baseline_method_audit_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_null_baseline_method_audit_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_model_permutation_baseline_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_null_model_permutation_baseline_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_model_permutation_baseline_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_null_model_permutation_baseline_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_model_permutation_baseline_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_null_model_permutation_baseline_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_offline_research_result_synthesizer_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_offline_research_result_synthesizer_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_offline_threshold_sweep_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_offline_threshold_sweep_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_old_short_final_runtime_reenable_execution_approval_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_old_short_final_runtime_reenable_execution_approval_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_open_pending_aging_watcher_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_open_pending_aging_watcher_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_policy_engine_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_policy_engine_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "dangerous_mutation_pattern_requires_manual_review",
+    "risk_level": "ATTENTION",
+    "reason": "Potential delete/move/process/subprocess mutation pattern detected; requires manual review.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  }
+]
+
+LIKELY FALSE POSITIVE SAMPLE
+----------------------------------------------------------------------------------------------------
+[
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_action_prerequisite_guard_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_action_prerequisite_guard_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_ai_review_adapter_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_ai_review_adapter_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_ai_review_packet_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_ai_review_packet_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_attention_audit_triage_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_attention_audit_triage_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_attention_issue_policy_classifier_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_attention_issue_policy_classifier_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.move, os.remove, unlink(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_bom_syntax_repair_preview_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_bom_syntax_repair_preview_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_bom_syntax_repair_remaining_preview_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_bom_syntax_repair_remaining_preview_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_broader_month_feature_engine_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_broader_month_feature_engine_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_broader_month_feature_engine_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_broader_month_feature_engine_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_broader_month_feature_engine_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_broader_month_feature_engine_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_broken_paths_and_chain_fix_preview_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_broken_paths_and_chain_fix_preview_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_candidate_route_lesson_memory_checker_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_candidate_route_lesson_memory_checker_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_canonical_month_window_guard_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_canonical_month_window_guard_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_cost_sensitivity_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_cost_sensitivity_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_error_acknowledgement_policy_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_error_acknowledgement_policy_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_candidate_release_gate_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_candidate_release_gate_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_candidate_release_gate_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_candidate_release_gate_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_candidate_release_gate_v3.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_candidate_release_gate_v3.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_candidate_release_gate_v4.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_family_candidate_release_gate_v4.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_feature_conditioned_research_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_feature_conditioned_research_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_feature_conditioned_research_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_feature_conditioned_research_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_feature_conditioned_research_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_feature_conditioned_research_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_full_universe_failure_lesson_recorder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_full_universe_failure_lesson_recorder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_full_universe_offline_backtest_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_full_universe_offline_backtest_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_gate_metadata_patch_preview_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_gate_metadata_patch_preview_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_gate_review_candidate_preview_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_gate_review_candidate_preview_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(, shutil.move, os.remove, unlink(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_impulse_long_evidence_locator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_impulse_long_evidence_locator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_lesson_memory_checker_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_lesson_memory_checker_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_memory_lesson_index_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_memory_lesson_index_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_first_feature_discovery_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_month_first_feature_discovery_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_first_feature_discovery_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_month_first_feature_discovery_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_first_feature_discovery_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_month_first_feature_discovery_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_regime_instability_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_month_regime_instability_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_stability_repair_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_month_stability_repair_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_stability_repair_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_month_stability_repair_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_new_research_direction_queue_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_new_research_direction_queue_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_new_research_direction_queue_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_new_research_direction_queue_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_new_research_direction_queue_v3.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_new_research_direction_queue_v3.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_non_impulse_mean_reversion_archetype_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_non_impulse_mean_reversion_archetype_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_non_impulse_mean_reversion_archetype_runner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_non_impulse_mean_reversion_archetype_runner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_offline_research_contract_planner_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_offline_research_contract_planner_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_offline_research_contract_validator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_offline_research_contract_validator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_offline_research_runner_plan_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_offline_research_runner_plan_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_old_short_guarded_runtime_reenable_patch_preview_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_old_short_guarded_runtime_reenable_patch_preview_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": true,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_regime_bucket_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_regime_bucket_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_regime_filtered_candidate_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_regime_filtered_candidate_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_regime_filtered_candidate_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_regime_filtered_candidate_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_research_direction_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_research_direction_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_research_direction_contract_builder_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_research_direction_contract_builder_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_research_direction_contract_builder_v3.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_research_direction_contract_builder_v3.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_research_direction_contract_builder_v4.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_research_direction_contract_builder_v4.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_research_hypothesis_generator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_research_hypothesis_generator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_strict_month_stability_failure_lesson_recorder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_strict_month_stability_failure_lesson_recorder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_strict_month_stability_policy_guard_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_strict_month_stability_policy_guard_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_strict_month_stability_policy_guard_v2.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_strict_month_stability_policy_guard_v2.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_strict_month_stable_archetype_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_strict_month_stable_archetype_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_volatility_range_regime_contract_builder_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_volatility_range_regime_contract_builder_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_volatility_range_regime_filter_evaluator_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "tools/edge_factory_os_volatility_range_regime_filter_evaluator_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "guarded_governance_output_writer_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Tool appears to write governance/report artifacts and carries safety/read-only/repo-only guards.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": true,
+      "is_src": false,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_error_classifier_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "INFO",
+    "path": "src/edge_factory_error_classifier_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "MUTATION_SURFACE:src/edge_factory_offline_candidate_selftest_triage_v1.py",
+    "category": "mutation_without_explicit_gate",
+    "severity": "ATTENTION",
+    "path": "src/edge_factory_offline_candidate_selftest_triage_v1.py",
+    "evidence": "Mutation-like tokens: .write_text(",
+    "classification": "expected_repo_output_writer_preview_or_audit",
+    "risk_level": "INFO",
+    "reason": "Preview/audit/classifier modules legitimately write their own report artifacts; no target mutation implied.",
+    "signals": {
+      "has_safe_governance": true,
+      "has_dangerous_hint": false,
+      "has_write_hint": true,
+      "is_tool": false,
+      "is_src": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:tools/edge_factory_os_artifact_freshness_index_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_artifact_freshness_index_v1.py",
+    "evidence": "Matched: subprocess.run",
+    "classification": "guarded_launcher_reference_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Governance tool appears to reference launcher/runtime while explicitly blocking it.",
+    "signals": {
+      "has_safe_block_flags": true,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": false,
+      "is_governance_tool": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:tools/edge_factory_os_control_tower_decision_journal_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_control_tower_decision_journal_v1.py",
+    "evidence": "Matched: subprocess.run",
+    "classification": "guarded_launcher_reference_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Governance tool appears to reference launcher/runtime while explicitly blocking it.",
+    "signals": {
+      "has_safe_block_flags": true,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": false,
+      "is_governance_tool": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:tools/edge_factory_os_dependency_graph_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_dependency_graph_v1.py",
+    "evidence": "Matched: Start-Process, start_edge_factory, MASTER_UPPER_SYSTEM, subprocess.run",
+    "classification": "guarded_launcher_reference_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Governance tool appears to reference launcher/runtime while explicitly blocking it.",
+    "signals": {
+      "has_safe_block_flags": true,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": false,
+      "is_governance_tool": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:tools/edge_factory_os_error_inventory_v4.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_error_inventory_v4.py",
+    "evidence": "Matched: MASTER_UPPER_SYSTEM, subprocess.run",
+    "classification": "guarded_launcher_reference_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Governance tool appears to reference launcher/runtime while explicitly blocking it.",
+    "signals": {
+      "has_safe_block_flags": true,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": false,
+      "is_governance_tool": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:tools/edge_factory_os_family_sample_balance_watcher_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_family_sample_balance_watcher_v1.py",
+    "evidence": "Matched: subprocess.run",
+    "classification": "guarded_launcher_reference_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Governance tool appears to reference launcher/runtime while explicitly blocking it.",
+    "signals": {
+      "has_safe_block_flags": true,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": false,
+      "is_governance_tool": true,
+      "text_read": true
+    }
+  },
+  {
+    "issue_id": "LAUNCHER_RUNTIME_RISK:tools/edge_factory_os_repo_source_map_v1.py",
+    "category": "launcher_runtime_risk_heuristic",
+    "severity": "ATTENTION",
+    "path": "tools/edge_factory_os_repo_source_map_v1.py",
+    "evidence": "Matched: Start-Process, start_edge_factory, MASTER_UPPER_SYSTEM, subprocess.run",
+    "classification": "guarded_launcher_reference_likely_false_positive",
+    "risk_level": "INFO",
+    "reason": "Governance tool appears to reference launcher/runtime while explicitly blocking it.",
+    "signals": {
+      "has_safe_block_flags": true,
+      "has_launcher_start_hint": true,
+      "is_runtime_src": false,
+      "is_governance_tool": true,
+      "text_read": true
+    }
+  }
+]
+
+RECOMMENDED POLICY
+----------------------------------------------------------------------------------------------------
+[
+  {
+    "policy": "No direct code apply from heuristic audit categories.",
+    "reason": "Mutation and launcher heuristics require review packets and explicit gates."
+  },
+  {
+    "policy": "Preview/approval before any mutating repair module changes.",
+    "reason": "Apply/repair/patch/hygiene tools can be legitimate but must show explicit gate metadata."
+  },
+  {
+    "policy": "Runtime/src surfaces are manual-review only.",
+    "reason": "Runtime, launcher, supervisor, paper, live, and risk surfaces must not be changed by heuristic cleanup."
+  },
+  {
+    "policy": "Duplicate/superseded cleanup requires manual hygiene approval.",
+    "reason": "Delete/move/archive remains blocked without explicit approval."
+  },
+  {
+    "policy": "False positives should be suppressed in audit policy, not by editing historical reports.",
+    "reason": "Preserve evidence and lesson memory."
+  }
+]
+
+FORBIDDEN ACTIONS
+----------------------------------------------------------------------------------------------------
+- Do not modify target files.
+- Do not apply fixes.
+- Do not delete or move backup files.
+- Do not change .gitignore.
+- Do not use git add -f.
+- Do not run launcher.
+- Do not touch runtime.
+- Do not start processes.
+- Do not run strategy research.
+- Do not generate candidates.
+- Do not change capital.
+- Do not enable active paper.
+- Do not enable live trading.
+- Do not enable or send real orders.
+- Do not touch holdout.
+- Do not run old_short guarded apply.

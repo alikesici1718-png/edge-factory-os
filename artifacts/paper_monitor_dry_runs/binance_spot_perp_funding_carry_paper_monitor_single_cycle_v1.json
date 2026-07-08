@@ -1,0 +1,1531 @@
+{
+  "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_PAPER_MONITOR_SINGLE_CYCLE_DRY_RUN",
+  "classification": {
+    "classification": "PAPER_MONITOR_SINGLE_CYCLE_PARTIAL_RISK_FLAGS_NO_LIVE_PERMISSION",
+    "classification_grants_live_or_capital_permission": false
+  },
+  "exchange_rule_snapshot_summary": {
+    "extracted_rules": {
+      "futures_exchange_rules": {
+        "BTCUSDT": {
+          "baseAsset": "BTC",
+          "contractType": "PERPETUAL",
+          "filters": {
+            "LOT_SIZE": {
+              "maxQty": "1000",
+              "minQty": "0.001",
+              "stepSize": "0.001"
+            },
+            "MARKET_LOT_SIZE": {
+              "maxQty": "120",
+              "minQty": "0.001",
+              "stepSize": "0.001"
+            },
+            "MAX_NUM_ORDERS": {
+              "limit": 200
+            },
+            "MIN_NOTIONAL": {
+              "notional": "50"
+            },
+            "PERCENT_PRICE": {
+              "multiplierDecimal": "4",
+              "multiplierDown": "0.9500",
+              "multiplierUp": "1.0500"
+            },
+            "POSITION_RISK_CONTROL": {
+              "positionControlSide": "NONE"
+            },
+            "PRICE_FILTER": {
+              "maxPrice": "4529764",
+              "minPrice": "556.80",
+              "tickSize": "0.10"
+            }
+          },
+          "marginAsset": "USDT",
+          "orderTypes": [
+            "LIMIT",
+            "MARKET",
+            "STOP",
+            "STOP_MARKET",
+            "TAKE_PROFIT",
+            "TAKE_PROFIT_MARKET",
+            "TRAILING_STOP_MARKET"
+          ],
+          "quoteAsset": "USDT",
+          "status": "TRADING",
+          "symbol": "BTCUSDT"
+        },
+        "ETHUSDT": {
+          "baseAsset": "ETH",
+          "contractType": "PERPETUAL",
+          "filters": {
+            "LOT_SIZE": {
+              "maxQty": "10000",
+              "minQty": "0.001",
+              "stepSize": "0.001"
+            },
+            "MARKET_LOT_SIZE": {
+              "maxQty": "2000",
+              "minQty": "0.001",
+              "stepSize": "0.001"
+            },
+            "MAX_NUM_ORDERS": {
+              "limit": 200
+            },
+            "MIN_NOTIONAL": {
+              "notional": "20"
+            },
+            "PERCENT_PRICE": {
+              "multiplierDecimal": "4",
+              "multiplierDown": "0.9500",
+              "multiplierUp": "1.0500"
+            },
+            "POSITION_RISK_CONTROL": {
+              "positionControlSide": "NONE"
+            },
+            "PRICE_FILTER": {
+              "maxPrice": "306177",
+              "minPrice": "39.86",
+              "tickSize": "0.01"
+            }
+          },
+          "marginAsset": "USDT",
+          "orderTypes": [
+            "LIMIT",
+            "MARKET",
+            "STOP",
+            "STOP_MARKET",
+            "TAKE_PROFIT",
+            "TAKE_PROFIT_MARKET",
+            "TRAILING_STOP_MARKET"
+          ],
+          "quoteAsset": "USDT",
+          "status": "TRADING",
+          "symbol": "ETHUSDT"
+        },
+        "SOLUSDT": {
+          "baseAsset": "SOL",
+          "contractType": "PERPETUAL",
+          "filters": {
+            "LOT_SIZE": {
+              "maxQty": "1000000",
+              "minQty": "0.01",
+              "stepSize": "0.01"
+            },
+            "MARKET_LOT_SIZE": {
+              "maxQty": "6000",
+              "minQty": "0.01",
+              "stepSize": "0.01"
+            },
+            "MAX_NUM_ORDERS": {
+              "limit": 200
+            },
+            "MIN_NOTIONAL": {
+              "notional": "5"
+            },
+            "PERCENT_PRICE": {
+              "multiplierDecimal": "4",
+              "multiplierDown": "0.9500",
+              "multiplierUp": "1.0500"
+            },
+            "POSITION_RISK_CONTROL": {
+              "positionControlSide": "NONE"
+            },
+            "PRICE_FILTER": {
+              "maxPrice": "6857",
+              "minPrice": "0.4200",
+              "tickSize": "0.0100"
+            }
+          },
+          "marginAsset": "USDT",
+          "orderTypes": [
+            "LIMIT",
+            "MARKET",
+            "STOP",
+            "STOP_MARKET",
+            "TAKE_PROFIT",
+            "TAKE_PROFIT_MARKET",
+            "TRAILING_STOP_MARKET"
+          ],
+          "quoteAsset": "USDT",
+          "status": "TRADING",
+          "symbol": "SOLUSDT"
+        }
+      },
+      "spot_exchange_rules": {
+        "BTCUSDT": {
+          "baseAsset": "BTC",
+          "filters": {
+            "ICEBERG_PARTS": {
+              "limit": 100
+            },
+            "LOT_SIZE": {
+              "maxQty": "9000.00000000",
+              "minQty": "0.00001000",
+              "stepSize": "0.00001000"
+            },
+            "MARKET_LOT_SIZE": {
+              "maxQty": "152.89092912",
+              "minQty": "0.00000000",
+              "stepSize": "0.00000000"
+            },
+            "MAX_NUM_ALGO_ORDERS": {
+              "maxNumAlgoOrders": 5
+            },
+            "MAX_NUM_ORDERS": {
+              "maxNumOrders": 200
+            },
+            "MAX_NUM_ORDER_AMENDS": {
+              "maxNumOrderAmends": 10
+            },
+            "MAX_NUM_ORDER_LISTS": {
+              "maxNumOrderLists": 20
+            },
+            "NOTIONAL": {
+              "applyMaxToMarket": false,
+              "applyMinToMarket": true,
+              "avgPriceMins": 5,
+              "maxNotional": "9000000.00000000",
+              "minNotional": "5.00000000"
+            },
+            "PERCENT_PRICE_BY_SIDE": {
+              "askMultiplierDown": "0.5",
+              "askMultiplierUp": "2",
+              "avgPriceMins": 5,
+              "bidMultiplierDown": "0.5",
+              "bidMultiplierUp": "2"
+            },
+            "PRICE_FILTER": {
+              "maxPrice": "1000000.00000000",
+              "minPrice": "0.01000000",
+              "tickSize": "0.01000000"
+            },
+            "TRAILING_DELTA": {
+              "maxTrailingAboveDelta": 2000,
+              "maxTrailingBelowDelta": 2000,
+              "minTrailingAboveDelta": 10,
+              "minTrailingBelowDelta": 10
+            }
+          },
+          "isSpotTradingAllowed": true,
+          "orderTypes": [
+            "LIMIT",
+            "LIMIT_MAKER",
+            "MARKET",
+            "STOP_LOSS",
+            "STOP_LOSS_LIMIT",
+            "TAKE_PROFIT",
+            "TAKE_PROFIT_LIMIT"
+          ],
+          "quoteAsset": "USDT",
+          "status": "TRADING",
+          "symbol": "BTCUSDT"
+        },
+        "ETHUSDT": {
+          "baseAsset": "ETH",
+          "filters": {
+            "ICEBERG_PARTS": {
+              "limit": 100
+            },
+            "LOT_SIZE": {
+              "maxQty": "9000.00000000",
+              "minQty": "0.00010000",
+              "stepSize": "0.00010000"
+            },
+            "MARKET_LOT_SIZE": {
+              "maxQty": "3332.86847000",
+              "minQty": "0.00000000",
+              "stepSize": "0.00000000"
+            },
+            "MAX_NUM_ALGO_ORDERS": {
+              "maxNumAlgoOrders": 5
+            },
+            "MAX_NUM_ORDERS": {
+              "maxNumOrders": 200
+            },
+            "MAX_NUM_ORDER_AMENDS": {
+              "maxNumOrderAmends": 10
+            },
+            "MAX_NUM_ORDER_LISTS": {
+              "maxNumOrderLists": 20
+            },
+            "NOTIONAL": {
+              "applyMaxToMarket": false,
+              "applyMinToMarket": true,
+              "avgPriceMins": 5,
+              "maxNotional": "9000000.00000000",
+              "minNotional": "5.00000000"
+            },
+            "PERCENT_PRICE_BY_SIDE": {
+              "askMultiplierDown": "0.5",
+              "askMultiplierUp": "2",
+              "avgPriceMins": 5,
+              "bidMultiplierDown": "0.5",
+              "bidMultiplierUp": "2"
+            },
+            "PRICE_FILTER": {
+              "maxPrice": "1000000.00000000",
+              "minPrice": "0.01000000",
+              "tickSize": "0.01000000"
+            },
+            "TRAILING_DELTA": {
+              "maxTrailingAboveDelta": 2000,
+              "maxTrailingBelowDelta": 2000,
+              "minTrailingAboveDelta": 10,
+              "minTrailingBelowDelta": 10
+            }
+          },
+          "isSpotTradingAllowed": true,
+          "orderTypes": [
+            "LIMIT",
+            "LIMIT_MAKER",
+            "MARKET",
+            "STOP_LOSS",
+            "STOP_LOSS_LIMIT",
+            "TAKE_PROFIT",
+            "TAKE_PROFIT_LIMIT"
+          ],
+          "quoteAsset": "USDT",
+          "status": "TRADING",
+          "symbol": "ETHUSDT"
+        },
+        "SOLUSDT": {
+          "baseAsset": "SOL",
+          "filters": {
+            "ICEBERG_PARTS": {
+              "limit": 100
+            },
+            "LOT_SIZE": {
+              "maxQty": "90000.00000000",
+              "minQty": "0.00100000",
+              "stepSize": "0.00100000"
+            },
+            "MARKET_LOT_SIZE": {
+              "maxQty": "96397.49134583",
+              "minQty": "0.00000000",
+              "stepSize": "0.00000000"
+            },
+            "MAX_NUM_ALGO_ORDERS": {
+              "maxNumAlgoOrders": 5
+            },
+            "MAX_NUM_ORDERS": {
+              "maxNumOrders": 200
+            },
+            "MAX_NUM_ORDER_AMENDS": {
+              "maxNumOrderAmends": 10
+            },
+            "MAX_NUM_ORDER_LISTS": {
+              "maxNumOrderLists": 20
+            },
+            "NOTIONAL": {
+              "applyMaxToMarket": false,
+              "applyMinToMarket": true,
+              "avgPriceMins": 5,
+              "maxNotional": "9000000.00000000",
+              "minNotional": "5.00000000"
+            },
+            "PERCENT_PRICE_BY_SIDE": {
+              "askMultiplierDown": "0.5",
+              "askMultiplierUp": "2",
+              "avgPriceMins": 5,
+              "bidMultiplierDown": "0.5",
+              "bidMultiplierUp": "2"
+            },
+            "PRICE_FILTER": {
+              "maxPrice": "10000.00000000",
+              "minPrice": "0.01000000",
+              "tickSize": "0.01000000"
+            },
+            "TRAILING_DELTA": {
+              "maxTrailingAboveDelta": 2000,
+              "maxTrailingBelowDelta": 2000,
+              "minTrailingAboveDelta": 10,
+              "minTrailingBelowDelta": 10
+            }
+          },
+          "isSpotTradingAllowed": true,
+          "orderTypes": [
+            "LIMIT",
+            "LIMIT_MAKER",
+            "MARKET",
+            "STOP_LOSS",
+            "STOP_LOSS_LIMIT",
+            "TAKE_PROFIT",
+            "TAKE_PROFIT_LIMIT"
+          ],
+          "quoteAsset": "USDT",
+          "status": "TRADING",
+          "symbol": "SOLUSDT"
+        }
+      }
+    },
+    "futures_exchange_info_loaded": true,
+    "futures_symbol_status": {
+      "BTCUSDT": "TRADING",
+      "ETHUSDT": "TRADING",
+      "SOLUSDT": "TRADING"
+    },
+    "futures_symbols_found": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "metadata": {
+      "futures_exchange_info": {
+        "error": null,
+        "http_status": 200,
+        "request_started_utc": "2026-05-25T11:35:56Z",
+        "response_bytes": 914830,
+        "response_completed_utc": "2026-05-25T11:35:57Z",
+        "sha256": "ba2141d057ef58518b2ebe64cddf894a648ed52a611460319bd0f85a90db141e",
+        "url": "https://fapi.binance.com/fapi/v1/exchangeInfo"
+      },
+      "spot_exchange_info": {
+        "error": null,
+        "http_status": 200,
+        "request_started_utc": "2026-05-25T11:35:52Z",
+        "response_bytes": 16914123,
+        "response_completed_utc": "2026-05-25T11:35:56Z",
+        "sha256": "9d936e5dabc20f2493cdc6b90d7275231ab00e85f0cbbbd5acdc9946a98a15fa",
+        "url": "https://api.binance.com/api/v3/exchangeInfo"
+      }
+    },
+    "spot_exchange_info_loaded": true,
+    "spot_symbol_status": {
+      "BTCUSDT": "TRADING",
+      "ETHUSDT": "TRADING",
+      "SOLUSDT": "TRADING"
+    },
+    "spot_symbols_found": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "limitations": [
+    "This is one manual paper dry-run cycle only.",
+    "Public Binance market-data and exchangeInfo endpoints were used; no private, account, balance, commission, listen-key, or order endpoint was used.",
+    "Simulated entries are labeled SIMULATED_NOT_ORDER and do not contain real order payloads.",
+    "No daemon, scheduler, service, runtime config, paper monitor enablement, live trading, or capital allocation is created.",
+    "No candidate generation, edge claim, or family release is created."
+  ],
+  "module": "tools/edge_factory_os_repo_only_binance_spot_perp_funding_carry_paper_monitor_single_cycle_v1.py",
+  "next_allowed_step": "PAPER_MONITOR_MULTI_CYCLE_DRY_RUN_DESIGN_ONLY",
+  "paper_state_machine_trace": [
+    {
+      "action": "manual single-cycle dry run invoked",
+      "orders_allowed": false,
+      "state": "DISABLED"
+    },
+    {
+      "action": "fetch allowed public price and premium snapshots",
+      "orders_allowed": false,
+      "state": "SNAPSHOT_PUBLIC_MARKET_DATA"
+    },
+    {
+      "action": "fetch allowed public exchangeInfo rules",
+      "orders_allowed": false,
+      "state": "REFRESH_EXCHANGE_RULES"
+    },
+    {
+      "action": "run common-base-quantity sizing",
+      "orders_allowed": false,
+      "state": "RUN_REPAIRED_SIZING"
+    },
+    {
+      "action": "paper entry decision only for passing scenarios",
+      "label": "SIMULATED_NOT_ORDER",
+      "orders_allowed": false,
+      "state": "SIMULATE_ENTRY_DECISION"
+    },
+    {
+      "action": "write immutable report-only artifact",
+      "orders_allowed": false,
+      "state": "REPORT_ONLY"
+    }
+  ],
+  "payload_sha256_excluding_hash": "495fcc7bf364ef7ee1fabb317807c998343a5683ac6681505ef37784ec324d1f",
+  "prior_chain_preserved": {
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "no_live_capital_permission_preserved": true,
+    "paper_monitor_design_classification": "PAPER_MONITOR_DESIGN_READY_FOR_DRY_RUN_IMPLEMENTATION_PREVIEW_NO_LIVE_PERMISSION",
+    "prior_preview_next_allowed_step": "PAPER_MONITOR_DRY_RUN_SINGLE_CYCLE_IMPLEMENTATION_ONLY",
+    "prior_preview_status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_PAPER_MONITOR_DRY_RUN_PREVIEW_CREATED",
+    "risk_capital_classification": "FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_STRONG_DIAGNOSTIC_NO_LIVE_PERMISSION",
+    "route_closed": true,
+    "route_family": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_BASELINE",
+    "sizing_repair_classification": "ORDER_SIZING_REPAIR_SIM_PASS_READY_FOR_PAPER_TRADING_DESIGN_NO_LIVE_PERMISSION",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "public_snapshot_summary": {
+    "api_key_used": false,
+    "futures_symbols_fetched": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "order_endpoint_called": false,
+    "premium_symbols_fetched": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "private_api_used": false,
+    "public_snapshot_complete": true,
+    "snapshot_started_utc": "2026-05-25T11:35:50Z",
+    "snapshot_time_utc": "2026-05-25T11:35:57Z",
+    "spot_symbols_fetched": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "repaired_sizing_results": {
+    "minimum_passing_capital": 235,
+    "passing_capital_scenarios": [
+      235,
+      5000
+    ],
+    "scenario_pass_fail_summary": {
+      "100": false,
+      "1000": false,
+      "235": true,
+      "250": false,
+      "2500": false,
+      "500": false,
+      "5000": true
+    },
+    "scenario_results": [
+      {
+        "capital_usdt": 100,
+        "max_leg_mismatch_bps": 4.3917953706698905,
+        "max_unused_notional_bps": 10000.0,
+        "scenario_pass": false,
+        "scenario_pass_pre_risk": false,
+        "symbol_results": [
+          {
+            "candidate_quantity_count": 0,
+            "capital_usdt": "100",
+            "common_step_size": "0.001",
+            "futures_notional": "0",
+            "futures_price": "77428.3",
+            "futures_quantity": "0",
+            "futures_rule_pass": false,
+            "leg_notional_mismatch_bps": 0.0,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": false,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": false,
+              "futures_min_qty_pass": false,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": false,
+              "spot_min_qty_pass": false,
+              "unused_notional_pass": false
+            },
+            "spot_notional": "0",
+            "spot_price": "77464",
+            "spot_quantity": "0",
+            "spot_rule_pass": false,
+            "symbol": "BTCUSDT",
+            "symbol_pass": false,
+            "target_notional_per_symbol": "33.333333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 10000.0
+          },
+          {
+            "candidate_quantity_count": 15,
+            "capital_usdt": "100",
+            "common_step_size": "0.001",
+            "futures_notional": "31.7568",
+            "futures_price": "2117.12",
+            "futures_quantity": "0.015",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.3917953706698905,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "31.77075",
+            "spot_price": "2118.05",
+            "spot_quantity": "0.015",
+            "spot_rule_pass": true,
+            "symbol": "ETHUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "33.333333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 470.8675
+          },
+          {
+            "candidate_quantity_count": 27,
+            "capital_usdt": "100",
+            "common_step_size": "0.01",
+            "futures_notional": "32.6724",
+            "futures_price": "85.98",
+            "futures_quantity": "0.38",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 3.488574917146346,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "32.6838",
+            "spot_price": "86.01",
+            "spot_quantity": "0.38",
+            "spot_rule_pass": true,
+            "symbol": "SOLUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "33.333333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 196.57
+          }
+        ],
+        "target_notional_per_symbol": "33.333333333333333333333333333333333333333333333333"
+      },
+      {
+        "capital_usdt": 235,
+        "max_leg_mismatch_bps": 4.609654579343196,
+        "max_unused_notional_bps": 113.25744680851064,
+        "scenario_pass": true,
+        "scenario_pass_pre_risk": true,
+        "symbol_results": [
+          {
+            "candidate_quantity_count": 1,
+            "capital_usdt": "235",
+            "common_step_size": "0.001",
+            "futures_notional": "77.4283",
+            "futures_price": "77428.3",
+            "futures_quantity": "0.001",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.609654579343196,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "77.464",
+            "spot_price": "77464",
+            "spot_quantity": "0.001",
+            "spot_rule_pass": true,
+            "symbol": "BTCUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "78.333333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 113.25744680851064
+          },
+          {
+            "candidate_quantity_count": 28,
+            "capital_usdt": "235",
+            "common_step_size": "0.001",
+            "futures_notional": "78.33344",
+            "futures_price": "2117.12",
+            "futures_quantity": "0.037",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.3917953706698905,
+            "max_leg_overspend_bps": 4.406382978723404,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "78.36785",
+            "spot_price": "2118.05",
+            "spot_quantity": "0.037",
+            "spot_rule_pass": true,
+            "symbol": "ETHUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "78.333333333333333333333333333333333333333333333333",
+            "unused_notional_bps": -2.21
+          },
+          {
+            "candidate_quantity_count": 27,
+            "capital_usdt": "235",
+            "common_step_size": "0.01",
+            "futures_notional": "78.2418",
+            "futures_price": "85.98",
+            "futures_quantity": "0.91",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 3.488574917146346,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "78.2691",
+            "spot_price": "86.01",
+            "spot_quantity": "0.91",
+            "spot_rule_pass": true,
+            "symbol": "SOLUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "78.333333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 9.942553191489361
+          }
+        ],
+        "target_notional_per_symbol": "78.333333333333333333333333333333333333333333333333"
+      },
+      {
+        "capital_usdt": 250,
+        "max_leg_mismatch_bps": 4.609654579343196,
+        "max_unused_notional_bps": 706.462,
+        "scenario_pass": false,
+        "scenario_pass_pre_risk": false,
+        "symbol_results": [
+          {
+            "candidate_quantity_count": 1,
+            "capital_usdt": "250",
+            "common_step_size": "0.001",
+            "futures_notional": "77.4283",
+            "futures_price": "77428.3",
+            "futures_quantity": "0.001",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.609654579343196,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": false
+            },
+            "spot_notional": "77.464",
+            "spot_price": "77464",
+            "spot_quantity": "0.001",
+            "spot_rule_pass": true,
+            "symbol": "BTCUSDT",
+            "symbol_pass": false,
+            "target_notional_per_symbol": "83.333333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 706.462
+          },
+          {
+            "candidate_quantity_count": 27,
+            "capital_usdt": "250",
+            "common_step_size": "0.001",
+            "futures_notional": "82.56768",
+            "futures_price": "2117.12",
+            "futures_quantity": "0.039",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.3917953706698905,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "82.60395",
+            "spot_price": "2118.05",
+            "spot_quantity": "0.039",
+            "spot_rule_pass": true,
+            "symbol": "ETHUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "83.333333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 89.7022
+          },
+          {
+            "candidate_quantity_count": 28,
+            "capital_usdt": "250",
+            "common_step_size": "0.01",
+            "futures_notional": "83.4006",
+            "futures_price": "85.98",
+            "futures_quantity": "0.97",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 3.488574917146346,
+            "max_leg_overspend_bps": 11.564,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "83.4297",
+            "spot_price": "86.01",
+            "spot_quantity": "0.97",
+            "spot_rule_pass": true,
+            "symbol": "SOLUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "83.333333333333333333333333333333333333333333333333",
+            "unused_notional_bps": -9.818
+          }
+        ],
+        "target_notional_per_symbol": "83.333333333333333333333333333333333333333333333333"
+      },
+      {
+        "capital_usdt": 500,
+        "max_leg_mismatch_bps": 4.609654579343196,
+        "max_unused_notional_bps": 706.462,
+        "scenario_pass": false,
+        "scenario_pass_pre_risk": false,
+        "symbol_results": [
+          {
+            "candidate_quantity_count": 2,
+            "capital_usdt": "500",
+            "common_step_size": "0.001",
+            "futures_notional": "154.8566",
+            "futures_price": "77428.3",
+            "futures_quantity": "0.002",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.609654579343196,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": false
+            },
+            "spot_notional": "154.928",
+            "spot_price": "77464",
+            "spot_quantity": "0.002",
+            "spot_rule_pass": true,
+            "symbol": "BTCUSDT",
+            "symbol_pass": false,
+            "target_notional_per_symbol": "166.66666666666666666666666666666666666666666666667",
+            "unused_notional_bps": 706.462
+          },
+          {
+            "candidate_quantity_count": 27,
+            "capital_usdt": "500",
+            "common_step_size": "0.001",
+            "futures_notional": "165.13536",
+            "futures_price": "2117.12",
+            "futures_quantity": "0.078",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.3917953706698905,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "165.2079",
+            "spot_price": "2118.05",
+            "spot_quantity": "0.078",
+            "spot_rule_pass": true,
+            "symbol": "ETHUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "166.66666666666666666666666666666666666666666666667",
+            "unused_notional_bps": 89.7022
+          },
+          {
+            "candidate_quantity_count": 28,
+            "capital_usdt": "500",
+            "common_step_size": "0.01",
+            "futures_notional": "166.8012",
+            "futures_price": "85.98",
+            "futures_quantity": "1.94",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 3.488574917146346,
+            "max_leg_overspend_bps": 11.564,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "166.8594",
+            "spot_price": "86.01",
+            "spot_quantity": "1.94",
+            "spot_rule_pass": true,
+            "symbol": "SOLUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "166.66666666666666666666666666666666666666666666667",
+            "unused_notional_bps": -9.818
+          }
+        ],
+        "target_notional_per_symbol": "166.66666666666666666666666666666666666666666666667"
+      },
+      {
+        "capital_usdt": 1000,
+        "max_leg_mismatch_bps": 4.609654579343196,
+        "max_unused_notional_bps": 706.462,
+        "scenario_pass": false,
+        "scenario_pass_pre_risk": false,
+        "symbol_results": [
+          {
+            "candidate_quantity_count": 4,
+            "capital_usdt": "1000",
+            "common_step_size": "0.001",
+            "futures_notional": "309.7132",
+            "futures_price": "77428.3",
+            "futures_quantity": "0.004",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.609654579343196,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": false
+            },
+            "spot_notional": "309.856",
+            "spot_price": "77464",
+            "spot_quantity": "0.004",
+            "spot_rule_pass": true,
+            "symbol": "BTCUSDT",
+            "symbol_pass": false,
+            "target_notional_per_symbol": "333.33333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 706.462
+          },
+          {
+            "candidate_quantity_count": 27,
+            "capital_usdt": "1000",
+            "common_step_size": "0.001",
+            "futures_notional": "332.38784",
+            "futures_price": "2117.12",
+            "futures_quantity": "0.157",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.3917953706698905,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "332.53385",
+            "spot_price": "2118.05",
+            "spot_quantity": "0.157",
+            "spot_rule_pass": true,
+            "symbol": "ETHUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "333.33333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 26.17465
+          },
+          {
+            "candidate_quantity_count": 28,
+            "capital_usdt": "1000",
+            "common_step_size": "0.01",
+            "futures_notional": "333.6024",
+            "futures_price": "85.98",
+            "futures_quantity": "3.88",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 3.488574917146346,
+            "max_leg_overspend_bps": 11.564,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "333.7188",
+            "spot_price": "86.01",
+            "spot_quantity": "3.88",
+            "spot_rule_pass": true,
+            "symbol": "SOLUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "333.33333333333333333333333333333333333333333333333",
+            "unused_notional_bps": -9.818
+          }
+        ],
+        "target_notional_per_symbol": "333.33333333333333333333333333333333333333333333333"
+      },
+      {
+        "capital_usdt": 2500,
+        "max_leg_mismatch_bps": 4.609654579343196,
+        "max_unused_notional_bps": 706.462,
+        "scenario_pass": false,
+        "scenario_pass_pre_risk": false,
+        "symbol_results": [
+          {
+            "candidate_quantity_count": 10,
+            "capital_usdt": "2500",
+            "common_step_size": "0.001",
+            "futures_notional": "774.283",
+            "futures_price": "77428.3",
+            "futures_quantity": "0.01",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.609654579343196,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": false
+            },
+            "spot_notional": "774.64",
+            "spot_price": "77464",
+            "spot_quantity": "0.01",
+            "spot_rule_pass": true,
+            "symbol": "BTCUSDT",
+            "symbol_pass": false,
+            "target_notional_per_symbol": "833.33333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 706.462
+          },
+          {
+            "candidate_quantity_count": 28,
+            "capital_usdt": "2500",
+            "common_step_size": "0.001",
+            "futures_notional": "834.14528",
+            "futures_price": "2117.12",
+            "futures_quantity": "0.394",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.3917953706698905,
+            "max_leg_overspend_bps": 14.1404,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "834.5117",
+            "spot_price": "2118.05",
+            "spot_quantity": "0.394",
+            "spot_rule_pass": true,
+            "symbol": "ETHUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "833.33333333333333333333333333333333333333333333333",
+            "unused_notional_bps": -11.94188
+          },
+          {
+            "candidate_quantity_count": 30,
+            "capital_usdt": "2500",
+            "common_step_size": "0.01",
+            "futures_notional": "833.1462",
+            "futures_price": "85.98",
+            "futures_quantity": "9.69",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 3.488574917146346,
+            "max_leg_overspend_bps": 1.2428,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "833.4369",
+            "spot_price": "86.01",
+            "spot_quantity": "9.69",
+            "spot_rule_pass": true,
+            "symbol": "SOLUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "833.33333333333333333333333333333333333333333333333",
+            "unused_notional_bps": 0.5014
+          }
+        ],
+        "target_notional_per_symbol": "833.33333333333333333333333333333333333333333333333"
+      },
+      {
+        "capital_usdt": 5000,
+        "max_leg_mismatch_bps": 4.609654579343196,
+        "max_unused_notional_bps": 241.7851,
+        "scenario_pass": true,
+        "scenario_pass_pre_risk": true,
+        "symbol_results": [
+          {
+            "candidate_quantity_count": 21,
+            "capital_usdt": "5000",
+            "common_step_size": "0.001",
+            "futures_notional": "1625.9943",
+            "futures_price": "77428.3",
+            "futures_quantity": "0.021",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.609654579343196,
+            "max_leg_overspend_bps": 0.0,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "1626.744",
+            "spot_price": "77464",
+            "spot_quantity": "0.021",
+            "spot_rule_pass": true,
+            "symbol": "BTCUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "1666.6666666666666666666666666666666666666666666667",
+            "unused_notional_bps": 241.7851
+          },
+          {
+            "candidate_quantity_count": 29,
+            "capital_usdt": "5000",
+            "common_step_size": "0.001",
+            "futures_notional": "1666.17344",
+            "futures_price": "2117.12",
+            "futures_quantity": "0.787",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 4.3917953706698905,
+            "max_leg_overspend_bps": 1.4321,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "1666.90535",
+            "spot_price": "2118.05",
+            "spot_quantity": "0.787",
+            "spot_rule_pass": true,
+            "symbol": "ETHUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "1666.6666666666666666666666666666666666666666666667",
+            "unused_notional_bps": 0.76363
+          },
+          {
+            "candidate_quantity_count": 32,
+            "capital_usdt": "5000",
+            "common_step_size": "0.01",
+            "futures_notional": "1666.2924",
+            "futures_price": "85.98",
+            "futures_quantity": "19.38",
+            "futures_rule_pass": true,
+            "leg_notional_mismatch_bps": 3.488574917146346,
+            "max_leg_overspend_bps": 1.2428,
+            "pass_checks": {
+              "common_qty_positive": true,
+              "futures_max_qty_pass": true,
+              "futures_min_notional_pass": true,
+              "futures_min_qty_pass": true,
+              "leg_notional_mismatch_pass": true,
+              "overspend_rule_pass": true,
+              "spot_max_qty_pass": true,
+              "spot_min_notional_pass": true,
+              "spot_min_qty_pass": true,
+              "unused_notional_pass": true
+            },
+            "spot_notional": "1666.8738",
+            "spot_price": "86.01",
+            "spot_quantity": "19.38",
+            "spot_rule_pass": true,
+            "symbol": "SOLUSDT",
+            "symbol_pass": true,
+            "target_notional_per_symbol": "1666.6666666666666666666666666666666666666666666667",
+            "unused_notional_bps": 0.5014
+          }
+        ],
+        "target_notional_per_symbol": "1666.6666666666666666666666666666666666666666666667"
+      }
+    ]
+  },
+  "replacement_checks_all_true": true,
+  "risk_flags": {
+    "critical_risk_flags": [],
+    "non_critical_risk_flags": [
+      "some_scenarios_fail_sizing"
+    ],
+    "private_or_order_endpoint_attempted": false
+  },
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "next_step_must_not_be_live_or_capital": true,
+    "order_placement_allowed_now": false,
+    "paper_single_cycle_created": true,
+    "private_api_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "simulated_entry_plan": {
+    "all_entries_labeled": "SIMULATED_NOT_ORDER",
+    "order_endpoint_payload_generated": false,
+    "orders_generated": false,
+    "plans": [
+      {
+        "capital_usdt": 235,
+        "label": "SIMULATED_NOT_ORDER",
+        "order_endpoint_payload_generated": false,
+        "orders_generated": false,
+        "symbol_entries": [
+          {
+            "current_lastFundingRate": "0.00003823",
+            "futures_notional": "77.4283",
+            "futures_quantity": "0.001",
+            "label": "SIMULATED_NOT_ORDER",
+            "leg_notional_mismatch_bps": 4.609654579343196,
+            "nextFundingTime_utc": "2026-05-25T16:00:00Z",
+            "paper_intent_futures_side": "SHORT",
+            "paper_intent_spot_side": "BUY",
+            "real_order_endpoint_called": false,
+            "real_order_payload_generated": false,
+            "spot_notional": "77.464",
+            "spot_quantity": "0.001",
+            "symbol": "BTCUSDT"
+          },
+          {
+            "current_lastFundingRate": "0.00006130",
+            "futures_notional": "78.33344",
+            "futures_quantity": "0.037",
+            "label": "SIMULATED_NOT_ORDER",
+            "leg_notional_mismatch_bps": 4.3917953706698905,
+            "nextFundingTime_utc": "2026-05-25T16:00:00Z",
+            "paper_intent_futures_side": "SHORT",
+            "paper_intent_spot_side": "BUY",
+            "real_order_endpoint_called": false,
+            "real_order_payload_generated": false,
+            "spot_notional": "78.36785",
+            "spot_quantity": "0.037",
+            "symbol": "ETHUSDT"
+          },
+          {
+            "current_lastFundingRate": "0.00002245",
+            "futures_notional": "78.2418",
+            "futures_quantity": "0.91",
+            "label": "SIMULATED_NOT_ORDER",
+            "leg_notional_mismatch_bps": 3.488574917146346,
+            "nextFundingTime_utc": "2026-05-25T16:00:00Z",
+            "paper_intent_futures_side": "SHORT",
+            "paper_intent_spot_side": "BUY",
+            "real_order_endpoint_called": false,
+            "real_order_payload_generated": false,
+            "spot_notional": "78.2691",
+            "spot_quantity": "0.91",
+            "symbol": "SOLUSDT"
+          }
+        ]
+      },
+      {
+        "capital_usdt": 5000,
+        "label": "SIMULATED_NOT_ORDER",
+        "order_endpoint_payload_generated": false,
+        "orders_generated": false,
+        "symbol_entries": [
+          {
+            "current_lastFundingRate": "0.00003823",
+            "futures_notional": "1625.9943",
+            "futures_quantity": "0.021",
+            "label": "SIMULATED_NOT_ORDER",
+            "leg_notional_mismatch_bps": 4.609654579343196,
+            "nextFundingTime_utc": "2026-05-25T16:00:00Z",
+            "paper_intent_futures_side": "SHORT",
+            "paper_intent_spot_side": "BUY",
+            "real_order_endpoint_called": false,
+            "real_order_payload_generated": false,
+            "spot_notional": "1626.744",
+            "spot_quantity": "0.021",
+            "symbol": "BTCUSDT"
+          },
+          {
+            "current_lastFundingRate": "0.00006130",
+            "futures_notional": "1666.17344",
+            "futures_quantity": "0.787",
+            "label": "SIMULATED_NOT_ORDER",
+            "leg_notional_mismatch_bps": 4.3917953706698905,
+            "nextFundingTime_utc": "2026-05-25T16:00:00Z",
+            "paper_intent_futures_side": "SHORT",
+            "paper_intent_spot_side": "BUY",
+            "real_order_endpoint_called": false,
+            "real_order_payload_generated": false,
+            "spot_notional": "1666.90535",
+            "spot_quantity": "0.787",
+            "symbol": "ETHUSDT"
+          },
+          {
+            "current_lastFundingRate": "0.00002245",
+            "futures_notional": "1666.2924",
+            "futures_quantity": "19.38",
+            "label": "SIMULATED_NOT_ORDER",
+            "leg_notional_mismatch_bps": 3.488574917146346,
+            "nextFundingTime_utc": "2026-05-25T16:00:00Z",
+            "paper_intent_futures_side": "SHORT",
+            "paper_intent_spot_side": "BUY",
+            "real_order_endpoint_called": false,
+            "real_order_payload_generated": false,
+            "spot_notional": "1666.8738",
+            "spot_quantity": "19.38",
+            "symbol": "SOLUSDT"
+          }
+        ]
+      }
+    ]
+  },
+  "source_artifacts": {
+    "exchange_rule_discovery": "artifacts/exchange_rule_discovery/binance_spot_perp_funding_carry_exchange_rule_discovery_v1.json",
+    "exchange_rule_payload_sha256_excluding_hash": "db998979f8d902ddff553877fa59384893021d2e814fb4c42dbc1ab194ebff46",
+    "order_sizing_repair_payload_sha256_excluding_hash": "0f189c4b8999d7d9a1018cf988952e630d554ed898fc29a61510af93a906d822",
+    "order_sizing_repair_sim": "artifacts/order_sizing_simulations/binance_spot_perp_funding_carry_order_sizing_repair_sim_v1.json",
+    "paper_dry_run": "artifacts/paper_trading_dry_runs/binance_spot_perp_funding_carry_paper_dry_run_simulator_v1.json",
+    "paper_dry_run_payload_sha256_excluding_hash": "7dcc93b6c82344266c72144f2cd06c5b5507701d2c7f99a7971652f175dc655d",
+    "paper_monitor_design": "artifacts/paper_monitor_designs/binance_spot_perp_funding_carry_paper_monitor_design_v1.json",
+    "paper_monitor_design_payload_sha256_excluding_hash": "25cb17fa9a4e296f194b79808a6515d880ec232ecde3356c008ccb2da04c6188",
+    "paper_monitor_preview": "artifacts/paper_monitor_previews/binance_spot_perp_funding_carry_paper_monitor_dry_run_preview_v1.json",
+    "paper_monitor_preview_payload_sha256_excluding_hash": "2d82499353b3ff5ed2326644de01fdfad01d2ca4a13e4edd7c90c4a329fa6173",
+    "risk_capital_diagnostic": "artifacts/risk_capital_diagnostics/binance_spot_perp_delta_neutral_funding_carry_risk_capital_feasibility_v1.json",
+    "risk_capital_payload_sha256_excluding_hash": "9b158cf8517e47c750c39234ea1d7287619a969f567cc682e16edd103a080ccc",
+    "strategy_closure": "artifacts/strategy_closures/binance_spot_perp_delta_neutral_funding_carry_closure_v1.json",
+    "strategy_closure_payload_sha256_excluding_hash": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8"
+  },
+  "source_checkpoint": {
+    "repo_clean_before_run": true,
+    "repo_head_at_run": "38a1c9a523c5920f5ae2026873f0622ec19345dd",
+    "tracked_python_count_at_start": 892
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_PAPER_MONITOR_SINGLE_CYCLE_CREATED",
+  "symbol_snapshot_records": {
+    "BTCUSDT": {
+      "endpoint_metadata": {
+        "futures_price": {
+          "error": null,
+          "http_status": 200,
+          "request_started_utc": "2026-05-25T11:35:50Z",
+          "response_bytes": 60,
+          "response_completed_utc": "2026-05-25T11:35:50Z",
+          "sha256": "ccf6129cc564ae11f7b5d7179fa432ab62c9f2454cd81112056892765f852a04",
+          "url": "https://fapi.binance.com/fapi/v1/ticker/price?symbol=BTCUSDT"
+        },
+        "premium_index": {
+          "error": null,
+          "http_status": 200,
+          "request_started_utc": "2026-05-25T11:35:50Z",
+          "response_bytes": 231,
+          "response_completed_utc": "2026-05-25T11:35:51Z",
+          "sha256": "36a4d52ac8b0c47490716baa085cc09e483b5512f10bfb0eabeae85ef824d951",
+          "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BTCUSDT"
+        },
+        "spot_price": {
+          "error": null,
+          "http_status": 200,
+          "request_started_utc": "2026-05-25T11:35:50Z",
+          "response_bytes": 45,
+          "response_completed_utc": "2026-05-25T11:35:50Z",
+          "sha256": "e568f6e242be089d29922c594eef730a51901f90373bfd57b91b841141351861",
+          "url": "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT"
+        }
+      },
+      "futures_price": "77428.3",
+      "premium_index": {
+        "indexPrice": "77464.32173913",
+        "lastFundingRate": "0.00003823",
+        "markPrice": "77425.43421014",
+        "nextFundingTime": 1779724800000,
+        "nextFundingTime_utc": "2026-05-25T16:00:00Z"
+      },
+      "spot_price": "77464",
+      "symbol": "BTCUSDT"
+    },
+    "ETHUSDT": {
+      "endpoint_metadata": {
+        "futures_price": {
+          "error": null,
+          "http_status": 200,
+          "request_started_utc": "2026-05-25T11:35:51Z",
+          "response_bytes": 59,
+          "response_completed_utc": "2026-05-25T11:35:51Z",
+          "sha256": "9827c5226094fd3354463fe3b3a9f851a0f449db16a238d4a3c171395e1ae956",
+          "url": "https://fapi.binance.com/fapi/v1/ticker/price?symbol=ETHUSDT"
+        },
+        "premium_index": {
+          "error": null,
+          "http_status": 200,
+          "request_started_utc": "2026-05-25T11:35:51Z",
+          "response_bytes": 228,
+          "response_completed_utc": "2026-05-25T11:35:51Z",
+          "sha256": "6a501fefbaa203ed440fcc9286befafb1aea6e7bf1ce38672fa0702109dc441d",
+          "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=ETHUSDT"
+        },
+        "spot_price": {
+          "error": null,
+          "http_status": 200,
+          "request_started_utc": "2026-05-25T11:35:51Z",
+          "response_bytes": 44,
+          "response_completed_utc": "2026-05-25T11:35:51Z",
+          "sha256": "83f063c53028ef492621decc0993877dc9b8ae4ebe97f493433e3880948bdb6b",
+          "url": "https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT"
+        }
+      },
+      "futures_price": "2117.12",
+      "premium_index": {
+        "indexPrice": "2118.08488372",
+        "lastFundingRate": "0.00006130",
+        "markPrice": "2117.18767442",
+        "nextFundingTime": 1779724800000,
+        "nextFundingTime_utc": "2026-05-25T16:00:00Z"
+      },
+      "spot_price": "2118.05",
+      "symbol": "ETHUSDT"
+    },
+    "SOLUSDT": {
+      "endpoint_metadata": {
+        "futures_price": {
+          "error": null,
+          "http_status": 200,
+          "request_started_utc": "2026-05-25T11:35:52Z",
+          "response_bytes": 59,
+          "response_completed_utc": "2026-05-25T11:35:52Z",
+          "sha256": "654ecbb906cb5c739e75922f6acea01cefc0a0c64ce1fd5fa5f17ff975af4b91",
+          "url": "https://fapi.binance.com/fapi/v1/ticker/price?symbol=SOLUSDT"
+        },
+        "premium_index": {
+          "error": null,
+          "http_status": 200,
+          "request_started_utc": "2026-05-25T11:35:52Z",
+          "response_bytes": 222,
+          "response_completed_utc": "2026-05-25T11:35:52Z",
+          "sha256": "53e4f318ff56572d33c4296218da26be2874073eeba07b7e3baded5d5be3d8f6",
+          "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=SOLUSDT"
+        },
+        "spot_price": {
+          "error": null,
+          "http_status": 200,
+          "request_started_utc": "2026-05-25T11:35:51Z",
+          "response_bytes": 42,
+          "response_completed_utc": "2026-05-25T11:35:52Z",
+          "sha256": "e1be2845e150ffa05323741f4fde6a59ea92b6d741e821638fba11dd2ced403b",
+          "url": "https://api.binance.com/api/v3/ticker/price?symbol=SOLUSDT"
+        }
+      },
+      "futures_price": "85.98",
+      "premium_index": {
+        "indexPrice": "86.02175624",
+        "lastFundingRate": "0.00002245",
+        "markPrice": "85.98000000",
+        "nextFundingTime": 1779724800000,
+        "nextFundingTime_utc": "2026-05-25T16:00:00Z"
+      },
+      "spot_price": "86.01",
+      "symbol": "SOLUSDT"
+    }
+  },
+  "validation_checks": {
+    "common_base_quantity_algorithm_used": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_key_used": true,
+    "no_candidate_generation": true,
+    "no_daemon_created": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_live_or_capital_permission": true,
+    "no_order_endpoint_called": true,
+    "no_orders_placed": true,
+    "no_private_api": true,
+    "no_runtime_enabled": true,
+    "no_scheduler_created": true,
+    "prior_design_loaded": true,
+    "prior_preview_loaded": true,
+    "prior_sizing_repair_loaded": true,
+    "public_exchange_rules_fetched": true,
+    "public_premium_index_fetched": true,
+    "public_price_snapshot_fetched": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "simulated_entry_plan_labeled_not_order": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "policy_name": "edge_factory_os_holdout_governance_policy_v1",
+  "policy_status": "HOLDOUT_GOVERNANCE_POLICY_DRAFT_READY",
+  "created_at_utc": "2026-05-14T01:30:36.703299+00:00",
+  "untouched_final_holdout_required": true,
+  "holdout_peeking_allowed": false,
+  "holdout_reuse_allowed": false,
+  "holdout_must_be_registered_before_research": true,
+  "holdout_may_influence_hypothesis": false,
+  "holdout_may_influence_release_only_after_full_governance_pass": true,
+  "required_split_layers": [
+    "search_set",
+    "validation_set",
+    "untouched_final_holdout"
+  ],
+  "release_without_holdout_policy_allowed": false,
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

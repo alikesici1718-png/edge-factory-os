@@ -1,0 +1,1744 @@
+EDGE FACTORY OS GATE REVIEW CANDIDATE PREVIEW v1
+====================================================================================================
+preview_status: GATE_REVIEW_CANDIDATE_PREVIEW_READY_NO_APPLY
+allowed_scope: REPO_ONLY_OS_INTELLIGENCE
+final_decision: REVIEW_GATE_CANDIDATES_BEFORE_METADATA_PATCH_PREVIEW
+next_action: REVIEW_CANDIDATES_THEN_BUILD_NON_BEHAVIORAL_GATE_METADATA_PREVIEW_IF_APPROVED
+next_module: edge_factory_os_gate_metadata_patch_preview_v1.py
+direct_apply_recommended_now: False
+
+COUNTS
+----------------------------------------------------------------------------------------------------
+{
+  "gate_review_candidate_count": 25,
+  "apply_recommended_now": 0,
+  "preview_fix_candidate_count": 11
+}
+
+CLASSIFICATION COUNTS
+----------------------------------------------------------------------------------------------------
+{
+  "GATE_REVIEW_FAIL_DANGEROUS_PATTERN_NO_CLEAR_GATE": 2,
+  "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA": 9,
+  "GATE_REVIEW_MANUAL_REQUIRED": 1,
+  "GATE_REVIEW_PASS_NO_FIX": 5,
+  "GATE_REVIEW_PASS_WITH_ATTENTION": 8
+}
+
+RISK COUNTS
+----------------------------------------------------------------------------------------------------
+{
+  "ATTENTION": 20,
+  "INFO": 5
+}
+
+PREVIEW FIX CANDIDATES
+----------------------------------------------------------------------------------------------------
+[
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_stability_repair_diagnostic_v1.py",
+      "path": "tools/edge_factory_os_month_stability_repair_diagnostic_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_DANGEROUS_PATTERN_NO_CLEAR_GATE",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Build a future preview-only metadata/guard patch only after manual review.",
+    "reason": "Dangerous terms found without sufficient explicit guard metadata.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [
+        ".rename"
+      ],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_repo_cleanup_plan_v1.py",
+      "path": "tools/edge_factory_os_repo_cleanup_plan_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_DANGEROUS_PATTERN_NO_CLEAR_GATE",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Build a future preview-only metadata/guard patch only after manual review.",
+    "reason": "Dangerous terms found without sufficient explicit guard metadata.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [
+        "subprocess.run"
+      ],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_claude_critical_patch_v1.py",
+      "path": "src/edge_factory_claude_critical_patch_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_master_gate_compatibility_repair_v1.py",
+      "path": "src/edge_factory_master_gate_compatibility_repair_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_master_gate_compatibility_repair_v2.py",
+      "path": "src/edge_factory_master_gate_compatibility_repair_v2.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_master_launcher_gate_repair_v3.py",
+      "path": "src/edge_factory_master_launcher_gate_repair_v3.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_master_upper_system_boot_repair_v1.py",
+      "path": "src/edge_factory_master_upper_system_boot_repair_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_patch_launcher_remove_blocking_risk_line_v1.py",
+      "path": "src/edge_factory_patch_launcher_remove_blocking_risk_line_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_patch_master_launcher_risk_args_v1.py",
+      "path": "src/edge_factory_patch_master_launcher_risk_args_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_risk_manager_v4_wrapper_patch_v2.py",
+      "path": "src/edge_factory_risk_manager_v4_wrapper_patch_v2.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_signal_id_fallback_line_patch_v2.py",
+      "path": "src/edge_factory_signal_id_fallback_line_patch_v2.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  }
+]
+
+CLASSIFIED GATE CANDIDATES
+----------------------------------------------------------------------------------------------------
+[
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh_v1.py",
+      "path": "tools/edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_WITH_ATTENTION",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No direct apply. Later audit policy may mark this as guarded after review.",
+    "reason": "Guard structure exists but not all core block flags were detected as explicit false assignments.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "manual_approval"
+      ],
+      "danger_terms_present": [
+        "subprocess.run"
+      ],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_bom_syntax_repair_apply_v1.py",
+      "path": "tools/edge_factory_os_bom_syntax_repair_apply_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, .write_bytes(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_WITH_ATTENTION",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No direct apply. Later audit policy may mark this as guarded after review.",
+    "reason": "Guard structure exists but not all core block flags were detected as explicit false assignments.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "forbidden_actions",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "preview",
+        "no_apply",
+        "apply_status",
+        "preview_status"
+      ],
+      "danger_terms_present": [
+        "subprocess.run",
+        "git add -f"
+      ],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_bom_syntax_repair_remaining_apply_v1.py",
+      "path": "tools/edge_factory_os_bom_syntax_repair_remaining_apply_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, .write_bytes(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_WITH_ATTENTION",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No direct apply. Later audit policy may mark this as guarded after review.",
+    "reason": "Guard structure exists but not all core block flags were detected as explicit false assignments.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "forbidden_actions",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "preview",
+        "no_apply",
+        "apply_status",
+        "preview_status"
+      ],
+      "danger_terms_present": [
+        "subprocess.run",
+        "git add -f"
+      ],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_family_registry_and_lesson_enforcer_repair_v1.py",
+      "path": "tools/edge_factory_os_family_registry_and_lesson_enforcer_repair_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_MANUAL_REQUIRED",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "Manual review before any change.",
+    "reason": "Default conservative gate review.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [],
+      "danger_terms_present": [],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": false,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_gate_metadata_patch_apply_v1.py",
+      "path": "tools/edge_factory_os_gate_metadata_patch_apply_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, .write_bytes(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_WITH_ATTENTION",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No direct apply. Later audit policy may mark this as guarded after review.",
+    "reason": "Guard structure exists but not all core block flags were detected as explicit false assignments.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "forbidden_actions",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview",
+        "no_apply",
+        "apply_status",
+        "preview_status"
+      ],
+      "danger_terms_present": [
+        "subprocess.run",
+        "git add -f"
+      ],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_gate_metadata_patch_approval_v1.py",
+      "path": "tools/edge_factory_os_gate_metadata_patch_approval_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_WITH_ATTENTION",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No direct apply. Later audit policy may mark this as guarded after review.",
+    "reason": "Guard structure exists but not all core block flags were detected as explicit false assignments.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "forbidden_actions",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview",
+        "no_apply",
+        "preview_status"
+      ],
+      "danger_terms_present": [
+        "subprocess.run",
+        "git add -f"
+      ],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_governance_repair_suite_ledger_alpha_prereg_v1.py",
+      "path": "tools/edge_factory_os_governance_repair_suite_ledger_alpha_prereg_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_NO_FIX",
+    "risk_level": "INFO",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No fix. Candidate already appears guarded.",
+    "reason": "Required guard terms, false safety flags, and approval/preview language are present.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_holdout_trigger_and_vault_status_repair_v1.py",
+      "path": "tools/edge_factory_os_holdout_trigger_and_vault_status_repair_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_NO_FIX",
+    "risk_level": "INFO",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No fix. Candidate already appears guarded.",
+    "reason": "Required guard terms, false safety flags, and approval/preview language are present.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_month_stability_repair_diagnostic_v1.py",
+      "path": "tools/edge_factory_os_month_stability_repair_diagnostic_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_DANGEROUS_PATTERN_NO_CLEAR_GATE",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Build a future preview-only metadata/guard patch only after manual review.",
+    "reason": "Dangerous terms found without sufficient explicit guard metadata.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [
+        ".rename"
+      ],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_baseline_method_repair_contract_builder_v1.py",
+      "path": "tools/edge_factory_os_null_baseline_method_repair_contract_builder_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_NO_FIX",
+    "risk_level": "INFO",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No fix. Candidate already appears guarded.",
+    "reason": "Required guard terms, false safety flags, and approval/preview language are present.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_baseline_method_repair_evaluator_v1.py",
+      "path": "tools/edge_factory_os_null_baseline_method_repair_evaluator_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_NO_FIX",
+    "risk_level": "INFO",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No fix. Candidate already appears guarded.",
+    "reason": "Required guard terms, false safety flags, and approval/preview language are present.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_null_baseline_method_repair_runner_v1.py",
+      "path": "tools/edge_factory_os_null_baseline_method_repair_runner_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_NO_FIX",
+    "risk_level": "INFO",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No fix. Candidate already appears guarded.",
+    "reason": "Required guard terms, false safety flags, and approval/preview language are present.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_old_short_guarded_runtime_reenable_apply_v1.py",
+      "path": "tools/edge_factory_os_old_short_guarded_runtime_reenable_apply_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, .write_bytes(, unlink(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_WITH_ATTENTION",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No direct apply. Later audit policy may mark this as guarded after review.",
+    "reason": "Guard structure exists but not all core block flags were detected as explicit false assignments.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "forbidden_actions",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "apply_status"
+      ],
+      "danger_terms_present": [
+        ".unlink",
+        "unlink(",
+        "subprocess.run",
+        "git add -f"
+      ],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_patch_integrity_and_explicit_flag_policy_v1.py",
+      "path": "tools/edge_factory_os_patch_integrity_and_explicit_flag_policy_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_WITH_ATTENTION",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No direct apply. Later audit policy may mark this as guarded after review.",
+    "reason": "Guard structure exists but not all core block flags were detected as explicit false assignments.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval"
+      ],
+      "danger_terms_present": [
+        "subprocess.run"
+      ],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_repo_cleanup_plan_v1.py",
+      "path": "tools/edge_factory_os_repo_cleanup_plan_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_DANGEROUS_PATTERN_NO_CLEAR_GATE",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Build a future preview-only metadata/guard patch only after manual review.",
+    "reason": "Dangerous terms found without sufficient explicit guard metadata.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [
+        "subprocess.run"
+      ],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:tools/edge_factory_os_runtime_family_status_panel_and_backup_hygiene_v1.py",
+      "path": "tools/edge_factory_os_runtime_family_status_panel_and_backup_hygiene_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_PASS_WITH_ATTENTION",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": false,
+    "proposed_next_action": "No direct apply. Later audit policy may mark this as guarded after review.",
+    "reason": "Guard structure exists but not all core block flags were detected as explicit false assignments.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "safety_flags",
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "approval_terms_present": [
+        "approval"
+      ],
+      "danger_terms_present": [
+        "subprocess.run"
+      ],
+      "has_required_guard_terms": true,
+      "has_core_block_flags": true,
+      "has_core_false_flags": true,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": true
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_claude_critical_patch_v1.py",
+      "path": "src/edge_factory_claude_critical_patch_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_master_gate_compatibility_repair_v1.py",
+      "path": "src/edge_factory_master_gate_compatibility_repair_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_master_gate_compatibility_repair_v2.py",
+      "path": "src/edge_factory_master_gate_compatibility_repair_v2.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_master_launcher_gate_repair_v3.py",
+      "path": "src/edge_factory_master_launcher_gate_repair_v3.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_master_upper_system_boot_repair_v1.py",
+      "path": "src/edge_factory_master_upper_system_boot_repair_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_patch_launcher_remove_blocking_risk_line_v1.py",
+      "path": "src/edge_factory_patch_launcher_remove_blocking_risk_line_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_patch_master_launcher_risk_args_v1.py",
+      "path": "src/edge_factory_patch_master_launcher_risk_args_v1.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_risk_manager_v4_wrapper_patch_v2.py",
+      "path": "src/edge_factory_risk_manager_v4_wrapper_patch_v2.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [
+        "live_allowed"
+      ],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  },
+  {
+    "issue": {
+      "issue_id": "MUTATION_SURFACE:src/edge_factory_signal_id_fallback_line_patch_v2.py",
+      "path": "src/edge_factory_signal_id_fallback_line_patch_v2.py",
+      "category": null,
+      "severity": null,
+      "evidence": "Mutation-like tokens: .write_text(, shutil.copy",
+      "recommendation": null
+    },
+    "prior_classification": "mutating_tool_requires_gate_or_manual_approval",
+    "prior_reason": "Apply/repair/patch/hygiene modules may be legitimate but must remain behind explicit preview/approval gates.",
+    "classification": "GATE_REVIEW_FAIL_MISSING_EXPLICIT_GATE_METADATA",
+    "risk_level": "ATTENTION",
+    "apply_recommended_now": false,
+    "preview_fix_candidate": true,
+    "proposed_next_action": "Future preview may add explicit non-behavioral guard metadata/comments; no apply now.",
+    "reason": "Candidate lacks enough explicit safety/gate metadata for the audit policy.",
+    "signals": {
+      "file_exists": true,
+      "guard_terms_present": [
+        "allowed_scope"
+      ],
+      "block_flags_present": [
+        "runtime_touch_allowed",
+        "launcher_allowed",
+        "capital_change_allowed",
+        "live_allowed",
+        "real_orders_allowed"
+      ],
+      "block_flags_false": [],
+      "approval_terms_present": [
+        "approval",
+        "preview"
+      ],
+      "danger_terms_present": [],
+      "has_required_guard_terms": false,
+      "has_core_block_flags": true,
+      "has_core_false_flags": false,
+      "has_approval_or_preview_language": true,
+      "has_danger_terms": false
+    }
+  }
+]
+
+FORBIDDEN ACTIONS
+----------------------------------------------------------------------------------------------------
+- Do not modify target files.
+- Do not apply fixes.
+- Do not delete or move backup files.
+- Do not change .gitignore.
+- Do not use git add -f.
+- Do not run launcher.
+- Do not touch runtime.
+- Do not start processes.
+- Do not run strategy research.
+- Do not generate candidates.
+- Do not change capital.
+- Do not enable active paper.
+- Do not enable live trading.
+- Do not enable or send real orders.
+- Do not touch holdout.
+- Do not run old_short guarded apply.

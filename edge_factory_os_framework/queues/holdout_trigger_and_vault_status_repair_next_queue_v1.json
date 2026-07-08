@@ -1,0 +1,38 @@
+{
+  "active_paper_allowed": false,
+  "archive_performed": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T02:29:02.560554+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "next_steps": [
+    {
+      "active_paper_allowed": false,
+      "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+      "candidate_generation_allowed": false,
+      "capital_change_allowed": false,
+      "family_release_allowed": false,
+      "live_allowed": false,
+      "module": "edge_factory_os_family_registry_and_lesson_enforcer_repair_v1.py",
+      "purpose": "Repair runtime family registry and lesson enforcer after holdout/vault status repair.",
+      "real_orders_allowed": false,
+      "research_execution_allowed_now": false,
+      "research_key": "RD8_06_FAMILY_REGISTRY_AND_LESSON_ENFORCER_REPAIR",
+      "runtime_touch_allowed": false
+    }
+  ],
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "queue_name": "edge_factory_os_holdout_trigger_and_vault_status_repair_next_queue_v1",
+  "queue_status": "HOLDOUT_TRIGGER_VAULT_STATUS_NEXT_QUEUE_READY",
+  "real_orders_allowed": false,
+  "runtime_touch_allowed": false,
+  "top_next_module": "edge_factory_os_family_registry_and_lesson_enforcer_repair_v1.py",
+  "top_next_research_key": "RD8_06_FAMILY_REGISTRY_AND_LESSON_ENFORCER_REPAIR"
+}

@@ -1,0 +1,1003 @@
+{
+  "artifact_kind": "BINANCE_OKX_OVERLAP_LONG_SHORT_RATIO_HISTORY_AVAILABILITY_DISCOVERY_LOCK",
+  "availability_classification": "LONG_SHORT_RATIO_HISTORY_UNAVAILABLE_LATEST_30_DAYS_ONLY",
+  "continuation_decision": {
+    "immediate_next_module_required": false,
+    "long_short_ratio_acquisition_allowed_next": false,
+    "project_can_pause_after_availability_lock": true,
+    "route_pending_until_historical_long_short_source_exists": true,
+    "strategy_execution_allowed_next": false
+  },
+  "endpoint_contracts": {
+    "endpoints": {
+      "global_long_short_account_ratio": "https://fapi.binance.com/futures/data/globalLongShortAccountRatio",
+      "top_trader_long_short_account_ratio": "https://fapi.binance.com/futures/data/topLongShortAccountRatio",
+      "top_trader_long_short_position_ratio": "https://fapi.binance.com/futures/data/topLongShortPositionRatio"
+    },
+    "max_limit": 500,
+    "official_limitation": {
+      "if_startTime_endTime_not_sent_most_recent_data_returned": true,
+      "ip_rate_limit": "1000 requests / 5 min",
+      "limit_max": 500,
+      "only_latest_30_days_available": true,
+      "period_values_include_1h": true
+    },
+    "period_tested": "1h"
+  },
+  "full_81_probe_results_if_needed": {
+    "performed": false,
+    "reason": "Representative old 2023 target-window probes did not prove old aligned-window history availability."
+  },
+  "limitations": [
+    "This discovery lock does not acquire full long/short ratio history.",
+    "This discovery lock does not read Binance panel rows.",
+    "This discovery lock does not read Binance funding rows.",
+    "This discovery lock does not read OKX rows.",
+    "This discovery lock does not run strategy logic or compute returns.",
+    "This discovery lock grants no candidate, edge, release, or runtime/live/capital permission."
+  ],
+  "module": "tools/edge_factory_os_repo_only_binance_okx_overlap_long_short_ratio_history_availability_discovery_lock_v1.py",
+  "payload_sha256_excluding_hash": "f7ea298a2b32c9f007fa1a4b908bcddedcc54e49279108246a7bd2a164f78ece",
+  "pending_route_record_if_unavailable": {
+    "reason": "Official Binance public long/short ratio endpoints did not provide old 2023 aligned-window data in representative probes; recent data availability confirms latest-window behavior.",
+    "required_future_condition": "A historical long/short-ratio source covering all 81 symbols over 2023-07-01 to 2025-10-31 at 1h or safely alignable cadence must exist before acquisition or execution.",
+    "route_pending": true
+  },
+  "replacement_checks_all_true": true,
+  "repo_scope": {
+    "api_key_used": false,
+    "availability_lock_created_in_repo": true,
+    "bulk_history_downloaded": false,
+    "candidate_generation": false,
+    "code_changes_repo_only": true,
+    "edge_claim": false,
+    "funding_rows_read": false,
+    "okx_panel_rows_read": false,
+    "panel_rows_read": false,
+    "private_api_used": false,
+    "public_binance_network_used_for_metadata_probe": true,
+    "runtime_live_capital": false,
+    "strategy_executed": false
+  },
+  "representative_probe_results": {
+    "global_long_short_account_ratio": [
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "global_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "BTCUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "global_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "BTCUSDT"
+        },
+        "symbol": "BTCUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "global_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "ETHUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "global_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "ETHUSDT"
+        },
+        "symbol": "ETHUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "global_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "SOLUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "global_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "SOLUSDT"
+        },
+        "symbol": "SOLUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "global_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "XRPUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "global_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "XRPUSDT"
+        },
+        "symbol": "XRPUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "global_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "DOGEUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "global_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "DOGEUSDT"
+        },
+        "symbol": "DOGEUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "global_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "1INCHUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "global_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "1INCHUSDT"
+        },
+        "symbol": "1INCHUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "global_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "QTUMUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "global_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "QTUMUSDT"
+        },
+        "symbol": "QTUMUSDT"
+      }
+    ],
+    "top_trader_long_short_account_ratio": [
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "BTCUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "BTCUSDT"
+        },
+        "symbol": "BTCUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "ETHUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "ETHUSDT"
+        },
+        "symbol": "ETHUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "SOLUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "SOLUSDT"
+        },
+        "symbol": "SOLUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "XRPUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "XRPUSDT"
+        },
+        "symbol": "XRPUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "DOGEUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "DOGEUSDT"
+        },
+        "symbol": "DOGEUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "1INCHUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "1INCHUSDT"
+        },
+        "symbol": "1INCHUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "QTUMUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_account_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "QTUMUSDT"
+        },
+        "symbol": "QTUMUSDT"
+      }
+    ],
+    "top_trader_long_short_position_ratio": [
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "BTCUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "BTCUSDT"
+        },
+        "symbol": "BTCUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "ETHUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "ETHUSDT"
+        },
+        "symbol": "ETHUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "SOLUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "SOLUSDT"
+        },
+        "symbol": "SOLUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "XRPUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "XRPUSDT"
+        },
+        "symbol": "XRPUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "DOGEUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "DOGEUSDT"
+        },
+        "symbol": "DOGEUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "1INCHUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "1INCHUSDT"
+        },
+        "symbol": "1INCHUSDT"
+      },
+      {
+        "old_2023_target_window": {
+          "earliest_timestamp_utc": null,
+          "end_utc": "2023-07-03T00:00:00Z",
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": "{\"msg\":\"parameter 'startTime' is invalid.\",\"code\":-1130}",
+          "latest_timestamp_utc": null,
+          "limit": 500,
+          "ok": false,
+          "period": "1h",
+          "range_name": "old_2023_target_window",
+          "row_count": 0,
+          "schema_keys_observed": [],
+          "start_utc": "2023-07-01T00:00:00Z",
+          "status_code": 400,
+          "symbol": "QTUMUSDT"
+        },
+        "recent_no_start_end": {
+          "earliest_timestamp_utc": "2026-05-03T16:00:00Z",
+          "end_utc": null,
+          "endpoint": "top_trader_long_short_position_ratio",
+          "error": null,
+          "latest_timestamp_utc": "2026-05-24T11:00:00Z",
+          "limit": 500,
+          "ok": true,
+          "period": "1h",
+          "range_name": "recent_no_start_end",
+          "row_count": 500,
+          "schema_keys_observed": [
+            "longAccount",
+            "longShortRatio",
+            "shortAccount",
+            "symbol",
+            "timestamp"
+          ],
+          "start_utc": null,
+          "status_code": 200,
+          "symbol": "QTUMUSDT"
+        },
+        "symbol": "QTUMUSDT"
+      }
+    ]
+  },
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "immediate_next_module_required": false,
+    "live_permission_allowed_now": false,
+    "long_short_ratio_acquisition_allowed_next": false,
+    "project_can_pause_after_availability_lock": true,
+    "route_pending_until_historical_long_short_source_exists": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_next": false
+  },
+  "source_artifacts": {
+    "build_manifest_artifact": "artifacts/panel_build_manifests/binance_okx_overlap_near_5y_1m_to_1h_panel_build_manifest_v1.json",
+    "payload_hashes": {
+      "artifacts/panel_build_manifests/binance_okx_overlap_near_5y_1m_to_1h_panel_build_manifest_v1.json": "bf4d4d681f36fab3a2131701e25ebc45c94ddb757f92874498ef425d698f40a7",
+      "artifacts/panel_build_previews/binance_near_5y_coverage_lock_review_okx_overlap_panel_build_preview_v1.json": "16e93ca05fe28f0d101d5228e299306bad3aea171f22bc6901f770b0ecf3a3d9",
+      "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json": "0cfe239f6f5ad2d20bda64b827416851de8f5b959066902b59f1f00f44eba716"
+    },
+    "preview_artifact": "artifacts/panel_build_previews/binance_near_5y_coverage_lock_review_okx_overlap_panel_build_preview_v1.json",
+    "readiness_artifact": "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json"
+  },
+  "source_checkpoint": {
+    "latest_volume_surge_route_result": "FUNDING_EXTREME_VOLUME_SURGE_FILTER_REJECTED_NO_FOLLOWUP",
+    "prior_head": "5c1603d89cd38e19837711b62915e0f361a96e4a",
+    "prior_tracked_python_count": 835,
+    "repo_clean_before_discovery": true
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_LONG_SHORT_RATIO_HISTORY_AVAILABILITY_DISCOVERY_LOCK_UNAVAILABLE_ROUTE_PENDING",
+  "summary_counts": {
+    "endpoints_tested": 3,
+    "exact_overlap_symbol_count": 81,
+    "global_earliest_timestamp_observed": "2026-05-03T16:00:00Z",
+    "global_latest_timestamp_observed": "2026-05-24T11:00:00Z",
+    "old_range_available_count": 0,
+    "recent_range_available_count": 21,
+    "representative_symbols_tested": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "DOGEUSDT",
+      "1INCHUSDT",
+      "QTUMUSDT"
+    ]
+  },
+  "validation_checks": {
+    "artifact_json_valid": true,
+    "artifact_path_equals_required_path": true,
+    "exact_overlap_symbol_count_verified_81": true,
+    "exactly_one_new_tracked_json_availability_artifact_expected": true,
+    "exactly_one_new_tracked_python_tool_file_expected": true,
+    "module_path_equals_required_path": true,
+    "no_bulk_download": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified_expected": true,
+    "no_funding_rows_read": true,
+    "no_okx_panel_rows_read": true,
+    "no_other_tracked_files_expected": true,
+    "no_panel_rows_read": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_execution": true,
+    "old_2023_window_not_available_if_unavailable": true,
+    "payload_sha256_excluding_hash_present": true,
+    "recent_data_available_if_latest_30_days_behavior_confirmed": true,
+    "replacement_checks_all_true": true,
+    "representative_old_range_probe_performed": true,
+    "representative_recent_range_probe_performed": true,
+    "status_equals_expected_status": true
+  }
+}

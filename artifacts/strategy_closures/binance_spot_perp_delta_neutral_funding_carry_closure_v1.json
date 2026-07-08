@@ -1,0 +1,119 @@
+{
+  "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_CLOSURE_RECORD",
+  "closure_record": {
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "diagnostic_promising": true,
+    "no_candidate_created": true,
+    "no_edge_claim_created": true,
+    "no_family_release_created": true,
+    "no_runtime_live_capital_permission_created": true,
+    "result_class": "SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_DIAGNOSTIC_PROMISING_REQUIRES_CLOSURE_NO_CANDIDATE_NO_EDGE",
+    "route_closed": true,
+    "route_family": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_BASELINE"
+  },
+  "followup_permissions_after_closure": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "holdout_permission_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "forbidden_actions_confirmed_false": {
+    "candidate_generated": false,
+    "edge_claimed": false,
+    "evaluator_rerun": false,
+    "execution_rerun": false,
+    "family_released": false,
+    "holdout_permission_granted": false,
+    "row_files_read": false,
+    "runtime_live_capital_permission_granted": false
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_spot_perp_delta_neutral_funding_carry_closure_v1.py",
+  "payload_sha256_excluding_hash": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8",
+  "prior_evaluator_result_preserved": {
+    "evaluator_artifact": "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json",
+    "evaluator_findings": {
+      "diagnostic_promising": true,
+      "funding_component_materially_positive": true,
+      "input_complete": true,
+      "metric_integrity_passed": true,
+      "monthly_stability_passed": true,
+      "safety_review_passed": true,
+      "validation_net_positive": true,
+      "validation_positive_after_cost": true,
+      "worst_month_not_catastrophic": true
+    },
+    "evaluator_payload_sha256_excluding_hash": "94bfdeb3cbe2bfd79ea77ae86c96427790f87a78ff4377972d4b1476ad4ee52b",
+    "evaluator_status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EVALUATED",
+    "result_classification": {
+      "closure_record_required_next": true,
+      "diagnostic_promising": true,
+      "result_class": "SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_DIAGNOSTIC_PROMISING_REQUIRES_CLOSURE_NO_CANDIDATE_NO_EDGE"
+    }
+  },
+  "prior_execution_result_preserved": {
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "execution_artifact": "artifacts/strategy_executions/binance_spot_perp_delta_neutral_funding_carry_execution_v1.json",
+    "execution_payload_sha256_excluding_hash": "7855d599b8fa331cbbea2f380c23306889ae486369761d900d7aed36e7191378",
+    "holdout_summary": {
+      "gross_funding_component_bps": 284.985867,
+      "gross_price_component_bps": 1.983989,
+      "gross_total_bps": 286.969856,
+      "monthly_positive_rate": 0.9,
+      "net_after_lifecycle_cost_bps": 256.969856,
+      "net_after_monthly_rebalance_cost_bps": 236.969856
+    },
+    "validation_summary": {
+      "gross_funding_component_bps": 1284.585367,
+      "gross_price_component_bps": 13.527102,
+      "gross_total_bps": 1298.112469,
+      "monthly_positive_rate": 1.0,
+      "net_after_lifecycle_cost_bps": 1268.112469,
+      "net_after_monthly_rebalance_cost_bps": 1238.112469
+    }
+  },
+  "project_state_after_closure": {
+    "next_immediate_module_required": false,
+    "project_can_pause_after_closure": true
+  },
+  "replacement_checks_all_true": true,
+  "route_family_state_after_closure": {
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "parameter_expansion_allowed_now": false,
+    "retest_allowed_now": false,
+    "route_closed": true,
+    "runtime_live_capital_allowed_now": false,
+    "strategy_search_allowed_now": false
+  },
+  "source_checkpoint": {
+    "repo_clean_before_run": true,
+    "repo_head_at_run": "c83c54d497ce2aba5d0210fcb3deaf866fe37af9",
+    "tracked_python_count_at_start": 881
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_CLOSURE_CREATED",
+  "validation_checks": {
+    "candidate_generation_not_allowed": true,
+    "does_not_read_rows": true,
+    "does_not_rerun_evaluator": true,
+    "does_not_rerun_execution": true,
+    "edge_claim_not_allowed": true,
+    "evaluator_artifact_loaded": true,
+    "evaluator_payload_hash_verified": true,
+    "evaluator_status_verified": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "execution_artifact_loaded": true,
+    "execution_payload_hash_verified": true,
+    "family_release_not_allowed": true,
+    "no_existing_files_modified": true,
+    "prior_evaluator_result_preserved_exactly": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "route_closed": true,
+    "runtime_live_capital_not_allowed": true
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "plugin_key": "NULL_MODEL_PERMUTATION_BASELINE_PLUGIN_V1",
+  "plugin_type": "READ_ONLY_NULL_AND_PERMUTATION_BASELINE",
+  "research_key": "NULL_MODEL_AND_PERMUTATION_BASELINE_V1",
+  "direction_queue_key": "RD5_02_NULL_MODEL_AND_PERMUTATION_BASELINE",
+  "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+  "canonical_policy_month_count": 12,
+  "must_consume_guard_feed": true,
+  "must_not_reopen_blocked_routes": true,
+  "must_use_prior_runner_outputs": true,
+  "baseline_goal": "Quantify expected false positive frequency for strict 12/12-like diagnostics under randomized and permuted baselines.",
+  "baseline_tests": [
+    "random_feature_decile_baseline",
+    "within_month_symbol_shuffle_baseline",
+    "month_label_permutation_baseline",
+    "time_block_permutation_baseline",
+    "side_flip_baseline",
+    "hold_period_shuffle_baseline",
+    "cost_perturbation_baseline",
+    "feature_rank_shuffle_baseline"
+  ],
+  "required_guard_keys": [
+    "CANONICAL_MONTH_POLICY_GUARD",
+    "FULL_UNIVERSE_IDENTITY_GUARD",
+    "HIGH_MISSINGNESS_FEATURE_USAGE_GUARD",
+    "SYMBOL_LIFECYCLE_COVERAGE_GUARD",
+    "EXTREME_RETURN_OUTLIER_GUARD"
+  ],
+  "minimum_permutation_runs": 200,
+  "preferred_permutation_runs": 500,
+  "strict_policy": {
+    "canonical_month_count": 12,
+    "positive_months_required": 12,
+    "total_pnl_must_be_positive": true,
+    "null_adjusted_required": true,
+    "empirical_p_value_required_lte": 0.05
+  },
+  "forbidden_inputs": [
+    "future_return_as_feature",
+    "future_pnl_as_feature",
+    "manual_symbol_whitelist",
+    "manual_month_blacklist",
+    "blocked_route_hash_reuse",
+    "post_outcome_filtering"
+  ],
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false
+}

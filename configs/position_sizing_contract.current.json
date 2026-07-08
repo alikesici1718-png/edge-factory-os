@@ -1,0 +1,84 @@
+{
+  "contract_name": "EDGE_FACTORY_POSITION_SIZING_CONTRACT_v1",
+  "base_equity": 1000.0,
+  "rule": "notional = base_equity * family.capital_fraction unless fixed_notional is set",
+  "families": {
+    "old_short": {
+      "enabled": true,
+      "lifecycle": "CORE_ENGINE",
+      "priority": 100,
+      "max_positions": 3,
+      "capital_fraction": 0.05,
+      "fixed_notional": 50.0,
+      "role": "main alpha engine",
+      "expected_notional": 50.0
+    },
+    "impulse_long": {
+      "enabled": true,
+      "lifecycle": "HIGH_PRIORITY_DIVERSIFIER",
+      "priority": 150,
+      "max_positions": 2,
+      "capital_fraction": 0.05,
+      "fixed_notional": 50.0,
+      "role": "long/diversifier and bad-day stabilizer",
+      "expected_notional": 50.0
+    },
+    "market_relative_short": {
+      "enabled": true,
+      "lifecycle": "KEEP_CAPPED_REDUCED_SIZE",
+      "priority": 70,
+      "max_positions": 3,
+      "capital_fraction": 0.025,
+      "fixed_notional": 25.0,
+      "role": "capped short family; keep but half-size",
+      "expected_notional": 12.5
+    },
+    "weak_market_short": {
+      "enabled": true,
+      "lifecycle": "BACKUP_ONLY",
+      "priority": 30,
+      "max_positions": 2,
+      "capital_fraction": 0.025,
+      "fixed_notional": 25.0,
+      "role": "backup-only short continuation",
+      "expected_notional": 25.0
+    }
+  },
+  "expected_notional_1000_equity": {
+    "old_short": 50.0,
+    "impulse_long": 50.0,
+    "market_relative_short": 25.0,
+    "weak_market_short": 25.0
+  },
+  "notes": [
+    "old_short and impulse_long are 5% notional.",
+    "market_relative_short is half-size: 2.5% notional.",
+    "weak_market_short is backup-only and 2.5% notional.",
+    "Every logger must consume this contract before opening paper positions."
+  ],
+  "expected_notional_by_family": {
+    "old_short": 50.0,
+    "impulse_long": 50.0,
+    "market_relative_short": 12.5,
+    "weak_market_short": 25.0,
+    "session_short": 0.0
+  },
+  "notional_pct_by_family": {
+    "old_short": 0.05,
+    "impulse_long": 0.05,
+    "market_relative_short": 0.0125,
+    "weak_market_short": 0.025,
+    "session_short": 0.0
+  },
+  "edge_factory_contract_reconciliation": {
+    "generated_at": "2026-05-10T17:14:17",
+    "source": "edge_factory_contract_reconciler_v1",
+    "preview_or_applied_by_module": true,
+    "base_equity": 1000.0,
+    "notes": [
+      "Canonical expected_notional_by_family was inserted/updated from adaptive capital governor proposal.",
+      "This contract should be reviewed before paper boot.",
+      "This module does not start paper/live."
+    ]
+  }
+}

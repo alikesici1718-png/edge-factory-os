@@ -1,0 +1,93 @@
+====================================================================================================
+EDGE FACTORY OS SOURCE PANEL ANOMALY DEEP VALIDATION CONTRACT v1
+====================================================================================================
+contract_status: SOURCE_PANEL_ANOMALY_DEEP_VALIDATION_CONTRACT_READY
+allowed_scope: READ_ONLY_RESEARCH
+next_action: BUILD_SOURCE_PANEL_ANOMALY_DEEP_VALIDATION_RUNNER
+contract_id: SOURCE_PANEL_ANOMALY_DEEP_VALIDATION_CONTRACT_V1_8009c29a5a68b105_20260513_211047
+contract_hash: 8009c29a5a68b105
+route_hash: a7111fc8752a3e15
+route_hash_blocked: False
+source_anomaly_route_hash: c39a8ae1f0cd9522
+research_key: SOURCE_PANEL_ANOMALY_DEEP_VALIDATION_V1
+direction_queue_key: RD6_01A_SOURCE_PANEL_ANOMALY_DEEP_VALIDATION
+plugin_key: SOURCE_PANEL_ANOMALY_DEEP_VALIDATION_PLUGIN_V1
+policy_hash: e4a85ce55a1fdee0
+source_panel_path: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_feature_panels\post_impulse_drift_long_v1\post_impulse_drift_long_v1_feature_panel_1h_dynamic.parquet
+source_panel_exists: True
+preview_axis_key: derived_candle_body_bps_high_extreme
+preview_feature: derived_candle_body_bps
+preview_side: high
+preview_found: True
+true_null_clean: True
+deep_validation_required: True
+release_allowed: False
+required_validation_count: 12
+next_module: edge_factory_os_source_panel_anomaly_deep_validation_runner_v1.py
+
+VALIDATION TESTS
+----------------------------------------------------------------------------------------------------
+- month_holdout_stability
+- symbol_holdout_stability
+- feature_threshold_perturbation
+- feature_value_noise_perturbation
+- negative_controls_rerun
+- true_source_panel_null_rerun
+- outcome_leakage_audit
+- feature_name_leakage_audit
+- calendar_edge_month_sensitivity
+- minimum_symbol_coverage_check
+- minimum_row_coverage_check
+- optional_outcome_diagnostic_after_stability_only
+
+STABILITY THRESHOLDS
+----------------------------------------------------------------------------------------------------
+{
+  "minimum_month_holdout_pass_rate": 0.75,
+  "minimum_symbol_holdout_pass_rate": 0.75,
+  "minimum_feature_perturbation_pass_rate": 0.75,
+  "minimum_negative_control_pass_rate": 1.0,
+  "minimum_true_null_rerun_pass_rate": 1.0,
+  "minimum_canonical_month_count": 12,
+  "minimum_symbol_count": 200,
+  "minimum_row_count": 1000000
+}
+
+HARD REQUIREMENTS
+----------------------------------------------------------------------------------------------------
+- read full source panel parquet
+- consume anomaly discovery state
+- consume preview candidate CSV
+- consume framework status panel
+- consume true source-panel null baseline state
+- consume policy and guard states
+- consume route blocklist
+- validate no future/outcome feature leakage
+- run month holdout stability
+- run symbol holdout stability
+- run feature threshold perturbation
+- run feature value noise perturbation
+- rerun negative controls
+- rerun true source-panel null baseline on preview
+- perform calendar edge month sensitivity
+- produce deep validation gate table
+- keep release false
+- keep candidate/family/runtime/capital/live false
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

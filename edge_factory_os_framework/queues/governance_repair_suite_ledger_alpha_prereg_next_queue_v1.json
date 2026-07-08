@@ -1,0 +1,38 @@
+{
+  "active_paper_allowed": false,
+  "archive_performed": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T02:27:25.146460+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "next_steps": [
+    {
+      "active_paper_allowed": false,
+      "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+      "candidate_generation_allowed": false,
+      "capital_change_allowed": false,
+      "family_release_allowed": false,
+      "live_allowed": false,
+      "module": "edge_factory_os_holdout_trigger_and_vault_status_repair_v1.py",
+      "purpose": "Repair holdout trigger protocol and promising vault validation statuses without execution.",
+      "real_orders_allowed": false,
+      "research_execution_allowed_now": false,
+      "research_key": "RD8_05_HOLDOUT_TRIGGER_AND_VAULT_STATUS_REPAIR",
+      "runtime_touch_allowed": false
+    }
+  ],
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "queue_name": "edge_factory_os_governance_repair_suite_ledger_alpha_prereg_next_queue_v1",
+  "queue_status": "GOVERNANCE_REPAIR_SUITE_NEXT_QUEUE_READY",
+  "real_orders_allowed": false,
+  "runtime_touch_allowed": false,
+  "top_next_module": "edge_factory_os_holdout_trigger_and_vault_status_repair_v1.py",
+  "top_next_research_key": "RD8_05_HOLDOUT_TRIGGER_AND_VAULT_STATUS_REPAIR"
+}

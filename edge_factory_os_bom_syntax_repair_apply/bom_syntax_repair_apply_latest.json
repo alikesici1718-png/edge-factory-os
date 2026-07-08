@@ -1,0 +1,1923 @@
+{
+  "module": "edge_factory_os_bom_syntax_repair_apply_v1.py",
+  "generated_at_utc": "2026-05-14T08:57:56.817916+00:00",
+  "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+  "apply_status": "BOM_SYNTAX_REPAIR_APPLIED",
+  "allowed_scope": "GUARDED_REPO_MUTATION_ONLY",
+  "final_decision": "RUN_FULL_SYSTEM_READ_ONLY_AUDIT_AGAIN",
+  "next_action": "RERUN_FULL_SYSTEM_READ_ONLY_AUDIT_TO_CONFIRM_CRITICAL_REDUCTION",
+  "next_module": "edge_factory_os_full_system_read_only_audit_v1.py",
+  "changed_file_count": 203,
+  "planned_file_count": 203,
+  "preview_validation": {
+    "ok": true,
+    "errors": [],
+    "detail": {
+      "preview_path": "edge_factory_os_bom_syntax_repair_preview/bom_syntax_repair_preview_latest.json",
+      "preview_loaded": true,
+      "preview_status": "BOM_SYNTAX_REPAIR_PREVIEW_READY_NO_APPLY",
+      "required_preview_status": "BOM_SYNTAX_REPAIR_PREVIEW_READY_NO_APPLY",
+      "final_decision": "BUILD_BOM_SYNTAX_REPAIR_APPLY_NEXT_IF_PREVIEW_SAFE",
+      "required_final_decision": "BUILD_BOM_SYNTAX_REPAIR_APPLY_NEXT_IF_PREVIEW_SAFE",
+      "candidate_count": 203,
+      "safe_preview_count": 203,
+      "unsafe_preview_count": 0
+    }
+  },
+  "changed_files": [
+    {
+      "relative_path": "tools/edge_factory_os_action_discipline_policy_v1.py",
+      "before_sha256": "50268811e0066f760ff7f1d58e49ecdd5d7242a09232bb3c3f7961b07cb2513a",
+      "after_sha256": "df0f199d63fc99778cb01c6dbac6a0efce33a6d2f9902972ee6fe51e938386f4",
+      "before_byte_len": 19041,
+      "after_byte_len": 19038,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_action_prerequisite_guard_v1.py",
+      "before_sha256": "8cb03ff245631910cfb3810daa1034814e91f408a174480bfbe4514a56e5befb",
+      "after_sha256": "1574e896464786bc924b9e80e63c8eb3fd32ca1bfe620bdfb8af5faa88e51c13",
+      "before_byte_len": 23083,
+      "after_byte_len": 23080,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_active_core_manifest_builder_v1.py",
+      "before_sha256": "76d19edb4bb20ebc0859993f0aa56b085319ca7bb005d6a077b35588054e299d",
+      "after_sha256": "56f0f8615ba8a1159733261b1dd434f6f3e36d89a059e38c602ea92eb9524116",
+      "before_byte_len": 19510,
+      "after_byte_len": 19507,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_ai_review_adapter_v1.py",
+      "before_sha256": "040be3a1eaa43cf306514cea324007fbd81d12f1b11a9232a883fdb285e77f6e",
+      "after_sha256": "ab6e32228e9dce56ea4e0b8bb38b66d1cec4ff83487766bda254e3cc1aabc6dc",
+      "before_byte_len": 13927,
+      "after_byte_len": 13924,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_ai_review_packet_builder_v1.py",
+      "before_sha256": "7aa8122fbe3684d66fa4822cd4b38c38310552cd4f7c09b8eac63e2b7fb9e00a",
+      "after_sha256": "4855500b0a989ae092c36da5ed90e95afd17969d0494776c610b7bd1168a71d3",
+      "before_byte_len": 14585,
+      "after_byte_len": 14582,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_artifact_freshness_index_v1.py",
+      "before_sha256": "4f33276226b70d686f52f57c0ab0735e7f290e1deea77367769bfb71848487db",
+      "after_sha256": "bbedd9844c3c06e05065ab08e1621005fe89d6d295487b96576632021e430d97",
+      "before_byte_len": 10839,
+      "after_byte_len": 10836,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_autopilot_decision_adapter_v1.py",
+      "before_sha256": "ce51ee4a689b65514ebbdd776f3c427e07db94fe307e7114646722afee60d0c6",
+      "after_sha256": "11552cd04b8d5fa30df909dee6d5aa2223a2396c905388d10f879cb996d16323",
+      "before_byte_len": 15072,
+      "after_byte_len": 15069,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh_v1.py",
+      "before_sha256": "d81fe7de0466da774c9302bea7905e1b7122c896572bb074f54fcca05342ae26",
+      "after_sha256": "858f23707630b2575c5bc973945e1f870849fdecd54040f054badcd7f9a38e2b",
+      "before_byte_len": 24098,
+      "after_byte_len": 24095,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_broader_month_feature_engine_contract_builder_v1.py",
+      "before_sha256": "8a146dd6bf331771504bc62dc7dd81adb225717db3771e4787c215c388d2341c",
+      "after_sha256": "4ff70e022c62bc7581a029a98709a82a85e65c1589f1fb08c2543fcbbe51b036",
+      "before_byte_len": 24432,
+      "after_byte_len": 24429,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_broader_month_feature_engine_evaluator_v1.py",
+      "before_sha256": "656ee594c38c01bdb4e165e94c76e21ae67e277461030d6830d72bb3a317cbd1",
+      "after_sha256": "734012ee4d0d4d821e22bd0797c93add447b673056b873e56ed218552a66e6bb",
+      "before_byte_len": 16277,
+      "after_byte_len": 16274,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_broader_month_feature_engine_runner_v1.py",
+      "before_sha256": "04cbb7079a53f57c77891ee62aeac1ea506253fdaf7b4b701e2dd078c0222c9e",
+      "after_sha256": "1977e65b5cfe93e41ec6f08ffb44d866016aab655d2394fa35582a7c93a9f09e",
+      "before_byte_len": 32518,
+      "after_byte_len": 32515,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_calm_market_low_vol_continuation_archetype_evaluator_v1.py",
+      "before_sha256": "d4bc1edb8d3b4192341e63d2f176717d8fc68876ffbf5665b28f47a59655532b",
+      "after_sha256": "8385848e7346fd22293c07f7ef4ccc140291c7988a56e3a7e8115a666110e2f3",
+      "before_byte_len": 17164,
+      "after_byte_len": 17161,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_calm_market_low_vol_continuation_archetype_runner_v1.py",
+      "before_sha256": "7a4ac59a7b8a50a2a374a6afdac327bd4e7d8eff8c96177ec36dc530641401ff",
+      "after_sha256": "994f75c95ffb69f08e9fe4cd6f430b1c2cd25f7be043611c484075b4957318a6",
+      "before_byte_len": 36063,
+      "after_byte_len": 36060,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_candidate_route_lesson_memory_checker_v1.py",
+      "before_sha256": "3273883e894dc67ba3b1c59f02a5eac7dc29a49f9e23f682059bf6ceacdaed65",
+      "after_sha256": "6f46912e5859c34899e65470e8a15dc6725b19ad68c3f9218fe2c0f0b1bffde5",
+      "before_byte_len": 10822,
+      "after_byte_len": 10819,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_canonical_month_window_guard_v1.py",
+      "before_sha256": "105067761b877eaa0be8c4f93ec401431bad191fdb6a7b6e0d46809fe6647137",
+      "after_sha256": "5efc3a3011137145285272d13c9ef10744e66a75b1cf60aec53bc0948dbd10ba",
+      "before_byte_len": 13540,
+      "after_byte_len": 13537,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_control_tower_cycle_runner_v1.py",
+      "before_sha256": "f13695e78351156b9e4e04a2ca120fd5daa8345943324cad5255ed720077d202",
+      "after_sha256": "979a87bada4420fd913821e5f1833b371127b31a6927b3fe5d66a298a088f3a6",
+      "before_byte_len": 19974,
+      "after_byte_len": 19971,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_control_tower_decision_journal_v1.py",
+      "before_sha256": "4f5114ca223d90c97721489777341943c477f15feba674b74ad2c427665ac406",
+      "after_sha256": "c1e55caf6471093ef8d4ceac94f30bdcea8e16acd8f90cd677716ef6aa820267",
+      "before_byte_len": 13347,
+      "after_byte_len": 13344,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_control_tower_v2.py",
+      "before_sha256": "100e94f1f54139bafeea548bf78cba3b2491cb19d2c3dbe37a0dac2acc22e2bf",
+      "after_sha256": "ffa267ec8f79b9cad9c1dddbb82510efe29f007d72951cd34eec3106173bd054",
+      "before_byte_len": 23905,
+      "after_byte_len": 23902,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_cost_sensitivity_evaluator_v1.py",
+      "before_sha256": "d43e924adc90e09da8ba67af3a500c5e3a95617dbd5225b281d0da43a06b4725",
+      "after_sha256": "f850926a5f5c69852408034be5be111714c256d0c6557d068ccfe124eda60ca7",
+      "before_byte_len": 13451,
+      "after_byte_len": 13448,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_cost_sensitivity_matrix_v1.py",
+      "before_sha256": "d283e4576f2ee718637348583d02f635d1877a5baeeb5b62c50b8b341f0dfe41",
+      "after_sha256": "e3407818b5021f9f978c4b1e36d9c35d5b71110688afad8d0f62f8d4850701fe",
+      "before_byte_len": 17029,
+      "after_byte_len": 17026,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_cycle_operator_v1.py",
+      "before_sha256": "cfd9596b8bf4c7713b16662d00b6c95f74a846f59a858d336f7c7caaac30ba61",
+      "after_sha256": "76931c187a3ccb8be2cce4b36e691fc184cc6154675a3ef2b6405b28858ccef7",
+      "before_byte_len": 19524,
+      "after_byte_len": 19521,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_cycle_operator_v2.py",
+      "before_sha256": "e7958af554f5158fe778b3f4f62a33fed1e0b7a5ea333a8b137a00609b862138",
+      "after_sha256": "d74eba94738b7cae62fd155e8e017503612896dc0ca2f9059b4e7d5042405a38",
+      "before_byte_len": 26410,
+      "after_byte_len": 26407,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_cycle_operator_v3.py",
+      "before_sha256": "846e3ead6134ce50b813f10980fd2cdd4e8234d4dd6b3961b52db383d0aa0110",
+      "after_sha256": "f918925451ba64851b7ac9de45ecd7f8365fb772dad283ee9a3374dc2c36dad6",
+      "before_byte_len": 27456,
+      "after_byte_len": 27453,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_cycle_operator_v4.py",
+      "before_sha256": "d72e0ec61475e898be76294ae332a6e496eac9fb315907d47b572d9b49f79e6f",
+      "after_sha256": "7bca99c306ec5ce4b2fca5bb7262eb1df8f0a6341022fe29e91b644546b70bb1",
+      "before_byte_len": 14602,
+      "after_byte_len": 14599,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_cycle_scheduler_policy_v1.py",
+      "before_sha256": "3f34d4539cf156c808f9f904f70dfeeb0b95f01a1a677a0ccb5b558fdec6a602",
+      "after_sha256": "065800b91415ffa3ba5ca956276c36d75815c947eab05e858aaa15309f3b119d",
+      "before_byte_len": 17706,
+      "after_byte_len": 17703,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_dangerous_marker_review_index_v1.py",
+      "before_sha256": "4d2904a010915af1c9abfaaecf34a65bc14dedab20e51592c69c772bc019245e",
+      "after_sha256": "065ffb87d7565f4055e7d8744781da567b89c15494dbd6bbf0316feea54fc1ac",
+      "before_byte_len": 13677,
+      "after_byte_len": 13674,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_data_quality_guard_contract_builder_v1.py",
+      "before_sha256": "d4242cb4e4bb553c9ecb5d37bdd824abe714f70274f5eee9cf19cdc240fbbe8d",
+      "after_sha256": "a426dba3e804afb33e3d4b5cc8534e0bc522585b967b0a52b06da9d0738ef209",
+      "before_byte_len": 25400,
+      "after_byte_len": 25397,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_data_quality_guard_runner_v1.py",
+      "before_sha256": "8609ed578e597f8cf6ad525e142e243367701f194664b6f7313a24c883ac7a03",
+      "after_sha256": "032017ddac20f3c1e1bdfd0c2ac77e3f524309faecdb05e12056402adaee87fa",
+      "before_byte_len": 22649,
+      "after_byte_len": 22646,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_data_quality_panel_bias_audit_contract_builder_v1.py",
+      "before_sha256": "5acd4027ff59b875216799fe7f99492d91a1af9e70679c103b9cfd03148b4ae7",
+      "after_sha256": "b63a128aa68efee57001543fb29dcb13f6a02a2f95e70335756274886a43bcd8",
+      "before_byte_len": 19679,
+      "after_byte_len": 19676,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_data_quality_panel_bias_audit_evaluator_v1.py",
+      "before_sha256": "14745e1314cbea3c73c5860255e0f64967d5a5c13c54252a58d2a7ba9effb10e",
+      "after_sha256": "6eb348d26b1cf6580df96ffb6f8091744bba6770188da2d58b52395edc970ccf",
+      "before_byte_len": 23896,
+      "after_byte_len": 23893,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_data_quality_panel_bias_audit_runner_v1.py",
+      "before_sha256": "3100900ef8a173645fb31206b1d20e9d1bf7d7d517275ef8cf594e10b7a5b0b1",
+      "after_sha256": "8d6a1a1abc3a3b8e71eef3a1cb2632190af1fc16b386844cadc20195f9b524cc",
+      "before_byte_len": 37236,
+      "after_byte_len": 37233,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_dependency_graph_v1.py",
+      "before_sha256": "94d7846c62af8f45d688f615e88a7e49ec2a4d018e551a9bd4c39b43c59bc603",
+      "after_sha256": "7ac13c7d020836a54fa89fcaa039196e66b700b058c56029511d14231f3837fc",
+      "before_byte_len": 16821,
+      "after_byte_len": 16818,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_error_acknowledgement_policy_v1.py",
+      "before_sha256": "b22fbadf1f0f581659735ea06a0057dd15cfd8d92fb89542aec7d66ff2e89f83",
+      "after_sha256": "12622400e07f7753c26a26beb36e56bd7f1bc2dc809c3308b8af63cd2f37937a",
+      "before_byte_len": 16528,
+      "after_byte_len": 16525,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_error_inventory_v4.py",
+      "before_sha256": "3cb7a4432e582812a621553898ea23160f822e89e67393db97a33515cece7730",
+      "after_sha256": "4924336657717375d76d51e6f933fe3bb912d46d997ba578739c4fff39d022a0",
+      "before_byte_len": 19628,
+      "after_byte_len": 19625,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_execution_router_v1.py",
+      "before_sha256": "f23aa109be2313f833186cb6e79dcdb67c9f400ea79fab4478dcf898cada64b2",
+      "after_sha256": "52557c82da613aa0dead648b864008da6946f7a9c9106e16985764c8c198bb5a",
+      "before_byte_len": 15003,
+      "after_byte_len": 15000,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_exit_risk_shape_contract_builder_v1.py",
+      "before_sha256": "8a3a83a64ea9bb10524c7007a340f838feef05012810fcb74f2e6474152546fe",
+      "after_sha256": "3eaca66808aa4ab604134279acaecdd35b7e2bada2eed5d09b7418267655f607",
+      "before_byte_len": 18674,
+      "after_byte_len": 18671,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_exit_risk_shape_deep_validation_contract_builder_v1.py",
+      "before_sha256": "21fbc4c2b8db48c171fc560cdd924cc334ff80bd28d00276f00f0561bc3b0ec7",
+      "after_sha256": "17aa88c28575def7360e8a3316b1503c66d04186536eb7c86b98cd313fe1796e",
+      "before_byte_len": 18250,
+      "after_byte_len": 18247,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_exit_risk_shape_deep_validation_evaluator_v1.py",
+      "before_sha256": "098adac3a1e1465fe02966d061c13948d5f3ec0469fe987794b47fdc075eab6c",
+      "after_sha256": "acf7507d3fbe0405e137c66d9e5555e2fcddcb2690b57597b79a85ddb48c115a",
+      "before_byte_len": 23635,
+      "after_byte_len": 23632,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_exit_risk_shape_deep_validation_runner_v1.py",
+      "before_sha256": "4a6be7234716715ae56b43cecfee8c06042f4d6d27bbb686989c7d637c694d2c",
+      "after_sha256": "29abb522861abfaaa5dd102c2377f64c0e5033d1ca2f54a8c2cef3bd93840d9f",
+      "before_byte_len": 42485,
+      "after_byte_len": 42482,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_exit_risk_shape_evaluator_v1.py",
+      "before_sha256": "17c6c73191825114db6d12ae670462d59322739953f088f5f1bb0fbf5620b876",
+      "after_sha256": "f4989796f8af437f8516a2daf2ff1f246f4cc47a00b521db89be6ebc1a7ca119",
+      "before_byte_len": 21060,
+      "after_byte_len": 21057,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_exit_risk_shape_runner_v1.py",
+      "before_sha256": "38a26fb8833b48697931b9d2d33009b4b45efcf5e17bf4c90911cdeeed096767",
+      "after_sha256": "7d2d6d2613813d19dfb93b28f18e0b5d3b932cda78ef2dbaf203320d1980ca53",
+      "before_byte_len": 35366,
+      "after_byte_len": 35363,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_external_audit_packet_builder_v1.py",
+      "before_sha256": "d6793dd0447758bf097e07169ef3c1159d27f4eaacc73ce891a439cd690b71c8",
+      "after_sha256": "c8fea842b5c0e07ddc45b4a9a7ac9fbd81d9806e7d58273d6aa44e4b4745e580",
+      "before_byte_len": 18751,
+      "after_byte_len": 18748,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_external_audit_packet_refresh_v1.py",
+      "before_sha256": "3dbc0266578d605e732146e757288877598a6801e7294008450789af42fd461c",
+      "after_sha256": "7d4b59904d370fe517b8793a17c8f13480cc2104dba6d3f0c17dc624185d81b2",
+      "before_byte_len": 26973,
+      "after_byte_len": 26970,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_candidate_release_gate_v1.py",
+      "before_sha256": "3540aa51a7289b5bd6cf51ae5948994e52b0db2170ec0d02c284faa4df980455",
+      "after_sha256": "4b353076ce251d7fa06ab9f2861539c4a0189266929f4696e3c45e265f283deb",
+      "before_byte_len": 15982,
+      "after_byte_len": 15979,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_candidate_release_gate_v2.py",
+      "before_sha256": "d4b6a6d63f027bde552ea6fc12b6391e5662b4b14db82f224d1ee0aba7aa37dd",
+      "after_sha256": "4a6ab0980e1817759979369abb32c02260c2a882210d5975405d50e39cd58661",
+      "before_byte_len": 15817,
+      "after_byte_len": 15814,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_candidate_release_gate_v3.py",
+      "before_sha256": "0aac069e0f5102aa43898d9f9d8055f85c8f805e765ddd655a175a08c395fc95",
+      "after_sha256": "92160b228a9c7ea532c84e2e9128ef3341e9b2848f79e25af7fcc2b616aa2c60",
+      "before_byte_len": 16979,
+      "after_byte_len": 16976,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_candidate_release_gate_v4.py",
+      "before_sha256": "4d45c67a6d23099709421390913a0ed7351e3f573151f26cf448647714cc50da",
+      "after_sha256": "33bbf5143cb28805ce3ff2d82cd824de6f67cf0dbeb48afbc6434898de08b07f",
+      "before_byte_len": 18218,
+      "after_byte_len": 18215,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_drift_review_v1.py",
+      "before_sha256": "aa01668e58f5fecccfc2e0b86b67c5d006a75bf611d12ed9050706fbffcba585",
+      "after_sha256": "69972eda14e57d6239a4de35412426967b1337d26fd3b5a9515940882dea2600",
+      "before_byte_len": 19786,
+      "after_byte_len": 19783,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_drift_review_v2.py",
+      "before_sha256": "dfe842989779145026c71aec66eb394a32a5e94fcd8ecdaff68a222c7ea917a4",
+      "after_sha256": "72028938113ad8eba4fd1d8db5204bf01c1a3fbce2847f15611676d12a1f4b3f",
+      "before_byte_len": 23484,
+      "after_byte_len": 23481,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_drift_review_v3.py",
+      "before_sha256": "d548be72265baed63d6748cdf4c267483b9d878dcb379a0eb029d97774fe4f0d",
+      "after_sha256": "55595b833df39b5e4b4b33741b1bfd8420338654e1d1837163d739a945ffb8c7",
+      "before_byte_len": 14228,
+      "after_byte_len": 14225,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_exposure_profiler_v1.py",
+      "before_sha256": "5cd1a1dad87ce939cad31c7a25386b6ca00325a1671dd559b40bf83f6d762872",
+      "after_sha256": "06b5156e0a6ccf034805b7f8d8dd55db25294f48b9792ca6dc1153ce01ff4c8d",
+      "before_byte_len": 16414,
+      "after_byte_len": 16411,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_exposure_trend_watcher_v1.py",
+      "before_sha256": "5282219e3ae90850b9302cbfd18873a0004ae07b1431e09374b9fd8bb052f676",
+      "after_sha256": "138ca82e1e437374b39b99b973b7d5ab6cec1f75bc9b9bf98c2322b275f500cd",
+      "before_byte_len": 18920,
+      "after_byte_len": 18917,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_performance_discipline_v1.py",
+      "before_sha256": "800e623a5fc1d368d66de30ea8fb14429e2b6d707fdeca9ad0646ea6ae2fab29",
+      "after_sha256": "997c37e1b301a90b60063bd33ae7129f348a0935df9a315fede521e7a11d8d6f",
+      "before_byte_len": 13201,
+      "after_byte_len": 13198,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_performance_profiler_v2.py",
+      "before_sha256": "43d2da2afdb0c58f62872c026506f39cec7ea7a41bee537a6cb98256d3ae8a92",
+      "after_sha256": "d60ac679c38b25f86e82d56a9cc4ff06daca6cac1b2d153c858429ea87e895bd",
+      "before_byte_len": 19231,
+      "after_byte_len": 19228,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_registry_and_lesson_enforcer_repair_v1.py",
+      "before_sha256": "bec0eb3ad99f7532e27d8d253736418b202f0e3289487118589c5d6719982fb9",
+      "after_sha256": "fc6ce1ad910d9123cbbefa6db201cee4f3d34a637ae84c4ca91424e70b9dfeb8",
+      "before_byte_len": 29281,
+      "after_byte_len": 29278,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_family_sample_balance_watcher_v1.py",
+      "before_sha256": "1b48f61a783c0bbad19b3dae9eb44d6a105a0d8a40c0fce3168bfb94d025a69b",
+      "after_sha256": "d41d6cf11a7f9a7c43f21ba2193b8d439f156ab248012ffec68e073f3654c32f",
+      "before_byte_len": 13653,
+      "after_byte_len": 13650,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_feature_conditioned_research_contract_builder_v1.py",
+      "before_sha256": "891d9581409a43416bc39d6317b43c58064aa9b9671e625e634e23a38bcae4bf",
+      "after_sha256": "f5d3a365e89ea06a72973629b51f6a785f70b6fb63fd8f809cf04501a5f4c571",
+      "before_byte_len": 26193,
+      "after_byte_len": 26190,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_feature_conditioned_research_evaluator_v1.py",
+      "before_sha256": "c9e2f0eea531e904024465cf34a6e4377fe4b2a978b58a4c3b6b1924b038bf93",
+      "after_sha256": "069d9f08dd5fd2218b28d5b9dfaef29a9321024f0518aa59423afceaeb361020",
+      "before_byte_len": 23575,
+      "after_byte_len": 23572,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_feature_conditioned_research_runner_v1.py",
+      "before_sha256": "272df12fd041e2a5b290c895fbebbda974f643f7f6034cd5f26123dcc9ad01e2",
+      "after_sha256": "89320642dd2dcd37de5c7901068e9f06574a588e6fafdf1feb9e1d496fdc1ef3",
+      "before_byte_len": 24513,
+      "after_byte_len": 24510,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_framework_router_spec_builder_v1.py",
+      "before_sha256": "f92d89a57b7dba69fe1713fccb35edde0284b4a540d6454030262aa713c92a8b",
+      "after_sha256": "f7cfe80a55b6b68fd6307e542f9f4836f6cde0e3d22562699dc3e591e2207e5e",
+      "before_byte_len": 21178,
+      "after_byte_len": 21175,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_framework_status_panel_builder_v1.py",
+      "before_sha256": "d242479714a9eda4b8cd3e961ab33c52cce2dfc30077470df092d7743e698dbb",
+      "after_sha256": "c122f216ecfe7bc87c93443292aeaef8d4730fa2895c6f4f11b77b345b46f477",
+      "before_byte_len": 25767,
+      "after_byte_len": 25764,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_full_prerequisite_chain_orchestrator_v1.py",
+      "before_sha256": "bfd8c88e9537e365e3ff0085d2d2ebff5a4fb499df43ea022aa1b155f2075db5",
+      "after_sha256": "8a699c8bb809a2e66cd18467c11cf211829668c732a02c59c7d9c95d2b763332",
+      "before_byte_len": 23393,
+      "after_byte_len": 23390,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_full_universe_failure_lesson_recorder_v1.py",
+      "before_sha256": "79fa214bdf95999f9c76cc910aca1f7d35ad9f2058a4d40298e90ca8f3a0dd5f",
+      "after_sha256": "3c0fc1b9a3937c32200b8caf0a6af92f160625d42e86ceee3698accee25f0068",
+      "before_byte_len": 17204,
+      "after_byte_len": 17201,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_full_universe_offline_backtest_evaluator_v1.py",
+      "before_sha256": "ba120683093b44986edcb2aa98f112834eb6700d58cbadeb2f14fe9e14577359",
+      "after_sha256": "155d2f09631bee7f1b6f137a951d8da9ba2f0dce20c0ebd2dd8e0b9410dcdeed",
+      "before_byte_len": 15590,
+      "after_byte_len": 15587,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_full_universe_offline_backtest_v1.py",
+      "before_sha256": "b40a429154f16d7fcbeadfc8cb7f3141a5b63ef88e4aafd48075a9c6438f596b",
+      "after_sha256": "8fe43698c59648c371400cc454f9376bd994fc864e0baa953036e05bf59f0918",
+      "before_byte_len": 20071,
+      "after_byte_len": 20068,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_generic_framework_skeleton_v1.py",
+      "before_sha256": "a95707c94a74b3066cd181a4f7900809aadc2d8bac65e8ac1ec6f68e80da5164",
+      "after_sha256": "b3daf8811beca394a606f1dc9466bcd7d7c939d62b0f60a0c5051a93f9de1a78",
+      "before_byte_len": 23906,
+      "after_byte_len": 23903,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_generic_research_contract_builder_v1.py",
+      "before_sha256": "2edccf46aa2e74665179d52f87d3f1f97c58a989b5b9cc0909c07ff2c61bf45e",
+      "after_sha256": "983405dbd344376292591e08877685561f1d31339ce4fb5ff09ad9287212ff8e",
+      "before_byte_len": 21545,
+      "after_byte_len": 21542,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_generic_research_evaluator_v1.py",
+      "before_sha256": "3a0c9e795e5f276bcdac9dd2d58739e4a9be96dcbf1c33a8abcf889f87d72753",
+      "after_sha256": "16fe32236745db9dd5ecac0eed8c00d74215c5a6e3d4baebfeed352579e030af",
+      "before_byte_len": 25449,
+      "after_byte_len": 25446,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_generic_research_runner_v1.py",
+      "before_sha256": "4c8333f6192649cea6f681f5485d636c84db38f853f88daf5ff933d5f1cbd212",
+      "after_sha256": "c79347005099a1a3468be3834c65ce614eabe6c58808cf28878b4da69b07f323",
+      "before_byte_len": 43317,
+      "after_byte_len": 43314,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_global_multiple_testing_ledger_and_research_budget_policy_v1.py",
+      "before_sha256": "db5f18825a0a92bb2117cd1627b469551fbab17ef2b35d8067c769d95afdad44",
+      "after_sha256": "858470c466fcfd8a4e013dc7d7f5376f4a9c7d30542cefb84e15e9b608969ef8",
+      "before_byte_len": 30838,
+      "after_byte_len": 30835,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_global_route_family_alpha_accountant_v1.py",
+      "before_sha256": "b1f4e72b7d22d2d44d6b3e0531132ea95e3fc1bd18a57f5827eb3e0acdea0f03",
+      "after_sha256": "fcdc091dfc40b86b5d2a3505e648279a823afa55f6406323e5a257b3e1b33118",
+      "before_byte_len": 29289,
+      "after_byte_len": 29286,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_governance_repair_suite_ledger_alpha_prereg_v1.py",
+      "before_sha256": "dbb5c04411ca248c2a4381eeca01315121aeb7320536aaa83bd2593ee2bfbe1b",
+      "after_sha256": "64be176952dbc06c013b99d2da4b54ab9610b1d07cb6ed1f3a44b171996a30e5",
+      "before_byte_len": 29554,
+      "after_byte_len": 29551,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_governed_research_reopen_gate_v1.py",
+      "before_sha256": "53312fea5dd7304eaef91cbe4fba1a0cf0cf9faeaaa3d4a9d673c5fb13416720",
+      "after_sha256": "39d32396736f521ff62be8f07f941482aed6a2b482aefa61406f859c3bb1d603",
+      "before_byte_len": 25408,
+      "after_byte_len": 25405,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_guarded_feature_space_expansion_contract_builder_v1.py",
+      "before_sha256": "b64e35116653b183539b42ffe8af2db0534f1644b6d6352748d73bfd5d5223e8",
+      "after_sha256": "694d49641b0e90b475b16bd2c1e959c5009bdb54d2d0453cdd12117f47cc0133",
+      "before_byte_len": 24151,
+      "after_byte_len": 24148,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_holdout_trigger_and_vault_status_repair_v1.py",
+      "before_sha256": "8e372e3fcd174003ad85430f79734789776b4a6dd86986ee2b4959da6966e79e",
+      "after_sha256": "1a23bb6fa632a465cd7bc5859417c793942e4d6d61145b48d3d6cd46bb8aa301",
+      "before_byte_len": 26804,
+      "after_byte_len": 26801,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_impulse_long_evidence_locator_v1.py",
+      "before_sha256": "5de7fd4d07da4f09040501fb26a019148a7e15306e7913d231d45b083440d556",
+      "after_sha256": "740591839256aea2d714e8beb405704e34ab7520c7e79d8e70bd8ce4b3f33e3c",
+      "before_byte_len": 13769,
+      "after_byte_len": 13766,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_impulse_long_evidence_locator_v2.py",
+      "before_sha256": "b06d876dd81f7247b17c2097f6a71731f5fb6c19dc8c541e40dc4a86c259a8cb",
+      "after_sha256": "049a6921cd081d76ed317a8067314944de90576fabafd1ca162352c8162f201e",
+      "before_byte_len": 17137,
+      "after_byte_len": 17134,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_impulse_long_failure_attribution_v1.py",
+      "before_sha256": "72bd06a70ffd29088ec648ffde1a74281be6ab36a6d5a8610ae1998685999538",
+      "after_sha256": "57556f81a724621abd81f184cc6c1d5bde19d50152a63b70250a2d824e6cd700",
+      "before_byte_len": 20125,
+      "after_byte_len": 20122,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_impulse_long_row_level_diagnostic_v1.py",
+      "before_sha256": "15b0a4626a966f55dc737e3d4afe68119cbe49a517499b9b05295d0f2dbc4c2b",
+      "after_sha256": "09eca9495e9ef6ad6f51196e9947b8740bc79945f6a6930c96cd2d725e8e226d",
+      "before_byte_len": 24979,
+      "after_byte_len": 24976,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_impulse_long_row_level_diagnostic_v2.py",
+      "before_sha256": "7506d3ba030f7783c501ff5eb9b8d69559d967376d146e794d5e621b756b38f0",
+      "after_sha256": "c27833fdd8aba3045d6fcdbde345390d45e3a894cf2f8860b47c12b01d8e885c",
+      "before_byte_len": 22216,
+      "after_byte_len": 22213,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_joint_null_distribution_validator_v1.py",
+      "before_sha256": "6f79d89a025b04e4729e02b218b261c694a7ca1b8183f6b30bca22f05fe31f72",
+      "after_sha256": "1114df0f9af1527504e594208b96476d05c7b25aa4ec5418e3f905dd5649cecf",
+      "before_byte_len": 41558,
+      "after_byte_len": 41555,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_label_free_event_motif_contract_builder_v1.py",
+      "before_sha256": "e563b1e8db58936e4fd4753587b5182c6e5f6609cc2fb933f469861d3ff58772",
+      "after_sha256": "916f97f4e4b153bfd57c0d1adc9c431e6b7a2874e5381c30ba18e96e807c7fd9",
+      "before_byte_len": 18479,
+      "after_byte_len": 18476,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_label_free_event_motif_evaluator_v1.py",
+      "before_sha256": "7fcdbba2af1ca69413f30812374311eb8f8e2f72023d30cf00aa079fcf1b97a4",
+      "after_sha256": "61b07482ab4f429ef536703861d35ad7133032803aa98d471e3e808105d6614f",
+      "before_byte_len": 20331,
+      "after_byte_len": 20328,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_label_free_event_motif_runner_v1.py",
+      "before_sha256": "8f606f546cdc57dccbe2b2c0b01aab07e1498ac57977c0dfdee6c3b4ded2c03e",
+      "after_sha256": "485bddfbd95d3ec468e902db352203cac900e60874cd31d836066be490f0f842",
+      "before_byte_len": 36466,
+      "after_byte_len": 36463,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_lesson_memory_checker_v1.py",
+      "before_sha256": "1d9c9d1d1d619f6b1c0e9c777b1da9aeb94369f0fe4511d7a8c9b0cc8b3820f5",
+      "after_sha256": "f962a40e937df7291b3b373c3f163cb82fa4e8f80c130ade57a6a694d47695ea",
+      "before_byte_len": 11133,
+      "after_byte_len": 11130,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_market_neutral_relative_value_archetype_evaluator_v1.py",
+      "before_sha256": "f8b5d14be6afb65de1fa03a19ad8db9a282b35cc4da3a2666f7d84db5ee43cfe",
+      "after_sha256": "5e8bb38692d81cc686e6ec31a302995156661e62c2a3c4bb41ad4261b54e9990",
+      "before_byte_len": 16580,
+      "after_byte_len": 16577,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_market_neutral_relative_value_archetype_runner_v1.py",
+      "before_sha256": "02e95a516ccc0bed318a8cc31a39aba8c7cd2ff3570415cead415768027df71d",
+      "after_sha256": "b02abed73b83c8c22e7943bb890b807865df976dc3961d6eaf012f1c046abc02",
+      "before_byte_len": 27515,
+      "after_byte_len": 27512,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_market_state_transition_contract_builder_v1.py",
+      "before_sha256": "647a35f38797e422cfecfd194ba440ba8c4718466c3420e3b87d854014ea67fc",
+      "after_sha256": "6d792ae5f7a1731f6a34c4449e1234d330d2e1deb86087c458b38f869110b4de",
+      "before_byte_len": 32444,
+      "after_byte_len": 32441,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_market_state_transition_runner_v1.py",
+      "before_sha256": "2ab274978be1399db2419047912bbd076266fbc33fee10a75fc6eb9289715dcd",
+      "after_sha256": "49327f6611da674cf93a24d0e23f5bf08a6ded438f8a71af74c6bc7e37b419fb",
+      "before_byte_len": 54932,
+      "after_byte_len": 54929,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_memory_lesson_index_v1.py",
+      "before_sha256": "46a977610d990a10dcae6d6e7234cef11fbdeb60f2dc4ec05d131c75088283f7",
+      "after_sha256": "8c2ba2e176bf7398151ac88e2bb23fa695d654d49ebd682dc92bae3e0525ef58",
+      "before_byte_len": 12206,
+      "after_byte_len": 12203,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_module_consolidation_planner_v1.py",
+      "before_sha256": "4c24ad4e083f9f11f32d08e06ba25f936911047dab91d1bb823c3b3eef59c4a4",
+      "after_sha256": "0daf0866d4ce7d04578852c442860c4bb0bc5576edf6262c8c2db829157396eb",
+      "before_byte_len": 19028,
+      "after_byte_len": 19025,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_monitoring_stack_runner_v2.py",
+      "before_sha256": "853605052be8e5f16a5675387decbc85581004f06c244e1f3e74fb19c9707c0a",
+      "after_sha256": "1da703d5e4b1d6554f2787cbd83853024c23456e231c7bd735d1006fa1c8aee7",
+      "before_byte_len": 17972,
+      "after_byte_len": 17969,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_monitoring_stack_runner_v4.py",
+      "before_sha256": "e4d1e3a16cb7848dfc7314d14913cfe987a2ec228f50eb65a989e1aaf35d8534",
+      "after_sha256": "f6735854a4b312e279f449a783c8a042c4c101f81d6084fc138e2e48e6ef4387",
+      "before_byte_len": 24724,
+      "after_byte_len": 24721,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_monitoring_stack_runner_v5.py",
+      "before_sha256": "8e68cab5eb8eb1443b2e200dd60844d617d78e49c8dce647dc424c3f41028e16",
+      "after_sha256": "2eee9f7089770834081c5628c40c75cb2e8473508340542510e088b391448d2c",
+      "before_byte_len": 25986,
+      "after_byte_len": 25983,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_monitoring_stack_runner_v6.py",
+      "before_sha256": "c79dbba52e39aa6be51a66506492cc91d2b9dfe0a8dfdf00a63ad38469926d06",
+      "after_sha256": "9afa45e07f1a3e1d0bbc50a590597ae8058f07dd6984e6d4772180557d2f4170",
+      "before_byte_len": 27672,
+      "after_byte_len": 27669,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_month_first_feature_discovery_contract_builder_v1.py",
+      "before_sha256": "13c3f2d2a5d73aaa71c4b06a91008f24dc9ca9d686aec7c64b95f01cc94733a5",
+      "after_sha256": "8914eee8cf8d95f9e49a8c3ecaf619b4e87d01cd491c9a5035ee27a981633f95",
+      "before_byte_len": 22401,
+      "after_byte_len": 22398,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_month_first_feature_discovery_evaluator_v1.py",
+      "before_sha256": "b3d49ea0104069df8cb01334382ecb99c3366153d790cd1b62bedfaf4562f427",
+      "after_sha256": "c654735553c766b6b5ed0a31dbf525cdf5d8236abc3364838d339d631a97edaa",
+      "before_byte_len": 18097,
+      "after_byte_len": 18094,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_month_first_feature_discovery_runner_v1.py",
+      "before_sha256": "da37ce235a4dc387f629f2d45a64cb3ad3cbfbafd0670afaecd456f8d66d2243",
+      "after_sha256": "e765d99e9add5b54d9f341968e6a0bda8616d36592e59a95d82574a67cc4dae5",
+      "before_byte_len": 26683,
+      "after_byte_len": 26680,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_month_regime_instability_diagnostic_v1.py",
+      "before_sha256": "e6240c7fd7e76b54c510eabf09d74ad77ce465cc0424735b1b33387045ae561b",
+      "after_sha256": "95839b14484d2c2a5f0d769b9390b2cb2e1d2e5b6d771207fea261a1ac88fc34",
+      "before_byte_len": 30139,
+      "after_byte_len": 30136,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_month_regime_instability_evaluator_v1.py",
+      "before_sha256": "1f58f80d5726fca95d515485d9b40f66d8e16079bac1609e064737a67cda956d",
+      "after_sha256": "aa7e5a560b7471c698983c7b42e3ecc8b700ca7f7ac302978b94ead9432bbfe0",
+      "before_byte_len": 16618,
+      "after_byte_len": 16615,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_month_stability_repair_contract_builder_v1.py",
+      "before_sha256": "7f2917548b08270ed46c7a62aa479fe9230b3167098e8f0f6d2473662e4a12d2",
+      "after_sha256": "4972269c8f04f4565545c24bea986e5d50c53d9ef225f193653bb5aa75e4a3c9",
+      "before_byte_len": 17339,
+      "after_byte_len": 17336,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_month_stability_repair_diagnostic_v1.py",
+      "before_sha256": "146b7b9e35a376ac66d3c13fb6d10ad4625c9426e3b01b234e3acccdac802440",
+      "after_sha256": "56485586e5dedc353e6380336eeee97aef79db65d7bc3976c7824bbc483e59f5",
+      "before_byte_len": 30047,
+      "after_byte_len": 30044,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_month_stability_repair_evaluator_v1.py",
+      "before_sha256": "92a8b1507340749da0bb6fd9007561e7efe3df1d5e12785d8058b3a448338057",
+      "after_sha256": "5c2f677b48634b6a1dd16bbc49544fc57808fa4e508311935b71515738e0ed57",
+      "before_byte_len": 17790,
+      "after_byte_len": 17787,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_new_research_direction_queue_v1.py",
+      "before_sha256": "59b6bbead4ab8400c7f7f640f9bfe9f33c37bf2ee3d24dabf20656343c1c5d8c",
+      "after_sha256": "307392ca6769921893aa2e0f59ef96244bd071ace5c4e239e7752acd3fe9bab4",
+      "before_byte_len": 22057,
+      "after_byte_len": 22054,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_new_research_direction_queue_v2.py",
+      "before_sha256": "bf65db4b59bb5d363c56090d79b61e8d6742afd77e9bbee78b2b48091ab64e75",
+      "after_sha256": "97740f981acde2c9da77b200efe94ed57918da225505e67f8e35a1e96b665f58",
+      "before_byte_len": 25271,
+      "after_byte_len": 25268,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_new_research_direction_queue_v3.py",
+      "before_sha256": "f81f896708d70ecf3ccd6c7ffcc91ae489ceef5462a8d460934f0cad1126243e",
+      "after_sha256": "b72acd723e90a31cbcfc83b36023b91796994b2595fa61b6f11881be217785fa",
+      "before_byte_len": 15534,
+      "after_byte_len": 15531,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_next_action_planner_v1.py",
+      "before_sha256": "07c30ee6109693c112df859cdc1890a2cf963c2ca62e6a33e83d7edcd8c0b140",
+      "after_sha256": "779e0ed641b650de8b9ded561f87b63644d1eaf13f775f91ccfb714b0b789c39",
+      "before_byte_len": 12899,
+      "after_byte_len": 12896,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_non_impulse_mean_reversion_archetype_evaluator_v1.py",
+      "before_sha256": "b0c2eee4fdd7576064d3a3b41b59085f5341bdf7379f3e3e6d5d0dac6a5c440c",
+      "after_sha256": "5897bd4dd290287e8a40cb8f327e0a1a672b7f7aa95da7d7a7c0c3025f5ee70b",
+      "before_byte_len": 15612,
+      "after_byte_len": 15609,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_non_impulse_mean_reversion_archetype_runner_v1.py",
+      "before_sha256": "f4f65125976dfeb672504c4c0d8199796d12cebdf22535860978ac38ac525172",
+      "after_sha256": "05f41212aecb76692c4a6c96b66473896853819d72614ceb41621926b5c329c0",
+      "before_byte_len": 26804,
+      "after_byte_len": 26801,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_null_baseline_method_audit_v1.py",
+      "before_sha256": "7df2b3d96e3661a188101a30d575a4a2826e4d5576e9080cadd1921394b1e31f",
+      "after_sha256": "ba347b9c41d66d8e477b26bf26b6e30576f8c2c8502d3b6708b7505e8ad4f861",
+      "before_byte_len": 33171,
+      "after_byte_len": 33168,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_null_baseline_method_repair_contract_builder_v1.py",
+      "before_sha256": "fcc4f61f5b11b07b3c26dc76deec1c73c00aba0d14cc6553ba30149ccfacccb1",
+      "after_sha256": "9b5c1fd5ea7faa2fe0965402b48f0eac86d7bce84a5c471c88ceb2069ce39563",
+      "before_byte_len": 27269,
+      "after_byte_len": 27266,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_null_baseline_method_repair_evaluator_v1.py",
+      "before_sha256": "4b1bb6b97e0a00592c307549658665ff9fb820f5883bcb569fb6bfc9401e032f",
+      "after_sha256": "231d7deed2a9319dadacb11cdd3337b39f917238d49252702bba90eef819f6dc",
+      "before_byte_len": 33626,
+      "after_byte_len": 33623,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_null_baseline_method_repair_runner_v1.py",
+      "before_sha256": "25a1bdcb625ca37a8f370143f758fd64cc703ce19f445a05192b90d780907a80",
+      "after_sha256": "123d838ec63350f2c3cc54996b1cfd2db1cdcf9a7f1354e3a655f7a3b61d7ae9",
+      "before_byte_len": 41340,
+      "after_byte_len": 41337,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_null_model_permutation_baseline_contract_builder_v1.py",
+      "before_sha256": "688242006ff529820a37755b7f731dcc84617c5402af6768169e772eb832f446",
+      "after_sha256": "7ec799a4db33810e478a78e7ddf28c484db397ef09c69251e16623d6c6280bc1",
+      "before_byte_len": 23071,
+      "after_byte_len": 23068,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_null_model_permutation_baseline_evaluator_v1.py",
+      "before_sha256": "bef845f86d61485922d72afa51ed08bf941c9bf8d1e2385232b08b36f4717541",
+      "after_sha256": "5c8172c73c44e0daebafe38ae0b078840cb084ed90e238332deb9848ee28c00d",
+      "before_byte_len": 28735,
+      "after_byte_len": 28732,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_null_model_permutation_baseline_runner_v1.py",
+      "before_sha256": "26519964f0c88ad0dbe0eff921f8c3d0271c304b5b6cf8bae5b9d36d559f458c",
+      "after_sha256": "99cca40a478ab0005321f0807e3d848847984b400f6921ef2f25056830ffef24",
+      "before_byte_len": 35831,
+      "after_byte_len": 35828,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_offline_research_contract_planner_v1.py",
+      "before_sha256": "e0f514e0a2eafb2f771dcc432d21e8767672bd81d7d4e9bbeb8291af76786072",
+      "after_sha256": "5dbc58f1784957925a46f104be92031cc3dd270fbbcbbf6bc4d301caba2ddcd9",
+      "before_byte_len": 19306,
+      "after_byte_len": 19303,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_offline_research_contract_validator_v1.py",
+      "before_sha256": "ffa20087417e855f993ef4cfa546be12de79f6e7269194faca378f35fc191aa8",
+      "after_sha256": "5281ebd2b00ba2578901e908d8507c6d79c1de001dec29d595e219e51f8aa762",
+      "before_byte_len": 17344,
+      "after_byte_len": 17341,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_offline_research_result_synthesizer_v1.py",
+      "before_sha256": "687fa1f381dfa0544b9e4ddad3ed10088e60a373ef6b12bfa8d59d594d03ced8",
+      "after_sha256": "db9dc35cbfb6b73365467b20d20bc6de18602ce16611210faf1dd9d86c2a0d8c",
+      "before_byte_len": 21956,
+      "after_byte_len": 21953,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_offline_research_runner_plan_v1.py",
+      "before_sha256": "9df77b11512fa8f8735d18b6e4085071fbfba37d52e0aec95538108a79babace",
+      "after_sha256": "df846ad8009dee18b15a284095f0c4c90a17e0ac3ed74d21f217680f079373b0",
+      "before_byte_len": 14970,
+      "after_byte_len": 14967,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_offline_threshold_sweep_runner_v1.py",
+      "before_sha256": "d477f927c03a97c5e6cd2dea693c3c3e9258f9caecf18e3b34ec7352e1c2cd8c",
+      "after_sha256": "81b0a4d9d2977ed7519fea586155f47085d0c47d3a0f9acc29cea88dfe8be258",
+      "before_byte_len": 14441,
+      "after_byte_len": 14438,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_old_short_final_runtime_reenable_execution_approval_v1.py",
+      "before_sha256": "5c6defde45f34c1f71239d320018a089ae5738836f92c31afcb976aadd134881",
+      "after_sha256": "ca12b370fa08e02776efcbb28b3a11652c4d1c89bb188e3203316cb78d8b9fe4",
+      "before_byte_len": 18512,
+      "after_byte_len": 18509,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_old_short_guarded_runtime_reenable_patch_preview_v1.py",
+      "before_sha256": "47f7353e4c2e19640d488fc0e2411645b3dcc0ab5f8484d6a7db9dcef1596dd8",
+      "after_sha256": "d742cfe8fd2989471f4a8d209221080278caa192da0fec6eac4a6c8ea7ac1df8",
+      "before_byte_len": 17836,
+      "after_byte_len": 17833,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_old_short_guarded_runtime_reenable_plan_v1.py",
+      "before_sha256": "f18b249eafa6a6bc1dba4371d3bdf4c4d3f52946e2221a1a999442e641760f1a",
+      "after_sha256": "e408b8dcfab937057d41b986ada7d5a49e7722f51baca93fc9023aa40bedd7b9",
+      "before_byte_len": 26216,
+      "after_byte_len": 26213,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_old_short_manual_reactivation_approval_v1.py",
+      "before_sha256": "3a8063d31b141a5035d39bac9990d3497cd024ecfabae13bd5e01fb68122376e",
+      "after_sha256": "b416acb89d98020eddf24dc94331fb3cc12a1e25dfd184d1ffdb323873064781",
+      "before_byte_len": 12384,
+      "after_byte_len": 12381,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_old_short_reactivation_gate_v1.py",
+      "before_sha256": "f6a403465cbafac293052e70c0ecfecf2d17c0433c5d88e11f19e181adaf780b",
+      "after_sha256": "2d41cd841e4a20d96fc99dd879a2b92a9cc50c8d89de2d181459554954a62b22",
+      "before_byte_len": 19102,
+      "after_byte_len": 19099,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_open_pending_aging_watcher_v2.py",
+      "before_sha256": "32d0f688949a9390115e0205e226e97bb3c23032482045174badc5bae1da9e02",
+      "after_sha256": "1fde0eae96f85059bbf63364adbbdb5ef02fcb5e34b6f552e1b6a70b9aab4ae5",
+      "before_byte_len": 24267,
+      "after_byte_len": 24264,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_patch_integrity_and_explicit_flag_policy_v1.py",
+      "before_sha256": "b6cf3b5a82b5c456afc17ebfb0e882aa3438fe24e03503bc30900194826e9024",
+      "after_sha256": "b96d2dc1fe91c0809a1ac2452a0f13b21337b2537c242fbd3fb539883fbcc8e7",
+      "before_byte_len": 19665,
+      "after_byte_len": 19662,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_policy_engine_v1.py",
+      "before_sha256": "06b6ba798ffccee3732da10bd4dbc122590aaa3bbe5515bef2a6203faf770212",
+      "after_sha256": "4593c6b9920c64d2793315694e07be829d60f7dc1590e5a88aab90e874022c09",
+      "before_byte_len": 14498,
+      "after_byte_len": 14495,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_policy_locked_new_research_direction_queue_v1.py",
+      "before_sha256": "a2ba1c2c8befbedd7316873444f8e7375b5cbc952c3f943a3fe0f5be23b66ad3",
+      "after_sha256": "b22cb283a68ed1f185922267ee135f8f7f1a4708d89d715174bdd129ef334575",
+      "before_byte_len": 28824,
+      "after_byte_len": 28821,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_policy_locked_research_direction_contract_builder_v1.py",
+      "before_sha256": "6ebab461af5326f1d6500521c2bdcd8263a5f69c4c2993c0282e8c915497c085",
+      "after_sha256": "95bb011719fb249e1b5f85c18dfeffc0ee7f4e7d28e83651d2aa45bb916693b6",
+      "before_byte_len": 27968,
+      "after_byte_len": 27965,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_policy_locked_research_rotation_after_restricted_retest_v1.py",
+      "before_sha256": "85f8e2437c77bb7a5dcf5c27be8dd0542538627b2ea2ee86c10f5379cd2d901f",
+      "after_sha256": "007e80e5b67a0837ab76ad024826c831d846491fcc6e9b170dddac0ee985f822",
+      "before_byte_len": 23855,
+      "after_byte_len": 23852,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_pre_registered_research_redesign_contract_builder_v1.py",
+      "before_sha256": "6aa18acdf602c37bd60b0773af3229f1513568013a9aa229bd9ca608bd8d3542",
+      "after_sha256": "7ca227f87be4b4369cddf79b8ca491634c9f09688c12df07161fdebedbaced4f",
+      "before_byte_len": 29313,
+      "after_byte_len": 29310,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_pre_registered_research_redesign_governance_runner_v1.py",
+      "before_sha256": "9f0deac6dc621573980a1ef24cb3c921f3099bfbf53ecd81291fe66c2b2d9f93",
+      "after_sha256": "12b6487ff3b4e16c2c22530e66e21505c8f139b6187f2686e327c829f6e15cc9",
+      "before_byte_len": 20755,
+      "after_byte_len": 20752,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_regime_bucket_diagnostic_v1.py",
+      "before_sha256": "ec04f89adbf7988bc76a22baa4d680e420eff2ca5cd4471b4f38080631b80da3",
+      "after_sha256": "b90e8bb8683343af7affdcd6c0f2ef4eeef12f78b767cb5b6f478112437672f6",
+      "before_byte_len": 21028,
+      "after_byte_len": 21025,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_regime_bucket_evaluator_v1.py",
+      "before_sha256": "5fea2f2bc9d7eedadd116856c05e8623e010c42f5b78dda536132997ba0ad75d",
+      "after_sha256": "fce9bac404fb10931aedc6ef91615501925c2a5e7052254d7a1236d89855652d",
+      "before_byte_len": 16289,
+      "after_byte_len": 16286,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_regime_filtered_candidate_backtest_runner_v1.py",
+      "before_sha256": "1987e3c7c1ae2a8c80ec78a1a823d2e870493eebb2fbb494fa99b3f8f3adf18e",
+      "after_sha256": "320fbcc4a81129128f2a8909c3ff1a03f3f46cd45e48fe31ab80316b5b5e51f3",
+      "before_byte_len": 29246,
+      "after_byte_len": 29243,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_regime_filtered_candidate_contract_builder_v1.py",
+      "before_sha256": "dd791e7f97bf9c8f9d858102d4f9c7fca6726ff9a3e2bbdc9dd53dc66a843ae9",
+      "after_sha256": "53c44928359afa344846aaa0cf526b9e8b83e304b052b1aae422dbd89c5c8934",
+      "before_byte_len": 22000,
+      "after_byte_len": 21997,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_regime_filtered_candidate_evaluator_v1.py",
+      "before_sha256": "4d37dbec66bdfb307816b14b4a5f25f9a5ce256b7da800a5b23f3f8e1cf0354b",
+      "after_sha256": "5ca2f21ea84c6dd4ea48f6792e29cb40c0b8ab61ee7f22dd01a9c98b36e8cbab",
+      "before_byte_len": 19213,
+      "after_byte_len": 19210,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_regime_first_cluster_contract_builder_v1.py",
+      "before_sha256": "a832b3792c54913014f44c01c802541b35f730bc73e7bd3ef2ead6049ea6e141",
+      "after_sha256": "a026dd66386fe3ea1d6da8190e3ed3514aa239b4d62f953d994be598e1af3299",
+      "before_byte_len": 16742,
+      "after_byte_len": 16739,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_regime_first_cluster_evaluator_v1.py",
+      "before_sha256": "1af4e786a7d50d1ee1dd97f9cb4555cecd487f5045209aa78b850f8791d74cc4",
+      "after_sha256": "0758d6b0d55e7afa646b3d6030ff20c90960b99af9d39f35482ffd01f69fc9e7",
+      "before_byte_len": 20356,
+      "after_byte_len": 20353,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_regime_first_cluster_runner_v1.py",
+      "before_sha256": "4f1006f0fd73dfaf28c12f5ad7f2d8019fa8c74738d4ad2b85568c0cc060468d",
+      "after_sha256": "96813ffcd3d95b4f098104134ff85d69ac653da1a786f92f1526c1a0a2fc4c80",
+      "before_byte_len": 36603,
+      "after_byte_len": 36600,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_repo_cleanup_plan_v1.py",
+      "before_sha256": "55d8d788f230b107b20c3f75dfd5785a463604f15407cd06ecf3a7e128d83179",
+      "after_sha256": "642955cf0ce04b9dd1deba55814eb84603fde6e6e4a32df507ac7d00b1a56cc8",
+      "before_byte_len": 15178,
+      "after_byte_len": 15175,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_repo_only_standard_os_status_refresh_v1.py",
+      "before_sha256": "0a2d7660fc6b92a22a4eb79c7eed4be585758cb8f5016c3bff54c04c5cf8ffe3",
+      "after_sha256": "990d33a6b693905a9aba82c766bf2c4ef8c5ea30d8296911f87c01eb48b88e5b",
+      "before_byte_len": 21397,
+      "after_byte_len": 21394,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_repo_only_standard_stack_refresh_v1.py",
+      "before_sha256": "b1079937a66e85c01067aa9e93f520af1c19ad20a1edd8867a5362798d82e5e7",
+      "after_sha256": "a5578a4fa6b5ff99db78a309c9206eb49b25d0e5203cb0f08db0f5eb441f3306",
+      "before_byte_len": 23505,
+      "after_byte_len": 23502,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_repo_source_map_v1.py",
+      "before_sha256": "6ea9191bf6d21c70de14807797aeffeb0cd2ce4f1a05522eb15c9910ff21c19f",
+      "after_sha256": "d784b1b355eb1fc9d08e90cc21f1a556fc2257719dbca2409b1c4c40940b178c",
+      "before_byte_len": 13441,
+      "after_byte_len": 13438,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_research_direction_contract_builder_v1.py",
+      "before_sha256": "d9c8202ff75900339bba6dde3bc42b71feb0e2111970ff3d5b173b558dc28415",
+      "after_sha256": "eccac783e4c0b639217a144891585bd36dca959b89c7e670dd0acf2a514cb9dc",
+      "before_byte_len": 19650,
+      "after_byte_len": 19647,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_research_direction_contract_builder_v2.py",
+      "before_sha256": "c793bb8fbe9f31e817738a0234d6e5ca0c1cd24cc9e2d807243f8b744461c4d5",
+      "after_sha256": "afb1a6cf873ad8e134c4a7f02394e9d6732b4a85954e651ab21adab61251ef97",
+      "before_byte_len": 22792,
+      "after_byte_len": 22789,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_research_direction_contract_builder_v3.py",
+      "before_sha256": "07f03c3c9e2f4b05fb4ccdb3603e7a1038f017db338327768f657072d2d02aaf",
+      "after_sha256": "e6f82a3f49f396a1d480b9c93f61089bc825c38383c2500937b16a55989aa9fa",
+      "before_byte_len": 24111,
+      "after_byte_len": 24108,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_research_direction_contract_builder_v4.py",
+      "before_sha256": "c421d8dc13de50b8b989383d99e382a748a4b2e10dda8350c717b84ad572867f",
+      "after_sha256": "0d647de4a07854d9cf21d495de73a79932c6e504abe008bcb90d32de08e630e3",
+      "before_byte_len": 24504,
+      "after_byte_len": 24501,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_research_direction_contract_builder_v5.py",
+      "before_sha256": "e11cf0def862f4f20771f4311eda90ed3e8f26191f9a336054e1ec40b9330ec2",
+      "after_sha256": "5a2ac3880f5b4b510ebb647846bd3e629e288aaebee9a2457b57245ed3e38b97",
+      "before_byte_len": 16430,
+      "after_byte_len": 16427,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_research_gate_enforcement_validator_v1.py",
+      "before_sha256": "74d91c120c24624d206c95f53b5f0374a11f2cea6cb768061673e0f63b00a079",
+      "after_sha256": "d81da1185de152481125cccb3497b433e2b22484f798b7d6ede66d5a0eea1e09",
+      "before_byte_len": 34494,
+      "after_byte_len": 34491,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_research_gate_tightening_policy_builder_v1.py",
+      "before_sha256": "4fd12e8d46ad42242e25633990561d1563be9ea8bb5ac48d01042716b365ef41",
+      "after_sha256": "90d5388dfd68ad2e3fd02a9ec503519cdc611a0d3ab76d446e616e9b69cb1eea",
+      "before_byte_len": 23797,
+      "after_byte_len": 23794,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_research_hypothesis_generator_v1.py",
+      "before_sha256": "c7b853451a132e1000922e73ad246efdc619139d34ebe3df5f3ce626254693ab",
+      "after_sha256": "8d1ffdd02ec6ce2cbc0bbf1aa5704ce31d192163a5b8062b85aec75d1ce2c506",
+      "before_byte_len": 22393,
+      "after_byte_len": 22390,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_research_meta_synthesizer_v2.py",
+      "before_sha256": "f0e1ad4c6f1d47229de6ade8b2659bb5eab3bcd9a80f018e375fbfa37fd32773",
+      "after_sha256": "f70e4a890a9e13a51587949ade7bc216f99e0e09a87f92b83ea1dd3b0c7a048e",
+      "before_byte_len": 20005,
+      "after_byte_len": 20002,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_restricted_market_state_structure_retest_evaluator_v1.py",
+      "before_sha256": "c10de3dcab0ef2ee9ca4cafbf089c09e077122028c3ae76a46e4daed42d0d636",
+      "after_sha256": "583b5b8e8d0f3118a2428a3307f3b01ad42760fc7480d32d2efb9a3e0e352d5e",
+      "before_byte_len": 18112,
+      "after_byte_len": 18109,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_restricted_market_state_structure_retest_runner_v1.py",
+      "before_sha256": "f404014695a22b1798c9c36e844037161ee69591aaa6bd391ef6d254ac1b865b",
+      "after_sha256": "85d502e0be85739bcfe36ba4f3b2fa4e4c5692045c1c602399a96fc9871e375f",
+      "before_byte_len": 35839,
+      "after_byte_len": 35836,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_restricted_null_power_feasibility_review_v1.py",
+      "before_sha256": "79b7f798b899c51c179d9fa06df6b98d364a5e62d55d17c8ccb43cfa6624a3d1",
+      "after_sha256": "69f295a6707537cce868bfb10b2c2220a6cdaebab408edb892e185181cb1a20b",
+      "before_byte_len": 24609,
+      "after_byte_len": 24606,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_restricted_pre_registered_research_contract_factory_v1.py",
+      "before_sha256": "023cb48e967318bf87f7379b8cd60e64b1164b939f3d13e6558db7ae866bff9f",
+      "after_sha256": "3af3b862c51460af164d5bbe5dd82790d01daf20e629ac5c3d52e3ac1f2fe69a",
+      "before_byte_len": 25135,
+      "after_byte_len": 25132,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_restricted_research_budget_allocation_gate_v1.py",
+      "before_sha256": "2aff9f62b8ca8e56c284bc281e9b87af3fa9ae4dcdcc859232c9f16cce58164f",
+      "after_sha256": "299c23b53df4c7a473bfcc2e8cface019f3667e8ba170df462947418d2469a48",
+      "before_byte_len": 26014,
+      "after_byte_len": 26011,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_restricted_research_contract_preflight_validator_v1.py",
+      "before_sha256": "69beb4867827ecd0dee6dd1922eeafbe69c0a9f9edb62771d764a338bd54c550",
+      "after_sha256": "a0b31dea056887cc739859da7a9acce10a5a1ab624418aedd3cadfc9d1df0198",
+      "before_byte_len": 25885,
+      "after_byte_len": 25882,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_restricted_research_execution_gate_v1.py",
+      "before_sha256": "5db7d232d5b7da157422e7acf76c184358936e0237902a72071560aeb9f27126",
+      "after_sha256": "00fef9ad47a1200200f324ebc57f621ec25df8c3b9e382ab864011404da30586",
+      "before_byte_len": 26082,
+      "after_byte_len": 26079,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_runtime_family_monitor_evaluator_no_capital_v1.py",
+      "before_sha256": "e0f946538a533ad15c60d2b06b3a0b665c3ea3c07b864b8bb77d9ebf0cb10315",
+      "after_sha256": "fb1301958fbc55e615f6ef402e213a03bb0fe8e9a6f88733e7005283383a5441",
+      "before_byte_len": 22199,
+      "after_byte_len": 22196,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_runtime_family_monitor_refresh_old_short_aware_v1.py",
+      "before_sha256": "5d177fd370e21a8e35c821a35d772330eb1224603a27acfe336fcad03b17e0b3",
+      "after_sha256": "2f2367cad2a97eb176ee0f56b7d18480ed8a02d73a558b2def31239acaefd70b",
+      "before_byte_len": 31104,
+      "after_byte_len": 31101,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_runtime_family_status_panel_and_backup_hygiene_v1.py",
+      "before_sha256": "5e8d03d2e3524fb3bb03b05b121e9a3636205427f7f08b1c2479954b9c19538a",
+      "after_sha256": "15c9d74c65ca6c7a7768bbf3e2840d731e6197c1a4705107abe2b564b9894a21",
+      "before_byte_len": 24870,
+      "after_byte_len": 24867,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_sample_maturity_watcher_v1.py",
+      "before_sha256": "37d5ef4fb2b292303347491e949ac0a57b4e1ea3aab8b1fc68e1e870807f7a06",
+      "after_sha256": "921fdddc59f4015d98f9c146e15d882a00aadd566856ccb92083133b94426fb5",
+      "before_byte_len": 11915,
+      "after_byte_len": 11912,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_self_improvement_planner_v1.py",
+      "before_sha256": "431a2b302b7ba3b417f164132ed65f14bbe3b99abae90dad1e08367efa75d9ab",
+      "after_sha256": "accd439255b67bdb07f9dc4344c48c70cc2d289a027531219909ff7b0c250f4b",
+      "before_byte_len": 12475,
+      "after_byte_len": 12472,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_self_improvement_planner_v2.py",
+      "before_sha256": "90eea526996b72cdf02efe655933403c90a166bb2a0054cfa17d2d78e45b9800",
+      "after_sha256": "67920c10b900af42557f793fb88b7301fe508e6c5b37410200e786e3d4979da1",
+      "before_byte_len": 14979,
+      "after_byte_len": 14976,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_self_improvement_planner_v3.py",
+      "before_sha256": "6037a24016acc6356de24d132601f4444d781977aa9c683e01070bea40c37e1c",
+      "after_sha256": "8f4336197043d935ec8a9bbfc2ba828a6c6e7c071e9a76f6a319e702c5efa0f1",
+      "before_byte_len": 15987,
+      "after_byte_len": 15984,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_self_improvement_planner_v4.py",
+      "before_sha256": "32b3d04afc94a95a908c451869878fd1a9160728d1877b13f4faf32002c9b791",
+      "after_sha256": "d4a8e0070067d0574b204402cf55ad28028ca5170456ab016d45a3bcfca6d351",
+      "before_byte_len": 17310,
+      "after_byte_len": 17307,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_source_panel_anomaly_deep_validation_contract_builder_v1.py",
+      "before_sha256": "713d55162c8b8013e8873114ef5c4c87511e5cfe26e3f430ae0a3d4a5b9d18f7",
+      "after_sha256": "c3933ba79a3146658b5cf47f1b935ea9ead16f2199b28fa0b8925b4aa06a2364",
+      "before_byte_len": 32578,
+      "after_byte_len": 32575,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_source_panel_anomaly_deep_validation_evaluator_v1.py",
+      "before_sha256": "9493289f20a0bd3038eb62602aa1f467582f586665b9db10b59a6b79c9f1a548",
+      "after_sha256": "2222d0a70399a8c6165c880e0cc86151fd869e85a865903606a66082d30874c7",
+      "before_byte_len": 33385,
+      "after_byte_len": 33382,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_source_panel_anomaly_deep_validation_runner_v1.py",
+      "before_sha256": "a4b0ef279888f1395aa1cf0949afc81386036c8a96ab5ed9811805ac292dc7c0",
+      "after_sha256": "5ace81c4e28d8b78396ac3394ab5bb3791b1d2d0a0c00af8cab45e69a4d106e8",
+      "before_byte_len": 51448,
+      "after_byte_len": 51445,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_source_panel_anomaly_discovery_contract_builder_v1.py",
+      "before_sha256": "d360733680eae30402a07c8037404cc828d756d403ad0d15a7da06f512fb3dad",
+      "after_sha256": "ba908f196b67c28b61edfc75910ce50596623bdc82f778d4fab71aca0775caa9",
+      "before_byte_len": 29326,
+      "after_byte_len": 29323,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_source_panel_anomaly_discovery_evaluator_v1.py",
+      "before_sha256": "395696f4d51ea27ce56d493d8787b50a96af29312b914a5ff72e14fa39796f1c",
+      "after_sha256": "98c049c87996b2a382fecdceccc6dffff0f3816b3afb5e4d68f1feace19ddecf",
+      "before_byte_len": 33734,
+      "after_byte_len": 33731,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py",
+      "before_sha256": "4068a12fcbecf753452052c55eabfb145b0c69fed5692d48ab1f3b081063e69a",
+      "after_sha256": "6cedd70529e7eab10b4022fcde265df1dbbb85169bc244f8eb7f6e31928229b0",
+      "before_byte_len": 49757,
+      "after_byte_len": 49754,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_standard_stack_runner_v1.py",
+      "before_sha256": "44bdefaa3b88f924ab17e1961135741d422581b16b59a44ef5f7d341438bc503",
+      "after_sha256": "254224ae17fd258a02fe346293b4208442e46a493884ea1513185175257daad9",
+      "before_byte_len": 8268,
+      "after_byte_len": 8265,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_state_transition_journal_v1.py",
+      "before_sha256": "e7ee6b8ec5c6539693c4a60373035f1765930a8cfb27a860df952928649b4150",
+      "after_sha256": "c23cdf5b5b2720c125645031daad2def9643564481f30a6033ad35608fd4ca31",
+      "before_byte_len": 17429,
+      "after_byte_len": 17426,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_strict_month_stability_failure_lesson_recorder_v1.py",
+      "before_sha256": "949dc9a195e088ea09e207810435c6584be7530341a1b5b0a4ecb6f415d05fa6",
+      "after_sha256": "94874ac5ec31825779cd46d148799efb919056f3ecb987dcf2625a808eeb0a10",
+      "before_byte_len": 18919,
+      "after_byte_len": 18916,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_strict_month_stability_policy_guard_v1.py",
+      "before_sha256": "2606987da4338178a999574eea85a926e8efd8559b81b16cea6ae7c84e7be505",
+      "after_sha256": "91f2f859bbc109de30c1354289002cea115bc84506949bec5f63a63c2c7181bd",
+      "before_byte_len": 10172,
+      "after_byte_len": 10169,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_strict_month_stability_policy_guard_v2.py",
+      "before_sha256": "b9fc211a9dcce0cb2dc1e55b8565c6c151390500bdef714bf0e317c0e3b59cdc",
+      "after_sha256": "866d9e54ba2c92a8905cd2df0f1973a4a99b7f8c8be220802e3a93d9a991c75d",
+      "before_byte_len": 12085,
+      "after_byte_len": 12082,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_strict_month_stable_archetype_evaluator_v1.py",
+      "before_sha256": "83400d8cde42e4cd6cfd5ea4f2944f99676d2666071111fb7e02b26b3b808cd0",
+      "after_sha256": "f41d2f884a48775d11edfc61ce333c8ff06d6e7489e5b792f56b189e95a4d813",
+      "before_byte_len": 15836,
+      "after_byte_len": 15833,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_strict_month_stable_archetype_scanner_v1.py",
+      "before_sha256": "f839fb51f4cfe80586a166ea2fa2347b2eb7b3621bceeba336ce9a38ddac7ff9",
+      "after_sha256": "cad4639668a73f6bc154eb44e152ebc1223ac103f94dd915aeb799e8bfb31838",
+      "before_byte_len": 38690,
+      "after_byte_len": 38687,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_stronger_null_model_baseline_contract_builder_v1.py",
+      "before_sha256": "2eb457bde5db36cd3663750b93a8193aec877d9e41de54f3fd9f07dac3e01db9",
+      "after_sha256": "2d9dd4bee60e4211f76d1a75c4c2c95081861f3fc7e8ea413c16b75b9ae7e975",
+      "before_byte_len": 26107,
+      "after_byte_len": 26104,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_stronger_null_model_baseline_evaluator_v1.py",
+      "before_sha256": "cb0a2702e8b7265fe443c55d41a746cffb1751f3d23b7511c788cecbf9873363",
+      "after_sha256": "43d5e0faf3f0a458b273209b8112013b057d95566f839d71dbb5fbdf9d4fb3b9",
+      "before_byte_len": 30448,
+      "after_byte_len": 30445,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_stronger_null_model_baseline_runner_v1.py",
+      "before_sha256": "7eac1ad1a6675a3eb7db0df52681edf8575574d8840acafd3b64494a7a2f8bc0",
+      "after_sha256": "5fd21b21b776bf033d8a0848119f3b8eea6cf959751c23e3b8e92f70e3a766e3",
+      "before_byte_len": 39332,
+      "after_byte_len": 39329,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_symbol_cluster_segment_contract_builder_v1.py",
+      "before_sha256": "9df3e7c69dfdd6fcfcf840652a7649aa498e66a2653de06fcb1e0af8ae40e736",
+      "after_sha256": "2f0efed4c4ca11f18003ef3a481249a45f08374dfbe3a8af0b81e976f535b219",
+      "before_byte_len": 19400,
+      "after_byte_len": 19397,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_symbol_cluster_segment_evaluator_v1.py",
+      "before_sha256": "07fc4d54956fab146c87d96388c0842c916b652c4b1ffe72a09ad21842795a5d",
+      "after_sha256": "34d9f796c8c79ddb0a577ddb3ede959b56eb1cc97ce48dbec6608b83a0009994",
+      "before_byte_len": 21915,
+      "after_byte_len": 21912,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_symbol_cluster_segment_runner_v1.py",
+      "before_sha256": "afb9b42136b180cf1ad8e61a5690884fdcaf36ff974b7399167dc815e396e3c6",
+      "after_sha256": "27d475758da1b9879389e3e62fd8252caaa2bef4941e6d5cf8a2560f91a57fbf",
+      "before_byte_len": 40367,
+      "after_byte_len": 40364,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_symbol_concentration_diagnostic_v1.py",
+      "before_sha256": "31f9532adef13b32da5e93202d7984125f0a627a9889e2236b92546f5caed868",
+      "after_sha256": "3877bbbf65d4c260c0345c15e3182c939dd8718525e09e078b11f951522b13f7",
+      "before_byte_len": 13200,
+      "after_byte_len": 13197,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_test_harness_manifest_v1.py",
+      "before_sha256": "6580cc2953ca53d16aa30e8d466aec162d60caee00a0c425966028f67065e232",
+      "after_sha256": "af844d787c314cc001a2368553cede30718c247ac5f597658caa5d4e0fea64a4",
+      "before_byte_len": 13318,
+      "after_byte_len": 13315,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_trigger_engine_v1.py",
+      "before_sha256": "a1f0418c61a73145e9193743d747c5d043f882dea60e95de78802520d7a43492",
+      "after_sha256": "6e62acb8efd0e1aa09ab9539ac8b4d83908da420c92a49ccd1131f25d0d7c66f",
+      "before_byte_len": 19833,
+      "after_byte_len": 19830,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_true_source_panel_empirical_null_baseline_contract_builder_v1.py",
+      "before_sha256": "1a1b077899a8b85012ab5250f958fda89267392985d22e9c34e55a828659d991",
+      "after_sha256": "d3fb8a32c43e78509e9e7510acc1e3eb77d7cdab348dc5245844f755209db1f9",
+      "before_byte_len": 30018,
+      "after_byte_len": 30015,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_true_source_panel_empirical_null_baseline_evaluator_v1.py",
+      "before_sha256": "bb898930876239038996c6f6d3c54e220ecaf82457f95048142bceeac3be7856",
+      "after_sha256": "c8f73df8f8e692d492ff4c26eb3151c760e0f89aa3070a9075a348cd2e399dae",
+      "before_byte_len": 36233,
+      "after_byte_len": 36230,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_true_source_panel_empirical_null_baseline_runner_v1.py",
+      "before_sha256": "4a56b1aa635b81c7724766fe3ddb89548ab6dfebf79e7151d26a93a8fb6b5458",
+      "after_sha256": "1711f939ba8fdc04bb90f27da4c30bf25d020a739c46f73cd38fb990c288f1f1",
+      "before_byte_len": 44151,
+      "after_byte_len": 44148,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_unified_state_reader_v1.py",
+      "before_sha256": "7fce8dc9c2b771f065b9fd1c700ac9f05225e7363b15f39477f44e7ec209c70d",
+      "after_sha256": "921960b65dd85afff813bc8562d0337d1603aca978f9201bbdbbf67f674df702",
+      "before_byte_len": 11039,
+      "after_byte_len": 11036,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_universe_coverage_guard_v1.py",
+      "before_sha256": "9fdc137eaeb9234d1c6739be0d96979370e58b9226b6f1169ce08f5041b5f216",
+      "after_sha256": "6b5aa8da4738558cc7b1c23a8de9670ebd0fd013b7fc218e475e1d0eebe6ac11",
+      "before_byte_len": 13882,
+      "after_byte_len": 13879,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_universe_coverage_guard_v2.py",
+      "before_sha256": "9a4f4feac49167dcacd65725d24f5de2f6b0ce131c9dda19f435cfe9fa711e65",
+      "after_sha256": "65d92e39a646c48d926da37ef297c29aa56abca5b6a0fb0c88649958b5d875bf",
+      "before_byte_len": 17031,
+      "after_byte_len": 17028,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_untouched_holdout_registry_builder_v1.py",
+      "before_sha256": "39dda368c9a6cf26e3ae43406a6ff1eaf408fffcf7bc70f0200a957239a367e3",
+      "after_sha256": "c336429fd68f5e309e8914494745c11be808ebf659353a5a49286a70af6464c5",
+      "before_byte_len": 23026,
+      "after_byte_len": 23023,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_volatility_range_regime_contract_builder_v1.py",
+      "before_sha256": "e0e3db5ddd7bde46df12bff0f4e4873602d09c3274b5bf22eb2de7bbc3911972",
+      "after_sha256": "9eb8126b3715c27c5c9e2fe9898abd3fa456b3845a24825dc84d8ab575d5ae34",
+      "before_byte_len": 21305,
+      "after_byte_len": 21302,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_volatility_range_regime_filter_diagnostic_v1.py",
+      "before_sha256": "0d014bc9719afc5858386a0a347e3563e908cb86610118c3bab8739acc726fab",
+      "after_sha256": "235da6d8bc118c1208efc0125b3e44ad4475e7be52a84e252bdb10b8629c9ab4",
+      "before_byte_len": 29251,
+      "after_byte_len": 29248,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_os_volatility_range_regime_filter_evaluator_v1.py",
+      "before_sha256": "490e126cd1b462703ca1f7d84cc181cb37e31b23873c6d442ee75418a2eb14f8",
+      "after_sha256": "68eb44c0ce6390c0ca049d888f5d2dc920af8bacf5fde30cc5508cf299764796",
+      "before_byte_len": 20487,
+      "after_byte_len": 20484,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    },
+    {
+      "relative_path": "tools/edge_factory_runtime_regression_guard_v1.py",
+      "before_sha256": "69061427f11e7ece1a6007cc5a21d0f9d4e25d8a3fceaddfea3799f1175412d0",
+      "after_sha256": "f93fb8ef6ff443c55c9037c70947c16d78b41e9e43aa33ddf91426476ca8da41",
+      "before_byte_len": 11052,
+      "after_byte_len": 11049,
+      "removed_prefix": "UTF8_BOM_EF_BB_BF",
+      "syntax_after_apply_ok": true
+    }
+  ],
+  "block_reasons": [],
+  "rollback": {
+    "rollback_performed": false,
+    "rollback_reason": "",
+    "rollback_restored_files": []
+  },
+  "safety_flags": {
+    "repo_only": true,
+    "guarded_repo_mutation_only": true,
+    "runtime_touch_allowed": false,
+    "launcher_allowed": false,
+    "runtime_patch_allowed": false,
+    "backup_delete_allowed": false,
+    "backup_move_allowed": false,
+    "gitignore_change_allowed": false,
+    "strategy_research_allowed": false,
+    "candidate_generation_allowed": false,
+    "family_release_allowed": false,
+    "capital_change_allowed": false,
+    "active_paper_allowed": false,
+    "live_allowed": false,
+    "real_orders_allowed": false,
+    "file_delete_allowed": false,
+    "file_move_allowed": false,
+    "execution_allowed": false,
+    "pycache_allowed": false,
+    "imports_allowed": false,
+    "target_module_execution_allowed": false
+  },
+  "forbidden_actions": [
+    "Do not run launcher.",
+    "Do not touch runtime.",
+    "Do not run strategy research.",
+    "Do not generate candidates.",
+    "Do not change capital.",
+    "Do not enable active paper.",
+    "Do not enable live trading.",
+    "Do not enable or send real orders.",
+    "Do not delete or move backup files.",
+    "Do not change .gitignore.",
+    "Do not use git add -f.",
+    "Do not import target modules.",
+    "Do not execute target modules.",
+    "Do not write .pyc or create __pycache__."
+  ],
+  "git_state": {
+    "status_ok": true,
+    "head_short": "a8a1f87",
+    "last_commit": "a8a1f87 Add BOM syntax repair preview",
+    "git_status_lines": [
+      "?? tools/edge_factory_os_bom_syntax_repair_apply_v1.py",
+      "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "?? tools/edge_factory_os_old_short_guarded_runtime_reenable_apply_v1.py",
+      "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+      "?? tools/edge_factory_os_universe_coverage_guard_v1.py"
+    ],
+    "untracked_or_dirty_count": 5,
+    "backup_like_untracked_or_dirty": [
+      "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647"
+    ],
+    "universe_guard_in_status": true
+  },
+  "outputs": {
+    "json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_bom_syntax_repair_apply\\bom_syntax_repair_apply_latest.json",
+    "txt": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_bom_syntax_repair_apply\\bom_syntax_repair_apply_latest.txt"
+  }
+}

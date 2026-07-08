@@ -1,0 +1,628 @@
+{
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_GENERATION_DRY_RUN_CREATED",
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_GENERATION_DRY_RUN",
+  "module": {
+    "name": "edge_factory_os_repo_only_old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1",
+    "path": "tools/edge_factory_os_repo_only_old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1.py",
+    "standard_library_only": true,
+    "created_files": [
+      "tools/edge_factory_os_repo_only_old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1.py",
+      "artifacts/old_short_clean_room/old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1.json"
+    ],
+    "modified_existing_files": [],
+    "code_changed": true
+  },
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-27T07:20:08Z",
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "expected_head": "1d9846dcca0577786f9bfd54d20a125aafeea842",
+    "actual_head": "1d9846dcca0577786f9bfd54d20a125aafeea842",
+    "expected_tracked_python_count": 956,
+    "actual_tracked_python_count": 956,
+    "repo_clean_before_run": true,
+    "git_status_before_run": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1.py"
+    ],
+    "dirty_tracked_before_run": [],
+    "allowed_pending_before_run": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1.py"
+    ],
+    "unexpected_untracked_before_run": []
+  },
+  "source_artifacts": {
+    "realistic_bounded_fixture_design": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_realistic_bounded_fixture_design_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_DESIGN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_DESIGN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "e022022916b18a3ed4d2d694b0860fb887b11567d1a5e87894f449896163c5cd",
+      "replacement_checks_all_true": true,
+      "sha256": "6eb4c6869e24014172b68e035716a540481a82290742a22859518aef2e06e01b"
+    },
+    "bounded_behavioral_validation_review": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_review_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_REVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_REVIEW_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "8ae96209c6b774e4b83b114601efecea369293e89f8254a2329501b7aeb8d934",
+      "replacement_checks_all_true": true,
+      "sha256": "e7fa3129480273d0e22ebafa2ed68ffeaa693f2619734390f2e90efd5cbec171"
+    },
+    "bounded_behavioral_validation_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_DRY_RUN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "c35f49f5aa1e3c2db1829c7b643b9cc902fe2c1b5ae632833f82e69175acef75",
+      "replacement_checks_all_true": true,
+      "sha256": "4cb7a5f5a4c3c6ecb41ed47cbf5f619896af06c076a0065f6e1d4d1cc25a5244"
+    },
+    "feature_fixture_validator_check": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_feature_fixture_validator_check_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_FEATURE_FIXTURE_VALIDATOR_CHECK_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "650b896125ca6509320e8340eff0deea64fa13a5b688e9713b4e26e584687bdd",
+      "replacement_checks_all_true": true,
+      "sha256": "774bbca11a43e378bfc9d80af324a0db42da76eab4ed2f1f383aa3e8c90d0d15"
+    },
+    "runner_feature_fixture_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_feature_fixture_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FEATURE_FIXTURE_DRY_RUN_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "15bc81a734982e975399c25b1775760e97cfef3f73fde0cdff714713800c3284",
+      "replacement_checks_all_true": true,
+      "sha256": "35d57c85b59f97d93c1c87bc30c81af6a25fa70812fbd116ca84034cf6e238b3"
+    },
+    "runner_fixture_threshold_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_fixture_threshold_contract_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_FIXTURE_THRESHOLD_CONTRACT_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "308b63488abb4b40ee4e23d128a2aa82d96f1efa43c49d0ba6a32fb434298b11",
+      "replacement_checks_all_true": true,
+      "sha256": "e533fc89374724d0e63a61b4a87081012c17624679857c7a3e7f31b31e1f2d68"
+    },
+    "threshold_behavioral_proposal": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_dry_run_v1.json",
+      "exists": true,
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_THRESHOLD_BEHAVIORAL_PROPOSAL_DRY_RUN_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "9cf7be3706095fa4e8c8bfd4586e40a4714631250118fd67cc4d94cb47f62461",
+      "replacement_checks_all_true": true,
+      "sha256": "63220c1cce0a22b83dbc630599a23e5855cd682c0d0dec19d2a799841c4a15ff"
+    }
+  },
+  "fixture_generation_identity": {
+    "route_key": "old_short_clean_room_v1",
+    "realistic_bounded_fixture_generation_dry_run_only": true,
+    "output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1",
+    "master_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic",
+    "row_limit_per_master_csv": 100,
+    "not_runner_execution": true,
+    "not_signal_generation": true,
+    "not_behavioral_validation": true,
+    "not_backtest": true,
+    "not_edge_evidence": true,
+    "no_live_capital": true
+  },
+  "master_sample_review": {
+    "master_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic",
+    "master_files_found_count": 7,
+    "master_rows_sampled_total": 307,
+    "row_limit_per_csv": 100,
+    "file_summaries": {
+      "signals.csv": {
+        "exists": true,
+        "headers": [
+          "type",
+          "signal_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "created_at"
+        ],
+        "row_count_read": 100,
+        "truncated_at_row_limit": true
+      },
+      "pending_entries.csv": {
+        "exists": true,
+        "headers": [
+          "status",
+          "signal_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "created_at"
+        ],
+        "row_count_read": 0,
+        "truncated_at_row_limit": false
+      },
+      "open_positions.csv": {
+        "exists": true,
+        "headers": [
+          "position_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_id",
+          "signal_time",
+          "entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "raw_entry_close",
+          "entry_price",
+          "notional",
+          "equity_before",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "entry_vol_quote",
+          "entry_range_bps",
+          "entry_slip_bps",
+          "exit_slip_bps",
+          "fee_bps_total",
+          "stress_extra_bps"
+        ],
+        "row_count_read": 0,
+        "truncated_at_row_limit": false
+      },
+      "closed_trades.csv": {
+        "exists": true,
+        "headers": [
+          "close_id",
+          "position_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_id",
+          "signal_time",
+          "entry_time",
+          "exit_time",
+          "planned_exit_time",
+          "hold_minutes_actual",
+          "raw_entry_close",
+          "raw_exit_close",
+          "entry_price",
+          "exit_price",
+          "entry_slip_bps",
+          "exit_slip_bps",
+          "fee_bps_total",
+          "stress_extra_bps",
+          "gross_ret",
+          "realistic_net_ret",
+          "stress_net_ret",
+          "net_ret",
+          "notional",
+          "pnl",
+          "stress_pnl",
+          "equity_before",
+          "equity_after",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "entry_vol_quote",
+          "entry_range_bps"
+        ],
+        "row_count_read": 7,
+        "truncated_at_row_limit": false
+      },
+      "rejected_entries.csv": {
+        "exists": true,
+        "headers": [
+          "type",
+          "reason",
+          "log_time",
+          "signal_id",
+          "inst_id",
+          "coin",
+          "family_key",
+          "family",
+          "strategy",
+          "side",
+          "signal_time",
+          "target_entry_time",
+          "planned_exit_time",
+          "entry_delay_minutes",
+          "hold_minutes",
+          "signal_close",
+          "signal_ret1_bps",
+          "signal_ret3_bps",
+          "signal_ret5_bps",
+          "signal_ret60_bps",
+          "signal_vol_quote",
+          "signal_range_bps",
+          "created_at"
+        ],
+        "row_count_read": 100,
+        "truncated_at_row_limit": true
+      },
+      "heartbeat.csv": {
+        "exists": true,
+        "headers": [
+          "log_time",
+          "equity",
+          "open_positions",
+          "pending_entries",
+          "closed_count",
+          "errors",
+          "coins",
+          "strategy_family",
+          "require_global_gate"
+        ],
+        "row_count_read": 100,
+        "truncated_at_row_limit": true
+      },
+      "state.json": {
+        "exists": true,
+        "headers": [
+          "closed_count",
+          "coins",
+          "equity",
+          "errors",
+          "open",
+          "pending",
+          "require_global_gate",
+          "updated_at"
+        ],
+        "row_count_read": 1,
+        "truncated_at_row_limit": false
+      }
+    },
+    "master_snapshots_before": {
+      "signals.csv": {
+        "exists": true,
+        "size": 49380,
+        "mtime_ns": 1778697253587480300
+      },
+      "pending_entries.csv": {
+        "exists": true,
+        "size": 267,
+        "mtime_ns": 1778725486612692100
+      },
+      "open_positions.csv": {
+        "exists": true,
+        "size": 397,
+        "mtime_ns": 1778725486614423200
+      },
+      "closed_trades.csv": {
+        "exists": true,
+        "size": 5103,
+        "mtime_ns": 1778699483215810000
+      },
+      "rejected_entries.csv": {
+        "exists": true,
+        "size": 68634,
+        "mtime_ns": 1778723958353977000
+      },
+      "heartbeat.csv": {
+        "exists": true,
+        "size": 109898,
+        "mtime_ns": 1778725486610692900
+      },
+      "state.json": {
+        "exists": true,
+        "size": 203,
+        "mtime_ns": 1778725486614423200
+      }
+    },
+    "master_snapshots_after": {
+      "signals.csv": {
+        "exists": true,
+        "size": 49380,
+        "mtime_ns": 1778697253587480300
+      },
+      "pending_entries.csv": {
+        "exists": true,
+        "size": 267,
+        "mtime_ns": 1778725486612692100
+      },
+      "open_positions.csv": {
+        "exists": true,
+        "size": 397,
+        "mtime_ns": 1778725486614423200
+      },
+      "closed_trades.csv": {
+        "exists": true,
+        "size": 5103,
+        "mtime_ns": 1778699483215810000
+      },
+      "rejected_entries.csv": {
+        "exists": true,
+        "size": 68634,
+        "mtime_ns": 1778723958353977000
+      },
+      "heartbeat.csv": {
+        "exists": true,
+        "size": 109898,
+        "mtime_ns": 1778725486610692900
+      },
+      "state.json": {
+        "exists": true,
+        "size": 203,
+        "mtime_ns": 1778725486614423200
+      }
+    },
+    "master_unmodified": true
+  },
+  "fixture_case_selection": {
+    "selection_rule": "coverage of lifecycle/family/gate states only; no PnL/outcome/profitability selection",
+    "fixture_case_count": 5,
+    "selected_case_ids": [
+      "old_short_realistic_case_001_blowoff_closed",
+      "old_short_realistic_case_002_mean_reversion_closed",
+      "old_short_realistic_case_003_gate_missing_timeout",
+      "old_short_realistic_case_004_gate_blocked",
+      "old_short_realistic_case_007_heartbeat_state"
+    ],
+    "fixture_case_types_created": [
+      "blowoff_short closed trade example",
+      "mean_reversion_short closed trade example",
+      "rejected gate missing/timeout example",
+      "rejected gate blocked example if present",
+      "heartbeat/state example"
+    ],
+    "missing_case_types": [
+      "pending entry example if present",
+      "open position example if present"
+    ],
+    "family_coverage": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "gate_state_coverage": [
+      "gate_blocked",
+      "gate_missing_timeout"
+    ],
+    "no_pnl_selection_confirmed": true
+  },
+  "generated_fixture_files": {
+    "fixture_index.json": {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1\\fixture_index.json",
+      "exists": true,
+      "sha256": "af22cc4ee8d3eba7d6e154124abe889ae26ee84099ed793fef59e213094bfef2"
+    },
+    "master_proxy_cases.jsonl": {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1\\master_proxy_cases.jsonl",
+      "exists": true,
+      "sha256": "1ede00e957841d03f9af733aa140978fa42d30760c6bc921f8926d7aa8af2612"
+    },
+    "clean_room_replay_fixture_inputs.jsonl": {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1\\clean_room_replay_fixture_inputs.jsonl",
+      "exists": true,
+      "sha256": "25e644236e92c8ca30533adfd25d42acad7ee3d83144198c1396674511275125"
+    },
+    "validation_pair_fixtures.jsonl": {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1\\validation_pair_fixtures.jsonl",
+      "exists": true,
+      "sha256": "a5832dc93e6e52de41786ef3bb2bc59c4d6eb9ec5402f07e43e65fe52675c455"
+    },
+    "fixture_generation_summary.json": {
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1\\fixture_generation_summary.json",
+      "exists": true,
+      "sha256": "ed5acc44edb72946e2496edd519f2e1fb70d618148597d4b4144379c2fb74f60"
+    }
+  },
+  "fixture_generation_summary": {
+    "route_key": "old_short_clean_room_v1",
+    "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_GENERATION_DRY_RUN_CREATED",
+    "master_files_found_count": 7,
+    "master_rows_sampled_total": 307,
+    "fixture_case_count": 5,
+    "fixture_case_types_created": [
+      "blowoff_short closed trade example",
+      "mean_reversion_short closed trade example",
+      "rejected gate missing/timeout example",
+      "rejected gate blocked example if present",
+      "heartbeat/state example"
+    ],
+    "family_coverage": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "gate_state_coverage": [
+      "gate_blocked",
+      "gate_missing_timeout"
+    ],
+    "missing_case_types": [
+      "pending entry example if present",
+      "open position example if present"
+    ],
+    "missing_metric_recovery_summary": [
+      {
+        "missing_metric": "coin_overlap_rate",
+        "prior_missing_reason": "clean-room synthetic feature fixture has no coin or inst_id field",
+        "can_make_computable_later": true,
+        "required_fixture_cases": [
+          "MASTER_PROXY_CASE_FIXTURE",
+          "CLEAN_ROOM_REPLAY_FIXTURE_INPUT",
+          "VALIDATION_PAIR_FIXTURE"
+        ],
+        "fixture_package_supports_recovery": true
+      },
+      {
+        "missing_metric": "timestamp_alignment_rate",
+        "prior_missing_reason": "synthetic fixture has no shared signal ids or aligned timestamps with MASTER sample",
+        "can_make_computable_later": true,
+        "required_fixture_cases": [
+          "MASTER_PROXY_CASE_FIXTURE",
+          "CLEAN_ROOM_REPLAY_FIXTURE_INPUT",
+          "VALIDATION_PAIR_FIXTURE"
+        ],
+        "fixture_package_supports_recovery": true
+      }
+    ],
+    "safety_label_audit_passed": true,
+    "no_pnl_selection_confirmed": true,
+    "no_raw_market_data_confirmed": true,
+    "output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1",
+    "not_edge_evidence": true,
+    "no_live_capital": true
+  },
+  "missing_metric_recovery_summary": [
+    {
+      "missing_metric": "coin_overlap_rate",
+      "prior_missing_reason": "clean-room synthetic feature fixture has no coin or inst_id field",
+      "can_make_computable_later": true,
+      "required_fixture_cases": [
+        "MASTER_PROXY_CASE_FIXTURE",
+        "CLEAN_ROOM_REPLAY_FIXTURE_INPUT",
+        "VALIDATION_PAIR_FIXTURE"
+      ],
+      "fixture_package_supports_recovery": true
+    },
+    {
+      "missing_metric": "timestamp_alignment_rate",
+      "prior_missing_reason": "synthetic fixture has no shared signal ids or aligned timestamps with MASTER sample",
+      "can_make_computable_later": true,
+      "required_fixture_cases": [
+        "MASTER_PROXY_CASE_FIXTURE",
+        "CLEAN_ROOM_REPLAY_FIXTURE_INPUT",
+        "VALIDATION_PAIR_FIXTURE"
+      ],
+      "fixture_package_supports_recovery": true
+    }
+  ],
+  "safety_label_audit": {
+    "required_labels": [
+      "GENERATED_BY_CLEAN_ROOM",
+      "PROXY_BEHAVIOR_FIXTURE",
+      "NOT_ORIGINAL_OLD_SHORT",
+      "NOT_EXACT_REPLAY",
+      "NOT_REAL_TRADE",
+      "NOT_BACKTEST",
+      "NOT_RUNTIME",
+      "NOT_EDGE_EVIDENCE",
+      "NO_LIVE_CAPITAL"
+    ],
+    "safety_label_audit_passed": true,
+    "fixture_rows_checked": 15
+  },
+  "result_classification": "OLD_SHORT_REALISTIC_BOUNDED_FIXTURE_GENERATION_PASS_NO_EDGE_NO_LIVE",
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_DESIGN_V1",
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence"
+  ],
+  "limitations": [
+    "bounded MASTER proxy output only",
+    "at most first 100 rows per MASTER CSV were read",
+    "fixture package is not clean-room runner output yet",
+    "not exact replay and not original source recovery",
+    "PnL/outcome fields were not used for selection",
+    "no full dataset comparison, backtest, runtime, live, capital, candidate, or edge claim"
+  ],
+  "safety_permissions": {
+    "realistic_bounded_fixture_generation_dry_run_created": true,
+    "runner_execution_allowed_now": false,
+    "behavioral_validation_allowed_now": false,
+    "full_dataset_comparison_allowed_now": false,
+    "backtest_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "prior_realistic_fixture_design_loaded": true,
+    "prior_next_allowed_step_verified": true,
+    "master_sample_loaded_bounded": true,
+    "sample_row_limit_enforced": true,
+    "no_fixture_selection_by_pnl": true,
+    "no_raw_market_data_read": true,
+    "no_okx_1m_data_read": true,
+    "no_full_dataset_comparison": true,
+    "no_behavioral_validation_execution": true,
+    "no_runner_execution": true,
+    "no_signal_generation": true,
+    "no_backtest_run": true,
+    "no_pnl_computation": true,
+    "no_runtime_touched": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_api_called": true,
+    "no_orders_placed": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "external_output_root_used": true,
+    "no_master_upper_system_modified": true,
+    "no_runtime_directory_modified": true,
+    "fixture_files_created": true,
+    "safety_labels_present": true,
+    "unresolved_fields_preserved": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_repo_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "474fd909870b16ba291f9f67e8546eb330c96fad2baa0303472bb67ac9e17e9d"
+}

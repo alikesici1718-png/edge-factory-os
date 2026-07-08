@@ -1,0 +1,494 @@
+{
+  "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_EXECUTION",
+  "execution_summary": {
+    "accepted_short_trades": 69,
+    "base_short_setup_count": 235,
+    "best_month_bps": 86.807676,
+    "closed_trades": 69,
+    "confirmation_passed_short": 96,
+    "confirmation_quality_passed_count": 96,
+    "cost_aware_gate_passed_short": 96,
+    "gross_pnl_usdt": -20.78091,
+    "lockbox_end": "2026-05-01T00:00:00Z",
+    "lockbox_start": "2025-11-01T00:00:00Z",
+    "market_pump_veto_blocked": 114,
+    "max_drawdown_bps": -537.933126,
+    "monthly_positive_rate": 0.333333,
+    "net_pnl_usdt": -33.300384,
+    "portfolio_net_bps": -333.003836,
+    "raw_residual_extremes_short": 7761,
+    "raw_short_sweep_candidates": 349,
+    "risk_quality_gate_passed": 78,
+    "skipped_due_capacity": 3,
+    "skipped_due_confirmation_quality": 0,
+    "skipped_due_cooldown": 6,
+    "skipped_due_cost_gate": 0,
+    "skipped_due_invalid_risk": 0,
+    "skipped_due_market_pump_veto": 114,
+    "skipped_due_missing_next_bar": 0,
+    "skipped_due_no_confirmation": 81,
+    "skipped_due_risk_quality": 18,
+    "skipped_due_trap_quality": 58,
+    "total_cost_usdt": 12.519473,
+    "trap_quality_passed_count": 177,
+    "trap_quality_score_distribution": {
+      "0": 0,
+      "1": 8,
+      "2": 50,
+      "3": 64,
+      "4": 113
+    },
+    "unresolved_trades": 0,
+    "worst_month_bps": -173.332597
+  },
+  "fee_stress_results": {
+    "base_cost_usdt": 12.519473,
+    "fee_multiplier": 2,
+    "fee_stress_2x_net_bps": -458.19856,
+    "fee_stress_2x_net_pnl_usdt": -45.819856,
+    "gross_pnl_usdt": -20.78091,
+    "stress_2x_fee_passed": false
+  },
+  "frozen_config_reference": {
+    "frozen_config_id": "crypto_15m_idiosyncratic_sweep_short_trap_quality_v1",
+    "frozen_strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_V1",
+    "original_strategy_preregistration": "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_trap_quality_preregistration_v1.json",
+    "parameters_changed": false,
+    "preregistration_artifact": "artifacts/research_preregistrations/trap_quality_lockbox_forward_test_preregistration_v1.json",
+    "rejected_finalists_not_used": true
+  },
+  "frozen_finalist": {
+    "config_id": "crypto_15m_idiosyncratic_sweep_short_trap_quality_v1",
+    "route_family": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_BASELINE",
+    "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_V1"
+  },
+  "hard_reject_results": {
+    "any_triggered": true,
+    "criteria": {
+      "data_contamination": false,
+      "lookahead_detected": false,
+      "metric_integrity_failed": false,
+      "monthly_positive_rate_lt_0p50": true,
+      "null_percentile_lt_0p80": true,
+      "portfolio_net_bps_lte_0": true,
+      "runtime_live_capital_order_action": false,
+      "strategy_config_mismatch": false,
+      "top_symbol_concentration_gt_0p50": false
+    },
+    "criteria_count": 9,
+    "triggered_count": 3
+  },
+  "limitations": [
+    "This is a one-shot lockbox forward execution of the frozen finalist only.",
+    "The null baseline uses deterministic same-symbol random timestamp reshuffling on lockbox OHLCV, preserving side, trade count, notional, stop distance, cost, and exit mechanics.",
+    "Global multiple-testing count was unavailable from allowed artifacts; global adjusted pass is therefore not set true."
+  ],
+  "lockbox_non_tuning_rule": {
+    "if_lockbox_fails_route_rejected_closed": true,
+    "if_lockbox_passes_next_scope": "paper-forward planning/review only",
+    "live_or_capital_permission_if_passes": false,
+    "lockbox_result_not_used_for_tuning": true,
+    "lockbox_test_run_once": true,
+    "no_exit_changes_after_result": true,
+    "no_filter_changes_after_result": true,
+    "no_parameter_changes_after_result": true,
+    "no_v_next_based_on_lockbox_result": true,
+    "strategy_config_is_frozen": true
+  },
+  "lockbox_period": {
+    "closed_months": [
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04"
+    ],
+    "data_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_trap_quality_lockbox_forward_data_acquisition_v1\\normalized_15m_by_symbol",
+    "lockbox_end": "2026-05-01T00:00:00Z",
+    "lockbox_start": "2025-11-01T00:00:00Z"
+  },
+  "metric_integrity": {
+    "checks": {
+      "beta_uses_only_prior_returns": true,
+      "confirmation_uses_next_completed_bar_and_enters_after_confirmation": true,
+      "entry_is_next_bar_open_after_confirmation": true,
+      "frozen_config_hash_reference_matches_preregistration": true,
+      "lockbox_data_period_only": true,
+      "long_side_disabled": true,
+      "market_pump_veto_uses_only_current_past_data": true,
+      "max_concurrent_positions_lte_3": true,
+      "max_new_positions_per_timestamp_lte_1": true,
+      "no_development_data_used_for_test_performance": true,
+      "no_live_runtime_capital_order_action": true,
+      "no_lookahead": true,
+      "portfolio_bps_uses_base_equity_denominator": true,
+      "prior_high_excludes_current_bar": true,
+      "residual_z_score_uses_only_prior_residual_history": true,
+      "risk_quality_gate_computed_before_entry_acceptance_without_future_data": true,
+      "stop_take_uses_ohlc_conservatively": true,
+      "symbol_cooldown_enforced": true,
+      "trap_quality_uses_only_sweep_bar_known_at_close": true,
+      "universe_breadth_uses_only_current_past_4h_returns": true
+    },
+    "passed": true
+  },
+  "module": "edge_factory_os_repo_only_trap_quality_lockbox_forward_test_execution_v1",
+  "monthly_results": {
+    "best_month": [
+      "2026-02",
+      86.807676
+    ],
+    "best_month_bps": 86.807676,
+    "closed_months": [
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04"
+    ],
+    "monthly_cost_bps": {
+      "2025-11": 3.392906,
+      "2025-12": 20.878377,
+      "2026-01": 28.762128,
+      "2026-02": 6.264149,
+      "2026-03": 18.908466,
+      "2026-04": 46.988705
+    },
+    "monthly_exit_counts": {
+      "2025-11": {
+        "stop": 0,
+        "take": 0,
+        "time": 2,
+        "unresolved": 0
+      },
+      "2025-12": {
+        "stop": 4,
+        "take": 1,
+        "time": 7,
+        "unresolved": 0
+      },
+      "2026-01": {
+        "stop": 6,
+        "take": 1,
+        "time": 8,
+        "unresolved": 0
+      },
+      "2026-02": {
+        "stop": 1,
+        "take": 0,
+        "time": 3,
+        "unresolved": 0
+      },
+      "2026-03": {
+        "stop": 7,
+        "take": 0,
+        "time": 4,
+        "unresolved": 0
+      },
+      "2026-04": {
+        "stop": 14,
+        "take": 5,
+        "time": 6,
+        "unresolved": 0
+      }
+    },
+    "monthly_gross_bps": {
+      "2025-11": 22.507213,
+      "2025-12": -11.557595,
+      "2026-01": -44.386259,
+      "2026-02": 93.071826,
+      "2026-03": -141.100398,
+      "2026-04": -126.343892
+    },
+    "monthly_net_bps": {
+      "2025-11": 19.114307,
+      "2025-12": -32.435971,
+      "2026-01": -73.148387,
+      "2026-02": 86.807676,
+      "2026-03": -160.008864,
+      "2026-04": -173.332597
+    },
+    "monthly_positive_rate": 0.333333,
+    "monthly_trade_counts": {
+      "2025-11": 2,
+      "2025-12": 12,
+      "2026-01": 15,
+      "2026-02": 4,
+      "2026-03": 11,
+      "2026-04": 25
+    },
+    "negative_or_zero_month_count": 4,
+    "positive_month_count": 2,
+    "worst_month": [
+      "2026-04",
+      -173.332597
+    ],
+    "worst_month_bps": -173.332597
+  },
+  "multiple_testing_adjustment_record": {
+    "development_panel_considered_contaminated_or_memorized": true,
+    "edge_claim_allowed_if_adjusted_passes": false,
+    "family_adjusted_alpha": 0.018898,
+    "family_adjusted_pass": false,
+    "family_had_multiple_variants": true,
+    "family_test_count": 7,
+    "family_test_count_available": true,
+    "global_adjusted_alpha": null,
+    "global_adjusted_limitation": "No global test count was available in allowed artifacts.",
+    "global_adjusted_pass": false,
+    "global_test_count": null,
+    "global_test_count_available": false,
+    "lockbox_result_not_used_for_tuning": true,
+    "one_frozen_finalist_lockbox_test": true,
+    "p_value": 0.93,
+    "p_value_definition": "p_value = 1 - null_percentile"
+  },
+  "next_allowed_step": "TRAP_QUALITY_LOCKBOX_ROUTE_CLOSURE_V1",
+  "null_baseline": {
+    "feasible": true,
+    "method": "deterministic same-symbol random-timestamp null preserving trade count, notional, stop distance, side, costs, and OHLC exits",
+    "null_max_pnl_usdt": 32.112894,
+    "null_mean_pnl_usdt": -5.80365,
+    "null_median_pnl_usdt": -5.536838,
+    "null_p95_pnl_usdt": 24.696326,
+    "null_pass": false,
+    "null_percentile": 0.07,
+    "null_positive_runs": 39,
+    "null_runs_beating_observed": 93,
+    "observed_lockbox_bps": -333.003836,
+    "observed_lockbox_pnl_usdt": -33.300384,
+    "p_value": 0.93,
+    "runs": 100
+  },
+  "pass_criteria_results": {
+    "all_passed": false,
+    "criteria": {
+      "closed_trade_count_gte_50": true,
+      "fee_stress_2x_net_bps_gt_0": false,
+      "max_drawdown_bps_gt_minus_2000": true,
+      "metric_integrity_passed": true,
+      "monthly_positive_rate_gte_0p60": false,
+      "no_candidate_edge_live_capital_permissions": true,
+      "null_percentile_gte_0p90": false,
+      "portfolio_net_bps_gt_0": false,
+      "top_3_symbol_concentration_lte_0p30": true,
+      "worst_month_bps_gt_minus_500": true
+    },
+    "criteria_count": 10,
+    "passed_count": 6
+  },
+  "payload_sha256_excluding_hash": "5479c1aeb3bea6138ec238738633efa5bd0f70c41f20ec7f608cb6fd554688b1",
+  "replacement_checks_all_true": true,
+  "result_classification": "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_FAIL_ROUTE_CLOSED_NO_EDGE_NO_LIVE",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "lockbox_test_execution_created": true,
+    "paper_forward_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "data_acquisition": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_DATA_ACQUISITION",
+      "name": "data_acquisition",
+      "path": "artifacts/data_acquisition/trap_quality_lockbox_forward_data_acquisition_v1.json",
+      "payload_sha256_excluding_hash": "09b56de3085acc7e367406dad1abb32ae6a61d070772098d780851c0961087a1",
+      "sha256": "66078604acc4aff3dfd2352f7ba1504fa29a2e75d84004326deaee7fb5cf7d24",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_DATA_ACQUISITION_CREATED"
+    },
+    "data_review": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_DATA_REVIEW",
+      "name": "data_review",
+      "path": "artifacts/data_reviews/trap_quality_lockbox_forward_data_review_v1.json",
+      "payload_sha256_excluding_hash": "226fa8a924c6ab81ea377f67b93a7958b6f611e7d9f603494a8d65127d14eab7",
+      "sha256": "d684b8466e77a038112a760f7ba8738bab7ac0bdb6126009ac4d56c728f5cbcb",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_DATA_REVIEW_CREATED"
+    },
+    "freeze_contract": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FREEZE_CONTRACT",
+      "name": "freeze_contract",
+      "path": "artifacts/research_preregistrations/trap_quality_lockbox_freeze_contract_v1.json",
+      "payload_sha256_excluding_hash": "9e35e99a2d4288ba2e4e5608285e8feef337a0f1034267d2f3ea15ac19967f97",
+      "sha256": "415ff58a129b73a0ce3926704f9a41ee0aa989e2eaa0b2a4c04fa4bc59de58b4",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FREEZE_CONTRACT_CREATED"
+    },
+    "lockbox_test_preregistration": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_PREREGISTRATION",
+      "name": "lockbox_test_preregistration",
+      "path": "artifacts/research_preregistrations/trap_quality_lockbox_forward_test_preregistration_v1.json",
+      "payload_sha256_excluding_hash": "71eec38b3427f4f55d391fc0c04fc8b0c434ee68bed7aa3dc509e7a9d6c79743",
+      "sha256": "df7e9685e10e7655f650b5f19dc51a5dd1529b8d014bac3715380a3ee6040a2e",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_TEST_PREREGISTRATION_CREATED"
+    },
+    "trap_quality_development_evaluator_summary": {
+      "artifact_kind": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EVALUATION",
+      "name": "trap_quality_development_evaluator_summary",
+      "path": "artifacts/strategy_evaluations/crypto_15m_idiosyncratic_sweep_short_trap_quality_evaluator_v1.json",
+      "payload_sha256_excluding_hash": "320a438c730dc1884e1d2174c37a621098214680f8cedf039e036184fc77fd25",
+      "sha256": "3573d7d94d32fbc2b5c2cefcdc4c6a8ee17a16211d9f45c304ba386bfce5d022",
+      "status": "PASS_REPO_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EVALUATED"
+    },
+    "trap_quality_development_execution_summary": {
+      "artifact_kind": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EXECUTION",
+      "name": "trap_quality_development_execution_summary",
+      "path": "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_trap_quality_execution_v1.json",
+      "payload_sha256_excluding_hash": "19e280c0e325cca254bbf8224a959846712b820963654d7b30c0783f8f3433ed",
+      "sha256": "06e56bfd28cfe6c350283d26b417877d6108ffe63080b793a9dce6aee3014b8b",
+      "status": "PASS_REPO_CODE_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EXECUTED"
+    },
+    "trap_quality_preregistration": {
+      "artifact_kind": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_PREREGISTRATION",
+      "name": "trap_quality_preregistration",
+      "path": "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_trap_quality_preregistration_v1.json",
+      "payload_sha256_excluding_hash": "4cf29e74a7ce65bb2249898e775f445c64548b26b4f9d346cfe3707b642f86d9",
+      "sha256": "9cf3a6ad35e0ab54716617878dff0544e47e8c955202debe4a80d10875b9c237",
+      "status": "PASS_REPO_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_PREREGISTRATION_CREATED"
+    }
+  },
+  "source_checkpoint": {
+    "actual_head": "72df97e3de41762b90e06b092ca3e572cb226970",
+    "allowed_new_paths_at_execution": [
+      "?? artifacts/strategy_executions/trap_quality_lockbox_forward_test_execution_v1.json",
+      "?? tools/edge_factory_os_repo_only_trap_quality_lockbox_forward_test_execution_v1.py"
+    ],
+    "expected_head": "72df97e3de41762b90e06b092ca3e572cb226970",
+    "git_status_at_execution_start": [
+      "?? tools/edge_factory_os_repo_only_trap_quality_lockbox_forward_test_execution_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count_before_run": 1041,
+    "unexpected_dirty_paths_at_execution": []
+  },
+  "status": "PASS_REPO_CODE_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_TEST_EXECUTED",
+  "symbol_concentration": {
+    "closed_trade_count": 69,
+    "symbol_count": 43,
+    "top_10_symbols": [
+      {
+        "symbol": "ONTUSDT",
+        "trade_count": 5,
+        "trade_share": 0.072464
+      },
+      {
+        "symbol": "CHZUSDT",
+        "trade_count": 4,
+        "trade_share": 0.057971
+      },
+      {
+        "symbol": "BLURUSDT",
+        "trade_count": 4,
+        "trade_share": 0.057971
+      },
+      {
+        "symbol": "API3USDT",
+        "trade_count": 3,
+        "trade_share": 0.043478
+      },
+      {
+        "symbol": "WOOUSDT",
+        "trade_count": 3,
+        "trade_share": 0.043478
+      },
+      {
+        "symbol": "FILUSDT",
+        "trade_count": 3,
+        "trade_share": 0.043478
+      },
+      {
+        "symbol": "GMTUSDT",
+        "trade_count": 2,
+        "trade_share": 0.028986
+      },
+      {
+        "symbol": "MAGICUSDT",
+        "trade_count": 2,
+        "trade_share": 0.028986
+      },
+      {
+        "symbol": "AXSUSDT",
+        "trade_count": 2,
+        "trade_share": 0.028986
+      },
+      {
+        "symbol": "BATUSDT",
+        "trade_count": 2,
+        "trade_share": 0.028986
+      }
+    ],
+    "top_3_symbol_concentration": 0.188406,
+    "top_3_symbols": [
+      {
+        "symbol": "ONTUSDT",
+        "trade_count": 5,
+        "trade_share": 0.072464
+      },
+      {
+        "symbol": "CHZUSDT",
+        "trade_count": 4,
+        "trade_share": 0.057971
+      },
+      {
+        "symbol": "BLURUSDT",
+        "trade_count": 4,
+        "trade_share": 0.057971
+      }
+    ],
+    "top_3_trade_count": 13,
+    "top_symbol": "ONTUSDT",
+    "top_symbol_concentration": 0.072464,
+    "top_symbol_trade_count": 5
+  },
+  "trade_summary": {
+    "accepted_short_trades": 69,
+    "average_abs_z_residual": 5.478197,
+    "average_close_location": 0.160697,
+    "average_concurrent_positions": 0.086441,
+    "average_confirmation_strength_atr": 0.734151,
+    "average_hold_bars": 20.333333,
+    "average_loss_usdt": -2.882533,
+    "average_notional": 90.72082,
+    "average_rejection_depth_atr": 1.003053,
+    "average_residual_4h": 0.082276,
+    "average_risk_quality_ratio": 1.8245,
+    "average_sweep_depth_atr": 0.590127,
+    "average_upper_wick_share": 0.550239,
+    "average_win_usdt": 2.827619,
+    "both_hit_same_bar_count": 0,
+    "closed_trade_count": 69,
+    "max_concurrent_positions": 3,
+    "profit_factor": 0.711188,
+    "stop_exit_count": 32,
+    "take_profit_exit_count": 7,
+    "time_exit_count": 0,
+    "unresolved_trades": 0,
+    "win_rate": 0.42029
+  },
+  "validation_checks": {
+    "data_review_loaded": true,
+    "development_data_not_used_for_performance": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "external_lockbox_data_not_modified": true,
+    "frozen_config_used": true,
+    "frozen_finalist_verified": true,
+    "lockbox_data_only_used": true,
+    "lockbox_period_verified": true,
+    "lockbox_test_preregistration_loaded": true,
+    "no_candidate_generation": true,
+    "no_development_panel_modified": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_order_endpoint_used": true,
+    "no_parameter_change": true,
+    "no_private_api_used": true,
+    "no_runtime_live_capital": true,
+    "no_v_next_created": true,
+    "rejected_finalists_not_used": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

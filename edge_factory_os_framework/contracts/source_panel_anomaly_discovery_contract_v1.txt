@@ -1,0 +1,82 @@
+====================================================================================================
+EDGE FACTORY OS SOURCE PANEL ANOMALY DISCOVERY CONTRACT v1
+====================================================================================================
+contract_status: SOURCE_PANEL_ANOMALY_DISCOVERY_CONTRACT_READY
+allowed_scope: READ_ONLY_RESEARCH
+next_action: BUILD_SOURCE_PANEL_ANOMALY_DISCOVERY_RUNNER
+contract_id: SOURCE_PANEL_ANOMALY_DISCOVERY_CONTRACT_V1_a503d17367520928_20260513_210214
+contract_hash: a503d17367520928
+route_hash: c39a8ae1f0cd9522
+selected_queue_route_hash: b7d5e9b3d9f28c12
+selected_queue_route_hash_blocked: False
+research_key: SOURCE_PANEL_ANOMALY_DISCOVERY_WITH_TRUE_NULLS_V1
+direction_queue_key: RD6_01_SOURCE_PANEL_ANOMALY_DISCOVERY_WITH_TRUE_NULLS
+plugin_key: SOURCE_PANEL_ANOMALY_DISCOVERY_WITH_TRUE_NULLS_PLUGIN_V1
+policy_hash: e4a85ce55a1fdee0
+source_panel_path: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_feature_panels\post_impulse_drift_long_v1\post_impulse_drift_long_v1_feature_panel_1h_dynamic.parquet
+source_panel_exists: True
+framework_ready: True
+false_positive_methodology_repaired: True
+actual_signal_present: False
+minimum_empirical_null_runs: 1000
+anomaly_axis_count: 10
+negative_control_count: 8
+next_module: edge_factory_os_source_panel_anomaly_discovery_runner_v1.py
+
+ANOMALY DISCOVERY AXES
+----------------------------------------------------------------------------------------------------
+- cross_sectional_return_distribution_anomaly
+- symbol_month_volatility_compression_expansion
+- range_volume_dislocation
+- coin_vs_market_residual_anomaly
+- liquidity_regime_shift
+- market_beta_instability
+- tail_event_clustering
+- symbol_cohort_divergence
+- intramonth_state_transition
+- outcome_agnostic_event_motif
+
+NEGATIVE CONTROLS
+----------------------------------------------------------------------------------------------------
+- symbol_shuffle_control
+- month_shuffle_control
+- time_block_shuffle_control
+- feature_label_permutation_control
+- side_flip_control
+- market_return_permutation_control
+- volume_bucket_shuffle_control
+- range_bucket_shuffle_control
+
+HARD REQUIREMENTS
+----------------------------------------------------------------------------------------------------
+- read full source panel parquet
+- validate time/symbol/schema/month coverage
+- build canonical 12 policy months
+- run outcome-agnostic anomaly discovery axes
+- run negative controls
+- run true source-panel empirical null before any signal claim
+- consume research gate policy
+- consume data quality guard feed
+- consume true source-panel null state
+- consume route blocklist
+- prove material difference from blocked routes
+- keep plugin expansion false
+- keep candidate/family/runtime/capital/live false
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

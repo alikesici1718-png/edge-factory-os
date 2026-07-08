@@ -1,0 +1,289 @@
+{
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_DESIGN",
+  "dry_run_design_identity": {
+    "clean_room_behavioral_reconstruction": true,
+    "design_only": true,
+    "exact_replay_available": false,
+    "no_edge_claim": true,
+    "no_live_capital": true,
+    "original_exact_source_recovered": false,
+    "realistic_fixture_runner_dry_run_allowed_now": false,
+    "route_key": "old_short_clean_room_v1"
+  },
+  "dry_run_metrics": [
+    "fixture_case_count",
+    "processed_case_count",
+    "family_coverage",
+    "gate_state_coverage",
+    "passed_case_count",
+    "rejected_case_count",
+    "fail_closed_count",
+    "generated_output_file_count",
+    "accepted_lifecycle_coverage_present",
+    "safety_label_audit_passed",
+    "no_pnl_used",
+    "no_market_data_used"
+  ],
+  "fail_closed_conditions": [
+    "fixture root missing",
+    "fixture files missing",
+    "route_key mismatch",
+    "family_key mismatch",
+    "side not short",
+    "safety labels missing",
+    "threshold contract missing",
+    "required feature missing",
+    "fixture uses PnL/outcome selection",
+    "raw market data path supplied",
+    "runtime path supplied",
+    "live/order/private fields detected",
+    "output root overlaps MASTER/runtime",
+    "no-live guard false"
+  ],
+  "fixture_modes": [
+    {
+      "claims_edge": false,
+      "claims_exact_replay": false,
+      "computes_pnl": false,
+      "mode": "REALISTIC_BOUNDED_FIXTURE_DRY_RUN",
+      "runs_on_market_data": false,
+      "uses_clean_room_replay_fixture_inputs": true,
+      "uses_master_derived_bounded_proxy_fixture_cases": true,
+      "uses_reviewed_behavioral_threshold_contract": true
+    }
+  ],
+  "gate_state_plan": {
+    "accepted_lifecycle_coverage_present": false,
+    "gate_allowed_absent_policy": {
+      "classification_can_be_partial_at_best": true,
+      "do_not_claim_open_closed_lifecycle_equivalence": true,
+      "do_not_fail_automatically": true,
+      "mark_accepted_lifecycle_coverage_missing": true
+    },
+    "prior_fixture_gate_state_coverage": [
+      "gate_blocked",
+      "gate_missing_timeout"
+    ],
+    "required_gate_states_to_handle": [
+      "gate_blocked",
+      "gate_missing_timeout",
+      "gate_allowed if present"
+    ]
+  },
+  "input_fixture_policy": {
+    "approved_realistic_fixture_output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1",
+    "forbidden_inputs": [
+      "raw market data",
+      "raw OKX 1m data",
+      "full MASTER files",
+      "runtime directories",
+      "private/account data"
+    ],
+    "future_runner_may_read_only": [
+      "fixture_index.json",
+      "master_proxy_cases.jsonl",
+      "clean_room_replay_fixture_inputs.jsonl",
+      "validation_pair_fixtures.jsonl",
+      "fixture_generation_summary.json"
+    ],
+    "metadata_preserved_from_prior_fixture_generation": {
+      "family_coverage": [
+        "blowoff_short",
+        "mean_reversion_short"
+      ],
+      "fixture_case_count": 5,
+      "gate_state_coverage": [
+        "gate_blocked",
+        "gate_missing_timeout"
+      ],
+      "master_files_found_count": 7,
+      "prior_output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_realistic_fixtures_v1\\realistic_bounded_fixture_generation_dry_run_v1",
+      "prior_result_classification": "OLD_SHORT_REALISTIC_BOUNDED_FIXTURE_GENERATION_PASS_NO_EDGE_NO_LIVE",
+      "prior_status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_REALISTIC_BOUNDED_FIXTURE_GENERATION_DRY_RUN_CREATED"
+    }
+  },
+  "limitations": [
+    "This artifact is design-only and does not execute the runner.",
+    "No real signal generation, behavioral validation, backtest, PnL computation, runtime, live, or capital action is performed.",
+    "The prior realistic fixture package covers gate_blocked and gate_missing_timeout; gate_allowed/open-close lifecycle coverage is not present unless a later fixture package adds it.",
+    "Future dry-run classification is PARTIAL at best when accepted lifecycle coverage is absent.",
+    "The design does not recover original old_short source or claim exact replay."
+  ],
+  "module": "edge_factory_os_repo_only_old_short_clean_room_runner_realistic_fixture_dry_run_design_v1",
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_PREVIEW_V1",
+  "output_policy": {
+    "future_output_files": [
+      "signals.csv",
+      "pending_entries.csv",
+      "open_positions.csv if fixture supports gate allowed",
+      "closed_trades.csv if fixture supports close lifecycle",
+      "rejected_entries.csv",
+      "heartbeat.csv",
+      "state.json",
+      "runner_realistic_fixture_dry_run_report.json"
+    ],
+    "future_output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\realistic_fixture_dry_run_v1",
+    "may_write_only_to_future_output_root": true,
+    "never_write_to": [
+      "MASTER_UPPER_SYSTEM",
+      "paper_run_gate_* runtime roots",
+      "live runtime directories",
+      "old original output directories",
+      "repo tracked paths except summary JSON artifacts"
+    ]
+  },
+  "payload_sha256_excluding_hash": "807efcf61dc66731fb3eabde4f157b8d0e52c117499e02b17c8dde68253670b2",
+  "replacement_checks_all_true": true,
+  "result_classes": [
+    {
+      "classification": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_PASS_NO_EDGE_NO_LIVE",
+      "meaning": "Both families are processed, gate blocked/missing behavior is processed, gate allowed/open-close lifecycle is processed if the fixture exists, all safety labels pass, and no PnL, market, or live data is used."
+    },
+    {
+      "classification": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_PARTIAL_NO_EDGE_NO_LIVE",
+      "meaning": "Both families and gate blocked/missing behavior are processed, but gate_allowed/open-close lifecycle is absent or incomplete."
+    },
+    {
+      "classification": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_FAIL_CLOSED_NO_EDGE_NO_LIVE",
+      "meaning": "Safety, root, threshold, route, feature, or no-live checks fail."
+    },
+    {
+      "classification": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_INCONCLUSIVE_NO_EDGE_NO_LIVE",
+      "meaning": "Fixtures are insufficient to process meaningful cases."
+    }
+  ],
+  "runner_processing_plan": {
+    "fail_closed_requirements": [
+      "fail closed if required feature is missing",
+      "fail closed if gate state is missing",
+      "never infer missing fixture values",
+      "preserve not-original and no-edge labels"
+    ],
+    "future_steps": [
+      "load reviewed threshold contract",
+      "load realistic bounded fixture input cases",
+      "validate route_key, family_key, and side",
+      "validate all safety labels",
+      "process each fixture case through clean-room lifecycle logic",
+      "emit signal candidate",
+      "emit pending entry",
+      "apply gate fixture check",
+      "emit rejected entry or paper open/closed only when fixture supports gate allow",
+      "emit heartbeat and state report"
+    ],
+    "lifecycle_sequence": [
+      "signal candidate",
+      "pending entry",
+      "gate fixture check",
+      "rejected or paper open/closed if fixture supports gate allow",
+      "heartbeat/state report"
+    ]
+  },
+  "safety_labels": [
+    "GENERATED_BY_CLEAN_ROOM",
+    "PROXY_BEHAVIOR_FIXTURE",
+    "NOT_ORIGINAL_OLD_SHORT",
+    "NOT_EXACT_REPLAY",
+    "NOT_REAL_TRADE",
+    "NOT_BACKTEST",
+    "NOT_RUNTIME",
+    "NOT_EDGE_EVIDENCE",
+    "NO_LIVE_CAPITAL"
+  ],
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "full_dataset_comparison_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "realistic_fixture_runner_dry_run_allowed_now": false,
+    "runner_execution_allowed_now": false,
+    "runner_realistic_fixture_dry_run_design_created": true,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false
+  },
+  "source_artifacts": {
+    "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "sha256": "dc04d75bdd5882a2952a0a1e0a3ce7855d736d4b6882b689dcc20b41fc7cc68d"
+    },
+    "artifacts/old_short_clean_room/old_short_clean_room_feature_fixture_validator_check_v1.json": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_feature_fixture_validator_check_v1.json",
+      "sha256": "774bbca11a43e378bfc9d80af324a0db42da76eab4ed2f1f383aa3e8c90d0d15"
+    },
+    "artifacts/old_short_clean_room/old_short_clean_room_realistic_bounded_fixture_design_v1.json": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_realistic_bounded_fixture_design_v1.json",
+      "sha256": "6eb4c6869e24014172b68e035716a540481a82290742a22859518aef2e06e01b"
+    },
+    "artifacts/old_short_clean_room/old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1.json": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_realistic_bounded_fixture_generation_dry_run_v1.json",
+      "sha256": "fc3e5c1fee83c6d432a77e184d072299f5e53d3329f7c25c3c77a4c8000806f7"
+    },
+    "artifacts/old_short_clean_room/old_short_clean_room_runner_feature_fixture_dry_run_v1.json": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_feature_fixture_dry_run_v1.json",
+      "sha256": "35d57c85b59f97d93c1c87bc30c81af6a25fa70812fbd116ca84034cf6e238b3"
+    },
+    "artifacts/old_short_clean_room/old_short_clean_room_runner_fixture_threshold_contract_v1.json": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_fixture_threshold_contract_v1.json",
+      "sha256": "e533fc89374724d0e63a61b4a87081012c17624679857c7a3e7f31b31e1f2d68"
+    },
+    "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_dry_run_v1.json": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_behavioral_proposal_dry_run_v1.json",
+      "sha256": "63220c1cce0a22b83dbc630599a23e5855cd682c0d0dec19d2a799841c4a15ff"
+    },
+    "artifacts/old_short_clean_room/old_short_clean_room_threshold_proposal_review_v1.json": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_threshold_proposal_review_v1.json",
+      "sha256": "f3e78cda956787bb83b2d69e882219658c118371c7e4b476a5bb31e2d54f1f04"
+    }
+  },
+  "source_checkpoint": {
+    "actual_head": "64d535535cf3ad28fa0a5f5a1fc0069487cb063a",
+    "expected_head": "64d535535cf3ad28fa0a5f5a1fc0069487cb063a",
+    "head_verified": true,
+    "repo_status_before_design": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_runner_realistic_fixture_dry_run_design_v1.py"
+    ],
+    "tracked_python_count_before": 957
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_DRY_RUN_DESIGN_CREATED",
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence"
+  ],
+  "validation_checks": {
+    "clean_room_reconstruction_preserved": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "fail_closed_conditions_defined": true,
+    "gate_state_plan_defined": true,
+    "input_fixture_policy_defined": true,
+    "no_api_called": true,
+    "no_backtest_run": true,
+    "no_behavioral_validation_execution": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_fixture_runner_execution": true,
+    "no_full_dataset_comparison": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_pnl_computation": true,
+    "no_runtime_live_capital": true,
+    "no_runtime_touched": true,
+    "no_signal_generation": true,
+    "original_exact_source_not_claimed": true,
+    "prior_next_allowed_step_verified": true,
+    "prior_realistic_fixture_generation_loaded": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "result_classes_defined": true,
+    "route_key_verified": true
+  }
+}

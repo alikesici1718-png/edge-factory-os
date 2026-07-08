@@ -1,0 +1,73 @@
+{
+  "active_paper_allowed": false,
+  "archive_allowed_now": false,
+  "archive_performed": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T06:31:10.372936+00:00",
+  "delete_allowed_now": false,
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "gitignore_change_allowed_now": false,
+  "known_backup_pending_count": 2,
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "move_allowed_now": false,
+  "patch_runtime_allowed": false,
+  "pending_hygiene_item_count": 4,
+  "pending_hygiene_rows": [
+    {
+      "archive_allowed_now": false,
+      "classification": "CURRENT_MODULE_UNTRACKED_BEFORE_COMMIT_EXPECTED",
+      "delete_allowed_now": false,
+      "git_status_line": "?? tools/edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh_v1.py",
+      "gitignore_change_allowed_now": false,
+      "move_allowed_now": false,
+      "path": "tools/edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh_v1.py",
+      "required_action": "EXPECTED_TO_BE_COMMITTED_THIS_STEP",
+      "risk": "LOW"
+    },
+    {
+      "archive_allowed_now": false,
+      "classification": "KNOWN_TECHNICAL_FIX_BACKUP_PENDING_APPROVAL",
+      "delete_allowed_now": false,
+      "git_status_line": "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "gitignore_change_allowed_now": false,
+      "move_allowed_now": false,
+      "path": "tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "required_action": "KEEP_PENDING_OR_APPROVE_DELETE_LATER",
+      "risk": "LOW"
+    },
+    {
+      "archive_allowed_now": false,
+      "classification": "KNOWN_POLICY_SENSITIVE_PATCH_BACKUP_PENDING_APPROVAL",
+      "delete_allowed_now": false,
+      "git_status_line": "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+      "gitignore_change_allowed_now": false,
+      "move_allowed_now": false,
+      "path": "tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+      "required_action": "KEEP_PENDING_UNTIL_POLICY_AUDIT_ACCEPTED",
+      "risk": "ATTENTION"
+    },
+    {
+      "archive_allowed_now": false,
+      "classification": "UNTRACKED_UNIVERSE_COVERAGE_GUARD_REVIEW_REQUIRED",
+      "delete_allowed_now": false,
+      "git_status_line": "?? tools/edge_factory_os_universe_coverage_guard_v1.py",
+      "gitignore_change_allowed_now": false,
+      "move_allowed_now": false,
+      "path": "tools/edge_factory_os_universe_coverage_guard_v1.py",
+      "required_action": "CLASSIFY_AS_ACTIVE_CORE_OR_SUPERSEDED_BEFORE_STAGING_OR_DELETING",
+      "risk": "ATTENTION"
+    }
+  ],
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "report_name": "edge_factory_os_backup_hygiene_pending_items_v1",
+  "report_status": "BACKUP_HYGIENE_PENDING_ITEMS_RECORDED_NO_ACTION",
+  "runtime_touch_allowed": false,
+  "universe_guard_review_required": true
+}

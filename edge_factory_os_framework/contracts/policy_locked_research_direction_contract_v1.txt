@@ -1,0 +1,83 @@
+====================================================================================================
+EDGE FACTORY OS POLICY-LOCKED RESEARCH DIRECTION CONTRACT v1
+====================================================================================================
+contract_status: POLICY_LOCKED_RESEARCH_DIRECTION_CONTRACT_READY_NO_EXECUTION
+contract_id: POLICY_LOCKED_RESEARCH_DIRECTION_CONTRACT_V1_7a42a3105dfc90d3_20260514_020243
+contract_hash: 7a42a3105dfc90d3
+selected_research_key: RD8_02_EXTERNAL_AUDIT_PACKET_REFRESH
+selected_route_hash: fc6f897a3512de08
+selected_next_module: edge_factory_os_external_audit_packet_refresh_v1.py
+selected_route_family: METHODOLOGY_AUDIT_FAMILY
+closed_route_hash: 9596f6d3a0fa7a0b
+closed_route_family: MARKET_STATE_TRANSITION_FAMILY
+broad_strategy_search_allowed: None
+research_execution_allowed_now: None
+holdout_access_allowed: None
+candidate_generation_allowed: False
+family_release_allowed: False
+runtime_touch_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+
+CONTRACT PURPOSE
+----------------------------------------------------------------------------------------------------
+Build an external audit / methodology packet refresh after restricted market-state route closure, without executing research, without strategy search, and without any release/candidate/runtime/capital/live action.
+
+HARD RULES
+----------------------------------------------------------------------------------------------------
+- no strategy search
+- no research execution
+- no broad axis expansion
+- no holdout access
+- no candidate generation
+- no candidate contract
+- no family release
+- no runtime touch
+- no capital change
+- no active paper enable
+- no live trading
+- no real orders
+- preserve closed-route evidence
+- include all anti-overfitting governance state in audit packet
+- include overfitting/null-power failure lessons
+- include untracked backup/git-status warning section
+
+REQUIRED INPUTS
+----------------------------------------------------------------------------------------------------
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_policy_locked_research_rotation_after_restricted_retest\policy_locked_research_rotation_after_restricted_retest_latest.json
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\policies\policy_locked_research_rotation_after_restricted_retest_state_v1.json
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\queues\policy_locked_research_rotation_after_restricted_retest_queue_v1.json
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\policies\restricted_retest_closed_route_registry_v1.json
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\policies\global_multiple_testing_ledger_v1.json
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\policies\global_route_family_alpha_accounting_v1.json
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\policies\promising_signal_vault_v1.json
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\policies\pre_registration_policy_v1.json
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\policies\nested_validation_policy_v1.json
+- C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\registries\untouched_holdout_registry_v1.json
+
+REQUIRED OUTPUTS
+----------------------------------------------------------------------------------------------------
+- external_audit_packet_refresh_latest.json
+- external_audit_packet_refresh_latest.txt
+- audit_packet_manifest_v1.json
+- audit_prompt_red_team_packet_v1.txt
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

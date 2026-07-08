@@ -1,0 +1,842 @@
+{
+  "artifact_kind": "OLD_SHORT_GATE_SOURCE_DISAMBIGUATION_REVIEW",
+  "continuation_decision": {
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "frozen_backtest_allowed_next": false,
+    "next_step": "OLD_SHORT_REMAINS_MONITORING_ONLY_EXACT_GATE_SOURCE_UNAVAILABLE",
+    "runtime_live_capital_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "disambiguation_classification": "OLD_SHORT_GATE_SOURCE_DISAMBIGUATION_NO_VALID_SOURCE",
+  "frozen_contract_requirements": {
+    "exchange": "OKX",
+    "expected_period_determined": false,
+    "family_key": "old_short",
+    "global_gate_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\global_gate_decisions.csv",
+    "global_gate_required_by_default": true,
+    "instrument_type": "USDT-SWAP",
+    "optional_contract_columns_observed_in_gate_logs": [
+      "coin",
+      "planned_exit_time",
+      "reason",
+      "side",
+      "strategy",
+      "target_entry_time"
+    ],
+    "required_gate_decision": "ALLOW when require_global_gate is true",
+    "route_name": "old_short_gate_aware",
+    "schema_minimum_columns_for_source_function": [
+      "decision",
+      "family_key",
+      "signal_id"
+    ],
+    "timeframe": "1m"
+  },
+  "gate_candidate_reviews": [
+    {
+      "candidate_reason_from_recovery_artifact": [
+        "exact_filename:global_gate_decisions.csv",
+        "pattern:*gate*decision*",
+        "pattern:*global*gate*decision*",
+        "pattern:global_gate_decisions.csv"
+      ],
+      "contains_old_short_rows": true,
+      "contains_required_gate_columns": true,
+      "exact_source_score": 80,
+      "exists": true,
+      "expected_period_review": {
+        "condition_passed": true,
+        "covers_expected_period": null,
+        "expected_period_determined": false,
+        "reason": "not_applicable_expected_period_not_determined_from_frozen_contract"
+      },
+      "extension": ".csv",
+      "external": true,
+      "first_3_data_rows": [
+        {
+          "coin": "LAYER",
+          "decision": "BLOCK",
+          "family_key": "old_short",
+          "log_time": "2026-05-10T05:59:55.858846Z",
+          "planned_exit_time": "2026-05-10T07:56:00Z",
+          "priority": "100",
+          "reason": "same_coin_overlap_global",
+          "side": "short",
+          "signal_id": "LAYER_blowoff_short_20260510T055400Z",
+          "signal_score": "100001583189.74358",
+          "strategy": "blowoff_short",
+          "target_entry_time": "2026-05-10T05:56:00Z"
+        },
+        {
+          "coin": "LAYER",
+          "decision": "BLOCK",
+          "family_key": "old_short",
+          "log_time": "2026-05-10T05:59:55.858846Z",
+          "planned_exit_time": "2026-05-10T07:58:00Z",
+          "priority": "100",
+          "reason": "same_coin_overlap_global",
+          "side": "short",
+          "signal_id": "LAYER_blowoff_short_20260510T055600Z",
+          "signal_score": "100000681518.3228",
+          "strategy": "blowoff_short",
+          "target_entry_time": "2026-05-10T05:58:00Z"
+        },
+        {
+          "coin": "LAYER",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-10T05:59:55.858846Z",
+          "planned_exit_time": "2026-05-11T05:00:00Z",
+          "priority": "70",
+          "reason": "same_coin_overlap_global",
+          "side": "short",
+          "signal_id": "LAYER_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260510T030000Z",
+          "signal_score": "70008746287.3872",
+          "strategy": "market_relative_extreme_reversion_short_L6_rel600_coin300_hold24",
+          "target_entry_time": "2026-05-10T05:00:00Z"
+        }
+      ],
+      "inside_repo": false,
+      "is_dir": false,
+      "is_file": true,
+      "modified_time_utc": "2026-05-10T05:59:55Z",
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_v4_priority\\global_risk_manager\\global_gate_decisions.csv",
+      "read_error": null,
+      "read_skipped": false,
+      "referenced_by_old_short_evidence_status_artifact": false,
+      "referenced_directly_by_frozen_contract": false,
+      "required_selection_conditions": {
+        "contains_old_short_gate_rows_or_exact_route_identifier": true,
+        "covers_expected_period_if_determined": true,
+        "directly_referenced_by_frozen_contract_or_recovered_old_short_evidence": false,
+        "exists": true,
+        "readable": true,
+        "schema_compatible_with_frozen_contract": true
+      },
+      "route_family_identifiers_found": [
+        "family_key:market_relative_short",
+        "family_key:old_short",
+        "strategy:blowoff_short",
+        "strategy:market_relative_extreme_reversion_short_L6_rel600_coin300_hold24"
+      ],
+      "row_count": 10,
+      "satisfies_all_required_selection_conditions": false,
+      "schema_header": [
+        "log_time",
+        "decision",
+        "reason",
+        "family_key",
+        "coin",
+        "side",
+        "signal_id",
+        "target_entry_time",
+        "planned_exit_time",
+        "strategy",
+        "priority",
+        "signal_score"
+      ],
+      "sha256": "8963137ccfc26618470dc468754523df9a0ef3411a856791560070ce899ef9f3",
+      "size_bytes": 2950,
+      "timestamp_range": {
+        "max_utc": "2026-05-11T06:00:00Z",
+        "min_utc": "2026-05-10T05:00:00Z"
+      }
+    },
+    {
+      "candidate_reason_from_recovery_artifact": [
+        "exact_filename:global_gate_decisions.csv",
+        "pattern:*gate*decision*",
+        "pattern:*global*gate*decision*",
+        "pattern:global_gate_decisions.csv"
+      ],
+      "contains_old_short_rows": false,
+      "contains_required_gate_columns": true,
+      "exact_source_score": 70,
+      "exists": true,
+      "expected_period_review": {
+        "condition_passed": true,
+        "covers_expected_period": null,
+        "expected_period_determined": false,
+        "reason": "not_applicable_expected_period_not_determined_from_frozen_contract"
+      },
+      "extension": ".csv",
+      "external": true,
+      "first_3_data_rows": [
+        {
+          "coin": "USELESS",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-14T02:24:39.984515Z",
+          "planned_exit_time": "2026-05-15T03:00:00Z",
+          "priority": "70",
+          "reason": "max_per_family",
+          "side": "short",
+          "signal_id": "USELESS_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260514T010000Z",
+          "signal_score": "70001946583.9231",
+          "strategy": "market_relative_extreme_reversion_short_L6_rel600_coin300_hold24",
+          "target_entry_time": "2026-05-14T03:00:00Z"
+        }
+      ],
+      "inside_repo": false,
+      "is_dir": false,
+      "is_file": true,
+      "modified_time_utc": "2026-05-14T02:24:39Z",
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\global_gate_decisions.csv",
+      "read_error": null,
+      "read_skipped": false,
+      "referenced_by_old_short_evidence_status_artifact": false,
+      "referenced_directly_by_frozen_contract": true,
+      "required_selection_conditions": {
+        "contains_old_short_gate_rows_or_exact_route_identifier": false,
+        "covers_expected_period_if_determined": true,
+        "directly_referenced_by_frozen_contract_or_recovered_old_short_evidence": true,
+        "exists": true,
+        "readable": true,
+        "schema_compatible_with_frozen_contract": true
+      },
+      "route_family_identifiers_found": [
+        "family_key:market_relative_short",
+        "strategy:market_relative_extreme_reversion_short_L6_rel600_coin300_hold24"
+      ],
+      "row_count": 1,
+      "satisfies_all_required_selection_conditions": false,
+      "schema_header": [
+        "log_time",
+        "decision",
+        "reason",
+        "family_key",
+        "coin",
+        "side",
+        "signal_id",
+        "target_entry_time",
+        "planned_exit_time",
+        "strategy",
+        "priority",
+        "signal_score"
+      ],
+      "sha256": "cd72224068a801db2b755552b16922f3188d80640390ff8e4823d8366a915315",
+      "size_bytes": 427,
+      "timestamp_range": {
+        "max_utc": "2026-05-15T03:00:00Z",
+        "min_utc": "2026-05-14T02:24:39Z"
+      }
+    },
+    {
+      "candidate_reason_from_recovery_artifact": [
+        "pattern:*gate*decision*",
+        "pattern:*global*gate*decision*"
+      ],
+      "contains_old_short_rows": false,
+      "contains_required_gate_columns": true,
+      "exact_source_score": 60,
+      "exists": true,
+      "expected_period_review": {
+        "condition_passed": true,
+        "covers_expected_period": null,
+        "expected_period_determined": false,
+        "reason": "not_applicable_expected_period_not_determined_from_frozen_contract"
+      },
+      "extension": ".csv",
+      "external": true,
+      "first_3_data_rows": [
+        {
+          "coin": "SAHARA",
+          "decision": "ALLOW",
+          "family_key": "impulse_long",
+          "log_time": "2026-05-12T07:19:29.770387Z",
+          "planned_exit_time": "2026-05-12T13:18:00Z",
+          "priority": "150",
+          "reason": "ok",
+          "side": "long",
+          "signal_id": "SAHARA_robust_impulse_L3_move200_fixed_h360_d2_c25_20260512T071600Z",
+          "signal_score": "150000117675.0036",
+          "strategy": "robust_impulse_L3_move200_fixed_h360_d2_c25",
+          "target_entry_time": "2026-05-12T07:18:00Z"
+        },
+        {
+          "coin": "H",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-12T07:19:29.770387Z",
+          "planned_exit_time": "2026-05-13T07:00:00Z",
+          "priority": "70",
+          "reason": "max_per_family",
+          "side": "short",
+          "signal_id": "H_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260512T050000Z",
+          "signal_score": "70006517214.0166",
+          "strategy": "market_relative_extreme_reversion_short_L6_rel600_coin300_hold24",
+          "target_entry_time": "2026-05-12T07:00:00Z"
+        },
+        {
+          "coin": "USELESS",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-12T07:19:29.770387Z",
+          "planned_exit_time": "2026-05-13T07:00:00Z",
+          "priority": "70",
+          "reason": "max_per_family",
+          "side": "short",
+          "signal_id": "USELESS_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260512T050000Z",
+          "signal_score": "70004214263.1998",
+          "strategy": "market_relative_extreme_reversion_short_L6_rel600_coin300_hold24",
+          "target_entry_time": "2026-05-12T07:00:00Z"
+        }
+      ],
+      "inside_repo": false,
+      "is_dir": false,
+      "is_file": true,
+      "modified_time_utc": "2026-05-12T07:19:39Z",
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_claude_audit_export_v1\\claude_audit_export_v1_20260512_101937\\redacted_files\\C__Users__alike__OneDrive__Desktop__edge_lab_new__paper_run_gate_MASTER_UPPER_SYSTEM__global_gate_decisions.csv",
+      "read_error": null,
+      "read_skipped": false,
+      "referenced_by_old_short_evidence_status_artifact": false,
+      "referenced_directly_by_frozen_contract": false,
+      "required_selection_conditions": {
+        "contains_old_short_gate_rows_or_exact_route_identifier": false,
+        "covers_expected_period_if_determined": true,
+        "directly_referenced_by_frozen_contract_or_recovered_old_short_evidence": false,
+        "exists": true,
+        "readable": true,
+        "schema_compatible_with_frozen_contract": true
+      },
+      "route_family_identifiers_found": [
+        "family_key:impulse_long",
+        "family_key:market_relative_short",
+        "strategy:market_relative_extreme_reversion_short_L6_rel600_coin300_hold24",
+        "strategy:robust_impulse_L3_move200_fixed_h360_d2_c25"
+      ],
+      "row_count": 18,
+      "satisfies_all_required_selection_conditions": false,
+      "schema_header": [
+        "log_time",
+        "decision",
+        "reason",
+        "family_key",
+        "coin",
+        "side",
+        "signal_id",
+        "target_entry_time",
+        "planned_exit_time",
+        "strategy",
+        "priority",
+        "signal_score"
+      ],
+      "sha256": "03834c3ffbe0090af44a5c45421e3a95ed655b42615fc544e77af6708dedd2a6",
+      "size_bytes": 5469,
+      "timestamp_range": {
+        "max_utc": "2026-05-13T08:00:00Z",
+        "min_utc": "2026-05-12T07:00:00Z"
+      }
+    },
+    {
+      "candidate_reason_from_recovery_artifact": [
+        "exact_filename:global_gate_decisions.csv",
+        "pattern:*gate*decision*",
+        "pattern:*global*gate*decision*",
+        "pattern:global_gate_decisions.csv"
+      ],
+      "contains_old_short_rows": false,
+      "contains_required_gate_columns": true,
+      "exact_source_score": 60,
+      "exists": true,
+      "expected_period_review": {
+        "condition_passed": true,
+        "covers_expected_period": null,
+        "expected_period_determined": false,
+        "reason": "not_applicable_expected_period_not_determined_from_frozen_contract"
+      },
+      "extension": ".csv",
+      "external": true,
+      "first_3_data_rows": [
+        {
+          "coin": "BSB",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-08T13:48:37.309044Z",
+          "planned_exit_time": "2026-05-09T13:00:00Z",
+          "reason": "same_coin_overlap_global",
+          "side": "short",
+          "signal_id": "BSB_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260508T110000Z",
+          "signal_range_bps": "1050.5899466623575",
+          "signal_vol_quote": "15293695.487",
+          "target_entry_time": "2026-05-08T13:00:00Z"
+        },
+        {
+          "coin": "STRK",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-08T13:48:37.309044Z",
+          "planned_exit_time": "2026-05-09T13:00:00Z",
+          "reason": "same_coin_overlap_global",
+          "side": "short",
+          "signal_id": "STRK_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260508T110000Z",
+          "signal_range_bps": "866.9934088220386",
+          "signal_vol_quote": "14784199.77337",
+          "target_entry_time": "2026-05-08T13:00:00Z"
+        },
+        {
+          "coin": "ONDO",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-08T13:48:37.309044Z",
+          "planned_exit_time": "2026-05-09T13:00:00Z",
+          "reason": "same_coin_overlap_global",
+          "side": "short",
+          "signal_id": "ONDO_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260508T110000Z",
+          "signal_range_bps": "333.4168964652804",
+          "signal_vol_quote": "6179409.826",
+          "target_entry_time": "2026-05-08T13:00:00Z"
+        }
+      ],
+      "inside_repo": false,
+      "is_dir": false,
+      "is_file": true,
+      "modified_time_utc": "2026-05-08T13:48:37Z",
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\global_risk_manager\\global_gate_decisions.csv",
+      "read_error": null,
+      "read_skipped": false,
+      "referenced_by_old_short_evidence_status_artifact": false,
+      "referenced_directly_by_frozen_contract": false,
+      "required_selection_conditions": {
+        "contains_old_short_gate_rows_or_exact_route_identifier": false,
+        "covers_expected_period_if_determined": true,
+        "directly_referenced_by_frozen_contract_or_recovered_old_short_evidence": false,
+        "exists": true,
+        "readable": true,
+        "schema_compatible_with_frozen_contract": true
+      },
+      "route_family_identifiers_found": [
+        "family_key:market_relative_short"
+      ],
+      "row_count": 13,
+      "satisfies_all_required_selection_conditions": false,
+      "schema_header": [
+        "log_time",
+        "decision",
+        "reason",
+        "family_key",
+        "signal_id",
+        "coin",
+        "side",
+        "target_entry_time",
+        "planned_exit_time",
+        "signal_vol_quote",
+        "signal_range_bps"
+      ],
+      "sha256": "4ef47cf965218a74f1c8df9804cdce765d85199830634481e0d2c20e840cc5c4",
+      "size_bytes": 3348,
+      "timestamp_range": {
+        "max_utc": "2026-05-09T14:00:00Z",
+        "min_utc": "2026-05-08T13:00:00Z"
+      }
+    },
+    {
+      "candidate_reason_from_recovery_artifact": [
+        "exact_filename:global_gate_decisions.csv",
+        "pattern:*gate*decision*",
+        "pattern:*global*gate*decision*",
+        "pattern:global_gate_decisions.csv"
+      ],
+      "contains_old_short_rows": false,
+      "contains_required_gate_columns": true,
+      "exact_source_score": 60,
+      "exists": true,
+      "expected_period_review": {
+        "condition_passed": true,
+        "covers_expected_period": null,
+        "expected_period_determined": false,
+        "reason": "not_applicable_expected_period_not_determined_from_frozen_contract"
+      },
+      "extension": ".csv",
+      "external": true,
+      "first_3_data_rows": [
+        {
+          "coin": "BSB",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-08T15:32:16.158759Z",
+          "planned_exit_time": "2026-05-09T15:00:00Z",
+          "reason": "same_coin_overlap_global",
+          "side": "short",
+          "signal_id": "BSB_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260508T130000Z",
+          "signal_range_bps": "696.7781717280701",
+          "signal_vol_quote": "13714633.312",
+          "target_entry_time": "2026-05-08T15:00:00Z"
+        },
+        {
+          "coin": "GALA",
+          "decision": "ALLOW",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-08T15:32:16.158759Z",
+          "planned_exit_time": "2026-05-09T15:00:00Z",
+          "reason": "ok",
+          "side": "short",
+          "signal_id": "GALA_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260508T130000Z",
+          "signal_range_bps": "615.6119182467378",
+          "signal_vol_quote": "5771584.03057",
+          "target_entry_time": "2026-05-08T15:00:00Z"
+        },
+        {
+          "coin": "ONDO",
+          "decision": "ALLOW",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-08T15:32:16.158759Z",
+          "planned_exit_time": "2026-05-09T15:00:00Z",
+          "reason": "ok",
+          "side": "short",
+          "signal_id": "ONDO_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260508T130000Z",
+          "signal_range_bps": "352.8528528528529",
+          "signal_vol_quote": "5770585.661",
+          "target_entry_time": "2026-05-08T15:00:00Z"
+        }
+      ],
+      "inside_repo": false,
+      "is_dir": false,
+      "is_file": true,
+      "modified_time_utc": "2026-05-08T15:32:16Z",
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_v2\\global_risk_manager\\global_gate_decisions.csv",
+      "read_error": null,
+      "read_skipped": false,
+      "referenced_by_old_short_evidence_status_artifact": false,
+      "referenced_directly_by_frozen_contract": false,
+      "required_selection_conditions": {
+        "contains_old_short_gate_rows_or_exact_route_identifier": false,
+        "covers_expected_period_if_determined": true,
+        "directly_referenced_by_frozen_contract_or_recovered_old_short_evidence": false,
+        "exists": true,
+        "readable": true,
+        "schema_compatible_with_frozen_contract": true
+      },
+      "route_family_identifiers_found": [
+        "family_key:market_relative_short"
+      ],
+      "row_count": 13,
+      "satisfies_all_required_selection_conditions": false,
+      "schema_header": [
+        "log_time",
+        "decision",
+        "reason",
+        "family_key",
+        "signal_id",
+        "coin",
+        "side",
+        "target_entry_time",
+        "planned_exit_time",
+        "signal_vol_quote",
+        "signal_range_bps"
+      ],
+      "sha256": "f9536ff40b4e02b5fe5380bbf8077fe0422d938a421a9499e4c195719ce10fc6",
+      "size_bytes": 3321,
+      "timestamp_range": {
+        "max_utc": "2026-05-09T16:00:00Z",
+        "min_utc": "2026-05-08T15:00:00Z"
+      }
+    },
+    {
+      "candidate_reason_from_recovery_artifact": [
+        "exact_filename:global_gate_decisions.csv",
+        "pattern:*gate*decision*",
+        "pattern:*global*gate*decision*",
+        "pattern:global_gate_decisions.csv"
+      ],
+      "contains_old_short_rows": false,
+      "contains_required_gate_columns": true,
+      "exact_source_score": 60,
+      "exists": true,
+      "expected_period_review": {
+        "condition_passed": true,
+        "covers_expected_period": null,
+        "expected_period_determined": false,
+        "reason": "not_applicable_expected_period_not_determined_from_frozen_contract"
+      },
+      "extension": ".csv",
+      "external": true,
+      "first_3_data_rows": [
+        {
+          "coin": "INTC",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-08T19:57:53.788439Z",
+          "planned_exit_time": "2026-05-09T19:00:00Z",
+          "reason": "max_per_family",
+          "side": "short",
+          "signal_id": "INTC_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260508T170000Z",
+          "strategy": "market_relative_extreme_reversion_short_L6_rel600_coin300_hold24",
+          "target_entry_time": "2026-05-08T19:00:00Z"
+        },
+        {
+          "coin": "ONDO",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-08T19:57:53.788439Z",
+          "planned_exit_time": "2026-05-09T19:00:00Z",
+          "reason": "same_coin_overlap_global",
+          "side": "short",
+          "signal_id": "ONDO_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260508T170000Z",
+          "strategy": "market_relative_extreme_reversion_short_L6_rel600_coin300_hold24",
+          "target_entry_time": "2026-05-08T19:00:00Z"
+        },
+        {
+          "coin": "FIL",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-08T19:57:53.788439Z",
+          "planned_exit_time": "2026-05-09T19:00:00Z",
+          "reason": "max_per_family",
+          "side": "short",
+          "signal_id": "FIL_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260508T170000Z",
+          "strategy": "market_relative_extreme_reversion_short_L6_rel600_coin300_hold24",
+          "target_entry_time": "2026-05-08T19:00:00Z"
+        }
+      ],
+      "inside_repo": false,
+      "is_dir": false,
+      "is_file": true,
+      "modified_time_utc": "2026-05-08T19:57:53Z",
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_v3\\global_risk_manager\\global_gate_decisions.csv",
+      "read_error": null,
+      "read_skipped": false,
+      "referenced_by_old_short_evidence_status_artifact": false,
+      "referenced_directly_by_frozen_contract": false,
+      "required_selection_conditions": {
+        "contains_old_short_gate_rows_or_exact_route_identifier": false,
+        "covers_expected_period_if_determined": true,
+        "directly_referenced_by_frozen_contract_or_recovered_old_short_evidence": false,
+        "exists": true,
+        "readable": true,
+        "schema_compatible_with_frozen_contract": true
+      },
+      "route_family_identifiers_found": [
+        "family_key:market_relative_short",
+        "strategy:market_relative_extreme_reversion_short_L6_rel600_coin300_hold24"
+      ],
+      "row_count": 21,
+      "satisfies_all_required_selection_conditions": false,
+      "schema_header": [
+        "log_time",
+        "decision",
+        "reason",
+        "family_key",
+        "coin",
+        "side",
+        "signal_id",
+        "target_entry_time",
+        "planned_exit_time",
+        "strategy"
+      ],
+      "sha256": "213f888675307474238b8fe752ef096b30dc70a07a20ef4aafde9b4447e74c28",
+      "size_bytes": 5925,
+      "timestamp_range": {
+        "max_utc": "2026-05-09T20:00:00Z",
+        "min_utc": "2026-05-08T19:00:00Z"
+      }
+    },
+    {
+      "candidate_reason_from_recovery_artifact": [
+        "exact_filename:global_gate_decisions.csv",
+        "pattern:*gate*decision*",
+        "pattern:*global*gate*decision*",
+        "pattern:global_gate_decisions.csv"
+      ],
+      "contains_old_short_rows": false,
+      "contains_required_gate_columns": true,
+      "exact_source_score": 60,
+      "exists": true,
+      "expected_period_review": {
+        "condition_passed": true,
+        "covers_expected_period": null,
+        "expected_period_determined": false,
+        "reason": "not_applicable_expected_period_not_determined_from_frozen_contract"
+      },
+      "extension": ".csv",
+      "external": true,
+      "first_3_data_rows": [
+        {
+          "coin": "BEAT",
+          "decision": "ALLOW",
+          "family_key": "market_relative_short",
+          "log_time": "2026-05-10T07:01:43.865132Z",
+          "planned_exit_time": "2026-05-11T07:00:00Z",
+          "priority": "70",
+          "reason": "ok",
+          "side": "short",
+          "signal_id": "BEAT_market_relative_extreme_reversion_short_L6_rel600_coin300_hold24_20260510T050000Z",
+          "signal_score": "70004524126.636",
+          "strategy": "market_relative_extreme_reversion_short_L6_rel600_coin300_hold24",
+          "target_entry_time": "2026-05-10T07:00:00Z"
+        }
+      ],
+      "inside_repo": false,
+      "is_dir": false,
+      "is_file": true,
+      "modified_time_utc": "2026-05-10T07:01:43Z",
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_v4_1_no_session\\global_risk_manager\\global_gate_decisions.csv",
+      "read_error": null,
+      "read_skipped": false,
+      "referenced_by_old_short_evidence_status_artifact": false,
+      "referenced_directly_by_frozen_contract": false,
+      "required_selection_conditions": {
+        "contains_old_short_gate_rows_or_exact_route_identifier": false,
+        "covers_expected_period_if_determined": true,
+        "directly_referenced_by_frozen_contract_or_recovered_old_short_evidence": false,
+        "exists": true,
+        "readable": true,
+        "schema_compatible_with_frozen_contract": true
+      },
+      "route_family_identifiers_found": [
+        "family_key:market_relative_short",
+        "strategy:market_relative_extreme_reversion_short_L6_rel600_coin300_hold24"
+      ],
+      "row_count": 1,
+      "satisfies_all_required_selection_conditions": false,
+      "schema_header": [
+        "log_time",
+        "decision",
+        "reason",
+        "family_key",
+        "coin",
+        "side",
+        "signal_id",
+        "target_entry_time",
+        "planned_exit_time",
+        "strategy",
+        "priority",
+        "signal_score"
+      ],
+      "sha256": "092a818794303348850caa895958a99404eb821f1c7015fb82bcce74fad45d5a",
+      "size_bytes": 408,
+      "timestamp_range": {
+        "max_utc": "2026-05-11T07:00:00Z",
+        "min_utc": "2026-05-10T07:00:00Z"
+      }
+    },
+    {
+      "candidate_reason_from_recovery_artifact": [
+        "pattern:*gate*decision*"
+      ],
+      "contains_old_short_rows": false,
+      "contains_required_gate_columns": false,
+      "exact_source_score": 40,
+      "exists": true,
+      "expected_period_review": {
+        "condition_passed": true,
+        "covers_expected_period": null,
+        "expected_period_determined": false,
+        "reason": "not_applicable_expected_period_not_determined_from_frozen_contract"
+      },
+      "extension": ".csv",
+      "external": true,
+      "first_3_data_rows": [
+        {
+          "count": "10",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "reason": "max_per_family"
+        },
+        {
+          "count": "2",
+          "decision": "BLOCK",
+          "family_key": "market_relative_short",
+          "reason": "same_coin_overlap_global"
+        }
+      ],
+      "inside_repo": false,
+      "is_dir": false,
+      "is_file": true,
+      "modified_time_utc": "2026-05-09T21:08:46Z",
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_v4_priority\\live_decision_dashboard\\gate_block_summary.csv",
+      "read_error": null,
+      "read_skipped": false,
+      "referenced_by_old_short_evidence_status_artifact": false,
+      "referenced_directly_by_frozen_contract": false,
+      "required_selection_conditions": {
+        "contains_old_short_gate_rows_or_exact_route_identifier": false,
+        "covers_expected_period_if_determined": true,
+        "directly_referenced_by_frozen_contract_or_recovered_old_short_evidence": false,
+        "exists": true,
+        "readable": true,
+        "schema_compatible_with_frozen_contract": false
+      },
+      "route_family_identifiers_found": [
+        "family_key:market_relative_short"
+      ],
+      "row_count": 2,
+      "satisfies_all_required_selection_conditions": false,
+      "schema_header": [
+        "family_key",
+        "decision",
+        "reason",
+        "count"
+      ],
+      "sha256": "3b75e8e9a0e794de086d1ae9898c28b45dd0446248c5ed123e5432bf006f375b",
+      "size_bytes": 137,
+      "timestamp_range": {
+        "max_utc": null,
+        "min_utc": null
+      }
+    }
+  ],
+  "module": "edge_factory_os_repo_only_old_short_gate_source_disambiguation_review_v1",
+  "payload_sha256_excluding_hash": "78ba2c0e26dcd7a6eff00275a6bd4c429cfc57c6c95f1bdfffa59f6c8a86f4ee",
+  "replacement_checks_all_true": false,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "frozen_backtest_allowed_next": false,
+    "gate_source_disambiguation_created": true,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "selected_gate_source": {
+    "selected": false,
+    "selected_gate_source_path": null,
+    "selection_reason": "no_candidate_satisfied_all_required_conditions"
+  },
+  "selection_rule": {
+    "description": "Select only if exactly one candidate satisfies all deterministic source conditions.",
+    "qualified_candidate_count": 0,
+    "required_conditions": [
+      "exists",
+      "readable",
+      "schema compatible with frozen contract",
+      "contains old_short gate rows or exact route identifier",
+      "covers frozen contract expected period if period can be determined",
+      "directly referenced by frozen contract or recovered old_short evidence/status artifact",
+      "no other candidate satisfies the same required conditions"
+    ]
+  },
+  "source_artifacts": {
+    "old_short_evidence_recovery": "artifacts/old_short/old_short_evidence_recovery_status_refresh_v1.json",
+    "old_short_frozen_route_contract": "artifacts/old_short/old_short_frozen_route_contract_reconstruction_v1.json",
+    "old_short_missing_data_source_recovery": "artifacts/old_short/old_short_missing_data_source_recovery_discovery_v1.json"
+  },
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-25T17:27:53Z",
+    "head": "bd10a9af463ad8a4846aea7fc4e1bb7b4022888d",
+    "repo_clean_before_run": true,
+    "tracked_python_count_before": 909
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_GATE_SOURCE_DISAMBIGUATION_NO_VALID_SOURCE",
+  "validation_checks": {
+    "all_gate_candidates_reviewed": true,
+    "deterministic_selection_rule_applied": true,
+    "evidence_recovery_artifact_loaded": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "frozen_contract_artifact_loaded": true,
+    "missing_source_recovery_artifact_loaded": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_gate_rebuild": true,
+    "no_network_used": true,
+    "no_runtime_live_capital": true,
+    "no_runtime_touched": true,
+    "replacement_checks_all_true": false,
+    "repo_clean_before_run": true
+  }
+}

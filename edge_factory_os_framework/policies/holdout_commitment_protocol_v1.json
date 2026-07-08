@@ -1,0 +1,43 @@
+{
+  "protocol_name": "edge_factory_os_holdout_commitment_protocol_v1",
+  "protocol_status": "HOLDOUT_COMMITMENT_PROTOCOL_READY_NO_HOLDOUT_SELECTED",
+  "created_at_utc": "2026-05-14T01:38:24.686616+00:00",
+  "purpose": "Defines how a future untouched final holdout must be selected and committed without exposing it during strategy search.",
+  "holdout_selected": false,
+  "holdout_peeked": false,
+  "holdout_usable_now": false,
+  "holdout_definition_visible_to_research_modules": false,
+  "commitment_protocol_hash": "43580edc0d15c27d",
+  "required_future_steps": [
+    "select holdout only after governance approval",
+    "write hash commitment of holdout definition",
+    "do not expose actual holdout periods/symbols to strategy-search modules",
+    "record every access request",
+    "allow final holdout use only after search and validation are frozen",
+    "single-use final holdout policy"
+  ],
+  "forbidden_actions": [
+    "holdout_peeking",
+    "holdout_reuse",
+    "holdout_in_strategy_search",
+    "holdout_in_threshold_selection",
+    "holdout_in_feature_selection",
+    "holdout_in_route_selection",
+    "post_hoc_holdout_selection"
+  ],
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

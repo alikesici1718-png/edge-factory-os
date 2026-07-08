@@ -1,0 +1,29 @@
+{
+  "state_name": "edge_factory_os_null_baseline_method_repair_state_v1",
+  "created_at_utc": "2026-05-13T20:49:26.890029+00:00",
+  "repair_state": "NULL_BASELINE_METHOD_REPAIR_V1_FAILED_TRUE_SOURCE_PANEL_REPLAY_REQUIRED",
+  "decision_class": "REPAIRED_METHOD_POLICY_GATES_FAIL_TRUE_SOURCE_PANEL_REPLAY_REQUIRED",
+  "policy_hash": "e4a85ce55a1fdee0",
+  "source_runner_status": "NULL_BASELINE_METHOD_REPAIR_RUNNER_REPAIRED_METHOD_POLICY_GATES_FAIL",
+  "repair_policy_gate_pass": false,
+  "failed_gate_keys": [
+    "STRICT_12_RANDOM_HIT_RATE_CAP",
+    "NULL_ADJUSTED_RANDOM_HIT_RATE_CAP",
+    "ACTUAL_SIGNAL_PRESENT"
+  ],
+  "max_strict_12_any_random_hit_rate": 1.0,
+  "max_null_adjusted_any_random_hit_rate": 0.98,
+  "method_repair_v1_failed": true,
+  "true_source_panel_replay_required": true,
+  "plugin_expansion_allowed": false,
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "runtime_touch_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "next_recommended_research_key": "RD5_06B_TRUE_SOURCE_PANEL_EMPIRICAL_NULL_BASELINE_CONTRACT",
+  "next_module": "edge_factory_os_true_source_panel_empirical_null_baseline_contract_builder_v1.py"
+}

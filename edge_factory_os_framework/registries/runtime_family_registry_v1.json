@@ -1,0 +1,163 @@
+{
+  "active_paper_allowed": false,
+  "archive_performed": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "closed_research_route_rows": [
+    {
+      "can_invalidate_old_short": false,
+      "candidate_generation_allowed": false,
+      "classification": "CLOSED_RESEARCH_ROUTE_NOT_RUNTIME_FAMILY",
+      "notes": [
+        "Closed because restricted retest underpowered/not validated and more null power was not justified.",
+        "This closure must not automatically invalidate old_short runtime family."
+      ],
+      "release_allowed": false,
+      "route_family": "MARKET_STATE_TRANSITION_FAMILY",
+      "route_hash": "9596f6d3a0fa7a0b"
+    }
+  ],
+  "created_at_utc": "2026-05-14T02:30:47.347444+00:00",
+  "execution_performed": false,
+  "family_count": 4,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "global_rules": {
+    "active_paper_requires_separate_gate": true,
+    "capital_change_requires_separate_governor": true,
+    "family_release_requires_separate_release_gate": true,
+    "live_requires_separate_gate": true,
+    "old_short_capital_review_requires_min_closed_trades": 50,
+    "old_short_monitoring_decision_requires_min_closed_trades": 20,
+    "old_short_requires_current_monitor_refresh_before_any_decision": true,
+    "research_route_failure_does_not_auto_invalidate_runtime_family": true,
+    "runtime_family_monitoring_is_not_strategy_research": true
+  },
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "registry_name": "edge_factory_os_runtime_family_registry_v1",
+  "registry_status": "RUNTIME_FAMILY_REGISTRY_ACTIVE_OLD_SHORT_AWARE",
+  "release_gate_feed": {
+    "ACTIVE_PAPER_ALLOWED_FROM_FAMILY_REGISTRY": false,
+    "CANDIDATE_GENERATION_ALLOWED_FROM_FAMILY_REGISTRY": false,
+    "CAPITAL_CHANGE_ALLOWED_FROM_FAMILY_REGISTRY": false,
+    "FAMILY_RELEASE_ALLOWED_FROM_FAMILY_REGISTRY": false,
+    "LIVE_ALLOWED_FROM_FAMILY_REGISTRY": false,
+    "OLD_SHORT_CAPITAL_APPROVED": false,
+    "OLD_SHORT_INVALIDATED_BY_RESEARCH_FAILURES": false,
+    "REAL_ORDERS_ALLOWED_FROM_FAMILY_REGISTRY": false,
+    "RUNTIME_CHANGE_ALLOWED_FROM_FAMILY_REGISTRY": false,
+    "RUNTIME_FAMILY_REGISTRY_ACTIVE": true
+  },
+  "runtime_family_rows": [
+    {
+      "active_paper_allowed": false,
+      "audit_classification": "NOT_INVALIDATED_MONITORING_ONLY",
+      "capital_approved": false,
+      "family_key": "old_short",
+      "family_type": "runtime_family",
+      "live_allowed": false,
+      "minimum_closed_trades_for_capital_review": 50,
+      "minimum_closed_trades_for_monitoring_decision": 20,
+      "notes": [
+        "Prior monitoring showed old_short as the strongest/cleanest family relative to others.",
+        "It is not validated for capital increase by this registry.",
+        "It must not be punished solely because market-state/source-panel research routes failed.",
+        "It still needs current sample and governance review before any runtime/capital action."
+      ],
+      "prior_monitoring_status": "OK_OR_POSITIVE_INFO_IN_PRIOR_MONITORING",
+      "protected_from_unrelated_research_route_failures": true,
+      "real_orders_allowed": false,
+      "release_allowed": false,
+      "required_before_capital_review": [
+        "current_runtime_family_monitor_refresh",
+        "family_specific_drift_review",
+        "capital_governor_pass",
+        "drawdown_review",
+        "exposure_review",
+        "no_new_runtime_errors",
+        "no cross-contamination with failed research routes"
+      ],
+      "research_route_failure_applies": false
+    },
+    {
+      "active_paper_allowed": false,
+      "audit_classification": "NEGATIVE_OR_EARLY_WATCH",
+      "capital_approved": false,
+      "family_key": "impulse_long",
+      "family_type": "runtime_family",
+      "live_allowed": false,
+      "minimum_closed_trades_for_capital_review": 50,
+      "minimum_closed_trades_for_monitoring_decision": 20,
+      "notes": [
+        "Previously flagged as early negative watch.",
+        "No promotion/capital action allowed."
+      ],
+      "prior_monitoring_status": "NEGATIVE_WATCH_IN_PRIOR_MONITORING",
+      "protected_from_unrelated_research_route_failures": false,
+      "real_orders_allowed": false,
+      "release_allowed": false,
+      "required_before_capital_review": [
+        "escape negative watch",
+        "current family-specific positive sample",
+        "drift review",
+        "capital governor pass"
+      ],
+      "research_route_failure_applies": false
+    },
+    {
+      "active_paper_allowed": false,
+      "audit_classification": "EXPOSURE_OR_SAMPLE_ATTENTION",
+      "capital_approved": false,
+      "family_key": "market_relative_short",
+      "family_type": "runtime_family",
+      "live_allowed": false,
+      "minimum_closed_trades_for_capital_review": 50,
+      "minimum_closed_trades_for_monitoring_decision": 20,
+      "notes": [
+        "Prior status was not validated edge; sample/exposure review needed."
+      ],
+      "prior_monitoring_status": "EXPOSURE_OR_NO_CLOSED_SAMPLE_ATTENTION",
+      "protected_from_unrelated_research_route_failures": false,
+      "real_orders_allowed": false,
+      "release_allowed": false,
+      "required_before_capital_review": [
+        "closed sample maturity",
+        "exposure normalization",
+        "drift review",
+        "capital governor pass"
+      ],
+      "research_route_failure_applies": false
+    },
+    {
+      "active_paper_allowed": false,
+      "audit_classification": "INCONCLUSIVE_INSUFFICIENT_SAMPLE",
+      "capital_approved": false,
+      "family_key": "weak_market_short",
+      "family_type": "runtime_family",
+      "live_allowed": false,
+      "minimum_closed_trades_for_capital_review": 50,
+      "minimum_closed_trades_for_monitoring_decision": 20,
+      "notes": [
+        "Insufficient sample; no decision."
+      ],
+      "prior_monitoring_status": "LOW_OR_NO_SAMPLE",
+      "protected_from_unrelated_research_route_failures": false,
+      "real_orders_allowed": false,
+      "release_allowed": false,
+      "required_before_capital_review": [
+        "closed sample maturity",
+        "drift review",
+        "capital governor pass"
+      ],
+      "research_route_failure_applies": false
+    }
+  ],
+  "runtime_touch_allowed": false,
+  "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12"
+}

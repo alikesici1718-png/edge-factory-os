@@ -1,0 +1,31 @@
+{
+  "schema_name": "evaluator_output_schema_v1",
+  "required_fields": [
+    "evaluator_status",
+    "branch_closed",
+    "lesson_written",
+    "blocklist_written",
+    "next_recommended_research_key",
+    "next_module",
+    "release_gate_feed",
+    "safety_flags"
+  ],
+  "safety_defaults": {
+    "candidate_generation_allowed": false,
+    "candidate_contract_allowed": false,
+    "family_release_allowed": false,
+    "promotion_allowed": false,
+    "runtime_touch_allowed": false,
+    "launcher_allowed": false,
+    "patch_runtime_allowed": false,
+    "capital_change_allowed": false,
+    "active_paper_allowed": false,
+    "live_allowed": false,
+    "real_orders_allowed": false,
+    "execution_performed": false,
+    "file_delete_performed": false,
+    "file_move_performed": false,
+    "archive_performed": false
+  },
+  "notes": "Starter schema only. Evaluator framework will validate outputs."
+}

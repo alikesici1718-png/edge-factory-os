@@ -1,0 +1,348 @@
+{
+  "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+  "artifact_summary": {
+    "backup_hygiene_approval_or_standard_stack_refresh": {
+      "found": true,
+      "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh\\backup_hygiene_approval_or_standard_stack_refresh_latest.json"
+    },
+    "global_route_family_alpha_accountant": {
+      "found": true,
+      "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_global_route_family_alpha_accountant\\global_route_family_alpha_accountant_latest.json"
+    },
+    "governance_repair_suite_ledger_alpha_prereg": {
+      "found": true,
+      "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_governance_repair_suite_ledger_alpha_prereg\\governance_repair_suite_ledger_alpha_prereg_latest.json"
+    },
+    "repo_only_standard_os_status_refresh": {
+      "found": true,
+      "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_repo_only_standard_os_status_refresh\\repo_only_standard_os_status_refresh_latest.json"
+    },
+    "runtime_family_monitor_evaluator_no_capital": {
+      "found": true,
+      "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_runtime_family_monitor_evaluator_no_capital\\runtime_family_monitor_evaluator_no_capital_latest.json"
+    },
+    "runtime_family_monitor_refresh_old_short_aware": {
+      "found": true,
+      "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_runtime_family_monitor_refresh_old_short_aware\\runtime_family_monitor_refresh_old_short_aware_latest.json"
+    },
+    "runtime_family_status_panel_and_backup_hygiene": {
+      "found": true,
+      "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_runtime_family_status_panel_and_backup_hygiene\\runtime_family_status_panel_and_backup_hygiene_latest.json"
+    }
+  },
+  "backup_hygiene_status": {
+    "backup_delete_allowed_now": false,
+    "backup_move_allowed_now": false,
+    "cleanup_requires_explicit_manual_approval": true,
+    "gitignore_change_allowed_now": false,
+    "known_backup_pending_count": 2,
+    "known_backup_pending_items": [
+      "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647"
+    ],
+    "manual_approval_present": false,
+    "manual_approval_valid": false,
+    "universe_guard_items": [
+      "?? tools/edge_factory_os_universe_coverage_guard_v1.py"
+    ],
+    "universe_guard_review_required": true
+  },
+  "final_decision": "NO_RUNTIME_NO_RESEARCH_NO_CAPITAL_NO_HYGIENE_ACTION_CONTINUE_SAFE_STATUS_GOVERNANCE",
+  "generated_at_utc": "2026-05-14T06:36:39.087080+00:00",
+  "git_state": {
+    "branch": "main",
+    "dirty_or_untracked_count": 4,
+    "expected_untracked_items_found": [
+      "tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+      "tools/edge_factory_os_universe_coverage_guard_v1.py"
+    ],
+    "expected_untracked_items_missing": [],
+    "git_status_lines": [
+      "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "?? tools/edge_factory_os_repo_only_standard_stack_refresh_v1.py",
+      "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+      "?? tools/edge_factory_os_universe_coverage_guard_v1.py"
+    ],
+    "head_short": "bee1c94",
+    "known_backup_pending_count": 2,
+    "known_backup_pending_items": [
+      "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+      "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647"
+    ],
+    "last_commit": "bee1c94 Add repo-only standard OS status refresh",
+    "output_dir_untracked": [],
+    "status_command_ok": true,
+    "status_stderr": "",
+    "this_tool_untracked": [
+      "?? tools/edge_factory_os_repo_only_standard_stack_refresh_v1.py"
+    ],
+    "universe_guard_items": [
+      "?? tools/edge_factory_os_universe_coverage_guard_v1.py"
+    ],
+    "universe_guard_review_required": true
+  },
+  "holdout_status": {
+    "holdout_peeked": false,
+    "holdout_selected": false,
+    "holdout_usable_now": false,
+    "strategy_search_allowed_now": false
+  },
+  "lab_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new",
+  "missing_artifacts": [],
+  "module": "edge_factory_os_repo_only_standard_stack_refresh_v1.py",
+  "next_action": "BUILD_REPO_ONLY_STATUS_DASHBOARD_OR_STOP_FOR_EXPLICIT_MANUAL_HYGIENE_APPROVAL_NO_RUNTIME_ACTION",
+  "next_module": "edge_factory_os_repo_only_status_dashboard_or_manual_hygiene_approval_gate_v1.py",
+  "next_recommended_research_key": "RD8_13_REPO_ONLY_STATUS_DASHBOARD_OR_MANUAL_HYGIENE_APPROVAL_GATE",
+  "next_step_rules": {
+    "active_paper": false,
+    "backup_delete": false,
+    "backup_move": false,
+    "candidate_generation": false,
+    "capital_change": false,
+    "family_release": false,
+    "gitignore_change": false,
+    "launcher": false,
+    "live": false,
+    "real_orders": false,
+    "runtime_patch": false,
+    "runtime_touch": false,
+    "strategy_research": false
+  },
+  "old_short_status": {
+    "old_short_capital_action_allowed": false,
+    "old_short_capital_ready": false,
+    "old_short_capital_review_threshold": 50,
+    "old_short_closed_trades": 20,
+    "old_short_final_decision": "OLD_SHORT_MONITORING_READY_CONTINUE_COLLECT_NO_CAPITAL",
+    "old_short_monitoring_ready": true,
+    "old_short_next_required_closed_trades_for_capital_review": 30,
+    "old_short_research_invalidation_applies": false
+  },
+  "outputs": {
+    "json": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_repo_only_standard_stack_refresh\\repo_only_standard_stack_refresh_latest.json",
+    "txt": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_repo_only_standard_stack_refresh\\repo_only_standard_stack_refresh_latest.txt"
+  },
+  "policy_gates": [
+    {
+      "evidence": "This module only reads git/artifact state and writes its own report outputs.",
+      "gate": "REPO_ONLY_SCOPE",
+      "observed": true,
+      "required": true,
+      "status": "PASS"
+    },
+    {
+      "evidence": "Runtime, launcher, and patch operations remain explicitly blocked.",
+      "gate": "NO_RUNTIME_LAUNCHER_OR_PATCH",
+      "observed": {
+        "launcher_allowed": false,
+        "runtime_patch_allowed": false,
+        "runtime_touch_allowed": false
+      },
+      "required": {
+        "launcher_allowed": false,
+        "runtime_patch_allowed": false,
+        "runtime_touch_allowed": false
+      },
+      "status": "BLOCKED_AS_REQUIRED"
+    },
+    {
+      "evidence": "No valid explicit manual approval exists, so backup hygiene stays pending without destructive action.",
+      "gate": "NO_BACKUP_DELETE_MOVE_OR_GITIGNORE_CHANGE",
+      "observed": {
+        "backup_delete_allowed": false,
+        "backup_move_allowed": false,
+        "gitignore_change_allowed": false,
+        "manual_approval_present": false,
+        "manual_approval_valid": false
+      },
+      "required": {
+        "backup_delete_allowed": false,
+        "backup_move_allowed": false,
+        "gitignore_change_allowed": false,
+        "manual_approval_valid": false
+      },
+      "status": "BLOCKED_AS_REQUIRED"
+    },
+    {
+      "evidence": "This refresh is governance/status only and does not open a research or release route.",
+      "gate": "NO_STRATEGY_RESEARCH_OR_CANDIDATE_RELEASE",
+      "observed": {
+        "candidate_contract_allowed": false,
+        "candidate_generation_allowed": false,
+        "family_release_allowed": false,
+        "promotion_allowed": false,
+        "strategy_research_allowed": false
+      },
+      "required": {
+        "candidate_contract_allowed": false,
+        "candidate_generation_allowed": false,
+        "family_release_allowed": false,
+        "promotion_allowed": false,
+        "strategy_research_allowed": false
+      },
+      "status": "BLOCKED_AS_REQUIRED"
+    },
+    {
+      "evidence": "Capital, active paper, live, and real order pathways remain blocked.",
+      "gate": "NO_CAPITAL_ACTIVE_PAPER_LIVE_REAL_ORDER",
+      "observed": {
+        "active_paper_allowed": false,
+        "capital_change_allowed": false,
+        "live_allowed": false,
+        "real_orders_allowed": false
+      },
+      "required": {
+        "active_paper_allowed": false,
+        "capital_change_allowed": false,
+        "live_allowed": false,
+        "real_orders_allowed": false
+      },
+      "status": "BLOCKED_AS_REQUIRED"
+    },
+    {
+      "evidence": "old_short is monitoring-ready but still below the 50 closed trade capital review threshold.",
+      "gate": "OLD_SHORT_MONITORING_READY_NOT_CAPITAL_READY",
+      "observed": {
+        "capital_review_threshold": 50,
+        "old_short_closed_trades": 20,
+        "old_short_final_decision": "OLD_SHORT_MONITORING_READY_CONTINUE_COLLECT_NO_CAPITAL",
+        "remaining_for_capital_review": 30
+      },
+      "required": {
+        "capital_action_allowed": false,
+        "capital_ready": false,
+        "old_short_closed_trades_min_for_capital_review": 50
+      },
+      "status": "PASS_NO_CAPITAL"
+    },
+    {
+      "evidence": "Untouched holdout remains unavailable for strategy use.",
+      "gate": "HOLDOUT_ACCESS_BLOCKED",
+      "observed": {
+        "holdout_peeked": false,
+        "holdout_selected": false,
+        "holdout_usable_now": false
+      },
+      "required": {
+        "holdout_peeked": false,
+        "holdout_selected": false,
+        "holdout_usable_now": false
+      },
+      "status": "BLOCKED_AS_REQUIRED"
+    },
+    {
+      "evidence": "Known pending backup/universe-guard hygiene remains visible but untouched.",
+      "gate": "PENDING_HYGIENE_VISIBLE_NO_ACTION",
+      "observed": {
+        "expected_untracked_items_found": [
+          "tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+          "tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+          "tools/edge_factory_os_universe_coverage_guard_v1.py"
+        ],
+        "expected_untracked_items_missing": [],
+        "known_backup_pending_count": 2,
+        "universe_guard_review_required": true
+      },
+      "required": {
+        "delete_move_gitignore_change": false,
+        "manual_approval_required_before_cleanup": true
+      },
+      "status": "PENDING_NO_DESTRUCTIVE_ACTION"
+    },
+    {
+      "evidence": "Continuity artifacts are inventoried. Missing optional artifacts are recorded instead of guessed.",
+      "gate": "ARTIFACT_CONTINUITY_CHECK",
+      "observed": {
+        "artifact_summary": {
+          "backup_hygiene_approval_or_standard_stack_refresh": {
+            "found": true,
+            "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh\\backup_hygiene_approval_or_standard_stack_refresh_latest.json"
+          },
+          "global_route_family_alpha_accountant": {
+            "found": true,
+            "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_global_route_family_alpha_accountant\\global_route_family_alpha_accountant_latest.json"
+          },
+          "governance_repair_suite_ledger_alpha_prereg": {
+            "found": true,
+            "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_governance_repair_suite_ledger_alpha_prereg\\governance_repair_suite_ledger_alpha_prereg_latest.json"
+          },
+          "repo_only_standard_os_status_refresh": {
+            "found": true,
+            "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_repo_only_standard_os_status_refresh\\repo_only_standard_os_status_refresh_latest.json"
+          },
+          "runtime_family_monitor_evaluator_no_capital": {
+            "found": true,
+            "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_runtime_family_monitor_evaluator_no_capital\\runtime_family_monitor_evaluator_no_capital_latest.json"
+          },
+          "runtime_family_monitor_refresh_old_short_aware": {
+            "found": true,
+            "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_runtime_family_monitor_refresh_old_short_aware\\runtime_family_monitor_refresh_old_short_aware_latest.json"
+          },
+          "runtime_family_status_panel_and_backup_hygiene": {
+            "found": true,
+            "selected_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_runtime_family_status_panel_and_backup_hygiene\\runtime_family_status_panel_and_backup_hygiene_latest.json"
+          }
+        },
+        "missing_artifacts": []
+      },
+      "required": {
+        "must_not_fail_if_optional_artifacts_missing": true,
+        "must_record_missing_artifacts": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "previous_module_state": {
+    "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+    "backup_delete_allowed_now": false,
+    "backup_move_allowed_now": false,
+    "commit": "bee1c94",
+    "final_decision": "NO_RUNTIME_NO_RESEARCH_NO_CAPITAL_CONTINUE_REPO_ONLY_GOVERNANCE_REFRESH",
+    "gitignore_change_allowed_now": false,
+    "known_backup_pending_count": 2,
+    "manual_approval_present": false,
+    "manual_approval_valid": false,
+    "module": "edge_factory_os_repo_only_standard_os_status_refresh_v1.py",
+    "next_module": "edge_factory_os_repo_only_standard_stack_refresh_v1.py",
+    "old_short_capital_review_threshold": 50,
+    "old_short_closed_trades": 20,
+    "old_short_final_decision": "OLD_SHORT_MONITORING_READY_CONTINUE_COLLECT_NO_CAPITAL",
+    "old_short_next_required_closed_trades_for_capital_review": 30,
+    "pending_hygiene_item_count_observed": 3,
+    "refresh_status": "REPO_ONLY_STANDARD_OS_STATUS_REFRESH_READY",
+    "severity": "ATTENTION",
+    "universe_guard_review_required": true
+  },
+  "reason": "Standard stack refresh completed as repo-only OS intelligence. Runtime, launcher, patching, backup cleanup, strategy research, candidate/release, and capital/live pathways remain blocked.",
+  "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+  "safety_flags": {
+    "active_paper_allowed": false,
+    "archive_allowed": false,
+    "backup_delete_allowed": false,
+    "backup_move_allowed": false,
+    "candidate_contract_allowed": false,
+    "candidate_generation_allowed": false,
+    "capital_change_allowed": false,
+    "execution_allowed": false,
+    "family_release_allowed": false,
+    "file_delete_allowed": false,
+    "file_move_allowed": false,
+    "gitignore_change_allowed": false,
+    "launcher_allowed": false,
+    "live_allowed": false,
+    "promotion_allowed": false,
+    "real_orders_allowed": false,
+    "repo_only": true,
+    "runtime_patch_allowed": false,
+    "runtime_touch_allowed": false,
+    "strategy_research_allowed": false
+  },
+  "severity": "ATTENTION",
+  "stack_attention_reasons": [
+    "known_backup_hygiene_pending",
+    "universe_guard_review_required",
+    "old_short_not_capital_ready"
+  ],
+  "stack_status": "REPO_ONLY_STANDARD_STACK_REFRESH_READY_WITH_PENDING_ATTENTION"
+}

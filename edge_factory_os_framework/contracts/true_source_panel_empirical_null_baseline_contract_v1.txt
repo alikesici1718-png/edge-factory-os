@@ -1,0 +1,106 @@
+====================================================================================================
+EDGE FACTORY OS TRUE SOURCE PANEL EMPIRICAL NULL BASELINE CONTRACT v1
+====================================================================================================
+contract_status: TRUE_SOURCE_PANEL_EMPIRICAL_NULL_BASELINE_CONTRACT_READY
+allowed_scope: READ_ONLY_RESEARCH
+next_action: BUILD_TRUE_SOURCE_PANEL_EMPIRICAL_NULL_BASELINE_RUNNER
+contract_id: TRUE_SOURCE_PANEL_EMPIRICAL_NULL_BASELINE_CONTRACT_V1_76378396cf78274c_20260513_205152
+contract_hash: 76378396cf78274c
+route_hash: 895192a06fdf4c90
+route_hash_blocked: False
+research_key: TRUE_SOURCE_PANEL_EMPIRICAL_NULL_BASELINE_V1
+direction_queue_key: RD5_06B_TRUE_SOURCE_PANEL_EMPIRICAL_NULL_BASELINE_CONTRACT
+plugin_key: TRUE_SOURCE_PANEL_EMPIRICAL_NULL_BASELINE_PLUGIN_V1
+policy_hash: e4a85ce55a1fdee0
+repair_state: NULL_BASELINE_METHOD_REPAIR_V1_FAILED_TRUE_SOURCE_PANEL_REPLAY_REQUIRED
+strict_policy_key: STRICT_MONTH_STABILITY_12_OF_12
+canonical_policy_month_count: 12
+source_panel_path: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_feature_panels\post_impulse_drift_long_v1\post_impulse_drift_long_v1_feature_panel_1h_dynamic.parquet
+source_panel_exists: True
+minimum_empirical_replay_runs: 1000
+required_replay_method_count: 8
+replay_method_count: 12
+next_module: edge_factory_os_true_source_panel_empirical_null_baseline_runner_v1.py
+
+REPLAY METHODS
+----------------------------------------------------------------------------------------------------
+- panel_row_month_block_bootstrap
+- panel_within_month_symbol_shuffle
+- panel_symbol_holdout_replay
+- panel_month_holdout_replay
+- panel_time_block_bootstrap
+- panel_negative_control_replay
+- panel_cost_stress_replay
+- panel_liquidity_bucket_shuffle
+- panel_volatility_bucket_shuffle
+- panel_side_flip_replay
+- panel_feature_label_permutation
+- panel_entry_time_permutation
+
+SOURCE PANEL REQUIREMENTS
+----------------------------------------------------------------------------------------------------
+{
+  "required_format": "parquet",
+  "minimum_row_count": 1000000,
+  "minimum_symbol_count": 200,
+  "expected_symbol_count": 285,
+  "required_time_span_days_min": 300,
+  "required_columns": [
+    "time",
+    "symbol",
+    "open",
+    "high",
+    "low",
+    "close",
+    "entry_vol_quote",
+    "entry_range_bps",
+    "coin_ret3_bps",
+    "coin_ret6_bps",
+    "mkt_ret3_bps",
+    "mkt_ret6_bps"
+  ],
+  "canonical_policy_month_count": 12,
+  "allow_raw_calendar_month_count": 13
+}
+
+GATE CAPS
+----------------------------------------------------------------------------------------------------
+max_allowed_strict_12_any_random_hit_rate: 0.01
+max_allowed_null_adjusted_any_random_hit_rate: 0.005
+empirical_p_value_required_lte: 0.01
+minimum_actual_vs_null_margin_bps: 2500.0
+
+REQUIRED RUNNER OUTPUTS
+----------------------------------------------------------------------------------------------------
+- source_panel_schema_report
+- source_panel_month_symbol_coverage_report
+- policy_consumption_report
+- guard_consumption_report
+- repair_state_consumption_report
+- panel_replay_method_inventory
+- panel_empirical_replay_run_summary
+- panel_empirical_false_positive_summary
+- panel_empirical_policy_gate_pass_fail_table
+- panel_empirical_p_value_table
+- method_repair_recommendation
+- latest_json
+- latest_txt
+- csv_outputs
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False

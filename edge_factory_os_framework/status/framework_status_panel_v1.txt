@@ -1,0 +1,64 @@
+====================================================================================================
+EDGE FACTORY OS FRAMEWORK STATUS PANEL v1
+====================================================================================================
+panel_status: FRAMEWORK_STATUS_PANEL_READY_POLICY_LOCKED_NO_ACTUAL_SIGNAL
+severity: ATTENTION
+allowed_scope: REPO_ONLY_OS_INTELLIGENCE
+next_action: BUILD_POLICY_LOCKED_NEW_RESEARCH_DIRECTION_QUEUE_NO_RELEASE
+reason: Framework status consolidated: policy/guard/validator pass, false-positive methodology repaired, actual signal absent, plugin expansion and all release actions blocked.
+strict_policy_key: STRICT_MONTH_STABILITY_12_OF_12
+policy_active: True
+guard_pass: True
+validator_pass: True
+false_positive_methodology_repaired: True
+actual_signal_present: False
+plugin_expansion_allowed: False
+release_allowed: False
+runtime_touch_allowed: False
+capital_change_allowed: False
+live_allowed: False
+real_orders_allowed: False
+lesson_count: 19
+blocked_route_count: 16
+next_recommended_research_key: RD5_08_POLICY_LOCKED_NEW_RESEARCH_DIRECTION_QUEUE
+next_module: edge_factory_os_policy_locked_new_research_direction_queue_v1.py
+
+COMPONENTS
+----------------------------------------------------------------------------------------------------
+research_gate_policy: pass=True status=RESEARCH_GATE_ENFORCEMENT_POLICY_ACTIVE | policy_hash=e4a85ce55a1fdee0
+policy_runtime_state: pass=True status=RESEARCH_GATE_POLICY_ACTIVE_PLUGIN_EXPANSION_BLOCKED | plugin expansion blocked in runtime policy state
+policy_validation_state: pass=True status=RESEARCH_GATE_ENFORCEMENT_VALIDATED_PLUGIN_EXPANSION_BLOCKED | validator_pass=True
+data_quality_guard: pass=True status=DATA_QUALITY_GUARD_PASS_WITH_ACTIVE_ATTENTION_GUARDS | guard_warning_count=3
+null_baseline_method_state: pass=True status=NULL_BASELINE_METHOD_AUDIT_ATTENTION_REPAIR_RECOMMENDED | method_repair_required=True
+null_baseline_repair_state: pass=True status=NULL_BASELINE_METHOD_REPAIR_V1_FAILED_TRUE_SOURCE_PANEL_REPLAY_REQUIRED | true_source_panel_replay_required=True
+true_source_panel_null_baseline_state: pass=True status=TRUE_SOURCE_PANEL_NULL_BASELINE_FALSE_POSITIVE_REPAIRED_NO_SIGNAL | false_positive_repaired=True; actual_signal_present=False; max_strict=0.0; max_null=0.0
+active_core_manifest: pass=True status=ACTIVE_CORE_MANIFEST_READY | active_core=19; current_frontier=5; consolidate=38
+generic_framework_skeleton: pass=True status=GENERIC_FRAMEWORK_SKELETON_READY | framework_dir=C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+runtime_touch_allowed: False
+launcher_allowed: False
+patch_runtime_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+execution_performed: False
+file_delete_performed: False
+file_move_performed: False
+archive_performed: False
+
+OUTPUT PATHS
+----------------------------------------------------------------------------------------------------
+output_json: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_framework_status_panel\framework_status_panel_latest.json
+output_txt: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_framework_status_panel\framework_status_panel_latest.txt
+output_csv: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_framework_status_panel\framework_status_panel_components_latest.csv
+next_queue_json: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_framework_status_panel\framework_status_panel_next_queue_latest.json
+repo_status_json: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\status\framework_status_panel_v1.json
+repo_status_txt: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_repo\edge_factory_os_framework\status\framework_status_panel_v1.txt
+specific_lesson_path: C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_lesson_memory\framework_status_panel_lesson_latest.json

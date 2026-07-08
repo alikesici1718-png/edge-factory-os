@@ -1,0 +1,840 @@
+{
+  "appendix": {
+    "future_requirements": [
+      "report package dry-run review",
+      "longer paper monitoring before any live discussion",
+      "true reconciliation design before account-level reconciliation",
+      "separate explicit approval for any future report export"
+    ],
+    "glossary": {
+      "diagnostic_promising": "research diagnostic classification that does not imply an edge claim",
+      "funding_carry": "spot-perp structure where short perp funding is the intended return source",
+      "paper_only": "JSON-only simulated reporting package without live permissions",
+      "same_base_quantity": "spot and perp legs use equal base asset quantity per symbol"
+    },
+    "no_live_no_edge_disclaimers": [
+      "no candidate generation",
+      "no edge claim",
+      "no runtime, live, or capital permission",
+      "no PDF, DOCX, HTML, or Markdown external report export"
+    ],
+    "payload_hashes": {
+      "multi_cycle_dry_run": "4c4a16750aa3c15bda0d497127217c38a0171ca798220bf16ed701c86dd7fa13",
+      "operational_feasibility": "5af80fc87f583f4f5f4ed4baaa5620d708eff1ade5aaa54969d4259e54d6604e",
+      "report_builder_dry_run": "d1314f8e9038c705e2c83bbb8551092ff259a93af5ee865178fbfde382ad26d2",
+      "report_builder_review": "5aca807f96e6f451fc723db5c4149a3ffb50c70776923f2508ca696d1827c5fc",
+      "report_package_design": "c4d10185cfad8efe60ddf31d15c5cd9f5e292f71e8f21b95a50c0b0289552ece",
+      "reporting_design": "ee0892db27885562b257294033992bff57bb387877d528638e6c709664bd7eb8",
+      "risk_capital": "9b158cf8517e47c750c39234ea1d7287619a969f567cc682e16edd103a080ccc",
+      "sizing_repair": "0f189c4b8999d7d9a1018cf988952e630d554ed898fc29a61510af93a906d822",
+      "strategy_closure": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8",
+      "strategy_evaluation": "94bfdeb3cbe2bfd79ea77ae86c96427790f87a78ff4377972d4b1476ad4ee52b"
+    },
+    "source_artifact_list": {
+      "multi_cycle_dry_run": "artifacts/paper_monitor_dry_runs/binance_spot_perp_funding_carry_multi_cycle_paper_dry_run_v1.json",
+      "operational_feasibility": "artifacts/operational_feasibility/binance_spot_perp_delta_neutral_funding_carry_operational_feasibility_v1.json",
+      "report_builder_dry_run": "artifacts/report_builder_dry_runs/binance_spot_perp_funding_carry_report_builder_dry_run_v1.json",
+      "report_builder_review": "artifacts/report_builder_reviews/binance_spot_perp_funding_carry_report_builder_dry_run_review_v1.json",
+      "report_package_design": "artifacts/report_package_designs/binance_spot_perp_funding_carry_report_package_design_v1.json",
+      "reporting_design": "artifacts/reporting_designs/binance_spot_perp_funding_carry_reporting_reconciliation_design_v1.json",
+      "risk_capital": "artifacts/risk_capital_diagnostics/binance_spot_perp_delta_neutral_funding_carry_risk_capital_feasibility_v1.json",
+      "sizing_repair": "artifacts/order_sizing_simulations/binance_spot_perp_funding_carry_order_sizing_repair_sim_v1.json",
+      "strategy_closure": "artifacts/strategy_closures/binance_spot_perp_delta_neutral_funding_carry_closure_v1.json",
+      "strategy_evaluation": "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json"
+    }
+  },
+  "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_REPORT_PACKAGE_BUILDER_DRY_RUN",
+  "classification": "REPORT_PACKAGE_BUILDER_DRY_RUN_PASS_READY_FOR_PACKAGE_REVIEW_NO_LIVE_PERMISSION",
+  "evidence_chain_summary": [
+    {
+      "artifact": "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json",
+      "stage": "strategy diagnostic",
+      "summary": {
+        "closure_record_required_next": true,
+        "diagnostic_promising": true,
+        "result_class": "SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_DIAGNOSTIC_PROMISING_REQUIRES_CLOSURE_NO_CANDIDATE_NO_EDGE"
+      }
+    },
+    {
+      "artifact": "artifacts/risk_capital_diagnostics/binance_spot_perp_delta_neutral_funding_carry_risk_capital_feasibility_v1.json",
+      "stage": "risk/capital feasibility",
+      "summary": {
+        "classification": "FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_STRONG_DIAGNOSTIC_NO_LIVE_PERMISSION",
+        "classification_grants_candidate_or_edge_or_live_permission": false
+      }
+    },
+    {
+      "artifact": "artifacts/operational_feasibility/binance_spot_perp_delta_neutral_funding_carry_operational_feasibility_v1.json",
+      "stage": "operational feasibility",
+      "summary": {
+        "classification": "FUNDING_CARRY_OPERATIONAL_FEASIBILITY_INCOMPLETE_NEEDS_EXCHANGE_RULES_NO_LIVE_PERMISSION",
+        "classification_grants_live_or_capital_permission": false,
+        "reason": "Strategy-level and risk/capital diagnostics are promising, but operational feasibility remains incomplete without exchange filters, account-specific fees, margin/liquidation rules, and order sizing/execution simulation."
+      }
+    },
+    {
+      "artifact": "artifacts/order_sizing_simulations/binance_spot_perp_funding_carry_order_sizing_repair_sim_v1.json",
+      "stage": "sizing failure and repair",
+      "summary": {
+        "classification": "ORDER_SIZING_REPAIR_SIM_PASS_READY_FOR_PAPER_TRADING_DESIGN_NO_LIVE_PERMISSION",
+        "classification_grants_live_or_capital_permission": false,
+        "minimum_passing_capital_all3": "235",
+        "minimum_passing_capital_btc_eth_only": "2500",
+        "root_cause_repaired": true
+      }
+    },
+    {
+      "artifact": "artifacts/paper_monitor_dry_runs/binance_spot_perp_funding_carry_multi_cycle_paper_dry_run_v1.json",
+      "stage": "multi-cycle dry run",
+      "summary": {
+        "classification": "MULTI_CYCLE_PAPER_DRY_RUN_PARTIAL_RISK_FLAGS_NO_LIVE_PERMISSION",
+        "classification_grants_live_or_capital_permission": false
+      }
+    },
+    {
+      "artifact": "artifacts/reporting_designs/binance_spot_perp_funding_carry_reporting_reconciliation_design_v1.json",
+      "stage": "reporting/reconciliation design",
+      "summary": "REPORTING_RECONCILIATION_DESIGN_READY_FOR_REPORT_BUILDER_PREVIEW_NO_LIVE_PERMISSION"
+    },
+    {
+      "artifact": "artifacts/report_builder_dry_runs/binance_spot_perp_funding_carry_report_builder_dry_run_v1.json",
+      "stage": "report builder dry run",
+      "summary": "REPORT_BUILDER_DRY_RUN_PASS_READY_FOR_REPORT_REVIEW_NO_LIVE_PERMISSION"
+    },
+    {
+      "artifact": "artifacts/report_builder_reviews/binance_spot_perp_funding_carry_report_builder_dry_run_review_v1.json",
+      "stage": "report builder review",
+      "summary": "REPORT_BUILDER_DRY_RUN_REVIEW_PASS_READY_FOR_REPORT_PACKAGE_DESIGN_NO_LIVE_PERMISSION"
+    },
+    {
+      "artifact": "artifacts/report_package_designs/binance_spot_perp_funding_carry_report_package_design_v1.json",
+      "stage": "report package design",
+      "summary": "REPORT_PACKAGE_DESIGN_READY_FOR_PACKAGE_BUILDER_DRY_RUN_NO_LIVE_PERMISSION"
+    }
+  ],
+  "executive_summary": {
+    "candidate_generation_allowed": false,
+    "capital_permission_allowed": false,
+    "current_system_status": "paper_and_reporting_dry_run_only",
+    "diagnostic_status": "diagnostic_promising_not_live",
+    "edge_claim_allowed": false,
+    "live_trading_allowed": false,
+    "mechanism": "long Binance spot plus short Binance USD-M perpetual funding carry",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "historical_diagnostic_summary": {
+    "capital_permission_allowed": false,
+    "holdout_50pct_funding_haircut_2x_cost_net_bps": 84.476923,
+    "holdout_base_net_bps": 256.969856,
+    "holdout_monthly_positive_rate": 0.9,
+    "live_permission_allowed": false,
+    "risk_capital_classification": {
+      "classification": "FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_STRONG_DIAGNOSTIC_NO_LIVE_PERMISSION",
+      "classification_grants_candidate_or_edge_or_live_permission": false
+    },
+    "validation_50pct_funding_haircut_2x_cost_net_bps": 595.819785,
+    "validation_base_net_bps": 1268.112469,
+    "validation_monthly_positive_rate": 1.0
+  },
+  "institutional_review_checklist": [
+    {
+      "item": "evidence_artifacts_present",
+      "passed": true
+    },
+    {
+      "item": "paper_monitor_dry_run_reviewed",
+      "passed": true
+    },
+    {
+      "item": "report_builder_review_p0_issue_count_zero",
+      "passed": true
+    },
+    {
+      "item": "report_builder_review_p1_attention_count_zero",
+      "passed": true
+    },
+    {
+      "item": "source_hashes_present",
+      "passed": true
+    },
+    {
+      "item": "deterministic_json_required",
+      "passed": true
+    },
+    {
+      "item": "no_manual_edits_required",
+      "passed": true
+    },
+    {
+      "item": "no_live_permissions",
+      "passed": true
+    },
+    {
+      "item": "next_required_stage_before_live_discussion",
+      "passed": true,
+      "requirement": "longer paper monitoring and true reconciliation design"
+    }
+  ],
+  "limitations": [
+    "Report package builder dry-run only; no external report file was generated.",
+    "No PDF, DOCX, HTML, Markdown, or other report export was created.",
+    "No network, API, private endpoint, order endpoint, scheduler, daemon, runtime, live, or capital action occurred.",
+    "No candidate generation, edge claim, or family release is allowed."
+  ],
+  "module": "edge_factory_os_repo_only_binance_spot_perp_funding_carry_report_package_builder_dry_run_v1",
+  "next_allowed_step": "REPORT_PACKAGE_DRY_RUN_REVIEW_ONLY",
+  "operational_readiness_summary": {
+    "exchange_rules_discovered": true,
+    "minimum_passing_capital_from_repaired_sizing": "235",
+    "multi_cycle_dry_run_result": {
+      "classification": "MULTI_CYCLE_PAPER_DRY_RUN_PARTIAL_RISK_FLAGS_NO_LIVE_PERMISSION",
+      "classification_grants_live_or_capital_permission": false
+    },
+    "multi_cycle_minimum_passing_capital_by_cycle": {
+      "1": 235,
+      "2": 235,
+      "3": 235
+    },
+    "orders_placed": false,
+    "paper_dry_run_partial_risk_flags": true,
+    "sizing_initial_failure": "PRICE_SNAPSHOT_ORDER_SIZING_SIM_FAIL_NO_LIVE_PERMISSION",
+    "sizing_repair_pass": {
+      "classification": "ORDER_SIZING_REPAIR_SIM_PASS_READY_FOR_PAPER_TRADING_DESIGN_NO_LIVE_PERMISSION",
+      "classification_grants_live_or_capital_permission": false,
+      "minimum_passing_capital_all3": "235",
+      "minimum_passing_capital_btc_eth_only": "2500",
+      "root_cause_repaired": true
+    }
+  },
+  "paper_monitor_architecture": {
+    "private_api_allowed": false,
+    "public_snapshot_inputs": [
+      "public spot price snapshot",
+      "public futures price snapshot",
+      "public premiumIndex/funding snapshot",
+      "public exchangeInfo rules"
+    ],
+    "repaired_sizing": "common base quantity, Decimal arithmetic, exchange-filter aware",
+    "report_only_state": "CYCLE_REPORT / FINAL_REPORT_ONLY",
+    "risk_halt_state": "RISK_HALT",
+    "scheduler_daemon_runtime_allowed": false,
+    "state_machine": [
+      "DISABLED",
+      "CYCLE_START",
+      "SNAPSHOT_PUBLIC_MARKET_DATA",
+      "REFRESH_EXCHANGE_RULES",
+      "RUN_REPAIRED_SIZING",
+      "SIMULATE_ENTRY_DECISION",
+      "SIMULATE_POSITION_STATE",
+      "MONITOR_FUNDING",
+      "SIMULATE_REBALANCE_OR_EXIT",
+      "RISK_HALT",
+      "CYCLE_REPORT",
+      "FINAL_REPORT_ONLY"
+    ]
+  },
+  "payload_sha256_excluding_hash": "bfbdd9157df57605375f861e5edc7f720ed638103384f846375d4e77b169ef58",
+  "prior_report_package_design_preserved": {
+    "classification": "REPORT_PACKAGE_DESIGN_READY_FOR_PACKAGE_BUILDER_DRY_RUN_NO_LIVE_PERMISSION",
+    "institutional_checklist_item_count": 9,
+    "next_allowed_step": "REPORT_PACKAGE_BUILDER_DRY_RUN_ONLY",
+    "package_section_count": 10,
+    "payload_sha256_excluding_hash": "c4d10185cfad8efe60ddf31d15c5cd9f5e292f71e8f21b95a50c0b0289552ece",
+    "risk_register_item_count": 11,
+    "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_REPORT_PACKAGE_DESIGN_CREATED"
+  },
+  "replacement_checks_all_true": true,
+  "report_package": {
+    "external_report_files_created": false,
+    "package_mode": "json_only_dry_run",
+    "section_count": 10,
+    "sections": {
+      "appendix": {
+        "future_requirements": [
+          "report package dry-run review",
+          "longer paper monitoring before any live discussion",
+          "true reconciliation design before account-level reconciliation",
+          "separate explicit approval for any future report export"
+        ],
+        "glossary": {
+          "diagnostic_promising": "research diagnostic classification that does not imply an edge claim",
+          "funding_carry": "spot-perp structure where short perp funding is the intended return source",
+          "paper_only": "JSON-only simulated reporting package without live permissions",
+          "same_base_quantity": "spot and perp legs use equal base asset quantity per symbol"
+        },
+        "no_live_no_edge_disclaimers": [
+          "no candidate generation",
+          "no edge claim",
+          "no runtime, live, or capital permission",
+          "no PDF, DOCX, HTML, or Markdown external report export"
+        ],
+        "payload_hashes": {
+          "multi_cycle_dry_run": "4c4a16750aa3c15bda0d497127217c38a0171ca798220bf16ed701c86dd7fa13",
+          "operational_feasibility": "5af80fc87f583f4f5f4ed4baaa5620d708eff1ade5aaa54969d4259e54d6604e",
+          "report_builder_dry_run": "d1314f8e9038c705e2c83bbb8551092ff259a93af5ee865178fbfde382ad26d2",
+          "report_builder_review": "5aca807f96e6f451fc723db5c4149a3ffb50c70776923f2508ca696d1827c5fc",
+          "report_package_design": "c4d10185cfad8efe60ddf31d15c5cd9f5e292f71e8f21b95a50c0b0289552ece",
+          "reporting_design": "ee0892db27885562b257294033992bff57bb387877d528638e6c709664bd7eb8",
+          "risk_capital": "9b158cf8517e47c750c39234ea1d7287619a969f567cc682e16edd103a080ccc",
+          "sizing_repair": "0f189c4b8999d7d9a1018cf988952e630d554ed898fc29a61510af93a906d822",
+          "strategy_closure": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8",
+          "strategy_evaluation": "94bfdeb3cbe2bfd79ea77ae86c96427790f87a78ff4377972d4b1476ad4ee52b"
+        },
+        "source_artifact_list": {
+          "multi_cycle_dry_run": "artifacts/paper_monitor_dry_runs/binance_spot_perp_funding_carry_multi_cycle_paper_dry_run_v1.json",
+          "operational_feasibility": "artifacts/operational_feasibility/binance_spot_perp_delta_neutral_funding_carry_operational_feasibility_v1.json",
+          "report_builder_dry_run": "artifacts/report_builder_dry_runs/binance_spot_perp_funding_carry_report_builder_dry_run_v1.json",
+          "report_builder_review": "artifacts/report_builder_reviews/binance_spot_perp_funding_carry_report_builder_dry_run_review_v1.json",
+          "report_package_design": "artifacts/report_package_designs/binance_spot_perp_funding_carry_report_package_design_v1.json",
+          "reporting_design": "artifacts/reporting_designs/binance_spot_perp_funding_carry_reporting_reconciliation_design_v1.json",
+          "risk_capital": "artifacts/risk_capital_diagnostics/binance_spot_perp_delta_neutral_funding_carry_risk_capital_feasibility_v1.json",
+          "sizing_repair": "artifacts/order_sizing_simulations/binance_spot_perp_funding_carry_order_sizing_repair_sim_v1.json",
+          "strategy_closure": "artifacts/strategy_closures/binance_spot_perp_delta_neutral_funding_carry_closure_v1.json",
+          "strategy_evaluation": "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json"
+        }
+      },
+      "evidence_chain_summary": [
+        {
+          "artifact": "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json",
+          "stage": "strategy diagnostic",
+          "summary": {
+            "closure_record_required_next": true,
+            "diagnostic_promising": true,
+            "result_class": "SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_DIAGNOSTIC_PROMISING_REQUIRES_CLOSURE_NO_CANDIDATE_NO_EDGE"
+          }
+        },
+        {
+          "artifact": "artifacts/risk_capital_diagnostics/binance_spot_perp_delta_neutral_funding_carry_risk_capital_feasibility_v1.json",
+          "stage": "risk/capital feasibility",
+          "summary": {
+            "classification": "FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_STRONG_DIAGNOSTIC_NO_LIVE_PERMISSION",
+            "classification_grants_candidate_or_edge_or_live_permission": false
+          }
+        },
+        {
+          "artifact": "artifacts/operational_feasibility/binance_spot_perp_delta_neutral_funding_carry_operational_feasibility_v1.json",
+          "stage": "operational feasibility",
+          "summary": {
+            "classification": "FUNDING_CARRY_OPERATIONAL_FEASIBILITY_INCOMPLETE_NEEDS_EXCHANGE_RULES_NO_LIVE_PERMISSION",
+            "classification_grants_live_or_capital_permission": false,
+            "reason": "Strategy-level and risk/capital diagnostics are promising, but operational feasibility remains incomplete without exchange filters, account-specific fees, margin/liquidation rules, and order sizing/execution simulation."
+          }
+        },
+        {
+          "artifact": "artifacts/order_sizing_simulations/binance_spot_perp_funding_carry_order_sizing_repair_sim_v1.json",
+          "stage": "sizing failure and repair",
+          "summary": {
+            "classification": "ORDER_SIZING_REPAIR_SIM_PASS_READY_FOR_PAPER_TRADING_DESIGN_NO_LIVE_PERMISSION",
+            "classification_grants_live_or_capital_permission": false,
+            "minimum_passing_capital_all3": "235",
+            "minimum_passing_capital_btc_eth_only": "2500",
+            "root_cause_repaired": true
+          }
+        },
+        {
+          "artifact": "artifacts/paper_monitor_dry_runs/binance_spot_perp_funding_carry_multi_cycle_paper_dry_run_v1.json",
+          "stage": "multi-cycle dry run",
+          "summary": {
+            "classification": "MULTI_CYCLE_PAPER_DRY_RUN_PARTIAL_RISK_FLAGS_NO_LIVE_PERMISSION",
+            "classification_grants_live_or_capital_permission": false
+          }
+        },
+        {
+          "artifact": "artifacts/reporting_designs/binance_spot_perp_funding_carry_reporting_reconciliation_design_v1.json",
+          "stage": "reporting/reconciliation design",
+          "summary": "REPORTING_RECONCILIATION_DESIGN_READY_FOR_REPORT_BUILDER_PREVIEW_NO_LIVE_PERMISSION"
+        },
+        {
+          "artifact": "artifacts/report_builder_dry_runs/binance_spot_perp_funding_carry_report_builder_dry_run_v1.json",
+          "stage": "report builder dry run",
+          "summary": "REPORT_BUILDER_DRY_RUN_PASS_READY_FOR_REPORT_REVIEW_NO_LIVE_PERMISSION"
+        },
+        {
+          "artifact": "artifacts/report_builder_reviews/binance_spot_perp_funding_carry_report_builder_dry_run_review_v1.json",
+          "stage": "report builder review",
+          "summary": "REPORT_BUILDER_DRY_RUN_REVIEW_PASS_READY_FOR_REPORT_PACKAGE_DESIGN_NO_LIVE_PERMISSION"
+        },
+        {
+          "artifact": "artifacts/report_package_designs/binance_spot_perp_funding_carry_report_package_design_v1.json",
+          "stage": "report package design",
+          "summary": "REPORT_PACKAGE_DESIGN_READY_FOR_PACKAGE_BUILDER_DRY_RUN_NO_LIVE_PERMISSION"
+        }
+      ],
+      "executive_summary": {
+        "candidate_generation_allowed": false,
+        "capital_permission_allowed": false,
+        "current_system_status": "paper_and_reporting_dry_run_only",
+        "diagnostic_status": "diagnostic_promising_not_live",
+        "edge_claim_allowed": false,
+        "live_trading_allowed": false,
+        "mechanism": "long Binance spot plus short Binance USD-M perpetual funding carry",
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "SOLUSDT"
+        ]
+      },
+      "historical_diagnostic_summary": {
+        "capital_permission_allowed": false,
+        "holdout_50pct_funding_haircut_2x_cost_net_bps": 84.476923,
+        "holdout_base_net_bps": 256.969856,
+        "holdout_monthly_positive_rate": 0.9,
+        "live_permission_allowed": false,
+        "risk_capital_classification": {
+          "classification": "FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_STRONG_DIAGNOSTIC_NO_LIVE_PERMISSION",
+          "classification_grants_candidate_or_edge_or_live_permission": false
+        },
+        "validation_50pct_funding_haircut_2x_cost_net_bps": 595.819785,
+        "validation_base_net_bps": 1268.112469,
+        "validation_monthly_positive_rate": 1.0
+      },
+      "institutional_review_checklist": [
+        {
+          "item": "evidence_artifacts_present",
+          "passed": true
+        },
+        {
+          "item": "paper_monitor_dry_run_reviewed",
+          "passed": true
+        },
+        {
+          "item": "report_builder_review_p0_issue_count_zero",
+          "passed": true
+        },
+        {
+          "item": "report_builder_review_p1_attention_count_zero",
+          "passed": true
+        },
+        {
+          "item": "source_hashes_present",
+          "passed": true
+        },
+        {
+          "item": "deterministic_json_required",
+          "passed": true
+        },
+        {
+          "item": "no_manual_edits_required",
+          "passed": true
+        },
+        {
+          "item": "no_live_permissions",
+          "passed": true
+        },
+        {
+          "item": "next_required_stage_before_live_discussion",
+          "passed": true,
+          "requirement": "longer paper monitoring and true reconciliation design"
+        }
+      ],
+      "operational_readiness_summary": {
+        "exchange_rules_discovered": true,
+        "minimum_passing_capital_from_repaired_sizing": "235",
+        "multi_cycle_dry_run_result": {
+          "classification": "MULTI_CYCLE_PAPER_DRY_RUN_PARTIAL_RISK_FLAGS_NO_LIVE_PERMISSION",
+          "classification_grants_live_or_capital_permission": false
+        },
+        "multi_cycle_minimum_passing_capital_by_cycle": {
+          "1": 235,
+          "2": 235,
+          "3": 235
+        },
+        "orders_placed": false,
+        "paper_dry_run_partial_risk_flags": true,
+        "sizing_initial_failure": "PRICE_SNAPSHOT_ORDER_SIZING_SIM_FAIL_NO_LIVE_PERMISSION",
+        "sizing_repair_pass": {
+          "classification": "ORDER_SIZING_REPAIR_SIM_PASS_READY_FOR_PAPER_TRADING_DESIGN_NO_LIVE_PERMISSION",
+          "classification_grants_live_or_capital_permission": false,
+          "minimum_passing_capital_all3": "235",
+          "minimum_passing_capital_btc_eth_only": "2500",
+          "root_cause_repaired": true
+        }
+      },
+      "paper_monitor_architecture": {
+        "private_api_allowed": false,
+        "public_snapshot_inputs": [
+          "public spot price snapshot",
+          "public futures price snapshot",
+          "public premiumIndex/funding snapshot",
+          "public exchangeInfo rules"
+        ],
+        "repaired_sizing": "common base quantity, Decimal arithmetic, exchange-filter aware",
+        "report_only_state": "CYCLE_REPORT / FINAL_REPORT_ONLY",
+        "risk_halt_state": "RISK_HALT",
+        "scheduler_daemon_runtime_allowed": false,
+        "state_machine": [
+          "DISABLED",
+          "CYCLE_START",
+          "SNAPSHOT_PUBLIC_MARKET_DATA",
+          "REFRESH_EXCHANGE_RULES",
+          "RUN_REPAIRED_SIZING",
+          "SIMULATE_ENTRY_DECISION",
+          "SIMULATE_POSITION_STATE",
+          "MONITOR_FUNDING",
+          "SIMULATE_REBALANCE_OR_EXIT",
+          "RISK_HALT",
+          "CYCLE_REPORT",
+          "FINAL_REPORT_ONLY"
+        ]
+      },
+      "reporting_reconciliation_package": {
+        "account_balance_checked": false,
+        "actual_fills_verified": false,
+        "real_funding_received_verified": false,
+        "reconciliation_mode": "simulated_public_data_only",
+        "report_count": 9,
+        "reports": [
+          "cycle report",
+          "funding reconciliation report",
+          "daily report",
+          "weekly report",
+          "monthly report",
+          "risk incident report",
+          "sizing stability report",
+          "simulated PnL attribution report",
+          "audit summary"
+        ]
+      },
+      "risk_register": [
+        {
+          "description": "Exchange custody and venue solvency are not modeled.",
+          "risk_id": "exchange_custody_risk",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "Delta-neutral spot does not remove isolated futures margin liquidation risk.",
+          "risk_id": "margin_liquidation_risk",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "Historical positive funding may not persist.",
+          "risk_id": "funding_regime_risk",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "Short perpetual leg can pay funding when funding is negative.",
+          "risk_id": "negative_funding_risk",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "Spot and futures legs can fail to execute simultaneously in real systems.",
+          "risk_id": "execution_leg_risk",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "Capital scenario pass/fail is non-monotonic due exchange filters and prices.",
+          "risk_id": "sizing_instability",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "Actual fees and slippage are not verified from account data.",
+          "risk_id": "fee_slippage_uncertainty",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "No balances, fills, or exchange statements are reconciled.",
+          "risk_id": "no_real_account_reconciliation",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "Actual fill prices and commissions are absent.",
+          "risk_id": "no_actual_fills_commissions",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "Public market data can be stale, missing, or unavailable.",
+          "risk_id": "api_outage_data_staleness",
+          "status": "must_remain_disclosed"
+        },
+        {
+          "description": "Regulatory, tax, and accounting treatment are outside scope.",
+          "risk_id": "regulatory_tax_accounting_not_modeled",
+          "status": "must_remain_disclosed"
+        }
+      ],
+      "strategy_mechanics": {
+        "capital_margin_caveats": [
+          "spot capital is locked",
+          "perpetual margin buffer is required",
+          "liquidation risk is not eliminated by spot hedge"
+        ],
+        "directional_prediction": false,
+        "funding_cashflow_source": "short perpetual leg receives positive funding and pays negative funding",
+        "leverage_assumption": "no leverage assumption beyond margin buffer scenario modeling",
+        "position_model": "long spot and short USD-M perpetual on the same symbol",
+        "sizing_model": "same base asset quantity for spot and perpetual legs",
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "SOLUSDT"
+        ]
+      }
+    }
+  },
+  "reporting_reconciliation_package": {
+    "account_balance_checked": false,
+    "actual_fills_verified": false,
+    "real_funding_received_verified": false,
+    "reconciliation_mode": "simulated_public_data_only",
+    "report_count": 9,
+    "reports": [
+      "cycle report",
+      "funding reconciliation report",
+      "daily report",
+      "weekly report",
+      "monthly report",
+      "risk incident report",
+      "sizing stability report",
+      "simulated PnL attribution report",
+      "audit summary"
+    ]
+  },
+  "risk_register": [
+    {
+      "description": "Exchange custody and venue solvency are not modeled.",
+      "risk_id": "exchange_custody_risk",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "Delta-neutral spot does not remove isolated futures margin liquidation risk.",
+      "risk_id": "margin_liquidation_risk",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "Historical positive funding may not persist.",
+      "risk_id": "funding_regime_risk",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "Short perpetual leg can pay funding when funding is negative.",
+      "risk_id": "negative_funding_risk",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "Spot and futures legs can fail to execute simultaneously in real systems.",
+      "risk_id": "execution_leg_risk",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "Capital scenario pass/fail is non-monotonic due exchange filters and prices.",
+      "risk_id": "sizing_instability",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "Actual fees and slippage are not verified from account data.",
+      "risk_id": "fee_slippage_uncertainty",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "No balances, fills, or exchange statements are reconciled.",
+      "risk_id": "no_real_account_reconciliation",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "Actual fill prices and commissions are absent.",
+      "risk_id": "no_actual_fills_commissions",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "Public market data can be stale, missing, or unavailable.",
+      "risk_id": "api_outage_data_staleness",
+      "status": "must_remain_disclosed"
+    },
+    {
+      "description": "Regulatory, tax, and accounting treatment are outside scope.",
+      "risk_id": "regulatory_tax_accounting_not_modeled",
+      "status": "must_remain_disclosed"
+    }
+  ],
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "daemon_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "next_step_must_not_be_live_or_capital": true,
+    "order_placement_allowed_now": false,
+    "private_api_allowed_now": false,
+    "report_package_builder_dry_run_created": true,
+    "report_package_exported_now": false,
+    "runtime_permission_allowed_now": false,
+    "scheduler_allowed_now": false
+  },
+  "source_artifacts": {
+    "multi_cycle_dry_run": {
+      "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_MULTI_CYCLE_PAPER_DRY_RUN",
+      "classification": {
+        "classification": "MULTI_CYCLE_PAPER_DRY_RUN_PARTIAL_RISK_FLAGS_NO_LIVE_PERMISSION",
+        "classification_grants_live_or_capital_permission": false
+      },
+      "expected_payload_sha256_excluding_hash": "4c4a16750aa3c15bda0d497127217c38a0171ca798220bf16ed701c86dd7fa13",
+      "name": "multi_cycle_dry_run",
+      "next_allowed_step": "PAPER_MONITOR_REPORTING_RECONCILIATION_DESIGN_ONLY",
+      "path": "artifacts/paper_monitor_dry_runs/binance_spot_perp_funding_carry_multi_cycle_paper_dry_run_v1.json",
+      "payload_sha256_excluding_hash": "4c4a16750aa3c15bda0d497127217c38a0171ca798220bf16ed701c86dd7fa13",
+      "status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_MULTI_CYCLE_PAPER_DRY_RUN_CREATED"
+    },
+    "operational_feasibility": {
+      "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_OPERATIONAL_FEASIBILITY_DIAGNOSTIC",
+      "classification": {
+        "classification": "FUNDING_CARRY_OPERATIONAL_FEASIBILITY_INCOMPLETE_NEEDS_EXCHANGE_RULES_NO_LIVE_PERMISSION",
+        "classification_grants_live_or_capital_permission": false,
+        "reason": "Strategy-level and risk/capital diagnostics are promising, but operational feasibility remains incomplete without exchange filters, account-specific fees, margin/liquidation rules, and order sizing/execution simulation."
+      },
+      "expected_payload_sha256_excluding_hash": "5af80fc87f583f4f5f4ed4baaa5620d708eff1ade5aaa54969d4259e54d6604e",
+      "name": "operational_feasibility",
+      "next_allowed_step": null,
+      "path": "artifacts/operational_feasibility/binance_spot_perp_delta_neutral_funding_carry_operational_feasibility_v1.json",
+      "payload_sha256_excluding_hash": "5af80fc87f583f4f5f4ed4baaa5620d708eff1ade5aaa54969d4259e54d6604e",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_OPERATIONAL_FEASIBILITY_CREATED"
+    },
+    "report_builder_dry_run": {
+      "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_REPORT_BUILDER_DRY_RUN",
+      "classification": "REPORT_BUILDER_DRY_RUN_PASS_READY_FOR_REPORT_REVIEW_NO_LIVE_PERMISSION",
+      "expected_payload_sha256_excluding_hash": "d1314f8e9038c705e2c83bbb8551092ff259a93af5ee865178fbfde382ad26d2",
+      "name": "report_builder_dry_run",
+      "next_allowed_step": "PAPER_MONITOR_REPORT_BUILDER_DRY_RUN_REVIEW_ONLY",
+      "path": "artifacts/report_builder_dry_runs/binance_spot_perp_funding_carry_report_builder_dry_run_v1.json",
+      "payload_sha256_excluding_hash": "d1314f8e9038c705e2c83bbb8551092ff259a93af5ee865178fbfde382ad26d2",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_REPORT_BUILDER_DRY_RUN_CREATED"
+    },
+    "report_builder_review": {
+      "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_REPORT_BUILDER_DRY_RUN_REVIEW",
+      "classification": "REPORT_BUILDER_DRY_RUN_REVIEW_PASS_READY_FOR_REPORT_PACKAGE_DESIGN_NO_LIVE_PERMISSION",
+      "expected_payload_sha256_excluding_hash": "5aca807f96e6f451fc723db5c4149a3ffb50c70776923f2508ca696d1827c5fc",
+      "name": "report_builder_review",
+      "next_allowed_step": "PAPER_MONITOR_REPORT_PACKAGE_DESIGN_ONLY",
+      "path": "artifacts/report_builder_reviews/binance_spot_perp_funding_carry_report_builder_dry_run_review_v1.json",
+      "payload_sha256_excluding_hash": "5aca807f96e6f451fc723db5c4149a3ffb50c70776923f2508ca696d1827c5fc",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_REPORT_BUILDER_DRY_RUN_REVIEW_CREATED"
+    },
+    "report_package_design": {
+      "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_REPORT_PACKAGE_DESIGN",
+      "classification": "REPORT_PACKAGE_DESIGN_READY_FOR_PACKAGE_BUILDER_DRY_RUN_NO_LIVE_PERMISSION",
+      "expected_payload_sha256_excluding_hash": "c4d10185cfad8efe60ddf31d15c5cd9f5e292f71e8f21b95a50c0b0289552ece",
+      "name": "report_package_design",
+      "next_allowed_step": "REPORT_PACKAGE_BUILDER_DRY_RUN_ONLY",
+      "path": "artifacts/report_package_designs/binance_spot_perp_funding_carry_report_package_design_v1.json",
+      "payload_sha256_excluding_hash": "c4d10185cfad8efe60ddf31d15c5cd9f5e292f71e8f21b95a50c0b0289552ece",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_REPORT_PACKAGE_DESIGN_CREATED"
+    },
+    "reporting_design": {
+      "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_REPORTING_RECONCILIATION_DESIGN",
+      "classification": "REPORTING_RECONCILIATION_DESIGN_READY_FOR_REPORT_BUILDER_PREVIEW_NO_LIVE_PERMISSION",
+      "expected_payload_sha256_excluding_hash": "ee0892db27885562b257294033992bff57bb387877d528638e6c709664bd7eb8",
+      "name": "reporting_design",
+      "next_allowed_step": "PAPER_MONITOR_REPORT_BUILDER_PREVIEW_ONLY",
+      "path": "artifacts/reporting_designs/binance_spot_perp_funding_carry_reporting_reconciliation_design_v1.json",
+      "payload_sha256_excluding_hash": "ee0892db27885562b257294033992bff57bb387877d528638e6c709664bd7eb8",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_REPORTING_RECONCILIATION_DESIGN_CREATED"
+    },
+    "risk_capital": {
+      "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_DIAGNOSTIC",
+      "classification": {
+        "classification": "FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_STRONG_DIAGNOSTIC_NO_LIVE_PERMISSION",
+        "classification_grants_candidate_or_edge_or_live_permission": false
+      },
+      "expected_payload_sha256_excluding_hash": "9b158cf8517e47c750c39234ea1d7287619a969f567cc682e16edd103a080ccc",
+      "name": "risk_capital",
+      "next_allowed_step": null,
+      "path": "artifacts/risk_capital_diagnostics/binance_spot_perp_delta_neutral_funding_carry_risk_capital_feasibility_v1.json",
+      "payload_sha256_excluding_hash": "9b158cf8517e47c750c39234ea1d7287619a969f567cc682e16edd103a080ccc",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_CREATED"
+    },
+    "sizing_repair": {
+      "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_ORDER_SIZING_REPAIR_SIMULATION",
+      "classification": {
+        "classification": "ORDER_SIZING_REPAIR_SIM_PASS_READY_FOR_PAPER_TRADING_DESIGN_NO_LIVE_PERMISSION",
+        "classification_grants_live_or_capital_permission": false,
+        "minimum_passing_capital_all3": "235",
+        "minimum_passing_capital_btc_eth_only": "2500",
+        "root_cause_repaired": true
+      },
+      "expected_payload_sha256_excluding_hash": "0f189c4b8999d7d9a1018cf988952e630d554ed898fc29a61510af93a906d822",
+      "name": "sizing_repair",
+      "next_allowed_step": null,
+      "path": "artifacts/order_sizing_simulations/binance_spot_perp_funding_carry_order_sizing_repair_sim_v1.json",
+      "payload_sha256_excluding_hash": "0f189c4b8999d7d9a1018cf988952e630d554ed898fc29a61510af93a906d822",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_ORDER_SIZING_REPAIR_SIM_CREATED"
+    },
+    "strategy_closure": {
+      "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_CLOSURE_RECORD",
+      "classification": null,
+      "expected_payload_sha256_excluding_hash": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8",
+      "name": "strategy_closure",
+      "next_allowed_step": null,
+      "path": "artifacts/strategy_closures/binance_spot_perp_delta_neutral_funding_carry_closure_v1.json",
+      "payload_sha256_excluding_hash": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_CLOSURE_CREATED"
+    },
+    "strategy_evaluation": {
+      "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EVALUATION",
+      "classification": {
+        "closure_record_required_next": true,
+        "diagnostic_promising": true,
+        "result_class": "SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_DIAGNOSTIC_PROMISING_REQUIRES_CLOSURE_NO_CANDIDATE_NO_EDGE"
+      },
+      "expected_payload_sha256_excluding_hash": "94bfdeb3cbe2bfd79ea77ae86c96427790f87a78ff4377972d4b1476ad4ee52b",
+      "name": "strategy_evaluation",
+      "next_allowed_step": null,
+      "path": "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json",
+      "payload_sha256_excluding_hash": "94bfdeb3cbe2bfd79ea77ae86c96427790f87a78ff4377972d4b1476ad4ee52b",
+      "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EVALUATED"
+    }
+  },
+  "source_checkpoint": {
+    "artifact_path": "artifacts/report_package_dry_runs/binance_spot_perp_funding_carry_report_package_builder_dry_run_v1.json",
+    "created_at_utc": "2026-05-25T13:42:33Z",
+    "current_head_expected": "193f0c34090e12662cc9d2872f5661cc350b74e7",
+    "tool_path": "tools/edge_factory_os_repo_only_binance_spot_perp_funding_carry_report_package_builder_dry_run_v1.py",
+    "tracked_python_count_before": 901
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_REPORT_PACKAGE_BUILDER_DRY_RUN_CREATED",
+  "strategy_mechanics": {
+    "capital_margin_caveats": [
+      "spot capital is locked",
+      "perpetual margin buffer is required",
+      "liquidation risk is not eliminated by spot hedge"
+    ],
+    "directional_prediction": false,
+    "funding_cashflow_source": "short perpetual leg receives positive funding and pays negative funding",
+    "leverage_assumption": "no leverage assumption beyond margin buffer scenario modeling",
+    "position_model": "long spot and short USD-M perpetual on the same symbol",
+    "sizing_model": "same base asset quantity for spot and perpetual legs",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "validation_checks": {
+    "all_10_package_sections_created": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "institutional_checklist_min_9_items": true,
+    "no_api_called": true,
+    "no_api_key_used": true,
+    "no_candidate_generation": true,
+    "no_daemon_created": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_live_or_capital_permission": true,
+    "no_network_used": true,
+    "no_order_endpoint_called": true,
+    "no_orders_placed": true,
+    "no_private_api": true,
+    "no_report_file_exported": true,
+    "no_runtime_enabled": true,
+    "no_scheduler_created": true,
+    "prior_design_next_allowed_step_verified": true,
+    "prior_report_package_design_loaded": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "risk_register_min_11_items": true
+  }
+}

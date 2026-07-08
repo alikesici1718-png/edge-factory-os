@@ -1,0 +1,339 @@
+{
+  "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_OPERATIONAL_FEASIBILITY_DIAGNOSTIC",
+  "capital_size_scenarios": {
+    "exact_exchange_filters_available": false,
+    "future_exchange_rule_discovery_required": true,
+    "minimum_capital_scenarios_evaluated": [
+      100,
+      250,
+      500,
+      1000,
+      2500,
+      5000
+    ],
+    "scenarios": [
+      {
+        "capital_size_usdt": 100,
+        "equal_weight_total_capital_per_symbol_usdt": 33.333333,
+        "estimated_perp_leg_notional_per_symbol_usdt": 16.666667,
+        "estimated_spot_leg_notional_per_symbol_usdt": 16.666667,
+        "exact_exchange_filters_available": false,
+        "exact_min_notional_step_size_tick_size_feasibility": "UNKNOWN_REQUIRES_PUBLIC_EXCHANGEINFO_DISCOVERY",
+        "rounding_feasibility_estimate_without_filters": "HIGH_ROUNDING_RISK_EXACT_FILTERS_REQUIRED",
+        "symbol_count": 3,
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "SOLUSDT"
+        ]
+      },
+      {
+        "capital_size_usdt": 250,
+        "equal_weight_total_capital_per_symbol_usdt": 83.333333,
+        "estimated_perp_leg_notional_per_symbol_usdt": 41.666667,
+        "estimated_spot_leg_notional_per_symbol_usdt": 41.666667,
+        "exact_exchange_filters_available": false,
+        "exact_min_notional_step_size_tick_size_feasibility": "UNKNOWN_REQUIRES_PUBLIC_EXCHANGEINFO_DISCOVERY",
+        "rounding_feasibility_estimate_without_filters": "MODERATE_ROUNDING_RISK_EXACT_FILTERS_REQUIRED",
+        "symbol_count": 3,
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "SOLUSDT"
+        ]
+      },
+      {
+        "capital_size_usdt": 500,
+        "equal_weight_total_capital_per_symbol_usdt": 166.666667,
+        "estimated_perp_leg_notional_per_symbol_usdt": 83.333333,
+        "estimated_spot_leg_notional_per_symbol_usdt": 83.333333,
+        "exact_exchange_filters_available": false,
+        "exact_min_notional_step_size_tick_size_feasibility": "UNKNOWN_REQUIRES_PUBLIC_EXCHANGEINFO_DISCOVERY",
+        "rounding_feasibility_estimate_without_filters": "MODERATE_ROUNDING_RISK_EXACT_FILTERS_REQUIRED",
+        "symbol_count": 3,
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "SOLUSDT"
+        ]
+      },
+      {
+        "capital_size_usdt": 1000,
+        "equal_weight_total_capital_per_symbol_usdt": 333.333333,
+        "estimated_perp_leg_notional_per_symbol_usdt": 166.666667,
+        "estimated_spot_leg_notional_per_symbol_usdt": 166.666667,
+        "exact_exchange_filters_available": false,
+        "exact_min_notional_step_size_tick_size_feasibility": "UNKNOWN_REQUIRES_PUBLIC_EXCHANGEINFO_DISCOVERY",
+        "rounding_feasibility_estimate_without_filters": "LOWER_ROUNDING_RISK_BUT_EXACT_FILTERS_REQUIRED",
+        "symbol_count": 3,
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "SOLUSDT"
+        ]
+      },
+      {
+        "capital_size_usdt": 2500,
+        "equal_weight_total_capital_per_symbol_usdt": 833.333333,
+        "estimated_perp_leg_notional_per_symbol_usdt": 416.666667,
+        "estimated_spot_leg_notional_per_symbol_usdt": 416.666667,
+        "exact_exchange_filters_available": false,
+        "exact_min_notional_step_size_tick_size_feasibility": "UNKNOWN_REQUIRES_PUBLIC_EXCHANGEINFO_DISCOVERY",
+        "rounding_feasibility_estimate_without_filters": "LOWER_ROUNDING_RISK_BUT_EXACT_FILTERS_REQUIRED",
+        "symbol_count": 3,
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "SOLUSDT"
+        ]
+      },
+      {
+        "capital_size_usdt": 5000,
+        "equal_weight_total_capital_per_symbol_usdt": 1666.666667,
+        "estimated_perp_leg_notional_per_symbol_usdt": 833.333333,
+        "estimated_spot_leg_notional_per_symbol_usdt": 833.333333,
+        "exact_exchange_filters_available": false,
+        "exact_min_notional_step_size_tick_size_feasibility": "UNKNOWN_REQUIRES_PUBLIC_EXCHANGEINFO_DISCOVERY",
+        "rounding_feasibility_estimate_without_filters": "LOWER_ROUNDING_RISK_BUT_EXACT_FILTERS_REQUIRED",
+        "symbol_count": 3,
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "SOLUSDT"
+        ]
+      }
+    ]
+  },
+  "feasibility_classification": {
+    "classification": "FUNDING_CARRY_OPERATIONAL_FEASIBILITY_INCOMPLETE_NEEDS_EXCHANGE_RULES_NO_LIVE_PERMISSION",
+    "classification_grants_live_or_capital_permission": false,
+    "reason": "Strategy-level and risk/capital diagnostics are promising, but operational feasibility remains incomplete without exchange filters, account-specific fees, margin/liquidation rules, and order sizing/execution simulation."
+  },
+  "fee_sensitivity_scenarios": {
+    "fee_scenarios_are_hypothetical": true,
+    "scenarios": {
+      "optimistic_institutional": {
+        "holdout_net_after_scenario_lifecycle_cost_bps": 280.969856,
+        "perp_entry_exit_cost_bps_total": 2.0,
+        "scenario_only_not_account_specific": true,
+        "spot_entry_exit_cost_bps_total": 4.0,
+        "total_lifecycle_cost_bps": 6.0,
+        "validation_net_after_scenario_lifecycle_cost_bps": 1292.112469
+      },
+      "realistic_low_vip": {
+        "holdout_net_after_scenario_lifecycle_cost_bps": 268.969856,
+        "perp_entry_exit_cost_bps_total": 6.0,
+        "scenario_only_not_account_specific": true,
+        "spot_entry_exit_cost_bps_total": 12.0,
+        "total_lifecycle_cost_bps": 18.0,
+        "validation_net_after_scenario_lifecycle_cost_bps": 1280.112469
+      },
+      "retail_conservative": {
+        "holdout_net_after_scenario_lifecycle_cost_bps": 256.969856,
+        "perp_entry_exit_cost_bps_total": 10.0,
+        "scenario_only_not_account_specific": true,
+        "spot_entry_exit_cost_bps_total": 20.0,
+        "total_lifecycle_cost_bps": 30.0,
+        "validation_net_after_scenario_lifecycle_cost_bps": 1268.112469
+      }
+    },
+    "uses_account_specific_fee_tier": false
+  },
+  "future_kill_switch_policy_draft": {
+    "live_permission_granted": false,
+    "policy_is_future_requirements_draft_only": true,
+    "required_kill_switches_before_any_live_or_capital_use": [
+      {
+        "required_parameter": "N must be specified in a future approved paper-trading/rules module",
+        "trigger": "funding turns negative for N consecutive events"
+      },
+      {
+        "required_parameter": "basis bound must be specified after exchange rule and liquidation model discovery",
+        "trigger": "mark/perp basis dislocation exceeds risk bound"
+      },
+      {
+        "required_parameter": "tracking residual bound must be specified and paper monitored",
+        "trigger": "spot/perp price tracking residual exceeds bound"
+      },
+      {
+        "required_parameter": "buffer must be derived from margin mode, leverage, and maintenance margin schedule",
+        "trigger": "margin ratio below buffer"
+      },
+      {
+        "required_parameter": "funding event freshness rule must be defined",
+        "trigger": "missing funding event"
+      },
+      {
+        "required_parameter": "exchange status and order-management failure behavior must be defined",
+        "trigger": "exchange maintenance or API outage"
+      },
+      {
+        "required_parameter": "public exchange status monitor must be active",
+        "trigger": "symbol status not trading"
+      }
+    ]
+  },
+  "future_paper_trading_requirements": [
+    {
+      "completed_now": false,
+      "reason": "Need min notional, lot size, step size, tick size, precision, status, and order constraints.",
+      "requirement": "public_exchange_info_rules_discovery"
+    },
+    {
+      "completed_now": false,
+      "reason": "Scenario fees are not account-specific and cannot establish live economics.",
+      "requirement": "exact_fee_tier_confirmation"
+    },
+    {
+      "completed_now": false,
+      "reason": "Need deterministic basket sizing under spot and USD-M futures filters.",
+      "requirement": "order_sizing_and_rounding_simulation"
+    },
+    {
+      "completed_now": false,
+      "reason": "Need margin mode, leverage, collateral, maintenance margin, and liquidation behavior.",
+      "requirement": "margin_and_liquidation_model"
+    },
+    {
+      "completed_now": false,
+      "reason": "Need non-capital observation of fills, balances, funding, residuals, and kill-switch behavior.",
+      "requirement": "small_notional_paper_trading_monitor"
+    },
+    {
+      "completed_now": false,
+      "reason": "No automatic real orders or runtime enablement may follow from this diagnostic.",
+      "requirement": "manual_approval_before_any_live_or_capital_use"
+    }
+  ],
+  "limitations": [
+    "This diagnostic reads stored JSON artifacts only and does not read raw spot, perp, or funding rows.",
+    "No public exchangeInfo/rules discovery is performed in this module.",
+    "Exact min-notional, step-size, tick-size, precision, symbol-status, and order-filter feasibility is unknown.",
+    "Fee scenarios are illustrative and not account-specific.",
+    "Margin, liquidation, order placement, fill risk, and live kill-switch behavior are not implemented.",
+    "No candidate, edge, family release, runtime, live, or capital permission is granted."
+  ],
+  "module": "tools/edge_factory_os_repo_only_binance_spot_perp_delta_neutral_funding_carry_operational_feasibility_v1.py",
+  "operational_risk_register": [
+    {
+      "note": "Operational transfer, collateral, and account segregation requirements are not represented in the historical diagnostic.",
+      "risk": "spot_and_perp_balances_may_be_separate",
+      "severity": "HIGH",
+      "status": "UNMODELED"
+    },
+    {
+      "note": "Perp short margin must be funded independently of the spot long, especially under isolated margin.",
+      "risk": "perp_margin_buffer_needed",
+      "severity": "HIGH",
+      "status": "UNMODELED"
+    },
+    {
+      "note": "If the perp margin account is underfunded, spot holdings do not automatically prevent liquidation.",
+      "risk": "delta_neutral_spot_does_not_eliminate_liquidation_risk",
+      "severity": "HIGH",
+      "status": "UNMODELED"
+    },
+    {
+      "note": "Validation negative funding share 0.054645; holdout negative funding share 0.208562.",
+      "risk": "negative_funding_periods_exist",
+      "severity": "MEDIUM",
+      "status": "OBSERVED_IN_STORED_ARTIFACT"
+    },
+    {
+      "note": "The diagnostic assumes exchange solvency, withdrawals, custody, and settlement remain functional.",
+      "risk": "exchange_and_custody_risk",
+      "severity": "HIGH",
+      "status": "UNMODELED"
+    },
+    {
+      "note": "Symbol status changes can break continuous hedging and require future public rules/status monitoring.",
+      "risk": "delisting_or_symbol_suspension",
+      "severity": "HIGH",
+      "status": "UNMODELED"
+    },
+    {
+      "note": "Spot-long/perp-short avoids spot borrow but requires capital locked in both spot and margin contexts.",
+      "risk": "borrow_not_needed_but_capital_locked",
+      "severity": "MEDIUM",
+      "status": "SCENARIO_MODELED_ONLY"
+    },
+    {
+      "note": "Funding haircut and negative funding stress remain necessary before any paper trading.",
+      "risk": "funding_rate_can_flip",
+      "severity": "MEDIUM",
+      "status": "OBSERVED_IN_STORED_ARTIFACT"
+    },
+    {
+      "note": "One leg can fill while the other fails or fills at a materially different price.",
+      "risk": "execution_leg_risk",
+      "severity": "HIGH",
+      "status": "UNMODELED"
+    }
+  ],
+  "payload_sha256_excluding_hash": "5af80fc87f583f4f5f4ed4baaa5620d708eff1ade5aaa54969d4259e54d6604e",
+  "prior_promising_result_preserved": {
+    "candidate_generation_allowed": false,
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "diagnostic_promising": true,
+    "edge_claim_allowed": false,
+    "prior_result_class": "SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_DIAGNOSTIC_PROMISING_REQUIRES_CLOSURE_NO_CANDIDATE_NO_EDGE",
+    "prior_risk_capital_classification": "FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_STRONG_DIAGNOSTIC_NO_LIVE_PERMISSION",
+    "route_closed": true,
+    "route_family": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_BASELINE",
+    "runtime_live_capital_allowed": false,
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "next_step_may_be_exchange_rule_discovery_only": true,
+    "next_step_must_not_be_live_or_capital": true,
+    "operational_feasibility_created": true,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "closure_artifact": "artifacts/strategy_closures/binance_spot_perp_delta_neutral_funding_carry_closure_v1.json",
+    "closure_payload_sha256_excluding_hash": "741508f0660eefca0812805a0cab006ace1e2ca0e720dade02665e440ef839c8",
+    "evaluator_artifact": "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json",
+    "evaluator_payload_sha256_excluding_hash": "94bfdeb3cbe2bfd79ea77ae86c96427790f87a78ff4377972d4b1476ad4ee52b",
+    "execution_artifact": "artifacts/strategy_executions/binance_spot_perp_delta_neutral_funding_carry_execution_v1.json",
+    "execution_payload_sha256_excluding_hash": "7855d599b8fa331cbbea2f380c23306889ae486369761d900d7aed36e7191378",
+    "risk_capital_artifact": "artifacts/risk_capital_diagnostics/binance_spot_perp_delta_neutral_funding_carry_risk_capital_feasibility_v1.json",
+    "risk_capital_payload_sha256_excluding_hash": "9b158cf8517e47c750c39234ea1d7287619a969f567cc682e16edd103a080ccc"
+  },
+  "source_checkpoint": {
+    "repo_clean_before_run": true,
+    "repo_head_at_run": "18b66b52648d79f3b3891fc3d7b1771f1ea6d6f0",
+    "tracked_python_count_at_start": 883
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_OPERATIONAL_FEASIBILITY_CREATED",
+  "validation_checks": {
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_key_used": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_orders_placed": true,
+    "no_private_api": true,
+    "no_raw_rows_read": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_rerun": true,
+    "prior_closure_artifact_loaded": true,
+    "prior_evaluator_artifact_loaded": true,
+    "prior_execution_artifact_loaded": true,
+    "prior_risk_capital_artifact_loaded": true,
+    "promising_result_preserved": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "risk_capital_classification_preserved": true
+  }
+}

@@ -1,0 +1,1312 @@
+{
+  "status": "PASS_REPO_ONLY_BINANCE_OI_TAKER_CROWDING_PROXY_EVENT_STUDY_CREATED",
+  "artifact_kind": "BINANCE_OI_TAKER_CROWDING_PROXY_EVENT_STUDY",
+  "module": "BINANCE_OI_TAKER_CROWDING_PROXY_EVENT_STUDY_V1",
+  "source_checkpoint": {
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "source_dataset_commit": "f419728037c3650a00b0491ccdc8e551cff21653",
+    "repo_head_before_tool_creation": "f419728037c3650a00b0491ccdc8e551cff21653",
+    "tracked_python_count_before_tool_creation": 1057,
+    "tracked_python_count_at_run": 1057,
+    "git_status_short_before_tool_creation": [],
+    "git_status_short_at_run_start": [
+      "?? tools/edge_factory_os_repo_only_binance_oi_taker_crowding_proxy_event_study_v1.py"
+    ],
+    "run_started_at_utc": "2026-05-27T23:42:19Z"
+  },
+  "source_artifacts": {
+    "binance_data_vision_um_metrics_dataset_builder": {
+      "path": "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json",
+      "status": "PASS_REPO_ONLY_BINANCE_DATA_VISION_UM_METRICS_DATASET_BUILDER_CREATED",
+      "result_classification": "BINANCE_DATA_VISION_UM_METRICS_DATASET_READY_FOR_PROXY_EVENT_STUDY",
+      "payload_sha256_excluding_hash": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc"
+    }
+  },
+  "input_dataset_summary": {
+    "requested_symbol_count": 10,
+    "built_symbol_count": 10,
+    "built_symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "DOGEUSDT",
+      "XRPUSDT",
+      "BNBUSDT",
+      "LINKUSDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "OPUSDT"
+    ],
+    "symbols_with_open_interest": 10,
+    "symbols_with_taker_ratio": 10,
+    "symbols_with_global_long_short": 10,
+    "symbols_with_top_account_ratio": 10,
+    "symbols_with_top_position_ratio": 10,
+    "symbols_with_long_short_ratio": 10,
+    "symbols_with_full_proxy_alignment": 10,
+    "timestamp_global_min": "2023-01-01T00:00:00Z",
+    "timestamp_global_max": "2025-12-31T23:55:00Z",
+    "total_normalized_rows": 3131587,
+    "coverage_by_year": {
+      "2023": 1027644,
+      "2024": 1052773,
+      "2025": 1051170
+    },
+    "metric_coverage_by_year": {
+      "2023": {
+        "openInterestHist": 1027644,
+        "takerlongshortRatio": 1027614,
+        "globalLongShortAccountRatio": 1027523,
+        "topLongShortAccountRatio": 1027434,
+        "topLongShortPositionRatio": 1027513
+      },
+      "2024": {
+        "openInterestHist": 1052773,
+        "takerlongshortRatio": 1052773,
+        "globalLongShortAccountRatio": 1052694,
+        "topLongShortAccountRatio": 1052693,
+        "topLongShortPositionRatio": 1052612
+      },
+      "2025": {
+        "openInterestHist": 1051170,
+        "takerlongshortRatio": 1051170,
+        "globalLongShortAccountRatio": 1050971,
+        "topLongShortAccountRatio": 1050626,
+        "topLongShortPositionRatio": 1050993
+      }
+    },
+    "limitations": [
+      "Dataset contains OI/taker/crowding proxy metrics, not true liquidation data.",
+      "Funding fields are unavailable in the sampled/discovered metrics archive and are not included.",
+      "Taker buy and sell volume components are unavailable in the combined metrics archive; only the ratio is normalized.",
+      "Some symbols begin after 2023-01-01, so early missing dates can reflect instrument listing history."
+    ]
+  },
+  "event_count": 99870,
+  "symbol_count": 10,
+  "timestamp_range": {
+    "dataset_timestamp_min": "2023-01-01T00:00:00Z",
+    "dataset_timestamp_max": "2025-12-31T23:55:00Z",
+    "event_timestamp_min": "2023-01-01T00:10:00Z",
+    "event_timestamp_max": "2025-12-31T22:30:00Z"
+  },
+  "proxy_event_definitions_tested": [
+    {
+      "event_id": "oi_expansion_taker_buy_global_crowding_high",
+      "description": "OI expansion with high taker buy/sell ratio and high global account long/short crowding.",
+      "thresholds": {
+        "oi_change_pct": "symbol p90",
+        "taker_buy_sell_ratio": "symbol p90",
+        "account_long_short_ratio": "symbol p90"
+      },
+      "non_tradable_research_label": true
+    },
+    {
+      "event_id": "oi_expansion_taker_sell_global_crowding_low",
+      "description": "OI expansion with low taker buy/sell ratio and low global account long/short crowding.",
+      "thresholds": {
+        "oi_change_pct": "symbol p90",
+        "taker_buy_sell_ratio": "symbol p10",
+        "account_long_short_ratio": "symbol p10"
+      },
+      "non_tradable_research_label": true
+    },
+    {
+      "event_id": "oi_expansion_top_account_crowding_high",
+      "description": "OI expansion with high top-trader account long/short crowding.",
+      "thresholds": {
+        "oi_change_pct": "symbol p90",
+        "top_account_long_short_ratio": "symbol p90"
+      },
+      "non_tradable_research_label": true
+    },
+    {
+      "event_id": "oi_expansion_top_position_crowding_high",
+      "description": "OI expansion with high top-trader position long/short crowding.",
+      "thresholds": {
+        "oi_change_pct": "symbol p90",
+        "top_position_long_short_ratio": "symbol p90"
+      },
+      "non_tradable_research_label": true
+    },
+    {
+      "event_id": "broad_proxy_alignment_extreme",
+      "description": "OI expansion with at least three same-side taker/account/top-account/top-position proxy extremes.",
+      "thresholds": {
+        "oi_change_pct": "symbol p75",
+        "proxy_extremes": "at least three of taker/global/top-account/top-position above p90 or below p10"
+      },
+      "non_tradable_research_label": true
+    }
+  ],
+  "descriptive_statistics": {
+    "events_by_definition": {
+      "oi_expansion_taker_buy_global_crowding_high": {
+        "event_id": "oi_expansion_taker_buy_global_crowding_high",
+        "event_count": 3907,
+        "symbol_count": 10,
+        "symbols": [
+          "APTUSDT",
+          "ARBUSDT",
+          "BNBUSDT",
+          "BTCUSDT",
+          "DOGEUSDT",
+          "ETHUSDT",
+          "LINKUSDT",
+          "OPUSDT",
+          "SOLUSDT",
+          "XRPUSDT"
+        ],
+        "timestamp_min": "2023-01-06T05:40:00Z",
+        "timestamp_max": "2025-12-31T18:10:00Z",
+        "counts_by_year": {
+          "2023": 891,
+          "2024": 2088,
+          "2025": 928
+        },
+        "counts_by_hour_utc": {
+          "00": 170,
+          "01": 160,
+          "02": 146,
+          "03": 165,
+          "04": 176,
+          "05": 182,
+          "06": 163,
+          "07": 193,
+          "08": 170,
+          "09": 177,
+          "10": 172,
+          "11": 197,
+          "12": 164,
+          "13": 133,
+          "14": 154,
+          "15": 146,
+          "16": 159,
+          "17": 164,
+          "18": 175,
+          "19": 155,
+          "20": 130,
+          "21": 129,
+          "22": 181,
+          "23": 146
+        },
+        "context_numeric": {
+          "oi_change_pct": {
+            "count": 3907,
+            "mean": 0.003222146029006973,
+            "min": 0.00094450554756,
+            "max": 0.0344470156163
+          },
+          "taker_buy_sell_ratio": {
+            "count": 3907,
+            "mean": 2.398060621946322,
+            "min": 1.591474,
+            "max": 15.7851844122
+          },
+          "account_long_short_ratio": {
+            "count": 3907,
+            "mean": 4.388570061933465,
+            "min": 2.2724493222345936,
+            "max": 9.41255881
+          },
+          "top_account_long_short_ratio": {
+            "count": 3906,
+            "mean": 4.355400595642782,
+            "min": 1.9346048109965637,
+            "max": 9.63847719
+          },
+          "top_position_long_short_ratio": {
+            "count": 3906,
+            "mean": 2.491105477397472,
+            "min": 0.8563218,
+            "max": 6.7332
+          }
+        }
+      },
+      "oi_expansion_taker_sell_global_crowding_low": {
+        "event_id": "oi_expansion_taker_sell_global_crowding_low",
+        "event_count": 2216,
+        "symbol_count": 10,
+        "symbols": [
+          "APTUSDT",
+          "ARBUSDT",
+          "BNBUSDT",
+          "BTCUSDT",
+          "DOGEUSDT",
+          "ETHUSDT",
+          "LINKUSDT",
+          "OPUSDT",
+          "SOLUSDT",
+          "XRPUSDT"
+        ],
+        "timestamp_min": "2023-01-01T03:35:00Z",
+        "timestamp_max": "2025-12-31T17:05:00Z",
+        "counts_by_year": {
+          "2023": 801,
+          "2024": 645,
+          "2025": 770
+        },
+        "counts_by_hour_utc": {
+          "00": 89,
+          "01": 95,
+          "02": 104,
+          "03": 91,
+          "04": 98,
+          "05": 112,
+          "06": 110,
+          "07": 108,
+          "08": 111,
+          "09": 107,
+          "10": 122,
+          "11": 105,
+          "12": 91,
+          "13": 105,
+          "14": 81,
+          "15": 64,
+          "16": 88,
+          "17": 76,
+          "18": 70,
+          "19": 73,
+          "20": 81,
+          "21": 86,
+          "22": 81,
+          "23": 68
+        },
+        "context_numeric": {
+          "oi_change_pct": {
+            "count": 2216,
+            "mean": 0.0030321138313795385,
+            "min": 0.000946767941986,
+            "max": 0.025229041195
+          },
+          "taker_buy_sell_ratio": {
+            "count": 2216,
+            "mean": 0.4241425919425543,
+            "min": 0.0,
+            "max": 0.60122589
+          },
+          "account_long_short_ratio": {
+            "count": 2216,
+            "mean": 1.2358597667389677,
+            "min": 0.41715442,
+            "max": 2.2330967
+          },
+          "top_account_long_short_ratio": {
+            "count": 2216,
+            "mean": 1.295492669868602,
+            "min": 0.53883254,
+            "max": 3.06715328
+          },
+          "top_position_long_short_ratio": {
+            "count": 2216,
+            "mean": 1.4740998658435045,
+            "min": 0.8044097709,
+            "max": 4.322786
+          }
+        }
+      },
+      "oi_expansion_top_account_crowding_high": {
+        "event_id": "oi_expansion_top_account_crowding_high",
+        "event_count": 26548,
+        "symbol_count": 10,
+        "symbols": [
+          "APTUSDT",
+          "ARBUSDT",
+          "BNBUSDT",
+          "BTCUSDT",
+          "DOGEUSDT",
+          "ETHUSDT",
+          "LINKUSDT",
+          "OPUSDT",
+          "SOLUSDT",
+          "XRPUSDT"
+        ],
+        "timestamp_min": "2023-01-06T04:40:00Z",
+        "timestamp_max": "2025-12-31T20:35:00Z",
+        "counts_by_year": {
+          "2023": 4281,
+          "2024": 13591,
+          "2025": 8676
+        },
+        "counts_by_hour_utc": {
+          "00": 1089,
+          "01": 1082,
+          "02": 1019,
+          "03": 969,
+          "04": 974,
+          "05": 927,
+          "06": 1043,
+          "07": 1057,
+          "08": 1131,
+          "09": 1101,
+          "10": 1034,
+          "11": 984,
+          "12": 1136,
+          "13": 1286,
+          "14": 1548,
+          "15": 1565,
+          "16": 1523,
+          "17": 1426,
+          "18": 1153,
+          "19": 960,
+          "20": 933,
+          "21": 753,
+          "22": 886,
+          "23": 969
+        },
+        "context_numeric": {
+          "oi_change_pct": {
+            "count": 26548,
+            "mean": 0.002997086976709655,
+            "min": 0.000941667413357,
+            "max": 0.0673095980356
+          },
+          "taker_buy_sell_ratio": {
+            "count": 26548,
+            "mean": 1.198022424649177,
+            "min": 0.0868176039,
+            "max": 15.7851844122
+          },
+          "account_long_short_ratio": {
+            "count": 26545,
+            "mean": 4.1503430341265295,
+            "min": 1.75317248,
+            "max": 10.15773354
+          },
+          "top_account_long_short_ratio": {
+            "count": 26548,
+            "mean": 4.385655759545483,
+            "min": 2.26571419,
+            "max": 9.93184455
+          },
+          "top_position_long_short_ratio": {
+            "count": 26541,
+            "mean": 2.5885278467124926,
+            "min": 0.662321,
+            "max": 7.134342
+          }
+        }
+      },
+      "oi_expansion_top_position_crowding_high": {
+        "event_id": "oi_expansion_top_position_crowding_high",
+        "event_count": 25501,
+        "symbol_count": 10,
+        "symbols": [
+          "APTUSDT",
+          "ARBUSDT",
+          "BNBUSDT",
+          "BTCUSDT",
+          "DOGEUSDT",
+          "ETHUSDT",
+          "LINKUSDT",
+          "OPUSDT",
+          "SOLUSDT",
+          "XRPUSDT"
+        ],
+        "timestamp_min": "2023-11-20T14:35:00Z",
+        "timestamp_max": "2025-12-31T18:10:00Z",
+        "counts_by_year": {
+          "2023": 833,
+          "2024": 16225,
+          "2025": 8443
+        },
+        "counts_by_hour_utc": {
+          "00": 1217,
+          "01": 1092,
+          "02": 998,
+          "03": 1004,
+          "04": 1040,
+          "05": 981,
+          "06": 1043,
+          "07": 1073,
+          "08": 1238,
+          "09": 1115,
+          "10": 921,
+          "11": 949,
+          "12": 1076,
+          "13": 1176,
+          "14": 1439,
+          "15": 1429,
+          "16": 1412,
+          "17": 1131,
+          "18": 934,
+          "19": 851,
+          "20": 907,
+          "21": 707,
+          "22": 846,
+          "23": 922
+        },
+        "context_numeric": {
+          "oi_change_pct": {
+            "count": 25501,
+            "mean": 0.003034340414171154,
+            "min": 0.000941667413357,
+            "max": 0.101367365966
+          },
+          "taker_buy_sell_ratio": {
+            "count": 25501,
+            "mean": 1.2430942139825911,
+            "min": 0.080831,
+            "max": 9.254418
+          },
+          "account_long_short_ratio": {
+            "count": 25498,
+            "mean": 3.3001988949917997,
+            "min": 0.54132774,
+            "max": 10.15773354
+          },
+          "top_account_long_short_ratio": {
+            "count": 25472,
+            "mean": 3.5755543064937716,
+            "min": 0.69112443,
+            "max": 9.93184455
+          },
+          "top_position_long_short_ratio": {
+            "count": 25501,
+            "mean": 3.2143341758248773,
+            "min": 1.618516,
+            "max": 7.134342
+          }
+        }
+      },
+      "broad_proxy_alignment_extreme": {
+        "event_id": "broad_proxy_alignment_extreme",
+        "event_count": 41698,
+        "symbol_count": 10,
+        "symbols": [
+          "APTUSDT",
+          "ARBUSDT",
+          "BNBUSDT",
+          "BTCUSDT",
+          "DOGEUSDT",
+          "ETHUSDT",
+          "LINKUSDT",
+          "OPUSDT",
+          "SOLUSDT",
+          "XRPUSDT"
+        ],
+        "timestamp_min": "2023-01-01T00:10:00Z",
+        "timestamp_max": "2025-12-31T22:30:00Z",
+        "counts_by_year": {
+          "2023": 15593,
+          "2024": 17625,
+          "2025": 8480
+        },
+        "counts_by_hour_utc": {
+          "00": 1736,
+          "01": 1781,
+          "02": 1708,
+          "03": 1684,
+          "04": 1771,
+          "05": 1781,
+          "06": 1830,
+          "07": 1831,
+          "08": 1822,
+          "09": 1954,
+          "10": 1838,
+          "11": 1824,
+          "12": 1724,
+          "13": 1714,
+          "14": 1913,
+          "15": 1916,
+          "16": 1903,
+          "17": 1767,
+          "18": 1596,
+          "19": 1538,
+          "20": 1476,
+          "21": 1302,
+          "22": 1630,
+          "23": 1659
+        },
+        "context_numeric": {
+          "oi_change_pct": {
+            "count": 41698,
+            "mean": 0.002041609191548413,
+            "min": 0.000330166249987,
+            "max": 2.96272714953
+          },
+          "taker_buy_sell_ratio": {
+            "count": 41698,
+            "mean": 1.2633208045304842,
+            "min": 0.0,
+            "max": 15.7851844122
+          },
+          "account_long_short_ratio": {
+            "count": 41698,
+            "mean": 3.305063830500715,
+            "min": 0.41715442,
+            "max": 10.15773354
+          },
+          "top_account_long_short_ratio": {
+            "count": 41698,
+            "mean": 3.470211038852922,
+            "min": 0.5335639705729113,
+            "max": 9.93184455
+          },
+          "top_position_long_short_ratio": {
+            "count": 41697,
+            "mean": 2.4961453725147646,
+            "min": 0.77069416,
+            "max": 7.250779
+          }
+        }
+      }
+    },
+    "event_definition_count": 5,
+    "total_event_rows_counting_overlaps": 99870,
+    "symbols_with_any_event": [
+      "APTUSDT",
+      "ARBUSDT",
+      "BNBUSDT",
+      "BTCUSDT",
+      "DOGEUSDT",
+      "ETHUSDT",
+      "LINKUSDT",
+      "OPUSDT",
+      "SOLUSDT",
+      "XRPUSDT"
+    ],
+    "per_symbol_thresholds": {
+      "APTUSDT": {
+        "oi_change_pct": {
+          "p10": -0.001448225714634,
+          "p25": -0.0005308060612115,
+          "p75": 0.0005219994567285001,
+          "p90": 0.0014780186395539998,
+          "observed_count": 315443,
+          "missing_count": 53
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.52884911984,
+          "p25": 0.7183485000000001,
+          "p75": 1.3177794999999999,
+          "p90": 1.7812395120000004,
+          "observed_count": 315495,
+          "missing_count": 1
+        },
+        "account_long_short_ratio": {
+          "p10": 1.4790630020000002,
+          "p25": 1.98501499,
+          "p75": 3.1009865,
+          "p90": 3.644025448,
+          "observed_count": 315457,
+          "missing_count": 39
+        },
+        "top_account_long_short_ratio": {
+          "p10": 1.500427721305842,
+          "p25": 1.948727045,
+          "p75": 2.932302731346968,
+          "p90": 3.4662425580000003,
+          "observed_count": 315415,
+          "missing_count": 81
+        },
+        "top_position_long_short_ratio": {
+          "p10": 0.90250856,
+          "p25": 1.0231355464,
+          "p75": 1.9945490000000001,
+          "p90": 2.48145936,
+          "observed_count": 315451,
+          "missing_count": 45
+        }
+      },
+      "ARBUSDT": {
+        "oi_change_pct": {
+          "p10": -0.001448961652748,
+          "p25": -0.0005430798828815,
+          "p75": 0.0005768956043462499,
+          "p90": 0.0014742567797830012,
+          "observed_count": 291942,
+          "missing_count": 54
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.508407728,
+          "p25": 0.699752,
+          "p75": 1.3390882005,
+          "p90": 1.8336800791199999,
+          "observed_count": 291993,
+          "missing_count": 3
+        },
+        "account_long_short_ratio": {
+          "p10": 2.0522846,
+          "p25": 2.6598413026582133,
+          "p75": 3.9124654750000003,
+          "p90": 4.6536740299999995,
+          "observed_count": 291956,
+          "missing_count": 40
+        },
+        "top_account_long_short_ratio": {
+          "p10": 2.05809595,
+          "p25": 2.6475260503553297,
+          "p75": 3.7327546,
+          "p90": 4.861162588000002,
+          "observed_count": 291915,
+          "missing_count": 81
+        },
+        "top_position_long_short_ratio": {
+          "p10": 1.0827206839999999,
+          "p25": 1.4193769225000001,
+          "p75": 2.5921420975,
+          "p90": 3.0853485000000003,
+          "observed_count": 291952,
+          "missing_count": 44
+        }
+      },
+      "BNBUSDT": {
+        "oi_change_pct": {
+          "p10": -0.0009489982984259999,
+          "p25": -0.0003425103181835,
+          "p75": 0.00033006636270875,
+          "p90": 0.0009416662022809002,
+          "observed_count": 315442,
+          "missing_count": 72
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.509764199,
+          "p25": 0.70017975,
+          "p75": 1.351401973,
+          "p90": 1.8567973000000004,
+          "observed_count": 315512,
+          "missing_count": 2
+        },
+        "account_long_short_ratio": {
+          "p10": 1.3162271341546212,
+          "p25": 1.6310826775,
+          "p75": 2.8354876925,
+          "p90": 3.2692231429999996,
+          "observed_count": 315474,
+          "missing_count": 40
+        },
+        "top_account_long_short_ratio": {
+          "p10": 1.126104271,
+          "p25": 1.38655918,
+          "p75": 2.4803125861827193,
+          "p90": 2.820323736,
+          "observed_count": 315430,
+          "missing_count": 84
+        },
+        "top_position_long_short_ratio": {
+          "p10": 0.8994200243,
+          "p25": 0.961585021,
+          "p75": 1.368448,
+          "p90": 1.618430915,
+          "observed_count": 315466,
+          "missing_count": 48
+        }
+      },
+      "BTCUSDT": {
+        "oi_change_pct": {
+          "p10": -0.00109194373675,
+          "p25": -0.00033428369027900003,
+          "p75": 0.0004524345231015,
+          "p90": 0.0011645890227059996,
+          "observed_count": 315138,
+          "missing_count": 376
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.5151257,
+          "p25": 0.6952928286750001,
+          "p75": 1.3825512325,
+          "p90": 1.8724327040000002,
+          "observed_count": 315514,
+          "missing_count": 0
+        },
+        "account_long_short_ratio": {
+          "p10": 0.7352889650000001,
+          "p25": 0.9452665153280511,
+          "p75": 1.846390553811141,
+          "p90": 2.27216193,
+          "observed_count": 315476,
+          "missing_count": 38
+        },
+        "top_account_long_short_ratio": {
+          "p10": 0.810284457494967,
+          "p25": 1.0097127134234856,
+          "p75": 1.84911686,
+          "p90": 2.2656661660000004,
+          "observed_count": 315432,
+          "missing_count": 82
+        },
+        "top_position_long_short_ratio": {
+          "p10": 1.11405155805,
+          "p25": 1.2064834799,
+          "p75": 1.7072304999999999,
+          "p90": 2.0059405,
+          "observed_count": 315466,
+          "missing_count": 48
+        }
+      },
+      "DOGEUSDT": {
+        "oi_change_pct": {
+          "p10": -0.0015094974241500001,
+          "p25": -0.0005552221317005001,
+          "p75": 0.00055413831957825,
+          "p90": 0.0014717807748549998,
+          "observed_count": 315406,
+          "missing_count": 108
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.5510134679500001,
+          "p25": 0.730496,
+          "p75": 1.28290575,
+          "p90": 1.7037338000000002,
+          "observed_count": 315512,
+          "missing_count": 2
+        },
+        "account_long_short_ratio": {
+          "p10": 2.233744292,
+          "p25": 2.61835567,
+          "p75": 3.82212544,
+          "p90": 4.626355022,
+          "observed_count": 315473,
+          "missing_count": 41
+        },
+        "top_account_long_short_ratio": {
+          "p10": 2.27439772096883,
+          "p25": 2.69270252,
+          "p75": 3.95345419,
+          "p90": 4.625929594000002,
+          "observed_count": 315429,
+          "missing_count": 85
+        },
+        "top_position_long_short_ratio": {
+          "p10": 1.162276586,
+          "p25": 1.64901731975,
+          "p75": 3.196941245,
+          "p90": 4.1572885,
+          "observed_count": 315466,
+          "missing_count": 48
+        }
+      },
+      "ETHUSDT": {
+        "oi_change_pct": {
+          "p10": -0.0012448806983600001,
+          "p25": -0.00039241040781,
+          "p75": 0.0004991484543429999,
+          "p90": 0.0012759370007650005,
+          "observed_count": 315422,
+          "missing_count": 92
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.5433138,
+          "p25": 0.7166090674750001,
+          "p75": 1.3447925,
+          "p90": 1.7775134803200001,
+          "observed_count": 315514,
+          "missing_count": 0
+        },
+        "account_long_short_ratio": {
+          "p10": 1.1592997698753038,
+          "p25": 1.5495418022381142,
+          "p75": 2.8421743800000003,
+          "p90": 3.6882110540000004,
+          "observed_count": 315474,
+          "missing_count": 40
+        },
+        "top_account_long_short_ratio": {
+          "p10": 1.2159861738244928,
+          "p25": 1.6359951224999998,
+          "p75": 3.2695326725000005,
+          "p90": 4.275061943,
+          "observed_count": 315428,
+          "missing_count": 86
+        },
+        "top_position_long_short_ratio": {
+          "p10": 1.1521558851,
+          "p25": 1.313788948725,
+          "p75": 2.8084930000000004,
+          "p90": 3.293184,
+          "observed_count": 315466,
+          "missing_count": 48
+        }
+      },
+      "LINKUSDT": {
+        "oi_change_pct": {
+          "p10": -0.0015254764144829996,
+          "p25": -0.0006058267420715,
+          "p75": 0.0006067544490355,
+          "p90": 0.001506307526218,
+          "observed_count": 315414,
+          "missing_count": 100
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.562121783,
+          "p25": 0.7404530710499999,
+          "p75": 1.2923464999999998,
+          "p90": 1.6923191930200001,
+          "observed_count": 315504,
+          "missing_count": 10
+        },
+        "account_long_short_ratio": {
+          "p10": 1.4289482366950785,
+          "p25": 1.9250063125,
+          "p75": 2.7264111525,
+          "p90": 3.178212823,
+          "observed_count": 315474,
+          "missing_count": 40
+        },
+        "top_account_long_short_ratio": {
+          "p10": 1.36967073,
+          "p25": 1.91293489,
+          "p75": 2.942624095,
+          "p90": 3.44167056,
+          "observed_count": 315431,
+          "missing_count": 83
+        },
+        "top_position_long_short_ratio": {
+          "p10": 1.1861106669099999,
+          "p25": 1.4004775,
+          "p75": 2.133189495,
+          "p90": 2.9070546,
+          "observed_count": 315468,
+          "missing_count": 46
+        }
+      },
+      "OPUSDT": {
+        "oi_change_pct": {
+          "p10": -0.0016763672675139999,
+          "p25": -0.0006501017741252501,
+          "p75": 0.00065848545940325,
+          "p90": 0.0017071830244030002,
+          "observed_count": 315464,
+          "missing_count": 50
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.5478422000000001,
+          "p25": 0.728421349125,
+          "p75": 1.3084562849999999,
+          "p90": 1.7354815808600004,
+          "observed_count": 315510,
+          "missing_count": 4
+        },
+        "account_long_short_ratio": {
+          "p10": 1.3291175830919935,
+          "p25": 1.835404085,
+          "p75": 2.704708985,
+          "p90": 3.454315582,
+          "observed_count": 315475,
+          "missing_count": 39
+        },
+        "top_account_long_short_ratio": {
+          "p10": 1.3294901357929798,
+          "p25": 1.8102738600000001,
+          "p75": 2.79187655,
+          "p90": 3.78239203,
+          "observed_count": 315431,
+          "missing_count": 83
+        },
+        "top_position_long_short_ratio": {
+          "p10": 1.0374709715600001,
+          "p25": 1.278764175,
+          "p75": 2.3279383924999997,
+          "p90": 2.9236073,
+          "observed_count": 315468,
+          "missing_count": 46
+        }
+      },
+      "SOLUSDT": {
+        "oi_change_pct": {
+          "p10": -0.001545002280327,
+          "p25": -0.00054409778588725,
+          "p75": 0.000623853748752,
+          "p90": 0.0015645432262719997,
+          "observed_count": 315418,
+          "missing_count": 79
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.6016076,
+          "p25": 0.761771275,
+          "p75": 1.257383827175,
+          "p90": 1.5902855000000002,
+          "observed_count": 315494,
+          "missing_count": 3
+        },
+        "account_long_short_ratio": {
+          "p10": 1.283409015,
+          "p25": 1.7301701987797777,
+          "p75": 3.2390989075,
+          "p90": 4.00460152,
+          "observed_count": 315456,
+          "missing_count": 41
+        },
+        "top_account_long_short_ratio": {
+          "p10": 1.3596924280000002,
+          "p25": 1.8043212,
+          "p75": 3.27251701,
+          "p90": 4.227302736,
+          "observed_count": 315413,
+          "missing_count": 84
+        },
+        "top_position_long_short_ratio": {
+          "p10": 1.05001210066,
+          "p25": 1.32074899,
+          "p75": 2.257327,
+          "p90": 2.8755038,
+          "observed_count": 315449,
+          "missing_count": 48
+        }
+      },
+      "XRPUSDT": {
+        "oi_change_pct": {
+          "p10": -0.0014105781646599998,
+          "p25": -0.000498404481204,
+          "p75": 0.0005650278303839999,
+          "p90": 0.0014110766846850004,
+          "observed_count": 315434,
+          "missing_count": 80
+        },
+        "taker_buy_sell_ratio": {
+          "p10": 0.570669934,
+          "p25": 0.741542,
+          "p75": 1.2622090157,
+          "p90": 1.64181694056,
+          "observed_count": 315509,
+          "missing_count": 5
+        },
+        "account_long_short_ratio": {
+          "p10": 1.9558146991761438,
+          "p25": 2.4398641527110905,
+          "p75": 3.57358877,
+          "p90": 4.643738929999998,
+          "observed_count": 315473,
+          "missing_count": 41
+        },
+        "top_account_long_short_ratio": {
+          "p10": 1.9207264607592107,
+          "p25": 2.41672535,
+          "p75": 3.49228828,
+          "p90": 4.2760276500000005,
+          "observed_count": 315429,
+          "missing_count": 85
+        },
+        "top_position_long_short_ratio": {
+          "p10": 1.0097291295500002,
+          "p25": 1.21115825,
+          "p75": 2.1643547499999998,
+          "p90": 2.8562649999999996,
+          "observed_count": 315466,
+          "missing_count": 48
+        }
+      }
+    }
+  },
+  "alignment_quality": {
+    "normalized_files_loaded": 10,
+    "rows_scanned": 3131587,
+    "symbols_with_any_event": 10,
+    "event_definitions_with_events": 5,
+    "event_definitions_tested": 5,
+    "timestamp_range_matches_dataset": true
+  },
+  "missingness": {
+    "per_symbol_missing_by_field": {
+      "APTUSDT": {
+        "oi_change_pct": 53,
+        "taker_buy_sell_ratio": 1,
+        "account_long_short_ratio": 39,
+        "top_account_long_short_ratio": 81,
+        "top_position_long_short_ratio": 45
+      },
+      "ARBUSDT": {
+        "oi_change_pct": 54,
+        "taker_buy_sell_ratio": 3,
+        "account_long_short_ratio": 40,
+        "top_account_long_short_ratio": 81,
+        "top_position_long_short_ratio": 44
+      },
+      "BNBUSDT": {
+        "oi_change_pct": 72,
+        "taker_buy_sell_ratio": 2,
+        "account_long_short_ratio": 40,
+        "top_account_long_short_ratio": 84,
+        "top_position_long_short_ratio": 48
+      },
+      "BTCUSDT": {
+        "oi_change_pct": 376,
+        "taker_buy_sell_ratio": 0,
+        "account_long_short_ratio": 38,
+        "top_account_long_short_ratio": 82,
+        "top_position_long_short_ratio": 48
+      },
+      "DOGEUSDT": {
+        "oi_change_pct": 108,
+        "taker_buy_sell_ratio": 2,
+        "account_long_short_ratio": 41,
+        "top_account_long_short_ratio": 85,
+        "top_position_long_short_ratio": 48
+      },
+      "ETHUSDT": {
+        "oi_change_pct": 92,
+        "taker_buy_sell_ratio": 0,
+        "account_long_short_ratio": 40,
+        "top_account_long_short_ratio": 86,
+        "top_position_long_short_ratio": 48
+      },
+      "LINKUSDT": {
+        "oi_change_pct": 100,
+        "taker_buy_sell_ratio": 10,
+        "account_long_short_ratio": 40,
+        "top_account_long_short_ratio": 83,
+        "top_position_long_short_ratio": 46
+      },
+      "OPUSDT": {
+        "oi_change_pct": 50,
+        "taker_buy_sell_ratio": 4,
+        "account_long_short_ratio": 39,
+        "top_account_long_short_ratio": 83,
+        "top_position_long_short_ratio": 46
+      },
+      "SOLUSDT": {
+        "oi_change_pct": 79,
+        "taker_buy_sell_ratio": 3,
+        "account_long_short_ratio": 41,
+        "top_account_long_short_ratio": 84,
+        "top_position_long_short_ratio": 48
+      },
+      "XRPUSDT": {
+        "oi_change_pct": 80,
+        "taker_buy_sell_ratio": 5,
+        "account_long_short_ratio": 41,
+        "top_account_long_short_ratio": 85,
+        "top_position_long_short_ratio": 48
+      }
+    },
+    "total_missing_by_field": {
+      "oi_change_pct": 1064,
+      "taker_buy_sell_ratio": 30,
+      "account_long_short_ratio": 399,
+      "top_account_long_short_ratio": 834,
+      "top_position_long_short_ratio": 469
+    }
+  },
+  "regime_context_summaries": {
+    "by_year": {
+      "oi_expansion_taker_buy_global_crowding_high": {
+        "2023": 891,
+        "2024": 2088,
+        "2025": 928
+      },
+      "oi_expansion_taker_sell_global_crowding_low": {
+        "2023": 801,
+        "2024": 645,
+        "2025": 770
+      },
+      "oi_expansion_top_account_crowding_high": {
+        "2023": 4281,
+        "2024": 13591,
+        "2025": 8676
+      },
+      "oi_expansion_top_position_crowding_high": {
+        "2023": 833,
+        "2024": 16225,
+        "2025": 8443
+      },
+      "broad_proxy_alignment_extreme": {
+        "2023": 15593,
+        "2024": 17625,
+        "2025": 8480
+      }
+    },
+    "by_hour_utc": {
+      "oi_expansion_taker_buy_global_crowding_high": {
+        "00": 170,
+        "01": 160,
+        "02": 146,
+        "03": 165,
+        "04": 176,
+        "05": 182,
+        "06": 163,
+        "07": 193,
+        "08": 170,
+        "09": 177,
+        "10": 172,
+        "11": 197,
+        "12": 164,
+        "13": 133,
+        "14": 154,
+        "15": 146,
+        "16": 159,
+        "17": 164,
+        "18": 175,
+        "19": 155,
+        "20": 130,
+        "21": 129,
+        "22": 181,
+        "23": 146
+      },
+      "oi_expansion_taker_sell_global_crowding_low": {
+        "00": 89,
+        "01": 95,
+        "02": 104,
+        "03": 91,
+        "04": 98,
+        "05": 112,
+        "06": 110,
+        "07": 108,
+        "08": 111,
+        "09": 107,
+        "10": 122,
+        "11": 105,
+        "12": 91,
+        "13": 105,
+        "14": 81,
+        "15": 64,
+        "16": 88,
+        "17": 76,
+        "18": 70,
+        "19": 73,
+        "20": 81,
+        "21": 86,
+        "22": 81,
+        "23": 68
+      },
+      "oi_expansion_top_account_crowding_high": {
+        "00": 1089,
+        "01": 1082,
+        "02": 1019,
+        "03": 969,
+        "04": 974,
+        "05": 927,
+        "06": 1043,
+        "07": 1057,
+        "08": 1131,
+        "09": 1101,
+        "10": 1034,
+        "11": 984,
+        "12": 1136,
+        "13": 1286,
+        "14": 1548,
+        "15": 1565,
+        "16": 1523,
+        "17": 1426,
+        "18": 1153,
+        "19": 960,
+        "20": 933,
+        "21": 753,
+        "22": 886,
+        "23": 969
+      },
+      "oi_expansion_top_position_crowding_high": {
+        "00": 1217,
+        "01": 1092,
+        "02": 998,
+        "03": 1004,
+        "04": 1040,
+        "05": 981,
+        "06": 1043,
+        "07": 1073,
+        "08": 1238,
+        "09": 1115,
+        "10": 921,
+        "11": 949,
+        "12": 1076,
+        "13": 1176,
+        "14": 1439,
+        "15": 1429,
+        "16": 1412,
+        "17": 1131,
+        "18": 934,
+        "19": 851,
+        "20": 907,
+        "21": 707,
+        "22": 846,
+        "23": 922
+      },
+      "broad_proxy_alignment_extreme": {
+        "00": 1736,
+        "01": 1781,
+        "02": 1708,
+        "03": 1684,
+        "04": 1771,
+        "05": 1781,
+        "06": 1830,
+        "07": 1831,
+        "08": 1822,
+        "09": 1954,
+        "10": 1838,
+        "11": 1824,
+        "12": 1724,
+        "13": 1714,
+        "14": 1913,
+        "15": 1916,
+        "16": 1903,
+        "17": 1767,
+        "18": 1596,
+        "19": 1538,
+        "20": 1476,
+        "21": 1302,
+        "22": 1630,
+        "23": 1659
+      }
+    }
+  },
+  "forward_return_diagnostic": {
+    "forward_return_impact_computed": false,
+    "reason": "normalized Binance Data Vision UM metrics dataset has no public price/return fields",
+    "required_dependency_for_future": "public price dataset aligned by symbol and timestamp",
+    "diagnostic_label_status": "skipped_missing_dependency"
+  },
+  "validation_limits": [
+    "This is a descriptive proxy event study only.",
+    "Events are non-tradable research labels derived from OI, taker ratio, and crowding ratios.",
+    "No public price fields are present in the normalized metrics dataset, so forward-return diagnostics were skipped.",
+    "No strategy, signal, backtest, PnL, trade simulation, optimization, candidate generation, or edge claim was performed.",
+    "Previously failed strategy routes were not reused."
+  ],
+  "deeper_proxy_validation_contract_recommended": true,
+  "result_classification": "BINANCE_OI_TAKER_CROWDING_PROXY_EVENT_STUDY_READY_FOR_DEEPER_PROXY_VALIDATION",
+  "next_allowed_step": "BINANCE_OI_TAKER_CROWDING_PROXY_VALIDATION_CONTRACT_V1",
+  "safety_permissions": {
+    "read_only_research_event_study_created": true,
+    "deeper_proxy_validation_contract_allowed_next": true,
+    "strategy_execution_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "backtest_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "trade_simulation_allowed_now": false,
+    "optimization_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false
+  },
+  "forbidden_route_reuse": {
+    "not_reused": true,
+    "forbidden_routes": [
+      "funding crowding reversal",
+      "taker-buy exhaustion",
+      "taker-flow momentum continuation",
+      "funding carry",
+      "funding volume surge"
+    ]
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "dataset_builder_artifact_loaded": true,
+    "dataset_builder_artifact_hash_verified": true,
+    "normalized_dataset_loaded": true,
+    "read_only_research_event_study": true,
+    "descriptive_statistics_only": true,
+    "return_impact_skipped_missing_price_dependency": true,
+    "no_private_api_used": true,
+    "no_account_api_used": true,
+    "no_order_endpoint_used": true,
+    "no_api_key_used": true,
+    "no_strategy_execution": true,
+    "no_signal_generation": true,
+    "no_backtest_run": true,
+    "no_pnl_computation": true,
+    "no_trade_simulation": true,
+    "no_optimization": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "no_failed_strategy_route_reuse": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_tracked_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "ce40de1164eac6c9fde1d7c52b59493767f52194b5d818438818ab8b9e08b780"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_name": "plugin_config_schema_v1",
+  "required_fields": [
+    "plugin_key",
+    "plugin_type",
+    "feature_families",
+    "negative_controls",
+    "null_models",
+    "forbidden_inputs",
+    "required_guards",
+    "output_tables"
+  ],
+  "notes": "Research logic should move from large one-off modules into plugin config where possible."
+}

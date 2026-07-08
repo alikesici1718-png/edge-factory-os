@@ -1,0 +1,745 @@
+{
+  "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_ORDER_SIZING_FAILURE_ANALYSIS",
+  "drop_sol_diagnostic_only": {
+    "dropping_sol_would_make_btc_eth_pass": false,
+    "note": "This checks stored BTC and ETH symbol pass flags only. It does not change the route universe, does not recompute a two-symbol allocation, and grants no parameter or symbol change permission.",
+    "scenario_results": {
+      "100": {
+        "btc_eth_pass_without_sol_using_stored_three_symbol_notional": false,
+        "diagnostic_only_no_universe_change_permission": true
+      },
+      "1000": {
+        "btc_eth_pass_without_sol_using_stored_three_symbol_notional": false,
+        "diagnostic_only_no_universe_change_permission": true
+      },
+      "250": {
+        "btc_eth_pass_without_sol_using_stored_three_symbol_notional": false,
+        "diagnostic_only_no_universe_change_permission": true
+      },
+      "2500": {
+        "btc_eth_pass_without_sol_using_stored_three_symbol_notional": false,
+        "diagnostic_only_no_universe_change_permission": true
+      },
+      "500": {
+        "btc_eth_pass_without_sol_using_stored_three_symbol_notional": false,
+        "diagnostic_only_no_universe_change_permission": true
+      },
+      "5000": {
+        "btc_eth_pass_without_sol_using_stored_three_symbol_notional": false,
+        "diagnostic_only_no_universe_change_permission": true
+      }
+    }
+  },
+  "failing_symbols_by_scenario": {
+    "100": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "1000": [
+      "BTCUSDT"
+    ],
+    "250": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "2500": [
+      "BTCUSDT"
+    ],
+    "500": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "5000": [
+      "BTCUSDT"
+    ]
+  },
+  "failure_root_cause": {
+    "explanation": "The exchange rules were present and used. The failing behavior comes from sizing both legs to the same notional and rounding each leg down independently. A repair simulation should test leg-aligned quantity selection under the same exchange rules without placing orders.",
+    "failure_counts": {
+      "leg_notional_mismatch_exceeds_25_bps": 12,
+      "min_notional_failures": 1,
+      "min_qty_failures": 1,
+      "symbol_specific_step_size_granularity_mismatch": 12
+    },
+    "primary_root_cause": "independent_spot_and_futures_round_down_with_coarse_futures_lot_size_created_leg_notional_mismatch",
+    "secondary_root_causes": [
+      "BTCUSDT futures 0.001 quantity step creates a large notional increment at the stored BTC futures price",
+      "100 USDT scenario also fails BTCUSDT futures minQty and minNotional after rounding to zero",
+      "ETHUSDT and SOLUSDT pass minQty/minNotional but still fail the 25 bps mismatch threshold in stored scenarios"
+    ],
+    "sizing_algorithm_issue_or_exchange_rule_issue": "SIZING_ALGORITHM_ISSUE_UNDER_VALID_EXCHANGE_RULES"
+  },
+  "increasing_capital_assessment": {
+    "basis": "stored_price_rule_scan_1_usdt_increment",
+    "capital_pass_fail_is_monotonic": false,
+    "estimated_minimum_capital_usdt": "235",
+    "increasing_capital_would_eventually_pass": true,
+    "note": "A passing capital point exists under stored prices/rules, but independent step-size rounding creates non-monotonic pass/fail windows. Increasing capital alone is not a robust repair."
+  },
+  "limitations": [
+    "Read-only analysis of stored JSON artifacts only.",
+    "No new prices are fetched and no API calls are made.",
+    "Minimum capital estimate scans stored prices/rules and is diagnostic only; it may change with prices or filters.",
+    "Dropping SOL is diagnostic only and grants no symbol universe change permission.",
+    "No orders, runtime, live trading, capital allocation, candidate generation, or edge claim are permitted."
+  ],
+  "min_capital_estimate_if_available": {
+    "all_three_symbols": {
+      "available": true,
+      "estimate_method": "stored_price_rule_scan_1_usdt_increment",
+      "estimated_minimum_capital_usdt": "235",
+      "max_scan_capital_usdt": "1000000",
+      "notional_per_symbol_usdt": "78.33333333333333333333333333333333333333",
+      "symbol_mismatch_bps_at_estimate": {
+        "BTCUSDT": 3.9868085106382978,
+        "ETHUSDT": 22.031872340425533,
+        "SOLUSDT": 16.78468085106383
+      },
+      "symbols": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "SOLUSDT"
+      ]
+    },
+    "btc_eth_only_diagnostic": {
+      "available": true,
+      "estimate_method": "stored_price_rule_scan_1_usdt_increment",
+      "estimated_minimum_capital_usdt": "466",
+      "max_scan_capital_usdt": "1000000",
+      "notional_per_symbol_usdt": "233",
+      "symbol_mismatch_bps_at_estimate": {
+        "BTCUSDT": 4.021030042918455,
+        "ETHUSDT": 5.0042918454935625
+      },
+      "symbols": [
+        "BTCUSDT",
+        "ETHUSDT"
+      ]
+    },
+    "uses_stored_prices_and_rules_only": true
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_spot_perp_funding_carry_order_sizing_failure_analysis_v1.py",
+  "next_allowed_step": "ORDER_SIZING_ALGORITHM_REPAIR_SIMULATION_ONLY",
+  "payload_sha256_excluding_hash": "08b25b02675e327d5e9f76f1a8e081b5599b7f9cfa8c83868d7a7745df3e7b13",
+  "prior_sizing_result_preserved": {
+    "classification": "PRICE_SNAPSHOT_ORDER_SIZING_SIM_FAIL_NO_LIVE_PERMISSION",
+    "minimum_capital_scenario_that_passes_all_symbols": null,
+    "prices_snapshot_time_utc": "2026-05-25T09:47:00Z",
+    "scenario_pass_fail_summary": {
+      "100": false,
+      "1000": false,
+      "250": false,
+      "2500": false,
+      "500": false,
+      "5000": false
+    },
+    "status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_PRICE_SNAPSHOT_ORDER_SIZING_SIM_CREATED"
+  },
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "next_step_may_be_order_sizing_algorithm_repair_simulation_only": true,
+    "next_step_must_not_be_live_or_capital": true,
+    "order_sizing_failure_analysis_created": true,
+    "runtime_permission_allowed_now": false
+  },
+  "scenario_failure_analysis": [
+    {
+      "capital_usdt": 100,
+      "failing_symbols": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "SOLUSDT"
+      ],
+      "max_leg_mismatch_bps": 9775.63818,
+      "notional_per_symbol": "33.33333333333333333333333333333333333333",
+      "scenario_pass": false,
+      "symbols": [
+        {
+          "exact_failing_reasons": [
+            "futures_min_qty_failed",
+            "futures_min_notional_failed",
+            "leg_notional_mismatch_exceeds_25_bps",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "77.5532",
+          "futures_notional_rounded": "0",
+          "futures_price": "77553.2",
+          "futures_quantity_raw": "0.0004298124814106101789911097586345029390577",
+          "futures_quantity_rounded": "0",
+          "futures_rule_pass": false,
+          "futures_to_spot_notional_increment_ratio": "99.95974707811863797929558804517865246932",
+          "leg_mismatch_bps": 9775.63818,
+          "min_notional_failed": true,
+          "min_qty_failed": true,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.7758443",
+          "spot_notional_rounded": "32.5854606",
+          "spot_price": "77584.43",
+          "spot_quantity_raw": "0.000429639469328231622418742179756084221194",
+          "spot_quantity_rounded": "0.00042",
+          "spot_rule_pass": true,
+          "symbol": "BTCUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "33.33333333333333333333333333333333333333"
+        },
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "2.11697",
+          "futures_notional_rounded": "31.75455",
+          "futures_price": "2116.97",
+          "futures_quantity_raw": "0.01574577501491912182663586793073748486437",
+          "futures_quantity_rounded": "0.015",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.99499534945208519237215714602720452496",
+          "leg_mismatch_bps": 449.5563,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.211803",
+          "spot_notional_rounded": "33.253071",
+          "spot_price": "2118.03",
+          "spot_quantity_raw": "0.01573789480476354599950583010313042465561",
+          "spot_quantity_rounded": "0.0157",
+          "spot_rule_pass": true,
+          "symbol": "ETHUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "33.33333333333333333333333333333333333333"
+        },
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "0.8593",
+          "futures_notional_rounded": "32.6534",
+          "futures_price": "85.93",
+          "futures_quantity_raw": "0.3879126420730051592381395709686178672563",
+          "futures_quantity_rounded": "0.38",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.994184694114910444289369620842056292161",
+          "leg_mismatch_bps": 186.258,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.08598",
+          "spot_notional_rounded": "33.27426",
+          "spot_price": "85.98",
+          "spot_quantity_raw": "0.3876870590059703807086919438629138559355",
+          "spot_quantity_rounded": "0.387",
+          "spot_rule_pass": true,
+          "symbol": "SOLUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "33.33333333333333333333333333333333333333"
+        }
+      ]
+    },
+    {
+      "capital_usdt": 250,
+      "failing_symbols": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "SOLUSDT"
+      ],
+      "max_leg_mismatch_bps": 655.456812,
+      "notional_per_symbol": "83.33333333333333333333333333333333333333",
+      "scenario_pass": false,
+      "symbols": [
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "77.5532",
+          "futures_notional_rounded": "77.5532",
+          "futures_price": "77553.2",
+          "futures_quantity_raw": "0.001074531203526525447477774396586257347644",
+          "futures_quantity_rounded": "0.001",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "99.95974707811863797929558804517865246932",
+          "leg_mismatch_bps": 655.456812,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.7758443",
+          "spot_notional_rounded": "83.0153401",
+          "spot_price": "77584.43",
+          "spot_quantity_raw": "0.001074098673320579056046855449390210552985",
+          "spot_quantity_rounded": "0.00107",
+          "spot_rule_pass": true,
+          "symbol": "BTCUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "83.33333333333333333333333333333333333333"
+        },
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "2.11697",
+          "futures_notional_rounded": "82.56183",
+          "futures_price": "2116.97",
+          "futures_quantity_raw": "0.03936443753729780456658966982684371216093",
+          "futures_quantity_rounded": "0.039",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.99499534945208519237215714602720452496",
+          "leg_mismatch_bps": 81.20988,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.211803",
+          "spot_notional_rounded": "83.238579",
+          "spot_price": "2118.03",
+          "spot_quantity_raw": "0.03934473701190886499876457525782606163904",
+          "spot_quantity_rounded": "0.0393",
+          "spot_rule_pass": true,
+          "symbol": "ETHUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "83.33333333333333333333333333333333333333"
+        },
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "0.8593",
+          "futures_notional_rounded": "82.4928",
+          "futures_price": "85.93",
+          "futures_quantity_raw": "0.9697816051825128980953489274215446681407",
+          "futures_quantity_rounded": "0.96",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.994184694114910444289369620842056292161",
+          "leg_mismatch_bps": 98.6184,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.08598",
+          "spot_notional_rounded": "83.31462",
+          "spot_price": "85.98",
+          "spot_quantity_raw": "0.9692176475149259517717298596572846398387",
+          "spot_quantity_rounded": "0.969",
+          "spot_rule_pass": true,
+          "symbol": "SOLUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "83.33333333333333333333333333333333333333"
+        }
+      ]
+    },
+    {
+      "capital_usdt": 500,
+      "failing_symbols": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "SOLUSDT"
+      ],
+      "max_leg_mismatch_bps": 655.456812,
+      "notional_per_symbol": "166.6666666666666666666666666666666666667",
+      "scenario_pass": false,
+      "symbols": [
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "77.5532",
+          "futures_notional_rounded": "155.1064",
+          "futures_price": "77553.2",
+          "futures_quantity_raw": "0.002149062407053050894955548793172514695289",
+          "futures_quantity_rounded": "0.002",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "99.95974707811863797929558804517865246932",
+          "leg_mismatch_bps": 655.456812,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.7758443",
+          "spot_notional_rounded": "166.0306802",
+          "spot_price": "77584.43",
+          "spot_quantity_raw": "0.002148197346641158112093710898780421105971",
+          "spot_quantity_rounded": "0.00214",
+          "spot_rule_pass": true,
+          "symbol": "BTCUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "166.6666666666666666666666666666666666667"
+        },
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "2.11697",
+          "futures_notional_rounded": "165.12366",
+          "futures_price": "2116.97",
+          "futures_quantity_raw": "0.07872887507459560913317933965368742432188",
+          "futures_quantity_rounded": "0.078",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.99499534945208519237215714602720452496",
+          "leg_mismatch_bps": 81.20988,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.211803",
+          "spot_notional_rounded": "166.477158",
+          "spot_price": "2118.03",
+          "spot_quantity_raw": "0.07868947402381772999752915051565212327809",
+          "spot_quantity_rounded": "0.0786",
+          "spot_rule_pass": true,
+          "symbol": "ETHUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "166.6666666666666666666666666666666666667"
+        },
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "0.8593",
+          "futures_notional_rounded": "165.8449",
+          "futures_price": "85.93",
+          "futures_quantity_raw": "1.939563210365025796190697854843089336282",
+          "futures_quantity_rounded": "1.93",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.994184694114910444289369620842056292161",
+          "leg_mismatch_bps": 47.0604,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.08598",
+          "spot_notional_rounded": "166.62924",
+          "spot_price": "85.98",
+          "spot_quantity_raw": "1.938435295029851903543459719314569279678",
+          "spot_quantity_rounded": "1.938",
+          "spot_rule_pass": true,
+          "symbol": "SOLUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "166.6666666666666666666666666666666666667"
+        }
+      ]
+    },
+    {
+      "capital_usdt": 1000,
+      "failing_symbols": [
+        "BTCUSDT"
+      ],
+      "max_leg_mismatch_bps": 678.732141,
+      "notional_per_symbol": "333.3333333333333333333333333333333333333",
+      "scenario_pass": false,
+      "symbols": [
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "77.5532",
+          "futures_notional_rounded": "310.2128",
+          "futures_price": "77553.2",
+          "futures_quantity_raw": "0.004298124814106101789911097586345029390577",
+          "futures_quantity_rounded": "0.004",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "99.95974707811863797929558804517865246932",
+          "leg_mismatch_bps": 678.732141,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.7758443",
+          "spot_notional_rounded": "332.8372047",
+          "spot_price": "77584.43",
+          "spot_quantity_raw": "0.00429639469328231622418742179756084221194",
+          "spot_quantity_rounded": "0.00429",
+          "spot_rule_pass": true,
+          "symbol": "BTCUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "333.3333333333333333333333333333333333333"
+        },
+        {
+          "exact_failing_reasons": [],
+          "futures_notional_increment_usdt": "2.11697",
+          "futures_notional_rounded": "332.36429",
+          "futures_price": "2116.97",
+          "futures_quantity_raw": "0.1574577501491912182663586793073748486437",
+          "futures_quantity_rounded": "0.157",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.99499534945208519237215714602720452496",
+          "leg_mismatch_bps": 24.05487,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": false,
+          "scenario_symbol_pass": true,
+          "spot_notional_increment_usdt": "0.211803",
+          "spot_notional_rounded": "333.166119",
+          "spot_price": "2118.03",
+          "spot_quantity_raw": "0.1573789480476354599950583010313042465561",
+          "spot_quantity_rounded": "0.1573",
+          "spot_rule_pass": true,
+          "symbol": "ETHUSDT",
+          "symbol_specific_step_size_caused_mismatch": false,
+          "target_notional": "333.3333333333333333333333333333333333333"
+        },
+        {
+          "exact_failing_reasons": [],
+          "futures_notional_increment_usdt": "0.8593",
+          "futures_notional_rounded": "332.5491",
+          "futures_price": "85.93",
+          "futures_quantity_raw": "3.879126420730051592381395709686178672563",
+          "futures_quantity_rounded": "3.87",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.994184694114910444289369620842056292161",
+          "leg_mismatch_bps": 21.2814,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": false,
+          "scenario_symbol_pass": true,
+          "spot_notional_increment_usdt": "0.08598",
+          "spot_notional_rounded": "333.25848",
+          "spot_price": "85.98",
+          "spot_quantity_raw": "3.876870590059703807086919438629138559355",
+          "spot_quantity_rounded": "3.876",
+          "spot_rule_pass": true,
+          "symbol": "SOLUSDT",
+          "symbol_specific_step_size_caused_mismatch": false,
+          "target_notional": "333.3333333333333333333333333333333333333"
+        }
+      ]
+    },
+    {
+      "capital_usdt": 2500,
+      "failing_symbols": [
+        "BTCUSDT"
+      ],
+      "max_leg_mismatch_bps": 692.6973384,
+      "notional_per_symbol": "833.3333333333333333333333333333333333333",
+      "scenario_pass": false,
+      "symbols": [
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "77.5532",
+          "futures_notional_rounded": "775.532",
+          "futures_price": "77553.2",
+          "futures_quantity_raw": "0.01074531203526525447477774396586257347644",
+          "futures_quantity_rounded": "0.01",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "99.95974707811863797929558804517865246932",
+          "leg_mismatch_bps": 692.6973384,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.7758443",
+          "spot_notional_rounded": "833.2567782",
+          "spot_price": "77584.43",
+          "spot_quantity_raw": "0.01074098673320579056046855449390210552985",
+          "spot_quantity_rounded": "0.01074",
+          "spot_rule_pass": true,
+          "symbol": "BTCUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "833.3333333333333333333333333333333333333"
+        },
+        {
+          "exact_failing_reasons": [],
+          "futures_notional_increment_usdt": "2.11697",
+          "futures_notional_rounded": "831.96921",
+          "futures_price": "2116.97",
+          "futures_quantity_raw": "0.3936443753729780456658966982684371216093",
+          "futures_quantity_rounded": "0.393",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.99499534945208519237215714602720452496",
+          "leg_mismatch_bps": 15.165504,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": false,
+          "scenario_symbol_pass": true,
+          "spot_notional_increment_usdt": "0.211803",
+          "spot_notional_rounded": "833.233002",
+          "spot_price": "2118.03",
+          "spot_quantity_raw": "0.3934473701190886499876457525782606163904",
+          "spot_quantity_rounded": "0.3934",
+          "spot_rule_pass": true,
+          "symbol": "ETHUSDT",
+          "symbol_specific_step_size_caused_mismatch": false,
+          "target_notional": "833.3333333333333333333333333333333333333"
+        },
+        {
+          "exact_failing_reasons": [],
+          "futures_notional_increment_usdt": "0.8593",
+          "futures_notional_rounded": "832.6617",
+          "futures_price": "85.93",
+          "futures_quantity_raw": "9.697816051825128980953489274215446681407",
+          "futures_quantity_rounded": "9.69",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.994184694114910444289369620842056292161",
+          "leg_mismatch_bps": 7.87752,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": false,
+          "scenario_symbol_pass": true,
+          "spot_notional_increment_usdt": "0.08598",
+          "spot_notional_rounded": "833.31816",
+          "spot_price": "85.98",
+          "spot_quantity_raw": "9.692176475149259517717298596572846398387",
+          "spot_quantity_rounded": "9.692",
+          "spot_rule_pass": true,
+          "symbol": "SOLUSDT",
+          "symbol_specific_step_size_caused_mismatch": false,
+          "target_notional": "833.3333333333333333333333333333333333333"
+        }
+      ]
+    },
+    {
+      "capital_usdt": 5000,
+      "failing_symbols": [
+        "BTCUSDT"
+      ],
+      "max_leg_mismatch_bps": 227.3781384,
+      "notional_per_symbol": "1666.666666666666666666666666666666666667",
+      "scenario_pass": false,
+      "symbols": [
+        {
+          "exact_failing_reasons": [
+            "leg_notional_mismatch_exceeds_25_bps",
+            "rounding_caused_mismatch_after_rules_passed",
+            "symbol_specific_step_size_granularity_mismatch"
+          ],
+          "futures_notional_increment_usdt": "77.5532",
+          "futures_notional_rounded": "1628.6172",
+          "futures_price": "77553.2",
+          "futures_quantity_raw": "0.02149062407053050894955548793172514695289",
+          "futures_quantity_rounded": "0.021",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "99.95974707811863797929558804517865246932",
+          "leg_mismatch_bps": 227.3781384,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": true,
+          "scenario_symbol_pass": false,
+          "spot_notional_increment_usdt": "0.7758443",
+          "spot_notional_rounded": "1666.5135564",
+          "spot_price": "77584.43",
+          "spot_quantity_raw": "0.02148197346641158112093710898780421105971",
+          "spot_quantity_rounded": "0.02148",
+          "spot_rule_pass": true,
+          "symbol": "BTCUSDT",
+          "symbol_specific_step_size_caused_mismatch": true,
+          "target_notional": "1666.666666666666666666666666666666666667"
+        },
+        {
+          "exact_failing_reasons": [],
+          "futures_notional_increment_usdt": "2.11697",
+          "futures_notional_rounded": "1666.05539",
+          "futures_price": "2116.97",
+          "futures_quantity_raw": "0.7872887507459560913317933965368742432188",
+          "futures_quantity_rounded": "0.787",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.99499534945208519237215714602720452496",
+          "leg_mismatch_bps": 2.463684,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": false,
+          "scenario_symbol_pass": true,
+          "spot_notional_increment_usdt": "0.211803",
+          "spot_notional_rounded": "1666.466004",
+          "spot_price": "2118.03",
+          "spot_quantity_raw": "0.7868947402381772999752915051565212327809",
+          "spot_quantity_rounded": "0.7868",
+          "spot_rule_pass": true,
+          "symbol": "ETHUSDT",
+          "symbol_specific_step_size_caused_mismatch": false,
+          "target_notional": "1666.666666666666666666666666666666666667"
+        },
+        {
+          "exact_failing_reasons": [],
+          "futures_notional_increment_usdt": "0.8593",
+          "futures_notional_rounded": "1666.1827",
+          "futures_price": "85.93",
+          "futures_quantity_raw": "19.39563210365025796190697854843089336282",
+          "futures_quantity_rounded": "19.39",
+          "futures_rule_pass": true,
+          "futures_to_spot_notional_increment_ratio": "9.994184694114910444289369620842056292161",
+          "leg_mismatch_bps": 2.72172,
+          "min_notional_failed": false,
+          "min_qty_failed": false,
+          "rounding_caused_mismatch": false,
+          "scenario_symbol_pass": true,
+          "spot_notional_increment_usdt": "0.08598",
+          "spot_notional_rounded": "1666.63632",
+          "spot_price": "85.98",
+          "spot_quantity_raw": "19.38435295029851903543459719314569279678",
+          "spot_quantity_rounded": "19.384",
+          "spot_rule_pass": true,
+          "symbol": "SOLUSDT",
+          "symbol_specific_step_size_caused_mismatch": false,
+          "target_notional": "1666.666666666666666666666666666666666667"
+        }
+      ]
+    }
+  ],
+  "sizing_algorithm_vs_exchange_rule_assessment": {
+    "assessment": "SIZING_ALGORITHM_REPAIR_NEEDED_UNDER_VALID_EXCHANGE_RULES",
+    "exchange_rules_caused_failure": false,
+    "exchange_rules_missing": false,
+    "reason": "Independent round-down of each leg does not target matched executable notionals.",
+    "sizing_algorithm_issue": true
+  },
+  "source_artifacts": {
+    "exchange_rule_discovery": "artifacts/exchange_rule_discovery/binance_spot_perp_funding_carry_exchange_rule_discovery_v1.json",
+    "exchange_rule_payload_sha256_excluding_hash": "db998979f8d902ddff553877fa59384893021d2e814fb4c42dbc1ab194ebff46",
+    "price_snapshot_order_sizing_payload_sha256_excluding_hash": "b179b6efbe52ddb7611d678c7ac37e090fc1211784373a07e7bc64ecec2c470b",
+    "price_snapshot_order_sizing_simulation": "artifacts/order_sizing_simulations/binance_spot_perp_funding_carry_price_snapshot_order_sizing_sim_v1.json"
+  },
+  "source_checkpoint": {
+    "repo_clean_before_run": true,
+    "repo_head_at_run": "2f011b7dbad00a85031c5d0b653675b00f7338f7",
+    "tracked_python_count_at_start": 886
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_ORDER_SIZING_FAILURE_ANALYSIS_CREATED",
+  "validation_checks": {
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "exchange_rule_artifact_loaded": true,
+    "no_api_calls": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_new_prices_fetched": true,
+    "no_order_endpoint_called": true,
+    "no_orders_placed": true,
+    "no_raw_rows_read": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_rerun": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "sizing_simulation_artifact_loaded": true
+  }
+}

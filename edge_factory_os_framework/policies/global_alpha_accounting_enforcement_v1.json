@@ -1,0 +1,61 @@
+{
+  "active_paper_allowed": false,
+  "active_paper_alpha_pass": false,
+  "alpha_budget_locked": true,
+  "archive_performed": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "candidate_generation_alpha_pass": false,
+  "capital_alpha_pass": false,
+  "capital_change_allowed": false,
+  "created_at_utc": "2026-05-14T02:27:25.146460+00:00",
+  "current_total_strategy_alpha_budget": 0.0,
+  "current_total_strategy_route_budget": 0,
+  "decision_rule": {
+    "budget_zero_does_not_mean": "research_gate_pass",
+    "budget_zero_means": "locked_no_research_permission",
+    "research_permission_requires": [
+      "nonzero_explicit_route_budget",
+      "nonzero_explicit_alpha_budget",
+      "pre_registered_contract",
+      "ledger_enforced_non_null",
+      "holdout_policy_pass",
+      "separate_execution_gate"
+    ]
+  },
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "family_release_alpha_pass": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "governance_integrity_pass": true,
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "live_alpha_pass": false,
+  "old_alpha_policy_status": "GLOBAL_ALPHA_SPENDING_POLICY_ACTIVE_ZERO_STRATEGY_BUDGET",
+  "old_global_alpha_accounting_pass": true,
+  "patch_runtime_allowed": false,
+  "policy_name": "edge_factory_os_global_alpha_accounting_enforcement_v1",
+  "policy_status": "GLOBAL_ALPHA_ACCOUNTING_ENFORCED_LOCKED_NO_RESEARCH_PASS",
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "real_orders_alpha_pass": false,
+  "release_gate_feed": {
+    "ACTIVE_PAPER_ALLOWED_FROM_ALPHA": false,
+    "CANDIDATE_GENERATION_ALLOWED_FROM_ALPHA": false,
+    "CAPITAL_CHANGE_ALLOWED_FROM_ALPHA": false,
+    "FAMILY_RELEASE_ALLOWED_FROM_ALPHA": false,
+    "GLOBAL_ALPHA_GOVERNANCE_INTEGRITY_PASS": true,
+    "GLOBAL_ALPHA_RESEARCH_EXECUTION_PASS": false,
+    "LIVE_ALLOWED_FROM_ALPHA": false,
+    "REAL_ORDERS_ALLOWED_FROM_ALPHA": false,
+    "RUNTIME_CHANGE_ALLOWED_FROM_ALPHA": false
+  },
+  "repair_source": "external_audit_repair_02_split_integrity_from_permission",
+  "research_execution_alpha_pass": false,
+  "runtime_touch_allowed": false,
+  "supersedes_for_decisioning": [
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_route_family_alpha_accounting_v1.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\edge_factory_os_framework\\policies\\global_alpha_spending_policy_v1.json"
+  ]
+}

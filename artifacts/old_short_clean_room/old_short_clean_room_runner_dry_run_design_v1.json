@@ -1,0 +1,296 @@
+{
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_DESIGN_CREATED",
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_DESIGN",
+  "module": "edge_factory_os_repo_only_old_short_clean_room_runner_dry_run_design_v1",
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-26T06:00:35Z",
+    "git_head": "cc782ee541a1f73d773c228ab80ee2843c90799d",
+    "repo_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo",
+    "preflight_repo_status": {
+      "repo_clean_before_run": true,
+      "dirty_tracked_before_run": [],
+      "allowed_pending_before_run": [
+        "?? tools/edge_factory_os_repo_only_old_short_clean_room_runner_dry_run_design_v1.py"
+      ],
+      "no_existing_files_modified": true,
+      "target_tool_present_as_new_untracked_file": true,
+      "target_artifact_preexisting_before_run": false
+    }
+  },
+  "source_artifacts": {
+    "clean_room_contract": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_contract_v1.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_REBUILD_CONTRACT",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_CONTRACT_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "02d0c3ff2f905be2df695a7ca52bfd931c94a4720cb3c883f8fd5d7ad00f5e6d",
+      "replacement_checks_all_true": true
+    },
+    "runner_preview": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_preview_v1.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_PREVIEW_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "31f36fb36bc02fe059faa3fccb141074afe5f12f4e49933de6ee82cd0acd767b",
+      "replacement_checks_all_true": true
+    },
+    "runner_implementation_preview": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_implementation_preview_v1.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_IMPLEMENTATION_PREVIEW",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_IMPLEMENTATION_PREVIEW_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "5a8756ca941121d1ee00f43ec80bb080caadfdfe3d2f209c5366562875042649",
+      "replacement_checks_all_true": true
+    },
+    "validator_bounded_sample_v2": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_validator_bounded_sample_dry_run_v2.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_VALIDATOR_BOUNDED_SAMPLE_DRY_RUN_V2",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_VALIDATOR_BOUNDED_SAMPLE_DRY_RUN_V2_CREATED",
+      "route_key": "old_short_clean_room_v1",
+      "payload_sha256_excluding_hash": "8c3ee5cf12e299234a7c62392ed07f50129e18409e145d892cdfc4ad931fea0e",
+      "replacement_checks_all_true": true
+    },
+    "schema_sample_generator_dry_run": {
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_schema_sample_generator_dry_run_v1.json",
+      "loaded": true,
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_SCHEMA_SAMPLE_GENERATOR_DRY_RUN",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_SCHEMA_SAMPLE_GENERATOR_DRY_RUN_CREATED",
+      "route_key": null,
+      "payload_sha256_excluding_hash": "5d7831982683bfe98102ba47306112535c2e753a4026fe5609def5eb53e58a14",
+      "replacement_checks_all_true": true
+    }
+  },
+  "dry_run_identity": {
+    "route_key": "old_short_clean_room_v1",
+    "dry_run_design_only": true,
+    "runner_execution_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "original_exact_source_recovered": false,
+    "behavioral_reconstruction": true,
+    "no_exact_replay_claim": true
+  },
+  "no_live_guard_constants": {
+    "RUNNER_EXECUTION_ALLOWED": false,
+    "SIGNAL_GENERATION_ALLOWED": false,
+    "POSITION_OPEN_ALLOWED": false,
+    "BACKTEST_ALLOWED": false,
+    "RUNTIME_ALLOWED": false,
+    "MONITOR_ALLOWED": false,
+    "LIVE_TRADING_ALLOWED": false,
+    "CAPITAL_ALLOCATION_ALLOWED": false,
+    "ORDER_PLACEMENT_ALLOWED": false,
+    "CANDIDATE_GENERATION_ALLOWED": false,
+    "EDGE_CLAIM_ALLOWED": false
+  },
+  "future_dry_run_modes": [
+    {
+      "mode": "SCHEMA_FIXTURE_DRY_RUN",
+      "uses_synthetic_schema_fixture_rows_only": true,
+      "tests_output_writer_plumbing": true,
+      "computes_real_signals": false,
+      "claims_behavioral_match": false,
+      "pnl_allowed": false
+    },
+    {
+      "mode": "FEATURE_FIXTURE_DRY_RUN",
+      "allowed_only_if_separate_explicit_threshold_contract_exists_later": true,
+      "uses_bounded_feature_rows_not_full_market_data": true,
+      "paper_report_only": true,
+      "candidate_edge_live_capital_allowed": false
+    },
+    {
+      "mode": "REPLAY_PROXY_DRY_RUN",
+      "allowed_only_if_reviewed_bounded_proxy_gate_candle_fixture_exists": true,
+      "exact_old_short_replay": false,
+      "live_capital_allowed": false
+    }
+  ],
+  "threshold_policy": {
+    "original_thresholds_unresolved": true,
+    "runner_dry_run_fail_closed_if_threshold_contract_missing": true,
+    "no_hidden_default_thresholds": true,
+    "no_fallback_thresholds": true,
+    "thresholds_inferred_from_pnl_allowed": false,
+    "thresholds_inferred_from_master_outputs_allowed": false,
+    "master_output_threshold_inference_requires_separate_reviewed_contract": true,
+    "schema_fixture_dry_run_threshold_bypass_for_schema_plumbing_only": true,
+    "schema_fixture_outputs_must_label": "SYNTHETIC_SCHEMA_SAMPLE"
+  },
+  "future_input_policy": {
+    "allowed_inputs": [
+      "bounded synthetic schema samples",
+      "bounded feature fixture samples",
+      "bounded gate fixture samples",
+      "clean-room threshold contract if separately approved"
+    ],
+    "raw_full_market_data_allowed": false,
+    "raw_okx_1m_full_data_allowed": false,
+    "runtime_data_allowed": false,
+    "private_account_data_allowed": false
+  },
+  "future_output_policy": {
+    "approved_external_dry_run_output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1",
+    "forbidden_output_roots": [
+      "MASTER_UPPER_SYSTEM",
+      "paper_run_gate_* runtime roots",
+      "live runtime directories",
+      "old original output directories"
+    ],
+    "future_output_files": [
+      "signals.csv",
+      "pending_entries.csv",
+      "open_positions.csv",
+      "closed_trades.csv",
+      "rejected_entries.csv",
+      "heartbeat.csv",
+      "state.json"
+    ],
+    "future_row_labels_or_accompanying_labels": [
+      "GENERATED_BY_CLEAN_ROOM",
+      "NOT_ORIGINAL_OLD_SHORT",
+      "PAPER_ONLY",
+      "NOT_LIVE",
+      "NOT_EDGE_EVIDENCE"
+    ],
+    "files_written_now": [
+      "old_short_clean_room_runner_dry_run_design_v1.json"
+    ],
+    "future_output_files_written_now": false
+  },
+  "dry_run_state_flow": {
+    "state_count": 11,
+    "states": [
+      "DISABLED",
+      "LOAD_FIXTURE_INPUTS",
+      "VALIDATE_FIXTURE_BOUNDS",
+      "BUILD_FEATURES_FROM_FIXTURE",
+      "REQUIRE_THRESHOLD_CONTRACT",
+      "EVALUATE_SIGNAL_MODULES",
+      "REQUEST_GATE_FIXTURE",
+      "WRITE_SYNTHETIC_OR_PAPER_OUTPUT",
+      "BUILD_RUNNER_DRY_RUN_REPORT",
+      "REPORT_ONLY",
+      "FAIL_CLOSED"
+    ],
+    "terminal_report_state": "REPORT_ONLY",
+    "fail_closed_state": "FAIL_CLOSED"
+  },
+  "fail_closed_conditions": {
+    "condition_count": 9,
+    "conditions": [
+      "threshold contract missing and mode is not SCHEMA_FIXTURE_DRY_RUN",
+      "fixture input outside approved roots",
+      "fixture exceeds row limits",
+      "raw market data path supplied",
+      "runtime path supplied",
+      "live/order/private fields detected",
+      "gate fixture missing for gate-dependent mode",
+      "no-live guard false",
+      "output root overlaps MASTER_UPPER_SYSTEM or runtime roots"
+    ]
+  },
+  "dry_run_report_schema": {
+    "required_top_level_keys": [
+      "status",
+      "route_key",
+      "dry_run_mode",
+      "input_fixture_paths",
+      "output_root",
+      "generated_files",
+      "generated_row_counts",
+      "fail_closed_reasons",
+      "unresolved_fields_preserved",
+      "no_live_permissions",
+      "payload_sha256_excluding_hash"
+    ],
+    "hash_policy": "payload_sha256_excluding_hash excludes its own value"
+  },
+  "result_classes": {
+    "allowed": [
+      "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_SCHEMA_PASS_NO_EDGE_NO_LIVE",
+      "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_PARTIAL_NO_EDGE_NO_LIVE",
+      "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_FAIL_CLOSED_NO_EDGE_NO_LIVE",
+      "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_INCONCLUSIVE_NO_EDGE_NO_LIVE"
+    ],
+    "forbidden": [
+      "original source recovered",
+      "exact replay",
+      "candidate",
+      "edge claim",
+      "runtime/live/capital permission"
+    ],
+    "result_class_count": 4
+  },
+  "unresolved_fields_preserved": [
+    "exact original thresholds unknown",
+    "exact original implementation unknown",
+    "exact frozen replay source unavailable",
+    "missing gate details",
+    "unverified 8/8 evidence"
+  ],
+  "next_allowed_step": {
+    "step": "OLD_SHORT_CLEAN_ROOM_RUNNER_DRY_RUN_IMPLEMENTATION_PREVIEW_V1",
+    "runner_execution_allowed": false,
+    "signal_generation_allowed": false,
+    "raw_market_data_allowed": false,
+    "backtest_allowed": false,
+    "runtime_allowed": false,
+    "live_allowed": false,
+    "capital_allowed": false,
+    "candidate_generation_allowed": false,
+    "edge_claim_allowed": false
+  },
+  "safety_permissions": {
+    "runner_dry_run_design_created": true,
+    "runner_execution_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "position_open_allowed_now": false,
+    "backtest_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "order_placement_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "clean_room_contract_loaded": true,
+    "runner_preview_loaded": true,
+    "runner_implementation_preview_loaded": true,
+    "validator_bounded_sample_v2_loaded": true,
+    "original_exact_source_not_claimed": true,
+    "behavioral_reconstruction_preserved": true,
+    "unresolved_thresholds_not_filled": true,
+    "no_hidden_default_thresholds": true,
+    "no_runner_execution": true,
+    "no_signal_generation": true,
+    "no_position_open": true,
+    "no_backtest_run": true,
+    "no_runtime_touched": true,
+    "no_monitor_enabled": true,
+    "no_network_used": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_runtime_live_capital": true,
+    "no_live_guard_constants_false": true,
+    "future_dry_run_modes_defined": true,
+    "threshold_policy_fail_closed_defined": true,
+    "future_output_policy_defined": true,
+    "fail_closed_conditions_defined": true,
+    "unresolved_fields_preserved": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_files_modified": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "e5a73d750033e5cce8d8ababece2f8f383860c740fc1bfd4e5be1434662e2c56"
+}

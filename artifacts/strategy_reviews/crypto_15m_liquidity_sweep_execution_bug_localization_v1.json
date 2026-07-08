@@ -1,0 +1,187 @@
+{
+  "artifact_kind": "CRYPTO_15M_LIQUIDITY_SWEEP_EXECUTION_BUG_LOCALIZATION",
+  "config_id": "crypto_15m_liquidity_sweep_48h_reversal_r2_timestop8h_v1",
+  "limitations": [
+    "This localization step does not run the backtest or create trades.",
+    "The repaired execution must keep the same preregistered parameters and replace only the implementation bug in new files."
+  ],
+  "module": "edge_factory_os_repo_only_crypto_15m_liquidity_sweep_execution_bug_localization_v1",
+  "payload_sha256_excluding_hash": "d906d05c6de376b532f1420d98edb7d56ba871290be36b1df7433b01a34a6e4e",
+  "prior_vs_audit_comparison": {
+    "audit_classification": "LIQUIDITY_SWEEP_NO_TRADE_CAUSED_BY_SIGNAL_LOGIC_BUG",
+    "audit_final_long_candidates_before_capacity": 5290,
+    "audit_final_short_candidates_before_capacity": 11382,
+    "audit_raw_long_sweeps": 83184,
+    "audit_raw_short_sweeps": 103676,
+    "prior_accepted_long_trades": 0,
+    "prior_accepted_short_trades": 0,
+    "prior_closed_trades": 0
+  },
+  "repair_scope": {
+    "dataset_change_allowed": false,
+    "filter_change_allowed": false,
+    "parameter_change_allowed": false,
+    "recommended_next_step": "repaired execution only",
+    "strategy_change_allowed": false
+  },
+  "replacement_checks_all_true": true,
+  "root_cause_summary": "Prior execution required len(high_deque) and len(low_deque) to be at least PRIOR_RANGE_WINDOW. Those deques are monotonic extrema queues, so their length is not the lookback row count. The requirement suppressed raw sweep evaluation even though the audit found final candidates.",
+  "route_family": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_BASELINE",
+  "safety_permissions": {
+    "bug_localization_created": true,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "filter_kill_audit": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_reviews\\crypto_15m_liquidity_sweep_filter_kill_audit_v1.json",
+    "prior_execution": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_liquidity_sweep_reversal_execution_v1.json",
+    "prior_execution_tool": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\tools\\edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_execution_v1.py"
+  },
+  "source_checkpoint": {
+    "actual_head": "e4fc7ebbef952e241a3463ebf93384b7d95148b2",
+    "allowed_new_paths_at_bug_localization": [
+      "?? artifacts/strategy_reviews/crypto_15m_liquidity_sweep_execution_bug_localization_v1.json",
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_execution_bug_localization_v1.py"
+    ],
+    "git_status_at_bug_localization": [
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_execution_bug_localization_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 994,
+    "unexpected_dirty_paths_at_bug_localization": []
+  },
+  "source_inspection_findings": {
+    "monotonic_deque_length_misused_as_lookback_count": true,
+    "monotonic_deque_length_requirements_found": [
+      {
+        "context": [
+          {
+            "line": 150,
+            "text": "            master_idx is not None"
+          },
+          {
+            "line": 151,
+            "text": "            and idx >= max(PRIOR_RANGE_WINDOW, RETURN_4H_BARS)"
+          },
+          {
+            "line": 152,
+            "text": "            and len(high_deque) >= PRIOR_RANGE_WINDOW"
+          },
+          {
+            "line": 153,
+            "text": "            and len(low_deque) >= PRIOR_RANGE_WINDOW"
+          },
+          {
+            "line": 154,
+            "text": "            and len(tr_tail) >= ATR_LEN"
+          }
+        ],
+        "line": 152,
+        "text": "and len(high_deque) >= PRIOR_RANGE_WINDOW"
+      },
+      {
+        "context": [
+          {
+            "line": 151,
+            "text": "            and idx >= max(PRIOR_RANGE_WINDOW, RETURN_4H_BARS)"
+          },
+          {
+            "line": 152,
+            "text": "            and len(high_deque) >= PRIOR_RANGE_WINDOW"
+          },
+          {
+            "line": 153,
+            "text": "            and len(low_deque) >= PRIOR_RANGE_WINDOW"
+          },
+          {
+            "line": 154,
+            "text": "            and len(tr_tail) >= ATR_LEN"
+          },
+          {
+            "line": 155,
+            "text": "            and len(vol_tail) >= VOLUME_SMA_LEN"
+          }
+        ],
+        "line": 153,
+        "text": "and len(low_deque) >= PRIOR_RANGE_WINDOW"
+      },
+      {
+        "context": [
+          {
+            "line": 232,
+            "text": "            if ("
+          },
+          {
+            "line": 233,
+            "text": "                not missing_atr"
+          },
+          {
+            "line": 234,
+            "text": "                and len(high_deque) >= PRIOR_RANGE_WINDOW"
+          },
+          {
+            "line": 235,
+            "text": "                and len(low_deque) >= PRIOR_RANGE_WINDOW"
+          },
+          {
+            "line": 236,
+            "text": "                and len(vol_tail) >= VOLUME_SMA_LEN"
+          }
+        ],
+        "line": 234,
+        "text": "and len(high_deque) >= PRIOR_RANGE_WINDOW"
+      },
+      {
+        "context": [
+          {
+            "line": 233,
+            "text": "                not missing_atr"
+          },
+          {
+            "line": 234,
+            "text": "                and len(high_deque) >= PRIOR_RANGE_WINDOW"
+          },
+          {
+            "line": 235,
+            "text": "                and len(low_deque) >= PRIOR_RANGE_WINDOW"
+          },
+          {
+            "line": 236,
+            "text": "                and len(vol_tail) >= VOLUME_SMA_LEN"
+          },
+          {
+            "line": 237,
+            "text": "                and closes[idx - RETURN_4H_BARS] > 0"
+          }
+        ],
+        "line": 235,
+        "text": "and len(low_deque) >= PRIOR_RANGE_WINDOW"
+      }
+    ]
+  },
+  "status": "PASS_REPO_ONLY_CRYPTO_15M_LIQUIDITY_SWEEP_EXECUTION_BUG_LOCALIZATION_CREATED",
+  "strategy": "CRYPTO_15M_LIQUIDITY_SWEEP_FAILED_BREAKOUT_REVERSAL_V1",
+  "suspected_bug_category": "SIGNAL_BOOLEAN_MISMATCH",
+  "validation_checks": {
+    "audit_final_candidates_verified_positive": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "filter_kill_audit_loaded": true,
+    "no_backtest_execution": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_parameter_optimization": true,
+    "no_runtime_live_capital": true,
+    "no_v2_tested": true,
+    "prior_execution_loaded": true,
+    "prior_execution_tool_text_inspected": true,
+    "prior_zero_trades_verified": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

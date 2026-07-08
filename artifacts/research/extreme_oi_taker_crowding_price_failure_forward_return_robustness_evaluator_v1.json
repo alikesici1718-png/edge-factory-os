@@ -1,0 +1,222 @@
+{
+  "allowed_next_step": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_DIRECTION_SEMANTICS_REVIEW_V1",
+  "artifact_kind": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FORWARD_RETURN_ROBUSTNESS_EVALUATOR",
+  "blocker": null,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "current_head": "a6e1732d315369d5760ff42f5ae6a6229246b4ea",
+  "diagnostic_route_promising": true,
+  "direction_semantics_note": "The label 'short_core price failure' implies short pressure failed to continue downward, but the observed 1h close-to-close drift is negative; this is better treated as a neutral delayed-downside-continuation diagnostic until independently reviewed.",
+  "direction_semantics_status": "DIRECTION_SEMANTICS_COUNTERINTUITIVE_REQUIRES_RELABEL",
+  "evaluator_status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FORWARD_RETURN_ROBUSTNESS_EVALUATOR_CREATED",
+  "expected_head": "a6e1732d315369d5760ff42f5ae6a6229246b4ea",
+  "final_decision": "promising diagnostic evidence, but direction semantics are counterintuitive; perform neutral relabel/review before any independent validation contract",
+  "forbidden_actions_confirmed_false": {
+    "account_api": false,
+    "api_key": false,
+    "backtest": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "entry_exit_rules": false,
+    "event_definition_modified_on_forward_returns": false,
+    "optimization_against_future_returns": false,
+    "order_private_account_api_key": false,
+    "pnl": false,
+    "private_api": false,
+    "release": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "sizing_rules": false,
+    "strategy": false,
+    "trade_simulation": false
+  },
+  "head_matches_expected": true,
+  "independent_validation_required": true,
+  "input_artifact_hashes_after": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_definition_refinement_v1.json": "d4b24019fbc99ebe2a1e85e7f9b1f15e853529cbaf383fdaab3ffcebd2c479f8",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_discovery_v1.json": "30f04483b1c4abfc22d718c854a40fb14e5f721c2b3ea5ea064ef5b6bc5a1495",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_forward_return_diagnostic_v1.json": "771726528289a512581847100d1b2d7dd87d37f2de78156c2a39ec7613b6cf5d",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_forward_return_robustness_runner_v1.json": "54a39b44da0cae4842529a98019a4527aac8b1625399c4d61ecbaf5387fd4a2a"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "33d50550be4017688223a43844148a17869ad7c6d18bd488a06fe204151486fd",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "1c84b2980a0ad3a7a9054bf4d731b1f9b480a06141f34e68bb566af71a0caad5",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_definition_refinement_v1.json": "d4b24019fbc99ebe2a1e85e7f9b1f15e853529cbaf383fdaab3ffcebd2c479f8",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_discovery_v1.json": "30f04483b1c4abfc22d718c854a40fb14e5f721c2b3ea5ea064ef5b6bc5a1495",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_forward_return_diagnostic_v1.json": "771726528289a512581847100d1b2d7dd87d37f2de78156c2a39ec7613b6cf5d",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_forward_return_robustness_runner_v1.json": "54a39b44da0cae4842529a98019a4527aac8b1625399c4d61ecbaf5387fd4a2a"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_artifacts_found": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": true,
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": true,
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_definition_refinement_v1.json": true,
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_discovery_v1.json": true,
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_forward_return_diagnostic_v1.json": true,
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_forward_return_robustness_runner_v1.json": true
+  },
+  "input_payload_hashes_verified": {
+    "artifacts/data_builds/binance_data_vision_um_metrics_dataset_builder_v1.json": "8b6ce64b879a0727e416368cedd963beb907bcaba979c5d7e0aa7778afee2ecc",
+    "artifacts/research/binance_public_kline_forward_return_diagnostic_v1.json": "01469f54853ee0e9c07c6897f170617564a333f7df2f33e46ba5a127f8fbf9a6",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_definition_refinement_v1.json": "09be0b2032e7d890d87abbf8f903eb62a9938194a7573e610b83325a1671268d",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_event_discovery_v1.json": "c43410adf785e54ffc18b9c6beaf8b5b7ac1f29fb362edc4c3de749b092264db",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_forward_return_diagnostic_v1.json": "99f0abae6031e1ca8b85efa763e8a49ecc150a68f1b53383a18f56c14fa35929",
+    "artifacts/research/extreme_oi_taker_crowding_price_failure_forward_return_robustness_runner_v1.json": "57fbad2cfc687fe5b244c3c998635a81c7aaa7185ba42bc81b597b790b0301ea"
+  },
+  "live_allowed": false,
+  "module": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FORWARD_RETURN_ROBUSTNESS_EVALUATOR_V1",
+  "payload_sha256_excluding_hash": "b7d88bba987c8dc07da1f1e2ad257822dfa4dd133d3a6bbbb953401b7f6c8818",
+  "primary_finding_summary": {
+    "all_robustness_gates_true": true,
+    "arbusdt_exclusion_passed": true,
+    "event_count": 451,
+    "horizon": "1h",
+    "leave_one_month_passed": true,
+    "leave_one_symbol_passed": true,
+    "month_aware_bonferroni": 0.007992007992007992,
+    "month_aware_fdr_q": 0.007992007992007992,
+    "month_aware_p_negative_mean": 0.000999000999000999,
+    "month_aware_p_two_sided": 0.000999000999000999,
+    "observed_mean": -0.0016947738188285704,
+    "prior_bonferroni": 0.007992007992007992,
+    "prior_fdr_q": 0.007992007992007992,
+    "prior_raw_p": 0.000999000999000999,
+    "side": "short_core",
+    "valid_count": 451
+  },
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "release_allowed": false,
+  "remaining_limitations": [
+    "The same broad 2023-2025 sample was used for event research and diagnostic evaluation.",
+    "No independent holdout or prospective validation has been completed yet.",
+    "No cost, slippage, or execution model exists in this route.",
+    "No entry, exit, or position-sizing rules exist in this route.",
+    "No live or paper validation has been performed or authorized.",
+    "Sparse crowding-confirmed variants were not primary tests.",
+    "358/360 kline archive availability warning remains.",
+    "Missing ARBUSDT 2023-01 and 2023-02 remains recorded: [{'symbol': 'ARBUSDT', 'year': 2023, 'month': 1, 'url': 'https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/15m/ARBUSDT-15m-2023-01.zip', 'available': False, 'local_path': 'C:\\\\Users\\\\alike\\\\OneDrive\\\\Desktop\\\\edge_lab_new\\\\edge_factory_os_repo\\\\cache\\\\binance_public_kline_forward_return_diagnostic_v1\\\\raw_archives\\\\klines\\\\ARBUSDT\\\\15m\\\\ARBUSDT-15m-2023-01.zip', 'downloaded': False, 'reused_existing': False, 'checksum_available': False, 'checksum_verified': False, 'sha256': None, 'bytes': 0, 'error': '404 not found'}, {'symbol': 'ARBUSDT', 'year': 2023, 'month': 2, 'url': 'https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/15m/ARBUSDT-15m-2023-02.zip', 'available': False, 'local_path': 'C:\\\\Users\\\\alike\\\\OneDrive\\\\Desktop\\\\edge_lab_new\\\\edge_factory_os_repo\\\\cache\\\\binance_public_kline_forward_return_diagnostic_v1\\\\raw_archives\\\\klines\\\\ARBUSDT\\\\15m\\\\ARBUSDT-15m-2023-02.zip', 'downloaded': False, 'reused_existing': False, 'checksum_available': False, 'checksum_verified': False, 'sha256': None, 'bytes': 0, 'error': '404 not found'}]",
+    "ARBUSDT exclusion passed, but that does not replace independent validation.",
+    "The direction semantics are counterintuitive and require neutral relabel/review before any independent validation contract is acted on."
+  ],
+  "replacement_checks_all_true": true,
+  "research_chain_summary": {
+    "broad_oi_taker_crowding_route": {
+      "status": "failed_robustness_before_this_refined_route",
+      "summary": "The broad OI/taker/crowding forward-return route was weak/not robust, so this evaluator does not revive it."
+    },
+    "direct_forward_return_diagnostic": {
+      "bonferroni_p_values": {
+        "long_core": {
+          "15m": 1.0,
+          "1h": 1.0,
+          "24h": 0.3116883116883117,
+          "4h": 0.25574425574425574
+        },
+        "short_core": {
+          "15m": 1.0,
+          "1h": 0.007992007992007992,
+          "24h": 1.0,
+          "4h": 0.8951048951048951
+        }
+      },
+      "fdr_q_values": {
+        "long_core": {
+          "15m": 0.8171828171828172,
+          "1h": 0.7934922220636507,
+          "24h": 0.10389610389610389,
+          "4h": 0.10389610389610389
+        },
+        "short_core": {
+          "15m": 0.5274725274725275,
+          "1h": 0.007992007992007992,
+          "24h": 0.7925407925407925,
+          "4h": 0.22377622377622378
+        }
+      },
+      "result_classification": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FORWARD_RETURN_DIAGNOSTIC_PROMISING_DIAGNOSTIC_ONLY",
+      "status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FORWARD_RETURN_DIAGNOSTIC_CREATED",
+      "summary": "The direct diagnostic identified short_core 1h as the only strong multiple-comparison-adjusted result."
+    },
+    "event_definition_refinement": {
+      "result_classification": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_REFINEMENT_READY",
+      "selected_counts": {
+        "best_long_failure_definition": {
+          "cooldown_filtered_count": 463,
+          "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__long_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+          "raw_event_count": 522,
+          "target_event_count_band": "ideal"
+        },
+        "best_long_failure_with_crowding_confirmation_definition": {
+          "cooldown_filtered_count": 40,
+          "definition_id": "RELAXED_EXTREME_GRID__long_failure__oi_p97.5__taker_p97.5__pf_any_failure__score_1__cooldown_6h__crowd_p95.0",
+          "raw_event_count": 44,
+          "target_event_count_band": "too_sparse"
+        },
+        "best_short_failure_definition": {
+          "cooldown_filtered_count": 451,
+          "definition_id": "CORE_PRICE_FAILURE_WITH_CROWDING_TIER__short_failure__oi_p97.5__taker_p97.5__pf_score_bucket__score_1__cooldown_6h",
+          "raw_event_count": 494,
+          "target_event_count_band": "ideal"
+        },
+        "best_short_failure_with_crowding_confirmation_definition": {
+          "cooldown_filtered_count": 47,
+          "definition_id": "RELAXED_EXTREME_GRID__short_failure__oi_p97.5__taker_p97.5__pf_any_failure__score_1__cooldown_6h__crowd_p95.0",
+          "raw_event_count": 55,
+          "target_event_count_band": "too_sparse"
+        }
+      },
+      "status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_REFINEMENT_CREATED",
+      "summary": "Refinement relaxed contemporaneous gates without using future returns and produced usable long_core 463 and short_core 451 cooldown-filtered definitions."
+    },
+    "robustness_runner": {
+      "result_classification": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FORWARD_RETURN_ROBUSTNESS_PROMISING_DIAGNOSTIC_ONLY",
+      "status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FORWARD_RETURN_ROBUSTNESS_RUNNER_CREATED",
+      "summary": "Robustness confirmed short_core 1h under month-aware symbol-balanced null, leave-one-symbol-out, leave-one-month-out, and ARBUSDT exclusion."
+    },
+    "strict_price_failure_discovery": {
+      "result_classification": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_DISCOVERY_TOO_SPARSE",
+      "status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_EVENT_DISCOVERY_CREATED",
+      "summary": "The initial strict price-failure discovery was clean but too sparse."
+    }
+  },
+  "result_classification": "EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_ROBUSTNESS_EVALUATOR_REQUIRES_DIRECTION_RELABEL_ATTENTION",
+  "robustness_gate_summary": {
+    "all_primary_gates_true": true,
+    "arbusdt_exclusion_passed": true,
+    "bonferroni_passed": true,
+    "failed_robustness_gates": [],
+    "leave_one_month_passed": true,
+    "leave_one_symbol_passed": true,
+    "month_aware_symbol_balanced_passed": true,
+    "primary_robustness_gates": {
+      "arbusdt_exclusion_direction_preserved": true,
+      "arbusdt_exclusion_magnitude_ratio_gte_0_50": true,
+      "bonferroni_lte_0_05": true,
+      "input_artifact_hashes_unchanged": true,
+      "leave_one_month_no_single_month_necessary": true,
+      "leave_one_symbol_no_single_symbol_necessary": true,
+      "missing_forward_returns_do_not_affect_primary": true,
+      "month_aware_symbol_balanced_null_fdr_q_lte_0_05": true
+    }
+  },
+  "runtime_touch_allowed": false,
+  "signal_allowed": false,
+  "status": "PASS_REPO_ONLY_EXTREME_OI_TAKER_CROWDING_PRICE_FAILURE_FORWARD_RETURN_ROBUSTNESS_EVALUATOR_CREATED",
+  "strategy_allowed": false,
+  "suggested_neutral_diagnostic_label": "SHORT_PRESSURE_FAILURE_DELAYED_DOWNSIDE_CONTINUATION_DIAGNOSTIC",
+  "validation_checks": {
+    "artifacts_data_builds_not_written": true,
+    "candidate_generation_allowed_false": true,
+    "forbidden_action_flags_false": true,
+    "input_artifact_hashes_unchanged": true,
+    "input_artifacts_found": true,
+    "primary_robustness_gates_all_true": true,
+    "prior_robustness_promising": true,
+    "release_allowed_false": true,
+    "runtime_live_capital_false": true,
+    "signal_allowed_false": true,
+    "strategy_allowed_false": true
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "artifact_kind": "TRAP_QUALITY_LOCKBOX_ROUTE_CLOSURE",
+  "closure_decision": {
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "final_classification": "TRAP_QUALITY_LOCKBOX_ROUTE_CLOSED_FAILED_FORWARD_NO_EDGE_NO_LIVE",
+    "lockbox_tuning_allowed_now": false,
+    "next_allowed_step": "NEW_HYPOTHESIS_OR_NEW_DATA_SOURCE_ONLY",
+    "reason": "The frozen finalist failed unseen lockbox forward data. Per pre-registered lockbox protocol, no parameter repair or V-next may be created from this lockbox result.",
+    "route_closed": true,
+    "runtime_live_capital_allowed_now": false,
+    "v_next_allowed_now": false
+  },
+  "final_classification": "TRAP_QUALITY_LOCKBOX_ROUTE_CLOSED_FAILED_FORWARD_NO_EDGE_NO_LIVE",
+  "frozen_finalist": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_V1",
+  "limitations": [
+    "Closure only; no strategy execution, signal generation, PnL recomputation, or backtest was run.",
+    "The lockbox result is preserved from the execution artifact without tuning or repair."
+  ],
+  "lockbox_non_tuning_rule": {
+    "no_lockbox_tuning": true,
+    "no_parameter_repair_from_lockbox": true,
+    "no_rerun": true,
+    "no_v_next_from_lockbox": true,
+    "route_closed_due_to_failed_unseen_forward_test": true
+  },
+  "lockbox_result_preserved": {
+    "closed_trade_count": 69,
+    "fee_stress_2x_net_bps": -458.19856,
+    "hard_reject_triggered_count": 3,
+    "lockbox_result_classification": "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_FAIL_ROUTE_CLOSED_NO_EDGE_NO_LIVE",
+    "max_drawdown_bps": -537.933126,
+    "metric_integrity_passed": true,
+    "monthly_positive_rate": 0.333333,
+    "next_allowed_step_from_execution": "TRAP_QUALITY_LOCKBOX_ROUTE_CLOSURE_V1",
+    "null_percentile": 0.07,
+    "pass_criteria_passed_count": 6,
+    "portfolio_net_bps": -333.003836,
+    "top_3_symbol_concentration": 0.188406,
+    "worst_month_bps": -173.332597
+  },
+  "metric_preservation_checks": {
+    "closed_trade_count": true,
+    "fee_stress_2x_net_bps": true,
+    "frozen_finalist": true,
+    "hard_reject_triggered_count": true,
+    "lockbox_result_classification": true,
+    "max_drawdown_bps": true,
+    "metric_integrity_passed": true,
+    "monthly_positive_rate": true,
+    "null_percentile": true,
+    "pass_criteria_passed_count": true,
+    "portfolio_net_bps": true,
+    "top_3_symbol_concentration": true,
+    "worst_month_bps": true
+  },
+  "module": "edge_factory_os_repo_only_trap_quality_lockbox_route_closure_v1",
+  "next_allowed_step": "NEW_HYPOTHESIS_OR_NEW_DATA_SOURCE_ONLY",
+  "payload_sha256_excluding_hash": "93f0e55bcdf20e991429f3b3ae10767027a0c3429a34fdd34a7678bbf1bfc863",
+  "replacement_checks_all_true": true,
+  "route_closed": true,
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "lockbox_tuning_allowed_now": false,
+    "pnl_recomputation_allowed_now": false,
+    "route_closure_created": true,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "strategy_execution_allowed_now": false,
+    "v_next_allowed_now": false
+  },
+  "source_artifacts": {
+    "data_review": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_DATA_REVIEW",
+      "name": "data_review",
+      "path": "artifacts/data_reviews/trap_quality_lockbox_forward_data_review_v1.json",
+      "payload_sha256_excluding_hash": "226fa8a924c6ab81ea377f67b93a7958b6f611e7d9f603494a8d65127d14eab7",
+      "sha256": "d684b8466e77a038112a760f7ba8738bab7ac0bdb6126009ac4d56c728f5cbcb",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_DATA_REVIEW_CREATED"
+    },
+    "freeze_contract": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FREEZE_CONTRACT",
+      "name": "freeze_contract",
+      "path": "artifacts/research_preregistrations/trap_quality_lockbox_freeze_contract_v1.json",
+      "payload_sha256_excluding_hash": "9e35e99a2d4288ba2e4e5608285e8feef337a0f1034267d2f3ea15ac19967f97",
+      "sha256": "415ff58a129b73a0ce3926704f9a41ee0aa989e2eaa0b2a4c04fa4bc59de58b4",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FREEZE_CONTRACT_CREATED"
+    },
+    "lockbox_execution": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_EXECUTION",
+      "name": "lockbox_execution",
+      "path": "artifacts/strategy_executions/trap_quality_lockbox_forward_test_execution_v1.json",
+      "payload_sha256_excluding_hash": "5479c1aeb3bea6138ec238738633efa5bd0f70c41f20ec7f608cb6fd554688b1",
+      "sha256": "f4e2b0969fa9022c7ead1cd1f86d6e6cf0222e7cfb8a9f1177ab19483f4d88d2",
+      "status": "PASS_REPO_CODE_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_TEST_EXECUTED"
+    },
+    "lockbox_test_preregistration": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_PREREGISTRATION",
+      "name": "lockbox_test_preregistration",
+      "path": "artifacts/research_preregistrations/trap_quality_lockbox_forward_test_preregistration_v1.json",
+      "payload_sha256_excluding_hash": "71eec38b3427f4f55d391fc0c04fc8b0c434ee68bed7aa3dc509e7a9d6c79743",
+      "sha256": "df7e9685e10e7655f650b5f19dc51a5dd1529b8d014bac3715380a3ee6040a2e",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_TEST_PREREGISTRATION_CREATED"
+    }
+  },
+  "source_checkpoint": {
+    "actual_head": "e2db1d84bf7b67791c0ea72ce005336c5eb86e5b",
+    "allowed_new_paths_at_closure": [
+      "?? artifacts/strategy_closures/trap_quality_lockbox_route_closure_v1.json",
+      "?? tools/edge_factory_os_repo_only_trap_quality_lockbox_route_closure_v1.py"
+    ],
+    "git_status_at_closure_start": [
+      "?? tools/edge_factory_os_repo_only_trap_quality_lockbox_route_closure_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count_before_run": 1042,
+    "unexpected_dirty_paths_at_closure": []
+  },
+  "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_ROUTE_CLOSURE_CREATED",
+  "validation_checks": {
+    "data_review_loaded": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "freeze_contract_loaded": true,
+    "frozen_finalist_preserved": true,
+    "lockbox_execution_loaded": true,
+    "lockbox_failure_preserved": true,
+    "lockbox_metrics_preserved": true,
+    "lockbox_test_preregistration_loaded": true,
+    "no_backtest": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_lockbox_tuning": true,
+    "no_optimization": true,
+    "no_pnl_recomputation": true,
+    "no_runtime_live_capital": true,
+    "no_signal_generation": true,
+    "no_strategy_execution": true,
+    "no_v_next_created": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "route_closed_true": true
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "vault_status": "PROMISING_SIGNAL_VAULT_ACTIVE_RELEASE_BLOCKED",
+  "updated_at_utc": "2026-05-14T01:28:42.571504+00:00",
+  "vault_items": [
+    {
+      "vault_item_id": "PROMISING_STRUCTURE_HINT_0a26d87c025e3178",
+      "created_at_utc": "2026-05-14T01:28:42.561414+00:00",
+      "vault_class": "PROMISING_BUT_UNVALIDATED_STRUCTURE_HINT",
+      "release_status": "RELEASE_BLOCKED",
+      "preservation_status": "PRESERVED_NOT_DELETED",
+      "source_route_hash": "ec2550ab1d3cfcff",
+      "source_contract_id": "MARKET_STATE_TRANSITION_CONTRACT_V1_97c3549237fe5e14_20260513_213905",
+      "source_research_key": "OUTCOME_AGNOSTIC_MARKET_STATE_TRANSITION_SEARCH_V1",
+      "source_runner_status": "MARKET_STATE_TRANSITION_RUNNER_PREVIEW_FOUND_TRUE_NULL_CLEAN_NOT_RELEASE",
+      "observed_transition_axis_count": 160,
+      "observed_strict_12_transition_preview_count": 3,
+      "observed_best_total_transition_score": 47.57004459948791,
+      "joint_null_status": "JOINT_NULL_DISTRIBUTION_VALIDATOR_FAIL_RESEARCH_METHODOLOGY_REPAIR_REQUIRED",
+      "joint_null_max_p_ge_observed_preview_count": 1.0,
+      "joint_null_max_p_joint_ge_count_and_score": 1.0,
+      "why_preserved": "Market-state transitions may contain useful structural information, but current search procedure failed procedural/joint null and cannot be used for release.",
+      "why_blocked_for_release": "Under full procedural null, the same search finds >= observed preview count and score too often. Current result is consistent with search-process false positives.",
+      "allowed_future_use": [
+        "hypothesis memory only",
+        "materially different pre-registered redesign",
+        "nested validation",
+        "untouched final holdout",
+        "global testing budget accounting",
+        "procedural null re-validation"
+      ],
+      "forbidden_future_use": [
+        "direct promotion",
+        "candidate generation",
+        "candidate contract",
+        "family release",
+        "runtime touch",
+        "capital change",
+        "active paper",
+        "live trading",
+        "real orders",
+        "same route hash reuse"
+      ],
+      "retest_requirements": [
+        "fresh pre-registered contract",
+        "narrower state-transition hypothesis",
+        "route budget allocated before test",
+        "nested search/validation split",
+        "untouched final holdout",
+        "global family-wise correction",
+        "joint/procedural null pass",
+        "candidate/family/runtime/capital/live still blocked"
+      ],
+      "candidate_generation_allowed": false,
+      "candidate_contract_allowed": false,
+      "family_release_allowed": false,
+      "promotion_allowed": false,
+      "runtime_touch_allowed": false,
+      "launcher_allowed": false,
+      "patch_runtime_allowed": false,
+      "capital_change_allowed": false,
+      "active_paper_allowed": false,
+      "live_allowed": false,
+      "real_orders_allowed": false,
+      "execution_performed": false,
+      "file_delete_performed": false,
+      "file_move_performed": false,
+      "archive_performed": false
+    }
+  ]
+}

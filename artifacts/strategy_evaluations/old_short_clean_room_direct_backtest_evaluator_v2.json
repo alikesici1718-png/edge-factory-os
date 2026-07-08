@@ -1,0 +1,167 @@
+{
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_V2_EVALUATION",
+  "diagnostic_promising": false,
+  "diagnostic_promising_criteria": {
+    "holdout_monthly_positive_rate_gte_0_50": true,
+    "metric_integrity_passes": true,
+    "mode_a_holdout_portfolio_net_bps_positive": false,
+    "mode_a_validation_portfolio_net_bps_positive": true,
+    "no_edge_live_capital_permission": true,
+    "no_exact_gate_replay_false_claim": true,
+    "null_baseline_passes": false,
+    "top_symbol_share_lte_0_25": true,
+    "validation_closed_trades_gte_30": true,
+    "validation_monthly_positive_rate_gte_0_60": true,
+    "worst_month_gt_minus_1000_bps": false
+  },
+  "gate_limitation_result": {
+    "exact_gate_replay_recovered": false,
+    "mode_a_proxy_gate_not_exact_replay": true,
+    "mode_b_no_gate_upper_bound_only": true
+  },
+  "limitations": [
+    "Exact original old_short source is not recovered.",
+    "Exact gate replay is not recovered; MODE A is proxy-gate conservative, not original gate replay.",
+    "MODE B is upper-bound informational only and is not eligible for diagnostic_promising by itself.",
+    "MASTER_UPPER_SYSTEM outputs were not used as trade replay.",
+    "Recovered local OKX 1m CSVs define the available-data split.",
+    "Thresholds were not changed or optimized."
+  ],
+  "metric_integrity_result": {
+    "accounting_integrity": {
+      "checks": {
+        "base_equity_fixed_1000": true,
+        "exact_gate_replay_recovered_false_preserved": true,
+        "mode_a_max_global_open_positions_lte_3": true,
+        "mode_a_no_same_symbol_overlap": true,
+        "monthly_bps_uses_base_equity_denominator": true,
+        "no_exact_gate_replay_claim": true,
+        "no_live_capital_edge": true,
+        "no_lookahead": true,
+        "notional_fixed_50": true,
+        "original_exact_source_recovered_false_preserved": true,
+        "sum_of_trade_bps_not_used_as_portfolio_return": true,
+        "total_bps_uses_base_equity_denominator": true
+      },
+      "passed": true
+    },
+    "invalidated_reasons": [],
+    "mode_a_max_concurrent_positions": 3,
+    "mode_a_proxy_gate_capacity_block_count": 17,
+    "mode_a_same_symbol_overlap_block_count": 1424,
+    "passed": true
+  },
+  "mode_a_summary": {
+    "closed_trades": 463,
+    "holdout_monthly_positive_rate": 0.6,
+    "holdout_portfolio_net_bps": -1169.143417,
+    "null_baseline": {
+      "feasible": true,
+      "method": "deterministic block shuffle sign-randomized null, seed=2202",
+      "null_pass": false,
+      "observed_validation_pnl_usdt": 2.301119,
+      "observed_validation_portfolio_bps": 23.011192,
+      "runs": 100,
+      "validation_percentile": 0.53
+    },
+    "top_symbol_concentration": {
+      "top_symbol": "RAVE",
+      "top_symbol_share": 0.187905,
+      "top_symbol_trade_count": 87,
+      "trade_count_by_symbol": {
+        "AZTEC": 7,
+        "BASED": 20,
+        "BIO": 30,
+        "BSB": 23,
+        "ENS": 1,
+        "H": 78,
+        "ICP": 9,
+        "INJ": 1,
+        "IP": 31,
+        "JTO": 6,
+        "LAB": 13,
+        "LAYER": 12,
+        "NOT": 3,
+        "ONDO": 2,
+        "PIEVERSE": 41,
+        "RAVE": 87,
+        "RLS": 12,
+        "SAHARA": 21,
+        "STABLE": 10,
+        "STRK": 13,
+        "TRUMP": 7,
+        "TRUTH": 12,
+        "UNI": 6,
+        "USELESS": 11,
+        "YGG": 7
+      }
+    },
+    "validation_closed_trades": 204,
+    "validation_monthly_positive_rate": 0.6,
+    "validation_portfolio_net_bps": 23.011192,
+    "worst_month_bps": -1357.413886
+  },
+  "mode_b_informational_only": true,
+  "mode_b_informational_summary": {
+    "closed_trades": 467,
+    "eligible_for_diagnostic_promising": false,
+    "portfolio_net_bps": -974.27779
+  },
+  "module": "edge_factory_os_repo_only_old_short_clean_room_direct_backtest_evaluator_v2",
+  "null_baseline_result": {
+    "feasible": true,
+    "method": "deterministic block shuffle sign-randomized null, seed=2202",
+    "null_pass": false,
+    "observed_validation_pnl_usdt": 2.301119,
+    "observed_validation_portfolio_bps": 23.011192,
+    "runs": 100,
+    "validation_percentile": 0.53
+  },
+  "payload_sha256_excluding_hash": "782ae440d43c2f3e73a6c3eddc5eed81c5d2cae52adf9556db99365a353f6944",
+  "primary_mode": "MODE_A_PROXY_GATE_CONSERVATIVE",
+  "replacement_checks_all_true": true,
+  "result_classification": "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_V2_REJECTED_NO_FOLLOWUP",
+  "route_key": "old_short_clean_room_v1",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_allocation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_trading_allowed_now": false,
+    "monitor_allowed_now": false,
+    "real_orders_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "execution_v2": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\old_short_clean_room_direct_backtest_execution_v2.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "ac9ac553efbf96b92affa59af7595949f9cba524",
+    "allowed_new_paths_at_evaluation": [
+      "?? artifacts/strategy_evaluations/old_short_clean_room_direct_backtest_evaluator_v2.json",
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_direct_backtest_evaluator_v2.py"
+    ],
+    "git_status_at_evaluation": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_direct_backtest_evaluator_v2.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 979,
+    "unexpected_dirty_paths_at_evaluation": []
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_V2_EVALUATED",
+  "validation_checks": {
+    "execution_status_verified": true,
+    "execution_v2_loaded": true,
+    "mode_a_primary": true,
+    "mode_b_informational_only": true,
+    "no_api_used": true,
+    "no_backtest_rerun": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_network_used": true,
+    "no_runtime_live_capital": true,
+    "no_threshold_optimization": true,
+    "repo_clean_before_run": true,
+    "route_key_verified": true
+  }
+}

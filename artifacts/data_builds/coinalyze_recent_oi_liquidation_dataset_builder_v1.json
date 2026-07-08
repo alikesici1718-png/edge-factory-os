@@ -1,0 +1,1878 @@
+{
+  "alignment_summary": {
+    "APTUSDT": {
+      "alignment_coverage_share": 0.22899628252788104,
+      "full_alignment_row_count": 308,
+      "has_full_alignment": true
+    },
+    "ARBUSDT": {
+      "alignment_coverage_share": 0.20520446096654274,
+      "full_alignment_row_count": 276,
+      "has_full_alignment": true
+    },
+    "BNBUSDT": {
+      "alignment_coverage_share": 0.36282527881040894,
+      "full_alignment_row_count": 488,
+      "has_full_alignment": true
+    },
+    "BTCUSDT": {
+      "alignment_coverage_share": 0.828996282527881,
+      "full_alignment_row_count": 1115,
+      "has_full_alignment": true
+    },
+    "DOGEUSDT": {
+      "alignment_coverage_share": 0.5323420074349442,
+      "full_alignment_row_count": 716,
+      "has_full_alignment": true
+    },
+    "ETHUSDT": {
+      "alignment_coverage_share": 0.8550185873605948,
+      "full_alignment_row_count": 1150,
+      "has_full_alignment": true
+    },
+    "LINKUSDT": {
+      "alignment_coverage_share": 0.2617100371747212,
+      "full_alignment_row_count": 352,
+      "has_full_alignment": true
+    },
+    "OPUSDT": {
+      "alignment_coverage_share": 0.2133828996282528,
+      "full_alignment_row_count": 287,
+      "has_full_alignment": true
+    },
+    "SOLUSDT": {
+      "alignment_coverage_share": 0.654275092936803,
+      "full_alignment_row_count": 880,
+      "has_full_alignment": true
+    },
+    "XRPUSDT": {
+      "alignment_coverage_share": 0.5345724907063197,
+      "full_alignment_row_count": 719,
+      "has_full_alignment": true
+    }
+  },
+  "api_key_handling": {
+    "api_key_loaded_from_env_only": true,
+    "api_key_persisted": false,
+    "api_key_printed": false,
+    "api_key_source": "temporary_process_env",
+    "api_key_written_to_artifact": false,
+    "api_key_written_to_external_files": false,
+    "env_var_name": "COINALYZE_API_KEY"
+  },
+  "artifact_kind": "COINALYZE_RECENT_OI_LIQUIDATION_DATASET_BUILDER",
+  "checksum_summary": {
+    "checksum_file": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\checksums\\coinalyze_recent_oi_liquidation_dataset_v1_sha256.json",
+    "file_count": 70,
+    "normalized_file_count": 10
+  },
+  "coverage_summary": {
+    "best_interval": "15min",
+    "built_symbol_count": 10,
+    "limitations": [
+      "Recent Coinalyze free intraday coverage only; not a 2022-2025 deep backtest dataset.",
+      "Generic derived fields are limited to OI change and liquidation imbalance for dataset quality/alignment."
+    ],
+    "requested_symbol_count": 10,
+    "symbols_with_full_alignment": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "DOGEUSDT",
+      "XRPUSDT",
+      "BNBUSDT",
+      "LINKUSDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "OPUSDT"
+    ],
+    "symbols_with_full_alignment_count": 10,
+    "symbols_with_funding": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "DOGEUSDT",
+      "XRPUSDT",
+      "BNBUSDT",
+      "LINKUSDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "OPUSDT"
+    ],
+    "symbols_with_funding_count": 10,
+    "symbols_with_liquidation": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "DOGEUSDT",
+      "XRPUSDT",
+      "BNBUSDT",
+      "LINKUSDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "OPUSDT"
+    ],
+    "symbols_with_liquidation_count": 10,
+    "symbols_with_ohlcv": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "DOGEUSDT",
+      "XRPUSDT",
+      "BNBUSDT",
+      "LINKUSDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "OPUSDT"
+    ],
+    "symbols_with_ohlcv_count": 10,
+    "symbols_with_oi": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "DOGEUSDT",
+      "XRPUSDT",
+      "BNBUSDT",
+      "LINKUSDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "OPUSDT"
+    ],
+    "symbols_with_oi_count": 10,
+    "timestamp_global_max": "2026-05-27T19:15:00Z",
+    "timestamp_global_min": "2026-05-13T19:15:00Z",
+    "total_normalized_rows": 13450
+  },
+  "data_quality_checks": {
+    "APTUSDT": {
+      "alignment_coverage_share": 0.22899628252788104,
+      "alignment_row_count": 308,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 308,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T18:30:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    },
+    "ARBUSDT": {
+      "alignment_coverage_share": 0.20520446096654274,
+      "alignment_row_count": 276,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 276,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:45:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    },
+    "BNBUSDT": {
+      "alignment_coverage_share": 0.36282527881040894,
+      "alignment_row_count": 488,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 488,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T22:00:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    },
+    "BTCUSDT": {
+      "alignment_coverage_share": 0.828996282527881,
+      "alignment_row_count": 1115,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 1115,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    },
+    "DOGEUSDT": {
+      "alignment_coverage_share": 0.5323420074349442,
+      "alignment_row_count": 716,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 716,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    },
+    "ETHUSDT": {
+      "alignment_coverage_share": 0.8550185873605948,
+      "alignment_row_count": 1150,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 1150,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    },
+    "LINKUSDT": {
+      "alignment_coverage_share": 0.2617100371747212,
+      "alignment_row_count": 352,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 352,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T20:00:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    },
+    "OPUSDT": {
+      "alignment_coverage_share": 0.2133828996282528,
+      "alignment_row_count": 287,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 287,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T17:45:00Z",
+          "timestamp_min": "2026-05-13T21:00:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    },
+    "SOLUSDT": {
+      "alignment_coverage_share": 0.654275092936803,
+      "alignment_row_count": 880,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 880,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    },
+    "XRPUSDT": {
+      "alignment_coverage_share": 0.5345724907063197,
+      "alignment_row_count": 719,
+      "duplicate_timestamp_count_by_endpoint": {
+        "funding-rate-history": 0,
+        "liquidation-history": 0,
+        "long-short-ratio-history": 0,
+        "ohlcv-history": 0,
+        "open-interest-history": 0
+      },
+      "endpoint_availability": {
+        "funding-rate-history": true,
+        "liquidation-history": true,
+        "long-short-ratio-history": true,
+        "ohlcv-history": true,
+        "open-interest-history": true
+      },
+      "field_availability_summary": {
+        "has_funding": true,
+        "has_liquidation": true,
+        "has_long_short_ratio": true,
+        "has_ohlcv": true,
+        "has_oi": true
+      },
+      "invalid_funding_count": 0,
+      "missing_timestamp_count": 0,
+      "negative_liquidation_count": 0,
+      "negative_oi_count": 0,
+      "ohlc_sanity_fail_count": 0,
+      "row_count_by_endpoint": {
+        "funding-rate-history": 1345,
+        "liquidation-history": 719,
+        "long-short-ratio-history": 1345,
+        "ohlcv-history": 1345,
+        "open-interest-history": 1345
+      },
+      "timestamp_range_by_endpoint": {
+        "funding-rate-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      }
+    }
+  },
+  "external_output_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1",
+  "generated_external_files": [
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BTCUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BTCUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BTCUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BTCUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BTCUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\BTCUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\BTCUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ETHUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ETHUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ETHUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ETHUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ETHUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\ETHUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\ETHUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\SOLUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\SOLUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\SOLUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\SOLUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\SOLUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\SOLUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\SOLUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\DOGEUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\DOGEUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\DOGEUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\DOGEUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\DOGEUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\DOGEUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\DOGEUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\XRPUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\XRPUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\XRPUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\XRPUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\XRPUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\XRPUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\XRPUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BNBUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BNBUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BNBUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BNBUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\BNBUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\BNBUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\BNBUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\LINKUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\LINKUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\LINKUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\LINKUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\LINKUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\LINKUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\LINKUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\APTUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\APTUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\APTUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\APTUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\APTUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\APTUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\APTUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ARBUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ARBUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ARBUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ARBUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\ARBUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\ARBUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\ARBUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\OPUSDT_open-interest-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\OPUSDT_liquidation-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\OPUSDT_funding-rate-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\OPUSDT_ohlcv-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\raw_responses\\OPUSDT_long-short-ratio-history_15min.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\normalized_by_symbol\\OPUSDT_15min.jsonl",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\coverage_reports\\OPUSDT_15min_coverage.json",
+    "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_v1\\checksums\\coinalyze_recent_oi_liquidation_dataset_v1_sha256.json"
+  ],
+  "limitations": [
+    "Recent Coinalyze free intraday coverage only; not a 2022-2025 deep backtest dataset.",
+    "Generic derived fields are limited to OI change and liquidation imbalance for dataset quality/alignment."
+  ],
+  "module": "edge_factory_os_repo_only_coinalyze_recent_oi_liquidation_dataset_builder_v1",
+  "next_allowed_step": "COINALYZE_LIQUIDATION_IMBALANCE_OI_FLUSH_EVENT_STUDY_V1",
+  "payload_sha256_excluding_hash": "8e039dd750504495c56c74d2d51e5f71df5eb7baa1531b6aa27d6459624b6690",
+  "per_symbol_build_summary": {
+    "APTUSDT": {
+      "alignment_coverage_share": 0.22899628252788104,
+      "alignment_row_count": 308,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 308,
+          "timestamp_max": "2026-05-27T18:30:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    },
+    "ARBUSDT": {
+      "alignment_coverage_share": 0.20520446096654274,
+      "alignment_row_count": 276,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 276,
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:45:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    },
+    "BNBUSDT": {
+      "alignment_coverage_share": 0.36282527881040894,
+      "alignment_row_count": 488,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 488,
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T22:00:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    },
+    "BTCUSDT": {
+      "alignment_coverage_share": 0.828996282527881,
+      "alignment_row_count": 1115,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1115,
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    },
+    "DOGEUSDT": {
+      "alignment_coverage_share": 0.5323420074349442,
+      "alignment_row_count": 716,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 716,
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    },
+    "ETHUSDT": {
+      "alignment_coverage_share": 0.8550185873605948,
+      "alignment_row_count": 1150,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1150,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    },
+    "LINKUSDT": {
+      "alignment_coverage_share": 0.2617100371747212,
+      "alignment_row_count": 352,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 352,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T20:00:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    },
+    "OPUSDT": {
+      "alignment_coverage_share": 0.2133828996282528,
+      "alignment_row_count": 287,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 287,
+          "timestamp_max": "2026-05-27T17:45:00Z",
+          "timestamp_min": "2026-05-13T21:00:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    },
+    "SOLUSDT": {
+      "alignment_coverage_share": 0.654275092936803,
+      "alignment_row_count": 880,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 880,
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    },
+    "XRPUSDT": {
+      "alignment_coverage_share": 0.5345724907063197,
+      "alignment_row_count": 719,
+      "built": true,
+      "endpoint_summary": {
+        "funding-rate-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "liquidation-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 719,
+          "timestamp_max": "2026-05-27T19:00:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "long-short-ratio-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "l",
+            "r",
+            "s",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "ohlcv-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "btx",
+            "bv",
+            "c",
+            "h",
+            "l",
+            "o",
+            "t",
+            "tx",
+            "v"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        },
+        "open-interest-history": {
+          "duplicate_timestamp_count": 0,
+          "error_message": null,
+          "field_names": [
+            "c",
+            "h",
+            "l",
+            "o",
+            "t"
+          ],
+          "http_status": 200,
+          "request_ok": true,
+          "row_count": 1345,
+          "timestamp_max": "2026-05-27T19:15:00Z",
+          "timestamp_min": "2026-05-13T19:15:00Z"
+        }
+      },
+      "normalized_row_count": 1345,
+      "timestamp_max": "2026-05-27T19:15:00Z",
+      "timestamp_min": "2026-05-13T19:15:00Z"
+    }
+  },
+  "replacement_checks_all_true": true,
+  "request_plan": {
+    "end_timestamp": "2026-05-27T19:15:00Z",
+    "end_timestamp_is_last_closed_15m_bar": true,
+    "endpoints": [
+      "open-interest-history",
+      "liquidation-history",
+      "funding-rate-history",
+      "ohlcv-history",
+      "long-short-ratio-history"
+    ],
+    "intervals_requested": [
+      "15min"
+    ],
+    "optional_1hour_skipped_reason": "Primary 15min coverage was available and sufficient for the requested dataset build.",
+    "rate_limit_sleep_seconds": 2.0,
+    "start_timestamp": "2026-05-13T19:15:00Z",
+    "window_days": 14
+  },
+  "requested_symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "APTUSDT",
+    "ARBUSDT",
+    "OPUSDT"
+  ],
+  "result_classification": "COINALYZE_RECENT_OI_LIQUIDATION_DATASET_READY_FOR_EVENT_STUDY",
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "dataset_builder_created": true,
+    "edge_claim_allowed_now": false,
+    "event_study_allowed_next": true,
+    "live_permission_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "coinalyze_v5_discovery": "artifacts/data_discovery/coinalyze_free_oi_liq_funding_availability_discovery_v5.json",
+    "hypothesis_design": "artifacts/research_designs/coinalyze_recent_oi_liquidation_hypothesis_design_v1.json"
+  },
+  "source_checkpoint": "3fe17ebccbfecc55a04a824925614275cd117af1",
+  "status": "PASS_REPO_ONLY_COINALYZE_RECENT_OI_LIQUIDATION_DATASET_BUILDER_CREATED",
+  "symbol_mapping": {
+    "APTUSDT": {
+      "coinalyze_symbol": "APTUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "APTUSDT",
+      "target_symbol": "APTUSDT"
+    },
+    "ARBUSDT": {
+      "coinalyze_symbol": "ARBUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "ARBUSDT",
+      "target_symbol": "ARBUSDT"
+    },
+    "BNBUSDT": {
+      "coinalyze_symbol": "BNBUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "BNBUSDT",
+      "target_symbol": "BNBUSDT"
+    },
+    "BTCUSDT": {
+      "coinalyze_symbol": "BTCUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "BTCUSDT",
+      "target_symbol": "BTCUSDT"
+    },
+    "DOGEUSDT": {
+      "coinalyze_symbol": "DOGEUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "DOGEUSDT",
+      "target_symbol": "DOGEUSDT"
+    },
+    "ETHUSDT": {
+      "coinalyze_symbol": "ETHUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "ETHUSDT",
+      "target_symbol": "ETHUSDT"
+    },
+    "LINKUSDT": {
+      "coinalyze_symbol": "LINKUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "LINKUSDT",
+      "target_symbol": "LINKUSDT"
+    },
+    "OPUSDT": {
+      "coinalyze_symbol": "OPUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "OPUSDT",
+      "target_symbol": "OPUSDT"
+    },
+    "SOLUSDT": {
+      "coinalyze_symbol": "SOLUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "SOLUSDT",
+      "target_symbol": "SOLUSDT"
+    },
+    "XRPUSDT": {
+      "coinalyze_symbol": "XRPUSDT_PERP.A",
+      "exchange": "BINANCE",
+      "mapping_available": true,
+      "symbol_on_exchange": "XRPUSDT",
+      "target_symbol": "XRPUSDT"
+    }
+  },
+  "validation_checks": {
+    "api_key_loaded_from_env_only": true,
+    "api_key_not_printed": true,
+    "api_key_not_written_to_artifact": true,
+    "coinalyze_v5_discovery_loaded": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "external_output_root_used": true,
+    "hypothesis_design_loaded": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_optimization": true,
+    "no_order_endpoint_used": true,
+    "no_pnl_computation": true,
+    "no_private_exchange_api_used": true,
+    "no_runtime_live_capital": true,
+    "no_signal_generation": true,
+    "no_strategy_execution": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "top_priority_hypothesis_verified": true
+  }
+}

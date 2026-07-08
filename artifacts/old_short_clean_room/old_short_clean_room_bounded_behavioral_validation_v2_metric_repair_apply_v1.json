@@ -1,0 +1,234 @@
+{
+  "applicable_file_review": {
+    "closed_trades.csv": {
+      "has_family_key_column": true,
+      "included_in_denominator": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\realistic_fixture_runner_v2_dry_run_v1\\closed_trades.csv",
+      "row_count": 2
+    },
+    "heartbeat.csv": {
+      "has_family_key_column": true,
+      "included_in_denominator": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\realistic_fixture_runner_v2_dry_run_v1\\heartbeat.csv",
+      "row_count": 1
+    },
+    "open_positions.csv": {
+      "has_family_key_column": true,
+      "included_in_denominator": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\realistic_fixture_runner_v2_dry_run_v1\\open_positions.csv",
+      "row_count": 2
+    },
+    "pending_entries.csv": {
+      "has_family_key_column": true,
+      "included_in_denominator": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\realistic_fixture_runner_v2_dry_run_v1\\pending_entries.csv",
+      "row_count": 2
+    },
+    "rejected_entries.csv": {
+      "has_family_key_column": true,
+      "included_in_denominator": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\realistic_fixture_runner_v2_dry_run_v1\\rejected_entries.csv",
+      "row_count": 2
+    },
+    "signals.csv": {
+      "has_family_key_column": true,
+      "included_in_denominator": true,
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_old_short_clean_room_runner_dry_runs_v1\\realistic_fixture_runner_v2_dry_run_v1\\signals.csv",
+      "row_count": 2
+    }
+  },
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_METRIC_REPAIR_APPLY",
+  "complementary_route_family_side_checks": {
+    "bad_side_rows": [],
+    "exact_gate_replay_remains_false": true,
+    "route_key_match": true,
+    "route_values_observed": [
+      "old_short_clean_room_v1"
+    ],
+    "side_short_where_expected": true,
+    "side_values_observed": [
+      "short"
+    ],
+    "state_route_key_checked_separately": true,
+    "subfamily_values_limited_to_expected": true,
+    "subfamily_values_observed": [
+      "blowoff_short",
+      "heartbeat_state",
+      "mean_reversion_short"
+    ],
+    "unexpected_subfamily_values": []
+  },
+  "denominator_policy_applied": {
+    "excluded_categories": [
+      "empty files",
+      "header-only files",
+      "state.json without family_key",
+      "heartbeat rows without family_key",
+      "report-only metadata",
+      "synthetic/global safety label metadata"
+    ],
+    "optional_files": [
+      "heartbeat.csv"
+    ],
+    "required_applicable_files": [
+      "signals.csv",
+      "pending_entries.csv",
+      "open_positions.csv",
+      "closed_trades.csv",
+      "rejected_entries.csv"
+    ],
+    "state_json_policy": "excluded because explicit family_key is absent; route_key checked separately"
+  },
+  "excluded_non_applicable_rows_summary": {
+    "excluded": [
+      {
+        "excluded_count": 1,
+        "file": "state.json",
+        "reason": "state.json lacks explicit family_key; route_key checked separately"
+      }
+    ],
+    "excluded_non_applicable_count": 1
+  },
+  "metric_name": "family_key_match_rate",
+  "mismatch_rows_summary": {
+    "mismatch_count": 0,
+    "mismatch_rows": []
+  },
+  "module": "tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_v2_metric_repair_apply_v1.py",
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_METRIC_REPAIR_REVIEW_V1",
+  "numerator_denominator_summary": {
+    "denominator": 11,
+    "formula": "numerator / denominator",
+    "numerator": 11
+  },
+  "payload_sha256_excluding_hash": "0d3a7ba74dc5f441809dbedd4d32a801d8899ce160d8bfb18b17068998289744",
+  "prior_failure_preserved": {
+    "exact_gate_replay_recovered": false,
+    "failed_metric": "family_key_match_rate",
+    "no_edge_live_capital": true,
+    "original_exact_source_recovered": false,
+    "prior_family_key_match_rate": 0.8356164383561644,
+    "result_classification": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_FAIL_NO_EDGE_NO_LIVE",
+    "root_cause_class": "validator_metric_definition_issue"
+  },
+  "repair_apply_result": {
+    "denominator_policy_safe": true,
+    "fail_reasons": [],
+    "prior_artifacts_modified": false,
+    "repair_apply_allowed_scope": "metric-only artifact record",
+    "result_classification": "FAMILY_KEY_METRIC_REPAIR_APPLY_PASS_WITH_P1_ATTENTION_NO_EDGE_NO_LIVE",
+    "true_mismatch_detected": false,
+    "validation_rerun_performed": false
+  },
+  "repaired_family_key_match_rate": 1.0,
+  "repaired_metric_definition": {
+    "denominator": "applicable rows where family_key is expected",
+    "expected_family_key": "old_short",
+    "fixture_content_changed": false,
+    "metric_name": "family_key_match_rate",
+    "numerator": "applicable rows where family_key == old_short",
+    "runner_output_changed": false,
+    "strategy_logic_changed": false,
+    "threshold_unchanged": ">= 0.99",
+    "valid_subfamilies": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ]
+  },
+  "replacement_checks_all_true": true,
+  "route_key": "old_short_clean_room_v1",
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "metric_repair_apply_created": true,
+    "pnl_computation_allowed_now": false,
+    "runner_execution_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "validation_rerun_allowed_now": false
+  },
+  "source_artifacts": {
+    "bounded_behavioral_validation_v2_dry_run": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_DRY_RUN",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_REPAIR_PREVIEW_V1",
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_v2_dry_run_v1.json",
+      "payload_sha256_excluding_hash": "e40de434f1210dff41376c59f443ea54a9d95372c63a02ca63180fb3cd9c1459",
+      "replacement_checks_all_true": true,
+      "result_classification": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_FAIL_NO_EDGE_NO_LIVE",
+      "route_key": "old_short_clean_room_v1",
+      "sha256": "ff25fb3a6d69f3b43f86abc944d1f8de8f4f9f9610520eb8b5c2c1b3b6fcf30f",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_DRY_RUN_CREATED"
+    },
+    "bounded_behavioral_validation_v2_metric_repair_design": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_METRIC_REPAIR_DESIGN",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_METRIC_REPAIR_APPLY_V1",
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_v2_metric_repair_design_v1.json",
+      "payload_sha256_excluding_hash": "d695cafbeddbdaeb46fa8a9badbe67f10cb49214a03729c70c0b405eca084931",
+      "replacement_checks_all_true": true,
+      "result_classification": null,
+      "route_key": "old_short_clean_room_v1",
+      "sha256": "a7de3fe7695d79c700a48968d715073519140e3d400a627541f076b6cd398acc",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_METRIC_REPAIR_DESIGN_CREATED"
+    },
+    "bounded_behavioral_validation_v2_repair_preview": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_REPAIR_PREVIEW",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_METRIC_REPAIR_DESIGN_V1",
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_bounded_behavioral_validation_v2_repair_preview_v1.json",
+      "payload_sha256_excluding_hash": "5e89eb2fb4b3590c2a89df08032d379e1b88cee5a5615a0c7b8a47d819931838",
+      "replacement_checks_all_true": true,
+      "result_classification": "V2_REPAIR_PREVIEW_VALIDATOR_METRIC_REPAIR_NEEDED_NO_EDGE_NO_LIVE",
+      "route_key": "old_short_clean_room_v1",
+      "sha256": "7d11eb316d42f7d79cc914b4bdf665bea0a9595b28f1e3c8878c7ed69bed6299",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_REPAIR_PREVIEW_CREATED"
+    },
+    "runner_realistic_fixture_v2_dry_run": {
+      "artifact_kind": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_V2_DRY_RUN",
+      "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_V2_REVIEW_V1",
+      "path": "artifacts/old_short_clean_room/old_short_clean_room_runner_realistic_fixture_v2_dry_run_v1.json",
+      "payload_sha256_excluding_hash": "37c374d579704113a486ce3a9d464bc9250ccd4dc7b82c30499533dd368a4b94",
+      "replacement_checks_all_true": true,
+      "result_classification": "OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_V2_DRY_RUN_PASS_NO_EDGE_NO_LIVE",
+      "route_key": "old_short_clean_room_v1",
+      "sha256": "2428ad5397a8119b966c41406bd11f18e823faf8049f15958c46f4b36877a4da",
+      "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_RUNNER_REALISTIC_FIXTURE_V2_DRY_RUN_CREATED"
+    }
+  },
+  "source_checkpoint": {
+    "actual_head": "4b62f8afcb7af43840bdf5b88dbcf303ac35fcfb",
+    "expected_head": "4b62f8afcb7af43840bdf5b88dbcf303ac35fcfb",
+    "expected_tracked_python_count_before_creation": 973,
+    "head_matches_expected": true,
+    "repo_status_before_artifact": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_bounded_behavioral_validation_v2_metric_repair_apply_v1.py"
+    ],
+    "target_artifact_existed_before": false,
+    "tracked_python_count_before_creation": 973,
+    "tracked_python_count_matches_expected": true
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_BOUNDED_BEHAVIORAL_VALIDATION_V2_METRIC_REPAIR_APPLY_CREATED",
+  "validation_checks": {
+    "applicable_rows_reviewed": true,
+    "denominator_policy_applied": true,
+    "exact_gate_replay_false_preserved": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "metric_repair_design_loaded": true,
+    "no_api_called": true,
+    "no_backtest_run": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_network_used": true,
+    "no_pnl_computation": true,
+    "no_prior_artifact_modified": true,
+    "no_runner_execution": true,
+    "no_runtime_live_capital": true,
+    "no_runtime_touched": true,
+    "no_validation_rerun": true,
+    "prior_v2_dry_run_loaded": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

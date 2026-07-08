@@ -1,0 +1,225 @@
+{
+  "artifact_kind": "OLD_SHORT_FROZEN_ROUTE_CONTRACT_RECONSTRUCTION",
+  "completeness_check": {
+    "complete": true,
+    "data_source_must_be_verified_in_backtest_step": true,
+    "global_gate_dependency_preserved": true,
+    "missing_source_checks": [],
+    "required_fields_present": [
+      "cost_model",
+      "data_source",
+      "entry_rule",
+      "exit_rule",
+      "old_capital_review_threshold",
+      "old_monitoring_rules",
+      "route_name",
+      "signal_definition",
+      "symbol_universe",
+      "timeframe"
+    ],
+    "source_checks": {
+      "blowoff_rule_present": true,
+      "entry_delay_present": true,
+      "entry_slippage_present": true,
+      "exit_slippage_present": true,
+      "fee_model_present": true,
+      "global_gate_present": true,
+      "meanrev_rule_present": true,
+      "okx_candle_endpoint": true,
+      "planned_exit_present": true,
+      "range_bps_defined": true,
+      "ret1_bps_defined": true,
+      "ret3_bps_defined": true,
+      "ret5_bps_defined": true,
+      "ret60_bps_defined": true,
+      "short_return_present": true
+    }
+  },
+  "execution_allowed_next": true,
+  "module": "edge_factory_os_repo_only_old_short_frozen_route_contract_reconstruction_v1",
+  "next_recommended_step": "OLD_SHORT_FROZEN_BACKTEST_RERUN_ONLY",
+  "payload_sha256_excluding_hash": "e96da6d4630bd869872df71f9917c992abf1e71865bc5a028d745d6a0901436c",
+  "reconstructed_from_files": {
+    "family_config": "configs/family_config.current.json",
+    "old_short_source": "src/old_short_gate_aware_live_paper_logger.py",
+    "position_sizing_contract": "configs/position_sizing_contract.current.json",
+    "runtime_family_registry": "edge_factory_os_framework/registries/runtime_family_registry_v1.json",
+    "runtime_family_status_panel": "edge_factory_os_framework/status/runtime_family_monitor_status_panel_no_capital_v1.json",
+    "source_line_refs": {
+      "argparse_start_line": {
+        "line": 565,
+        "text": "ap = argparse.ArgumentParser(description=\"Gate-aware old short live paper logger.\")"
+      },
+      "blowoff_rule_line": {
+        "line": 333,
+        "text": "blowoff = x.loc[(x[\"ret60_bps\"] >= self.args.blowoff_ret60_bps) & (x[\"ret3_bps\"] <= self.args.blowoff_ret3_max_bps) & (x[\"ret1_bps\"] <= self.args.ret1_max_bps)].copy()"
+      },
+      "entry_slippage_line": {
+        "line": 443,
+        "text": "entry_price = raw_entry * (1.0 - self.args.entry_slip_bps / 10000.0)"
+      },
+      "exit_return_line": {
+        "line": 491,
+        "text": "gross_ret = pos.entry_price / exit_price - 1.0"
+      },
+      "meanrev_rule_line": {
+        "line": 336,
+        "text": "meanrev = x.loc[(x[\"ret5_bps\"] >= self.args.meanrev_ret5_bps) & (x[\"ret1_bps\"] <= self.args.ret1_max_bps)].copy()"
+      }
+    },
+    "step1_evidence_recovery": "artifacts/old_short/old_short_evidence_recovery_status_refresh_v1.json"
+  },
+  "replacement_checks_all_true": true,
+  "route_contract": {
+    "cost_model": {
+      "entry_slip_bps": 25.0,
+      "exit_slip_bps": 25.0,
+      "fee_bps_total": 25.0,
+      "realistic_net_includes_fee_bps_but_slippage_is_embedded_in_entry_exit_prices": true,
+      "stress_extra_bps": 50.0
+    },
+    "data_source": {
+      "family_config_old_short_output_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\live_blowoff_short_paper_realistic",
+      "historical_file_pattern_in_source": "{base_dir}\\{COIN}\\raw\\**\\{COIN}-USDT-SWAP_1m_*.csv",
+      "reviewed_historical_data_required_before_backtest": true,
+      "runtime_public_endpoint_in_source": "https://www.okx.com/api/v5/market/candles"
+    },
+    "entry_rule": {
+      "entry_delay_minutes": 2,
+      "entry_filters": {
+        "max_entry_range_bps": 1000.0,
+        "max_positions": 3,
+        "max_signal_range_bps": 1000.0,
+        "min_entry_vol_quote": 100000.0,
+        "min_signal_vol_quote": 100000.0,
+        "pending_max_wait_minutes": 10,
+        "same_coin_overlap_allowed": false
+      },
+      "entry_price": "target_entry 1m candle close adjusted by entry_slip_bps: raw_entry_close * (1 - entry_slip_bps / 10000)",
+      "global_gate_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\paper_run_gate_MASTER_UPPER_SYSTEM\\global_gate_decisions.csv",
+      "global_gate_required_by_default": true,
+      "required_gate_decision": "ALLOW when require_global_gate is true",
+      "side": "short"
+    },
+    "exchange": "OKX",
+    "exit_rule": {
+      "exit_price": "planned_exit 1m candle close adjusted by exit_slip_bps: raw_exit_close * (1 + exit_slip_bps / 10000)",
+      "gross_short_return": "entry_price / exit_price - 1",
+      "hold_minutes": 120,
+      "net_return": "gross_short_return - fee_bps_total / 10000",
+      "stress_net_return": "net_return - stress_extra_bps / 10000"
+    },
+    "family_key": "old_short",
+    "holding_stop_take_profit": {
+      "fixed_holding_minutes": 120,
+      "source_contract_has_stop_or_take_profit": false,
+      "stop_loss": null,
+      "take_profit": null
+    },
+    "instrument_type": "USDT-SWAP",
+    "no_optimization": true,
+    "no_parameter_changes": true,
+    "no_threshold_changes": true,
+    "no_universe_expansion": true,
+    "old_capital_review_threshold": 50,
+    "old_monitoring_rules": {
+      "capital_requires_separate_governor": true,
+      "minimum_closed_trades_for_capital_review": 50,
+      "minimum_closed_trades_for_monitoring_decision": 20,
+      "protected_from_unrelated_research_route_failures": true,
+      "runtime_live_capital_allowed_now": false
+    },
+    "route_name": "old_short_gate_aware",
+    "signal_definition": {
+      "blowoff_short": {
+        "ret1_bps_lte": 0.0,
+        "ret3_bps_lte": -75.0,
+        "ret60_bps_gte": 500.0
+      },
+      "feature_source": "confirmed OKX 1m candles",
+      "mean_reversion_short": {
+        "ret1_bps_lte": 0.0,
+        "ret5_bps_gte": 300.0
+      },
+      "range_bps": "(high - low) / open * 10000",
+      "ret1_bps": "close.pct_change(1) * 10000",
+      "ret3_bps": "(close / close.shift(3) - 1) * 10000",
+      "ret5_bps": "(close / close.shift(5) - 1) * 10000",
+      "ret60_bps": "(close / close.shift(60) - 1) * 10000",
+      "signal_backfill_minutes_runtime_window": 8
+    },
+    "sizing": {
+      "default_notional": 50.0,
+      "paper_fraction": 0.05,
+      "repo_position_sizing_contract": {
+        "capital_fraction": 0.05,
+        "enabled": true,
+        "expected_notional": 50.0,
+        "fixed_notional": 50.0,
+        "lifecycle": "CORE_ENGINE",
+        "max_positions": 3,
+        "priority": 100
+      },
+      "sizing_contract_default_path": "",
+      "start_equity": 1000.0
+    },
+    "source_module": "src/old_short_gate_aware_live_paper_logger.py",
+    "strategy_type": "short_reversal_after_upside_blowoff_or_mean_reversion_event",
+    "symbol_universe": {
+      "base_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new",
+      "exclude": "BTC,ETH",
+      "mode": "AUTO_OLD",
+      "no_symbol_additions_or_removals_allowed_by_reconstruction": true,
+      "out_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\live_blowoff_short_paper_realistic",
+      "resolution_rule": [
+        "If coins arg is explicit, use those symbols minus excluded symbols.",
+        "If out_dir/old_short_coin_universe.txt exists, use that list minus excluded symbols.",
+        "Else if out_dir/old_short_gate_aware_config.json or strategy_config.json exists, use recorded coins minus excluded symbols.",
+        "Else scan base_dir coin directories containing raw/**/{COIN}-USDT-SWAP_1m_*.csv, minus excluded symbols."
+      ]
+    },
+    "timeframe": "1m"
+  },
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "frozen_route_contract_reconstructed": true,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_next": true,
+    "strategy_execution_allowed_now": false
+  },
+  "source_checkpoint": {
+    "generated_at_utc": "2026-05-25T17:11:29Z",
+    "head": "3a06f564a4d18759c166fd91b6cae17e845853c5",
+    "repo_clean_before_run": true,
+    "tracked_python_count_before": 907
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_FROZEN_ROUTE_CONTRACT_RECONSTRUCTION_CREATED",
+  "unresolved_fields": [],
+  "validation_checks": {
+    "contract_complete": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "family_config_loaded": true,
+    "no_api_called": true,
+    "no_api_key_used": true,
+    "no_existing_files_modified": true,
+    "no_network_used": true,
+    "no_optimization": true,
+    "no_order_endpoint_called": true,
+    "no_orders_placed": true,
+    "no_parameter_changes": true,
+    "no_private_api": true,
+    "no_runtime_live_capital": true,
+    "no_symbol_additions_or_removals": true,
+    "no_threshold_changes": true,
+    "position_sizing_contract_loaded": true,
+    "repo_clean_before_run": true,
+    "runtime_family_registry_loaded": true,
+    "source_old_short_logger_loaded": true,
+    "step1_artifact_loaded": true
+  }
+}

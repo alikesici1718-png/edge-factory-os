@@ -1,0 +1,42 @@
+{
+  "queue_name": "edge_factory_os_global_alpha_accounting_next_queue_v1",
+  "created_at_utc": "2026-05-14T01:40:38.541338+00:00",
+  "queue_status": "GLOBAL_ALPHA_ACCOUNTING_NEXT_QUEUE_READY",
+  "strategy_search_allowed_now": false,
+  "methodology_repair_allowed_now": true,
+  "future_strategy_reopen_allowed_now": false,
+  "top_next_research_key": "RD7_04_GOVERNED_RESEARCH_REOPEN_GATE",
+  "top_next_module": "edge_factory_os_governed_research_reopen_gate_v1.py",
+  "next_steps": [
+    {
+      "research_key": "RD7_04_GOVERNED_RESEARCH_REOPEN_GATE",
+      "module": "edge_factory_os_governed_research_reopen_gate_v1.py",
+      "priority": 100,
+      "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+      "purpose": "Create final governed gate that decides whether any tightly pre-registered research can reopen with explicit alpha/budget allocation.",
+      "strategy_search_allowed_now": false,
+      "candidate_generation_allowed": false,
+      "family_release_allowed": false,
+      "runtime_touch_allowed": false,
+      "capital_change_allowed": false,
+      "active_paper_allowed": false,
+      "live_allowed": false,
+      "real_orders_allowed": false
+    }
+  ],
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

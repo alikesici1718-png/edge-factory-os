@@ -1,0 +1,393 @@
+{
+  "artifact_kind": "BINANCE_SPOT_PERP_FUNDING_CARRY_FORWARD_EXTENSION_DIAGNOSTIC",
+  "comparison_to_prior_validation_holdout": {
+    "forward_holdout_2_funding_component_bps": 15.883633,
+    "forward_holdout_2_price_component_bps": 36.449276,
+    "forward_holdout_2_vs_holdout_1": {
+      "forward_net_vs_holdout_50pct_haircut_2x_cost_delta_bps": -62.144013,
+      "monthly_positive_rate_delta": -0.4,
+      "net_after_lifecycle_delta_bps": -234.636946,
+      "net_after_monthly_rebalance_delta_bps": -214.636946
+    },
+    "forward_holdout_2_vs_validation": {
+      "forward_net_vs_validation_50pct_haircut_2x_cost_delta_bps": -573.486875,
+      "monthly_positive_rate_delta": -0.5,
+      "net_after_lifecycle_delta_bps": -1245.779559,
+      "net_after_monthly_rebalance_delta_bps": -1215.779559
+    },
+    "prior_reference_metrics": {
+      "holdout_1": {
+        "base_net_after_lifecycle_cost_bps": 256.969856,
+        "base_net_after_monthly_rebalance_cost_bps": 236.969856,
+        "fifty_pct_funding_haircut_2x_cost_net_bps": 84.476923,
+        "funding_negative_event_count": 190,
+        "funding_positive_event_count": 721,
+        "gross_funding_component_bps": 284.985867,
+        "gross_price_component_bps": 1.983989,
+        "monthly_positive_rate": 0.9
+      },
+      "validation": {
+        "base_net_after_lifecycle_cost_bps": 1268.112469,
+        "base_net_after_monthly_rebalance_cost_bps": 1238.112469,
+        "fifty_pct_funding_haircut_2x_cost_net_bps": 595.819785,
+        "funding_negative_event_count": 60,
+        "funding_positive_event_count": 1038,
+        "gross_funding_component_bps": 1284.585367,
+        "gross_price_component_bps": 13.527102,
+        "monthly_positive_rate": 1.0
+      }
+    }
+  },
+  "diagnostic_method": {
+    "cost_assumptions": {
+      "lifecycle_cost_bps": 30.0,
+      "monthly_rebalance_cost_per_month_bps": 5.0,
+      "source": "prior execution/risk artifacts; fallback values match recorded 30 bps lifecycle and 5 bps per month rebalance assumptions"
+    },
+    "funding_component": "sum equal-weight average funding rate at each funding timestamp, in bps; positive funding is treated as received by the short perp leg",
+    "no_compounding": true,
+    "no_leverage_assumption": true,
+    "no_reinvestment": true,
+    "old_base_route_not_modified": true,
+    "position_model": "long Binance spot and short Binance USD-M perpetual",
+    "price_component": "sum hourly equal-weight average of spot open-to-close return minus perp open-to-close return, in bps",
+    "scope": "forward_holdout_2_only",
+    "weighting": "equal_weight_across_BTCUSDT_ETHUSDT_SOLUSDT",
+    "window_end_exclusive_utc": "2026-05-01T00:00:00Z",
+    "window_start_utc": "2025-11-01T00:00:00Z"
+  },
+  "forward_extension_assessment": {
+    "classification": "FORWARD_HOLDOUT_2_MIXED_WEAKENS_BUT_DOES_NOT_INVALIDATE_NO_LIVE_PERMISSION",
+    "grants_candidate_or_edge_or_live_or_capital_permission": false,
+    "reason": "Aggregate diagnostics are mixed but do not meet fail thresholds."
+  },
+  "forward_extension_data_review_preserved": {
+    "data_validity_classification": "FORWARD_EXTENSION_DATA_REVIEW_PASS_VALID_FOR_EXTENDED_FUNDING_CARRY_DIAGNOSTIC",
+    "duplicate_counts": {
+      "funding": 0,
+      "perp": 0,
+      "spot": 0
+    },
+    "next_allowed_step": "EXTENDED_FUNDING_CARRY_DIAGNOSTIC_ONLY",
+    "numeric_sanity_valid": true,
+    "ohlc_sanity_valid": true,
+    "reviewed_counts": {
+      "funding": 1629,
+      "perp": 13032,
+      "spot": 13032
+    },
+    "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_FORWARD_EXTENSION_DATA_REVIEW_CREATED"
+  },
+  "forward_holdout_2_aggregate_metrics": {
+    "average_funding_rate": 2.9252e-06,
+    "best_month": {
+      "funding_event_count": 93,
+      "funding_negative_event_count": 12,
+      "funding_positive_event_count": 81,
+      "gross_funding_component_bps": 34.345867,
+      "gross_price_component_bps": 12.869934,
+      "gross_total_bps": 47.215801,
+      "hour_count": 744,
+      "month": "2025-12",
+      "monthly_rebalance_cost_bps": 5.0,
+      "net_after_monthly_rebalance_cost_bps": 42.215801
+    },
+    "forward_holdout_2_funding_component_bps": 15.883633,
+    "forward_holdout_2_gross_price_component_bps": 36.449276,
+    "forward_holdout_2_gross_total_bps": 52.33291,
+    "forward_holdout_2_monthly_positive_rate": 0.5,
+    "forward_holdout_2_net_after_lifecycle_cost_bps": 22.33291,
+    "forward_holdout_2_net_after_monthly_rebalance_cost_bps": 22.33291,
+    "funding_negative_event_count": 221,
+    "funding_positive_event_count": 322,
+    "funding_total_event_count": 543,
+    "funding_zero_event_count": 0,
+    "hour_count": 4344,
+    "lifecycle_cost_bps": 30.0,
+    "month_count": 6,
+    "monthly_rebalance_cost_bps": 30.0,
+    "monthly_rebalance_cost_per_month_bps": 5.0,
+    "negative_funding_event_share": 0.406998,
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "window_end_exclusive_utc": "2026-05-01T00:00:00Z",
+    "window_start_utc": "2025-11-01T00:00:00Z",
+    "worst_month": {
+      "funding_event_count": 84,
+      "funding_negative_event_count": 69,
+      "funding_positive_event_count": 15,
+      "gross_funding_component_bps": -46.615467,
+      "gross_price_component_bps": -1.547018,
+      "gross_total_bps": -48.162485,
+      "hour_count": 672,
+      "month": "2026-02",
+      "monthly_rebalance_cost_bps": 5.0,
+      "net_after_monthly_rebalance_cost_bps": -53.162485
+    }
+  },
+  "forward_holdout_2_monthly_metrics": {
+    "best_month": {
+      "funding_event_count": 93,
+      "funding_negative_event_count": 12,
+      "funding_positive_event_count": 81,
+      "gross_funding_component_bps": 34.345867,
+      "gross_price_component_bps": 12.869934,
+      "gross_total_bps": 47.215801,
+      "hour_count": 744,
+      "month": "2025-12",
+      "monthly_rebalance_cost_bps": 5.0,
+      "net_after_monthly_rebalance_cost_bps": 42.215801
+    },
+    "month_count": 6,
+    "monthly_positive_count": 3,
+    "monthly_positive_rate": 0.5,
+    "monthly_records": {
+      "2025-11": {
+        "funding_event_count": 90,
+        "funding_negative_event_count": 20,
+        "funding_positive_event_count": 70,
+        "gross_funding_component_bps": 27.0495,
+        "gross_price_component_bps": 9.82241,
+        "gross_total_bps": 36.87191,
+        "hour_count": 720,
+        "month": "2025-11",
+        "monthly_rebalance_cost_bps": 5.0,
+        "net_after_monthly_rebalance_cost_bps": 31.87191
+      },
+      "2025-12": {
+        "funding_event_count": 93,
+        "funding_negative_event_count": 12,
+        "funding_positive_event_count": 81,
+        "gross_funding_component_bps": 34.345867,
+        "gross_price_component_bps": 12.869934,
+        "gross_total_bps": 47.215801,
+        "hour_count": 744,
+        "month": "2025-12",
+        "monthly_rebalance_cost_bps": 5.0,
+        "net_after_monthly_rebalance_cost_bps": 42.215801
+      },
+      "2026-01": {
+        "funding_event_count": 93,
+        "funding_negative_event_count": 9,
+        "funding_positive_event_count": 84,
+        "gross_funding_component_bps": 34.781367,
+        "gross_price_component_bps": 3.976411,
+        "gross_total_bps": 38.757778,
+        "hour_count": 744,
+        "month": "2026-01",
+        "monthly_rebalance_cost_bps": 5.0,
+        "net_after_monthly_rebalance_cost_bps": 33.757778
+      },
+      "2026-02": {
+        "funding_event_count": 84,
+        "funding_negative_event_count": 69,
+        "funding_positive_event_count": 15,
+        "gross_funding_component_bps": -46.615467,
+        "gross_price_component_bps": -1.547018,
+        "gross_total_bps": -48.162485,
+        "hour_count": 672,
+        "month": "2026-02",
+        "monthly_rebalance_cost_bps": 5.0,
+        "net_after_monthly_rebalance_cost_bps": -53.162485
+      },
+      "2026-03": {
+        "funding_event_count": 93,
+        "funding_negative_event_count": 62,
+        "funding_positive_event_count": 31,
+        "gross_funding_component_bps": -23.002433,
+        "gross_price_component_bps": 6.071323,
+        "gross_total_bps": -16.93111,
+        "hour_count": 744,
+        "month": "2026-03",
+        "monthly_rebalance_cost_bps": 5.0,
+        "net_after_monthly_rebalance_cost_bps": -21.93111
+      },
+      "2026-04": {
+        "funding_event_count": 90,
+        "funding_negative_event_count": 49,
+        "funding_positive_event_count": 41,
+        "gross_funding_component_bps": -10.6752,
+        "gross_price_component_bps": 5.256216,
+        "gross_total_bps": -5.418984,
+        "hour_count": 720,
+        "month": "2026-04",
+        "monthly_rebalance_cost_bps": 5.0,
+        "net_after_monthly_rebalance_cost_bps": -10.418984
+      }
+    },
+    "worst_month": {
+      "funding_event_count": 84,
+      "funding_negative_event_count": 69,
+      "funding_positive_event_count": 15,
+      "gross_funding_component_bps": -46.615467,
+      "gross_price_component_bps": -1.547018,
+      "gross_total_bps": -48.162485,
+      "hour_count": 672,
+      "month": "2026-02",
+      "monthly_rebalance_cost_bps": 5.0,
+      "net_after_monthly_rebalance_cost_bps": -53.162485
+    }
+  },
+  "forward_holdout_2_symbol_metrics": {
+    "BTCUSDT": {
+      "forward_holdout_2_equal_weight_contribution_to_aggregate_gross_bps": 33.257427,
+      "forward_holdout_2_funding_component_bps": 99.5776,
+      "forward_holdout_2_gross_price_component_bps": 0.194681,
+      "forward_holdout_2_gross_total_bps": 99.772281,
+      "forward_holdout_2_net_after_lifecycle_cost_bps": 69.772281,
+      "funding_event_count": 543,
+      "funding_negative_event_count": 180,
+      "funding_positive_event_count": 363,
+      "funding_zero_event_count": 0,
+      "hour_count": 4344,
+      "negative_funding_event_share": 0.331492,
+      "symbol": "BTCUSDT",
+      "symbol_abs_gross_contribution_share": 0.601453
+    },
+    "ETHUSDT": {
+      "forward_holdout_2_equal_weight_contribution_to_aggregate_gross_bps": 20.556576,
+      "forward_holdout_2_funding_component_bps": 65.7421,
+      "forward_holdout_2_gross_price_component_bps": -4.072371,
+      "forward_holdout_2_gross_total_bps": 61.669729,
+      "forward_holdout_2_net_after_lifecycle_cost_bps": 31.669729,
+      "funding_event_count": 543,
+      "funding_negative_event_count": 191,
+      "funding_positive_event_count": 352,
+      "funding_zero_event_count": 0,
+      "hour_count": 4344,
+      "negative_funding_event_share": 0.35175,
+      "symbol": "ETHUSDT",
+      "symbol_abs_gross_contribution_share": 0.371761
+    },
+    "SOLUSDT": {
+      "forward_holdout_2_equal_weight_contribution_to_aggregate_gross_bps": -1.481094,
+      "forward_holdout_2_funding_component_bps": -117.6688,
+      "forward_holdout_2_gross_price_component_bps": 113.225519,
+      "forward_holdout_2_gross_total_bps": -4.443281,
+      "forward_holdout_2_net_after_lifecycle_cost_bps": -34.443281,
+      "funding_event_count": 543,
+      "funding_negative_event_count": 285,
+      "funding_positive_event_count": 258,
+      "funding_zero_event_count": 0,
+      "hour_count": 4344,
+      "negative_funding_event_share": 0.524862,
+      "symbol": "SOLUSDT",
+      "symbol_abs_gross_contribution_share": 0.026785
+    }
+  },
+  "funding_event_summary": {
+    "aggregate_event_count_uses_equal_weight_average_rate_per_funding_timestamp": true,
+    "average_funding_rate": 2.9252e-06,
+    "funding_negative_event_count": 221,
+    "funding_positive_event_count": 322,
+    "funding_total_event_count": 543,
+    "funding_zero_event_count": 0,
+    "negative_funding_event_share": 0.406998,
+    "per_symbol_event_counts": {
+      "BTCUSDT": {
+        "negative": 180,
+        "positive": 363,
+        "total": 543,
+        "zero": 0
+      },
+      "ETHUSDT": {
+        "negative": 191,
+        "positive": 352,
+        "total": 543,
+        "zero": 0
+      },
+      "SOLUSDT": {
+        "negative": 285,
+        "positive": 258,
+        "total": 543,
+        "zero": 0
+      }
+    }
+  },
+  "limitations": [
+    "Forward diagnostic uses reviewed extension rows only and does not rerun or modify the prior base diagnostic artifacts.",
+    "No live exchange/account state, margin/liquidation model, actual fees, actual slippage, or capital allocation is modeled.",
+    "The diagnostic is historical and public-data based; it is not a candidate, edge claim, family release, or live/capital permission.",
+    "Monthly rebalance cost follows prior artifact convention and is not additive with lifecycle cost in the net_after_monthly_rebalance_cost_bps field."
+  ],
+  "module": "edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_diagnostic_v1",
+  "payload_sha256_excluding_hash": "14208400b5eb07e8be5334fe9472e1968fc46f848811e1c470b770dc4aba0d0a",
+  "prior_route_result_preserved": {
+    "candidate_generation_allowed": false,
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "diagnostic_promising": true,
+    "edge_claim_allowed": false,
+    "final_result_class": "SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_DIAGNOSTIC_PROMISING_REQUIRES_CLOSURE_NO_CANDIDATE_NO_EDGE",
+    "prior_artifacts_loaded": {
+      "closure": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_CLOSURE_CREATED",
+      "evaluator": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EVALUATED",
+      "execution": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EXECUTED",
+      "risk_capital": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_CREATED"
+    },
+    "risk_capital_classification": "FUNDING_CARRY_RISK_CAPITAL_FEASIBILITY_STRONG_DIAGNOSTIC_NO_LIVE_PERMISSION",
+    "route_family": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_BASELINE",
+    "runtime_live_capital_allowed": false,
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "daemon_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "forward_extension_diagnostic_created": true,
+    "live_permission_allowed_now": false,
+    "next_step_must_not_be_live_or_capital": true,
+    "runtime_permission_allowed_now": false,
+    "scheduler_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "external_extension_index": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1\\extension_index\\binance_spot_perp_funding_carry_forward_extension_index_v1.json",
+    "forward_extension_acquisition_lock": "artifacts/data_acquisition_locks/binance_spot_perp_funding_carry_forward_extension_acquisition_lock_v1.json",
+    "forward_extension_data_review": "artifacts/data_reviews/binance_spot_perp_funding_carry_forward_extension_data_review_v1.json",
+    "prior_risk_capital_diagnostic": "artifacts/risk_capital_diagnostics/binance_spot_perp_delta_neutral_funding_carry_risk_capital_feasibility_v1.json",
+    "prior_strategy_closure": "artifacts/strategy_closures/binance_spot_perp_delta_neutral_funding_carry_closure_v1.json",
+    "prior_strategy_evaluator": "artifacts/strategy_evaluations/binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.json",
+    "prior_strategy_execution": "artifacts/strategy_executions/binance_spot_perp_delta_neutral_funding_carry_execution_v1.json"
+  },
+  "source_checkpoint": {
+    "expected_head": "152c50781d1b54491ddfd33b9d76eb5bf00d0d35",
+    "head": "152c50781d1b54491ddfd33b9d76eb5bf00d0d35",
+    "repo_clean_before_run": true
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_FUNDING_CARRY_FORWARD_EXTENSION_DIAGNOSTIC_CREATED",
+  "validation_checks": {
+    "exact_symbols_verified_3": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "forward_extension_data_review_loaded": true,
+    "forward_extension_review_passed": true,
+    "metric_integrity_passed": true,
+    "no_api_called": true,
+    "no_api_key_used": true,
+    "no_candidate_generation": true,
+    "no_daemon_created": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_family_release": true,
+    "no_live_or_capital_permission": true,
+    "no_network_used": true,
+    "no_order_endpoint_called": true,
+    "no_orders_placed": true,
+    "no_private_api": true,
+    "no_runtime_enabled": true,
+    "no_scheduler_created": true,
+    "prior_strategy_artifacts_loaded": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

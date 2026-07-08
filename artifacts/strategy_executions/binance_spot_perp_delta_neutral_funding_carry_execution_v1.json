@@ -1,0 +1,3720 @@
+{
+  "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EXECUTION",
+  "basis_tracking_residual_summary": {
+    "basis_tracking_is_diagnostic_only": true,
+    "global_average_entry_spot_perp_basis_bps": -2.567415,
+    "global_average_hourly_delta_neutral_price_component_bps": -0.005364,
+    "global_max_entry_spot_perp_basis_bps": 138.007856,
+    "global_max_hourly_delta_neutral_price_component_bps": 1148.883612,
+    "global_min_entry_spot_perp_basis_bps": -2391.239792,
+    "global_min_hourly_delta_neutral_price_component_bps": -1389.830415,
+    "symbol_basis_tracking": {
+      "BTCUSDT": {
+        "average_entry_spot_perp_basis_bps": -2.10185,
+        "average_hourly_delta_neutral_price_component_bps": 0.006012,
+        "max_entry_spot_perp_basis_bps": 93.022385,
+        "max_hourly_delta_neutral_price_component_bps": 181.985808,
+        "min_entry_spot_perp_basis_bps": -59.412108,
+        "min_hourly_delta_neutral_price_component_bps": -44.65545
+      },
+      "ETHUSDT": {
+        "average_entry_spot_perp_basis_bps": -2.060206,
+        "average_hourly_delta_neutral_price_component_bps": 0.004875,
+        "max_entry_spot_perp_basis_bps": 138.007856,
+        "max_hourly_delta_neutral_price_component_bps": 248.877709,
+        "min_entry_spot_perp_basis_bps": -136.395539,
+        "min_hourly_delta_neutral_price_component_bps": -126.123205
+      },
+      "SOLUSDT": {
+        "average_entry_spot_perp_basis_bps": -3.543206,
+        "average_hourly_delta_neutral_price_component_bps": -0.027047,
+        "max_entry_spot_perp_basis_bps": 92.537808,
+        "max_hourly_delta_neutral_price_component_bps": 1148.883612,
+        "min_entry_spot_perp_basis_bps": -2391.239792,
+        "min_hourly_delta_neutral_price_component_bps": -1389.830415
+      }
+    }
+  },
+  "config_result": {
+    "aggregate_split_metrics": {
+      "holdout": {
+        "average_funding_rate": 3.12828e-05,
+        "average_hourly_gross_bps": 0.039338,
+        "funding_negative_event_count": 190,
+        "funding_positive_event_count": 721,
+        "funding_positive_event_rate": 0.791438,
+        "funding_zero_event_count": 0,
+        "gross_funding_component_bps": 284.985867,
+        "gross_price_component_bps": 1.983989,
+        "gross_total_bps": 286.969856,
+        "hour_count": 7295,
+        "median_hourly_gross_bps": 0.040547,
+        "month_count": 10,
+        "monthly_rebalance_cost_bps": 50.0,
+        "monthly_summary": {
+          "funding_positive_month_rate": 0.9,
+          "max_negative_funding_month_bps": -13.364833,
+          "month_count": 10,
+          "monthly_positive_rate_net_after_rebalance": 0.9,
+          "monthly_records": {
+            "2025-01": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 55.521967,
+              "gross_price_component_bps": 2.469955,
+              "gross_total_bps": 57.991922,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 52.991922
+            },
+            "2025-02": {
+              "funding_event_count": 84,
+              "gross_funding_component_bps": 13.077467,
+              "gross_price_component_bps": 0.990415,
+              "gross_total_bps": 14.067881,
+              "hour_count": 672,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 9.067881
+            },
+            "2025-03": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 5.692633,
+              "gross_price_component_bps": 0.222722,
+              "gross_total_bps": 5.915355,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 0.915355
+            },
+            "2025-04": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 5.8904,
+              "gross_price_component_bps": 0.92249,
+              "gross_total_bps": 6.81289,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 1.81289
+            },
+            "2025-05": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 38.8113,
+              "gross_price_component_bps": -0.404859,
+              "gross_total_bps": 38.406441,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 33.406441
+            },
+            "2025-06": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 29.022433,
+              "gross_price_component_bps": 0.006392,
+              "gross_total_bps": 29.028826,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 24.028826
+            },
+            "2025-07": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 64.880967,
+              "gross_price_component_bps": -0.700939,
+              "gross_total_bps": 64.180028,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 59.180028
+            },
+            "2025-08": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 53.261267,
+              "gross_price_component_bps": -1.281892,
+              "gross_total_bps": 51.979375,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 46.979375
+            },
+            "2025-09": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 32.192267,
+              "gross_price_component_bps": 1.107847,
+              "gross_total_bps": 33.300114,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 28.300114
+            },
+            "2025-10": {
+              "funding_event_count": 92,
+              "gross_funding_component_bps": -13.364833,
+              "gross_price_component_bps": -1.348143,
+              "gross_total_bps": -14.712976,
+              "hour_count": 743,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": -19.712976
+            }
+          },
+          "worst_month_net_after_rebalance_bps": -19.712976
+        },
+        "net_after_lifecycle_cost_bps": 256.969856,
+        "net_after_monthly_rebalance_cost_bps": 236.969856,
+        "net_lifecycle_cost_bps": 30.0,
+        "total_funding_events": 911
+      },
+      "train": {
+        "average_funding_rate": 2.00006e-05,
+        "average_hourly_gross_bps": 0.015928,
+        "funding_negative_event_count": 711,
+        "funding_positive_event_count": 2288,
+        "funding_positive_event_rate": 0.762921,
+        "funding_zero_event_count": 0,
+        "gross_funding_component_bps": 599.819283,
+        "gross_price_component_bps": -227.288161,
+        "gross_total_bps": 372.531122,
+        "hour_count": 23389,
+        "median_hourly_gross_bps": 0.061987,
+        "month_count": 32,
+        "monthly_rebalance_cost_bps": 160.0,
+        "monthly_summary": {
+          "funding_positive_month_rate": 0.75,
+          "max_negative_funding_month_bps": -1199.263733,
+          "month_count": 32,
+          "monthly_positive_rate_net_after_rebalance": 0.75,
+          "monthly_records": {
+            "2021-05": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 238.333,
+              "gross_price_component_bps": -162.961775,
+              "gross_total_bps": 75.371225,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 70.371225
+            },
+            "2021-06": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 37.7115,
+              "gross_price_component_bps": 16.667697,
+              "gross_total_bps": 54.379197,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 49.379197
+            },
+            "2021-07": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 40.497667,
+              "gross_price_component_bps": 1.12064,
+              "gross_total_bps": 41.618306,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 36.618306
+            },
+            "2021-08": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 161.881367,
+              "gross_price_component_bps": 105.448699,
+              "gross_total_bps": 267.330065,
+              "hour_count": 739,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 262.330065
+            },
+            "2021-09": {
+              "funding_event_count": 89,
+              "gross_funding_component_bps": 165.341233,
+              "gross_price_component_bps": -49.112164,
+              "gross_total_bps": 116.229069,
+              "hour_count": 717,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 111.229069
+            },
+            "2021-10": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 216.626467,
+              "gross_price_component_bps": -8.73956,
+              "gross_total_bps": 207.886907,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 202.886907
+            },
+            "2021-11": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 170.677933,
+              "gross_price_component_bps": 4.773818,
+              "gross_total_bps": 175.451751,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 170.451751
+            },
+            "2021-12": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 86.4476,
+              "gross_price_component_bps": 6.458966,
+              "gross_total_bps": 92.906566,
+              "hour_count": 743,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 87.906566
+            },
+            "2022-01": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 37.0731,
+              "gross_price_component_bps": 7.186818,
+              "gross_total_bps": 44.259918,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 39.259918
+            },
+            "2022-02": {
+              "funding_event_count": 84,
+              "gross_funding_component_bps": 10.7363,
+              "gross_price_component_bps": -1.479273,
+              "gross_total_bps": 9.257027,
+              "hour_count": 672,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 4.257027
+            },
+            "2022-03": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 64.032733,
+              "gross_price_component_bps": -3.873292,
+              "gross_total_bps": 60.159442,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 55.159442
+            },
+            "2022-04": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 20.29255,
+              "gross_price_component_bps": 8.84119,
+              "gross_total_bps": 29.13374,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 24.13374
+            },
+            "2022-05": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": -10.045,
+              "gross_price_component_bps": -11.039005,
+              "gross_total_bps": -21.084005,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": -26.084005
+            },
+            "2022-06": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": -9.667733,
+              "gross_price_component_bps": 2.062205,
+              "gross_total_bps": -7.605529,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": -12.605529
+            },
+            "2022-07": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 47.696533,
+              "gross_price_component_bps": -1.40472,
+              "gross_total_bps": 46.291813,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 41.291813
+            },
+            "2022-08": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": -0.629733,
+              "gross_price_component_bps": 1.897086,
+              "gross_total_bps": 1.267353,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": -3.732647
+            },
+            "2022-09": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": -30.175933,
+              "gross_price_component_bps": 2.720647,
+              "gross_total_bps": -27.455286,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": -32.455286
+            },
+            "2022-10": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 36.786467,
+              "gross_price_component_bps": 0.050887,
+              "gross_total_bps": 36.837353,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 31.837353
+            },
+            "2022-11": {
+              "funding_event_count": 165,
+              "gross_funding_component_bps": -1199.263733,
+              "gross_price_component_bps": -249.66499,
+              "gross_total_bps": -1448.928724,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": -1453.928724
+            },
+            "2022-12": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": -70.594667,
+              "gross_price_component_bps": -5.597631,
+              "gross_total_bps": -76.192297,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": -81.192297
+            },
+            "2023-01": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": -50.4701,
+              "gross_price_component_bps": 4.391252,
+              "gross_total_bps": -46.078848,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": -51.078848
+            },
+            "2023-02": {
+              "funding_event_count": 84,
+              "gross_funding_component_bps": 53.485433,
+              "gross_price_component_bps": -1.69073,
+              "gross_total_bps": 51.794703,
+              "hour_count": 672,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 46.794703
+            },
+            "2023-03": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 41.265067,
+              "gross_price_component_bps": 111.74799,
+              "gross_total_bps": 153.013057,
+              "hour_count": 742,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 148.013057
+            },
+            "2023-04": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 52.015433,
+              "gross_price_component_bps": 3.172506,
+              "gross_total_bps": 55.187939,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 50.187939
+            },
+            "2023-05": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 49.805667,
+              "gross_price_component_bps": -0.169243,
+              "gross_total_bps": 49.636424,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 44.636424
+            },
+            "2023-06": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 38.084067,
+              "gross_price_component_bps": -2.815205,
+              "gross_total_bps": 35.268862,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 30.268862
+            },
+            "2023-07": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 57.482933,
+              "gross_price_component_bps": 2.159436,
+              "gross_total_bps": 59.642369,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 54.642369
+            },
+            "2023-08": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 31.471567,
+              "gross_price_component_bps": 2.509543,
+              "gross_total_bps": 33.98111,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 28.98111
+            },
+            "2023-09": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": -12.4249,
+              "gross_price_component_bps": 0.35494,
+              "gross_total_bps": -12.06996,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": -17.06996
+            },
+            "2023-10": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 24.6721,
+              "gross_price_component_bps": -6.365454,
+              "gross_total_bps": 18.306646,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 13.306646
+            },
+            "2023-11": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 110.252933,
+              "gross_price_component_bps": 2.060064,
+              "gross_total_bps": 112.312997,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 107.312997
+            },
+            "2023-12": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 190.421433,
+              "gross_price_component_bps": -5.999503,
+              "gross_total_bps": 184.42193,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 179.42193
+            }
+          },
+          "worst_month_net_after_rebalance_bps": -1453.928724
+        },
+        "net_after_lifecycle_cost_bps": 342.531122,
+        "net_after_monthly_rebalance_cost_bps": 212.531122,
+        "net_lifecycle_cost_bps": 30.0,
+        "total_funding_events": 2999
+      },
+      "validation": {
+        "average_funding_rate": 0.0001169932,
+        "average_hourly_gross_bps": 0.147781,
+        "funding_negative_event_count": 60,
+        "funding_positive_event_count": 1038,
+        "funding_positive_event_rate": 0.945355,
+        "funding_zero_event_count": 0,
+        "gross_funding_component_bps": 1284.585367,
+        "gross_price_component_bps": 13.527102,
+        "gross_total_bps": 1298.112469,
+        "hour_count": 8784,
+        "median_hourly_gross_bps": 0.096249,
+        "month_count": 12,
+        "monthly_rebalance_cost_bps": 60.0,
+        "monthly_summary": {
+          "funding_positive_month_rate": 1.0,
+          "max_negative_funding_month_bps": 14.506433,
+          "month_count": 12,
+          "monthly_positive_rate_net_after_rebalance": 1.0,
+          "monthly_records": {
+            "2024-01": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 112.8943,
+              "gross_price_component_bps": 13.024557,
+              "gross_total_bps": 125.918857,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 120.918857
+            },
+            "2024-02": {
+              "funding_event_count": 87,
+              "gross_funding_component_bps": 160.067167,
+              "gross_price_component_bps": -15.199262,
+              "gross_total_bps": 144.867904,
+              "hour_count": 696,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 139.867904
+            },
+            "2024-03": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 344.229433,
+              "gross_price_component_bps": -2.956137,
+              "gross_total_bps": 341.273296,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 336.273296
+            },
+            "2024-04": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 81.692233,
+              "gross_price_component_bps": 16.77735,
+              "gross_total_bps": 98.469584,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 93.469584
+            },
+            "2024-05": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 72.404,
+              "gross_price_component_bps": -10.253562,
+              "gross_total_bps": 62.150438,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 57.150438
+            },
+            "2024-06": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 86.465067,
+              "gross_price_component_bps": 8.396151,
+              "gross_total_bps": 94.861217,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 89.861217
+            },
+            "2024-07": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 62.1494,
+              "gross_price_component_bps": 2.900399,
+              "gross_total_bps": 65.049799,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 60.049799
+            },
+            "2024-08": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 14.506433,
+              "gross_price_component_bps": 3.405804,
+              "gross_total_bps": 17.912237,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 12.912237
+            },
+            "2024-09": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 29.063,
+              "gross_price_component_bps": -0.885372,
+              "gross_total_bps": 28.177628,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 23.177628
+            },
+            "2024-10": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 68.698833,
+              "gross_price_component_bps": -3.492415,
+              "gross_total_bps": 65.206418,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 60.206418
+            },
+            "2024-11": {
+              "funding_event_count": 90,
+              "gross_funding_component_bps": 139.4718,
+              "gross_price_component_bps": -8.057366,
+              "gross_total_bps": 131.414434,
+              "hour_count": 720,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 126.414434
+            },
+            "2024-12": {
+              "funding_event_count": 93,
+              "gross_funding_component_bps": 112.9437,
+              "gross_price_component_bps": 9.866958,
+              "gross_total_bps": 122.810658,
+              "hour_count": 744,
+              "monthly_rebalance_cost_bps": 5.0,
+              "net_after_monthly_rebalance_cost_bps": 117.810658
+            }
+          },
+          "worst_month_net_after_rebalance_bps": 12.912237
+        },
+        "net_after_lifecycle_cost_bps": 1268.112469,
+        "net_after_monthly_rebalance_cost_bps": 1238.112469,
+        "net_lifecycle_cost_bps": 30.0,
+        "total_funding_events": 1098
+      }
+    },
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "symbol_split_metrics": {
+      "BTCUSDT": {
+        "holdout": {
+          "average_funding_rate": 4.65989e-05,
+          "average_hourly_gross_bps": 0.058454,
+          "funding_negative_event_count": 120,
+          "funding_positive_event_count": 791,
+          "funding_positive_event_rate": 0.868277,
+          "funding_zero_event_count": 0,
+          "gross_funding_component_bps": 424.5164,
+          "gross_price_component_bps": 1.907907,
+          "gross_total_bps": 426.424307,
+          "hour_count": 7295,
+          "median_hourly_gross_bps": 0.05027,
+          "month_count": 10,
+          "monthly_rebalance_cost_bps": 50.0,
+          "monthly_summary": {
+            "funding_positive_month_rate": 1.0,
+            "max_negative_funding_month_bps": 18.5719,
+            "month_count": 10,
+            "monthly_positive_rate_net_after_rebalance": 1.0,
+            "monthly_records": {
+              "2025-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 72.2283,
+                "gross_price_component_bps": 1.90471,
+                "gross_total_bps": 74.13301,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 69.13301
+              },
+              "2025-02": {
+                "funding_event_count": 84,
+                "gross_funding_component_bps": 37.9754,
+                "gross_price_component_bps": 1.222742,
+                "gross_total_bps": 39.198142,
+                "hour_count": 672,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 34.198142
+              },
+              "2025-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 18.5719,
+                "gross_price_component_bps": -1.125338,
+                "gross_total_bps": 17.446562,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 12.446562
+              },
+              "2025-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 21.656,
+                "gross_price_component_bps": 1.742662,
+                "gross_total_bps": 23.398662,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 18.398662
+              },
+              "2025-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 42.7087,
+                "gross_price_component_bps": -0.485977,
+                "gross_total_bps": 42.222723,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 37.222723
+              },
+              "2025-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 23.7188,
+                "gross_price_component_bps": 0.935872,
+                "gross_total_bps": 24.654672,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 19.654672
+              },
+              "2025-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 72.5856,
+                "gross_price_component_bps": -0.008813,
+                "gross_total_bps": 72.576787,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 67.576787
+              },
+              "2025-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 61.059,
+                "gross_price_component_bps": -2.297595,
+                "gross_total_bps": 58.761405,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 53.761405
+              },
+              "2025-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 43.6131,
+                "gross_price_component_bps": 1.835041,
+                "gross_total_bps": 45.448141,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 40.448141
+              },
+              "2025-10": {
+                "funding_event_count": 92,
+                "gross_funding_component_bps": 30.3996,
+                "gross_price_component_bps": -1.815398,
+                "gross_total_bps": 28.584202,
+                "hour_count": 743,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 23.584202
+              }
+            },
+            "worst_month_net_after_rebalance_bps": 12.446562
+          },
+          "net_after_lifecycle_cost_bps": 396.424307,
+          "net_after_monthly_rebalance_cost_bps": 376.424307,
+          "net_lifecycle_cost_bps": 30.0,
+          "total_funding_events": 911
+        },
+        "train": {
+          "average_funding_rate": 7.45943e-05,
+          "average_hourly_gross_bps": 0.102875,
+          "funding_negative_event_count": 433,
+          "funding_positive_event_count": 2491,
+          "funding_positive_event_rate": 0.851915,
+          "funding_zero_event_count": 0,
+          "gross_funding_component_bps": 2181.1381,
+          "gross_price_component_bps": 224.999634,
+          "gross_total_bps": 2406.137734,
+          "hour_count": 23389,
+          "median_hourly_gross_bps": 0.065781,
+          "month_count": 32,
+          "monthly_rebalance_cost_bps": 160.0,
+          "monthly_summary": {
+            "funding_positive_month_rate": 0.9375,
+            "max_negative_funding_month_bps": -17.408,
+            "month_count": 32,
+            "monthly_positive_rate_net_after_rebalance": 0.9375,
+            "monthly_records": {
+              "2021-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 229.6799,
+                "gross_price_component_bps": 2.824509,
+                "gross_total_bps": 232.504409,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 227.504409
+              },
+              "2021-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 24.1634,
+                "gross_price_component_bps": 6.322412,
+                "gross_total_bps": 30.485812,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 25.485812
+              },
+              "2021-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": -17.408,
+                "gross_price_component_bps": 1.519092,
+                "gross_total_bps": -15.888908,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -20.888908
+              },
+              "2021-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 120.7577,
+                "gross_price_component_bps": 82.702478,
+                "gross_total_bps": 203.460178,
+                "hour_count": 739,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 198.460178
+              },
+              "2021-09": {
+                "funding_event_count": 89,
+                "gross_funding_component_bps": 109.2999,
+                "gross_price_component_bps": 2.466266,
+                "gross_total_bps": 111.766166,
+                "hour_count": 717,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 106.766166
+              },
+              "2021-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 205.6079,
+                "gross_price_component_bps": -11.288617,
+                "gross_total_bps": 194.319283,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 189.319283
+              },
+              "2021-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 212.1253,
+                "gross_price_component_bps": 3.846324,
+                "gross_total_bps": 215.971624,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 210.971624
+              },
+              "2021-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 91.1074,
+                "gross_price_component_bps": 4.72627,
+                "gross_total_bps": 95.83367,
+                "hour_count": 743,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 90.83367
+              },
+              "2022-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 48.6269,
+                "gross_price_component_bps": 8.033202,
+                "gross_total_bps": 56.660102,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 51.660102
+              },
+              "2022-02": {
+                "funding_event_count": 84,
+                "gross_funding_component_bps": 25.3863,
+                "gross_price_component_bps": -4.978043,
+                "gross_total_bps": 20.408257,
+                "hour_count": 672,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 15.408257
+              },
+              "2022-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 51.6368,
+                "gross_price_component_bps": 0.290624,
+                "gross_total_bps": 51.927424,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 46.927424
+              },
+              "2022-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 24.2414,
+                "gross_price_component_bps": 4.152361,
+                "gross_total_bps": 28.393761,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 23.393761
+              },
+              "2022-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 47.7368,
+                "gross_price_component_bps": -4.871329,
+                "gross_total_bps": 42.865471,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 37.865471
+              },
+              "2022-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 24.7406,
+                "gross_price_component_bps": 9.179976,
+                "gross_total_bps": 33.920576,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 28.920576
+              },
+              "2022-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 63.7481,
+                "gross_price_component_bps": -5.478315,
+                "gross_total_bps": 58.269785,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 53.269785
+              },
+              "2022-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 16.1746,
+                "gross_price_component_bps": 1.238886,
+                "gross_total_bps": 17.413486,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 12.413486
+              },
+              "2022-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 35.4437,
+                "gross_price_component_bps": 2.468287,
+                "gross_total_bps": 37.911987,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 32.911987
+              },
+              "2022-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 52.8341,
+                "gross_price_component_bps": -1.188347,
+                "gross_total_bps": 51.645753,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 46.645753
+              },
+              "2022-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": -17.3349,
+                "gross_price_component_bps": 1.488407,
+                "gross_total_bps": -15.846493,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -20.846493
+              },
+              "2022-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 43.2581,
+                "gross_price_component_bps": -4.610844,
+                "gross_total_bps": 38.647256,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 33.647256
+              },
+              "2023-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 80.0039,
+                "gross_price_component_bps": -1.155188,
+                "gross_total_bps": 78.848712,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 73.848712
+              },
+              "2023-02": {
+                "funding_event_count": 84,
+                "gross_funding_component_bps": 68.9305,
+                "gross_price_component_bps": 1.777385,
+                "gross_total_bps": 70.707885,
+                "hour_count": 672,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 65.707885
+              },
+              "2023-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 53.4224,
+                "gross_price_component_bps": 141.390745,
+                "gross_total_bps": 194.813145,
+                "hour_count": 742,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 189.813145
+              },
+              "2023-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 44.3775,
+                "gross_price_component_bps": -0.484987,
+                "gross_total_bps": 43.892513,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 38.892513
+              },
+              "2023-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 51.2562,
+                "gross_price_component_bps": -0.228342,
+                "gross_total_bps": 51.027858,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 46.027858
+              },
+              "2023-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 61.0793,
+                "gross_price_component_bps": 0.323662,
+                "gross_total_bps": 61.402962,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 56.402962
+              },
+              "2023-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 55.9111,
+                "gross_price_component_bps": -0.325026,
+                "gross_total_bps": 55.586074,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 50.586074
+              },
+              "2023-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 53.5173,
+                "gross_price_component_bps": 0.89725,
+                "gross_total_bps": 54.41455,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 49.41455
+              },
+              "2023-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 9.5119,
+                "gross_price_component_bps": -0.611507,
+                "gross_total_bps": 8.900393,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 3.900393
+              },
+              "2023-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 38.0044,
+                "gross_price_component_bps": -8.767434,
+                "gross_total_bps": 29.236966,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 24.236966
+              },
+              "2023-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 101.8395,
+                "gross_price_component_bps": 3.384248,
+                "gross_total_bps": 105.223748,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 100.223748
+              },
+              "2023-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 171.4581,
+                "gross_price_component_bps": -10.044771,
+                "gross_total_bps": 161.413329,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 156.413329
+              }
+            },
+            "worst_month_net_after_rebalance_bps": -20.888908
+          },
+          "net_after_lifecycle_cost_bps": 2376.137734,
+          "net_after_monthly_rebalance_cost_bps": 2246.137734,
+          "net_lifecycle_cost_bps": 30.0,
+          "total_funding_events": 2924
+        },
+        "validation": {
+          "average_funding_rate": 0.0001086473,
+          "average_hourly_gross_bps": 0.136991,
+          "funding_negative_event_count": 92,
+          "funding_positive_event_count": 1006,
+          "funding_positive_event_rate": 0.916211,
+          "funding_zero_event_count": 0,
+          "gross_funding_component_bps": 1192.9474,
+          "gross_price_component_bps": 10.381477,
+          "gross_total_bps": 1203.328877,
+          "hour_count": 8784,
+          "median_hourly_gross_bps": 0.071906,
+          "month_count": 12,
+          "monthly_rebalance_cost_bps": 60.0,
+          "monthly_summary": {
+            "funding_positive_month_rate": 1.0,
+            "max_negative_funding_month_bps": 11.8973,
+            "month_count": 12,
+            "monthly_positive_rate_net_after_rebalance": 1.0,
+            "monthly_records": {
+              "2024-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 109.1779,
+                "gross_price_component_bps": 11.838898,
+                "gross_total_bps": 121.016798,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 116.016798
+              },
+              "2024-02": {
+                "funding_event_count": 87,
+                "gross_funding_component_bps": 135.1302,
+                "gross_price_component_bps": -17.189983,
+                "gross_total_bps": 117.940217,
+                "hour_count": 696,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 112.940217
+              },
+              "2024-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 315.7026,
+                "gross_price_component_bps": -0.620126,
+                "gross_total_bps": 315.082474,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 310.082474
+              },
+              "2024-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 78.0935,
+                "gross_price_component_bps": 15.357753,
+                "gross_total_bps": 93.451253,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 88.451253
+              },
+              "2024-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 63.7222,
+                "gross_price_component_bps": -8.495066,
+                "gross_total_bps": 55.227134,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 50.227134
+              },
+              "2024-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 85.0447,
+                "gross_price_component_bps": 6.756826,
+                "gross_total_bps": 91.801526,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 86.801526
+              },
+              "2024-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 58.8249,
+                "gross_price_component_bps": 3.864281,
+                "gross_total_bps": 62.689181,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 57.689181
+              },
+              "2024-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 11.8973,
+                "gross_price_component_bps": 2.448216,
+                "gross_total_bps": 14.345516,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 9.345516
+              },
+              "2024-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 16.5144,
+                "gross_price_component_bps": -1.976502,
+                "gross_total_bps": 14.537898,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 9.537898
+              },
+              "2024-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 68.0366,
+                "gross_price_component_bps": -7.243535,
+                "gross_total_bps": 60.793065,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 55.793065
+              },
+              "2024-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 130.87,
+                "gross_price_component_bps": -3.840467,
+                "gross_total_bps": 127.029533,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 122.029533
+              },
+              "2024-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 119.9331,
+                "gross_price_component_bps": 9.481183,
+                "gross_total_bps": 129.414283,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 124.414283
+              }
+            },
+            "worst_month_net_after_rebalance_bps": 9.345516
+          },
+          "net_after_lifecycle_cost_bps": 1173.328877,
+          "net_after_monthly_rebalance_cost_bps": 1143.328877,
+          "net_lifecycle_cost_bps": 30.0,
+          "total_funding_events": 1098
+        }
+      },
+      "ETHUSDT": {
+        "holdout": {
+          "average_funding_rate": 4.53993e-05,
+          "average_hourly_gross_bps": 0.056711,
+          "funding_negative_event_count": 154,
+          "funding_positive_event_count": 757,
+          "funding_positive_event_rate": 0.830955,
+          "funding_zero_event_count": 0,
+          "gross_funding_component_bps": 413.5877,
+          "gross_price_component_bps": 0.122109,
+          "gross_total_bps": 413.709809,
+          "hour_count": 7295,
+          "median_hourly_gross_bps": 0.034922,
+          "month_count": 10,
+          "monthly_rebalance_cost_bps": 50.0,
+          "monthly_summary": {
+            "funding_positive_month_rate": 1.0,
+            "max_negative_funding_month_bps": 16.5132,
+            "month_count": 10,
+            "monthly_positive_rate_net_after_rebalance": 1.0,
+            "monthly_records": {
+              "2025-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 80.578,
+                "gross_price_component_bps": 0.498497,
+                "gross_total_bps": 81.076497,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 76.076497
+              },
+              "2025-02": {
+                "funding_event_count": 84,
+                "gross_funding_component_bps": 23.6783,
+                "gross_price_component_bps": 1.143366,
+                "gross_total_bps": 24.821666,
+                "hour_count": 672,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 19.821666
+              },
+              "2025-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 20.0745,
+                "gross_price_component_bps": -0.608689,
+                "gross_total_bps": 19.465811,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 14.465811
+              },
+              "2025-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 16.5132,
+                "gross_price_component_bps": 0.072742,
+                "gross_total_bps": 16.585942,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 11.585942
+              },
+              "2025-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 52.0044,
+                "gross_price_component_bps": -1.260802,
+                "gross_total_bps": 50.743598,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 45.743598
+              },
+              "2025-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 39.9199,
+                "gross_price_component_bps": 0.208334,
+                "gross_total_bps": 40.128234,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 35.128234
+              },
+              "2025-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 69.1116,
+                "gross_price_component_bps": -0.368121,
+                "gross_total_bps": 68.743479,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 63.743479
+              },
+              "2025-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 54.0475,
+                "gross_price_component_bps": 0.305672,
+                "gross_total_bps": 54.353172,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 49.353172
+              },
+              "2025-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 27.9686,
+                "gross_price_component_bps": 0.292208,
+                "gross_total_bps": 28.260808,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 23.260808
+              },
+              "2025-10": {
+                "funding_event_count": 92,
+                "gross_funding_component_bps": 29.6917,
+                "gross_price_component_bps": -0.161097,
+                "gross_total_bps": 29.530603,
+                "hour_count": 743,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 24.530603
+              }
+            },
+            "worst_month_net_after_rebalance_bps": 11.585942
+          },
+          "net_after_lifecycle_cost_bps": 383.709809,
+          "net_after_monthly_rebalance_cost_bps": 363.709809,
+          "net_lifecycle_cost_bps": 30.0,
+          "total_funding_events": 911
+        },
+        "train": {
+          "average_funding_rate": 6.84194e-05,
+          "average_hourly_gross_bps": 0.093662,
+          "funding_negative_event_count": 518,
+          "funding_positive_event_count": 2406,
+          "funding_positive_event_rate": 0.822845,
+          "funding_zero_event_count": 0,
+          "gross_funding_component_bps": 2000.5829,
+          "gross_price_component_bps": 190.08444,
+          "gross_total_bps": 2190.66734,
+          "hour_count": 23389,
+          "median_hourly_gross_bps": 0.064087,
+          "month_count": 32,
+          "monthly_rebalance_cost_bps": 160.0,
+          "monthly_summary": {
+            "funding_positive_month_rate": 0.90625,
+            "max_negative_funding_month_bps": -154.7565,
+            "month_count": 32,
+            "monthly_positive_rate_net_after_rebalance": 0.90625,
+            "monthly_records": {
+              "2021-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 226.1931,
+                "gross_price_component_bps": -3.792162,
+                "gross_total_bps": 222.400938,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 217.400938
+              },
+              "2021-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 50.0932,
+                "gross_price_component_bps": 7.726843,
+                "gross_total_bps": 57.820043,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 52.820043
+              },
+              "2021-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 52.8904,
+                "gross_price_component_bps": 1.243567,
+                "gross_total_bps": 54.133967,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 49.133967
+              },
+              "2021-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 152.1385,
+                "gross_price_component_bps": 131.646505,
+                "gross_total_bps": 283.785005,
+                "hour_count": 739,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 278.785005
+              },
+              "2021-09": {
+                "funding_event_count": 89,
+                "gross_funding_component_bps": 155.6844,
+                "gross_price_component_bps": -27.646544,
+                "gross_total_bps": 128.037856,
+                "hour_count": 717,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 123.037856
+              },
+              "2021-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 227.4548,
+                "gross_price_component_bps": -11.166924,
+                "gross_total_bps": 216.287876,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 211.287876
+              },
+              "2021-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 148.5771,
+                "gross_price_component_bps": -0.161213,
+                "gross_total_bps": 148.415887,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 143.415887
+              },
+              "2021-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 81.0893,
+                "gross_price_component_bps": 1.29437,
+                "gross_total_bps": 82.38367,
+                "hour_count": 743,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 77.38367
+              },
+              "2022-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 28.7965,
+                "gross_price_component_bps": 4.506074,
+                "gross_total_bps": 33.302574,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 28.302574
+              },
+              "2022-02": {
+                "funding_event_count": 84,
+                "gross_funding_component_bps": 22.4352,
+                "gross_price_component_bps": -2.475222,
+                "gross_total_bps": 19.959978,
+                "hour_count": 672,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 14.959978
+              },
+              "2022-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 65.1494,
+                "gross_price_component_bps": -2.217134,
+                "gross_total_bps": 62.932266,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 57.932266
+              },
+              "2022-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 1.6408,
+                "gross_price_component_bps": 5.574665,
+                "gross_total_bps": 7.215465,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 2.215465
+              },
+              "2022-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 27.0111,
+                "gross_price_component_bps": -5.552005,
+                "gross_total_bps": 21.459095,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 16.459095
+              },
+              "2022-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": -6.1275,
+                "gross_price_component_bps": -4.711992,
+                "gross_total_bps": -10.839492,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -15.839492
+              },
+              "2022-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 39.2052,
+                "gross_price_component_bps": 3.297084,
+                "gross_total_bps": 42.502284,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 37.502284
+              },
+              "2022-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 3.2289,
+                "gross_price_component_bps": 5.019347,
+                "gross_total_bps": 8.248247,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 3.248247
+              },
+              "2022-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": -154.7565,
+                "gross_price_component_bps": -0.545111,
+                "gross_total_bps": -155.301611,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -160.301611
+              },
+              "2022-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 30.6297,
+                "gross_price_component_bps": -3.092204,
+                "gross_total_bps": 27.537496,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 22.537496
+              },
+              "2022-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": -23.7242,
+                "gross_price_component_bps": -3.791414,
+                "gross_total_bps": -27.515614,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -32.515614
+              },
+              "2022-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 45.237,
+                "gross_price_component_bps": -3.450051,
+                "gross_total_bps": 41.786949,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 36.786949
+              },
+              "2023-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 98.802,
+                "gross_price_component_bps": -1.042501,
+                "gross_total_bps": 97.759499,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 92.759499
+              },
+              "2023-02": {
+                "funding_event_count": 84,
+                "gross_funding_component_bps": 67.4899,
+                "gross_price_component_bps": 0.570135,
+                "gross_total_bps": 68.060035,
+                "hour_count": 672,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 63.060035
+              },
+              "2023-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 57.905,
+                "gross_price_component_bps": 121.265535,
+                "gross_total_bps": 179.170535,
+                "hour_count": 742,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 174.170535
+              },
+              "2023-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 47.9102,
+                "gross_price_component_bps": 4.189364,
+                "gross_total_bps": 52.099564,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 47.099564
+              },
+              "2023-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 42.9504,
+                "gross_price_component_bps": -5.363147,
+                "gross_total_bps": 37.587253,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 32.587253
+              },
+              "2023-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 44.8098,
+                "gross_price_component_bps": -3.507794,
+                "gross_total_bps": 41.302006,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 36.302006
+              },
+              "2023-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 57.4549,
+                "gross_price_component_bps": 1.273056,
+                "gross_total_bps": 58.727956,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 53.727956
+              },
+              "2023-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 35.4414,
+                "gross_price_component_bps": -2.264732,
+                "gross_total_bps": 33.176668,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 28.176668
+              },
+              "2023-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 17.0,
+                "gross_price_component_bps": 0.734061,
+                "gross_total_bps": 17.734061,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 12.734061
+              },
+              "2023-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 57.8416,
+                "gross_price_component_bps": -11.000281,
+                "gross_total_bps": 46.841319,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 41.841319
+              },
+              "2023-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 114.6195,
+                "gross_price_component_bps": 4.194262,
+                "gross_total_bps": 118.813762,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 113.813762
+              },
+              "2023-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 185.5118,
+                "gross_price_component_bps": -10.669999,
+                "gross_total_bps": 174.841801,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 169.841801
+              }
+            },
+            "worst_month_net_after_rebalance_bps": -160.301611
+          },
+          "net_after_lifecycle_cost_bps": 2160.66734,
+          "net_after_monthly_rebalance_cost_bps": 2030.66734,
+          "net_lifecycle_cost_bps": 30.0,
+          "total_funding_events": 2924
+        },
+        "validation": {
+          "average_funding_rate": 0.0001182064,
+          "average_hourly_gross_bps": 0.14801,
+          "funding_negative_event_count": 46,
+          "funding_positive_event_count": 1052,
+          "funding_positive_event_rate": 0.958106,
+          "funding_zero_event_count": 0,
+          "gross_funding_component_bps": 1297.9061,
+          "gross_price_component_bps": 2.211774,
+          "gross_total_bps": 1300.117874,
+          "hour_count": 8784,
+          "median_hourly_gross_bps": 0.101398,
+          "month_count": 12,
+          "monthly_rebalance_cost_bps": 60.0,
+          "monthly_summary": {
+            "funding_positive_month_rate": 1.0,
+            "max_negative_funding_month_bps": 14.2264,
+            "month_count": 12,
+            "monthly_positive_rate_net_after_rebalance": 1.0,
+            "monthly_records": {
+              "2024-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 113.5132,
+                "gross_price_component_bps": 13.180562,
+                "gross_total_bps": 126.693762,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 121.693762
+              },
+              "2024-02": {
+                "funding_event_count": 87,
+                "gross_funding_component_bps": 136.7158,
+                "gross_price_component_bps": -16.397234,
+                "gross_total_bps": 120.318566,
+                "hour_count": 696,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 115.318566
+              },
+              "2024-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 322.9878,
+                "gross_price_component_bps": -3.722699,
+                "gross_total_bps": 319.265101,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 314.265101
+              },
+              "2024-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 77.8243,
+                "gross_price_component_bps": 14.04341,
+                "gross_total_bps": 91.86771,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 86.86771
+              },
+              "2024-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 83.7218,
+                "gross_price_component_bps": -11.225286,
+                "gross_total_bps": 72.496514,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 67.496514
+              },
+              "2024-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 89.3802,
+                "gross_price_component_bps": 9.35112,
+                "gross_total_bps": 98.73132,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 93.73132
+              },
+              "2024-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 68.4902,
+                "gross_price_component_bps": -0.626078,
+                "gross_total_bps": 67.864122,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 62.864122
+              },
+              "2024-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 14.2264,
+                "gross_price_component_bps": 0.567766,
+                "gross_total_bps": 14.794166,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 9.794166
+              },
+              "2024-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 38.3845,
+                "gross_price_component_bps": -1.334463,
+                "gross_total_bps": 37.050037,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 32.050037
+              },
+              "2024-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 80.8118,
+                "gross_price_component_bps": -2.692569,
+                "gross_total_bps": 78.119231,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 73.119231
+              },
+              "2024-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 152.0251,
+                "gross_price_component_bps": -8.020068,
+                "gross_total_bps": 144.005032,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 139.005032
+              },
+              "2024-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 119.825,
+                "gross_price_component_bps": 9.087312,
+                "gross_total_bps": 128.912312,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 123.912312
+              }
+            },
+            "worst_month_net_after_rebalance_bps": 9.794166
+          },
+          "net_after_lifecycle_cost_bps": 1270.117874,
+          "net_after_monthly_rebalance_cost_bps": 1240.117874,
+          "net_lifecycle_cost_bps": 30.0,
+          "total_funding_events": 1098
+        }
+      },
+      "SOLUSDT": {
+        "holdout": {
+          "average_funding_rate": 1.85e-06,
+          "average_hourly_gross_bps": 0.002848,
+          "funding_negative_event_count": 357,
+          "funding_positive_event_count": 554,
+          "funding_positive_event_rate": 0.608123,
+          "funding_zero_event_count": 0,
+          "gross_funding_component_bps": 16.8535,
+          "gross_price_component_bps": 3.921952,
+          "gross_total_bps": 20.775452,
+          "hour_count": 7295,
+          "median_hourly_gross_bps": 0.002767,
+          "month_count": 10,
+          "monthly_rebalance_cost_bps": 50.0,
+          "monthly_summary": {
+            "funding_positive_month_rate": 0.6,
+            "max_negative_funding_month_bps": -100.1858,
+            "month_count": 10,
+            "monthly_positive_rate_net_after_rebalance": 0.6,
+            "monthly_records": {
+              "2025-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 13.7596,
+                "gross_price_component_bps": 5.006658,
+                "gross_total_bps": 18.766258,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 13.766258
+              },
+              "2025-02": {
+                "funding_event_count": 84,
+                "gross_funding_component_bps": -22.4213,
+                "gross_price_component_bps": 0.605136,
+                "gross_total_bps": -21.816164,
+                "hour_count": 672,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -26.816164
+              },
+              "2025-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": -21.5685,
+                "gross_price_component_bps": 2.402193,
+                "gross_total_bps": -19.166307,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -24.166307
+              },
+              "2025-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": -20.498,
+                "gross_price_component_bps": 0.952067,
+                "gross_total_bps": -19.545933,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -24.545933
+              },
+              "2025-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 21.7208,
+                "gross_price_component_bps": 0.532204,
+                "gross_total_bps": 22.253004,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 17.253004
+              },
+              "2025-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 23.4286,
+                "gross_price_component_bps": -1.12503,
+                "gross_total_bps": 22.30357,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 17.30357
+              },
+              "2025-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 52.9457,
+                "gross_price_component_bps": -1.725884,
+                "gross_total_bps": 51.219816,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 46.219816
+              },
+              "2025-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 44.6773,
+                "gross_price_component_bps": -1.853752,
+                "gross_total_bps": 42.823548,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 37.823548
+              },
+              "2025-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 24.9951,
+                "gross_price_component_bps": 1.196292,
+                "gross_total_bps": 26.191392,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 21.191392
+              },
+              "2025-10": {
+                "funding_event_count": 92,
+                "gross_funding_component_bps": -100.1858,
+                "gross_price_component_bps": -2.067933,
+                "gross_total_bps": -102.253733,
+                "hour_count": 743,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -107.253733
+              }
+            },
+            "worst_month_net_after_rebalance_bps": -107.253733
+          },
+          "net_after_lifecycle_cost_bps": -9.224548,
+          "net_after_monthly_rebalance_cost_bps": -29.224548,
+          "net_lifecycle_cost_bps": 30.0,
+          "total_funding_events": 911
+        },
+        "train": {
+          "average_funding_rate": -8.02016e-05,
+          "average_hourly_gross_bps": -0.1499,
+          "funding_negative_event_count": 863,
+          "funding_positive_event_count": 2119,
+          "funding_positive_event_rate": 0.710597,
+          "funding_zero_event_count": 0,
+          "gross_funding_component_bps": -2391.6117,
+          "gross_price_component_bps": -1096.107985,
+          "gross_total_bps": -3487.719685,
+          "hour_count": 23267,
+          "median_hourly_gross_bps": 0.004674,
+          "month_count": 32,
+          "monthly_rebalance_cost_bps": 160.0,
+          "monthly_summary": {
+            "funding_positive_month_rate": 0.71875,
+            "max_negative_funding_month_bps": -3556.7321,
+            "month_count": 32,
+            "monthly_positive_rate_net_after_rebalance": 0.65625,
+            "monthly_records": {
+              "2021-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 259.126,
+                "gross_price_component_bps": -487.917673,
+                "gross_total_bps": -228.791673,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -233.791673
+              },
+              "2021-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 38.8779,
+                "gross_price_component_bps": 35.953836,
+                "gross_total_bps": 74.831736,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 69.831736
+              },
+              "2021-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 86.0106,
+                "gross_price_component_bps": 0.59926,
+                "gross_total_bps": 86.60986,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 81.60986
+              },
+              "2021-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 212.7479,
+                "gross_price_component_bps": 101.997113,
+                "gross_total_bps": 314.745013,
+                "hour_count": 739,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 309.745013
+              },
+              "2021-09": {
+                "funding_event_count": 89,
+                "gross_funding_component_bps": 231.0394,
+                "gross_price_component_bps": -122.156214,
+                "gross_total_bps": 108.883186,
+                "hour_count": 717,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 103.883186
+              },
+              "2021-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 216.8167,
+                "gross_price_component_bps": -3.76314,
+                "gross_total_bps": 213.05356,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 208.05356
+              },
+              "2021-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 151.3314,
+                "gross_price_component_bps": 10.636344,
+                "gross_total_bps": 161.967744,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 156.967744
+              },
+              "2021-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 87.1461,
+                "gross_price_component_bps": 13.356258,
+                "gross_total_bps": 100.502358,
+                "hour_count": 743,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 95.502358
+              },
+              "2022-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 33.7959,
+                "gross_price_component_bps": 9.021179,
+                "gross_total_bps": 42.817079,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 37.817079
+              },
+              "2022-02": {
+                "funding_event_count": 74,
+                "gross_funding_component_bps": -18.1202,
+                "gross_price_component_bps": 5.494971,
+                "gross_total_bps": -12.625229,
+                "hour_count": 599,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -17.625229
+              },
+              "2022-03": {
+                "funding_event_count": 92,
+                "gross_funding_component_bps": 74.312,
+                "gross_price_component_bps": -8.853675,
+                "gross_total_bps": 65.458325,
+                "hour_count": 743,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 60.458325
+              },
+              "2022-04": {
+                "funding_event_count": 84,
+                "gross_funding_component_bps": 29.1545,
+                "gross_price_component_bps": 14.317904,
+                "gross_total_bps": 43.472404,
+                "hour_count": 672,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 38.472404
+              },
+              "2022-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": -104.8829,
+                "gross_price_component_bps": -22.693682,
+                "gross_total_bps": -127.576582,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -132.576582
+              },
+              "2022-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": -47.6163,
+                "gross_price_component_bps": 1.71863,
+                "gross_total_bps": -45.89767,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -50.89767
+              },
+              "2022-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 40.1363,
+                "gross_price_component_bps": -2.032928,
+                "gross_total_bps": 38.103372,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 33.103372
+              },
+              "2022-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": -21.2927,
+                "gross_price_component_bps": -0.566975,
+                "gross_total_bps": -21.859675,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -26.859675
+              },
+              "2022-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 28.785,
+                "gross_price_component_bps": 6.238767,
+                "gross_total_bps": 35.023767,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 30.023767
+              },
+              "2022-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 26.8956,
+                "gross_price_component_bps": 4.433211,
+                "gross_total_bps": 31.328811,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 26.328811
+              },
+              "2022-11": {
+                "funding_event_count": 165,
+                "gross_funding_component_bps": -3556.7321,
+                "gross_price_component_bps": -746.691964,
+                "gross_total_bps": -4303.424064,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -4308.424064
+              },
+              "2022-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": -300.2791,
+                "gross_price_component_bps": -8.731997,
+                "gross_total_bps": -309.011097,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -314.011097
+              },
+              "2023-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": -330.2162,
+                "gross_price_component_bps": 15.371444,
+                "gross_total_bps": -314.844756,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -319.844756
+              },
+              "2023-02": {
+                "funding_event_count": 84,
+                "gross_funding_component_bps": 24.0359,
+                "gross_price_component_bps": -7.419712,
+                "gross_total_bps": 16.616188,
+                "hour_count": 672,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 11.616188
+              },
+              "2023-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 12.4678,
+                "gross_price_component_bps": 72.58769,
+                "gross_total_bps": 85.05549,
+                "hour_count": 742,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 80.05549
+              },
+              "2023-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 63.7586,
+                "gross_price_component_bps": 5.81314,
+                "gross_total_bps": 69.57174,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 64.57174
+              },
+              "2023-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 55.2104,
+                "gross_price_component_bps": 5.08376,
+                "gross_total_bps": 60.29416,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 55.29416
+              },
+              "2023-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 8.3631,
+                "gross_price_component_bps": -5.261482,
+                "gross_total_bps": 3.101618,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -1.898382
+              },
+              "2023-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 59.0828,
+                "gross_price_component_bps": 5.530277,
+                "gross_total_bps": 64.613077,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 59.613077
+              },
+              "2023-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 5.456,
+                "gross_price_component_bps": 8.896111,
+                "gross_total_bps": 14.352111,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 9.352111
+              },
+              "2023-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": -63.7866,
+                "gross_price_component_bps": 0.942267,
+                "gross_total_bps": -62.844333,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -67.844333
+              },
+              "2023-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": -21.8297,
+                "gross_price_component_bps": 0.671352,
+                "gross_total_bps": -21.158348,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": -26.158348
+              },
+              "2023-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 114.2998,
+                "gross_price_component_bps": -1.398318,
+                "gross_total_bps": 112.901482,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 107.901482
+              },
+              "2023-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 214.2944,
+                "gross_price_component_bps": 2.716261,
+                "gross_total_bps": 217.010661,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 212.010661
+              }
+            },
+            "worst_month_net_after_rebalance_bps": -4308.424064
+          },
+          "net_after_lifecycle_cost_bps": -3517.719685,
+          "net_after_monthly_rebalance_cost_bps": -3647.719685,
+          "net_lifecycle_cost_bps": 30.0,
+          "total_funding_events": 2982
+        },
+        "validation": {
+          "average_funding_rate": 0.0001241259,
+          "average_hourly_gross_bps": 0.158344,
+          "funding_negative_event_count": 114,
+          "funding_positive_event_count": 984,
+          "funding_positive_event_rate": 0.896175,
+          "funding_zero_event_count": 0,
+          "gross_funding_component_bps": 1362.9026,
+          "gross_price_component_bps": 27.988055,
+          "gross_total_bps": 1390.890655,
+          "hour_count": 8784,
+          "median_hourly_gross_bps": 0.074395,
+          "month_count": 12,
+          "monthly_rebalance_cost_bps": 60.0,
+          "monthly_summary": {
+            "funding_positive_month_rate": 1.0,
+            "max_negative_funding_month_bps": 17.3956,
+            "month_count": 12,
+            "monthly_positive_rate_net_after_rebalance": 1.0,
+            "monthly_records": {
+              "2024-01": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 115.9918,
+                "gross_price_component_bps": 14.05421,
+                "gross_total_bps": 130.04601,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 125.04601
+              },
+              "2024-02": {
+                "funding_event_count": 87,
+                "gross_funding_component_bps": 208.3555,
+                "gross_price_component_bps": -12.010569,
+                "gross_total_bps": 196.344931,
+                "hour_count": 696,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 191.344931
+              },
+              "2024-03": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 393.9979,
+                "gross_price_component_bps": -4.525587,
+                "gross_total_bps": 389.472313,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 384.472313
+              },
+              "2024-04": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 89.1589,
+                "gross_price_component_bps": 20.930888,
+                "gross_total_bps": 110.089788,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 105.089788
+              },
+              "2024-05": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 69.768,
+                "gross_price_component_bps": -11.040334,
+                "gross_total_bps": 58.727666,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 53.727666
+              },
+              "2024-06": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 84.9703,
+                "gross_price_component_bps": 9.080506,
+                "gross_total_bps": 94.050806,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 89.050806
+              },
+              "2024-07": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 59.1331,
+                "gross_price_component_bps": 5.462993,
+                "gross_total_bps": 64.596093,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 59.596093
+              },
+              "2024-08": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 17.3956,
+                "gross_price_component_bps": 7.20143,
+                "gross_total_bps": 24.59703,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 19.59703
+              },
+              "2024-09": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 32.2901,
+                "gross_price_component_bps": 0.654848,
+                "gross_total_bps": 32.944948,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 27.944948
+              },
+              "2024-10": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 57.2481,
+                "gross_price_component_bps": -0.541142,
+                "gross_total_bps": 56.706958,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 51.706958
+              },
+              "2024-11": {
+                "funding_event_count": 90,
+                "gross_funding_component_bps": 135.5203,
+                "gross_price_component_bps": -12.311564,
+                "gross_total_bps": 123.208736,
+                "hour_count": 720,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 118.208736
+              },
+              "2024-12": {
+                "funding_event_count": 93,
+                "gross_funding_component_bps": 99.073,
+                "gross_price_component_bps": 11.032378,
+                "gross_total_bps": 110.105378,
+                "hour_count": 744,
+                "monthly_rebalance_cost_bps": 5.0,
+                "net_after_monthly_rebalance_cost_bps": 105.105378
+              }
+            },
+            "worst_month_net_after_rebalance_bps": 19.59703
+          },
+          "net_after_lifecycle_cost_bps": 1360.890655,
+          "net_after_monthly_rebalance_cost_bps": 1330.890655,
+          "net_lifecycle_cost_bps": 30.0,
+          "total_funding_events": 1098
+        }
+      }
+    }
+  },
+  "cost_scenario_metrics": {
+    "holdout_net_after_lifecycle_cost_bps": 256.969856,
+    "holdout_net_after_monthly_rebalance_cost_bps": 236.969856,
+    "lifecycle_cost_bps_per_split": 30.0,
+    "monthly_rebalance_cost_bps_per_month": 5.0,
+    "validation_net_after_lifecycle_cost_bps": 1268.112469,
+    "validation_net_after_monthly_rebalance_cost_bps": 1238.112469
+  },
+  "execution_policy": {
+    "cost_policy": {
+      "hourly_cost_applied": false,
+      "monthly_rebalance_cost_bps": 5.0,
+      "perp_entry_exit_cost_bps_total": 10.0,
+      "spot_entry_exit_cost_bps_total": 20.0,
+      "total_lifecycle_cost_bps": 30.0
+    },
+    "funding_convention": "funding event allocated to the one-hour interval ending at funding_time_utc; short perp cashflow equals funding_rate",
+    "gross_return_formula": "spot_open_next / spot_open_current - 1 - (perp_open_next / perp_open_current - 1) + funding_cashflow",
+    "no_compounding": true,
+    "no_liquidation_modeling_beyond_risk_note": true,
+    "no_reinvestment": true,
+    "portfolio_weighting": "equal-weight across available BTCUSDT, ETHUSDT, SOLUSDT symbol intervals",
+    "position": "long spot 1 notional and short perp 1 notional per symbol",
+    "return_convention": "hourly open-to-open using spot open and USD-M perp panel open"
+  },
+  "forbidden_actions_confirmed_false": {
+    "api_key_used": false,
+    "candidate_generated": false,
+    "edge_claimed": false,
+    "family_released": false,
+    "okx_rows_read": false,
+    "orders_sent": false,
+    "parameter_expansion_tested": false,
+    "private_api_used": false,
+    "runtime_live_capital_permission_granted": false,
+    "symbol_expansion_tested": false,
+    "trading_endpoint_used": false
+  },
+  "funding_event_stats": {
+    "aggregate_holdout_negative_event_count": 190,
+    "aggregate_holdout_positive_event_count": 721,
+    "aggregate_validation_negative_event_count": 60,
+    "aggregate_validation_positive_event_count": 1038,
+    "by_symbol": {
+      "BTCUSDT": {
+        "average_funding_rate": 7.69959e-05,
+        "funding_file_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_funding_rate_full_range_202105_202510_acquisition_lock_v1\\funding_by_symbol\\BTCUSDT_funding_rate.jsonl.gz",
+        "loaded_funding_event_count": 4934,
+        "max_funding_rate": 0.00098653,
+        "min_funding_rate": -0.00119172,
+        "negative_funding_event_count": 645,
+        "positive_funding_event_count": 4289,
+        "zero_funding_event_count": 0
+      },
+      "ETHUSDT": {
+        "average_funding_rate": 7.52304e-05,
+        "funding_file_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_funding_rate_full_range_202105_202510_acquisition_lock_v1\\funding_by_symbol\\ETHUSDT_funding_rate.jsonl.gz",
+        "loaded_funding_event_count": 4934,
+        "max_funding_rate": 0.00113675,
+        "min_funding_rate": -0.00356332,
+        "negative_funding_event_count": 719,
+        "positive_funding_event_count": 4215,
+        "zero_funding_event_count": 0
+      },
+      "SOLUSDT": {
+        "average_funding_rate": -2.00641e-05,
+        "funding_file_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_funding_rate_full_range_202105_202510_acquisition_lock_v1\\funding_by_symbol\\SOLUSDT_funding_rate.jsonl.gz",
+        "loaded_funding_event_count": 5009,
+        "max_funding_rate": 0.00172483,
+        "min_funding_rate": -0.02,
+        "negative_funding_event_count": 1339,
+        "positive_funding_event_count": 3670,
+        "zero_funding_event_count": 0
+      }
+    }
+  },
+  "input_data_validation": {
+    "funding_data_review": {
+      "duplicate_count": 0,
+      "funding_data_valid_for_full_range_signal_construction": true,
+      "invalid_numeric_count": 0,
+      "large_gap_review": {
+        "large_gap_threshold_hours": 24,
+        "max_gap_hours_global": 8.000013,
+        "symbols_with_large_gaps": [],
+        "total_large_gap_count": 0
+      },
+      "max_funding_time_utc": "2025-10-31T20:00:00Z",
+      "min_funding_time_utc": "2021-05-01T00:00:00Z",
+      "missing_required_field_count": 0,
+      "monotonic_violation_count": 0,
+      "p0_issue_count": 0,
+      "p0_issues": [],
+      "records_outside_window_count": 0,
+      "symbols_with_zero_records": [],
+      "total_funding_records": 373366
+    },
+    "funding_load_stats_by_symbol": {
+      "BTCUSDT": {
+        "average_funding_rate": 7.69959e-05,
+        "funding_file_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_funding_rate_full_range_202105_202510_acquisition_lock_v1\\funding_by_symbol\\BTCUSDT_funding_rate.jsonl.gz",
+        "loaded_funding_event_count": 4934,
+        "max_funding_rate": 0.00098653,
+        "min_funding_rate": -0.00119172,
+        "negative_funding_event_count": 645,
+        "positive_funding_event_count": 4289,
+        "zero_funding_event_count": 0
+      },
+      "ETHUSDT": {
+        "average_funding_rate": 7.52304e-05,
+        "funding_file_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_funding_rate_full_range_202105_202510_acquisition_lock_v1\\funding_by_symbol\\ETHUSDT_funding_rate.jsonl.gz",
+        "loaded_funding_event_count": 4934,
+        "max_funding_rate": 0.00113675,
+        "min_funding_rate": -0.00356332,
+        "negative_funding_event_count": 719,
+        "positive_funding_event_count": 4215,
+        "zero_funding_event_count": 0
+      },
+      "SOLUSDT": {
+        "average_funding_rate": -2.00641e-05,
+        "funding_file_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_funding_rate_full_range_202105_202510_acquisition_lock_v1\\funding_by_symbol\\SOLUSDT_funding_rate.jsonl.gz",
+        "loaded_funding_event_count": 5009,
+        "max_funding_rate": 0.00172483,
+        "min_funding_rate": -0.02,
+        "negative_funding_event_count": 1339,
+        "positive_funding_event_count": 3670,
+        "zero_funding_event_count": 0
+      }
+    },
+    "funding_review_status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_FUNDING_RATE_FULL_RANGE_202105_202510_REVIEW_CREATED",
+    "perp_review_status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_NEAR_5Y_PANEL_BUILD_REVIEW_AFTER_EXECUTION_CREATED",
+    "perp_rows_loaded_by_symbol": {
+      "BTCUSDT": 39480,
+      "ETHUSDT": 39480,
+      "SOLUSDT": 39360
+    },
+    "spot_panel_review_summary": {
+      "complete_1h_false_count": 9,
+      "duplicate_symbol_timestamp_count": 0,
+      "invalid_numeric_count": 0,
+      "max_gap_hours": 5,
+      "non_hourly_timestamp_count": 0,
+      "ohlc_sanity_failure_count": 0,
+      "required_field_missing_count": 0,
+      "reviewed_max_timestamp_utc": "2025-10-31T23:00:00Z",
+      "reviewed_min_timestamp_utc": "2021-05-01T00:00:00Z",
+      "reviewed_symbol_count": 3,
+      "reviewed_total_rows": 118419,
+      "rows_outside_window_count": 0,
+      "timestamp_gap_count": 9
+    },
+    "spot_review_classification": "BINANCE_SPOT_3SYMBOL_1H_PANEL_REVIEW_PASS_WITH_P1_ATTENTION_VALID_FOR_CASH_AND_CARRY_DIAGNOSTIC_EXECUTION",
+    "spot_rows_loaded_by_symbol": {
+      "BTCUSDT": 39473,
+      "ETHUSDT": 39473,
+      "SOLUSDT": 39473
+    },
+    "symbols_loaded": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "metric_integrity_summary": {
+    "metric_integrity_checks": {
+      "config_id_matches_route": true,
+      "exactly_one_config_executed": true,
+      "no_candidate_edge_release_runtime": true,
+      "no_cross_window_returns": true,
+      "no_nan_or_inf_metrics": true,
+      "no_non_preregistered_config": true,
+      "no_okx_rows_read": true,
+      "no_timestamp_outside_declared_splits": true
+    },
+    "metric_integrity_issue_count": 0,
+    "metric_integrity_passed": true,
+    "nan_inf_metric_count": 0,
+    "timestamp_outside_split_count": 0
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_spot_perp_delta_neutral_funding_carry_execution_v1.py",
+  "monthly_metrics": {
+    "holdout": {
+      "funding_positive_month_rate": 0.9,
+      "max_negative_funding_month_bps": -13.364833,
+      "month_count": 10,
+      "monthly_positive_rate_net_after_rebalance": 0.9,
+      "monthly_records": {
+        "2025-01": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 55.521967,
+          "gross_price_component_bps": 2.469955,
+          "gross_total_bps": 57.991922,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 52.991922
+        },
+        "2025-02": {
+          "funding_event_count": 84,
+          "gross_funding_component_bps": 13.077467,
+          "gross_price_component_bps": 0.990415,
+          "gross_total_bps": 14.067881,
+          "hour_count": 672,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 9.067881
+        },
+        "2025-03": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 5.692633,
+          "gross_price_component_bps": 0.222722,
+          "gross_total_bps": 5.915355,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 0.915355
+        },
+        "2025-04": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 5.8904,
+          "gross_price_component_bps": 0.92249,
+          "gross_total_bps": 6.81289,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 1.81289
+        },
+        "2025-05": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 38.8113,
+          "gross_price_component_bps": -0.404859,
+          "gross_total_bps": 38.406441,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 33.406441
+        },
+        "2025-06": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 29.022433,
+          "gross_price_component_bps": 0.006392,
+          "gross_total_bps": 29.028826,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 24.028826
+        },
+        "2025-07": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 64.880967,
+          "gross_price_component_bps": -0.700939,
+          "gross_total_bps": 64.180028,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 59.180028
+        },
+        "2025-08": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 53.261267,
+          "gross_price_component_bps": -1.281892,
+          "gross_total_bps": 51.979375,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 46.979375
+        },
+        "2025-09": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 32.192267,
+          "gross_price_component_bps": 1.107847,
+          "gross_total_bps": 33.300114,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 28.300114
+        },
+        "2025-10": {
+          "funding_event_count": 92,
+          "gross_funding_component_bps": -13.364833,
+          "gross_price_component_bps": -1.348143,
+          "gross_total_bps": -14.712976,
+          "hour_count": 743,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": -19.712976
+        }
+      },
+      "worst_month_net_after_rebalance_bps": -19.712976
+    },
+    "train": {
+      "funding_positive_month_rate": 0.75,
+      "max_negative_funding_month_bps": -1199.263733,
+      "month_count": 32,
+      "monthly_positive_rate_net_after_rebalance": 0.75,
+      "monthly_records": {
+        "2021-05": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 238.333,
+          "gross_price_component_bps": -162.961775,
+          "gross_total_bps": 75.371225,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 70.371225
+        },
+        "2021-06": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 37.7115,
+          "gross_price_component_bps": 16.667697,
+          "gross_total_bps": 54.379197,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 49.379197
+        },
+        "2021-07": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 40.497667,
+          "gross_price_component_bps": 1.12064,
+          "gross_total_bps": 41.618306,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 36.618306
+        },
+        "2021-08": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 161.881367,
+          "gross_price_component_bps": 105.448699,
+          "gross_total_bps": 267.330065,
+          "hour_count": 739,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 262.330065
+        },
+        "2021-09": {
+          "funding_event_count": 89,
+          "gross_funding_component_bps": 165.341233,
+          "gross_price_component_bps": -49.112164,
+          "gross_total_bps": 116.229069,
+          "hour_count": 717,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 111.229069
+        },
+        "2021-10": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 216.626467,
+          "gross_price_component_bps": -8.73956,
+          "gross_total_bps": 207.886907,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 202.886907
+        },
+        "2021-11": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 170.677933,
+          "gross_price_component_bps": 4.773818,
+          "gross_total_bps": 175.451751,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 170.451751
+        },
+        "2021-12": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 86.4476,
+          "gross_price_component_bps": 6.458966,
+          "gross_total_bps": 92.906566,
+          "hour_count": 743,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 87.906566
+        },
+        "2022-01": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 37.0731,
+          "gross_price_component_bps": 7.186818,
+          "gross_total_bps": 44.259918,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 39.259918
+        },
+        "2022-02": {
+          "funding_event_count": 84,
+          "gross_funding_component_bps": 10.7363,
+          "gross_price_component_bps": -1.479273,
+          "gross_total_bps": 9.257027,
+          "hour_count": 672,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 4.257027
+        },
+        "2022-03": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 64.032733,
+          "gross_price_component_bps": -3.873292,
+          "gross_total_bps": 60.159442,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 55.159442
+        },
+        "2022-04": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 20.29255,
+          "gross_price_component_bps": 8.84119,
+          "gross_total_bps": 29.13374,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 24.13374
+        },
+        "2022-05": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": -10.045,
+          "gross_price_component_bps": -11.039005,
+          "gross_total_bps": -21.084005,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": -26.084005
+        },
+        "2022-06": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": -9.667733,
+          "gross_price_component_bps": 2.062205,
+          "gross_total_bps": -7.605529,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": -12.605529
+        },
+        "2022-07": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 47.696533,
+          "gross_price_component_bps": -1.40472,
+          "gross_total_bps": 46.291813,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 41.291813
+        },
+        "2022-08": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": -0.629733,
+          "gross_price_component_bps": 1.897086,
+          "gross_total_bps": 1.267353,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": -3.732647
+        },
+        "2022-09": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": -30.175933,
+          "gross_price_component_bps": 2.720647,
+          "gross_total_bps": -27.455286,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": -32.455286
+        },
+        "2022-10": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 36.786467,
+          "gross_price_component_bps": 0.050887,
+          "gross_total_bps": 36.837353,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 31.837353
+        },
+        "2022-11": {
+          "funding_event_count": 165,
+          "gross_funding_component_bps": -1199.263733,
+          "gross_price_component_bps": -249.66499,
+          "gross_total_bps": -1448.928724,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": -1453.928724
+        },
+        "2022-12": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": -70.594667,
+          "gross_price_component_bps": -5.597631,
+          "gross_total_bps": -76.192297,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": -81.192297
+        },
+        "2023-01": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": -50.4701,
+          "gross_price_component_bps": 4.391252,
+          "gross_total_bps": -46.078848,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": -51.078848
+        },
+        "2023-02": {
+          "funding_event_count": 84,
+          "gross_funding_component_bps": 53.485433,
+          "gross_price_component_bps": -1.69073,
+          "gross_total_bps": 51.794703,
+          "hour_count": 672,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 46.794703
+        },
+        "2023-03": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 41.265067,
+          "gross_price_component_bps": 111.74799,
+          "gross_total_bps": 153.013057,
+          "hour_count": 742,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 148.013057
+        },
+        "2023-04": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 52.015433,
+          "gross_price_component_bps": 3.172506,
+          "gross_total_bps": 55.187939,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 50.187939
+        },
+        "2023-05": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 49.805667,
+          "gross_price_component_bps": -0.169243,
+          "gross_total_bps": 49.636424,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 44.636424
+        },
+        "2023-06": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 38.084067,
+          "gross_price_component_bps": -2.815205,
+          "gross_total_bps": 35.268862,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 30.268862
+        },
+        "2023-07": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 57.482933,
+          "gross_price_component_bps": 2.159436,
+          "gross_total_bps": 59.642369,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 54.642369
+        },
+        "2023-08": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 31.471567,
+          "gross_price_component_bps": 2.509543,
+          "gross_total_bps": 33.98111,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 28.98111
+        },
+        "2023-09": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": -12.4249,
+          "gross_price_component_bps": 0.35494,
+          "gross_total_bps": -12.06996,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": -17.06996
+        },
+        "2023-10": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 24.6721,
+          "gross_price_component_bps": -6.365454,
+          "gross_total_bps": 18.306646,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 13.306646
+        },
+        "2023-11": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 110.252933,
+          "gross_price_component_bps": 2.060064,
+          "gross_total_bps": 112.312997,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 107.312997
+        },
+        "2023-12": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 190.421433,
+          "gross_price_component_bps": -5.999503,
+          "gross_total_bps": 184.42193,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 179.42193
+        }
+      },
+      "worst_month_net_after_rebalance_bps": -1453.928724
+    },
+    "validation": {
+      "funding_positive_month_rate": 1.0,
+      "max_negative_funding_month_bps": 14.506433,
+      "month_count": 12,
+      "monthly_positive_rate_net_after_rebalance": 1.0,
+      "monthly_records": {
+        "2024-01": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 112.8943,
+          "gross_price_component_bps": 13.024557,
+          "gross_total_bps": 125.918857,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 120.918857
+        },
+        "2024-02": {
+          "funding_event_count": 87,
+          "gross_funding_component_bps": 160.067167,
+          "gross_price_component_bps": -15.199262,
+          "gross_total_bps": 144.867904,
+          "hour_count": 696,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 139.867904
+        },
+        "2024-03": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 344.229433,
+          "gross_price_component_bps": -2.956137,
+          "gross_total_bps": 341.273296,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 336.273296
+        },
+        "2024-04": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 81.692233,
+          "gross_price_component_bps": 16.77735,
+          "gross_total_bps": 98.469584,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 93.469584
+        },
+        "2024-05": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 72.404,
+          "gross_price_component_bps": -10.253562,
+          "gross_total_bps": 62.150438,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 57.150438
+        },
+        "2024-06": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 86.465067,
+          "gross_price_component_bps": 8.396151,
+          "gross_total_bps": 94.861217,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 89.861217
+        },
+        "2024-07": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 62.1494,
+          "gross_price_component_bps": 2.900399,
+          "gross_total_bps": 65.049799,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 60.049799
+        },
+        "2024-08": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 14.506433,
+          "gross_price_component_bps": 3.405804,
+          "gross_total_bps": 17.912237,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 12.912237
+        },
+        "2024-09": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 29.063,
+          "gross_price_component_bps": -0.885372,
+          "gross_total_bps": 28.177628,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 23.177628
+        },
+        "2024-10": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 68.698833,
+          "gross_price_component_bps": -3.492415,
+          "gross_total_bps": 65.206418,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 60.206418
+        },
+        "2024-11": {
+          "funding_event_count": 90,
+          "gross_funding_component_bps": 139.4718,
+          "gross_price_component_bps": -8.057366,
+          "gross_total_bps": 131.414434,
+          "hour_count": 720,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 126.414434
+        },
+        "2024-12": {
+          "funding_event_count": 93,
+          "gross_funding_component_bps": 112.9437,
+          "gross_price_component_bps": 9.866958,
+          "gross_total_bps": 122.810658,
+          "hour_count": 744,
+          "monthly_rebalance_cost_bps": 5.0,
+          "net_after_monthly_rebalance_cost_bps": 117.810658
+        }
+      },
+      "worst_month_net_after_rebalance_bps": 12.912237
+    }
+  },
+  "payload_sha256_excluding_hash": "7855d599b8fa331cbbea2f380c23306889ae486369761d900d7aed36e7191378",
+  "replacement_checks_all_true": true,
+  "risk_limitations": [
+    "Exchange, custody, margin transfer, borrow, tax, and operational risks are not modeled.",
+    "No leverage or liquidation model is applied.",
+    "Spot/perp execution quality, fees, VIP tiers, slippage, and borrow constraints are simplified fixed-cost diagnostics.",
+    "Funding cashflow uses reviewed Binance USD-M funding events only and does not imply future funding availability.",
+    "This is a historical diagnostic, not a candidate, edge claim, family release, or runtime/live/capital permission."
+  ],
+  "route_definition": {
+    "config_count": 1,
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "hypothesis_name": "spot_perp_delta_neutral_funding_carry",
+    "no_funding_filter": true,
+    "no_parameter_expansion": true,
+    "no_signal_threshold": true,
+    "no_symbol_expansion": true,
+    "route_family": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_BASELINE",
+    "route_type": "spot_long_perp_short_delta_neutral_carry",
+    "strategy": "continuously hold long Binance spot and short Binance USD-M perpetual equal notional",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "timeframe": "1h"
+  },
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "next_step_may_be_evaluator_only": true,
+    "runtime_permission_allowed_now": false,
+    "strategy_diagnostic_executed": true
+  },
+  "signal_or_position_coverage_summary": {
+    "aggregate_execution_coverage": {
+      "aggregate_timestamp_count": 39468,
+      "average_available_symbols_per_timestamp": 2.996909,
+      "max_available_symbols_per_timestamp": 3,
+      "median_available_symbols_per_timestamp": 3.0,
+      "min_available_symbols_per_timestamp": 2,
+      "timestamps_with_all_3_symbols": 39346,
+      "timestamps_with_less_than_3_symbols": 122
+    },
+    "always_on_no_signal_threshold": true,
+    "split_month_counts": {
+      "holdout": 10,
+      "train": 32,
+      "validation": 12
+    },
+    "symbol_execution_coverage": {
+      "BTCUSDT": {
+        "candidate_timestamp_count": 39473,
+        "executed_hour_count": 39468,
+        "skipped_incomplete_current_bar_count": 1,
+        "skipped_missing_next_open_count": 4
+      },
+      "ETHUSDT": {
+        "candidate_timestamp_count": 39473,
+        "executed_hour_count": 39468,
+        "skipped_incomplete_current_bar_count": 1,
+        "skipped_missing_next_open_count": 4
+      },
+      "SOLUSDT": {
+        "candidate_timestamp_count": 39353,
+        "executed_hour_count": 39346,
+        "skipped_incomplete_current_bar_count": 1,
+        "skipped_missing_next_open_count": 6
+      }
+    }
+  },
+  "source_artifacts": {
+    "funding_index_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_funding_rate_full_range_202105_202510_acquisition_lock_v1\\funding_index\\binance_okx_overlap_funding_rate_full_range_202105_202510_index_v1.json",
+    "funding_index_sha256": "8007ed3b5d4477b122ca9d4b99ebda6a867dcca2f29f18653380931101c2d1ca",
+    "funding_review": "artifacts/funding_rate_reviews/binance_okx_overlap_funding_rate_full_range_202105_202510_review_v1.json",
+    "funding_review_payload_sha256_excluding_hash": "5deabb2dd6f76df1c06d2ed2a1d0fbde9011b19d6d51790a91730e91ae8b3fd4",
+    "perp_panel_review": "artifacts/panel_build_reviews/binance_okx_overlap_near_5y_panel_build_review_after_execution_v1.json",
+    "perp_panel_review_payload_sha256_excluding_hash": "34b88a3ff0870c708e2df034c243cf639b711ebce3c6a4f32edffb92a2229112",
+    "spot_panel_review": "artifacts/spot_panel_reviews/binance_spot_3symbol_1h_panel_review_cash_and_carry_v1.json",
+    "spot_panel_review_payload_sha256_excluding_hash": "a4250da80c346e0f61ad76acea8b5a159da74366a3136f1bbb73ae205498227d"
+  },
+  "source_checkpoint": {
+    "repo_clean_before_run": true,
+    "repo_head_at_run": "caaf131e0ada32e8f13f4e9e2d055ad5c5ae584a",
+    "tracked_python_count_at_start": 879
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EXECUTED",
+  "train_validation_holdout_summary": {
+    "holdout": {
+      "average_funding_rate": 3.12828e-05,
+      "average_hourly_gross_bps": 0.039338,
+      "funding_negative_event_count": 190,
+      "funding_positive_event_count": 721,
+      "funding_positive_event_rate": 0.791438,
+      "funding_zero_event_count": 0,
+      "gross_funding_component_bps": 284.985867,
+      "gross_price_component_bps": 1.983989,
+      "gross_total_bps": 286.969856,
+      "hour_count": 7295,
+      "median_hourly_gross_bps": 0.040547,
+      "month_count": 10,
+      "monthly_rebalance_cost_bps": 50.0,
+      "monthly_summary": {
+        "funding_positive_month_rate": 0.9,
+        "max_negative_funding_month_bps": -13.364833,
+        "month_count": 10,
+        "monthly_positive_rate_net_after_rebalance": 0.9,
+        "monthly_records": {
+          "2025-01": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 55.521967,
+            "gross_price_component_bps": 2.469955,
+            "gross_total_bps": 57.991922,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 52.991922
+          },
+          "2025-02": {
+            "funding_event_count": 84,
+            "gross_funding_component_bps": 13.077467,
+            "gross_price_component_bps": 0.990415,
+            "gross_total_bps": 14.067881,
+            "hour_count": 672,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 9.067881
+          },
+          "2025-03": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 5.692633,
+            "gross_price_component_bps": 0.222722,
+            "gross_total_bps": 5.915355,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 0.915355
+          },
+          "2025-04": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 5.8904,
+            "gross_price_component_bps": 0.92249,
+            "gross_total_bps": 6.81289,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 1.81289
+          },
+          "2025-05": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 38.8113,
+            "gross_price_component_bps": -0.404859,
+            "gross_total_bps": 38.406441,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 33.406441
+          },
+          "2025-06": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 29.022433,
+            "gross_price_component_bps": 0.006392,
+            "gross_total_bps": 29.028826,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 24.028826
+          },
+          "2025-07": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 64.880967,
+            "gross_price_component_bps": -0.700939,
+            "gross_total_bps": 64.180028,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 59.180028
+          },
+          "2025-08": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 53.261267,
+            "gross_price_component_bps": -1.281892,
+            "gross_total_bps": 51.979375,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 46.979375
+          },
+          "2025-09": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 32.192267,
+            "gross_price_component_bps": 1.107847,
+            "gross_total_bps": 33.300114,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 28.300114
+          },
+          "2025-10": {
+            "funding_event_count": 92,
+            "gross_funding_component_bps": -13.364833,
+            "gross_price_component_bps": -1.348143,
+            "gross_total_bps": -14.712976,
+            "hour_count": 743,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": -19.712976
+          }
+        },
+        "worst_month_net_after_rebalance_bps": -19.712976
+      },
+      "net_after_lifecycle_cost_bps": 256.969856,
+      "net_after_monthly_rebalance_cost_bps": 236.969856,
+      "net_lifecycle_cost_bps": 30.0,
+      "total_funding_events": 911
+    },
+    "holdout_reported_separately": true,
+    "holdout_used_for_config_selection": false,
+    "train": {
+      "average_funding_rate": 2.00006e-05,
+      "average_hourly_gross_bps": 0.015928,
+      "funding_negative_event_count": 711,
+      "funding_positive_event_count": 2288,
+      "funding_positive_event_rate": 0.762921,
+      "funding_zero_event_count": 0,
+      "gross_funding_component_bps": 599.819283,
+      "gross_price_component_bps": -227.288161,
+      "gross_total_bps": 372.531122,
+      "hour_count": 23389,
+      "median_hourly_gross_bps": 0.061987,
+      "month_count": 32,
+      "monthly_rebalance_cost_bps": 160.0,
+      "monthly_summary": {
+        "funding_positive_month_rate": 0.75,
+        "max_negative_funding_month_bps": -1199.263733,
+        "month_count": 32,
+        "monthly_positive_rate_net_after_rebalance": 0.75,
+        "monthly_records": {
+          "2021-05": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 238.333,
+            "gross_price_component_bps": -162.961775,
+            "gross_total_bps": 75.371225,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 70.371225
+          },
+          "2021-06": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 37.7115,
+            "gross_price_component_bps": 16.667697,
+            "gross_total_bps": 54.379197,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 49.379197
+          },
+          "2021-07": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 40.497667,
+            "gross_price_component_bps": 1.12064,
+            "gross_total_bps": 41.618306,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 36.618306
+          },
+          "2021-08": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 161.881367,
+            "gross_price_component_bps": 105.448699,
+            "gross_total_bps": 267.330065,
+            "hour_count": 739,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 262.330065
+          },
+          "2021-09": {
+            "funding_event_count": 89,
+            "gross_funding_component_bps": 165.341233,
+            "gross_price_component_bps": -49.112164,
+            "gross_total_bps": 116.229069,
+            "hour_count": 717,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 111.229069
+          },
+          "2021-10": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 216.626467,
+            "gross_price_component_bps": -8.73956,
+            "gross_total_bps": 207.886907,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 202.886907
+          },
+          "2021-11": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 170.677933,
+            "gross_price_component_bps": 4.773818,
+            "gross_total_bps": 175.451751,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 170.451751
+          },
+          "2021-12": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 86.4476,
+            "gross_price_component_bps": 6.458966,
+            "gross_total_bps": 92.906566,
+            "hour_count": 743,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 87.906566
+          },
+          "2022-01": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 37.0731,
+            "gross_price_component_bps": 7.186818,
+            "gross_total_bps": 44.259918,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 39.259918
+          },
+          "2022-02": {
+            "funding_event_count": 84,
+            "gross_funding_component_bps": 10.7363,
+            "gross_price_component_bps": -1.479273,
+            "gross_total_bps": 9.257027,
+            "hour_count": 672,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 4.257027
+          },
+          "2022-03": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 64.032733,
+            "gross_price_component_bps": -3.873292,
+            "gross_total_bps": 60.159442,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 55.159442
+          },
+          "2022-04": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 20.29255,
+            "gross_price_component_bps": 8.84119,
+            "gross_total_bps": 29.13374,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 24.13374
+          },
+          "2022-05": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": -10.045,
+            "gross_price_component_bps": -11.039005,
+            "gross_total_bps": -21.084005,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": -26.084005
+          },
+          "2022-06": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": -9.667733,
+            "gross_price_component_bps": 2.062205,
+            "gross_total_bps": -7.605529,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": -12.605529
+          },
+          "2022-07": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 47.696533,
+            "gross_price_component_bps": -1.40472,
+            "gross_total_bps": 46.291813,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 41.291813
+          },
+          "2022-08": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": -0.629733,
+            "gross_price_component_bps": 1.897086,
+            "gross_total_bps": 1.267353,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": -3.732647
+          },
+          "2022-09": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": -30.175933,
+            "gross_price_component_bps": 2.720647,
+            "gross_total_bps": -27.455286,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": -32.455286
+          },
+          "2022-10": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 36.786467,
+            "gross_price_component_bps": 0.050887,
+            "gross_total_bps": 36.837353,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 31.837353
+          },
+          "2022-11": {
+            "funding_event_count": 165,
+            "gross_funding_component_bps": -1199.263733,
+            "gross_price_component_bps": -249.66499,
+            "gross_total_bps": -1448.928724,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": -1453.928724
+          },
+          "2022-12": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": -70.594667,
+            "gross_price_component_bps": -5.597631,
+            "gross_total_bps": -76.192297,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": -81.192297
+          },
+          "2023-01": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": -50.4701,
+            "gross_price_component_bps": 4.391252,
+            "gross_total_bps": -46.078848,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": -51.078848
+          },
+          "2023-02": {
+            "funding_event_count": 84,
+            "gross_funding_component_bps": 53.485433,
+            "gross_price_component_bps": -1.69073,
+            "gross_total_bps": 51.794703,
+            "hour_count": 672,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 46.794703
+          },
+          "2023-03": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 41.265067,
+            "gross_price_component_bps": 111.74799,
+            "gross_total_bps": 153.013057,
+            "hour_count": 742,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 148.013057
+          },
+          "2023-04": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 52.015433,
+            "gross_price_component_bps": 3.172506,
+            "gross_total_bps": 55.187939,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 50.187939
+          },
+          "2023-05": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 49.805667,
+            "gross_price_component_bps": -0.169243,
+            "gross_total_bps": 49.636424,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 44.636424
+          },
+          "2023-06": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 38.084067,
+            "gross_price_component_bps": -2.815205,
+            "gross_total_bps": 35.268862,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 30.268862
+          },
+          "2023-07": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 57.482933,
+            "gross_price_component_bps": 2.159436,
+            "gross_total_bps": 59.642369,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 54.642369
+          },
+          "2023-08": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 31.471567,
+            "gross_price_component_bps": 2.509543,
+            "gross_total_bps": 33.98111,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 28.98111
+          },
+          "2023-09": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": -12.4249,
+            "gross_price_component_bps": 0.35494,
+            "gross_total_bps": -12.06996,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": -17.06996
+          },
+          "2023-10": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 24.6721,
+            "gross_price_component_bps": -6.365454,
+            "gross_total_bps": 18.306646,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 13.306646
+          },
+          "2023-11": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 110.252933,
+            "gross_price_component_bps": 2.060064,
+            "gross_total_bps": 112.312997,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 107.312997
+          },
+          "2023-12": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 190.421433,
+            "gross_price_component_bps": -5.999503,
+            "gross_total_bps": 184.42193,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 179.42193
+          }
+        },
+        "worst_month_net_after_rebalance_bps": -1453.928724
+      },
+      "net_after_lifecycle_cost_bps": 342.531122,
+      "net_after_monthly_rebalance_cost_bps": 212.531122,
+      "net_lifecycle_cost_bps": 30.0,
+      "total_funding_events": 2999
+    },
+    "validation": {
+      "average_funding_rate": 0.0001169932,
+      "average_hourly_gross_bps": 0.147781,
+      "funding_negative_event_count": 60,
+      "funding_positive_event_count": 1038,
+      "funding_positive_event_rate": 0.945355,
+      "funding_zero_event_count": 0,
+      "gross_funding_component_bps": 1284.585367,
+      "gross_price_component_bps": 13.527102,
+      "gross_total_bps": 1298.112469,
+      "hour_count": 8784,
+      "median_hourly_gross_bps": 0.096249,
+      "month_count": 12,
+      "monthly_rebalance_cost_bps": 60.0,
+      "monthly_summary": {
+        "funding_positive_month_rate": 1.0,
+        "max_negative_funding_month_bps": 14.506433,
+        "month_count": 12,
+        "monthly_positive_rate_net_after_rebalance": 1.0,
+        "monthly_records": {
+          "2024-01": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 112.8943,
+            "gross_price_component_bps": 13.024557,
+            "gross_total_bps": 125.918857,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 120.918857
+          },
+          "2024-02": {
+            "funding_event_count": 87,
+            "gross_funding_component_bps": 160.067167,
+            "gross_price_component_bps": -15.199262,
+            "gross_total_bps": 144.867904,
+            "hour_count": 696,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 139.867904
+          },
+          "2024-03": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 344.229433,
+            "gross_price_component_bps": -2.956137,
+            "gross_total_bps": 341.273296,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 336.273296
+          },
+          "2024-04": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 81.692233,
+            "gross_price_component_bps": 16.77735,
+            "gross_total_bps": 98.469584,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 93.469584
+          },
+          "2024-05": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 72.404,
+            "gross_price_component_bps": -10.253562,
+            "gross_total_bps": 62.150438,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 57.150438
+          },
+          "2024-06": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 86.465067,
+            "gross_price_component_bps": 8.396151,
+            "gross_total_bps": 94.861217,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 89.861217
+          },
+          "2024-07": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 62.1494,
+            "gross_price_component_bps": 2.900399,
+            "gross_total_bps": 65.049799,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 60.049799
+          },
+          "2024-08": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 14.506433,
+            "gross_price_component_bps": 3.405804,
+            "gross_total_bps": 17.912237,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 12.912237
+          },
+          "2024-09": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 29.063,
+            "gross_price_component_bps": -0.885372,
+            "gross_total_bps": 28.177628,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 23.177628
+          },
+          "2024-10": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 68.698833,
+            "gross_price_component_bps": -3.492415,
+            "gross_total_bps": 65.206418,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 60.206418
+          },
+          "2024-11": {
+            "funding_event_count": 90,
+            "gross_funding_component_bps": 139.4718,
+            "gross_price_component_bps": -8.057366,
+            "gross_total_bps": 131.414434,
+            "hour_count": 720,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 126.414434
+          },
+          "2024-12": {
+            "funding_event_count": 93,
+            "gross_funding_component_bps": 112.9437,
+            "gross_price_component_bps": 9.866958,
+            "gross_total_bps": 122.810658,
+            "hour_count": 744,
+            "monthly_rebalance_cost_bps": 5.0,
+            "net_after_monthly_rebalance_cost_bps": 117.810658
+          }
+        },
+        "worst_month_net_after_rebalance_bps": 12.912237
+      },
+      "net_after_lifecycle_cost_bps": 1268.112469,
+      "net_after_monthly_rebalance_cost_bps": 1238.112469,
+      "net_lifecycle_cost_bps": 30.0,
+      "total_funding_events": 1098
+    }
+  },
+  "validation_checks": {
+    "exactly_one_config_executed": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "funding_allocated_to_hour_ending_at_funding_time": true,
+    "funding_review_loaded": true,
+    "funding_review_payload_hash_verified": true,
+    "lifecycle_cost_applied_once_per_split": true,
+    "metric_integrity_passed": true,
+    "monthly_rebalance_cost_scenario_reported": true,
+    "no_api_key_used": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_family_release": true,
+    "no_network_used": true,
+    "no_okx_rows_read": true,
+    "no_orders": true,
+    "no_private_api": true,
+    "no_runtime_live_capital": true,
+    "no_trading_endpoint": true,
+    "open_to_open_convention_used": true,
+    "perp_panel_review_loaded": true,
+    "perp_panel_review_payload_hash_verified": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "spot_review_loaded": true,
+    "spot_review_payload_hash_verified": true,
+    "symbols_verified_btc_eth_sol_only": true
+  }
+}

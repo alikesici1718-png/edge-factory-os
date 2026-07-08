@@ -1,0 +1,1079 @@
+{
+  "artifact_kind": "BINANCE_OKX_OVERLAP_FUNDING_CROWDING_REVERSAL_MAKER_ENTRY_TAKER_EXIT_EXECUTION",
+  "config_id": "funding_mean9_hold24h_maker_entry_1bps_taker_exit_cost10bps",
+  "config_result": {
+    "best_config_id": "funding_mean9_hold24h_maker_entry_1bps_taker_exit_cost10bps",
+    "config_id": "funding_mean9_hold24h_maker_entry_1bps_taker_exit_cost10bps",
+    "executed_timestamp_count": 31581,
+    "holdout": {
+      "gross_metric_bps": 15.997116,
+      "month_count": 10,
+      "monthly_gross_metric_bps_by_month": {
+        "2025-01": -40.8534,
+        "2025-02": 25.68275,
+        "2025-03": 20.014443,
+        "2025-04": 2.92246,
+        "2025-05": 42.847938,
+        "2025-06": 3.665441,
+        "2025-07": 31.781152,
+        "2025-08": 21.29392,
+        "2025-09": 17.131099,
+        "2025-10": 36.102516
+      },
+      "monthly_net_metric_bps_by_month": {
+        "2025-01": -50.8534,
+        "2025-02": 15.68275,
+        "2025-03": 10.014443,
+        "2025-04": -7.07754,
+        "2025-05": 32.847938,
+        "2025-06": -6.334559,
+        "2025-07": 21.781152,
+        "2025-08": 11.29392,
+        "2025-09": 7.131099,
+        "2025-10": 26.102516
+      },
+      "monthly_observation_count_by_month": {
+        "2025-01": 737,
+        "2025-02": 668,
+        "2025-03": 744,
+        "2025-04": 718,
+        "2025-05": 740,
+        "2025-06": 719,
+        "2025-07": 739,
+        "2025-08": 742,
+        "2025-09": 718,
+        "2025-10": 717
+      },
+      "monthly_positive_rate": 0.7,
+      "net_metric_bps": 5.997116,
+      "observation_count": 7242,
+      "positive_after_cost": true,
+      "positive_month_count": 7
+    },
+    "train": {
+      "gross_metric_bps": 0.12974,
+      "month_count": 22,
+      "monthly_gross_metric_bps_by_month": {
+        "2022-03": -37.19971,
+        "2022-04": -3.969848,
+        "2022-05": -11.039097,
+        "2022-06": 21.620703,
+        "2022-07": -41.807471,
+        "2022-08": -1.827337,
+        "2022-09": 0.994364,
+        "2022-10": -18.723179,
+        "2022-11": -9.430615,
+        "2022-12": 2.599187,
+        "2023-01": 36.110806,
+        "2023-02": -26.940122,
+        "2023-03": 4.638902,
+        "2023-04": 3.376868,
+        "2023-05": 25.627936,
+        "2023-06": -2.433989,
+        "2023-07": -4.675251,
+        "2023-08": 35.582466,
+        "2023-09": -4.635012,
+        "2023-10": 8.750056,
+        "2023-11": -47.640996,
+        "2023-12": 50.266485
+      },
+      "monthly_net_metric_bps_by_month": {
+        "2022-03": -47.19971,
+        "2022-04": -13.969848,
+        "2022-05": -21.039097,
+        "2022-06": 11.620703,
+        "2022-07": -51.807471,
+        "2022-08": -11.827337,
+        "2022-09": -9.005636,
+        "2022-10": -28.723179,
+        "2022-11": -19.430615,
+        "2022-12": -7.400813,
+        "2023-01": 26.110806,
+        "2023-02": -36.940122,
+        "2023-03": -5.361098,
+        "2023-04": -6.623132,
+        "2023-05": 15.627936,
+        "2023-06": -12.433989,
+        "2023-07": -14.675251,
+        "2023-08": 25.582466,
+        "2023-09": -14.635012,
+        "2023-10": -1.249944,
+        "2023-11": -57.640996,
+        "2023-12": 40.266485
+      },
+      "monthly_observation_count_by_month": {
+        "2022-03": 327,
+        "2022-04": 669,
+        "2022-05": 740,
+        "2022-06": 720,
+        "2022-07": 744,
+        "2022-08": 744,
+        "2022-09": 718,
+        "2022-10": 741,
+        "2022-11": 720,
+        "2022-12": 742,
+        "2023-01": 744,
+        "2023-02": 671,
+        "2023-03": 742,
+        "2023-04": 719,
+        "2023-05": 742,
+        "2023-06": 720,
+        "2023-07": 744,
+        "2023-08": 744,
+        "2023-09": 720,
+        "2023-10": 744,
+        "2023-11": 720,
+        "2023-12": 719
+      },
+      "monthly_positive_rate": 0.227273,
+      "net_metric_bps": -9.87026,
+      "observation_count": 15594,
+      "positive_after_cost": false,
+      "positive_month_count": 5
+    },
+    "validation": {
+      "gross_metric_bps": 9.6575,
+      "month_count": 12,
+      "monthly_gross_metric_bps_by_month": {
+        "2024-01": 0.134182,
+        "2024-02": 6.534324,
+        "2024-03": -0.142369,
+        "2024-04": 7.674499,
+        "2024-05": 21.958171,
+        "2024-06": 3.060268,
+        "2024-07": 22.262749,
+        "2024-08": 15.228776,
+        "2024-09": 1.220727,
+        "2024-10": 10.908818,
+        "2024-11": -10.250333,
+        "2024-12": 36.790245
+      },
+      "monthly_net_metric_bps_by_month": {
+        "2024-01": -9.865818,
+        "2024-02": -3.465676,
+        "2024-03": -10.142369,
+        "2024-04": -2.325501,
+        "2024-05": 11.958171,
+        "2024-06": -6.939732,
+        "2024-07": 12.262749,
+        "2024-08": 5.228776,
+        "2024-09": -8.779273,
+        "2024-10": 0.908818,
+        "2024-11": -20.250333,
+        "2024-12": 26.790245
+      },
+      "monthly_observation_count_by_month": {
+        "2024-01": 743,
+        "2024-02": 695,
+        "2024-03": 742,
+        "2024-04": 717,
+        "2024-05": 744,
+        "2024-06": 719,
+        "2024-07": 743,
+        "2024-08": 743,
+        "2024-09": 720,
+        "2024-10": 740,
+        "2024-11": 720,
+        "2024-12": 719
+      },
+      "monthly_positive_rate": 0.416667,
+      "net_metric_bps": -0.3425,
+      "observation_count": 8745,
+      "positive_after_cost": false,
+      "positive_month_count": 5
+    },
+    "validation_executed_timestamp_count": 8745,
+    "validation_positive_after_cost": false
+  },
+  "diagnostic_interpretation_limits": {
+    "diagnostic_execution_only": true,
+    "future_closure_required": true,
+    "future_evaluator_required": true,
+    "grants_no_runtime_live_capital_permission": true,
+    "holdout_positive_does_not_allow_candidate_or_edge": true,
+    "maker_fill_model_is_1h_ohlcv_proxy_not_order_book_simulation": true,
+    "not_candidate_generation": true,
+    "not_edge_claim": true,
+    "not_family_release": true,
+    "not_parameter_expansion": true,
+    "not_strategy_search": true
+  },
+  "execution_safety_controls": {
+    "best_config_id": "funding_mean9_hold24h_maker_entry_1bps_taker_exit_cost10bps",
+    "cross_window_holding_return_skipped_count": 5808,
+    "cross_window_holding_returns_included": false,
+    "exactly_one_config_executed": true,
+    "final_edge_claim_requires_external_or_future_holdout": true,
+    "holdout_reported_separately": true,
+    "holdout_used_for_config_selection": false,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_family_release": true,
+    "no_non_preregistered_config_tested": true,
+    "no_parameter_expansion": true,
+    "no_runtime_live_capital": true
+  },
+  "fill_diagnostics": {
+    "average_candidate_symbols_per_side": 14.791923,
+    "average_fill_imbalance_abs": 0.039989,
+    "average_filled_long_symbols": 14.040246,
+    "average_filled_short_symbols": 14.275799,
+    "average_pre_fill_eligible_symbols": 70.8143,
+    "candidate_timestamp_count": 31647,
+    "executed_timestamp_count": 31581,
+    "long_candidate_count": 468120,
+    "long_fill_rate": 0.948541,
+    "long_filled_count": 444031,
+    "maker_entry_offset_bps": 1,
+    "maker_fill_proxy_used": true,
+    "order_book_queue_not_modeled": true,
+    "short_candidate_count": 468120,
+    "short_fill_rate": 0.964231,
+    "short_filled_count": 451376,
+    "skipped_timestamps_insufficient_filled_long_symbols": 29,
+    "skipped_timestamps_insufficient_filled_short_symbols": 37,
+    "skipped_timestamps_insufficient_pre_fill_eligible_symbols": 7696
+  },
+  "forbidden_actions_confirmed_false": {
+    "binance_1m_source_rows_read": false,
+    "binance_api_called": false,
+    "binance_coverage_discovery_rerun": false,
+    "binance_panel_build_rerun": false,
+    "candidates_generated": false,
+    "capital_permission_granted": false,
+    "edge_claimed": false,
+    "existing_files_modified_by_module": false,
+    "family_released": false,
+    "funding_data_fetched_by_execution": false,
+    "funding_endpoint_called_by_execution": false,
+    "holdout_access_permission_granted": false,
+    "live_permission_granted": false,
+    "network_used": false,
+    "non_preregistered_config_tested": false,
+    "okx_panel_rows_read": false,
+    "okx_whitelisted_artifact_read": false,
+    "runtime_permission_granted": false,
+    "strategy_search_executed": false
+  },
+  "input_data_validation": {
+    "binance_1m_source_rows_read": false,
+    "full_range_funding_review_loaded": true,
+    "funding_files_read": 81,
+    "funding_review_valid_for_full_range_signal_construction": true,
+    "funding_rows_read": 373366,
+    "okx_panel_rows_read": false,
+    "panel_complete_rows_read": 3149492,
+    "panel_files_read": 81,
+    "panel_review_loaded": true,
+    "preregistration_loaded": true,
+    "symbol_count": 81,
+    "symbols": [
+      "1INCHUSDT",
+      "AAVEUSDT",
+      "ADAUSDT",
+      "AGLDUSDT",
+      "ALGOUSDT",
+      "APEUSDT",
+      "API3USDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "ARUSDT",
+      "ATOMUSDT",
+      "AVAXUSDT",
+      "AXSUSDT",
+      "BANDUSDT",
+      "BATUSDT",
+      "BCHUSDT",
+      "BICOUSDT",
+      "BLURUSDT",
+      "BNBUSDT",
+      "BTCUSDT",
+      "CELOUSDT",
+      "CFXUSDT",
+      "CHZUSDT",
+      "COMPUSDT",
+      "CRVUSDT",
+      "DOGEUSDT",
+      "DOTUSDT",
+      "DYDXUSDT",
+      "EGLDUSDT",
+      "ENSUSDT",
+      "ETCUSDT",
+      "ETHUSDT",
+      "ETHWUSDT",
+      "FILUSDT",
+      "GALAUSDT",
+      "GMTUSDT",
+      "GMXUSDT",
+      "GRTUSDT",
+      "ICPUSDT",
+      "IMXUSDT",
+      "IOSTUSDT",
+      "IOTAUSDT",
+      "KSMUSDT",
+      "LDOUSDT",
+      "LINKUSDT",
+      "LPTUSDT",
+      "LRCUSDT",
+      "LTCUSDT",
+      "MAGICUSDT",
+      "MANAUSDT",
+      "MINAUSDT",
+      "NEARUSDT",
+      "NEOUSDT",
+      "ONTUSDT",
+      "OPUSDT",
+      "ORDIUSDT",
+      "PEOPLEUSDT",
+      "QTUMUSDT",
+      "RSRUSDT",
+      "RVNUSDT",
+      "SANDUSDT",
+      "SNXUSDT",
+      "SOLUSDT",
+      "STXUSDT",
+      "SUIUSDT",
+      "SUSHIUSDT",
+      "THETAUSDT",
+      "TONUSDT",
+      "TRBUSDT",
+      "TRXUSDT",
+      "UMAUSDT",
+      "UNIUSDT",
+      "USDCUSDT",
+      "WOOUSDT",
+      "XLMUSDT",
+      "XRPUSDT",
+      "XTZUSDT",
+      "YFIUSDT",
+      "YGGUSDT",
+      "ZILUSDT",
+      "ZRXUSDT"
+    ],
+    "used_only_complete_1h_panel_rows": true
+  },
+  "maker_entry_fill_policy": {
+    "adverse_selection_warning": "maker fills can be adverse-selected and this proxy does not use order book queue data",
+    "entry_reference_price": "open at entry hour",
+    "entry_ttl_proxy": "entry 1h bar only",
+    "fill_imbalance_policy": "equal weight among filled long and filled short legs separately; require both sides minimum filled symbols",
+    "long_entry_limit": "open(E) * (1 - 0.0001)",
+    "long_fill_proxy": "low(E) <= long_entry_limit",
+    "maker_entry_offset_bps": 1,
+    "maker_entry_proxy_is_not_order_book_simulation": true,
+    "minimum_filled_long_symbols": 5,
+    "minimum_filled_short_symbols": 5,
+    "order_book_queue_not_modeled": true,
+    "short_entry_limit": "open(E) * (1 + 0.0001)",
+    "short_fill_proxy": "high(E) >= short_entry_limit",
+    "unfilled_entry_policy": "drop candidate symbol"
+  },
+  "maker_fill_quality_summary": {
+    "adverse_selection_proxy_note": "Maker fill proxy uses 1h OHLCV only; order book queue and adverse selection are not modeled.",
+    "average_fill_imbalance_abs": 0.0409,
+    "average_filled_long_symbols": 15.030074,
+    "average_filled_short_symbols": 15.545798,
+    "filled_trade_gross_metric_bps": 9.6575,
+    "long_fill_rate": 0.93938,
+    "maker_fill_quality_review_preliminary_passed": true,
+    "missed_candidate_count": 40833,
+    "missed_candidate_forward_gross_proxy_bps": 70.033113,
+    "order_book_queue_not_modeled": true,
+    "short_fill_rate": 0.971612,
+    "validation_executed_timestamp_count": 8745
+  },
+  "metric_integrity_summary": {
+    "config_id_matches_preregistration": true,
+    "exactly_one_config_executed": true,
+    "metric_integrity_issue_count": 0,
+    "metric_integrity_issues": [],
+    "metric_integrity_passed": true,
+    "no_candidate_edge_release_runtime": true,
+    "no_cross_window_returns_included": true,
+    "no_lookahead": true,
+    "no_nan_or_infinite_metrics": true,
+    "no_non_preregistered_config": true,
+    "no_timestamp_outside_windows": true
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_okx_overlap_funding_crowding_reversal_maker_entry_taker_exit_execution_v1.py",
+  "monthly_stability_summary": {
+    "holdout_month_count": 10,
+    "holdout_monthly_gross_metric_bps_by_month": {
+      "2025-01": -40.8534,
+      "2025-02": 25.68275,
+      "2025-03": 20.014443,
+      "2025-04": 2.92246,
+      "2025-05": 42.847938,
+      "2025-06": 3.665441,
+      "2025-07": 31.781152,
+      "2025-08": 21.29392,
+      "2025-09": 17.131099,
+      "2025-10": 36.102516
+    },
+    "holdout_monthly_net_metric_bps_by_month": {
+      "2025-01": -50.8534,
+      "2025-02": 15.68275,
+      "2025-03": 10.014443,
+      "2025-04": -7.07754,
+      "2025-05": 32.847938,
+      "2025-06": -6.334559,
+      "2025-07": 21.781152,
+      "2025-08": 11.29392,
+      "2025-09": 7.131099,
+      "2025-10": 26.102516
+    },
+    "holdout_monthly_positive_rate": 0.7,
+    "train_month_count": 22,
+    "train_monthly_gross_metric_bps_by_month": {
+      "2022-03": -37.19971,
+      "2022-04": -3.969848,
+      "2022-05": -11.039097,
+      "2022-06": 21.620703,
+      "2022-07": -41.807471,
+      "2022-08": -1.827337,
+      "2022-09": 0.994364,
+      "2022-10": -18.723179,
+      "2022-11": -9.430615,
+      "2022-12": 2.599187,
+      "2023-01": 36.110806,
+      "2023-02": -26.940122,
+      "2023-03": 4.638902,
+      "2023-04": 3.376868,
+      "2023-05": 25.627936,
+      "2023-06": -2.433989,
+      "2023-07": -4.675251,
+      "2023-08": 35.582466,
+      "2023-09": -4.635012,
+      "2023-10": 8.750056,
+      "2023-11": -47.640996,
+      "2023-12": 50.266485
+    },
+    "train_monthly_net_metric_bps_by_month": {
+      "2022-03": -47.19971,
+      "2022-04": -13.969848,
+      "2022-05": -21.039097,
+      "2022-06": 11.620703,
+      "2022-07": -51.807471,
+      "2022-08": -11.827337,
+      "2022-09": -9.005636,
+      "2022-10": -28.723179,
+      "2022-11": -19.430615,
+      "2022-12": -7.400813,
+      "2023-01": 26.110806,
+      "2023-02": -36.940122,
+      "2023-03": -5.361098,
+      "2023-04": -6.623132,
+      "2023-05": 15.627936,
+      "2023-06": -12.433989,
+      "2023-07": -14.675251,
+      "2023-08": 25.582466,
+      "2023-09": -14.635012,
+      "2023-10": -1.249944,
+      "2023-11": -57.640996,
+      "2023-12": 40.266485
+    },
+    "train_monthly_positive_rate": 0.227273,
+    "validation_month_count": 12,
+    "validation_monthly_gross_metric_bps_by_month": {
+      "2024-01": 0.134182,
+      "2024-02": 6.534324,
+      "2024-03": -0.142369,
+      "2024-04": 7.674499,
+      "2024-05": 21.958171,
+      "2024-06": 3.060268,
+      "2024-07": 22.262749,
+      "2024-08": 15.228776,
+      "2024-09": 1.220727,
+      "2024-10": 10.908818,
+      "2024-11": -10.250333,
+      "2024-12": 36.790245
+    },
+    "validation_monthly_net_metric_bps_by_month": {
+      "2024-01": -9.865818,
+      "2024-02": -3.465676,
+      "2024-03": -10.142369,
+      "2024-04": -2.325501,
+      "2024-05": 11.958171,
+      "2024-06": -6.939732,
+      "2024-07": 12.262749,
+      "2024-08": 5.228776,
+      "2024-09": -8.779273,
+      "2024-10": 0.908818,
+      "2024-11": -20.250333,
+      "2024-12": 26.790245
+    },
+    "validation_monthly_positive_rate": 0.416667,
+    "validation_monthly_stability_review_preliminary_passed": false
+  },
+  "null_baseline_summary": {
+    "block_length_hours": 168,
+    "null_baseline": "deterministic_signal_timestamp_block_shuffle_null",
+    "null_baseline_review_preliminary_passed": false,
+    "null_run_count": 100,
+    "valid_validation_null_run_count": 100,
+    "validation_null_metric_bps_max": 13.222491,
+    "validation_null_metric_bps_median": -6.045935,
+    "validation_null_metric_bps_min": -21.510024,
+    "validation_null_net_metric_bps_mean": -5.900723,
+    "validation_null_percentile": 0.76
+  },
+  "payload_sha256_excluding_hash": "a4d54bb6b0d07c876c3a93ec78711e377b7b1a7f287aa512a240e1605de0f37c",
+  "per_symbol_input_summary": {
+    "1INCHUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "AAVEUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "ADAUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "AGLDUSDT": {
+      "complete_panel_rows_read": 24164,
+      "funding_rows_read": 2479,
+      "valid_mean9_prefill_rows": 19695
+    },
+    "ALGOUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "APEUSDT": {
+      "complete_panel_rows_read": 36128,
+      "funding_rows_read": 3973,
+      "valid_mean9_prefill_rows": 31647
+    },
+    "API3USDT": {
+      "complete_panel_rows_read": 36691,
+      "funding_rows_read": 6886,
+      "valid_mean9_prefill_rows": 32223
+    },
+    "APTUSDT": {
+      "complete_panel_rows_read": 30957,
+      "funding_rows_read": 3328,
+      "valid_mean9_prefill_rows": 26487
+    },
+    "ARBUSDT": {
+      "complete_panel_rows_read": 27223,
+      "funding_rows_read": 2861,
+      "valid_mean9_prefill_rows": 22751
+    },
+    "ARUSDT": {
+      "complete_panel_rows_read": 40219,
+      "funding_rows_read": 4487,
+      "valid_mean9_prefill_rows": 35759
+    },
+    "ATOMUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "AVAXUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "AXSUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "BANDUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "BATUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "BCHUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "BICOUSDT": {
+      "complete_panel_rows_read": 22690,
+      "funding_rows_read": 2294,
+      "valid_mean9_prefill_rows": 18215
+    },
+    "BLURUSDT": {
+      "complete_panel_rows_read": 26363,
+      "funding_rows_read": 2755,
+      "valid_mean9_prefill_rows": 21903
+    },
+    "BNBUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "BTCUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "CELOUSDT": {
+      "complete_panel_rows_read": 40243,
+      "funding_rows_read": 4487,
+      "valid_mean9_prefill_rows": 35759
+    },
+    "CFXUSDT": {
+      "complete_panel_rows_read": 27968,
+      "funding_rows_read": 2954,
+      "valid_mean9_prefill_rows": 23495
+    },
+    "CHZUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "COMPUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "CRVUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "DOGEUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "DOTUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "DYDXUSDT": {
+      "complete_panel_rows_read": 40651,
+      "funding_rows_read": 4540,
+      "valid_mean9_prefill_rows": 36183
+    },
+    "EGLDUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "ENSUSDT": {
+      "complete_panel_rows_read": 38707,
+      "funding_rows_read": 4297,
+      "valid_mean9_prefill_rows": 34239
+    },
+    "ETCUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "ETHUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "ETHWUSDT": {
+      "complete_panel_rows_read": 21226,
+      "funding_rows_read": 4220,
+      "valid_mean9_prefill_rows": 16775
+    },
+    "FILUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "GALAUSDT": {
+      "complete_panel_rows_read": 40459,
+      "funding_rows_read": 4516,
+      "valid_mean9_prefill_rows": 35991
+    },
+    "GMTUSDT": {
+      "complete_panel_rows_read": 36139,
+      "funding_rows_read": 3982,
+      "valid_mean9_prefill_rows": 31647
+    },
+    "GMXUSDT": {
+      "complete_panel_rows_read": 28040,
+      "funding_rows_read": 2963,
+      "valid_mean9_prefill_rows": 23567
+    },
+    "GRTUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "ICPUSDT": {
+      "complete_panel_rows_read": 41732,
+      "funding_rows_read": 4904,
+      "valid_mean9_prefill_rows": 37293
+    },
+    "IMXUSDT": {
+      "complete_panel_rows_read": 36835,
+      "funding_rows_read": 6328,
+      "valid_mean9_prefill_rows": 32303
+    },
+    "IOSTUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "IOTAUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "KSMUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "LDOUSDT": {
+      "complete_panel_rows_read": 31595,
+      "funding_rows_read": 3407,
+      "valid_mean9_prefill_rows": 27119
+    },
+    "LINKUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "LPTUSDT": {
+      "complete_panel_rows_read": 39163,
+      "funding_rows_read": 7516,
+      "valid_mean9_prefill_rows": 34679
+    },
+    "LRCUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "LTCUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "MAGICUSDT": {
+      "complete_panel_rows_read": 28604,
+      "funding_rows_read": 3617,
+      "valid_mean9_prefill_rows": 24159
+    },
+    "MANAUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "MINAUSDT": {
+      "complete_panel_rows_read": 28284,
+      "funding_rows_read": 3005,
+      "valid_mean9_prefill_rows": 23869
+    },
+    "NEARUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "NEOUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "ONTUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "OPUSDT": {
+      "complete_panel_rows_read": 34304,
+      "funding_rows_read": 3746,
+      "valid_mean9_prefill_rows": 29831
+    },
+    "ORDIUSDT": {
+      "complete_panel_rows_read": 21730,
+      "funding_rows_read": 4346,
+      "valid_mean9_prefill_rows": 17279
+    },
+    "PEOPLEUSDT": {
+      "complete_panel_rows_read": 38011,
+      "funding_rows_read": 4225,
+      "valid_mean9_prefill_rows": 33495
+    },
+    "QTUMUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "RSRUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "RVNUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 6154,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "SANDUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "SNXUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "SOLUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 5010,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "STXUSDT": {
+      "complete_panel_rows_read": 27944,
+      "funding_rows_read": 2951,
+      "valid_mean9_prefill_rows": 23471
+    },
+    "SUIUSDT": {
+      "complete_panel_rows_read": 26239,
+      "funding_rows_read": 2737,
+      "valid_mean9_prefill_rows": 21759
+    },
+    "SUSHIUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "THETAUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "TONUSDT": {
+      "complete_panel_rows_read": 18970,
+      "funding_rows_read": 3657,
+      "valid_mean9_prefill_rows": 14547
+    },
+    "TRBUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 7187,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "TRXUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "UMAUSDT": {
+      "complete_panel_rows_read": 26074,
+      "funding_rows_read": 4673,
+      "valid_mean9_prefill_rows": 21623
+    },
+    "UNIUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "USDCUSDT": {
+      "complete_panel_rows_read": 27486,
+      "funding_rows_read": 2892,
+      "valid_mean9_prefill_rows": 22999
+    },
+    "WOOUSDT": {
+      "complete_panel_rows_read": 35611,
+      "funding_rows_read": 3910,
+      "valid_mean9_prefill_rows": 31143
+    },
+    "XLMUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "XRPUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "XTZUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 5285,
+      "valid_mean9_prefill_rows": 39343
+    },
+    "YFIUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "YGGUSDT": {
+      "complete_panel_rows_read": 23995,
+      "funding_rows_read": 4719,
+      "valid_mean9_prefill_rows": 19527
+    },
+    "ZILUSDT": {
+      "complete_panel_rows_read": 43703,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39175
+    },
+    "ZRXUSDT": {
+      "complete_panel_rows_read": 43823,
+      "funding_rows_read": 4935,
+      "valid_mean9_prefill_rows": 39343
+    }
+  },
+  "replacement_checks_all_true": true,
+  "return_and_cost_policy": {
+    "annualized": false,
+    "compounded": false,
+    "effective_round_trip_cost_bps": 10,
+    "gross_spread_return": "mean(long returns) + mean(short returns)",
+    "long_return": "exit_open / long_entry_price - 1",
+    "net_spread_return": "gross_spread_return - 0.0010",
+    "short_return": "-(exit_open / short_entry_price - 1)"
+  },
+  "route_family": "CROSS_SECTIONAL_FUNDING_CROWDING_REVERSAL_MAKER_ENTRY_TAKER_EXIT_DIAGNOSTIC",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "evaluator_required_next": true,
+    "family_release_allowed_now": false,
+    "holdout_access_permission_granted": false,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_completed": true,
+    "strategy_execution_is_diagnostic_only": true,
+    "strategy_search_allowed_now": false
+  },
+  "signal_definition": {
+    "base_route_family": "CROSS_SECTIONAL_FUNDING_RATE_CROWDING_REVERSAL_BASELINE",
+    "candidate_tail_count": "floor(eligible_count * 0.20), minimum 1",
+    "funding_events_required": 9,
+    "funding_observation_lag_hours": 1,
+    "funding_time_policy": "funding_time <= entry_time - 1h",
+    "long_candidate_pool": "bottom 20 percent lowest rolling_mean_9 funding signal",
+    "minimum_eligible_symbols_before_candidate_selection": 60,
+    "short_candidate_pool": "top 20 percent highest rolling_mean_9 funding signal",
+    "signal_transform": "rolling_mean_9_funding_events"
+  },
+  "source_artifacts": {
+    "funding_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_funding_rate_full_range_202105_202510_acquisition_lock_v1\\funding_by_symbol",
+    "panel_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_near_5y_1m_to_1h_panel_build_execution_v1\\panel_1h_by_symbol",
+    "payload_hashes": {
+      "artifacts/coverage_locks/binance_usdt_perpetual_1m_coverage_discovery_lock_v1.json": "18a84b71c649b0462fdb0d511597dcb701448fe06184ef9c8da93d6911ada4e0",
+      "artifacts/funding_rate_locks/binance_okx_overlap_funding_rate_full_range_202105_202510_acquisition_lock_v1.json": "372de83a380550689f220e230226a898f5e6017e82dcbfcaa191ea28109029cf",
+      "artifacts/funding_rate_reviews/binance_okx_overlap_funding_rate_full_range_202105_202510_review_v1.json": "5deabb2dd6f76df1c06d2ed2a1d0fbde9011b19d6d51790a91730e91ae8b3fd4",
+      "artifacts/panel_build_manifests/binance_okx_overlap_near_5y_1m_to_1h_panel_build_manifest_v1.json": "bf4d4d681f36fab3a2131701e25ebc45c94ddb757f92874498ef425d698f40a7",
+      "artifacts/panel_build_previews/binance_near_5y_coverage_lock_review_okx_overlap_panel_build_preview_v1.json": "16e93ca05fe28f0d101d5228e299306bad3aea171f22bc6901f770b0ecf3a3d9",
+      "artifacts/panel_build_reviews/binance_okx_overlap_near_5y_panel_build_review_after_execution_v1.json": "34b88a3ff0870c708e2df034c243cf639b711ebce3c6a4f32edffb92a2229112",
+      "artifacts/research_preregistrations/binance_okx_overlap_funding_crowding_reversal_maker_entry_taker_exit_preregistration_contract_v1.json": "b232724d02496e7f3d119ab1f2d17830b6bd777e7f75f562b02bdf3f7e2017f1",
+      "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json": "0cfe239f6f5ad2d20bda64b827416851de8f5b959066902b59f1f00f44eba716"
+    }
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_FUNDING_CROWDING_REVERSAL_MAKER_ENTRY_TAKER_EXIT_EXECUTED",
+  "taker_exit_policy": {
+    "exit_price": "open(E+24h)",
+    "exit_row_complete_1h_required": true,
+    "exit_type": "taker_at_exit_open",
+    "holding_period_hours": 24
+  },
+  "train_validation_holdout_summary": {
+    "full_window_end_exclusive_utc": "2025-11-01T00:00:00Z",
+    "full_window_start_utc": "2021-05-01T00:00:00Z",
+    "holdout_reported_separately_not_used_for_selection": true,
+    "holdout_window_end_exclusive_utc": "2025-11-01T00:00:00Z",
+    "holdout_window_start_utc": "2025-01-01T00:00:00Z",
+    "train_window_end_exclusive_utc": "2024-01-01T00:00:00Z",
+    "train_window_start_utc": "2021-05-01T00:00:00Z",
+    "validation_window_end_exclusive_utc": "2025-01-01T00:00:00Z",
+    "validation_window_start_utc": "2024-01-01T00:00:00Z"
+  },
+  "turnover_concentration_summary": {
+    "average_turnover": 0.081292,
+    "max_turnover": 0.564103,
+    "median_turnover": 0.0625,
+    "symbol_exposure_share_top10": [
+      {
+        "exposure_share": 0.028461,
+        "selection_count": 7610,
+        "symbol": "AXSUSDT"
+      },
+      {
+        "exposure_share": 0.026905,
+        "selection_count": 7194,
+        "symbol": "BCHUSDT"
+      },
+      {
+        "exposure_share": 0.024429,
+        "selection_count": 6532,
+        "symbol": "BNBUSDT"
+      },
+      {
+        "exposure_share": 0.021254,
+        "selection_count": 5683,
+        "symbol": "IMXUSDT"
+      },
+      {
+        "exposure_share": 0.020697,
+        "selection_count": 5534,
+        "symbol": "LPTUSDT"
+      },
+      {
+        "exposure_share": 0.020128,
+        "selection_count": 5382,
+        "symbol": "BLURUSDT"
+      },
+      {
+        "exposure_share": 0.019571,
+        "selection_count": 5233,
+        "symbol": "ONTUSDT"
+      },
+      {
+        "exposure_share": 0.018879,
+        "selection_count": 5048,
+        "symbol": "API3USDT"
+      },
+      {
+        "exposure_share": 0.018628,
+        "selection_count": 4981,
+        "symbol": "TRXUSDT"
+      },
+      {
+        "exposure_share": 0.017439,
+        "selection_count": 4663,
+        "symbol": "COMPUSDT"
+      }
+    ],
+    "top_symbol_exposure_share": 0.028461,
+    "turnover_concentration_review_preliminary_passed": true
+  },
+  "validation_checks": {
+    "config_id_matches_preregistration": true,
+    "exactly_one_config_executed": true,
+    "exactly_one_new_tracked_json_execution_artifact_expected": true,
+    "exactly_one_new_tracked_python_tool_file_expected": true,
+    "execution_artifact_json_valid": true,
+    "execution_artifact_path_equals_required_path": true,
+    "funding_data_valid_for_full_range_signal_construction": true,
+    "funding_review_loaded": true,
+    "holdout_not_used_for_config_selection": true,
+    "holdout_reported_separately": true,
+    "maker_fill_proxy_used": true,
+    "module_path_equals_required_path": true,
+    "no_binance_1m_source_rows_read": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_network_used": true,
+    "no_okx_panel_rows_read": true,
+    "no_parameter_expansion": true,
+    "order_book_queue_not_modeled": true,
+    "payload_sha256_excluding_hash_present": true,
+    "preregistration_loaded": true,
+    "replacement_checks_all_true": true,
+    "status_equals_required_status": true
+  }
+}

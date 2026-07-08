@@ -1,0 +1,481 @@
+{
+  "artifact_kind": "CRYPTO_15M_LIQUIDITY_SWEEP_FILTER_KILL_AUDIT",
+  "audit_classification": "LIQUIDITY_SWEEP_NO_TRADE_CAUSED_BY_SIGNAL_LOGIC_BUG",
+  "bounded_v2_direction": "Bounded V2 direction: inspect the prior execution implementation against this audit, because the filter pipeline yields candidates before capacity without changing strategy parameters.",
+  "dataset_review": {
+    "eligible_symbol_count_average": 78.431159,
+    "master_timestamp_count": 99360,
+    "panel_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol",
+    "panel_review_status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
+    "symbol_file_count": 81
+  },
+  "filter_pipeline_counts": {
+    "capacity_estimate": {
+      "accepted_long_after_capacity": 2620,
+      "accepted_short_after_capacity": 5958,
+      "capacity_blocked_long": 2670,
+      "capacity_blocked_short": 5424,
+      "same_symbol_blocked_long": 362,
+      "same_symbol_blocked_short": 1521
+    },
+    "estimated_accepted_after_capacity_total": 8578,
+    "final_candidate_count_before_position_capacity_total": 16672,
+    "long": {
+      "after_atr_risk_validity_count": 5290,
+      "after_btc_disaster_filter_count": 5290,
+      "after_candle_rejection_count": 31663,
+      "after_cross_sectional_rank_count": 5616,
+      "after_next_bar_available_count": 5290,
+      "after_volume_filter_count": 18658,
+      "capacity_block_estimate": 2670,
+      "eligible_rows_with_required_lookback": 7792920,
+      "estimated_accepted_after_capacity": 2620,
+      "final_candidate_count_before_position_capacity": 5290,
+      "raw_sweep_count": 83184
+    },
+    "raw_sweep_count_total": 186860,
+    "short": {
+      "after_atr_risk_validity_count": 11382,
+      "after_btc_disaster_filter_count": 11382,
+      "after_candle_rejection_count": 41481,
+      "after_cross_sectional_rank_count": 12270,
+      "after_next_bar_available_count": 11382,
+      "after_volume_filter_count": 21875,
+      "capacity_block_estimate": 5424,
+      "eligible_rows_with_required_lookback": 7792920,
+      "estimated_accepted_after_capacity": 5958,
+      "final_candidate_count_before_position_capacity": 11382,
+      "raw_sweep_count": 103676
+    }
+  },
+  "kill_attribution": {
+    "diagnostic_flags": {
+      "any_final_candidates_before_capacity": true,
+      "atr_risk_validity_kills_candidates": false,
+      "btc_disaster_filter_kills_meaningful_count": true,
+      "candle_rejection_appears_too_strict": false,
+      "long_side_dies_earlier": true,
+      "rank_filter_appears_too_strict": false,
+      "short_side_dies_earlier": false,
+      "volume_filter_appears_too_strict": false
+    },
+    "long": [
+      {
+        "filter_stage": "after_candle_rejection_count",
+        "killed_count": 51521,
+        "killed_share_of_previous_stage": 0.619362,
+        "killed_share_of_raw_sweep": 0.619362,
+        "previous_stage_count": 83184,
+        "survivor_count": 31663
+      },
+      {
+        "filter_stage": "after_volume_filter_count",
+        "killed_count": 13005,
+        "killed_share_of_previous_stage": 0.410732,
+        "killed_share_of_raw_sweep": 0.15634,
+        "previous_stage_count": 31663,
+        "survivor_count": 18658
+      },
+      {
+        "filter_stage": "after_cross_sectional_rank_count",
+        "killed_count": 13042,
+        "killed_share_of_previous_stage": 0.699003,
+        "killed_share_of_raw_sweep": 0.156785,
+        "previous_stage_count": 18658,
+        "survivor_count": 5616
+      },
+      {
+        "filter_stage": "after_btc_disaster_filter_count",
+        "killed_count": 326,
+        "killed_share_of_previous_stage": 0.058048,
+        "killed_share_of_raw_sweep": 0.003919,
+        "previous_stage_count": 5616,
+        "survivor_count": 5290
+      },
+      {
+        "filter_stage": "after_atr_risk_validity_count",
+        "killed_count": 0,
+        "killed_share_of_previous_stage": 0.0,
+        "killed_share_of_raw_sweep": 0.0,
+        "previous_stage_count": 5290,
+        "survivor_count": 5290
+      },
+      {
+        "filter_stage": "after_next_bar_available_count",
+        "killed_count": 0,
+        "killed_share_of_previous_stage": 0.0,
+        "killed_share_of_raw_sweep": 0.0,
+        "previous_stage_count": 5290,
+        "survivor_count": 5290
+      },
+      {
+        "filter_stage": "final_candidate_count_before_position_capacity",
+        "killed_count": 0,
+        "killed_share_of_previous_stage": 0.0,
+        "killed_share_of_raw_sweep": 0.0,
+        "previous_stage_count": 5290,
+        "survivor_count": 5290
+      },
+      {
+        "filter_stage": "capacity_block_estimate",
+        "killed_count": 2670,
+        "killed_share_of_previous_stage": 0.504726,
+        "killed_share_of_raw_sweep": 0.032098,
+        "previous_stage_count": 5290,
+        "survivor_count": 2620
+      }
+    ],
+    "short": [
+      {
+        "filter_stage": "after_candle_rejection_count",
+        "killed_count": 62195,
+        "killed_share_of_previous_stage": 0.599898,
+        "killed_share_of_raw_sweep": 0.599898,
+        "previous_stage_count": 103676,
+        "survivor_count": 41481
+      },
+      {
+        "filter_stage": "after_volume_filter_count",
+        "killed_count": 19606,
+        "killed_share_of_previous_stage": 0.47265,
+        "killed_share_of_raw_sweep": 0.189108,
+        "previous_stage_count": 41481,
+        "survivor_count": 21875
+      },
+      {
+        "filter_stage": "after_cross_sectional_rank_count",
+        "killed_count": 9605,
+        "killed_share_of_previous_stage": 0.439086,
+        "killed_share_of_raw_sweep": 0.092644,
+        "previous_stage_count": 21875,
+        "survivor_count": 12270
+      },
+      {
+        "filter_stage": "after_btc_disaster_filter_count",
+        "killed_count": 888,
+        "killed_share_of_previous_stage": 0.072372,
+        "killed_share_of_raw_sweep": 0.008565,
+        "previous_stage_count": 12270,
+        "survivor_count": 11382
+      },
+      {
+        "filter_stage": "after_atr_risk_validity_count",
+        "killed_count": 0,
+        "killed_share_of_previous_stage": 0.0,
+        "killed_share_of_raw_sweep": 0.0,
+        "previous_stage_count": 11382,
+        "survivor_count": 11382
+      },
+      {
+        "filter_stage": "after_next_bar_available_count",
+        "killed_count": 0,
+        "killed_share_of_previous_stage": 0.0,
+        "killed_share_of_raw_sweep": 0.0,
+        "previous_stage_count": 11382,
+        "survivor_count": 11382
+      },
+      {
+        "filter_stage": "final_candidate_count_before_position_capacity",
+        "killed_count": 0,
+        "killed_share_of_previous_stage": 0.0,
+        "killed_share_of_raw_sweep": 0.0,
+        "previous_stage_count": 11382,
+        "survivor_count": 11382
+      },
+      {
+        "filter_stage": "capacity_block_estimate",
+        "killed_count": 5424,
+        "killed_share_of_previous_stage": 0.476542,
+        "killed_share_of_raw_sweep": 0.052317,
+        "previous_stage_count": 11382,
+        "survivor_count": 5958
+      }
+    ]
+  },
+  "limitations": [
+    "This audit recomputes the filter pipeline and capacity estimate only; it does not create trades, compute PnL, optimize parameters, or run a V2 strategy.",
+    "Capacity estimate uses fixed 32-bar holding state solely to count capacity and same-symbol blocks."
+  ],
+  "long_side_filter_counts": {
+    "after_atr_risk_validity_count": 5290,
+    "after_btc_disaster_filter_count": 5290,
+    "after_candle_rejection_count": 31663,
+    "after_cross_sectional_rank_count": 5616,
+    "after_next_bar_available_count": 5290,
+    "after_volume_filter_count": 18658,
+    "capacity_block_estimate": 2670,
+    "eligible_rows_with_required_lookback": 7792920,
+    "estimated_accepted_after_capacity": 2620,
+    "final_candidate_count_before_position_capacity": 5290,
+    "raw_sweep_count": 83184
+  },
+  "module": "edge_factory_os_repo_only_crypto_15m_liquidity_sweep_filter_kill_audit_v1",
+  "payload_sha256_excluding_hash": "fec75daa66d30b386ec61f07bb658e9df479180e1bb9636e39850ee965e7177b",
+  "prior_result_summary": {
+    "closure_result_classification": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_INCONCLUSIVE_NEEDS_MORE_DATA",
+    "config_id": "crypto_15m_liquidity_sweep_48h_reversal_r2_timestop8h_v1",
+    "evaluator_result_classification": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_INCONCLUSIVE_NEEDS_MORE_DATA",
+    "execution_status": "PASS_REPO_CODE_ONLY_CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_EXECUTED",
+    "prior_accepted_long_trades": 0,
+    "prior_accepted_short_trades": 0,
+    "prior_closed_trades": 0,
+    "prior_metric_integrity": true,
+    "route_family": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_BASELINE",
+    "strategy": "CRYPTO_15M_LIQUIDITY_SWEEP_FAILED_BREAKOUT_REVERSAL_V1"
+  },
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "filter_kill_audit_created": true,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "short_side_filter_counts": {
+    "after_atr_risk_validity_count": 11382,
+    "after_btc_disaster_filter_count": 11382,
+    "after_candle_rejection_count": 41481,
+    "after_cross_sectional_rank_count": 12270,
+    "after_next_bar_available_count": 11382,
+    "after_volume_filter_count": 21875,
+    "capacity_block_estimate": 5424,
+    "eligible_rows_with_required_lookback": 7792920,
+    "estimated_accepted_after_capacity": 5958,
+    "final_candidate_count_before_position_capacity": 11382,
+    "raw_sweep_count": 103676
+  },
+  "source_artifacts": {
+    "closure": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_closures\\crypto_15m_liquidity_sweep_reversal_closure_v1.json",
+    "evaluator": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\crypto_15m_liquidity_sweep_reversal_evaluator_v1.json",
+    "execution": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\crypto_15m_liquidity_sweep_reversal_execution_v1.json",
+    "panel_review": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\panel_build_reviews\\binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json",
+    "preregistration": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\research_preregistrations\\crypto_15m_liquidity_sweep_reversal_preregistration_v1.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "bd612dd6b15c5aedfd0319205f5888edbbb1561b",
+    "allowed_new_paths_at_audit": [
+      "?? artifacts/strategy_reviews/crypto_15m_liquidity_sweep_filter_kill_audit_v1.json",
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_filter_kill_audit_v1.py"
+    ],
+    "git_status_at_audit": [
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_filter_kill_audit_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 993,
+    "unexpected_dirty_paths_at_audit": []
+  },
+  "status": "PASS_REPO_ONLY_CRYPTO_15M_LIQUIDITY_SWEEP_FILTER_KILL_AUDIT_CREATED",
+  "suspected_primary_kill_filter": {
+    "filter_stage": "after_candle_rejection_count",
+    "killed_count": 113716,
+    "side_details": {
+      "long": {
+        "filter_stage": "after_candle_rejection_count",
+        "killed_count": 51521,
+        "killed_share_of_previous_stage": 0.619362,
+        "killed_share_of_raw_sweep": 0.619362,
+        "previous_stage_count": 83184,
+        "survivor_count": 31663
+      },
+      "short": {
+        "filter_stage": "after_candle_rejection_count",
+        "killed_count": 62195,
+        "killed_share_of_previous_stage": 0.599898,
+        "killed_share_of_raw_sweep": 0.599898,
+        "previous_stage_count": 103676,
+        "survivor_count": 41481
+      }
+    }
+  },
+  "top_months_by_stage": {
+    "final_candidates_before_capacity": [
+      {
+        "count": 724,
+        "key": "2024-11"
+      },
+      {
+        "count": 703,
+        "key": "2023-12"
+      },
+      {
+        "count": 637,
+        "key": "2023-11"
+      },
+      {
+        "count": 573,
+        "key": "2025-05"
+      },
+      {
+        "count": 572,
+        "key": "2025-08"
+      },
+      {
+        "count": 568,
+        "key": "2024-09"
+      },
+      {
+        "count": 564,
+        "key": "2024-10"
+      },
+      {
+        "count": 556,
+        "key": "2024-07"
+      },
+      {
+        "count": 555,
+        "key": "2024-04"
+      },
+      {
+        "count": 550,
+        "key": "2024-02"
+      }
+    ],
+    "raw_sweeps": [
+      {
+        "count": 7882,
+        "key": "2025-01"
+      },
+      {
+        "count": 7348,
+        "key": "2025-05"
+      },
+      {
+        "count": 7308,
+        "key": "2025-08"
+      },
+      {
+        "count": 7114,
+        "key": "2024-11"
+      },
+      {
+        "count": 7029,
+        "key": "2025-07"
+      },
+      {
+        "count": 6859,
+        "key": "2024-07"
+      },
+      {
+        "count": 6758,
+        "key": "2024-08"
+      },
+      {
+        "count": 6610,
+        "key": "2025-03"
+      },
+      {
+        "count": 6544,
+        "key": "2024-10"
+      },
+      {
+        "count": 6257,
+        "key": "2025-06"
+      }
+    ]
+  },
+  "top_symbols_by_stage": {
+    "final_candidates_before_capacity": [
+      {
+        "count": 381,
+        "key": "RSRUSDT"
+      },
+      {
+        "count": 337,
+        "key": "LDOUSDT"
+      },
+      {
+        "count": 326,
+        "key": "PEOPLEUSDT"
+      },
+      {
+        "count": 325,
+        "key": "WOOUSDT"
+      },
+      {
+        "count": 315,
+        "key": "MAGICUSDT"
+      },
+      {
+        "count": 300,
+        "key": "IMXUSDT"
+      },
+      {
+        "count": 299,
+        "key": "OPUSDT"
+      },
+      {
+        "count": 295,
+        "key": "ARUSDT"
+      },
+      {
+        "count": 288,
+        "key": "SUIUSDT"
+      },
+      {
+        "count": 284,
+        "key": "GALAUSDT"
+      }
+    ],
+    "raw_sweeps": [
+      {
+        "count": 2936,
+        "key": "WOOUSDT"
+      },
+      {
+        "count": 2914,
+        "key": "GRTUSDT"
+      },
+      {
+        "count": 2911,
+        "key": "LINKUSDT"
+      },
+      {
+        "count": 2838,
+        "key": "AAVEUSDT"
+      },
+      {
+        "count": 2808,
+        "key": "RSRUSDT"
+      },
+      {
+        "count": 2799,
+        "key": "IMXUSDT"
+      },
+      {
+        "count": 2755,
+        "key": "BANDUSDT"
+      },
+      {
+        "count": 2745,
+        "key": "LDOUSDT"
+      },
+      {
+        "count": 2733,
+        "key": "THETAUSDT"
+      },
+      {
+        "count": 2700,
+        "key": "AVAXUSDT"
+      }
+    ]
+  },
+  "validation_checks": {
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_api_called": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_network_used": true,
+    "no_new_strategy_executed": true,
+    "no_parameter_optimization": true,
+    "no_runtime_live_capital": true,
+    "no_v2_tested": true,
+    "panel_review_loaded": true,
+    "prior_liquidity_sweep_artifacts_loaded": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

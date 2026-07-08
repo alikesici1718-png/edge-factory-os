@@ -1,0 +1,77 @@
+{
+  "plugin_key": "STRONGER_NULL_MODEL_BASELINE_PLUGIN_V1",
+  "plugin_type": "READ_ONLY_STRONGER_NULL_BASELINE",
+  "research_key": "STRONGER_NULL_MODEL_BASELINE_REBUILD_V1",
+  "direction_queue_key": "RD5_04_STRONGER_NULL_MODEL_BASELINE_REBUILD",
+  "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+  "canonical_policy_month_count": 12,
+  "must_consume_guard_feed": true,
+  "must_consume_research_gate_policy": true,
+  "must_not_reopen_blocked_routes": true,
+  "plugin_expansion_allowed": false,
+  "baseline_goal": "Rebuild the null/permutation baseline under the tightened research gate enforcement policy, using more independent null models and stricter false-positive caps before any plugin expansion.",
+  "minimum_permutation_runs": 1000,
+  "preferred_permutation_runs": 2000,
+  "required_independent_null_models": 8,
+  "independent_null_models": [
+    "within_month_symbol_shuffle",
+    "cross_section_symbol_resample",
+    "month_label_permutation",
+    "time_block_bootstrap",
+    "side_flip_null",
+    "hold_period_shuffle",
+    "feature_rank_shuffle",
+    "cost_stress_permutation",
+    "symbol_holdout_null",
+    "month_holdout_null",
+    "liquidity_bucket_shuffle",
+    "volatility_regime_shuffle"
+  ],
+  "baseline_tests": [
+    "within_month_symbol_shuffle",
+    "cross_section_symbol_resample",
+    "month_label_permutation",
+    "time_block_bootstrap",
+    "side_flip_null",
+    "hold_period_shuffle",
+    "feature_rank_shuffle",
+    "cost_stress_permutation"
+  ],
+  "gate_caps": {
+    "max_allowed_strict_12_any_random_hit_rate": 0.01,
+    "max_allowed_null_adjusted_any_random_hit_rate": 0.005,
+    "empirical_p_value_required_lte": 0.01,
+    "minimum_actual_vs_null_margin_bps": 2500.0
+  },
+  "required_splits": {
+    "require_out_of_time_month_split": true,
+    "require_symbol_holdout_split": true,
+    "require_cost_stress_pass": true,
+    "require_top_symbol_concentration_cap": true
+  },
+  "required_guard_keys": [
+    "CANONICAL_MONTH_POLICY_GUARD",
+    "FULL_UNIVERSE_IDENTITY_GUARD",
+    "HIGH_MISSINGNESS_FEATURE_USAGE_GUARD",
+    "SYMBOL_LIFECYCLE_COVERAGE_GUARD",
+    "EXTREME_RETURN_OUTLIER_GUARD"
+  ],
+  "forbidden_inputs": [
+    "future_return_as_feature",
+    "future_pnl_as_feature",
+    "manual_symbol_whitelist",
+    "manual_month_blacklist",
+    "post_outcome_filtering",
+    "blocked_route_hash_reuse",
+    "loose_null_gate_reuse"
+  ],
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false
+}

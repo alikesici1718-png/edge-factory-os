@@ -1,0 +1,99 @@
+{
+  "api_key_handling": {
+    "api_key_loaded": false,
+    "api_key_persisted": false,
+    "api_key_printed": false,
+    "api_key_read_attempted_from_env_only": true,
+    "api_key_required": true,
+    "api_key_written_to_artifact": false,
+    "api_key_written_to_logs": false,
+    "blocked_reason": "BLOCKED_COINALYZE_API_KEY_MISSING_AGAIN",
+    "env_var_name": "COINALYZE_API_KEY",
+    "env_var_present": false
+  },
+  "artifact_kind": "COINALYZE_FREE_OI_LIQ_FUNDING_AVAILABILITY_DISCOVERY_V2",
+  "coinalyze_constraints": {
+    "conservative_rate_limit_sleep_seconds": 1.25,
+    "intraday_history_is_limited": true,
+    "no_private_exchange_api": true,
+    "public_coinalyze_data_api_only": true,
+    "recent_bounded_windows_only": true
+  },
+  "endpoint_probe_results": [],
+  "interval_coverage_summary": {
+    "best_usable_interval": null,
+    "tested_intervals": [
+      "15min",
+      "1hour",
+      "daily"
+    ]
+  },
+  "limitations": [
+    "COINALYZE_API_KEY is still missing from the environment visible to this process.",
+    "No Coinalyze API request or network call was made.",
+    "The prior V1 blocked artifact was not modified or overwritten."
+  ],
+  "market_discovery_summary": {
+    "binance_stable_perp_count": 0,
+    "http_status": null,
+    "market_count": 0,
+    "okx_stable_swap_count": 0,
+    "request_ok": false,
+    "source_endpoint": "future-markets"
+  },
+  "module": "edge_factory_os_repo_only_coinalyze_free_oi_liq_funding_availability_discovery_v2",
+  "next_allowed_step": "COINALYZE_API_KEY_ENV_SETUP_REVIEW_V2",
+  "next_module": "COINALYZE_API_KEY_ENV_SETUP_REVIEW_V2",
+  "payload_sha256_excluding_hash": "61e60d37a7df53d4176b37371da7f5b5f826b015fe2ba2c17edc15fcadd2b0aa",
+  "prior_blocked_attempt": {
+    "api_key_persisted": false,
+    "api_network_call_made": false,
+    "artifact": "artifacts/data_discovery/coinalyze_free_oi_liq_funding_availability_discovery_v1.json",
+    "commit": "0c00fd0459ff1aaaa0939e7c2f0b24116f46c704",
+    "exact_blocker": "COINALYZE_API_KEY missing from environment",
+    "result_classification": "COINALYZE_FREE_DATA_BLOCKED_API_OR_RATE_LIMIT",
+    "status": "BLOCKED_COINALYZE_API_KEY_MISSING"
+  },
+  "probe_symbols": [],
+  "replacement_checks_all_true": false,
+  "result_classification": "COINALYZE_FREE_DATA_BLOCKED_API_OR_RATE_LIMIT",
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "data_discovery_created": true,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_checkpoint": "0c00fd0459ff1aaaa0939e7c2f0b24116f46c704",
+  "status": "BLOCKED_COINALYZE_API_KEY_MISSING_AGAIN",
+  "usable_data_summary": {
+    "usable_funding_symbol_count": 0,
+    "usable_funding_symbols": [],
+    "usable_liquidation_symbol_count": 0,
+    "usable_liquidation_symbols": [],
+    "usable_oi_symbol_count": 0,
+    "usable_oi_symbols": []
+  },
+  "validation_checks": {
+    "api_key_loaded_from_env_only": false,
+    "api_key_not_written_to_artifact": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_pnl_computation": true,
+    "no_private_exchange_api_used": true,
+    "no_runtime_live_capital": true,
+    "no_signal_generation": true,
+    "no_strategy_execution": true,
+    "prior_blocked_artifact_not_modified": true,
+    "replacement_checks_all_true": false,
+    "repo_clean_before_run": true
+  }
+}

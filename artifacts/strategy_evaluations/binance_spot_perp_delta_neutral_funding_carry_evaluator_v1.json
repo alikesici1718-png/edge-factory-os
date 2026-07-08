@@ -1,0 +1,106 @@
+{
+  "artifact_kind": "BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EVALUATION",
+  "evaluation_policy": {
+    "diagnostic_promising_requires_all_true": [
+      "validation_net_after_lifecycle_cost_bps > 0",
+      "validation_positive_after_cost is true",
+      "validation monthly positive rate >= 0.60",
+      "validation worst month net after rebalance >= -500 bps",
+      "validation funding component > 30 bps",
+      "metric integrity passed",
+      "safety review passed",
+      "validation and holdout inputs complete"
+    ],
+    "holdout_positive_cannot_create_candidate_or_edge": true,
+    "holdout_reported_separately": true
+  },
+  "evaluator_findings": {
+    "diagnostic_promising": true,
+    "funding_component_materially_positive": true,
+    "input_complete": true,
+    "metric_integrity_passed": true,
+    "monthly_stability_passed": true,
+    "safety_review_passed": true,
+    "validation_net_positive": true,
+    "validation_positive_after_cost": true,
+    "worst_month_not_catastrophic": true
+  },
+  "execution_results_evaluated": {
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "holdout_funding_component_bps": 284.985867,
+    "holdout_gross_price_component_bps": 1.983989,
+    "holdout_gross_total_bps": 286.969856,
+    "holdout_monthly_positive_rate": 0.9,
+    "holdout_net_after_lifecycle_cost_bps": 256.969856,
+    "holdout_net_after_monthly_rebalance_cost_bps": 236.969856,
+    "validation_funding_component_bps": 1284.585367,
+    "validation_gross_price_component_bps": 13.527102,
+    "validation_gross_total_bps": 1298.112469,
+    "validation_monthly_positive_rate": 1.0,
+    "validation_net_after_lifecycle_cost_bps": 1268.112469,
+    "validation_net_after_monthly_rebalance_cost_bps": 1238.112469,
+    "validation_worst_month_net_after_rebalance_bps": 12.912237
+  },
+  "followup_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "closure_record_required_next": true,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "holdout_permission_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "forbidden_actions_confirmed_false": {
+    "candidate_generated": false,
+    "edge_claimed": false,
+    "execution_rerun": false,
+    "family_released": false,
+    "holdout_permission_granted": false,
+    "row_files_read": false,
+    "runtime_live_capital_permission_granted": false
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_spot_perp_delta_neutral_funding_carry_evaluator_v1.py",
+  "payload_sha256_excluding_hash": "94bfdeb3cbe2bfd79ea77ae86c96427790f87a78ff4377972d4b1476ad4ee52b",
+  "prior_execution_preserved": {
+    "config_id": "spot_long_perp_short_always_on_funding_carry_3symbol",
+    "execution_artifact": "artifacts/strategy_executions/binance_spot_perp_delta_neutral_funding_carry_execution_v1.json",
+    "execution_payload_sha256_excluding_hash": "7855d599b8fa331cbbea2f380c23306889ae486369761d900d7aed36e7191378",
+    "execution_status": "PASS_REPO_CODE_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EXECUTED"
+  },
+  "replacement_checks_all_true": true,
+  "result_classification": {
+    "closure_record_required_next": true,
+    "diagnostic_promising": true,
+    "result_class": "SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_DIAGNOSTIC_PROMISING_REQUIRES_CLOSURE_NO_CANDIDATE_NO_EDGE"
+  },
+  "source_checkpoint": {
+    "repo_clean_before_run": true,
+    "repo_head_at_run": "3f1a5b3e79113c22131d6064136d5e4ff7f6e317",
+    "tracked_python_count_at_start": 880
+  },
+  "status": "PASS_REPO_ONLY_BINANCE_SPOT_PERP_DELTA_NEUTRAL_FUNDING_CARRY_EVALUATED",
+  "validation_checks": {
+    "does_not_read_rows": true,
+    "does_not_rerun_execution": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "execution_artifact_loaded": true,
+    "execution_config_id_verified": true,
+    "execution_payload_hash_verified": true,
+    "execution_status_verified": true,
+    "funding_materiality_checked": true,
+    "metric_integrity_checked": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_files_modified": true,
+    "no_family_release": true,
+    "no_runtime_live_capital": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true,
+    "safety_review_checked": true,
+    "validation_monthly_positive_rate_checked": true,
+    "validation_net_metric_checked": true,
+    "worst_month_threshold_checked": true
+  }
+}

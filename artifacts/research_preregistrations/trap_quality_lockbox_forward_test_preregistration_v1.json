@@ -1,0 +1,366 @@
+{
+  "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_PREREGISTRATION",
+  "final_result_classes": [
+    "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_PASS_PAPER_FORWARD_ELIGIBLE_NO_EDGE_NO_LIVE",
+    "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_FAIL_ROUTE_CLOSED_NO_EDGE_NO_LIVE",
+    "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_INCONCLUSIVE_DATA_OR_TRADE_COUNT_NO_EDGE_NO_LIVE",
+    "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_INVALIDATED_BY_INTEGRITY_FAILURE_NO_EDGE_NO_LIVE"
+  ],
+  "frozen_config": {
+    "config_id": "crypto_15m_idiosyncratic_sweep_short_trap_quality_v1",
+    "core_rules": {
+      "long_trades_allowed": false,
+      "market_pump_veto_enabled": true,
+      "risk_quality_ratio_min": 1.0,
+      "side": "short_only",
+      "stop_rule": "stop = sweep_high + 0.5 * ATR14",
+      "structure": "residual+sweep+confirmation",
+      "take_profit_rule": "take_profit = entry - 2R for shorts",
+      "time_stop": "8h / 32 bars",
+      "trap_quality_score_min": 3
+    },
+    "explicitly_not_using": [
+      "time-exit-only finalist",
+      "risk-tightened",
+      "trap-score4",
+      "wider-stop",
+      "rejection-depth-required",
+      "standalone market-pump-veto finalist",
+      "any V-next"
+    ],
+    "frozen_parameters": {
+      "atr_length": 14,
+      "base_equity_usdt": 1000,
+      "beta_window_bars": 2880,
+      "beta_window_calendar_days": 30,
+      "compounding_allowed": false,
+      "confirmation_bar_required": true,
+      "confirmation_strength_atr_min": 0.05,
+      "cost_aware_gate": "abs(residual_4h) >= 0.008",
+      "cost_aware_gate_abs_residual_4h_min": 0.008,
+      "leverage_allowed": false,
+      "market_pump_veto_enabled": true,
+      "max_concurrent_positions": 3,
+      "max_new_positions_per_timestamp": 1,
+      "max_notional_per_trade_usdt": 100,
+      "minimum_beta_observations": 1000,
+      "one_open_position_per_symbol": true,
+      "prior_range_bars": 192,
+      "prior_range_window": "48h",
+      "reinvestment_allowed": false,
+      "residual_impulse_bars": 16,
+      "residual_impulse_window": "4h",
+      "residual_z_threshold_short": 3.5,
+      "reward_risk_take_profit": 2,
+      "risk_per_trade_fraction": 0.005,
+      "risk_per_trade_usdt": 5,
+      "risk_quality_ratio_min": 1.0,
+      "round_trip_cost_bps": 20,
+      "round_trip_cost_fraction": 0.002,
+      "stop_risk_quality_gate": "abs(residual_4h) / (stop_distance_fraction + 0.002) >= 1.0",
+      "symbol_cooldown": "24h / 96 bars",
+      "symbol_cooldown_bars": 96,
+      "time_stop": "8h / 32 bars",
+      "time_stop_bars": 32,
+      "timeframe": "15m",
+      "trap_quality_score_min": 3,
+      "volume_filter": "volume > volume_sma20",
+      "volume_sma_len": 20
+    },
+    "route_family": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_BASELINE",
+    "source_evaluator_status": "PASS_REPO_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EVALUATED",
+    "source_execution_status": "PASS_REPO_CODE_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EXECUTED",
+    "source_route": "exact original trap-quality route",
+    "source_strategy_status": "PASS_REPO_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_PREREGISTRATION_CREATED",
+    "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_V1"
+  },
+  "frozen_finalist": {
+    "config_id": "crypto_15m_idiosyncratic_sweep_short_trap_quality_v1",
+    "explicit_rejected_finalists_preserved": {
+      "market_pump_veto": {
+        "null_percentile": 0.73,
+        "reason": "Rejected as standalone finalist; lower null percentile than trap-quality V1.",
+        "reject_as_standalone_finalist": true,
+        "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_MARKET_PUMP_VETO_V1"
+      },
+      "rejection_depth_required": {
+        "null_percentile": 0.87,
+        "reason": "Rejected follow-up; mandatory rejection depth was effectively redundant and slightly worse than the finalist.",
+        "reject_as_finalist": true,
+        "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_REJECTION_DEPTH_REQUIRED_V1"
+      },
+      "risk_tightened": {
+        "null_percentile": 0.53,
+        "reason": "Rejected follow-up; risk-quality tightening worsened validation and null versus the finalist.",
+        "reject_as_finalist": true,
+        "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_RISK_TIGHTENED_V2"
+      },
+      "time_exit_only": {
+        "null_percentile": 0.84,
+        "reason": "Rejected as finalist despite stronger net bps because null percentile is below the finalist and below 0.90.",
+        "reject_as_finalist": true,
+        "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_TIME_EXIT_ONLY_V2"
+      },
+      "trap_score4": {
+        "null_percentile": 0.58,
+        "reason": "Rejected follow-up; score4-only tightening worsened validation and null versus the finalist.",
+        "reject_as_finalist": true,
+        "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_SCORE4_ONLY_V2"
+      },
+      "wider_stop": {
+        "null_percentile": 0.68,
+        "reason": "Rejected follow-up; wider stop worsened validation and null versus the finalist.",
+        "reject_as_finalist": true,
+        "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_WIDER_STOP_V2"
+      }
+    },
+    "freeze_reason": "Original trap-quality V1 has the highest null percentile among viable candidates: 0.90.",
+    "route_family": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_BASELINE",
+    "strategy": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_V1"
+  },
+  "hard_reject_criteria": {
+    "any_one_rejects": true,
+    "criteria": [
+      {
+        "criterion": "lockbox_net_bps <= 0",
+        "id": "lockbox_net_bps_nonpositive"
+      },
+      {
+        "criterion": "lockbox_monthly_positive_rate < 0.50",
+        "id": "monthly_positive_rate_lt_0p50"
+      },
+      {
+        "criterion": "null_percentile < 0.80",
+        "id": "null_percentile_lt_0p80"
+      },
+      {
+        "criterion": "top_symbol_concentration > 0.50",
+        "id": "top_symbol_concentration_gt_0p50"
+      },
+      {
+        "criterion": "metric_integrity_passed = false",
+        "id": "metric_integrity_failed"
+      },
+      {
+        "criterion": "lookahead detected",
+        "id": "lookahead_detected"
+      },
+      {
+        "criterion": "strategy config mismatch",
+        "id": "strategy_config_mismatch"
+      },
+      {
+        "criterion": "data contamination",
+        "id": "data_contamination"
+      },
+      {
+        "criterion": "runtime/live/capital/order action",
+        "id": "runtime_live_capital_order_action"
+      }
+    ],
+    "criteria_count": 9
+  },
+  "lockbox_data_review": {
+    "acquired_symbol_count": 81,
+    "actual_total_rows": 1407456,
+    "artifact_status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_DATA_REVIEW_CREATED",
+    "checksum_review_passed": true,
+    "expected_total_rows": 1407456,
+    "frozen_finalist": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_V1",
+    "full_coverage_symbol_count": 81,
+    "missing_symbol_count": 0,
+    "next_allowed_step": "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_PREREGISTRATION_V1",
+    "no_strategy_execution_or_pnl_in_review": true,
+    "ohlcv_sanity_passed": true,
+    "requested_symbol_count": 81,
+    "result_classification": "TRAP_QUALITY_LOCKBOX_FORWARD_DATA_REVIEW_PASS_READY_FOR_TEST_PREREGISTRATION",
+    "schema_compatible": true
+  },
+  "lockbox_non_tuning_rule": {
+    "if_lockbox_fails_route_rejected_closed": true,
+    "if_lockbox_passes_next_scope": "paper-forward planning/review only",
+    "live_or_capital_permission_if_passes": false,
+    "lockbox_test_run_once": true,
+    "no_exit_changes_after_result": true,
+    "no_filter_changes_after_result": true,
+    "no_parameter_changes_after_result": true,
+    "no_v_next_based_on_lockbox_result": true,
+    "strategy_config_is_frozen": true
+  },
+  "lockbox_period": {
+    "closed_months": [
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04"
+    ],
+    "lockbox_data_root": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_trap_quality_lockbox_forward_data_acquisition_v1\\normalized_15m_by_symbol",
+    "lockbox_end": "2026-05-01T00:00:00Z",
+    "lockbox_start": "2025-11-01T00:00:00Z",
+    "partial_month_included": false,
+    "primary_lockbox_only": true
+  },
+  "module": "edge_factory_os_repo_only_trap_quality_lockbox_forward_test_preregistration_v1",
+  "multiple_testing_adjustment_record": {
+    "adjusted_alpha_final_test_requirement": "Final test artifact must compute adjusted alpha using recorded global/family counts if available.",
+    "development_panel_considered_contaminated_or_memorized": true,
+    "edge_claim_rule": "No edge can be claimed unless unadjusted and adjusted criteria both pass; this preregistration grants no edge claim.",
+    "family_had_multiple_variants": true,
+    "lockbox_result_must_not_be_used_for_tuning": true,
+    "one_frozen_finalist_lockbox_test": true,
+    "original_development_null_percentile": 0.9,
+    "original_development_p_value": 0.1,
+    "p_value_definition": "p_value = 1 - null_percentile"
+  },
+  "next_allowed_step": "TRAP_QUALITY_LOCKBOX_FORWARD_TEST_EXECUTION_V1",
+  "pass_criteria": {
+    "all_must_pass": true,
+    "criteria": [
+      {
+        "criterion": "lockbox_net_bps > 0",
+        "id": "lockbox_net_bps_positive"
+      },
+      {
+        "criterion": "lockbox_monthly_positive_rate >= 0.60",
+        "id": "monthly_positive_rate_min_0p60"
+      },
+      {
+        "criterion": "worst_month_bps > -500",
+        "id": "worst_month_gt_minus_500"
+      },
+      {
+        "criterion": "max_drawdown_bps > -2000",
+        "id": "max_drawdown_gt_minus_2000"
+      },
+      {
+        "criterion": "null_percentile >= 0.90",
+        "id": "null_percentile_min_0p90"
+      },
+      {
+        "criterion": "top_3_symbol_concentration <= 0.30",
+        "id": "top3_symbol_concentration_max_0p30"
+      },
+      {
+        "criterion": "fee_stress_2x_net_bps > 0",
+        "id": "fee_stress_2x_positive"
+      },
+      {
+        "criterion": "closed_trade_count >= 50",
+        "id": "closed_trade_count_min_50"
+      },
+      {
+        "criterion": "metric_integrity_passed = true",
+        "id": "metric_integrity_passed"
+      },
+      {
+        "criterion": "no candidate/edge/live/capital permissions",
+        "id": "no_candidate_edge_live_capital_permissions"
+      }
+    ],
+    "criteria_count": 10
+  },
+  "payload_sha256_excluding_hash": "71eec38b3427f4f55d391fc0c04fc8b0c434ee68bed7aa3dc509e7a9d6c79743",
+  "replacement_checks_all_true": true,
+  "safety_permissions": {
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "lockbox_test_preregistration_created": true,
+    "optimization_allowed_now": false,
+    "pnl_computation_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "signal_generation_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "source_artifacts": {
+    "data_acquisition": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_DATA_ACQUISITION",
+      "name": "data_acquisition",
+      "path": "artifacts/data_acquisition/trap_quality_lockbox_forward_data_acquisition_v1.json",
+      "payload_sha256_excluding_hash": "09b56de3085acc7e367406dad1abb32ae6a61d070772098d780851c0961087a1",
+      "sha256": "66078604acc4aff3dfd2352f7ba1504fa29a2e75d84004326deaee7fb5cf7d24",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_DATA_ACQUISITION_CREATED"
+    },
+    "data_review": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FORWARD_DATA_REVIEW",
+      "name": "data_review",
+      "path": "artifacts/data_reviews/trap_quality_lockbox_forward_data_review_v1.json",
+      "payload_sha256_excluding_hash": "226fa8a924c6ab81ea377f67b93a7958b6f611e7d9f603494a8d65127d14eab7",
+      "sha256": "d684b8466e77a038112a760f7ba8738bab7ac0bdb6126009ac4d56c728f5cbcb",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_DATA_REVIEW_CREATED"
+    },
+    "freeze_contract": {
+      "artifact_kind": "TRAP_QUALITY_LOCKBOX_FREEZE_CONTRACT",
+      "name": "freeze_contract",
+      "path": "artifacts/research_preregistrations/trap_quality_lockbox_freeze_contract_v1.json",
+      "payload_sha256_excluding_hash": "9e35e99a2d4288ba2e4e5608285e8feef337a0f1034267d2f3ea15ac19967f97",
+      "sha256": "415ff58a129b73a0ce3926704f9a41ee0aa989e2eaa0b2a4c04fa4bc59de58b4",
+      "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FREEZE_CONTRACT_CREATED"
+    },
+    "trap_quality_evaluator": {
+      "artifact_kind": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EVALUATION",
+      "name": "trap_quality_evaluator",
+      "path": "artifacts/strategy_evaluations/crypto_15m_idiosyncratic_sweep_short_trap_quality_evaluator_v1.json",
+      "payload_sha256_excluding_hash": "320a438c730dc1884e1d2174c37a621098214680f8cedf039e036184fc77fd25",
+      "sha256": "3573d7d94d32fbc2b5c2cefcdc4c6a8ee17a16211d9f45c304ba386bfce5d022",
+      "status": "PASS_REPO_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EVALUATED"
+    },
+    "trap_quality_execution": {
+      "artifact_kind": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EXECUTION",
+      "name": "trap_quality_execution",
+      "path": "artifacts/strategy_executions/crypto_15m_idiosyncratic_sweep_short_trap_quality_execution_v1.json",
+      "payload_sha256_excluding_hash": "19e280c0e325cca254bbf8224a959846712b820963654d7b30c0783f8f3433ed",
+      "sha256": "06e56bfd28cfe6c350283d26b417877d6108ffe63080b793a9dce6aee3014b8b",
+      "status": "PASS_REPO_CODE_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_EXECUTED"
+    },
+    "trap_quality_preregistration": {
+      "artifact_kind": "CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_PREREGISTRATION",
+      "name": "trap_quality_preregistration",
+      "path": "artifacts/research_preregistrations/crypto_15m_idiosyncratic_sweep_short_trap_quality_preregistration_v1.json",
+      "payload_sha256_excluding_hash": "4cf29e74a7ce65bb2249898e775f445c64548b26b4f9d346cfe3707b642f86d9",
+      "sha256": "9cf3a6ad35e0ab54716617878dff0544e47e8c955202debe4a80d10875b9c237",
+      "status": "PASS_REPO_ONLY_CRYPTO_15M_IDIOSYNCRATIC_SWEEP_SHORT_TRAP_QUALITY_PREREGISTRATION_CREATED"
+    }
+  },
+  "source_checkpoint": {
+    "allowed_untracked_paths_during_preregistration": [
+      "?? artifacts/research_preregistrations/trap_quality_lockbox_forward_test_preregistration_v1.json",
+      "?? tools/edge_factory_os_repo_only_trap_quality_lockbox_forward_test_preregistration_v1.py"
+    ],
+    "expected_head": "601c21b0474bb550f3c701854fe92968f0234953",
+    "git_status_before_run": [
+      "?? tools/edge_factory_os_repo_only_trap_quality_lockbox_forward_test_preregistration_v1.py"
+    ],
+    "head": "601c21b0474bb550f3c701854fe92968f0234953",
+    "repo_clean_before_run": true,
+    "tracked_python_count_before_run": 1040
+  },
+  "status": "PASS_REPO_ONLY_TRAP_QUALITY_LOCKBOX_FORWARD_TEST_PREREGISTRATION_CREATED",
+  "validation_checks": {
+    "data_acquisition_loaded": true,
+    "data_review_loaded": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "freeze_contract_loaded": true,
+    "frozen_finalist_verified": true,
+    "hard_reject_criteria_defined_before_execution": true,
+    "lockbox_data_review_pass_verified": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_existing_repo_files_modified": true,
+    "no_parameter_change": true,
+    "no_pnl_computation": true,
+    "no_runtime_live_capital": true,
+    "no_signal_generation": true,
+    "no_strategy_execution": true,
+    "no_v_next_created": true,
+    "pass_criteria_defined_before_execution": true,
+    "rejected_finalists_preserved": true,
+    "replacement_checks_all_true": true,
+    "repo_clean_before_run": true
+  }
+}

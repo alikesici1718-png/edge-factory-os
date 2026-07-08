@@ -1,0 +1,640 @@
+{
+  "artifact_kind": "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_V2_ERROR_AUDIT",
+  "available_data_split_policy": {
+    "if_data_starts_in_2025": "train_or_calibration first 30%, validation next 35%, holdout final 35%",
+    "standard_2024_validation_disallowed_if_empty": true,
+    "threshold_changes_from_train_or_calibration_allowed": false,
+    "validation_closed_trades_below_30_forces_inconclusive": true
+  },
+  "corrected_repaired_assumptions": {
+    "base_equity_usdt": 1000.0,
+    "clean_room_diagnostic_only": true,
+    "entry_delay_minutes": 2,
+    "entry_policy": "signal close + 2 minutes, enter at next available 1m open after delay",
+    "exact_gate_replay_recovered": false,
+    "exact_original_source_recovered": false,
+    "exit_policy": "fixed 120 minutes after entry, exit at next available 1m open after planned exit",
+    "families": [
+      "blowoff_short",
+      "mean_reversion_short"
+    ],
+    "family_key": "old_short",
+    "hold_minutes": 120,
+    "monthly_accounting": "monthly_pnl_usdt / base_equity_usdt * 10000",
+    "per_trade_notional_usdt": 50.0,
+    "portfolio_accounting": "sum(trade_pnl_usdt) / base_equity_usdt * 10000",
+    "round_trip_cost_bps": 20.0,
+    "route_key": "old_short_clean_room_v1",
+    "side": "short",
+    "threshold_changes_allowed": false,
+    "threshold_optimization_allowed": false,
+    "timeframe": "1m"
+  },
+  "data_source_review": {
+    "candidate_okx_1m_source_count": 29,
+    "data_source_missing_blocker": false,
+    "readable_okx_1m_source_count": 29,
+    "readable_symbols": [
+      "AZTEC",
+      "BASED",
+      "BIO",
+      "BSB",
+      "CRCL",
+      "ENS",
+      "H",
+      "ICP",
+      "INJ",
+      "IP",
+      "JTO",
+      "KITE",
+      "LAB",
+      "LAYER",
+      "MU",
+      "NOT",
+      "ONDO",
+      "PENDLE",
+      "PIEVERSE",
+      "RAVE",
+      "RLS",
+      "SAHARA",
+      "STABLE",
+      "STRK",
+      "TRUMP",
+      "TRUTH",
+      "UNI",
+      "USELESS",
+      "YGG"
+    ],
+    "sample_sources": [
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\AZTEC\\raw\\candles_long_1m\\AZTEC-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 9610209,
+        "symbol": "AZTEC"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\BASED\\raw\\candles_long_1m\\BASED-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 4084104,
+        "symbol": "BASED"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\BIO\\raw\\candles_long_1m\\BIO-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 48682544,
+        "symbol": "BIO"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\BSB\\raw\\candles_long_1m\\BSB-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 3415902,
+        "symbol": "BSB"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\CRCL\\raw\\candles_long_1m\\CRCL-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 7159864,
+        "symbol": "CRCL"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\ENS\\raw\\candles_long_1m\\ENS-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 43783483,
+        "symbol": "ENS"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\H\\raw\\candles_long_1m\\H-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 39405895,
+        "symbol": "H"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\ICP\\raw\\candles_long_1m\\ICP-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 45306299,
+        "symbol": "ICP"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\INJ\\raw\\candles_long_1m\\INJ-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 47792724,
+        "symbol": "INJ"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\IP\\raw\\candles_long_1m\\IP-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 44179782,
+        "symbol": "IP"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\JTO\\raw\\candles_long_1m\\JTO-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 43048083,
+        "symbol": "JTO"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\KITE\\raw\\candles_long_1m\\KITE-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 2530185,
+        "symbol": "KITE"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\LAB\\raw\\candles_long_1m\\LAB-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 22529133,
+        "symbol": "LAB"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\LAYER\\raw\\candles_long_1m\\LAYER-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 44808839,
+        "symbol": "LAYER"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\MU\\raw\\candles_long_1m\\MU-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 6428314,
+        "symbol": "MU"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\NOT\\raw\\candles_long_1m\\NOT-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 55933049,
+        "symbol": "NOT"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\ONDO\\raw\\candles_long_1m\\ONDO-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 44480381,
+        "symbol": "ONDO"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\PENDLE\\raw\\candles_long_1m\\PENDLE-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 25176334,
+        "symbol": "PENDLE"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\PIEVERSE\\raw\\candles_long_1m\\PIEVERSE-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 19779878,
+        "symbol": "PIEVERSE"
+      },
+      {
+        "exists": true,
+        "header": [
+          "ts",
+          "open",
+          "high",
+          "low",
+          "close",
+          "vol",
+          "volCcy",
+          "volCcyQuote",
+          "confirm",
+          "time"
+        ],
+        "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\RAVE\\raw\\candles_long_1m\\RAVE-USDT-SWAP_1m_2025-04-30_2026-04-30.csv",
+        "read_error": null,
+        "readable_okx_1m": true,
+        "size_bytes": 17476542,
+        "symbol": "RAVE"
+      }
+    ],
+    "source_review_artifact": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\old_short\\old_short_proxy_backtest_data_coverage_source_review_v1.json"
+  },
+  "diagnostic_modes_required": {
+    "MODE_A_PROXY_GATE_CONSERVATIVE": {
+      "exact_gate_replay_claimed": false,
+      "max_global_open_positions": 3,
+      "max_open_positions_per_family": 2,
+      "primary_evaluation_mode": true,
+      "same_symbol_overlap_forbidden": true,
+      "short_only": true
+    },
+    "MODE_B_NO_GATE_UPPER_BOUND_DIAGNOSTIC": {
+      "eligible_for_diagnostic_promising_by_itself": false,
+      "max_global_open_positions": null,
+      "max_open_positions_per_family": null,
+      "primary_evaluation_mode": false,
+      "same_symbol_overlap_forbidden": true,
+      "short_only": true,
+      "upper_bound_not_live_realistic": true
+    }
+  },
+  "module": "edge_factory_os_repo_only_old_short_clean_room_direct_backtest_v2_error_audit_v1",
+  "next_allowed_step": "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_EXECUTION_V2",
+  "payload_sha256_excluding_hash": "3217d453ba259ef4bd0af16814f6c5b67cb83ef83fc31daa436515d15c5d0098",
+  "prior_suspicious_metric_comparison": {
+    "prior_closure_result": "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_INCONCLUSIVE_NEEDS_MORE_DATA",
+    "prior_evaluator_result": "OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_INCONCLUSIVE_NEEDS_MORE_DATA",
+    "prior_executed_trades": 1904,
+    "prior_holdout_net_bps_sum_trade_like": 1336.608757,
+    "prior_top_symbol_concentration": {
+      "top_symbol": "RAVE",
+      "top_symbol_trade_count": 522,
+      "top_symbol_trade_share": 0.27416,
+      "trade_count_by_symbol": {
+        "AZTEC": 15,
+        "BASED": 99,
+        "BIO": 113,
+        "BSB": 131,
+        "ENS": 1,
+        "H": 277,
+        "ICP": 24,
+        "INJ": 3,
+        "IP": 68,
+        "JTO": 16,
+        "LAB": 53,
+        "LAYER": 28,
+        "NOT": 9,
+        "ONDO": 6,
+        "PIEVERSE": 193,
+        "RAVE": 522,
+        "RLS": 49,
+        "SAHARA": 85,
+        "STABLE": 34,
+        "STRK": 26,
+        "TRUMP": 19,
+        "TRUTH": 39,
+        "UNI": 30,
+        "USELESS": 31,
+        "YGG": 33
+      }
+    },
+    "prior_total_signals": 1904,
+    "prior_validation_net_bps": 0.0,
+    "prior_worst_month": {
+      "closed_trades": 81,
+      "gross_bps": -19075.437267479534,
+      "month": "2025-07",
+      "net_bps": -20695.437267479534
+    }
+  },
+  "replacement_checks_all_true": true,
+  "route_key": "old_short_clean_room_v1",
+  "safety_permissions": {
+    "backtest_execution_allowed_next": true,
+    "candidate_generation_allowed_now": false,
+    "capital_allocation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_trading_allowed_now": false,
+    "monitor_allowed_now": false,
+    "real_orders_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "prior_closure": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_closures\\old_short_clean_room_direct_backtest_closure_v1.json",
+    "prior_evaluator": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_evaluations\\old_short_clean_room_direct_backtest_evaluator_v1.json",
+    "prior_execution": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_executions\\old_short_clean_room_direct_backtest_execution_v1.json",
+    "source_review": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\old_short\\old_short_proxy_backtest_data_coverage_source_review_v1.json",
+    "threshold_contract": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\old_short_clean_room\\old_short_clean_room_runner_fixture_threshold_contract_v1.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "3cc2105e0edc6565b2dc330bc04fe8146e42f1ea",
+    "allowed_new_paths_at_audit": [
+      "?? artifacts/strategy_reviews/old_short_clean_room_direct_backtest_v2_error_audit_v1.json",
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_direct_backtest_v2_error_audit_v1.py"
+    ],
+    "git_status_at_audit": [
+      "?? tools/edge_factory_os_repo_only_old_short_clean_room_direct_backtest_v2_error_audit_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 977,
+    "unexpected_dirty_paths_at_audit": []
+  },
+  "status": "PASS_REPO_ONLY_OLD_SHORT_CLEAN_ROOM_DIRECT_BACKTEST_V2_ERROR_AUDIT_CREATED",
+  "suspected_error_audit": [
+    {
+      "issue": "portfolio accounting likely used summed trade bps as headline return",
+      "repair": "compute trade_pnl_usdt = 50 * net_return_fraction and portfolio_return_bps = sum_pnl / 1000 * 10000",
+      "severity": "P0"
+    },
+    {
+      "issue": "50 USDT notional and 1000 USDT base equity were not visible in headline return denominator",
+      "repair": "fix notional and equity constants and audit every return denominator",
+      "severity": "P0"
+    },
+    {
+      "issue": "all threshold triggers were executed without proxy gate or overlap control",
+      "repair": "run MODE A proxy gate conservative and MODE B no-gate upper-bound diagnostic",
+      "severity": "P0"
+    },
+    {
+      "issue": "same-symbol overlapping positions may have been allowed",
+      "repair": "forbid same-symbol overlap in both V2 diagnostic modes",
+      "severity": "P0"
+    },
+    {
+      "issue": "global/family exposure caps were not applied in primary diagnostic mode",
+      "repair": "MODE A enforces max global open positions 3 and max open positions per family 2",
+      "severity": "P0"
+    },
+    {
+      "issue": "standard 2024 validation split was empty because recovered OKX 1m data starts in 2025",
+      "repair": "use available-data chronological split: first 30%, next 35%, final 35%",
+      "severity": "P0"
+    },
+    {
+      "issue": "symbol concentration was measured but not controlled",
+      "repair": "evaluator requires top symbol share <= 0.25 for diagnostic_promising",
+      "severity": "P1"
+    },
+    {
+      "issue": "monthly accounting may have used summed trade bps rather than base-equity denominator",
+      "repair": "monthly_portfolio_bps = monthly_pnl_usdt / 1000 * 10000",
+      "severity": "P0"
+    }
+  ],
+  "threshold_contract_review": {
+    "contract_complete": true,
+    "family_threshold_count": 2,
+    "loaded": true,
+    "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\old_short_clean_room\\old_short_clean_room_runner_fixture_threshold_contract_v1.json",
+    "route_key": "old_short_clean_room_v1",
+    "thresholds_changed": false,
+    "thresholds_optimized": false
+  },
+  "validation_checks": {
+    "data_source_can_be_discovered_from_old_short_artifacts": true,
+    "no_api_used": true,
+    "no_backtest_execution_in_audit_step": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_network_used": true,
+    "no_runtime_live_capital": true,
+    "prior_closure_loaded": true,
+    "prior_evaluator_loaded": true,
+    "prior_execution_loaded": true,
+    "repo_clean_before_run": true,
+    "source_review_loaded": true,
+    "threshold_contract_loaded": true
+  }
+}

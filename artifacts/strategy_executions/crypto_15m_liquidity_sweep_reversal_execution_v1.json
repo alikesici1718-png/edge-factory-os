@@ -1,0 +1,172 @@
+{
+  "artifact_kind": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_EXECUTION",
+  "config_id": "crypto_15m_liquidity_sweep_48h_reversal_r2_timestop8h_v1",
+  "data_limitations": [
+    "Cross-sectional rank uses symbols with required 15m fields available at the timestamp.",
+    "No parameter grid, optimization, live routing, or order endpoint was used."
+  ],
+  "data_summary": {
+    "btc_disaster_filter_available": true,
+    "data_max_timestamp": "2025-10-31T23:45:00Z",
+    "data_min_timestamp": "2023-01-01T00:00:00Z",
+    "symbol_file_count": 81
+  },
+  "execution_config": {
+    "atr_length": 14,
+    "base_equity_usdt": 1000.0,
+    "max_concurrent_positions": 5,
+    "max_notional_usdt": 100.0,
+    "prior_range_window_bars": 192,
+    "risk_per_trade_usdt": 5.0,
+    "round_trip_cost_fraction": 0.002,
+    "time_stop_bars": 32,
+    "volume_mult": 1.5,
+    "volume_sma_length": 20
+  },
+  "metric_integrity_result": {
+    "checks": {
+      "entry_next_bar_open": true,
+      "max_concurrent_positions_lte_5": true,
+      "no_live_runtime_capital_order_action": true,
+      "no_lookahead": true,
+      "notional_cap_applied": true,
+      "portfolio_bps_uses_base_equity_denominator": true,
+      "prior_high_low_excludes_current_bar": true,
+      "rank_uses_only_current_or_past_completed_returns": true,
+      "stop_take_uses_ohlc_conservatively": true
+    },
+    "passed": true
+  },
+  "metrics": {
+    "accepted_long_trades": 0,
+    "accepted_short_trades": 0,
+    "average_concurrent_positions": 0.0,
+    "average_hold_bars": null,
+    "average_loss_usdt": null,
+    "average_notional": null,
+    "average_risk_usdt": 5.0,
+    "average_win_usdt": null,
+    "best_month_bps": null,
+    "both_hit_same_bar_count": 0,
+    "closed_trades": 0,
+    "eligible_symbol_count_average": 0.0,
+    "gross_pnl_usdt": 0,
+    "max_concurrent_positions": 0,
+    "max_drawdown_bps": null,
+    "monthly_net_bps": {},
+    "monthly_positive_rate": null,
+    "net_pnl_usdt": 0,
+    "portfolio_gross_bps": 0.0,
+    "portfolio_net_bps": 0.0,
+    "profit_factor": null,
+    "raw_long_sweep_candidates": 0,
+    "raw_short_sweep_candidates": 0,
+    "side_split": {},
+    "skipped_due_btc_disaster_filter": 0,
+    "skipped_due_capacity": 0,
+    "skipped_due_invalid_risk": 0,
+    "skipped_due_missing_atr": 0,
+    "skipped_due_missing_next_bar": 0,
+    "skipped_due_same_symbol_open": 0,
+    "stop_exit_count": 0,
+    "sweep_depth_distribution": {
+      "max": null,
+      "median": null,
+      "min": null,
+      "p25": null,
+      "p75": null
+    },
+    "symbol_concentration": {
+      "top_symbol": null,
+      "top_symbol_trade_count": 0,
+      "top_symbol_trade_share": null,
+      "trade_count_by_symbol": {}
+    },
+    "take_profit_exit_count": 0,
+    "time_stop_exit_count": 0,
+    "total_cost_pnl_usdt": 0,
+    "total_timestamps": 99360,
+    "unresolved_trades": 0,
+    "win_rate": null,
+    "worst_month_bps": null
+  },
+  "module": "edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_execution_v1",
+  "null_baseline": {
+    "feasible": false,
+    "null_pass": false,
+    "reason": "validation closed trades < 50",
+    "runs": 0,
+    "validation_percentile": null
+  },
+  "payload_sha256_excluding_hash": "1b37f6e8964399dd48e6361dcf667df4bba1dd1b583eb765539207a727aeb9e5",
+  "replacement_checks_all_true": true,
+  "route_family": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_BASELINE",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "real_orders_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "panel_directory": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol",
+    "preregistration": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\research_preregistrations\\crypto_15m_liquidity_sweep_reversal_preregistration_v1.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "c334a1e1d9d7d3ee7c648a295efc7489318b7735",
+    "allowed_new_paths_at_execution": [
+      "?? artifacts/strategy_executions/crypto_15m_liquidity_sweep_reversal_execution_v1.json",
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_execution_v1.py"
+    ],
+    "git_status_at_execution": [
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_execution_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 990,
+    "unexpected_dirty_paths_at_execution": []
+  },
+  "split_metrics": {
+    "holdout": {
+      "closed_trades": 0,
+      "gross_pnl_usdt": 0,
+      "monthly_positive_rate": null,
+      "net_pnl_usdt": 0,
+      "portfolio_gross_bps": 0.0,
+      "portfolio_net_bps": 0.0
+    },
+    "train": {
+      "closed_trades": 0,
+      "gross_pnl_usdt": 0,
+      "monthly_positive_rate": null,
+      "net_pnl_usdt": 0,
+      "portfolio_gross_bps": 0.0,
+      "portfolio_net_bps": 0.0
+    },
+    "validation": {
+      "closed_trades": 0,
+      "gross_pnl_usdt": 0,
+      "monthly_positive_rate": null,
+      "net_pnl_usdt": 0,
+      "portfolio_gross_bps": 0.0,
+      "portfolio_net_bps": 0.0
+    }
+  },
+  "status": "PASS_REPO_CODE_ONLY_CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_EXECUTED",
+  "strategy": "CRYPTO_15M_LIQUIDITY_SWEEP_FAILED_BREAKOUT_REVERSAL_V1",
+  "validation_checks": {
+    "btc_disaster_filter_anchor_loaded": true,
+    "no_api_used": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_network_used": true,
+    "no_optimization": true,
+    "no_parameter_grid": true,
+    "no_runtime_live_capital": true,
+    "panel_file_count_verified_81": true,
+    "preregistration_loaded": true,
+    "repo_clean_before_run": true
+  }
+}

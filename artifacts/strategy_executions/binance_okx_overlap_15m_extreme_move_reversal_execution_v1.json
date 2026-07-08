@@ -1,0 +1,1227 @@
+{
+  "artifact_kind": "BINANCE_OKX_OVERLAP_15M_EXTREME_MOVE_REVERSAL_EXECUTION",
+  "config_id": "extreme4h_5pct_reversal_hold8h",
+  "config_result": {
+    "candidate_generation": false,
+    "config_id": "extreme4h_5pct_reversal_hold8h",
+    "edge_claim": false,
+    "family_release": false,
+    "holdout_event_count": 5317,
+    "holdout_gross_metric_bps": -20.022938,
+    "holdout_net_metric_bps": -40.022938,
+    "holdout_reported_separately": true,
+    "holdout_used_for_config_selection": false,
+    "runtime_live_capital": false,
+    "train_event_count": 14745,
+    "train_gross_metric_bps": 33.993799,
+    "train_net_metric_bps": 13.993799,
+    "validation_event_count": 10785,
+    "validation_gross_metric_bps": -6.870361,
+    "validation_net_metric_bps": -26.870361,
+    "validation_positive_after_cost": false
+  },
+  "diagnostic_interpretation_limits": {
+    "diagnostic_execution_only": true,
+    "no_candidate": true,
+    "no_edge_claim": true,
+    "no_family_release": true,
+    "no_holdout_permission": true,
+    "no_runtime_live_capital": true,
+    "not_a_backtest_for_candidate_generation": true
+  },
+  "event_coverage_summary": {
+    "average_events_per_symbol": 380.82716,
+    "events_by_month": {
+      "2023-01": 847,
+      "2023-02": 949,
+      "2023-03": 1101,
+      "2023-04": 423,
+      "2023-05": 280,
+      "2023-06": 694,
+      "2023-07": 435,
+      "2023-08": 396,
+      "2023-09": 215,
+      "2023-10": 400,
+      "2023-11": 1160,
+      "2023-12": 1184,
+      "2024-01": 1250,
+      "2024-02": 621,
+      "2024-03": 1890,
+      "2024-04": 1456,
+      "2024-05": 798,
+      "2024-06": 646,
+      "2024-07": 752,
+      "2024-08": 1190,
+      "2024-09": 433,
+      "2024-10": 494,
+      "2024-11": 1933,
+      "2024-12": 2181,
+      "2025-01": 1338,
+      "2025-02": 1435,
+      "2025-03": 1029,
+      "2025-04": 991,
+      "2025-05": 996,
+      "2025-06": 667,
+      "2025-07": 729,
+      "2025-08": 625,
+      "2025-09": 292,
+      "2025-10": 1017
+    },
+    "events_by_symbol": {
+      "1INCHUSDT": 298,
+      "AAVEUSDT": 368,
+      "ADAUSDT": 293,
+      "AGLDUSDT": 482,
+      "ALGOUSDT": 369,
+      "APEUSDT": 397,
+      "API3USDT": 534,
+      "APTUSDT": 429,
+      "ARBUSDT": 373,
+      "ARUSDT": 585,
+      "ATOMUSDT": 214,
+      "AVAXUSDT": 377,
+      "AXSUSDT": 328,
+      "BANDUSDT": 398,
+      "BATUSDT": 280,
+      "BCHUSDT": 249,
+      "BICOUSDT": 422,
+      "BLURUSDT": 514,
+      "BNBUSDT": 91,
+      "BTCUSDT": 54,
+      "CELOUSDT": 410,
+      "CFXUSDT": 548,
+      "CHZUSDT": 287,
+      "COMPUSDT": 350,
+      "CRVUSDT": 532,
+      "DOGEUSDT": 358,
+      "DOTUSDT": 251,
+      "DYDXUSDT": 485,
+      "EGLDUSDT": 288,
+      "ENSUSDT": 451,
+      "ETCUSDT": 217,
+      "ETHUSDT": 126,
+      "ETHWUSDT": 350,
+      "FILUSDT": 363,
+      "GALAUSDT": 573,
+      "GMTUSDT": 445,
+      "GMXUSDT": 320,
+      "GRTUSDT": 435,
+      "ICPUSDT": 377,
+      "IMXUSDT": 556,
+      "IOSTUSDT": 257,
+      "IOTAUSDT": 372,
+      "KSMUSDT": 358,
+      "LDOUSDT": 640,
+      "LINKUSDT": 300,
+      "LPTUSDT": 569,
+      "LRCUSDT": 371,
+      "LTCUSDT": 213,
+      "MAGICUSDT": 653,
+      "MANAUSDT": 343,
+      "MINAUSDT": 407,
+      "NEARUSDT": 500,
+      "NEOUSDT": 360,
+      "ONTUSDT": 309,
+      "OPUSDT": 509,
+      "ORDIUSDT": 572,
+      "PEOPLEUSDT": 685,
+      "QTUMUSDT": 312,
+      "RSRUSDT": 558,
+      "RVNUSDT": 341,
+      "SANDUSDT": 345,
+      "SNXUSDT": 498,
+      "SOLUSDT": 346,
+      "STXUSDT": 537,
+      "SUIUSDT": 516,
+      "SUSHIUSDT": 470,
+      "THETAUSDT": 395,
+      "TONUSDT": 169,
+      "TRBUSDT": 597,
+      "TRXUSDT": 53,
+      "UMAUSDT": 401,
+      "UNIUSDT": 339,
+      "USDCUSDT": 0,
+      "WOOUSDT": 539,
+      "XLMUSDT": 238,
+      "XRPUSDT": 240,
+      "XTZUSDT": 237,
+      "YFIUSDT": 236,
+      "YGGUSDT": 595,
+      "ZILUSDT": 294,
+      "ZRXUSDT": 396
+    },
+    "holdout_event_count": 5317,
+    "long_event_count": 14645,
+    "short_event_count": 16202,
+    "skipped_same_symbol_overlap_count": 212891,
+    "symbol_performance": {
+      "1INCHUSDT": {
+        "event_count": 298,
+        "gross_metric_bps": 1.909583,
+        "net_metric_bps": -18.090417
+      },
+      "AAVEUSDT": {
+        "event_count": 368,
+        "gross_metric_bps": -12.291873,
+        "net_metric_bps": -32.291873
+      },
+      "ADAUSDT": {
+        "event_count": 293,
+        "gross_metric_bps": -18.410417,
+        "net_metric_bps": -38.410417
+      },
+      "AGLDUSDT": {
+        "event_count": 482,
+        "gross_metric_bps": 7.797724,
+        "net_metric_bps": -12.202276
+      },
+      "ALGOUSDT": {
+        "event_count": 369,
+        "gross_metric_bps": 17.580166,
+        "net_metric_bps": -2.419834
+      },
+      "APEUSDT": {
+        "event_count": 397,
+        "gross_metric_bps": 7.220458,
+        "net_metric_bps": -12.779542
+      },
+      "API3USDT": {
+        "event_count": 534,
+        "gross_metric_bps": -15.68762,
+        "net_metric_bps": -35.68762
+      },
+      "APTUSDT": {
+        "event_count": 429,
+        "gross_metric_bps": 21.134189,
+        "net_metric_bps": 1.134189
+      },
+      "ARBUSDT": {
+        "event_count": 373,
+        "gross_metric_bps": 22.51782,
+        "net_metric_bps": 2.51782
+      },
+      "ARUSDT": {
+        "event_count": 585,
+        "gross_metric_bps": 79.010463,
+        "net_metric_bps": 59.010463
+      },
+      "ATOMUSDT": {
+        "event_count": 214,
+        "gross_metric_bps": 42.272528,
+        "net_metric_bps": 22.272528
+      },
+      "AVAXUSDT": {
+        "event_count": 377,
+        "gross_metric_bps": -1.572268,
+        "net_metric_bps": -21.572268
+      },
+      "AXSUSDT": {
+        "event_count": 328,
+        "gross_metric_bps": -7.462758,
+        "net_metric_bps": -27.462758
+      },
+      "BANDUSDT": {
+        "event_count": 398,
+        "gross_metric_bps": 16.299423,
+        "net_metric_bps": -3.700577
+      },
+      "BATUSDT": {
+        "event_count": 280,
+        "gross_metric_bps": 47.743827,
+        "net_metric_bps": 27.743827
+      },
+      "BCHUSDT": {
+        "event_count": 249,
+        "gross_metric_bps": 13.77754,
+        "net_metric_bps": -6.22246
+      },
+      "BICOUSDT": {
+        "event_count": 422,
+        "gross_metric_bps": 28.48694,
+        "net_metric_bps": 8.48694
+      },
+      "BLURUSDT": {
+        "event_count": 514,
+        "gross_metric_bps": 39.710309,
+        "net_metric_bps": 19.710309
+      },
+      "BNBUSDT": {
+        "event_count": 91,
+        "gross_metric_bps": 36.196045,
+        "net_metric_bps": 16.196045
+      },
+      "BTCUSDT": {
+        "event_count": 54,
+        "gross_metric_bps": 76.121429,
+        "net_metric_bps": 56.121429
+      },
+      "CELOUSDT": {
+        "event_count": 410,
+        "gross_metric_bps": 24.36845,
+        "net_metric_bps": 4.36845
+      },
+      "CFXUSDT": {
+        "event_count": 548,
+        "gross_metric_bps": -8.586185,
+        "net_metric_bps": -28.586185
+      },
+      "CHZUSDT": {
+        "event_count": 287,
+        "gross_metric_bps": 14.088665,
+        "net_metric_bps": -5.911335
+      },
+      "COMPUSDT": {
+        "event_count": 350,
+        "gross_metric_bps": -19.948544,
+        "net_metric_bps": -39.948544
+      },
+      "CRVUSDT": {
+        "event_count": 532,
+        "gross_metric_bps": 2.385313,
+        "net_metric_bps": -17.614687
+      },
+      "DOGEUSDT": {
+        "event_count": 358,
+        "gross_metric_bps": -11.365232,
+        "net_metric_bps": -31.365232
+      },
+      "DOTUSDT": {
+        "event_count": 251,
+        "gross_metric_bps": 8.659108,
+        "net_metric_bps": -11.340892
+      },
+      "DYDXUSDT": {
+        "event_count": 485,
+        "gross_metric_bps": 24.559572,
+        "net_metric_bps": 4.559572
+      },
+      "EGLDUSDT": {
+        "event_count": 288,
+        "gross_metric_bps": 31.769122,
+        "net_metric_bps": 11.769122
+      },
+      "ENSUSDT": {
+        "event_count": 451,
+        "gross_metric_bps": 24.321326,
+        "net_metric_bps": 4.321326
+      },
+      "ETCUSDT": {
+        "event_count": 217,
+        "gross_metric_bps": 23.313196,
+        "net_metric_bps": 3.313196
+      },
+      "ETHUSDT": {
+        "event_count": 126,
+        "gross_metric_bps": -17.018388,
+        "net_metric_bps": -37.018388
+      },
+      "ETHWUSDT": {
+        "event_count": 350,
+        "gross_metric_bps": 33.240694,
+        "net_metric_bps": 13.240694
+      },
+      "FILUSDT": {
+        "event_count": 363,
+        "gross_metric_bps": 18.929613,
+        "net_metric_bps": -1.070387
+      },
+      "GALAUSDT": {
+        "event_count": 573,
+        "gross_metric_bps": 7.776485,
+        "net_metric_bps": -12.223515
+      },
+      "GMTUSDT": {
+        "event_count": 445,
+        "gross_metric_bps": 10.695955,
+        "net_metric_bps": -9.304045
+      },
+      "GMXUSDT": {
+        "event_count": 320,
+        "gross_metric_bps": 14.389729,
+        "net_metric_bps": -5.610271
+      },
+      "GRTUSDT": {
+        "event_count": 435,
+        "gross_metric_bps": -13.704571,
+        "net_metric_bps": -33.704571
+      },
+      "ICPUSDT": {
+        "event_count": 377,
+        "gross_metric_bps": 43.322317,
+        "net_metric_bps": 23.322317
+      },
+      "IMXUSDT": {
+        "event_count": 556,
+        "gross_metric_bps": 20.146251,
+        "net_metric_bps": 0.146251
+      },
+      "IOSTUSDT": {
+        "event_count": 257,
+        "gross_metric_bps": 5.902893,
+        "net_metric_bps": -14.097107
+      },
+      "IOTAUSDT": {
+        "event_count": 372,
+        "gross_metric_bps": 3.412828,
+        "net_metric_bps": -16.587172
+      },
+      "KSMUSDT": {
+        "event_count": 358,
+        "gross_metric_bps": 25.640247,
+        "net_metric_bps": 5.640247
+      },
+      "LDOUSDT": {
+        "event_count": 640,
+        "gross_metric_bps": 15.524917,
+        "net_metric_bps": -4.475083
+      },
+      "LINKUSDT": {
+        "event_count": 300,
+        "gross_metric_bps": -9.258898,
+        "net_metric_bps": -29.258898
+      },
+      "LPTUSDT": {
+        "event_count": 569,
+        "gross_metric_bps": -21.22251,
+        "net_metric_bps": -41.22251
+      },
+      "LRCUSDT": {
+        "event_count": 371,
+        "gross_metric_bps": 36.204188,
+        "net_metric_bps": 16.204188
+      },
+      "LTCUSDT": {
+        "event_count": 213,
+        "gross_metric_bps": 9.158013,
+        "net_metric_bps": -10.841987
+      },
+      "MAGICUSDT": {
+        "event_count": 653,
+        "gross_metric_bps": 18.608939,
+        "net_metric_bps": -1.391061
+      },
+      "MANAUSDT": {
+        "event_count": 343,
+        "gross_metric_bps": -19.172789,
+        "net_metric_bps": -39.172789
+      },
+      "MINAUSDT": {
+        "event_count": 407,
+        "gross_metric_bps": 26.528334,
+        "net_metric_bps": 6.528334
+      },
+      "NEARUSDT": {
+        "event_count": 500,
+        "gross_metric_bps": 16.404424,
+        "net_metric_bps": -3.595576
+      },
+      "NEOUSDT": {
+        "event_count": 360,
+        "gross_metric_bps": 22.832719,
+        "net_metric_bps": 2.832719
+      },
+      "ONTUSDT": {
+        "event_count": 309,
+        "gross_metric_bps": 41.276352,
+        "net_metric_bps": 21.276352
+      },
+      "OPUSDT": {
+        "event_count": 509,
+        "gross_metric_bps": 11.839625,
+        "net_metric_bps": -8.160375
+      },
+      "ORDIUSDT": {
+        "event_count": 572,
+        "gross_metric_bps": 6.571442,
+        "net_metric_bps": -13.428558
+      },
+      "PEOPLEUSDT": {
+        "event_count": 685,
+        "gross_metric_bps": 27.698991,
+        "net_metric_bps": 7.698991
+      },
+      "QTUMUSDT": {
+        "event_count": 312,
+        "gross_metric_bps": 3.305213,
+        "net_metric_bps": -16.694787
+      },
+      "RSRUSDT": {
+        "event_count": 558,
+        "gross_metric_bps": -32.287739,
+        "net_metric_bps": -52.287739
+      },
+      "RVNUSDT": {
+        "event_count": 341,
+        "gross_metric_bps": 29.684746,
+        "net_metric_bps": 9.684746
+      },
+      "SANDUSDT": {
+        "event_count": 345,
+        "gross_metric_bps": -29.659523,
+        "net_metric_bps": -49.659523
+      },
+      "SNXUSDT": {
+        "event_count": 498,
+        "gross_metric_bps": 15.751994,
+        "net_metric_bps": -4.248006
+      },
+      "SOLUSDT": {
+        "event_count": 346,
+        "gross_metric_bps": 23.54192,
+        "net_metric_bps": 3.54192
+      },
+      "STXUSDT": {
+        "event_count": 537,
+        "gross_metric_bps": -1.188663,
+        "net_metric_bps": -21.188663
+      },
+      "SUIUSDT": {
+        "event_count": 516,
+        "gross_metric_bps": 13.170116,
+        "net_metric_bps": -6.829884
+      },
+      "SUSHIUSDT": {
+        "event_count": 470,
+        "gross_metric_bps": -21.641711,
+        "net_metric_bps": -41.641711
+      },
+      "THETAUSDT": {
+        "event_count": 395,
+        "gross_metric_bps": -2.409207,
+        "net_metric_bps": -22.409207
+      },
+      "TONUSDT": {
+        "event_count": 169,
+        "gross_metric_bps": 27.794856,
+        "net_metric_bps": 7.794856
+      },
+      "TRBUSDT": {
+        "event_count": 597,
+        "gross_metric_bps": -18.078226,
+        "net_metric_bps": -38.078226
+      },
+      "TRXUSDT": {
+        "event_count": 53,
+        "gross_metric_bps": -65.250669,
+        "net_metric_bps": -85.250669
+      },
+      "UMAUSDT": {
+        "event_count": 401,
+        "gross_metric_bps": 21.321762,
+        "net_metric_bps": 1.321762
+      },
+      "UNIUSDT": {
+        "event_count": 339,
+        "gross_metric_bps": -2.744175,
+        "net_metric_bps": -22.744175
+      },
+      "USDCUSDT": {
+        "event_count": 0,
+        "gross_metric_bps": null,
+        "net_metric_bps": null
+      },
+      "WOOUSDT": {
+        "event_count": 539,
+        "gross_metric_bps": 20.285712,
+        "net_metric_bps": 0.285712
+      },
+      "XLMUSDT": {
+        "event_count": 238,
+        "gross_metric_bps": -10.299967,
+        "net_metric_bps": -30.299967
+      },
+      "XRPUSDT": {
+        "event_count": 240,
+        "gross_metric_bps": 15.592545,
+        "net_metric_bps": -4.407455
+      },
+      "XTZUSDT": {
+        "event_count": 237,
+        "gross_metric_bps": 9.509243,
+        "net_metric_bps": -10.490757
+      },
+      "YFIUSDT": {
+        "event_count": 236,
+        "gross_metric_bps": 10.128149,
+        "net_metric_bps": -9.871851
+      },
+      "YGGUSDT": {
+        "event_count": 595,
+        "gross_metric_bps": -13.550394,
+        "net_metric_bps": -33.550394
+      },
+      "ZILUSDT": {
+        "event_count": 294,
+        "gross_metric_bps": 51.958574,
+        "net_metric_bps": 31.958574
+      },
+      "ZRXUSDT": {
+        "event_count": 396,
+        "gross_metric_bps": -27.529762,
+        "net_metric_bps": -47.529762
+      }
+    },
+    "top_symbol_event_share": 0.022206,
+    "total_event_count": 30847,
+    "train_event_count": 14745,
+    "validation_event_count": 10785,
+    "validation_event_coverage_review_preliminary_passed": true
+  },
+  "event_decluster_policy": {
+    "cooldown_until_exit": "after accepting an event for symbol S at E, ignore new events for S until E+8h",
+    "cross_symbol_overlapping_allowed": true,
+    "same_symbol_overlapping_allowed": false,
+    "skipped_same_symbol_overlap_count": 212891
+  },
+  "execution_safety_controls": {
+    "exactly_one_config_executed": true,
+    "no_api_calls": true,
+    "no_binance_1m_rows": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_funding_rows": true,
+    "no_network": true,
+    "no_non_preregistered_config": true,
+    "no_okx_rows": true,
+    "no_parameter_expansion": true,
+    "no_runtime_live_capital": true,
+    "no_strategy_search": true
+  },
+  "forbidden_actions_confirmed_false": {
+    "api_called": false,
+    "binance_1m_source_rows_read": false,
+    "binance_api_called": false,
+    "candidates_generated": false,
+    "capital_permission_granted": false,
+    "data_downloaded": false,
+    "edge_claimed": false,
+    "family_released": false,
+    "funding_rows_read": false,
+    "holdout_permission_granted": false,
+    "live_permission_granted": false,
+    "network_used": false,
+    "non_preregistered_config_tested": false,
+    "okx_panel_rows_read": false,
+    "runtime_permission_granted": false
+  },
+  "input_data_validation": {
+    "binance_1m_source_rows_read": false,
+    "complete_15m_rows_only": true,
+    "funding_rows_read": false,
+    "okx_panel_rows_read": false,
+    "panel_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol",
+    "panel_manifest_status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_BUILD_CREATED",
+    "panel_review_classification": "PANEL_15M_REVIEW_PASS_VALID_FOR_READ_ONLY_EXTREME_MOVE_RESEARCH",
+    "panel_review_status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
+    "panel_rows_read_for_execution": true,
+    "required_fields": [
+      "symbol",
+      "timestamp_utc",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "quote_volume",
+      "trade_count",
+      "taker_buy_base_volume",
+      "taker_buy_quote_volume",
+      "complete_15m"
+    ],
+    "rows_outside_full_window_skipped": 0,
+    "source_artifacts": {
+      "panel_build_manifest": {
+        "path": "artifacts/panel_build_manifests/binance_okx_overlap_81_symbol_15m_panel_build_manifest_v1.json",
+        "payload_hash_verified": true,
+        "payload_sha256_excluding_hash": "9a19eb2cc92e3132d81fb427e2ebf3c6c1b1f6f3a3127f9054dc26077e19e623",
+        "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_BUILD_CREATED"
+      },
+      "panel_review": {
+        "panel_validity_classification": "PANEL_15M_REVIEW_PASS_VALID_FOR_READ_ONLY_EXTREME_MOVE_RESEARCH",
+        "path": "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json",
+        "payload_hash_verified": true,
+        "payload_sha256_excluding_hash": "7274008b419404a1963673923b810885645e05803ce6161d8dfacbb6536e8655",
+        "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED"
+      },
+      "preregistration": {
+        "path": "artifacts/research_preregistrations/binance_okx_overlap_15m_extreme_move_reversal_preregistration_contract_v1.json",
+        "payload_hash_verified": true,
+        "payload_sha256_excluding_hash": "f7bd65b67f28d9c679fb6fcfac6df782fcd3dca06eb3ab6640208f35d59ccff1",
+        "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_15M_EXTREME_MOVE_REVERSAL_PREREGISTRATION_CONTRACT_CREATED"
+      },
+      "second_source_readiness": {
+        "path": "artifacts/second_source_readiness/binance_okx_overlap_near_5y_second_source_readiness_alignment_summary_v1.json",
+        "payload_hash_verified": true,
+        "payload_sha256_excluding_hash": "0cfe239f6f5ad2d20bda64b827416851de8f5b959066902b59f1f00f44eba716",
+        "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_NEAR_5Y_SECOND_SOURCE_READINESS_ALIGNMENT_SUMMARY_CREATED"
+      }
+    },
+    "symbol_count": 81,
+    "symbols": [
+      "1INCHUSDT",
+      "AAVEUSDT",
+      "ADAUSDT",
+      "AGLDUSDT",
+      "ALGOUSDT",
+      "APEUSDT",
+      "API3USDT",
+      "APTUSDT",
+      "ARBUSDT",
+      "ARUSDT",
+      "ATOMUSDT",
+      "AVAXUSDT",
+      "AXSUSDT",
+      "BANDUSDT",
+      "BATUSDT",
+      "BCHUSDT",
+      "BICOUSDT",
+      "BLURUSDT",
+      "BNBUSDT",
+      "BTCUSDT",
+      "CELOUSDT",
+      "CFXUSDT",
+      "CHZUSDT",
+      "COMPUSDT",
+      "CRVUSDT",
+      "DOGEUSDT",
+      "DOTUSDT",
+      "DYDXUSDT",
+      "EGLDUSDT",
+      "ENSUSDT",
+      "ETCUSDT",
+      "ETHUSDT",
+      "ETHWUSDT",
+      "FILUSDT",
+      "GALAUSDT",
+      "GMTUSDT",
+      "GMXUSDT",
+      "GRTUSDT",
+      "ICPUSDT",
+      "IMXUSDT",
+      "IOSTUSDT",
+      "IOTAUSDT",
+      "KSMUSDT",
+      "LDOUSDT",
+      "LINKUSDT",
+      "LPTUSDT",
+      "LRCUSDT",
+      "LTCUSDT",
+      "MAGICUSDT",
+      "MANAUSDT",
+      "MINAUSDT",
+      "NEARUSDT",
+      "NEOUSDT",
+      "ONTUSDT",
+      "OPUSDT",
+      "ORDIUSDT",
+      "PEOPLEUSDT",
+      "QTUMUSDT",
+      "RSRUSDT",
+      "RVNUSDT",
+      "SANDUSDT",
+      "SNXUSDT",
+      "SOLUSDT",
+      "STXUSDT",
+      "SUIUSDT",
+      "SUSHIUSDT",
+      "THETAUSDT",
+      "TONUSDT",
+      "TRBUSDT",
+      "TRXUSDT",
+      "UMAUSDT",
+      "UNIUSDT",
+      "USDCUSDT",
+      "WOOUSDT",
+      "XLMUSDT",
+      "XRPUSDT",
+      "XTZUSDT",
+      "YFIUSDT",
+      "YGGUSDT",
+      "ZILUSDT",
+      "ZRXUSDT"
+    ],
+    "total_complete_rows_used": 7808472,
+    "total_incomplete_rows_skipped": 0,
+    "total_raw_rows_read": 7808472
+  },
+  "long_short_side_summary": {
+    "long_holdout_event_count": 2653,
+    "long_holdout_gross_metric_bps": -20.40509,
+    "long_holdout_net_metric_bps": -40.40509,
+    "long_train_event_count": 6809,
+    "long_train_gross_metric_bps": 110.013167,
+    "long_train_net_metric_bps": 90.013167,
+    "long_validation_event_count": 5183,
+    "long_validation_gross_metric_bps": 7.318347,
+    "long_validation_net_metric_bps": -12.681653,
+    "short_holdout_event_count": 2664,
+    "short_holdout_gross_metric_bps": -19.642363,
+    "short_holdout_net_metric_bps": -39.642363,
+    "short_train_event_count": 7936,
+    "short_train_gross_metric_bps": -31.229976,
+    "short_train_net_metric_bps": -51.229976,
+    "short_validation_event_count": 5602,
+    "short_validation_gross_metric_bps": -19.997829,
+    "short_validation_net_metric_bps": -39.997829
+  },
+  "metric_integrity_summary": {
+    "config_id_matches_preregistration": true,
+    "cross_window_returns_skipped_count": 54,
+    "exactly_one_config_executed": true,
+    "metric_integrity_issue_count": 0,
+    "metric_integrity_issues": [],
+    "metric_integrity_passed": true,
+    "no_candidate_edge_release_runtime": true,
+    "no_cross_window_returns": true,
+    "no_lookahead": true,
+    "no_nan_or_inf": true,
+    "no_non_preregistered_config": true,
+    "no_timestamp_outside_windows": true
+  },
+  "module": "tools/edge_factory_os_repo_only_binance_okx_overlap_15m_extreme_move_reversal_execution_v1.py",
+  "monthly_stability_summary": {
+    "holdout_monthly_event_count_by_month": {
+      "2025-04": 991,
+      "2025-05": 996,
+      "2025-06": 667,
+      "2025-07": 729,
+      "2025-08": 625,
+      "2025-09": 292,
+      "2025-10": 1017
+    },
+    "holdout_monthly_gross_metric_bps_by_month": {
+      "2025-04": 54.513801,
+      "2025-05": 13.926628,
+      "2025-06": 5.922587,
+      "2025-07": -29.99164,
+      "2025-08": -64.309028,
+      "2025-09": 16.226001,
+      "2025-10": -118.964963
+    },
+    "holdout_monthly_net_metric_bps_by_month": {
+      "2025-04": 34.513801,
+      "2025-05": -6.073372,
+      "2025-06": -14.077413,
+      "2025-07": -49.99164,
+      "2025-08": -84.309028,
+      "2025-09": -3.773999,
+      "2025-10": -138.964963
+    },
+    "holdout_monthly_positive_rate": 0.142857,
+    "monthly_stability_review_preliminary_passed": false,
+    "train_monthly_event_count_by_month": {
+      "2023-01": 847,
+      "2023-02": 949,
+      "2023-03": 1101,
+      "2023-04": 423,
+      "2023-05": 280,
+      "2023-06": 694,
+      "2023-07": 435,
+      "2023-08": 396,
+      "2023-09": 215,
+      "2023-10": 400,
+      "2023-11": 1160,
+      "2023-12": 1184,
+      "2024-01": 1250,
+      "2024-02": 621,
+      "2024-03": 1890,
+      "2024-04": 1456,
+      "2024-05": 798,
+      "2024-06": 646
+    },
+    "train_monthly_gross_metric_bps_by_month": {
+      "2023-01": -12.216567,
+      "2023-02": 4.422701,
+      "2023-03": 4.631515,
+      "2023-04": 81.764218,
+      "2023-05": 75.261448,
+      "2023-06": -21.651629,
+      "2023-07": -27.297504,
+      "2023-08": 235.3609,
+      "2023-09": 200.750645,
+      "2023-10": 23.320984,
+      "2023-11": 97.303999,
+      "2023-12": 73.063823,
+      "2024-01": 64.702764,
+      "2024-02": 121.384508,
+      "2024-03": 14.812583,
+      "2024-04": -107.923892,
+      "2024-05": 14.653784,
+      "2024-06": 138.77287
+    },
+    "train_monthly_net_metric_bps_by_month": {
+      "2023-01": -32.216567,
+      "2023-02": -15.577299,
+      "2023-03": -15.368485,
+      "2023-04": 61.764218,
+      "2023-05": 55.261448,
+      "2023-06": -41.651629,
+      "2023-07": -47.297504,
+      "2023-08": 215.3609,
+      "2023-09": 180.750645,
+      "2023-10": 3.320984,
+      "2023-11": 77.303999,
+      "2023-12": 53.063823,
+      "2024-01": 44.702764,
+      "2024-02": 101.384508,
+      "2024-03": -5.187417,
+      "2024-04": -127.923892,
+      "2024-05": -5.346216,
+      "2024-06": 118.77287
+    },
+    "train_monthly_positive_rate": 0.555556,
+    "validation_month_count": 9,
+    "validation_monthly_event_count_by_month": {
+      "2024-07": 752,
+      "2024-08": 1190,
+      "2024-09": 433,
+      "2024-10": 494,
+      "2024-11": 1933,
+      "2024-12": 2181,
+      "2025-01": 1338,
+      "2025-02": 1435,
+      "2025-03": 1029
+    },
+    "validation_monthly_gross_metric_bps_by_month": {
+      "2024-07": 14.526793,
+      "2024-08": 13.54816,
+      "2024-09": 18.933901,
+      "2024-10": -86.783707,
+      "2024-11": -16.430684,
+      "2024-12": 36.049655,
+      "2025-01": 63.156315,
+      "2025-02": -93.892651,
+      "2025-03": -61.323142
+    },
+    "validation_monthly_net_metric_bps_by_month": {
+      "2024-07": -5.473207,
+      "2024-08": -6.45184,
+      "2024-09": -1.066099,
+      "2024-10": -106.783707,
+      "2024-11": -36.430684,
+      "2024-12": 16.049655,
+      "2025-01": 43.156315,
+      "2025-02": -113.892651,
+      "2025-03": -81.323142
+    },
+    "validation_monthly_positive_rate": 0.222222,
+    "validation_negative_or_zero_months": [
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2025-02",
+      "2025-03"
+    ],
+    "validation_positive_months": [
+      "2024-12",
+      "2025-01"
+    ]
+  },
+  "null_baseline_summary": {
+    "block_length_hours": 168,
+    "null_baseline": "deterministic_event_timestamp_block_shuffle_null",
+    "null_baseline_input_complete": true,
+    "null_baseline_review_preliminary_passed": false,
+    "null_run_count": 100,
+    "preserve_event_side_distribution_if_feasible": true,
+    "shuffle_note": "validation accepted-event underlying returns were block shuffled against accepted event side labels",
+    "validation_null_metric_bps": [
+      -50.430995,
+      5.968166,
+      -50.357245,
+      -33.189055,
+      12.608381,
+      -14.060362,
+      -1.616254,
+      -43.510643,
+      -38.225382,
+      -7.138977,
+      -21.498017,
+      -51.813605,
+      -47.310389,
+      -25.194468,
+      15.297521,
+      -2.465547,
+      -45.6237,
+      -43.902644,
+      -30.133614,
+      -22.430092,
+      -38.937258,
+      -27.47967,
+      -48.093955,
+      -20.486405,
+      -9.183884,
+      7.929295,
+      -15.699269,
+      -43.688474,
+      -10.27826,
+      -19.251434,
+      -12.43643,
+      -33.745725,
+      -46.828972,
+      -38.069814,
+      -45.429166,
+      -6.000966,
+      -36.019169,
+      -38.655894,
+      -48.115088,
+      -20.828195,
+      -27.588897,
+      4.443444,
+      -19.954493,
+      -5.982509,
+      -26.931048,
+      -32.955904,
+      -29.284578,
+      -1.796401,
+      -12.397873,
+      -7.275441,
+      -19.40152,
+      -13.567655,
+      -22.605338,
+      -40.142515,
+      -16.914435,
+      -5.330376,
+      -5.224148,
+      17.583224,
+      21.720759,
+      -27.736604,
+      -19.396069,
+      -7.615897,
+      5.845343,
+      -41.358346,
+      -16.654412,
+      -40.42461,
+      -12.135286,
+      -6.697011,
+      -2.898924,
+      9.421591,
+      -37.556488,
+      5.376014,
+      -39.129575,
+      -24.846944,
+      -34.113967,
+      -12.738385,
+      -0.449541,
+      -38.174162,
+      -29.014395,
+      -24.695404,
+      9.746005,
+      -24.641796,
+      -8.222136,
+      9.954157,
+      -8.746144,
+      -9.821379,
+      -69.655333,
+      -26.989346,
+      1.252749,
+      -34.211516,
+      0.228214,
+      11.237491,
+      -17.564671,
+      -24.287947,
+      -62.971119,
+      -17.785328,
+      -21.294814,
+      -30.704186,
+      -29.016249,
+      -29.559017
+    ],
+    "validation_null_percentile": 0.41
+  },
+  "payload_sha256_excluding_hash": "337b50700395531f4065953b423a6bea3d17bfa5b735d642c598690f3d942db4",
+  "replacement_checks_all_true": true,
+  "return_and_cost_policy": {
+    "cross_window_holding_returns_forbidden": true,
+    "entry_price": "open at E",
+    "exit_offset_bars": 32,
+    "exit_price": "open at E + 8h",
+    "gross_return": "event return before cost",
+    "holding_period_hours": 8,
+    "long_return": "exit_open / entry_open - 1",
+    "net_return": "gross_return - 0.0020",
+    "no_annualization": true,
+    "no_compounding": true,
+    "round_trip_cost_bps": 20,
+    "short_return": "-(exit_open / entry_open - 1)"
+  },
+  "route_family": "BINANCE_OKX_OVERLAP_15M_EXTREME_MOVE_REVERSAL_BASELINE",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "evaluator_required_next": true,
+    "family_release_allowed_now": false,
+    "holdout_access_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "strategy_execution_completed_as_diagnostic": true
+  },
+  "signal_definition": {
+    "entry_timestamp_policy": "E is a 15m bar open",
+    "extreme_threshold_abs": 0.05,
+    "long_signal": "prior_4h_return <= -0.05",
+    "lookback_bars": 16,
+    "lookback_hours": 4,
+    "no_current_hour_leakage": true,
+    "no_future_data": true,
+    "no_open_interest_signal": true,
+    "no_pair_logic": true,
+    "no_taker_flow_signal": true,
+    "prior_4h_return": "close of bar E-15m / open of bar E-4h - 1",
+    "short_signal": "prior_4h_return >= +0.05",
+    "timeframe": "15m"
+  },
+  "status": "PASS_REPO_CODE_ONLY_BINANCE_OKX_OVERLAP_15M_EXTREME_MOVE_REVERSAL_EXECUTED",
+  "train_validation_holdout_summary": {
+    "full_window_end_exclusive_utc": "2025-11-01T00:00:00Z",
+    "full_window_start_utc": "2023-01-01T00:00:00Z",
+    "holdout": {
+      "event_count": 5317,
+      "gross_metric_bps": -20.022938,
+      "mean_gross_return": -0.002002293767737025,
+      "mean_net_return": -0.004002293767737026,
+      "net_metric_bps": -40.022938,
+      "positive_after_cost": false
+    },
+    "holdout_positive_cannot_create_candidate_edge_or_release": true,
+    "holdout_used_for_config_selection": false,
+    "holdout_window_end_exclusive_utc": "2025-11-01T00:00:00Z",
+    "holdout_window_start_utc": "2025-04-01T00:00:00Z",
+    "train": {
+      "event_count": 14745,
+      "gross_metric_bps": 33.993799,
+      "mean_gross_return": 0.0033993798637587656,
+      "mean_net_return": 0.0013993798637587642,
+      "net_metric_bps": 13.993799,
+      "positive_after_cost": true
+    },
+    "train_window_end_exclusive_utc": "2024-07-01T00:00:00Z",
+    "train_window_start_utc": "2023-01-01T00:00:00Z",
+    "validation": {
+      "event_count": 10785,
+      "gross_metric_bps": -6.870361,
+      "mean_gross_return": -0.0006870361283963742,
+      "mean_net_return": -0.0026870361283963754,
+      "net_metric_bps": -26.870361,
+      "positive_after_cost": false
+    },
+    "validation_window_end_exclusive_utc": "2025-04-01T00:00:00Z",
+    "validation_window_start_utc": "2024-07-01T00:00:00Z"
+  },
+  "turnover_concentration_summary": {
+    "event_participation_by_symbol": {
+      "1INCHUSDT": 298,
+      "AAVEUSDT": 368,
+      "ADAUSDT": 293,
+      "AGLDUSDT": 482,
+      "ALGOUSDT": 369,
+      "APEUSDT": 397,
+      "API3USDT": 534,
+      "APTUSDT": 429,
+      "ARBUSDT": 373,
+      "ARUSDT": 585,
+      "ATOMUSDT": 214,
+      "AVAXUSDT": 377,
+      "AXSUSDT": 328,
+      "BANDUSDT": 398,
+      "BATUSDT": 280,
+      "BCHUSDT": 249,
+      "BICOUSDT": 422,
+      "BLURUSDT": 514,
+      "BNBUSDT": 91,
+      "BTCUSDT": 54,
+      "CELOUSDT": 410,
+      "CFXUSDT": 548,
+      "CHZUSDT": 287,
+      "COMPUSDT": 350,
+      "CRVUSDT": 532,
+      "DOGEUSDT": 358,
+      "DOTUSDT": 251,
+      "DYDXUSDT": 485,
+      "EGLDUSDT": 288,
+      "ENSUSDT": 451,
+      "ETCUSDT": 217,
+      "ETHUSDT": 126,
+      "ETHWUSDT": 350,
+      "FILUSDT": 363,
+      "GALAUSDT": 573,
+      "GMTUSDT": 445,
+      "GMXUSDT": 320,
+      "GRTUSDT": 435,
+      "ICPUSDT": 377,
+      "IMXUSDT": 556,
+      "IOSTUSDT": 257,
+      "IOTAUSDT": 372,
+      "KSMUSDT": 358,
+      "LDOUSDT": 640,
+      "LINKUSDT": 300,
+      "LPTUSDT": 569,
+      "LRCUSDT": 371,
+      "LTCUSDT": 213,
+      "MAGICUSDT": 653,
+      "MANAUSDT": 343,
+      "MINAUSDT": 407,
+      "NEARUSDT": 500,
+      "NEOUSDT": 360,
+      "ONTUSDT": 309,
+      "OPUSDT": 509,
+      "ORDIUSDT": 572,
+      "PEOPLEUSDT": 685,
+      "QTUMUSDT": 312,
+      "RSRUSDT": 558,
+      "RVNUSDT": 341,
+      "SANDUSDT": 345,
+      "SNXUSDT": 498,
+      "SOLUSDT": 346,
+      "STXUSDT": 537,
+      "SUIUSDT": 516,
+      "SUSHIUSDT": 470,
+      "THETAUSDT": 395,
+      "TONUSDT": 169,
+      "TRBUSDT": 597,
+      "TRXUSDT": 53,
+      "UMAUSDT": 401,
+      "UNIUSDT": 339,
+      "USDCUSDT": 0,
+      "WOOUSDT": 539,
+      "XLMUSDT": 238,
+      "XRPUSDT": 240,
+      "XTZUSDT": 237,
+      "YFIUSDT": 236,
+      "YGGUSDT": 595,
+      "ZILUSDT": 294,
+      "ZRXUSDT": 396
+    },
+    "top_symbol_event_share": 0.022206,
+    "turnover_concentration_review_preliminary_passed": true,
+    "turnover_concentration_rule": "top_symbol_event_share <= 0.20"
+  },
+  "validation_checks": {
+    "artifact_kind_equals_required": true,
+    "artifact_path_equals_required": true,
+    "config_id_matches_preregistration": true,
+    "exact_overlap_symbol_count_verified_81": true,
+    "exactly_one_config_executed": true,
+    "module_path_equals_required": true,
+    "no_api_calls": true,
+    "no_binance_1m_rows_read": true,
+    "no_candidate_generation": true,
+    "no_download": true,
+    "no_edge_claim": true,
+    "no_funding_rows_read": true,
+    "no_network": true,
+    "no_non_preregistered_config": true,
+    "no_okx_rows_read": true,
+    "no_runtime_live_capital": true,
+    "panel_review_loaded": true,
+    "panel_review_valid_for_read_only_extreme_move_research": true,
+    "payload_sha256_excluding_hash_present": true,
+    "preregistration_loaded": true,
+    "preregistration_payload_hash_verified": true,
+    "replacement_checks_all_true": true,
+    "status_equals_required_status": true
+  }
+}

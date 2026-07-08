@@ -1,0 +1,117 @@
+{
+  "spec_name": "edge_factory_os_framework_research_router_spec_v1",
+  "created_at_utc": "2026-05-13T20:14:08.614959+00:00",
+  "router_spec_hash": "9e98b7b47224a4dc",
+  "router_ready": true,
+  "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+  "canonical_policy_month_count": 12,
+  "framework_ready": true,
+  "active_manifest_ready": true,
+  "data_quality_guard_pass": true,
+  "research_meta_synthesis_allowed": true,
+  "plugin_config_count": 1,
+  "selected_plugin_key": "GUARDED_FEATURE_SPACE_EXPANSION_PLUGIN_V1",
+  "selected_plugin_path": "edge_factory_os_framework\\plugins\\guarded_feature_space_expansion_plugin_v1.json",
+  "selected_research_key": "GUARDED_FEATURE_SPACE_EXPANSION_AND_NEGATIVE_CONTROL_SEARCH_V1",
+  "lesson_count": 12,
+  "blocked_route_count": 10,
+  "router_order": [
+    "load_active_core_manifest",
+    "load_data_quality_guard_feed",
+    "load_lesson_memory",
+    "load_route_blocklist",
+    "load_plugin_configs",
+    "validate_plugin_safety_flags",
+    "validate_plugin_guard_requirements",
+    "route_hash_preflight_against_blocklist",
+    "build_generic_research_contract",
+    "hand_to_generic_runner_framework",
+    "hand_to_generic_evaluator_framework"
+  ],
+  "hard_blocks": [
+    {
+      "block_key": "DATA_QUALITY_GUARD_NOT_PASS",
+      "condition": "guard_pass != True",
+      "effect": "block all research routing"
+    },
+    {
+      "block_key": "PLUGIN_SAFETY_FLAG_OPEN",
+      "condition": "plugin candidate/family/runtime/capital/live/real_order flag is True",
+      "effect": "reject plugin"
+    },
+    {
+      "block_key": "BLOCKED_ROUTE_HASH_REUSE",
+      "condition": "route_hash in candidate_route_blocklist",
+      "effect": "reject contract"
+    },
+    {
+      "block_key": "CANONICAL_MONTH_POLICY_NOT_12",
+      "condition": "canonical_policy_month_count != 12",
+      "effect": "reject research contract"
+    },
+    {
+      "block_key": "MISSING_NEGATIVE_CONTROLS_OR_NULL_MODELS",
+      "condition": "plugin lacks negative controls or null models",
+      "effect": "diagnostic research not allowed"
+    }
+  ],
+  "contract_builder_handoff": {
+    "next_framework_component": "generic_contract_builder",
+    "recommended_builder_module": "edge_factory_os_generic_research_contract_builder_v1.py",
+    "selected_plugin_path": "edge_factory_os_framework\\plugins\\guarded_feature_space_expansion_plugin_v1.json",
+    "guard_feed_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_data_quality_guard_runner\\data_quality_guard_feed_latest.json",
+    "lesson_index_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_lesson_memory\\lesson_memory_index.json",
+    "blocklist_path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_lesson_memory\\candidate_route_blocklist.json",
+    "schema_path": "edge_factory_os_framework\\schemas\\research_contract_schema_v1.json"
+  },
+  "safety_policy": {
+    "router_can_select_plugin": true,
+    "router_can_run_research": false,
+    "router_can_generate_candidate": false,
+    "router_can_release_family": false,
+    "router_can_touch_runtime": false,
+    "router_can_change_capital": false,
+    "router_can_enable_live": false,
+    "router_can_place_real_orders": false
+  },
+  "plugin_configs": [
+    {
+      "plugin_path": "edge_factory_os_framework\\plugins\\guarded_feature_space_expansion_plugin_v1.json",
+      "plugin_key": "GUARDED_FEATURE_SPACE_EXPANSION_PLUGIN_V1",
+      "plugin_type": "READ_ONLY_DIAGNOSTIC_RESEARCH",
+      "research_key": "GUARDED_FEATURE_SPACE_EXPANSION_AND_NEGATIVE_CONTROL_SEARCH_V1",
+      "must_consume_guard_feed": true,
+      "must_not_reopen_blocked_routes": true,
+      "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+      "canonical_policy_month_count": 12,
+      "candidate_generation_allowed": false,
+      "family_release_allowed": false,
+      "runtime_touch_allowed": false,
+      "capital_change_allowed": false,
+      "live_allowed": false,
+      "real_orders_allowed": false,
+      "feature_family_count": 8,
+      "negative_control_count": 5,
+      "null_model_count": 5
+    }
+  ],
+  "selected_plugin_summary": {
+    "plugin_path": "edge_factory_os_framework\\plugins\\guarded_feature_space_expansion_plugin_v1.json",
+    "plugin_key": "GUARDED_FEATURE_SPACE_EXPANSION_PLUGIN_V1",
+    "plugin_type": "READ_ONLY_DIAGNOSTIC_RESEARCH",
+    "research_key": "GUARDED_FEATURE_SPACE_EXPANSION_AND_NEGATIVE_CONTROL_SEARCH_V1",
+    "must_consume_guard_feed": true,
+    "must_not_reopen_blocked_routes": true,
+    "strict_policy_key": "STRICT_MONTH_STABILITY_12_OF_12",
+    "canonical_policy_month_count": 12,
+    "candidate_generation_allowed": false,
+    "family_release_allowed": false,
+    "runtime_touch_allowed": false,
+    "capital_change_allowed": false,
+    "live_allowed": false,
+    "real_orders_allowed": false,
+    "feature_family_count": 8,
+    "negative_control_count": 5,
+    "null_model_count": 5
+  }
+}

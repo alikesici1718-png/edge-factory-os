@@ -1,0 +1,309 @@
+{
+  "allowed_next_step": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT_EVENT_DISCOVERY_V1",
+  "artifact_kind": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_FORWARD_RETURN_DIAGNOSTIC_EVALUATOR",
+  "blocker": null,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "current_head": "1f3b7f862818365bbdce868a32a974e134de862e",
+  "data_quality_judgment": {
+    "arbusdt_archive_gaps": [
+      "ARBUSDT-2023-01",
+      "ARBUSDT-2023-02"
+    ],
+    "data_quality_explains_failure": false,
+    "data_repair_required": false,
+    "judgment": "unlikely",
+    "known_warnings": [
+      "Known public kline archive gaps remain: ARBUSDT-2023-01 and ARBUSDT-2023-02.",
+      "Raw kline cache files were reused and not committed.",
+      "Missing forward-return rows across all side/horizon tests: 1."
+    ],
+    "missing_forward_return_total": 1,
+    "reason": "Only one forward-return row is missing across eight side/horizon tests, while FDR q-values are near 0.98 and short-side means are opposite the expected direction. The known ARBUSDT early-2023 gaps do not plausibly explain the broad lack of directional evidence."
+  },
+  "data_repair_required": false,
+  "diagnostic_result_summary": {
+    "bonferroni_p_values": {
+      "long__15m": 0.983016983016983,
+      "long__1h": 1.0,
+      "long__24h": 1.0,
+      "long__4h": 1.0,
+      "short__15m": 1.0,
+      "short__1h": 1.0,
+      "short__24h": 1.0,
+      "short__4h": 1.0
+    },
+    "diagnostic_classification": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_FORWARD_RETURN_DIAGNOSTIC_DATA_QUALITY_ATTENTION",
+    "fdr_q_values": {
+      "long__15m": 0.983016983016983,
+      "long__1h": 0.985014985014985,
+      "long__24h": 0.985014985014985,
+      "long__4h": 0.985014985014985,
+      "short__15m": 0.985014985014985,
+      "short__1h": 0.985014985014985,
+      "short__24h": 0.985014985014985,
+      "short__4h": 0.985014985014985
+    },
+    "long_24h_exploratory_not_significant": {
+      "bonferroni_p_value": 1.0,
+      "fdr_q_value": 0.985014985014985,
+      "mean": 0.0013301685543649763
+    },
+    "lowest_fdr_q_value": 0.983016983016983,
+    "no_strong_primary_directional_result": true,
+    "short_observed_means_opposite_expected_direction": {
+      "expected_direction": "negative",
+      "observed_direction": "positive",
+      "short_24h_mean": 0.0064245243224258,
+      "short_4h_mean": 0.0014633728481022652
+    },
+    "symbol_balanced_null_completed": {
+      "completed": 1000,
+      "requested": 1000
+    },
+    "top_observed_findings": [
+      {
+        "expected_direction": "negative",
+        "horizon": "24h",
+        "mean": 0.0064245243224258,
+        "side": "short",
+        "valid_forward_return_count": 392
+      },
+      {
+        "expected_direction": "negative",
+        "horizon": "4h",
+        "mean": 0.0014633728481022652,
+        "side": "short",
+        "valid_forward_return_count": 392
+      },
+      {
+        "expected_direction": "positive",
+        "horizon": "24h",
+        "mean": 0.0013301685543649763,
+        "side": "long",
+        "valid_forward_return_count": 540
+      },
+      {
+        "expected_direction": "negative",
+        "horizon": "1h",
+        "mean": 0.000655967227467733,
+        "side": "short",
+        "valid_forward_return_count": 392
+      },
+      {
+        "expected_direction": "negative",
+        "horizon": "15m",
+        "mean": 0.00029396558987312006,
+        "side": "short",
+        "valid_forward_return_count": 392
+      }
+    ],
+    "top_symbol_balanced_null_findings": [
+      {
+        "fdr_q_value": 0.983016983016983,
+        "horizon": "15m",
+        "mean": 0.0002563407191069692,
+        "primary_directional_p_value": 0.12287712287712288,
+        "side": "long"
+      },
+      {
+        "fdr_q_value": 0.985014985014985,
+        "horizon": "1h",
+        "mean": 0.00015620707283397003,
+        "primary_directional_p_value": 0.4165834165834166,
+        "side": "long"
+      },
+      {
+        "fdr_q_value": 0.985014985014985,
+        "horizon": "4h",
+        "mean": 0.0001412628251130596,
+        "primary_directional_p_value": 0.5504495504495505,
+        "side": "long"
+      },
+      {
+        "fdr_q_value": 0.985014985014985,
+        "horizon": "24h",
+        "mean": 0.0013301685543649763,
+        "primary_directional_p_value": 0.5184815184815185,
+        "side": "long"
+      },
+      {
+        "fdr_q_value": 0.985014985014985,
+        "horizon": "15m",
+        "mean": 0.00029396558987312006,
+        "primary_directional_p_value": 0.8911088911088911,
+        "side": "short"
+      }
+    ]
+  },
+  "evaluator_status": "PASS_REPO_ONLY_OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_FORWARD_RETURN_DIAGNOSTIC_EVALUATOR_CREATED",
+  "event_definition_quality_summary": {
+    "acceptance_gates": {
+      "both_main_definitions_pass": true,
+      "long_capitulation_rebound": {
+        "all_required_gates_pass": true,
+        "cooldown_event_count_300_to_1500": true,
+        "global_missing_component_count_recorded_as_attention": true,
+        "material_difference_from_failed_routes": true,
+        "month_coverage_at_least_24": true,
+        "overlap_near_zero": true,
+        "selected_events_have_required_components_by_construction": true,
+        "symbol_coverage_at_least_8_and_target_10": true,
+        "symbol_coverage_equals_10": true,
+        "top_month_concentration_lte_15pct": true,
+        "top_symbol_concentration_lte_25pct": true
+      },
+      "short_cover_exhaustion_downside": {
+        "all_required_gates_pass": true,
+        "cooldown_event_count_300_to_1500": true,
+        "global_missing_component_count_recorded_as_attention": true,
+        "material_difference_from_failed_routes": true,
+        "month_coverage_at_least_24": true,
+        "overlap_near_zero": true,
+        "selected_events_have_required_components_by_construction": true,
+        "symbol_coverage_at_least_8_and_target_10": true,
+        "symbol_coverage_equals_10": true,
+        "top_month_concentration_lte_15pct": true,
+        "top_symbol_concentration_lte_25pct": true
+      }
+    },
+    "concentration": {
+      "long": {
+        "preferred_gate_top_month_lte_15pct": true,
+        "preferred_gate_top_symbol_lte_25pct": true,
+        "top_month": "2025-06",
+        "top_month_concentration": 0.04990757855822551,
+        "top_symbol": "APTUSDT",
+        "top_symbol_concentration": 0.14048059149722736
+      },
+      "short": {
+        "preferred_gate_top_month_lte_15pct": true,
+        "preferred_gate_top_symbol_lte_25pct": true,
+        "top_month": "2025-06",
+        "top_month_concentration": 0.061224489795918366,
+        "top_symbol": "APTUSDT",
+        "top_symbol_concentration": 0.14030612244897958
+      }
+    },
+    "definitions_clean": true,
+    "long_event_count": 541,
+    "month_coverage": {
+      "long": 36,
+      "short": 36
+    },
+    "no_leakage": {
+      "cooldown_uses_event_time_only_not_future_returns": true,
+      "no_forward_return_fields_used": true,
+      "no_future_high_low_close_used_for_event_construction": true,
+      "no_leakage_detected": true,
+      "oi_contraction_current_prior_only": true,
+      "price_rejection_current_prior_bar_only": true,
+      "taker_pressure_current_prior_only": true
+    },
+    "outcome_blind_selection": {
+      "definitions_evaluated": 192,
+      "no_forward_returns_used": true,
+      "no_p_values_used": true,
+      "no_pnl_hit_rate_sharpe_or_backtest_metrics_used": true,
+      "selection_basis": [
+        "event cleanliness",
+        "event count",
+        "symbol/month coverage",
+        "concentration",
+        "overlap",
+        "missingness",
+        "material difference from failed routes",
+        "simplicity / low degrees of freedom"
+      ],
+      "threshold_degrees_of_freedom_attention_but_acceptable": true
+    },
+    "overlap_rate": {
+      "long": 0.0,
+      "short": 0.0
+    },
+    "short_event_count": 392,
+    "symbol_coverage": {
+      "long": 10,
+      "short": 10
+    }
+  },
+  "expected_head": "1f3b7f862818365bbdce868a32a974e134de862e",
+  "forbidden_actions_confirmed_false": {
+    "account_api": false,
+    "api_key": false,
+    "backtest": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "event_definitions_modified": false,
+    "new_forward_returns_computed": false,
+    "null_validation_rerun": false,
+    "optimization_against_returns": false,
+    "order_private_account_api_key": false,
+    "pnl": false,
+    "private_api": false,
+    "runtime_live_capital": false,
+    "signal": false,
+    "strategy": false,
+    "thresholds_tuned_after_outcomes": false,
+    "trade_simulation": false
+  },
+  "head_matches_expected": true,
+  "input_artifact_hashes_after": {
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_definition_refinement_v1.json": "fa15a19b1f2b5dcc9d3d5e6859123a4eb6758807770e86b58c0a057e6278ea6d",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_validator_v1.json": "37b38c0a1454af92d0ee0188f28fb66e692c60469f4f3a0889e81087f88f6b92",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_forward_return_diagnostic_v1.json": "1514363e931850aa94f53af4fba27f2d3e4fbfe162d8d043899eb815b56019f0",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_before": {
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_definition_refinement_v1.json": "fa15a19b1f2b5dcc9d3d5e6859123a4eb6758807770e86b58c0a057e6278ea6d",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_validator_v1.json": "37b38c0a1454af92d0ee0188f28fb66e692c60469f4f3a0889e81087f88f6b92",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_forward_return_diagnostic_v1.json": "1514363e931850aa94f53af4fba27f2d3e4fbfe162d8d043899eb815b56019f0",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "823fcac7ab172e596ba4c35916475d49f9e4c2739450821ceb5f6656ebcb9d76"
+  },
+  "input_artifact_hashes_unchanged": true,
+  "input_payload_hashes_verified": {
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_definition_refinement_v1.json": "f0197b785b9932a437887b344aae42da8897c16cb7a775fcd1f8831f9ca991f1",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_event_validator_v1.json": "93becb2b4cba42fdcf90f358946afb4a4a5aeeb6ce3fe66e32a0a5728ce44413",
+    "artifacts/research/oi_contraction_taker_capitulation_price_rejection_forward_return_diagnostic_v1.json": "9fed84bf76ec813108ed10b08415e70330e9407292ba11a3c32179ffe3838c2c",
+    "artifacts/research/outcome_blind_binance_theory_queue_builder_v1.json": "8d84ede6d6d6128224ad193fe2c390c0bf5cbc36ef0a41c6ac97f09f291ad5cd"
+  },
+  "live_allowed": false,
+  "module": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_FORWARD_RETURN_DIAGNOSTIC_EVALUATOR_V1",
+  "next_theory_selected": "OI_SHOCK_WITH_REALIZED_VOLATILITY_REGIME_SHIFT",
+  "no_robust_effect": true,
+  "payload_sha256_excluding_hash": "8541ca5af6bc0c7300dec68fc99004f42f4dc6c574ce03af71ac009819c4d61f",
+  "recovery_audit_status": "RECOVERY_AUDIT_CLEAN_CONTINUE",
+  "refinement_allowed": false,
+  "release_allowed": false,
+  "replacement_checks_all_true": true,
+  "result_classification": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_DIAGNOSTIC_EVALUATOR_ROUTE_CLOSED_NO_ROBUST_EFFECT",
+  "route_closed": true,
+  "route_decision": "Route closed/deprioritized: event definitions were clean, but the forward-return diagnostic showed no robust primary directional effect; data quality warnings are not sufficient to explain the failure.",
+  "runtime_touch_allowed": false,
+  "signal_allowed": false,
+  "source_artifact_summary": {
+    "diagnostic_result_classification": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_FORWARD_RETURN_DIAGNOSTIC_DATA_QUALITY_ATTENTION",
+    "refinement_result_classification": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_REFINEMENT_READY",
+    "theory_queue_result_classification": "OUTCOME_BLIND_BINANCE_THEORY_QUEUE_READY",
+    "validator_result_classification": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_EVENT_VALIDATOR_PASS_WITH_ATTENTION"
+  },
+  "status": "PASS_REPO_ONLY_OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION_FORWARD_RETURN_DIAGNOSTIC_EVALUATOR_CREATED",
+  "strategy_allowed": false,
+  "theory_id": "OI_CONTRACTION_TAKER_CAPITULATION_PRICE_REJECTION",
+  "validation_checks": {
+    "all_input_payload_hashes_verified": true,
+    "diagnostic_completed_1000_of_1000_null": true,
+    "event_counts_verified": true,
+    "exactly_one_json_artifact_created": true,
+    "exactly_one_python_tool_created": true,
+    "forbidden_action_flags_false": true,
+    "head_matches_expected": true,
+    "input_artifact_hashes_unchanged": true,
+    "no_event_definition_modification": true,
+    "no_new_forward_returns_computed": true,
+    "no_null_validation_rerun": true,
+    "no_strategy_signal_candidate_release": true,
+    "repo_clean_or_only_outputs_during_run": true,
+    "route_closed_no_robust_effect": true
+  }
+}

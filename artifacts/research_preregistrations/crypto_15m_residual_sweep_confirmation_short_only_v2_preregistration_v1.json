@@ -1,0 +1,251 @@
+{
+  "artifact_kind": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_PREREGISTRATION",
+  "config_id": "crypto_15m_residual_sweep_confirmation_short_only_v2_same_params",
+  "metric_integrity_preregistration": {
+    "beta_uses_prior_returns_only": true,
+    "confirmation_then_entry_order_required": true,
+    "cooldown_required": true,
+    "long_side_disabled_required": true,
+    "no_lookahead_required": true,
+    "portfolio_bps_uses_base_equity_denominator": true,
+    "prior_high_excludes_current_bar": true,
+    "residual_z_uses_prior_residual_history_only": true
+  },
+  "module": "edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v2_preregistration_v1",
+  "panel_inspection": {
+    "btc_anchor": {
+      "exists": true,
+      "first_row": {
+        "close": "16517.40",
+        "complete_15m": "true",
+        "high": "16538.00",
+        "low": "16517.40",
+        "open": "16537.50",
+        "quote_volume": "25119420.27800",
+        "symbol": "BTCUSDT",
+        "taker_buy_base_volume": "607.483",
+        "taker_buy_quote_volume": "10039870.98490",
+        "timestamp_utc": "2023-01-01T00:00:00Z",
+        "trade_count": "9087",
+        "volume": "1519.880"
+      },
+      "has_required_columns": true,
+      "header": [
+        "symbol",
+        "timestamp_utc",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "quote_volume",
+        "trade_count",
+        "taker_buy_base_volume",
+        "taker_buy_quote_volume",
+        "complete_15m"
+      ],
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol\\BTCUSDT_15m.csv.gz",
+      "symbol": "BTCUSDT"
+    },
+    "eth_anchor": {
+      "exists": true,
+      "first_row": {
+        "close": "1194.31",
+        "complete_15m": "true",
+        "high": "1196.68",
+        "low": "1194.31",
+        "open": "1196.10",
+        "quote_volume": "19956003.94962",
+        "symbol": "ETHUSDT",
+        "taker_buy_base_volume": "7549.181",
+        "taker_buy_quote_volume": "9026101.25844",
+        "timestamp_utc": "2023-01-01T00:00:00Z",
+        "trade_count": "8279",
+        "volume": "16690.978"
+      },
+      "has_required_columns": true,
+      "header": [
+        "symbol",
+        "timestamp_utc",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "quote_volume",
+        "trade_count",
+        "taker_buy_base_volume",
+        "taker_buy_quote_volume",
+        "complete_15m"
+      ],
+      "path": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol\\ETHUSDT_15m.csv.gz",
+      "symbol": "ETHUSDT"
+    },
+    "panel_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol",
+    "symbol_file_count": 81
+  },
+  "panel_review_status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
+  "payload_sha256_excluding_hash": "7ecf4f339096f91ae655f5454839249d2d4c2cd72286e9c3d0529c659c1a6fa1",
+  "preregistered_config": {
+    "config_id": "crypto_15m_residual_sweep_confirmation_short_only_v2_same_params",
+    "dataset": {
+      "expected_symbol_count": 81,
+      "name": "reviewed Binance/OKX overlap 81-symbol 15m panel",
+      "panel_directory": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol",
+      "panel_review_artifact": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\panel_build_reviews\\binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json",
+      "required_anchor_symbols": [
+        "BTCUSDT",
+        "ETHUSDT"
+      ],
+      "timeframe": "15m",
+      "traded_symbols": "all reviewed panel symbols except BTCUSDT and ETHUSDT"
+    },
+    "disabled_long_side_policy": {
+      "diagnostic_counting_only": true,
+      "long_entries_enabled": false,
+      "long_side_results_not_used_for_selection": true,
+      "no_short_parameter_change_from_long_diagnostics": true
+    },
+    "entry_exit": {
+      "entry": "following bar open after one confirmation bar",
+      "same_bar_stop_take_policy": "stop first",
+      "short_stop": "sweep_high + 0.5 * ATR14",
+      "take_profit": "entry - 2R for shorts",
+      "time_stop": "32 bars"
+    },
+    "evaluator_policy": {
+      "allowed_result_classes": [
+        "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+        "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_INCONCLUSIVE_NEEDS_MORE_DATA",
+        "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_INVALIDATED_BY_DATA_OR_INTEGRITY_FAILURE"
+      ],
+      "diagnostic_promising_requires": [
+        "validation portfolio net bps > 0",
+        "holdout portfolio net bps > 0",
+        "validation monthly positive rate >= 0.60",
+        "holdout monthly positive rate >= 0.50",
+        "validation closed trades >= 30",
+        "null baseline passes",
+        "top symbol trade share <= 0.25",
+        "worst month > -1000 bps",
+        "metric integrity passes",
+        "no candidate/edge/live/capital"
+      ]
+    },
+    "fixed_parameters": {
+      "atr_length": 14,
+      "base_equity_usdt": 1000.0,
+      "compounding": false,
+      "confirmation_required": true,
+      "cost_gate_expected_abs_move_min": 0.008,
+      "leverage": "none",
+      "max_concurrent_positions": 3,
+      "max_new_positions_per_timestamp": 1,
+      "max_notional_per_trade_usdt": 100.0,
+      "minimum_beta_observations": 1000,
+      "one_open_position_per_symbol": true,
+      "prior_range_window_bars": 192,
+      "reinvestment": false,
+      "residual_impulse_bars": 16,
+      "residual_z_history_bars": 2880,
+      "reward_risk_take_profit": 2.0,
+      "risk_per_trade_usdt": 5.0,
+      "rolling_beta_window_bars": 2880,
+      "round_trip_cost_fraction": 0.002,
+      "short_z_threshold": 3.5,
+      "symbol_cooldown_bars_after_exit": 96,
+      "time_stop_bars": 32,
+      "timeframe": "15m",
+      "volume_filter": "volume > volume_sma20",
+      "volume_sma_length": 20
+    },
+    "optimization_allowed": false,
+    "parameter_grid_allowed": false,
+    "postmortem_justification": {
+      "side_diagnostic_classification": "LONG_SIDE_HARMFUL",
+      "source": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_reviews\\crypto_15m_residual_sweep_confirmation_postmortem_diagnostic_v2.json",
+      "suggested_boundary": "A bounded V2 design may preregister the same residual+sweep+confirmation structure as short-only, with all inherited fixed parameters unchanged and no threshold search.",
+      "v2_direction_classification": "V2_DIRECTION_JUSTIFIED_SHORT_ONLY"
+    },
+    "route_family": "CRYPTO_15M_CONFLUENCE_EVENT_REVERSAL_SHORT_ONLY",
+    "short_signal_rules": [
+      "z_residual >= +3.5",
+      "high > prior_high_48h",
+      "close < prior_high_48h",
+      "close < open",
+      "volume > volume_sma20",
+      "ATR14 valid",
+      "not BTCUSDT or ETHUSDT",
+      "confirmation close below sweep close",
+      "confirmation high does not break sweep high by more than 0.25 * ATR14",
+      "expected_abs_move_proxy >= 0.008"
+    ],
+    "single_config_only": true,
+    "splits": {
+      "holdout": [
+        "2025-04-01T00:00:00Z",
+        "2025-11-01T00:00:00Z"
+      ],
+      "train": [
+        "2023-01-01T00:00:00Z",
+        "2024-07-01T00:00:00Z"
+      ],
+      "validation": [
+        "2024-07-01T00:00:00Z",
+        "2025-04-01T00:00:00Z"
+      ]
+    },
+    "strategy": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2",
+    "v2_change": "Disable long entries entirely; short setup and all inherited fixed parameters remain unchanged."
+  },
+  "replacement_checks_all_true": true,
+  "route_family": "CRYPTO_15M_CONFLUENCE_EVENT_REVERSAL_SHORT_ONLY",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "real_orders_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "panel_review": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\panel_build_reviews\\binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json",
+    "postmortem_v2": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\strategy_reviews\\crypto_15m_residual_sweep_confirmation_postmortem_diagnostic_v2.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "0e91a65f28201d94cdb07147f0c8649f3d5aa1e1",
+    "allowed_new_paths_at_preregistration": [
+      "?? artifacts/research_preregistrations/crypto_15m_residual_sweep_confirmation_short_only_v2_preregistration_v1.json",
+      "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v2_preregistration_v1.py"
+    ],
+    "git_status_at_preregistration": [
+      "?? tools/edge_factory_os_repo_only_crypto_15m_residual_sweep_confirmation_short_only_v2_preregistration_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 1005,
+    "unexpected_dirty_paths_at_preregistration": []
+  },
+  "status": "PASS_REPO_ONLY_CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2_PREREGISTRATION_CREATED",
+  "strategy": "CRYPTO_15M_RESIDUAL_SWEEP_CONFIRMATION_SHORT_ONLY_V2",
+  "validation_checks": {
+    "btc_anchor_available": true,
+    "btc_anchor_header_verified": true,
+    "eth_anchor_available": true,
+    "eth_anchor_header_verified": true,
+    "no_api_used": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_network_used": true,
+    "no_optimization": true,
+    "no_parameter_grid": true,
+    "no_runtime_live_capital": true,
+    "panel_file_count_verified_81": true,
+    "panel_review_artifact_loaded": true,
+    "postmortem_v2_loaded": true,
+    "repo_clean_before_run": true,
+    "v2_direction_verified_short_only": true
+  }
+}

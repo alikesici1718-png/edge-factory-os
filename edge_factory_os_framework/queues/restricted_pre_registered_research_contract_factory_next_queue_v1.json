@@ -1,0 +1,42 @@
+{
+  "queue_name": "edge_factory_os_restricted_pre_registered_research_contract_factory_next_queue_v1",
+  "created_at_utc": "2026-05-14T01:43:47.491612+00:00",
+  "queue_status": "RESTRICTED_CONTRACT_FACTORY_NEXT_QUEUE_READY",
+  "research_execution_allowed_now": false,
+  "broad_strategy_search_allowed": false,
+  "top_next_research_key": "RD7_06_RESTRICTED_RESEARCH_CONTRACT_PREFLIGHT_VALIDATOR",
+  "top_next_module": "edge_factory_os_restricted_research_contract_preflight_validator_v1.py",
+  "next_steps": [
+    {
+      "research_key": "RD7_06_RESTRICTED_RESEARCH_CONTRACT_PREFLIGHT_VALIDATOR",
+      "module": "edge_factory_os_restricted_research_contract_preflight_validator_v1.py",
+      "priority": 100,
+      "allowed_scope": "REPO_ONLY_OS_INTELLIGENCE",
+      "purpose": "Validate restricted pre-registered research contract before any research execution can be considered.",
+      "research_execution_allowed_now": false,
+      "broad_strategy_search_allowed": false,
+      "candidate_generation_allowed": false,
+      "family_release_allowed": false,
+      "runtime_touch_allowed": false,
+      "capital_change_allowed": false,
+      "active_paper_allowed": false,
+      "live_allowed": false,
+      "real_orders_allowed": false
+    }
+  ],
+  "candidate_generation_allowed": false,
+  "candidate_contract_allowed": false,
+  "family_release_allowed": false,
+  "promotion_allowed": false,
+  "runtime_touch_allowed": false,
+  "launcher_allowed": false,
+  "patch_runtime_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false,
+  "execution_performed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "archive_performed": false
+}

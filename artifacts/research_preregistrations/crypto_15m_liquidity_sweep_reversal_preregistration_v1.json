@@ -1,0 +1,215 @@
+{
+  "artifact_kind": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_PREREGISTRATION",
+  "config_id": "crypto_15m_liquidity_sweep_48h_reversal_r2_timestop8h_v1",
+  "metric_integrity_preregistration": {
+    "entry_next_bar_open": true,
+    "max_concurrent_positions_lte_5": true,
+    "no_lookahead_required": true,
+    "notional_cap_required": true,
+    "portfolio_bps_uses_base_equity_denominator": true,
+    "prior_high_low_exclude_current_bar": true,
+    "rank_uses_current_or_past_completed_returns": true,
+    "stop_take_uses_conservative_ohlc": true
+  },
+  "module": "edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_preregistration_v1",
+  "panel_inspection": {
+    "btc_disaster_filter_available": true,
+    "btc_first_row": {
+      "close": "16517.40",
+      "complete_15m": "true",
+      "high": "16538.00",
+      "low": "16517.40",
+      "open": "16537.50",
+      "quote_volume": "25119420.27800",
+      "symbol": "BTCUSDT",
+      "taker_buy_base_volume": "607.483",
+      "taker_buy_quote_volume": "10039870.98490",
+      "timestamp_utc": "2023-01-01T00:00:00Z",
+      "trade_count": "9087",
+      "volume": "1519.880"
+    },
+    "btc_header": [
+      "symbol",
+      "timestamp_utc",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "quote_volume",
+      "trade_count",
+      "taker_buy_base_volume",
+      "taker_buy_quote_volume",
+      "complete_15m"
+    ],
+    "btc_header_has_required_columns": true,
+    "panel_dir": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol",
+    "panel_dir_exists": true,
+    "sample_files": [
+      "1INCHUSDT_15m.csv.gz",
+      "AAVEUSDT_15m.csv.gz",
+      "ADAUSDT_15m.csv.gz",
+      "AGLDUSDT_15m.csv.gz",
+      "ALGOUSDT_15m.csv.gz",
+      "APEUSDT_15m.csv.gz",
+      "API3USDT_15m.csv.gz",
+      "APTUSDT_15m.csv.gz",
+      "ARBUSDT_15m.csv.gz",
+      "ARUSDT_15m.csv.gz"
+    ],
+    "symbol_file_count": 81
+  },
+  "panel_review_status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
+  "payload_sha256_excluding_hash": "08f312e8fe500323874f81eb9fcac2ffb5fccf336af841bcddbb7893d0cd70c2",
+  "preregistered_config": {
+    "config_id": "crypto_15m_liquidity_sweep_48h_reversal_r2_timestop8h_v1",
+    "dataset": {
+      "btc_disaster_filter_anchor": "BTCUSDT",
+      "expected_end_utc": "2025-10-31T23:45:00Z",
+      "expected_rows": 7808472,
+      "expected_start_utc": "2023-01-01T00:00:00Z",
+      "expected_symbol_count": 81,
+      "expected_timeframe": "15m",
+      "name": "reviewed Binance/OKX overlap 81-symbol 15m panel",
+      "panel_directory": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\\panel_15m_by_symbol",
+      "panel_review_artifact": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\panel_build_reviews\\binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json"
+    },
+    "entry_exit": {
+      "both_hit_same_bar_policy": "assume stop first",
+      "capacity_ranking": "sweep_depth descending, then abs(return_4h) descending",
+      "entry": "signal at 15m close, enter next 15m open",
+      "long_stop": "sweep_low - 0.5 * ATR14",
+      "short_stop": "sweep_high + 0.5 * ATR14",
+      "take_profit": "2R",
+      "time_stop_bars": 32,
+      "trailing_stop": "none"
+    },
+    "evaluator_policy": {
+      "allowed_result_classes": [
+        "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+        "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_REJECTED_NO_FOLLOWUP",
+        "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_INCONCLUSIVE_NEEDS_MORE_DATA",
+        "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_INVALIDATED_BY_DATA_OR_INTEGRITY_FAILURE"
+      ],
+      "diagnostic_promising_requires": [
+        "validation portfolio net bps > 0",
+        "holdout portfolio net bps > 0",
+        "validation monthly positive rate >= 0.60",
+        "holdout monthly positive rate >= 0.50",
+        "validation closed trades >= 50",
+        "null baseline passes",
+        "top symbol trade share <= 0.25",
+        "worst month > -1000 bps",
+        "metric integrity passes",
+        "no candidate/edge/live/capital"
+      ]
+    },
+    "fixed_parameters": {
+      "atr_length": 14,
+      "base_equity_usdt": 1000.0,
+      "cross_sectional_momentum_window_bars": 16,
+      "max_concurrent_positions": 5,
+      "max_notional_usdt": 100.0,
+      "prior_range_window_bars": 192,
+      "reward_risk_take_profit": 2.0,
+      "risk_per_trade_usdt": 5.0,
+      "round_trip_cost_bps": 20.0,
+      "time_stop_bars": 32,
+      "top_bottom_quantile": 0.2,
+      "volume_mult": 1.5,
+      "volume_sma_length": 20
+    },
+    "optimization_allowed": false,
+    "parameter_grid_allowed": false,
+    "portfolio_accounting": {
+      "do_not_sum_trade_bps_as_portfolio_return": true,
+      "monthly_net_bps": "monthly_net_pnl_usdt / 1000 * 10000",
+      "no_compounding": true,
+      "no_leverage": true,
+      "no_reinvestment": true,
+      "portfolio_net_bps": "total_net_pnl_usdt / 1000 * 10000"
+    },
+    "route_family": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_BASELINE",
+    "signal_rules": {
+      "long": [
+        "low < prior_low_48h",
+        "close > prior_low_48h",
+        "close > open",
+        "close >= low + 0.6 * (high - low)",
+        "volume > volume_sma20 * 1.5",
+        "return_4h is bottom 20% of eligible universe",
+        "BTC 24h return >= -5%"
+      ],
+      "short": [
+        "high > prior_high_48h",
+        "close < prior_high_48h",
+        "close < open",
+        "close <= low + 0.4 * (high - low)",
+        "volume > volume_sma20 * 1.5",
+        "return_4h is top 20% of eligible universe",
+        "BTC 24h return <= +5%"
+      ]
+    },
+    "single_config_only": true,
+    "splits": {
+      "holdout": [
+        "2025-04-01T00:00:00Z",
+        "2025-11-01T00:00:00Z"
+      ],
+      "train": [
+        "2023-01-01T00:00:00Z",
+        "2024-07-01T00:00:00Z"
+      ],
+      "validation": [
+        "2024-07-01T00:00:00Z",
+        "2025-04-01T00:00:00Z"
+      ]
+    },
+    "strategy": "CRYPTO_15M_LIQUIDITY_SWEEP_FAILED_BREAKOUT_REVERSAL_V1"
+  },
+  "replacement_checks_all_true": true,
+  "route_family": "CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_BASELINE",
+  "safety_permissions": {
+    "candidate_generation_allowed_now": false,
+    "capital_permission_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "monitor_allowed_now": false,
+    "real_orders_allowed_now": false,
+    "runtime_permission_allowed_now": false
+  },
+  "source_artifacts": {
+    "panel_review": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\artifacts\\panel_build_reviews\\binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json"
+  },
+  "source_checkpoint": {
+    "actual_head": "3996c896909f17a2ace87dc75acade894caf13cf",
+    "allowed_new_paths_at_preregistration": [
+      "?? artifacts/research_preregistrations/crypto_15m_liquidity_sweep_reversal_preregistration_v1.json",
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_preregistration_v1.py"
+    ],
+    "git_status_at_preregistration": [
+      "?? tools/edge_factory_os_repo_only_crypto_15m_liquidity_sweep_reversal_preregistration_v1.py"
+    ],
+    "repo_clean_before_run": true,
+    "tracked_python_count": 989,
+    "unexpected_dirty_paths_at_preregistration": []
+  },
+  "status": "PASS_REPO_ONLY_CRYPTO_15M_LIQUIDITY_SWEEP_REVERSAL_PREREGISTRATION_CREATED",
+  "strategy": "CRYPTO_15M_LIQUIDITY_SWEEP_FAILED_BREAKOUT_REVERSAL_V1",
+  "validation_checks": {
+    "btc_disaster_filter_anchor_available": true,
+    "btc_header_has_required_columns": true,
+    "no_api_used": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_network_used": true,
+    "no_optimization": true,
+    "no_parameter_grid": true,
+    "no_runtime_live_capital": true,
+    "panel_directory_exists": true,
+    "panel_review_artifact_loaded": true,
+    "repo_clean_before_run": true,
+    "symbol_file_count_verified_81": true
+  }
+}

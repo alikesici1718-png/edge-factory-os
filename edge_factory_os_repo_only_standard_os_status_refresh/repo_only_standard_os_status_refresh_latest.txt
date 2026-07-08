@@ -1,0 +1,101 @@
+EDGE FACTORY OS REPO-ONLY STANDARD OS STATUS REFRESH v1
+====================================================================================================
+refresh_status: REPO_ONLY_STANDARD_OS_STATUS_REFRESH_READY
+severity: ATTENTION
+allowed_scope: REPO_ONLY_OS_INTELLIGENCE
+final_decision: NO_RUNTIME_NO_RESEARCH_NO_CAPITAL_CONTINUE_REPO_ONLY_GOVERNANCE_REFRESH
+next_action: BUILD_REPO_ONLY_STANDARD_STACK_REFRESH_OR_REQUIRE_EXPLICIT_MANUAL_HYGIENE_APPROVAL_NO_RUNTIME_ACTION
+next_module: edge_factory_os_repo_only_standard_stack_refresh_v1.py
+
+SAFETY FLAGS
+----------------------------------------------------------------------------------------------------
+repo_only: True
+runtime_touch_allowed: False
+launcher_allowed: False
+runtime_patch_allowed: False
+backup_delete_allowed: False
+backup_move_allowed: False
+gitignore_change_allowed: False
+strategy_research_allowed: False
+candidate_generation_allowed: False
+candidate_contract_allowed: False
+family_release_allowed: False
+promotion_allowed: False
+capital_change_allowed: False
+active_paper_allowed: False
+live_allowed: False
+real_orders_allowed: False
+file_delete_allowed: False
+file_move_allowed: False
+archive_allowed: False
+execution_allowed: False
+
+OLD_SHORT STATUS
+----------------------------------------------------------------------------------------------------
+old_short_final_decision: OLD_SHORT_MONITORING_READY_CONTINUE_COLLECT_NO_CAPITAL
+old_short_closed_trades: 20
+old_short_capital_review_threshold: 50
+old_short_next_required_closed_trades_for_capital_review: 30
+old_short_monitoring_ready: True
+old_short_capital_ready: False
+old_short_capital_action_allowed: False
+old_short_research_invalidation_applies: False
+
+BACKUP HYGIENE STATUS
+----------------------------------------------------------------------------------------------------
+manual_approval_present: False
+manual_approval_valid: False
+backup_delete_allowed_now: False
+backup_move_allowed_now: False
+gitignore_change_allowed_now: False
+known_backup_pending_count: 2
+universe_guard_review_required: True
+pending_hygiene_item_count_observed: 3
+no_delete_no_move_no_gitignore_change: True
+
+GIT STATUS LINES
+----------------------------------------------------------------------------------------------------
+?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123
+?? tools/edge_factory_os_repo_only_standard_os_status_refresh_v1.py
+?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647
+?? tools/edge_factory_os_universe_coverage_guard_v1.py
+
+POLICY GATES
+----------------------------------------------------------------------------------------------------
+REPO_ONLY_SCOPE: PASS | observed=True | required=True
+  evidence: This module only reads repo/artifact status and writes its own status outputs.
+RUNTIME_TOUCH_BLOCK: BLOCKED_AS_REQUIRED | observed=False | required=False
+  evidence: No runtime process, launcher, or runtime patch command is invoked.
+LAUNCHER_BLOCK: BLOCKED_AS_REQUIRED | observed=False | required=False
+  evidence: Launcher execution is explicitly disallowed.
+RUNTIME_PATCH_BLOCK: BLOCKED_AS_REQUIRED | observed=False | required=False
+  evidence: Runtime patching is explicitly disallowed.
+BACKUP_DELETE_BLOCK: BLOCKED_AS_REQUIRED | observed=False | required=False
+  evidence: manual_approval_valid=False; backup deletion remains blocked.
+BACKUP_MOVE_BLOCK: BLOCKED_AS_REQUIRED | observed=False | required=False
+  evidence: manual_approval_valid=False; backup moving remains blocked.
+GITIGNORE_CHANGE_BLOCK: BLOCKED_AS_REQUIRED | observed=False | required=False
+  evidence: No .gitignore change is allowed in this step.
+STRATEGY_RESEARCH_BLOCK: BLOCKED_AS_REQUIRED | observed=False | required=False
+  evidence: This is status/governance refresh only, not strategy research.
+CANDIDATE_AND_RELEASE_BLOCK: BLOCKED_AS_REQUIRED | observed=False | required=False
+  evidence: Candidate generation, candidate contract, family release, and promotion are all false.
+CAPITAL_ACTIVE_PAPER_LIVE_REAL_ORDER_BLOCK: BLOCKED_AS_REQUIRED | observed=False | required=False
+  evidence: Capital, active paper, live, and real order actions are all false.
+OLD_SHORT_MONITORING_READY_BUT_NOT_CAPITAL_READY: PASS_NO_CAPITAL | observed={'old_short_final_decision': 'OLD_SHORT_MONITORING_READY_CONTINUE_COLLECT_NO_CAPITAL', 'old_short_closed_trades': 20, 'capital_threshold': 50, 'remaining': 30} | required={'decision': 'MONITORING_READY_NO_CAPITAL', 'capital_threshold': 50, 'remaining_must_be_positive_until_50_closed': True}
+  evidence: old_short has monitoring decision readiness but not enough closed trades for capital review.
+HOLDOUT_ACCESS_BLOCK: BLOCKED_AS_REQUIRED | observed={'holdout_selected': False, 'holdout_peeked': False, 'holdout_usable_now': False} | required={'holdout_selected': False, 'holdout_peeked': False, 'holdout_usable_now': False}
+  evidence: Untouched holdout remains unavailable for strategy use.
+BACKUP_HYGIENE_PENDING_NO_ACTION: PENDING_NO_DESTRUCTIVE_ACTION | observed={'manual_approval_present': False, 'manual_approval_valid': False, 'known_backup_pending_count': 2, 'universe_guard_review_required': True} | required={'manual_approval_valid': False, 'delete_or_move': False}
+  evidence: Known backups and universe guard remain pending; no deletion/move/gitignore action is authorized.
+
+ARTIFACT INVENTORY
+----------------------------------------------------------------------------------------------------
+backup_hygiene_approval: found=True path=C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_backup_hygiene_approval_or_standard_stack_refresh\backup_hygiene_approval_or_standard_stack_refresh_latest.json
+runtime_family_status_panel: found=True path=C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_runtime_family_status_panel_and_backup_hygiene\runtime_family_status_panel_and_backup_hygiene_latest.json
+runtime_family_monitor_refresh_old_short_aware: found=True path=C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_runtime_family_monitor_refresh_old_short_aware\runtime_family_monitor_refresh_old_short_aware_latest.json
+runtime_family_monitor_evaluator_no_capital: found=True path=C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_runtime_family_monitor_evaluator_no_capital\runtime_family_monitor_evaluator_no_capital_latest.json
+patch_integrity_explicit_safety_policy: found=False path=None
+governance_repair_suite: found=True path=C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_governance_repair_suite_ledger_alpha_prereg\governance_repair_suite_ledger_alpha_prereg_latest.json
+untouched_holdout_registry_nested_validation: found=False path=None
+global_route_family_alpha_accountant: found=True path=C:\Users\alike\OneDrive\Desktop\edge_lab_new\edge_factory_os_global_route_family_alpha_accountant\global_route_family_alpha_accountant_latest.json

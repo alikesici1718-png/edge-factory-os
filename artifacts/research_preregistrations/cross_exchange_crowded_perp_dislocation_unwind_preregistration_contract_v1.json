@@ -1,0 +1,126 @@
+{
+  "status": "PASS_REPO_ONLY_CROSS_EXCHANGE_CROWDED_PERP_DISLOCATION_UNWIND_PREREGISTRATION_CONTRACT_CREATED",
+  "artifact_kind": "CROSS_EXCHANGE_CROWDED_PERP_DISLOCATION_UNWIND_PREREGISTRATION_CONTRACT",
+  "module": "tools/edge_factory_os_repo_only_cross_exchange_crowded_perp_dislocation_unwind_preregistration_contract_v1.py",
+  "source_checkpoint": {
+    "actual_head_at_route_start": "3b224443d032889a40adb8b5075ff006b226d04f",
+    "tracked_python_count_at_route_start": 873,
+    "repo_clean_before_start": true
+  },
+  "route_family": "CROSS_EXCHANGE_CROWDED_PERP_DISLOCATION_UNWIND_V1",
+  "hypothesis_name": "cross_exchange_crowded_perp_dislocation_unwind",
+  "route_type": "cross_exchange_market_neutral_perp_basis_dislocation_unwind",
+  "route_context": {
+    "prior_route": "BINANCE_OKX_OVERLAP_BASIS_PREMIUM_ZSCORE_MEAN_REVERSION",
+    "prior_route_result_classification": "BASIS_PREMIUM_ZSCORE_MEAN_REVERSION_REJECTED_NO_FOLLOWUP",
+    "prior_route_retest_allowed_now": false,
+    "do_not_retest_prior_basis_premium_route": true,
+    "do_not_expand_prior_parameters": true
+  },
+  "fixed_config": {
+    "config_count": 1,
+    "config_id": "bx_okx_basis_divergence_funding_stress_failure_hold8h",
+    "timeframe": "1h",
+    "universe": "exact Binance/OKX overlap symbols available on both exchanges, target 81 if data supports it",
+    "holding_period_hours": 8,
+    "cost_round_trip_bps": 20,
+    "no_parameter_expansion": true,
+    "minimum_eligible_symbols_per_timestamp": 20,
+    "minimum_active_trades_per_timestamp": 1
+  },
+  "target_window": {
+    "preferred_start_utc": "2023-07-01T00:00:00Z",
+    "preferred_end_exclusive_utc": "2025-10-31T16:00:00Z",
+    "narrower_window_allowed_only_if_safely_supported_by_okx_data": true
+  },
+  "signal_definition": {
+    "binance_basis": "Binance mark_close / Binance index_close - 1",
+    "okx_basis": "OKX mark/index equivalent, or best verified OKX premium/basis equivalent",
+    "divergence": "binance_basis - okx_basis",
+    "divergence_z": "symbol-local trailing 30d z-score using only observations strictly before E",
+    "funding_stress": "lagged Binance and/or OKX funding confirms crowded side if available",
+    "continuation_failure_filter": {
+      "prior_return_hours": 4,
+      "high_positive_divergence_skip_if_expensive_leg_up_gt": 0.02,
+      "low_negative_divergence_skip_if_cheap_leg_down_lt": -0.02,
+      "fixed_not_tunable": true
+    },
+    "entry_rules": {
+      "z_gte_plus_2": "short Binance, long OKX",
+      "z_lte_minus_2": "long Binance, short OKX"
+    },
+    "portfolio": "equal-dollar long/short cross-exchange spread, delta-neutral by symbol",
+    "funding_cashflow_primary_result": "excluded unless both exchanges are unambiguously aligned"
+  },
+  "future_execution_controls": {
+    "execution_blocked_until_cross_exchange_data_availability_lock_available": true,
+    "execution_blocked_until_data_acquisition_lock_created": true,
+    "execution_blocked_until_cross_exchange_data_review_pass": true,
+    "data_unavailable_means_route_pending": true,
+    "do_not_test_extra_configs": true,
+    "do_not_tune_parameters": true,
+    "do_not_generate_candidate_edge_release_or_permissions": true
+  },
+  "required_data_for_execution": {
+    "binance_basis_premium_1h": "already acquired and reviewed",
+    "binance_funding": "already acquired and reviewed for aligned window",
+    "binance_1h_ohlcv": "already acquired and reviewed",
+    "okx_1h_ohlcv": "must verify existing safe non-holdout external artifact if present",
+    "okx_basis_premium_equivalent": "must verify or discover availability",
+    "okx_funding": "must verify or discover availability",
+    "optional_oi_long_short_liquidation": "not required for V1"
+  },
+  "source_artifacts": {
+    "prior_basis_premium_closure": "artifacts\\strategy_closures\\binance_okx_overlap_basis_premium_zscore_mean_reversion_closure_v1.json",
+    "basis_premium_review": "artifacts\\basis_premium_data_reviews\\binance_okx_overlap_basis_premium_1h_data_pack_review_v1.json",
+    "basis_premium_manifest": "artifacts\\basis_premium_data_locks\\binance_okx_overlap_basis_premium_1h_data_pack_v1.json"
+  },
+  "safety_permissions": {
+    "preregistration_contract_created": true,
+    "data_availability_discovery_allowed_next": true,
+    "data_acquisition_allowed_now": false,
+    "strategy_execution_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "holdout_permission_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false
+  },
+  "validation_checks": {
+    "prior_basis_premium_closure_loaded": true,
+    "prior_basis_premium_route_rejected_no_followup": true,
+    "prior_basis_premium_route_closed": true,
+    "basis_premium_review_loaded": true,
+    "basis_premium_review_status_verified": true,
+    "basis_premium_review_payload_verified": true,
+    "basis_premium_manifest_loaded": true,
+    "basis_premium_review_valid_for_future_feature_construction": true,
+    "config_count_exactly_one": true,
+    "no_parameter_expansion": true,
+    "execution_blocked_until_availability_acquisition_review_pass": true,
+    "metadata_only_no_row_files_read": true,
+    "no_network_used": true,
+    "no_private_apis": true,
+    "no_api_keys": true,
+    "no_live_order_trading_endpoints": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_family_release": true,
+    "no_runtime_live_capital": true,
+    "source_review_candidate_permission_false": true,
+    "source_review_edge_permission_false": true,
+    "source_review_release_permission_false": true,
+    "source_review_runtime_permission_false": true,
+    "source_review_live_permission_false": true,
+    "source_review_capital_permission_false": true,
+    "source_manifest_candidate_permission_false": true,
+    "source_manifest_edge_permission_false": true,
+    "source_manifest_runtime_permission_false": true,
+    "source_manifest_live_permission_false": true,
+    "source_manifest_capital_permission_false": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "010f5e87013260ffd35eff7f814141a699ca6278aae0638e437c2503f3a52a1f"
+}

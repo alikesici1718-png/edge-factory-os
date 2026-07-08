@@ -1,0 +1,81 @@
+{
+  "active_paper_allowed": false,
+  "archive_performed": false,
+  "audit_name": "edge_factory_os_patch_integrity_audit_v1",
+  "audit_status": "PATCH_INTEGRITY_AUDIT_PASS_WITH_SCHEMA_REPAIR_REQUIRED",
+  "backup_delete_allowed_after": [
+    "patch integrity audit committed",
+    "explicit safety flag policy committed",
+    "backup ignore policy committed",
+    "manual user approval"
+  ],
+  "backup_delete_allowed_now": false,
+  "candidate_contract_allowed": false,
+  "candidate_generation_allowed": false,
+  "capital_change_allowed": false,
+  "closed_source_panel_route_rerun_allowed": false,
+  "created_at_utc": "2026-05-14T02:25:15.080002+00:00",
+  "execution_performed": false,
+  "family_release_allowed": false,
+  "file_delete_performed": false,
+  "file_move_performed": false,
+  "git_status_short_lines": [
+    "?? tools/edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+    "?? tools/edge_factory_os_patch_integrity_and_explicit_flag_policy_v1.py",
+    "?? tools/edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+    "?? tools/edge_factory_os_universe_coverage_guard_v1.py"
+  ],
+  "joint_null_diff_has_content": true,
+  "joint_null_diff_summary": {
+    "backup": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\tools\\edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123",
+    "current": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\tools\\edge_factory_os_joint_null_distribution_validator_v1.py",
+    "returncode": 1,
+    "stderr": "warning: in the working copy of 'C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\tools\\edge_factory_os_joint_null_distribution_validator_v1.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\tools\\edge_factory_os_joint_null_distribution_validator_v1.py.readonly_fix_bak_20260514_022123', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "joint_null_patch_audit": {
+    "backup_has_progress_logging": false,
+    "backup_has_to_numpy_without_copy": true,
+    "classification": "TECHNICAL_BUG_FIX_CONFIRMED_NO_POLICY_VIOLATION",
+    "current_has_progress_logging": true,
+    "current_has_to_numpy_copy_true": true,
+    "file_pair": "joint_null_distribution_validator current vs readonly_fix_bak",
+    "interpretation": "The current joint-null validator uses to_numpy(copy=True), fixing the read-only NumPy assignment crash. Progress logging was also added. This is a technical fix, not a methodology relaxation.",
+    "policy_violation_detected": false,
+    "required_repair": [
+      "Keep current technical fix.",
+      "Do not restore backup.",
+      "Backup may be deleted only after audit state is committed and .gitignore covers backup patterns."
+    ],
+    "severity": "OK"
+  },
+  "launcher_allowed": false,
+  "live_allowed": false,
+  "patch_runtime_allowed": false,
+  "promotion_allowed": false,
+  "real_orders_allowed": false,
+  "runtime_touch_allowed": false,
+  "source_panel_diff_has_content": true,
+  "source_panel_diff_summary": {
+    "backup": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\tools\\edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647",
+    "current": "C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\tools\\edge_factory_os_source_panel_anomaly_discovery_runner_v1.py",
+    "returncode": 1,
+    "stderr": "warning: in the working copy of 'C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\tools\\edge_factory_os_source_panel_anomaly_discovery_runner_v1.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'C:\\Users\\alike\\OneDrive\\Desktop\\edge_lab_new\\edge_factory_os_repo\\tools\\edge_factory_os_source_panel_anomaly_discovery_runner_v1.py.blocked_patch_bak_20260514_000647', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "source_panel_patch_audit": {
+    "backup_has_explicitly_blocked_helper": false,
+    "backup_uses_plugin_expansion_is_false": true,
+    "classification": "POLICY_SENSITIVE_PATCH_LOGGED_SCHEMA_WEAKNESS_REPAIR_REQUIRED",
+    "current_has_explicitly_blocked_helper": true,
+    "current_uses_explicitly_blocked_for_plugin_expansion": true,
+    "file_pair": "source_panel_anomaly_discovery_runner current vs blocked_patch_bak",
+    "interpretation": "The current source-panel anomaly runner treats missing/None/False plugin_expansion_allowed as blocked. This did not enable candidates/release/runtime/capital/live, and the route later failed deep validation. However, using missing/None to satisfy plugin readiness can hide schema omissions. Future modules must separate action safety from readiness validation.",
+    "policy_violation_detected": false,
+    "required_repair": [
+      "Add explicit safety flag policy.",
+      "Future plugin readiness requires explicit field presence.",
+      "Missing safety flag means action blocked, but schema not ready.",
+      "Do not re-run closed source-panel anomaly route."
+    ],
+    "severity": "ATTENTION"
+  }
+}

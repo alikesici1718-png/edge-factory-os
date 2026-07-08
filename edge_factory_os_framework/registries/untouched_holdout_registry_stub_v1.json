@@ -1,0 +1,26 @@
+{
+  "registry_name": "edge_factory_os_untouched_holdout_registry_stub_v1",
+  "registry_status": "UNTOUCHED_HOLDOUT_REGISTRY_STUB_READY_NOT_POPULATED",
+  "created_at_utc": "2026-05-14T01:30:36.704303+00:00",
+  "purpose": "Defines required registry schema. It does not expose or select final holdout yet.",
+  "holdout_selected": false,
+  "holdout_peeked": false,
+  "holdout_usable_now": false,
+  "required_fields_for_future_registry": [
+    "holdout_id",
+    "selection_time_utc",
+    "selection_method",
+    "time_window_or_symbol_split",
+    "forbidden_access_until_gate",
+    "single_use_policy",
+    "hash_of_holdout_definition",
+    "access_log"
+  ],
+  "candidate_generation_allowed": false,
+  "family_release_allowed": false,
+  "runtime_touch_allowed": false,
+  "capital_change_allowed": false,
+  "active_paper_allowed": false,
+  "live_allowed": false,
+  "real_orders_allowed": false
+}

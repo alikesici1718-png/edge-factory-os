@@ -1,0 +1,250 @@
+{
+  "status": "PASS_REPO_CODE_ONLY_LIQUIDATION_DATA_AVAILABILITY_DISCOVERY_UNAVAILABLE",
+  "artifact_kind": "LIQUIDATION_DATA_AVAILABILITY_DISCOVERY",
+  "module": "tools/edge_factory_os_repo_only_liquidation_data_availability_discovery_v1.py",
+  "repo_scope": {
+    "code_changes_repo_only": true,
+    "existing_files_modified": false,
+    "strategy_created": false,
+    "backtest_created": false,
+    "candidate_created": false,
+    "edge_claim_created": false,
+    "runtime_live_capital_touched": false,
+    "bulk_download_performed": false,
+    "private_api_or_key_used": false
+  },
+  "source_checkpoint": {
+    "actual_head_at_discovery_start": "e79e89e70a8c7359bfbe08d5fd7847c0e8329ce4",
+    "tracked_python_count_at_discovery_start": 875,
+    "repo_clean_before_run": true
+  },
+  "question": "Can historical liquidation or forced-order data be obtained for Binance USDT perpetuals and/or OKX swaps for the 81-symbol Binance/OKX overlap universe from 2023-01-01 to 2025-10-31?",
+  "target_window": {
+    "start_utc": "2023-01-01T00:00:00Z",
+    "end_utc": "2025-10-31T23:59:59Z",
+    "end_exclusive_utc": "2025-11-01T00:00:00Z"
+  },
+  "target_universe": {
+    "name": "Binance/OKX 81-symbol overlap universe",
+    "target_symbol_count": 81
+  },
+  "availability_classification": "LIQUIDATION_DATA_PARTIAL_OR_RECENT_ONLY_NOT_AVAILABLE_FOR_FULL_2023_2025_81_SYMBOL_RESEARCH",
+  "available_window": {
+    "binance_public_no_key": {
+      "status": "not_full_window",
+      "best_public_no_key_estimate": "partial Binance USD-M snapshots may exist for part of 2023 through 2024-03-31 only",
+      "full_2023_01_01_to_2025_10_31": false
+    },
+    "okx_public_no_key": {
+      "status": "not_historical",
+      "best_public_no_key_estimate": "recent/live public liquidation channel only",
+      "full_2023_01_01_to_2025_10_31": false
+    },
+    "full_target_window_available": false
+  },
+  "symbol_coverage_estimate": {
+    "target_symbol_count": 81,
+    "binance_public_no_key_full_window_estimate": 0,
+    "okx_public_no_key_full_window_estimate": 0,
+    "third_party_vendor_possible_but_not_approved": true,
+    "coverage_note": "Partial Binance archive coverage may include some overlap symbols before 2024-04-01, but full-window 81-symbol coverage is not available from accepted public no-key sources."
+  },
+  "frequency_timestamp_usability": {
+    "target_15m_1h_event_research": "not_acquisition_ready",
+    "binance": {
+      "event_level_timestamp_ms_possible": true,
+      "usable_for_15m_1h_event_research_if_complete": true,
+      "usable_for_target_research_now": false,
+      "reason": "Historical coverage is incomplete and stream data is sampled/recent rather than complete full-window history."
+    },
+    "okx": {
+      "event_level_timestamp_ms_possible": true,
+      "usable_for_15m_1h_event_research_if_collected_forward": true,
+      "usable_for_target_research_now": false,
+      "reason": "The documented public channel is recent/live and explicitly incomplete as total liquidation history."
+    }
+  },
+  "binance_availability": {
+    "exchange": "Binance USD-M perpetuals",
+    "availability_classification": "PARTIAL_ARCHIVE_AND_RECENT_OR_REALTIME_ONLY_NOT_FULL_HISTORICAL",
+    "public_forced_order_rest": {
+      "endpoint": "GET /fapi/v1/allForceOrders",
+      "market_level_public_history_available_for_target_window": false,
+      "evidence": "Binance change log records that /fapi/v1/allForceOrders is no longer maintained and has not accepted requests since 2021-04-27; later target years are therefore not available from that historical endpoint.",
+      "source_url": "https://developers.binance.com/docs/derivatives"
+    },
+    "user_force_order_rest": {
+      "endpoint": "GET /fapi/v1/forceOrders",
+      "acceptable_for_public_market_research": false,
+      "reason": "This is user/account force-order history, not public market-wide liquidation data, and Binance documentation notes recent-window retention only.",
+      "source_url": "https://developers.binance.com/docs/derivatives"
+    },
+    "public_websocket": {
+      "streams": [
+        "<symbol>@forceOrder",
+        "!forceOrder@arr"
+      ],
+      "historical_backfill_available": false,
+      "sampling_limitation": "Binance liquidation order streams publish the largest liquidation order within a 1000 ms window, not a complete historical feed.",
+      "timestamp_usability": "millisecond event timestamps are usable for live 15m/1h aggregation only if collected forward",
+      "source_url": "https://developers.binance.com/docs/derivatives"
+    },
+    "public_archive_data_vision": {
+      "archive_family": "data.binance.vision futures/um liquidationSnapshot",
+      "full_target_window_available": false,
+      "partial_window_evidence": "Public issue reports USDT-M liquidationSnapshot files missing after 2024-03-31.",
+      "target_window_gap": "2024-04-01 through 2025-10-31 not proven available from the public archive",
+      "symbol_coverage_estimate": "unknown for all 81 symbols without bulk archive listing; not accepted as full coverage",
+      "source_url": "https://github.com/binance/binance-public-data/issues/337"
+    },
+    "available_window_for_this_project": {
+      "status": "not_full_window",
+      "best_public_no_key_estimate": "partial Binance USD-M snapshots may exist for part of 2023 through 2024-03-31 only",
+      "full_2023_01_01_to_2025_10_31": false
+    },
+    "frequency_timestamp_usability": {
+      "event_level_timestamp_ms_possible": true,
+      "usable_for_15m_1h_event_research_if_complete": true,
+      "usable_for_target_research_now": false,
+      "reason": "Historical coverage is incomplete and stream data is sampled/recent rather than complete full-window history."
+    }
+  },
+  "okx_availability": {
+    "exchange": "OKX swaps",
+    "availability_classification": "RECENT_PUBLIC_WEBSOCKET_ONLY_NOT_FULL_HISTORICAL",
+    "public_liquidation_orders_channel": {
+      "channel": "liquidation-orders",
+      "transport": "public WebSocket",
+      "historical_backfill_available": false,
+      "full_target_window_available": false,
+      "evidence": "OKX documents the public liquidation-orders channel as recent liquidation orders and states that the data does not represent the total number of liquidations on OKX.",
+      "source_url": "https://app.okx.com/docs-v5/en/"
+    },
+    "public_rest_history": {
+      "full_historical_market_level_endpoint_found": false,
+      "acceptable_for_2023_2025_81_symbol_research": false,
+      "reason": "No current public no-key REST historical liquidation endpoint was identified in the OKX V5 documentation."
+    },
+    "private_account_order_history": {
+      "liquidation_categories_exist_in_order_history": true,
+      "acceptable_for_public_market_research": false,
+      "reason": "Private account/order history requires API keys and is user-specific, not public market liquidation history."
+    },
+    "available_window_for_this_project": {
+      "status": "not_historical",
+      "best_public_no_key_estimate": "recent/live public liquidation channel only",
+      "full_2023_01_01_to_2025_10_31": false
+    },
+    "frequency_timestamp_usability": {
+      "event_level_timestamp_ms_possible": true,
+      "usable_for_15m_1h_event_research_if_collected_forward": true,
+      "usable_for_target_research_now": false,
+      "reason": "The documented public channel is recent/live and explicitly incomplete as total liquidation history."
+    }
+  },
+  "existing_local_repo_artifacts": {
+    "tracked_repo_liquidation_artifact_candidates": [],
+    "tracked_repo_liquidation_artifact_candidate_count": 0,
+    "external_local_liquidation_directory_candidates": [],
+    "external_local_liquidation_directory_candidate_count": 0,
+    "review_result": "no existing local/repo liquidation data lock or review artifact found"
+  },
+  "public_archive_review": {
+    "binance_official_public_archive": {
+      "available_for_full_target_window": false,
+      "classification": "partial_or_stale_usdm_liquidation_snapshot_archive",
+      "notes": [
+        "Official Binance public-data repository documents public market-data archive families.",
+        "USDT-M liquidationSnapshot appears incomplete after 2024-03-31 per public issue evidence.",
+        "No bulk download or file enumeration was performed by this module."
+      ],
+      "source_urls": [
+        "https://github.com/binance/binance-public-data",
+        "https://github.com/binance/binance-public-data/issues/337"
+      ]
+    },
+    "okx_official_public_archive": {
+      "available_for_full_target_window": false,
+      "classification": "no_official_public_historical_liquidation_archive_identified",
+      "source_urls": [
+        "https://app.okx.com/docs-v5/en/"
+      ]
+    },
+    "third_party_archives": {
+      "available_in_public_documentation": true,
+      "accepted_for_immediate_repo_acquisition": false,
+      "reason": "Third-party providers document historical liquidation data for Binance/OKX, but these are vendor datasets/APIs requiring separate source approval, terms, and likely credentials or subscriptions. They are not treated as public no-key exchange archives in this discovery.",
+      "examples": [
+        {
+          "provider": "Tardis.dev",
+          "documented_coverage": "Binance USDT Futures liquidations since 2019-11-17 and OKX futures/swap liquidations since 2020-12-18, with exchange publishing limitations preserved.",
+          "source_url": "https://docs.tardis.dev/faq/data"
+        },
+        {
+          "provider": "Coin Metrics",
+          "documented_coverage": "market-level liquidation products and metrics",
+          "source_url": "https://gitbook-docs.coinmetrics.io/market-data/market-data-overview/liquidations/futures-liquidations"
+        }
+      ]
+    }
+  },
+  "acquisition_decision": {
+    "acquisition_can_proceed": false,
+    "reason": "Useful full-window public no-key liquidation history for the 81-symbol Binance/OKX overlap from 2023-01-01 through 2025-10-31 is unavailable. Route/data direction remains pending.",
+    "bulk_download_allowed_now": false,
+    "strategy_execution_allowed_now": false
+  },
+  "safety_permissions": {
+    "liquidation_data_availability_discovery_created": true,
+    "acquisition_can_proceed": false,
+    "strategy_execution_allowed_now": false,
+    "backtest_allowed_now": false,
+    "candidate_generation_allowed_now": false,
+    "edge_claim_allowed_now": false,
+    "family_release_allowed_now": false,
+    "runtime_permission_allowed_now": false,
+    "live_permission_allowed_now": false,
+    "capital_permission_allowed_now": false
+  },
+  "forbidden_actions_confirmed_false": {
+    "bulk_download": false,
+    "private_api_used": false,
+    "api_key_used": false,
+    "strategy_created": false,
+    "strategy_executed": false,
+    "backtest_created": false,
+    "candidate_generation": false,
+    "edge_claim": false,
+    "family_release": false,
+    "runtime_permission": false,
+    "live_permission": false,
+    "capital_permission": false
+  },
+  "validation_checks": {
+    "repo_clean_before_run": true,
+    "metadata_discovery_only": true,
+    "exactly_one_python_tool_created": true,
+    "exactly_one_json_artifact_created": true,
+    "no_existing_files_modified": true,
+    "no_bulk_download": true,
+    "no_strategy_execution": true,
+    "no_backtest": true,
+    "no_candidate_generation": true,
+    "no_edge_claim": true,
+    "no_family_release": true,
+    "no_private_api": true,
+    "no_api_keys": true,
+    "no_live_order_trading_endpoint": true,
+    "no_runtime_live_capital": true,
+    "local_repo_artifact_scan_completed": true,
+    "public_source_review_recorded": true,
+    "binance_full_target_window_not_available": true,
+    "okx_full_target_window_not_available": true,
+    "acquisition_can_proceed_false": true,
+    "strategy_execution_allowed_now_false": true,
+    "candidate_edge_live_capital_false": true,
+    "replacement_checks_all_true": true
+  },
+  "replacement_checks_all_true": true,
+  "payload_sha256_excluding_hash": "7a480c783fe4e1f72831515baa9d61e3a43c27c58ce9a1f14d16ea3e0d16c2e9"
+}
