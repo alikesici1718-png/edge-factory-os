@@ -1,82 +1,100 @@
-# Edge Factory OS: Autonomous Crypto Signal Research Pipeline
+# Edge Factory OS
 
-## Overview
+This is not a trading bot repository. This is a research pipeline built to
+systematically generate, test, and reject crypto trading hypotheses at scale
+— with an emphasis on not fooling myself about whether a signal is real.
 
-Edge Factory OS is a research and evaluation pipeline for systematic crypto signal discovery across 81 symbols. The signal evaluation and closure workflow (preregistration -> execution -> evaluation -> closure) has been run end-to-end and produced verified results across 33 strategy evaluations and 27 formal closures. A fully autonomous orchestration layer (automatic triggering without manual execution) was also built but has not yet been exercised end-to-end.
+## What This Project Accomplished
 
-**Strategy families (one live paper logger per family):**
-1. Impulse Event Long (`impulse_event_long_live_paper_logger.py`)
-2. Impulse Long Gate-Aware (`impulse_long_gate_aware_live_paper_logger.py`)
-3. OKX Event Impulse (`okx_event_impulse_live_paper_logger.py`)
-4. Session Ret60 Reversal (`session_ret60_reversal_live_paper_logger.py`)
-5. Market Relative (`market_relative_live_paper_logger.py`)
-6. Session Short Gate-Aware (`session_short_gate_aware_live_paper_logger.py`)
-7. Old Short Gate-Aware (`old_short_gate_aware_live_paper_logger.py`)
-8. Weak Market Breakdown Short (`weak_market_breakdown_short_live_paper_logger.py`)
+- 81 symbols tested (Binance/OKX perpetual futures)
+- 34 months of historical data (January 2023 – October 2025)
+- 33 strategy evaluations executed, each with real out-of-sample performance metrics
+- 27 hypotheses formally closed via a hash-verified audit trail
+- 27 rejected after cost-adjusted evaluation (all closures denied every permission: no edge claim, no capital, no family release)
+- 240 JSON research artifacts generated (full audit trail of every decision)
 
-The pipeline manages its own research queue, tracks signal lifecycle state (candidate → sandbox paper → promotion review → retired), and enforces risk gates before any capital allocation.
+**Result: no statistically significant, cost-adjusted edge was found in any
+of the 7 research hypothesis families tested (grouped by route:
+binance_okx_overlap, binance_okx_group2, binance_spot_perp,
+crypto_15m_idiosyncratic_sweep_short, crypto_15m_residual_sweep/confluence,
+crypto_15m_liquidity_sweep, and one additional 15m momentum family).**
 
-## Architecture
+## Research Philosophy
 
-### State Management *(not yet exercised — see Verified vs. Unverified section)*
-- `edge_factory_os_orchestrator.py` / `_v2.py`: top-level loop coordinating research queue, signal lifecycle, and approval routing
-- `edge_factory_autonomous_research_queue.py`: queues new candidate signals; prioritizes by evidence score
-- `edge_factory_family_lifecycle_engine.py`: tracks each signal family through stages (research → sandbox → paper → live)
-- `edge_factory_os_decision_ledger.py`: append-only audit log of every promotion/retirement decision
+The goal of this project was not to find a profitable strategy. The goal
+was to build a system capable of rigorously rejecting weak hypotheses —
+with pre-registration (to avoid post-hoc rationalization), cost-inclusive
+backtesting (to avoid reporting fantasy returns), and an immutable decision
+log (to avoid quietly re-running a test until it looks good).
 
-### Risk Gates *(not yet exercised — see Verified vs. Unverified section)*
-- `edge_factory_capital_governor.py` / `adaptive_capital_governor_v2.py`: enforces per-signal and global capital limits
-- `edge_factory_kill_switch_controller.py`: halts live allocation on drawdown breach
-- `global_paper_risk_manager.py` (v1–v4): cross-signal paper portfolio risk; prevents correlated over-allocation
-- `edge_factory_os_drift_gate_controller.py`: blocks promotion if live vs. backtest drift exceeds threshold
+Most of the value in this repository is not "did it find alpha" — it didn't.
+The value is the discipline of the rejection process itself.
 
-### Validator Chain
-Before any signal advances, it must pass a sequential validator chain:
-1. `edge_factory_coin_subset_validator.py`: confirms symbol universe is valid and liquid
-2. `edge_factory_execution_realism_checker.py`: checks slippage and fill assumptions
-3. `edge_factory_rolling_oos_validator.py` / `_v2.py`: rolling out-of-sample pass required
-4. `edge_factory_research_candidate_validator.py`: final evidence synthesis gate
-5. `edge_factory_native_bps_validator.py`: net-of-cost profitability check in bps
+## Research Flow
 
-**`tools/` folder**: 837 governance and introspection scripts; see "Tools Directory" section below for a categorized breakdown.
+```
+Idea
+  |
+  v
+Pre-registration (hypothesis + success criteria locked before testing)
+  |
+  v
+Execution (backtest against historical data)
+  |
+  v
+Evaluation (cost-adjusted performance metrics computed)
+  |
+  v
+Closure (accept / reject decision, hash-linked to source artifacts)
+```
+
+## Example Result
+
+The best-performing strategy candidate out of 33 evaluated
+("crypto_15m_idiosyncratic_sweep_short_trap_quality_time_exit_only") looked
+genuinely promising on the surface:
+
+- Validation net return: +474.5 bps
+- Holdout net return: +760.2 bps
+- 454 total closed trades (short-only, high-volatility sweep pattern)
+
+But it was still rejected. Why: the pipeline's null-baseline test — checking
+whether a result this good could plausibly arise from noise given the number
+of candidates tested — placed this result at the 84th percentile of the null
+distribution. The threshold for acceptance is the 95th percentile. In other
+words, a result this strong is not rare enough, given how many strategies
+were tried, to be trusted as a real edge rather than a lucky draw.
+
+This is the core discipline the pipeline enforces: a good-looking backtest
+is necessary but not sufficient. All 33 evaluated strategies were ultimately
+rejected, several (like this one) despite double- or triple-digit apparent
+returns, because they failed the same null-baseline bar.
 
 ## Verified vs. Unverified Components
 
 **Verified (executed, produced real output):**
-- Signal evaluation pipeline: 33 strategy evaluations executed with real performance metrics. Example candidate: 17,716 signals tested across 34 months (Jan 2023 - Oct 2025), net -19.13 bps after costs, 33.6% win rate.
-- Closure/rejection workflow: 27 strategies formally closed via `artifacts/strategy_closures/`, all hash-verified (SHA-256 chain linking each closure to its source execution and evaluation artifacts). All 27 closed as rejected after cost-adjusted evaluation.
-- Evidence: `artifacts/strategy_evaluations/` (33 files), `artifacts/strategy_closures/` (27 files)
+- Signal evaluation pipeline: 33 strategy evaluations executed with real performance metrics
+- Closure/rejection workflow: 27 strategies formally closed via `artifacts/strategy_closures/`, hash-verified (SHA-256 chain linking each closure to its source execution and evaluation artifacts)
 
 **Built but not yet exercised:**
-- Fully autonomous orchestration (`edge_factory_os_orchestrator.py` / `_v2.py`): code exists and has been imported, but no evidence of a full autonomous run (research queue -> auto-execution -> auto-promotion without manual triggering). All 35 executions found in artifacts were triggered directly via `tools/` scripts, not via the orchestrator.
+- Fully autonomous orchestration (`edge_factory_os_orchestrator.py` / `_v2.py`): code exists and has been imported, but no evidence of a full autonomous run without manual triggering. All executions found in artifacts were triggered directly via `tools/` scripts.
 - Live paper trading (8 strategy-specific loggers in `src/`): code exists, imported, but no evidence of any executed paper trade or output file.
 
-This distinction matters: the research and evaluation methodology is real and produced real (negative) findings. The autonomous orchestration and live-trading layers are unexercised infrastructure, built preemptively in case a signal had passed validation.
+## Tooling
 
-## Key Findings
+The repository contains 839 automation scripts under `tools/`, grouped into:
 
-- **`institutional_size_classification_pilot.py`**: tested whether large-lot order flow predicts short-term direction; result: no statistically significant edge after BH-FDR correction across the 81-symbol universe
-- **General outcome**: the autonomous pipeline has not surfaced a promotable signal as of the current state; the majority of candidates exited at the rolling OOS validator or the native bps validator gate
-- The pipeline infrastructure itself (state management, validator chain, approval gates) is production-grade; the absence of edge is a research finding, not a system failure
-
-## Repository Structure
-
-```
-edge_factory_os_repo/
-├── src/                    # Core pipeline: orchestrators, governors, validators, live loggers
-│   ├── edge_factory_os_orchestrator*.py       # Top-level control loop
-│   ├── edge_factory_*_governor*.py            # Capital and risk governors
-│   ├── edge_factory_*_validator*.py           # Validator chain components
-│   ├── edge_factory_os_decision_ledger.py     # Immutable audit log
-│   ├── *_live_paper_logger.py                 # Per-strategy paper trading loggers
-│   └── global_paper_risk_manager*.py          # Cross-signal risk manager
-├── tools/                  # 837 governance scripts — see Tools Directory section below
-└── README.md
-```
-
-## Tools Directory (Internal Governance Utilities)
-
-Total: 837 files across 10 functional groups. Files are named `edge_factory_os_[repo_only_]<signal_or_subsystem>_<verb>_v<N>.py`; the `_repo_only_` infix means the script is read-only (no live capital, no API orders).
+- Pre-registration contracts
+- Research contract builders
+- Evaluators
+- Runners / executors
+- Hypothesis closures
+- Historical data acquisition
+- Status refresh / backlog management
+- Approval and gate records
+- Diagnostics, audits, repairs
+- Cycle operators / self-improvement
+- Policy and guard enforcement
 
 ### Pre-registration Contracts (35 files)
 Frozen hypothesis specifications written before a backtest is run. Each file records the exact signal definition, entry/exit rules, cost assumptions, and expected direction — so the result cannot be retrofitted after the fact. Examples: `*_preregistration_contract_v1.py`, `*_preregistration_v1.py` (e.g., `crypto_15m_liquidity_sweep_reversal_preregistration_v1.py`, `binance_okx_overlap_funding_crowding_reversal_full_range_preregistration_contract_v1.py`).
@@ -85,7 +103,7 @@ Frozen hypothesis specifications written before a backtest is run. Each file rec
 Scripts that assemble a standardized research contract JSON artifact by consuming a framework router spec, plugin config, data-quality guard output, and lesson memory. These replaced one-off per-signal contract builders with a generic framework. Examples: `edge_factory_os_generic_research_contract_builder_v1.py`, `edge_factory_os_exit_risk_shape_contract_builder_v1.py`.
 
 ### Evaluators (80 files)
-Read-only scripts that interpret execution artifacts and produce a structured evaluation JSON — pass/fail verdict, key metrics, BH-corrected p-values. Each evaluator has a corresponding `_runner_` and `_closure_` partner in the same signal namespace. Examples: `*_evaluator_v1.py` under `binance_okx_overlap_*`, `crypto_15m_*`, `okx_88_symbol_*`, `lucifer_15m_*`.
+Read-only scripts that interpret execution artifacts and produce a structured evaluation JSON — pass/fail verdict, key metrics, null-baseline percentile. Each evaluator has a corresponding `_runner_` and `_closure_` partner in the same signal namespace. Examples: `*_evaluator_v1.py` under `binance_okx_overlap_*`, `crypto_15m_*`, `okx_88_symbol_*`, `lucifer_15m_*`.
 
 ### Runners and Executors (177 files)
 Scripts that execute a backtest, data pipeline step, or governance workflow and write a result artifact to `artifacts/`. Runners are sequenced by the orchestrator; each has an `_after_<prior_step>` suffix that encodes the required predecessor artifact. Examples: `edge_factory_os_generic_research_runner_v1.py`, `*_execution_v1.py` across all signal families.
@@ -110,3 +128,24 @@ Top-level loop orchestration tools that schedule which governance module runs ne
 
 ### Policy and Guard Enforcement (57 files)
 Stateless policy engines that enforce research budget limits, multiple-testing corrections, month-stability requirements, and action prerequisites. Guards block downstream steps if their invariant is violated; policy files define the rules that guards enforce. Examples: `edge_factory_os_global_multiple_testing_ledger_*`, `edge_factory_os_strict_month_stability_policy_guard_*`, `edge_factory_os_action_prerequisite_guard_v1.py`.
+
+## Repository Structure
+
+- `src/` — Core pipeline: orchestrators, governors, validators, live loggers
+- `tools/` — Governance and automation utilities (see Tooling above)
+- `artifacts/` — Append-only audit trail (contracts, evaluations, closures)
+- `edge_factory_os_framework/` — Schema/policy/contract definitions (declarative config layer)
+- `scripts/` — System launchers (paper trading, not live capital)
+- `docs/` — Detailed documentation and script inventory
+
+## Methodology
+
+- Cost-inclusive backtesting (all reported returns are net of realistic transaction costs)
+- Pre-registered hypotheses (success criteria locked before testing)
+- Immutable, hash-linked decision audit trail
+
+## Requirements
+
+```
+pip install pandas numpy ccxt
+```
