@@ -9,6 +9,12 @@
 
 ## Research at a Glance
 
+> **Note on scope:** The high file count in `tools/` reflects each research
+> iteration generating its own verification/governance script as part of
+> an iterative research workflow, not a single monolithic codebase written
+> in one pass. Superseded script versions have been moved to `tools/archive/`
+> for clarity.
+
 - 81 perpetual futures symbols (Binance/OKX)
 - 34 months of historical data (Jan 2023 - Oct 2025)
 - 33 strategy evaluations executed
