@@ -6,23 +6,23 @@ from typing import Any, Dict, List, Optional
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = "tools/edge_factory_os_repo_only_lucifer_15m_v2_evaluator_v1.py"
-ARTIFACT_PATH = "artifacts/strategy_evaluations/lucifer_15m_v2_evaluator_v1.json"
-EXECUTION_PATH = "artifacts/strategy_executions/lucifer_15m_v2_execution_v1.json"
+MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_v3_horizontal_cross_evaluator_v1.py"
+ARTIFACT_PATH = "artifacts/strategy_evaluations/lucifer_15m_v3_horizontal_cross_evaluator_v1.json"
+EXECUTION_PATH = "artifacts/strategy_executions/lucifer_15m_v3_horizontal_cross_execution_v1.json"
 
-STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V2_EVALUATED"
-ARTIFACT_KIND = "LUCIFER_15M_V2_EVALUATOR"
-EXECUTION_STATUS = "PASS_REPO_CODE_ONLY_LUCIFER_15M_V2_EXECUTED"
-ROUTE = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2"
-CONFIG_ID = "lucifer_15m_v2_stable_cross_trend_volume_sl1_tp2"
+STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_EVALUATED"
+ARTIFACT_KIND = "LUCIFER_15M_V3_HORIZONTAL_CROSS_EVALUATOR"
+EXECUTION_STATUS = "PASS_REPO_CODE_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_EXECUTED"
+ROUTE = "LUCIFER_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3"
+CONFIG_ID = "lucifer_15m_v3_horizontal_pivot_cross_sl1_tp2"
 
-EXPECTED_PRE_EVALUATOR_HEAD = "af8590fd8b2e3f47458a0afddeec316122494a8f"
-EXPECTED_PRE_EVALUATOR_TRACKED_PYTHON_COUNT = 938
+EXPECTED_PRE_EVALUATOR_HEAD = "2747a30f828bb8f9b966ecd2e6bf832a9003e0ed"
+EXPECTED_PRE_EVALUATOR_TRACKED_PYTHON_COUNT = 942
 
-RESULT_PROMISING = "LUCIFER_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE"
-RESULT_REJECTED = "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP"
-RESULT_INCONCLUSIVE = "LUCIFER_15M_V2_INCONCLUSIVE_NEEDS_MORE_DATA"
-RESULT_INVALIDATED = "LUCIFER_15M_V2_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
+RESULT_PROMISING = "LUCIFER_15M_V3_HORIZONTAL_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE"
+RESULT_REJECTED = "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP"
+RESULT_INCONCLUSIVE = "LUCIFER_15M_V3_HORIZONTAL_CROSS_INCONCLUSIVE_NEEDS_MORE_DATA"
+RESULT_INVALIDATED = "LUCIFER_15M_V3_HORIZONTAL_CROSS_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
 
 
 def canonical_payload_hash(payload: Dict[str, Any]) -> str:
@@ -92,7 +92,8 @@ def safety_review_passed(execution: Dict[str, Any]) -> bool:
         return False
     return (
         safety.get("single_config_only") is True
-        and safety.get("no_parameter_grid") is True
+        and safety.get("no_parameter_expansion") is True
+        and safety.get("no_grid_search") is True
         and safety.get("no_optimization") is True
         and safety.get("no_candidate") is True
         and safety.get("no_edge_claim") is True
@@ -101,11 +102,12 @@ def safety_review_passed(execution: Dict[str, Any]) -> bool:
         and safety.get("no_orders") is True
         and safety.get("no_private_api") is True
         and safety.get("no_network") is True
-        and safety.get("rsi_filter_used") is False
+        and safety.get("trend_filter_used") is False
+        and safety.get("volume_filter_used") is False
+        and safety.get("rsi_used") is False
         and safety.get("score_system_used") is False
         and safety.get("candle_close_filter_used") is False
         and safety.get("proximity_filter_used") is False
-        and safety.get("seven_of_seven_labels_used") is False
         and safety.get("atr_stop_used") is False
     )
 
@@ -117,12 +119,12 @@ def build_payload() -> Dict[str, Any]:
     allowed_dirty = {MODULE_PATH, ARTIFACT_PATH}
     unexpected_dirty_paths = [path for path in current_dirty_paths if path not in allowed_dirty]
     if unexpected_dirty_paths:
-        raise RuntimeError(f"unexpected dirty paths during V2 evaluator: {unexpected_dirty_paths}")
+        raise RuntimeError(f"unexpected dirty paths during V3 evaluator: {unexpected_dirty_paths}")
     if actual_head != EXPECTED_PRE_EVALUATOR_HEAD:
-        raise RuntimeError(f"HEAD moved before V2 evaluator: {actual_head} != {EXPECTED_PRE_EVALUATOR_HEAD}")
+        raise RuntimeError(f"HEAD moved before V3 evaluator: {actual_head} != {EXPECTED_PRE_EVALUATOR_HEAD}")
     if actual_tracked_python_count != EXPECTED_PRE_EVALUATOR_TRACKED_PYTHON_COUNT:
         raise RuntimeError(
-            "tracked Python count mismatch before V2 evaluator: "
+            "tracked Python count mismatch before V3 evaluator: "
             f"{actual_tracked_python_count} != {EXPECTED_PRE_EVALUATOR_TRACKED_PYTHON_COUNT}"
         )
 
@@ -252,10 +254,10 @@ def build_payload() -> Dict[str, Any]:
             ],
         },
         "execution_metric_snapshot": {
-            "raw_crosses": signal_accounting.get("total_raw_crosses"),
-            "fake_cross_blocked": signal_accounting.get("fake_cross_blocked"),
-            "trend_filter_blocked": signal_accounting.get("trend_filter_blocked"),
-            "volume_filter_blocked": signal_accounting.get("volume_filter_blocked"),
+            "raw_crosses": signal_accounting.get("raw_crosses"),
+            "valid_horizontal_crosses": signal_accounting.get("valid_horizontal_crosses"),
+            "diagonal_jump_cross_blocked": signal_accounting.get("diagonal_jump_cross_blocked"),
+            "cooldown_skipped": signal_accounting.get("cooldown_skipped"),
             "accepted_signals": signal_accounting.get("accepted_signals"),
             "closed_trades": overall_summary.get("closed_trades"),
             "unresolved_trades": overall_summary.get("unresolved_trades"),
@@ -283,7 +285,7 @@ def build_payload() -> Dict[str, Any]:
             "capital_permission_granted": False,
             "orders_submitted": False,
         },
-        "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_closure_v1.py",
+        "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v3_horizontal_cross_closure_v1.py",
         "validation_checks": {
             "status_equals_required_status": True,
             "module_path_equals_required_path": True,
@@ -308,7 +310,7 @@ def build_payload() -> Dict[str, Any]:
         "payload_sha256_excluding_hash": "",
     }
     if not all(payload["validation_checks"].values()):
-        raise RuntimeError(f"V2 evaluator validation checks failed: {payload['validation_checks']}")
+        raise RuntimeError(f"V3 evaluator validation checks failed: {payload['validation_checks']}")
     payload["payload_sha256_excluding_hash"] = canonical_payload_hash(payload)
     if canonical_payload_hash(payload) != payload["payload_sha256_excluding_hash"]:
         raise RuntimeError("payload hash failed to stabilize")

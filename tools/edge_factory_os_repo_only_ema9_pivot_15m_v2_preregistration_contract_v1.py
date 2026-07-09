@@ -6,18 +6,18 @@ from typing import Any, Dict, List
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = "tools/edge_factory_os_repo_only_lucifer_15m_v3_horizontal_cross_preregistration_contract_v1.py"
-ARTIFACT_PATH = "artifacts/research_preregistrations/lucifer_15m_v3_horizontal_cross_preregistration_contract_v1.json"
+MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_preregistration_contract_v1.py"
+ARTIFACT_PATH = "artifacts/research_preregistrations/lucifer_15m_v2_preregistration_contract_v1.json"
 PANEL_REVIEW_PATH = "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json"
 
-STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_PREREGISTRATION_CONTRACT_CREATED"
-ARTIFACT_KIND = "LUCIFER_15M_V3_HORIZONTAL_CROSS_PREREGISTRATION_CONTRACT"
-ROUTE = "LUCIFER_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3"
-CONFIG_ID = "lucifer_15m_v3_horizontal_pivot_cross_sl1_tp2"
+STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V2_PREREGISTRATION_CONTRACT_CREATED"
+ARTIFACT_KIND = "LUCIFER_15M_V2_PREREGISTRATION_CONTRACT"
+ROUTE = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2"
+CONFIG_ID = "lucifer_15m_v2_stable_cross_trend_volume_sl1_tp2"
 TIMEFRAME = "15m"
 
-ROUTE_START_HEAD = "5ff0d19c97657344ca0ceb309b432681cea46205"
-ROUTE_START_TRACKED_PYTHON_COUNT = 940
+ROUTE_START_HEAD = "d0972f46f9ab0963e2fdcf235652204d68deaddd"
+ROUTE_START_TRACKED_PYTHON_COUNT = 936
 ROUTE_START_REPO_CLEAN = True
 
 PANEL_STATUS = "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED"
@@ -85,10 +85,10 @@ def build_payload() -> Dict[str, Any]:
     if unexpected_dirty_paths:
         raise RuntimeError(f"unexpected dirty paths during preregistration: {unexpected_dirty_paths}")
     if actual_head != ROUTE_START_HEAD:
-        raise RuntimeError(f"HEAD moved before V3 preregistration: {actual_head} != {ROUTE_START_HEAD}")
+        raise RuntimeError(f"HEAD moved before V2 preregistration: {actual_head} != {ROUTE_START_HEAD}")
     if actual_tracked_python_count != ROUTE_START_TRACKED_PYTHON_COUNT:
         raise RuntimeError(
-            "tracked Python count mismatch before V3 preregistration: "
+            "tracked Python count mismatch before V2 preregistration: "
             f"{actual_tracked_python_count} != {ROUTE_START_TRACKED_PYTHON_COUNT}"
         )
 
@@ -110,11 +110,14 @@ def build_payload() -> Dict[str, Any]:
             "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": True,
             "dirty_paths_during_artifact_creation": current_dirty_paths,
         },
-        "reason_for_v3": {
-            "v1_v2_did_not_correctly_model_visual_rule": True,
-            "visual_rule": "EMA9 crossing a true horizontal support/resistance segment is valid.",
-            "invalid_rule": "A cross caused by pivot line jumping or diagonal connector is invalid.",
-            "not_trend_or_volume_filtering": True,
+        "v1_context": {
+            "prior_result_class": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+            "prior_total_signals": 20055,
+            "prior_closed_trades": 17714,
+            "prior_validation_net_bps": -20.969033,
+            "prior_holdout_net_bps": -19.075924,
+            "structural_repair_reason": "V1 likely over-traded and missed the intended visual quality filter.",
+            "not_parameter_optimization": True,
         },
         "dataset_preregistration": {
             "panel_review_artifact": PANEL_REVIEW_PATH,
@@ -133,57 +136,47 @@ def build_payload() -> Dict[str, Any]:
             "leftBars": 150,
             "rightBars": 75,
             "cooldown_bars": 10,
+            "minStableBars": 5,
             "emaFast": 9,
+            "emaTrendFast": 21,
+            "emaTrendSlow": 50,
+            "emaTrendLong": 200,
+            "volume_sma_len": 20,
+            "volume_mult": 1.5,
             "stop_loss_pct": 1.0,
             "take_profit_pct": 2.0,
             "round_trip_cost_bps": 20,
             "pyramiding_per_symbol": 0,
         },
-        "forbidden_filters": {
-            "trend_filter": False,
-            "volume_filter": False,
-            "rsi": False,
-            "score_system": False,
-            "candle_close_filter": False,
-            "proximity_filter": False,
-            "atr_stop": False,
-        },
-        "core_pivot_series_contract": {
-            "rawPH": "pivothigh(leftBars, rightBars)",
-            "rawPL": "pivotlow(leftBars, rightBars)",
-            "ph_fixed": "last non-na rawPH, equivalent to fixnan(pivothigh(...))",
-            "pl_fixed": "last non-na rawPL, equivalent to fixnan(pivotlow(...))",
-            "raw_pivot_known_only_on_confirmation_bar": True,
+        "pivot_and_true_cross_contract": {
+            "pivot_confirmation": "raw pivot high/low is confirmed only after rightBars future bars",
+            "active_level_update": "active resistance/support updates only at confirmation time",
             "no_pivot_before_confirmation": True,
-            "no_lookahead": True,
+            "levels_are_step_levels_not_diagonal_lines": True,
+            "tradeable_level_rule": "bar_index - level_confirmed_bar_index >= minStableBars",
+            "level_must_not_change_current_bar": True,
+            "level_must_not_change_immediately_previous_bar": True,
+            "short_true_cross": "active resistance stable, ema9[1] > resistance, ema9 <= resistance",
+            "long_true_cross": "active support stable, ema9[1] < support, ema9 >= support",
+            "extra_anti_fake_cross_rule": [
+                "reject if active level was updated within minStableBars bars",
+                "reject if level changed on current or previous bar",
+                "count these as fake_cross_blocked",
+            ],
         },
-        "raw_cross_contract": {
-            "rawShortCross": "ema9 previous bar > ph_fixed previous bar and ema9 current bar <= ph_fixed current bar",
-            "rawLongCross": "ema9 previous bar < pl_fixed previous bar and ema9 current bar >= pl_fixed current bar",
-        },
-        "horizontal_only_validity_rule": {
-            "validShortCross": [
-                "rawShortCross is true",
-                "ph_fixed current exists",
-                "ph_fixed previous exists",
-                "ph_fixed current == ph_fixed previous",
-                "ph_fixed previous == ph_fixed two bars ago",
-            ],
-            "validLongCross": [
-                "rawLongCross is true",
-                "pl_fixed current exists",
-                "pl_fixed previous exists",
-                "pl_fixed current == pl_fixed previous",
-                "pl_fixed previous == pl_fixed two bars ago",
-            ],
-            "diagonal_jump_cross_blocked": [
-                "rawShortCross true but ph_fixed current != ph_fixed previous OR ph_fixed previous != ph_fixed two bars ago",
-                "rawLongCross true but pl_fixed current != pl_fixed previous OR pl_fixed previous != pl_fixed two bars ago",
-            ],
+        "structural_filters": {
+            "long_trend_filter": "close > ema200 and ema21 > ema50",
+            "short_trend_filter": "close < ema200 and ema21 < ema50",
+            "volume_confirmation": "volume > sma(volume, 20) * 1.5",
+            "rsi_filter_used": False,
+            "score_system_used": False,
+            "candle_close_filter_used": False,
+            "proximity_filter_used": False,
+            "seven_of_seven_kesin_gir_labels_used": False,
+            "atr_stop_used": False,
         },
         "entry_exit_cost_contract": {
             "entry": "signal evaluated at bar close, entry at next 15m open if present",
-            "cooldown": "after valid signal, ignore valid new signals for cooldown bars",
             "one_position_per_symbol": True,
             "cross_symbol_overlap_allowed": True,
             "long_stop": "entry * 0.99",
@@ -201,10 +194,10 @@ def build_payload() -> Dict[str, Any]:
             "split_assignment": "entry timestamp determines split",
         },
         "metrics_required": [
-            "raw crosses",
-            "valid horizontal crosses",
-            "diagonal_jump_cross_blocked",
-            "cooldown skipped",
+            "total raw crosses",
+            "fake_cross_blocked",
+            "trend_filter_blocked",
+            "volume_filter_blocked",
             "accepted signals",
             "closed trades",
             "unresolved trades",
@@ -218,6 +211,7 @@ def build_payload() -> Dict[str, Any]:
             "monthly positive rate",
             "worst month",
             "win rate",
+            "average win/loss",
             "profit factor",
             "symbol concentration",
             "side split",
@@ -242,15 +236,14 @@ def build_payload() -> Dict[str, Any]:
                 "safety passes",
             ],
             "allowed_result_classes": [
-                "LUCIFER_15M_V3_HORIZONTAL_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
-                "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
-                "LUCIFER_15M_V3_HORIZONTAL_CROSS_INCONCLUSIVE_NEEDS_MORE_DATA",
-                "LUCIFER_15M_V3_HORIZONTAL_CROSS_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE",
+                "LUCIFER_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+                "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
+                "LUCIFER_15M_V2_INCONCLUSIVE_NEEDS_MORE_DATA",
+                "LUCIFER_15M_V2_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE",
             ],
         },
         "forbidden_actions_confirmed_false": {
-            "parameter_expansion": False,
-            "grid_search": False,
+            "parameter_grid": False,
             "optimization": False,
             "candidate_generation": False,
             "edge_claim": False,
@@ -261,7 +254,7 @@ def build_payload() -> Dict[str, Any]:
             "private_api_used": False,
             "orders_submitted": False,
         },
-        "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_v3_horizontal_cross_execution_v1.py",
+        "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_execution_v1.py",
         "validation_checks": {
             "status_equals_required_status": True,
             "module_path_equals_required_path": True,
@@ -273,10 +266,7 @@ def build_payload() -> Dict[str, Any]:
             "panel_review_classification_verified": True,
             "single_config_only": True,
             "timeframe_15m_only": True,
-            "horizontal_only_rule_preregistered": True,
-            "no_filters": True,
-            "no_parameter_expansion": True,
-            "no_grid_search": True,
+            "no_parameter_grid": True,
             "no_optimization": True,
             "no_candidate": True,
             "no_edge_claim": True,
@@ -289,7 +279,7 @@ def build_payload() -> Dict[str, Any]:
     }
     payload["payload_sha256_excluding_hash"] = canonical_payload_hash(payload)
     if not all(payload["validation_checks"].values()):
-        raise RuntimeError("V3 preregistration validation checks failed")
+        raise RuntimeError("V2 preregistration validation checks failed")
     if canonical_payload_hash(payload) != payload["payload_sha256_excluding_hash"]:
         raise RuntimeError("payload hash failed to stabilize")
     return payload

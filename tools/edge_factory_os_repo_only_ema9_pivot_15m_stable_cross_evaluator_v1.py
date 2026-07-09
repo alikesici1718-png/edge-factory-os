@@ -6,23 +6,24 @@ from typing import Any, Dict, List, Optional
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = "tools/edge_factory_os_repo_only_lucifer_15m_v3_horizontal_cross_evaluator_v1.py"
-ARTIFACT_PATH = "artifacts/strategy_evaluations/lucifer_15m_v3_horizontal_cross_evaluator_v1.json"
-EXECUTION_PATH = "artifacts/strategy_executions/lucifer_15m_v3_horizontal_cross_execution_v1.json"
+MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_stable_cross_evaluator_v1.py"
+ARTIFACT_PATH = "artifacts/strategy_evaluations/lucifer_15m_ema9_pivot_stable_cross_evaluator_v1.json"
+EXECUTION_PATH = "artifacts/strategy_executions/lucifer_15m_ema9_pivot_stable_cross_execution_v1.json"
 
-STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_EVALUATED"
-ARTIFACT_KIND = "LUCIFER_15M_V3_HORIZONTAL_CROSS_EVALUATOR"
-EXECUTION_STATUS = "PASS_REPO_CODE_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_EXECUTED"
-ROUTE = "LUCIFER_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3"
-CONFIG_ID = "lucifer_15m_v3_horizontal_pivot_cross_sl1_tp2"
+STATUS = "PASS_REPO_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EVALUATED"
+ARTIFACT_KIND = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EVALUATOR"
+EXECUTION_STATUS = "PASS_REPO_CODE_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTED"
+STRATEGY_NAME = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1"
+ROUTE_FAMILY = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE"
+CONFIG_ID = "lucifer_15m_ema9_pivot_stable_cross_sl1_tp2"
 
-EXPECTED_PRE_EVALUATOR_HEAD = "2747a30f828bb8f9b966ecd2e6bf832a9003e0ed"
-EXPECTED_PRE_EVALUATOR_TRACKED_PYTHON_COUNT = 942
+EXPECTED_PRE_EVALUATOR_HEAD = "28868c14a98fc59908b4d556fa6ab60149dcc40e"
+EXPECTED_PRE_EVALUATOR_TRACKED_PYTHON_COUNT = 934
 
-RESULT_PROMISING = "LUCIFER_15M_V3_HORIZONTAL_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE"
-RESULT_REJECTED = "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP"
-RESULT_INCONCLUSIVE = "LUCIFER_15M_V3_HORIZONTAL_CROSS_INCONCLUSIVE_NEEDS_MORE_DATA"
-RESULT_INVALIDATED = "LUCIFER_15M_V3_HORIZONTAL_CROSS_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
+RESULT_PROMISING = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE"
+RESULT_REJECTED = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP"
+RESULT_INCONCLUSIVE = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_INCONCLUSIVE_NEEDS_MORE_DATA"
+RESULT_INVALIDATED = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
 
 
 def canonical_payload_hash(payload: Dict[str, Any]) -> str:
@@ -77,6 +78,26 @@ def verify_hash(payload: Dict[str, Any], label: str) -> str:
     return stored
 
 
+def safety_review_passed(execution: Dict[str, Any]) -> bool:
+    safety = execution.get("safety_review", {})
+    if not isinstance(safety, dict):
+        return False
+    return (
+        safety.get("no_candidate") is True
+        and safety.get("no_edge_claim") is True
+        and safety.get("no_family_release") is True
+        and safety.get("no_runtime_live_capital") is True
+        and safety.get("no_orders") is True
+        and safety.get("no_private_api") is True
+        and safety.get("no_network") is True
+        and safety.get("no_parameter_expansion") is True
+        and safety.get("no_optimization") is True
+        and safety.get("filters_enabled") is False
+        and safety.get("score_filters_enabled") is False
+        and safety.get("seven_of_seven_filters_used") is False
+    )
+
+
 def get_nested(payload: Dict[str, Any], path: List[str]) -> Any:
     current: Any = payload
     for key in path:
@@ -86,45 +107,19 @@ def get_nested(payload: Dict[str, Any], path: List[str]) -> Any:
     return current
 
 
-def safety_review_passed(execution: Dict[str, Any]) -> bool:
-    safety = execution.get("safety_review", {})
-    if not isinstance(safety, dict):
-        return False
-    return (
-        safety.get("single_config_only") is True
-        and safety.get("no_parameter_expansion") is True
-        and safety.get("no_grid_search") is True
-        and safety.get("no_optimization") is True
-        and safety.get("no_candidate") is True
-        and safety.get("no_edge_claim") is True
-        and safety.get("no_family_release") is True
-        and safety.get("no_runtime_live_capital") is True
-        and safety.get("no_orders") is True
-        and safety.get("no_private_api") is True
-        and safety.get("no_network") is True
-        and safety.get("trend_filter_used") is False
-        and safety.get("volume_filter_used") is False
-        and safety.get("rsi_used") is False
-        and safety.get("score_system_used") is False
-        and safety.get("candle_close_filter_used") is False
-        and safety.get("proximity_filter_used") is False
-        and safety.get("atr_stop_used") is False
-    )
-
-
 def build_payload() -> Dict[str, Any]:
     actual_head = run_git(["rev-parse", "HEAD"])
     actual_tracked_python_count = tracked_python_count()
-    current_dirty_paths = dirty_paths()
     allowed_dirty = {MODULE_PATH, ARTIFACT_PATH}
+    current_dirty_paths = dirty_paths()
     unexpected_dirty_paths = [path for path in current_dirty_paths if path not in allowed_dirty]
     if unexpected_dirty_paths:
-        raise RuntimeError(f"unexpected dirty paths during V3 evaluator: {unexpected_dirty_paths}")
+        raise RuntimeError(f"unexpected dirty paths during evaluator: {unexpected_dirty_paths}")
     if actual_head != EXPECTED_PRE_EVALUATOR_HEAD:
-        raise RuntimeError(f"HEAD moved before V3 evaluator: {actual_head} != {EXPECTED_PRE_EVALUATOR_HEAD}")
+        raise RuntimeError(f"HEAD moved before evaluator: {actual_head} != {EXPECTED_PRE_EVALUATOR_HEAD}")
     if actual_tracked_python_count != EXPECTED_PRE_EVALUATOR_TRACKED_PYTHON_COUNT:
         raise RuntimeError(
-            "tracked Python count mismatch before V3 evaluator: "
+            "tracked Python count mismatch before evaluator: "
             f"{actual_tracked_python_count} != {EXPECTED_PRE_EVALUATOR_TRACKED_PYTHON_COUNT}"
         )
 
@@ -132,17 +127,19 @@ def build_payload() -> Dict[str, Any]:
     execution_hash = verify_hash(execution, "execution")
     if execution.get("status") != EXECUTION_STATUS:
         raise RuntimeError("execution status mismatch")
-    if execution.get("route") != ROUTE:
-        raise RuntimeError("route mismatch")
+    if execution.get("strategy_name") != STRATEGY_NAME:
+        raise RuntimeError("strategy name mismatch")
+    if execution.get("route_family") != ROUTE_FAMILY:
+        raise RuntimeError("route family mismatch")
     if execution.get("config_id") != CONFIG_ID:
         raise RuntimeError("config id mismatch")
 
-    signal_accounting = get_nested(execution, ["signal_accounting"])
-    overall_summary = get_nested(execution, ["overall_summary", "trade_summary"])
     validation_summary = get_nested(execution, ["split_summaries", "validation", "trade_summary"])
     validation_monthly = get_nested(execution, ["split_summaries", "validation", "monthly_summary"])
     holdout_summary = get_nested(execution, ["split_summaries", "holdout", "trade_summary"])
     holdout_monthly = get_nested(execution, ["split_summaries", "holdout", "monthly_summary"])
+    overall_summary = get_nested(execution, ["overall_summary", "trade_summary"])
+    signal_accounting = get_nested(execution, ["signal_accounting"])
     null_summary = get_nested(execution, ["null_baseline_summary"])
     metric_summary = get_nested(execution, ["metric_integrity_summary"])
 
@@ -151,24 +148,26 @@ def build_payload() -> Dict[str, Any]:
     validation_closed_trades = int(validation_summary.get("closed_trades", 0))
     validation_monthly_positive_rate: Optional[float] = validation_monthly.get("monthly_positive_rate")
     holdout_monthly_positive_rate: Optional[float] = holdout_monthly.get("monthly_positive_rate")
-    null_baseline_pass = null_summary.get("null_baseline_pass") is True
     metric_integrity_passed = metric_summary.get("metric_integrity_passed") is True
     no_lookahead_repaint_issue = metric_summary.get("no_lookahead_repaint_issue") is True
-    safety_passed = safety_review_passed(execution) and execution.get("safety_review_passed") is True
+    safety_passed = safety_review_passed(execution)
+    null_baseline_pass = null_summary.get("null_baseline_pass") is True
+    null_limitation_recorded = null_summary.get("limitation") not in (None, "")
+    null_policy_satisfied = null_baseline_pass or null_limitation_recorded
 
     validation_positive = validation_net_bps is not None and validation_net_bps > 0
-    holdout_positive = holdout_net_bps is not None and holdout_net_bps > 0
     validation_monthly_pass = (
         validation_monthly_positive_rate is not None and validation_monthly_positive_rate >= 0.60
     )
     validation_sample_pass = validation_closed_trades >= 100
+    holdout_positive = holdout_net_bps is not None and holdout_net_bps > 0
 
     diagnostic_promising = (
         validation_positive
-        and holdout_positive
         and validation_monthly_pass
         and validation_sample_pass
-        and null_baseline_pass
+        and holdout_positive
+        and null_policy_satisfied
         and metric_integrity_passed
         and no_lookahead_repaint_issue
         and safety_passed
@@ -186,12 +185,14 @@ def build_payload() -> Dict[str, Any]:
         "diagnostic_promising": diagnostic_promising,
         "result_class": result_class,
         "validation_net_bps": validation_net_bps,
-        "holdout_net_bps": holdout_net_bps,
         "validation_monthly_positive_rate": validation_monthly_positive_rate,
-        "holdout_monthly_positive_rate": holdout_monthly_positive_rate,
         "validation_closed_trades": validation_closed_trades,
         "validation_closed_trades_min_100_pass": validation_sample_pass,
+        "holdout_net_bps": holdout_net_bps,
+        "holdout_monthly_positive_rate": holdout_monthly_positive_rate,
         "null_baseline_pass": null_baseline_pass,
+        "null_baseline_limitation_recorded": null_limitation_recorded,
+        "null_policy_satisfied_for_promising_gate": null_policy_satisfied,
         "validation_null_percentile": null_summary.get("validation_null_percentile"),
         "metric_integrity_passed": metric_integrity_passed,
         "no_lookahead_repaint_issue": no_lookahead_repaint_issue,
@@ -200,9 +201,9 @@ def build_payload() -> Dict[str, Any]:
             reason
             for reason, passed in [
                 ("validation_net_bps_not_positive", validation_positive),
-                ("holdout_net_bps_not_positive", holdout_positive),
                 ("validation_monthly_positive_rate_below_0_60", validation_monthly_pass),
-                ("null_baseline_not_passed", null_baseline_pass),
+                ("holdout_net_bps_not_positive", holdout_positive),
+                ("null_baseline_not_passed_and_no_limitation", null_policy_satisfied),
                 ("metric_integrity_failed", metric_integrity_passed),
                 ("lookahead_or_repaint_issue", no_lookahead_repaint_issue),
                 ("safety_review_failed", safety_passed),
@@ -215,7 +216,8 @@ def build_payload() -> Dict[str, Any]:
         "status": STATUS,
         "artifact_kind": ARTIFACT_KIND,
         "module": MODULE_PATH,
-        "route": ROUTE,
+        "strategy_name": STRATEGY_NAME,
+        "route_family": ROUTE_FAMILY,
         "config_id": CONFIG_ID,
         "source_checkpoint": {
             "pre_evaluator_head": EXPECTED_PRE_EVALUATOR_HEAD,
@@ -237,14 +239,14 @@ def build_payload() -> Dict[str, Any]:
         },
         "evaluator_policy_applied": {
             "diagnostic_promising_true_only_if_all_true": [
-                "validation net > 0",
-                "holdout net > 0",
+                "validation net bps > 0",
                 "validation monthly positive rate >= 0.60",
-                "validation closed trades >= 100, else inconclusive",
-                "null baseline passes",
+                "validation closed trades >= 100, otherwise inconclusive",
+                "holdout net bps > 0",
+                "null baseline passes or limitation is explicitly recorded",
                 "metric integrity passes",
                 "no lookahead/repaint issue",
-                "safety passes",
+                "safety review passes",
             ],
             "allowed_result_classes": [
                 RESULT_PROMISING,
@@ -254,20 +256,21 @@ def build_payload() -> Dict[str, Any]:
             ],
         },
         "execution_metric_snapshot": {
-            "raw_crosses": signal_accounting.get("raw_crosses"),
-            "valid_horizontal_crosses": signal_accounting.get("valid_horizontal_crosses"),
-            "diagonal_jump_cross_blocked": signal_accounting.get("diagonal_jump_cross_blocked"),
-            "cooldown_skipped": signal_accounting.get("cooldown_skipped"),
+            "total_signals": signal_accounting.get("total_signals"),
             "accepted_signals": signal_accounting.get("accepted_signals"),
+            "skipped_signals": signal_accounting.get("skipped_signals"),
             "closed_trades": overall_summary.get("closed_trades"),
-            "unresolved_trades": overall_summary.get("unresolved_trades"),
+            "open_unresolved_trades": overall_summary.get("open_unresolved_trades"),
             "long_trades": overall_summary.get("long_trades"),
             "short_trades": overall_summary.get("short_trades"),
+            "gross_bps": overall_summary.get("gross_bps"),
+            "net_bps": overall_summary.get("net_bps"),
+            "win_rate": overall_summary.get("win_rate"),
             "stop_hit_count": overall_summary.get("stop_hit_count"),
             "take_profit_hit_count": overall_summary.get("take_profit_hit_count"),
             "both_hit_same_bar_count": overall_summary.get("both_hit_same_bar_count"),
-            "gross_bps": overall_summary.get("gross_bps"),
-            "net_bps": overall_summary.get("net_bps"),
+            "fake_pivot_jump_blocked_count": signal_accounting.get("fake_pivot_jump_blocked_count"),
+            "cooldown_skipped_count": signal_accounting.get("cooldown_skipped_count"),
             "validation_net_bps": validation_net_bps,
             "holdout_net_bps": holdout_net_bps,
             "validation_monthly_positive_rate": validation_monthly_positive_rate,
@@ -285,7 +288,7 @@ def build_payload() -> Dict[str, Any]:
             "capital_permission_granted": False,
             "orders_submitted": False,
         },
-        "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_v3_horizontal_cross_closure_v1.py",
+        "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_stable_cross_closure_v1.py",
         "validation_checks": {
             "status_equals_required_status": True,
             "module_path_equals_required_path": True,
@@ -310,7 +313,7 @@ def build_payload() -> Dict[str, Any]:
         "payload_sha256_excluding_hash": "",
     }
     if not all(payload["validation_checks"].values()):
-        raise RuntimeError(f"V3 evaluator validation checks failed: {payload['validation_checks']}")
+        raise RuntimeError(f"evaluator validation checks failed: {payload['validation_checks']}")
     payload["payload_sha256_excluding_hash"] = canonical_payload_hash(payload)
     if canonical_payload_hash(payload) != payload["payload_sha256_excluding_hash"]:
         raise RuntimeError("payload hash failed to stabilize")

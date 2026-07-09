@@ -12,41 +12,35 @@ from typing import Any, Deque, Dict, List, Optional, Sequence, Tuple
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = "tools/edge_factory_os_repo_only_lucifer_15m_v2_execution_v1.py"
-ARTIFACT_PATH = "artifacts/strategy_executions/lucifer_15m_v2_execution_v1.json"
-PREREG_PATH = "artifacts/research_preregistrations/lucifer_15m_v2_preregistration_contract_v1.json"
+MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_v3_horizontal_cross_execution_v1.py"
+ARTIFACT_PATH = "artifacts/strategy_executions/lucifer_15m_v3_horizontal_cross_execution_v1.json"
+PREREG_PATH = "artifacts/research_preregistrations/lucifer_15m_v3_horizontal_cross_preregistration_contract_v1.json"
 PANEL_REVIEW_PATH = "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json"
 PANEL_DIR = Path(
     r"C:\Users\alike\OneDrive\Desktop\edge_lab_new"
     r"\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\panel_15m_by_symbol"
 )
 
-STATUS = "PASS_REPO_CODE_ONLY_LUCIFER_15M_V2_EXECUTED"
-ARTIFACT_KIND = "LUCIFER_15M_V2_EXECUTION"
-PREREG_STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V2_PREREGISTRATION_CONTRACT_CREATED"
+STATUS = "PASS_REPO_CODE_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_EXECUTED"
+ARTIFACT_KIND = "LUCIFER_15M_V3_HORIZONTAL_CROSS_EXECUTION"
+PREREG_STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_PREREGISTRATION_CONTRACT_CREATED"
 PANEL_STATUS = "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED"
 PANEL_CLASSIFICATION = "PANEL_15M_REVIEW_PASS_VALID_FOR_READ_ONLY_EXTREME_MOVE_RESEARCH"
 
-ROUTE = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2"
-CONFIG_ID = "lucifer_15m_v2_stable_cross_trend_volume_sl1_tp2"
+ROUTE = "LUCIFER_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3"
+CONFIG_ID = "lucifer_15m_v3_horizontal_pivot_cross_sl1_tp2"
 TIMEFRAME = "15m"
 
-EXPECTED_PRE_EXECUTION_HEAD = "f7793ec15f4acf0c123c5f92993e392de1a87332"
-EXPECTED_PRE_EXECUTION_TRACKED_PYTHON_COUNT = 937
-ROUTE_START_HEAD = "d0972f46f9ab0963e2fdcf235652204d68deaddd"
-ROUTE_START_TRACKED_PYTHON_COUNT = 936
+EXPECTED_PRE_EXECUTION_HEAD = "9168291511d418f9fe3545ad08f9465003340820"
+EXPECTED_PRE_EXECUTION_TRACKED_PYTHON_COUNT = 941
+ROUTE_START_HEAD = "5ff0d19c97657344ca0ceb309b432681cea46205"
+ROUTE_START_TRACKED_PYTHON_COUNT = 940
 
 BAR_MINUTES = 15
 LEFT_BARS = 150
 RIGHT_BARS = 75
 COOLDOWN_BARS = 10
-MIN_STABLE_BARS = 5
 EMA_FAST = 9
-EMA_TREND_FAST = 21
-EMA_TREND_SLOW = 50
-EMA_TREND_LONG = 200
-VOLUME_SMA_LEN = 20
-VOLUME_MULT = 1.5
 STOP_LOSS_PCT = 0.01
 TAKE_PROFIT_PCT = 0.02
 COST_RETURN = 0.0020
@@ -192,7 +186,7 @@ def finite_or_none(value: Any) -> bool:
 
 
 def symbol_seed(symbol: str, run_index: int) -> int:
-    digest = hashlib.sha256(f"{symbol}:{run_index}:lucifer-v2-null".encode("utf-8")).hexdigest()
+    digest = hashlib.sha256(f"{symbol}:{run_index}:lucifer-v3-horizontal-null".encode("utf-8")).hexdigest()
     return int(digest[:16], 16)
 
 
@@ -208,7 +202,6 @@ def load_symbol_rows(symbol: str, expected_path: str) -> Tuple[Dict[str, List[fl
         "high": [],
         "low": [],
         "close": [],
-        "volume": [],
     }
     counts = {
         "raw_rows_read": 0,
@@ -254,7 +247,6 @@ def load_symbol_rows(symbol: str, expected_path: str) -> Tuple[Dict[str, List[fl
             rows["high"].append(high_price)
             rows["low"].append(low_price)
             rows["close"].append(close_price)
-            rows["volume"].append(volume)
             counts["complete_rows_used"] += 1
     return rows, counts
 
@@ -267,20 +259,6 @@ def compute_ema(values: Sequence[float], length: int) -> List[float]:
     for value in values[1:]:
         ema.append(alpha * float(value) + (1.0 - alpha) * ema[-1])
     return ema
-
-
-def compute_sma(values: Sequence[float], length: int) -> List[Optional[float]]:
-    result: List[Optional[float]] = []
-    rolling_sum = 0.0
-    window: Deque[float] = deque()
-    for value in values:
-        numeric = float(value)
-        rolling_sum += numeric
-        window.append(numeric)
-        if len(window) > length:
-            rolling_sum -= window.popleft()
-        result.append(None if len(window) < length else rolling_sum / length)
-    return result
 
 
 def simulate_exit(
@@ -419,21 +397,8 @@ def null_returns_for_symbol(
     return per_run_returns, per_run_open_counts
 
 
-def trend_filter_passes(side: str, i: int, rows: Dict[str, List[float]], indicators: Dict[str, List[Any]]) -> bool:
-    close = rows["close"][i]
-    ema21 = indicators["ema21"][i]
-    ema50 = indicators["ema50"][i]
-    ema200 = indicators["ema200"][i]
-    if side == "long":
-        return close > ema200 and ema21 > ema50
-    if side == "short":
-        return close < ema200 and ema21 < ema50
-    raise RuntimeError(f"bad side: {side}")
-
-
-def volume_filter_passes(i: int, rows: Dict[str, List[float]], indicators: Dict[str, List[Any]]) -> bool:
-    volume_sma = indicators["volume_sma20"][i]
-    return volume_sma is not None and rows["volume"][i] > float(volume_sma) * VOLUME_MULT
+def same_level(a: Optional[float], b: Optional[float]) -> bool:
+    return a is not None and b is not None and a == b
 
 
 def process_symbol(symbol: str, expected_path: str) -> Dict[str, Any]:
@@ -442,24 +407,19 @@ def process_symbol(symbol: str, expected_path: str) -> Dict[str, Any]:
     highs = rows["high"]
     lows = rows["low"]
     closes = rows["close"]
-    indicators = {
-        "ema9": compute_ema(closes, EMA_FAST),
-        "ema21": compute_ema(closes, EMA_TREND_FAST),
-        "ema50": compute_ema(closes, EMA_TREND_SLOW),
-        "ema200": compute_ema(closes, EMA_TREND_LONG),
-        "volume_sma20": compute_sma(rows["volume"], VOLUME_SMA_LEN),
-    }
-    ema9 = indicators["ema9"]
+    ema9 = compute_ema(closes, EMA_FAST)
     n = len(minutes)
 
     max_deque: Deque[int] = deque()
     min_deque: Deque[int] = deque()
-    support_level: Optional[float] = None
-    resistance_level: Optional[float] = None
-    support_confirm_i: Optional[int] = None
-    resistance_confirm_i: Optional[int] = None
-    support_pivot_i: Optional[int] = None
-    resistance_pivot_i: Optional[int] = None
+    ph_fixed: List[Optional[float]] = []
+    pl_fixed: List[Optional[float]] = []
+    active_ph: Optional[float] = None
+    active_pl: Optional[float] = None
+    active_ph_confirm_i: Optional[int] = None
+    active_pl_confirm_i: Optional[int] = None
+    active_ph_pivot_i: Optional[int] = None
+    active_pl_pivot_i: Optional[int] = None
     cooldown_until_i = -1
     position_blocks_until_i = -1
 
@@ -470,24 +430,21 @@ def process_symbol(symbol: str, expected_path: str) -> Dict[str, Any]:
         "raw_pivot_high_confirmed_count": 0,
         "raw_pivot_low_confirmed_count": 0,
         "pivot_confirmation_delay_mismatch_count": 0,
-        "total_raw_crosses": 0,
-        "fake_cross_blocked": 0,
-        "fake_cross_level_updated_within_minStableBars": 0,
-        "fake_cross_level_changed_current_or_previous_bar": 0,
-        "trend_filter_blocked": 0,
-        "volume_filter_blocked": 0,
-        "cooldown_skipped_count": 0,
+        "raw_crosses": 0,
+        "valid_horizontal_crosses": 0,
+        "diagonal_jump_cross_blocked": 0,
+        "horizontal_context_missing_blocked": 0,
+        "cooldown_skipped": 0,
         "position_open_skipped_count": 0,
         "missing_next_bar_skipped_count": 0,
         "outside_split_skipped_count": 0,
         "accepted_signals": 0,
         "accepted_long_signals": 0,
         "accepted_short_signals": 0,
-        "unstable_trade_violation_count": 0,
     }
     accepted_by_split = {"train": 0, "validation": 0, "holdout": 0}
     pivot_delay_values: List[int] = []
-    stable_delay_at_signal_values: List[int] = []
+    horizontal_signal_level_checks: List[bool] = []
 
     for i in range(n):
         while max_deque and highs[max_deque[-1]] < highs[i]:
@@ -497,6 +454,10 @@ def process_symbol(symbol: str, expected_path: str) -> Dict[str, Any]:
             min_deque.pop()
         min_deque.append(i)
 
+        raw_ph: Optional[float] = None
+        raw_pl: Optional[float] = None
+        raw_ph_pivot_i: Optional[int] = None
+        raw_pl_pivot_i: Optional[int] = None
         pivot_i = i - RIGHT_BARS
         if pivot_i >= LEFT_BARS:
             window_start = pivot_i - LEFT_BARS
@@ -505,74 +466,90 @@ def process_symbol(symbol: str, expected_path: str) -> Dict[str, Any]:
             while min_deque and min_deque[0] < window_start:
                 min_deque.popleft()
             if highs[pivot_i] >= highs[max_deque[0]]:
-                resistance_level = highs[pivot_i]
-                resistance_confirm_i = i
-                resistance_pivot_i = pivot_i
+                raw_ph = highs[pivot_i]
+                raw_ph_pivot_i = pivot_i
+                active_ph = raw_ph
+                active_ph_confirm_i = i
+                active_ph_pivot_i = pivot_i
                 counts["raw_pivot_high_confirmed_count"] += 1
                 delay = i - pivot_i
                 pivot_delay_values.append(delay)
                 if delay != RIGHT_BARS:
                     counts["pivot_confirmation_delay_mismatch_count"] += 1
             if lows[pivot_i] <= lows[min_deque[0]]:
-                support_level = lows[pivot_i]
-                support_confirm_i = i
-                support_pivot_i = pivot_i
+                raw_pl = lows[pivot_i]
+                raw_pl_pivot_i = pivot_i
+                active_pl = raw_pl
+                active_pl_confirm_i = i
+                active_pl_pivot_i = pivot_i
                 counts["raw_pivot_low_confirmed_count"] += 1
                 delay = i - pivot_i
                 pivot_delay_values.append(delay)
                 if delay != RIGHT_BARS:
                     counts["pivot_confirmation_delay_mismatch_count"] += 1
 
-        if i == 0:
+        ph_fixed.append(active_ph)
+        pl_fixed.append(active_pl)
+        if i < 2:
             continue
 
         raw_crosses: List[Dict[str, Any]] = []
-        if support_level is not None and support_confirm_i is not None and support_pivot_i is not None:
-            if ema9[i - 1] < support_level and ema9[i] >= support_level:
-                raw_crosses.append(
-                    {
-                        "side": "long",
-                        "level_type": "support",
-                        "level": support_level,
-                        "level_confirmed_bar_index": support_confirm_i,
-                        "level_pivot_bar_index": support_pivot_i,
-                    }
-                )
-        if resistance_level is not None and resistance_confirm_i is not None and resistance_pivot_i is not None:
-            if ema9[i - 1] > resistance_level and ema9[i] <= resistance_level:
-                raw_crosses.append(
-                    {
-                        "side": "short",
-                        "level_type": "resistance",
-                        "level": resistance_level,
-                        "level_confirmed_bar_index": resistance_confirm_i,
-                        "level_pivot_bar_index": resistance_pivot_i,
-                    }
-                )
+        ph_curr = ph_fixed[i]
+        ph_prev = ph_fixed[i - 1]
+        ph_two = ph_fixed[i - 2]
+        pl_curr = pl_fixed[i]
+        pl_prev = pl_fixed[i - 1]
+        pl_two = pl_fixed[i - 2]
+
+        if ph_curr is not None and ph_prev is not None and ema9[i - 1] > ph_prev and ema9[i] <= ph_curr:
+            horizontal = same_level(ph_curr, ph_prev) and same_level(ph_prev, ph_two)
+            raw_crosses.append(
+                {
+                    "side": "short",
+                    "level_type": "resistance",
+                    "level": ph_curr,
+                    "level_previous": ph_prev,
+                    "level_two_bars_ago": ph_two,
+                    "horizontal": horizontal,
+                    "context_missing": ph_two is None,
+                    "raw_pivot_confirmed_on_current_bar": raw_ph is not None,
+                    "level_confirmed_bar_index": active_ph_confirm_i,
+                    "level_pivot_bar_index": active_ph_pivot_i,
+                    "raw_pivot_bar_index_if_current": raw_ph_pivot_i,
+                }
+            )
+        if pl_curr is not None and pl_prev is not None and ema9[i - 1] < pl_prev and ema9[i] >= pl_curr:
+            horizontal = same_level(pl_curr, pl_prev) and same_level(pl_prev, pl_two)
+            raw_crosses.append(
+                {
+                    "side": "long",
+                    "level_type": "support",
+                    "level": pl_curr,
+                    "level_previous": pl_prev,
+                    "level_two_bars_ago": pl_two,
+                    "horizontal": horizontal,
+                    "context_missing": pl_two is None,
+                    "raw_pivot_confirmed_on_current_bar": raw_pl is not None,
+                    "level_confirmed_bar_index": active_pl_confirm_i,
+                    "level_pivot_bar_index": active_pl_pivot_i,
+                    "raw_pivot_bar_index_if_current": raw_pl_pivot_i,
+                }
+            )
 
         for signal in raw_crosses:
-            counts["total_raw_crosses"] += 1
+            counts["raw_crosses"] += 1
+            if not signal["horizontal"]:
+                counts["diagonal_jump_cross_blocked"] += 1
+                if signal["context_missing"]:
+                    counts["horizontal_context_missing_blocked"] += 1
+                continue
+
+            counts["valid_horizontal_crosses"] += 1
             side = str(signal["side"])
-            level_confirm_i = int(signal["level_confirmed_bar_index"])
-            stable_delay = i - level_confirm_i
-            updated_within_min_stable = stable_delay < MIN_STABLE_BARS
-            changed_current_or_previous = level_confirm_i in {i, i - 1}
-            if updated_within_min_stable or changed_current_or_previous:
-                counts["fake_cross_blocked"] += 1
-                if updated_within_min_stable:
-                    counts["fake_cross_level_updated_within_minStableBars"] += 1
-                if changed_current_or_previous:
-                    counts["fake_cross_level_changed_current_or_previous_bar"] += 1
-                continue
-            if not trend_filter_passes(side, i, rows, indicators):
-                counts["trend_filter_blocked"] += 1
-                continue
-            if not volume_filter_passes(i, rows, indicators):
-                counts["volume_filter_blocked"] += 1
-                continue
             if i <= cooldown_until_i:
-                counts["cooldown_skipped_count"] += 1
+                counts["cooldown_skipped"] += 1
                 continue
+            cooldown_until_i = i + COOLDOWN_BARS
             if i < position_blocks_until_i:
                 counts["position_open_skipped_count"] += 1
                 continue
@@ -585,56 +562,43 @@ def process_symbol(symbol: str, expected_path: str) -> Dict[str, Any]:
                 counts["outside_split_skipped_count"] += 1
                 continue
 
-            stable_delay_at_signal_values.append(stable_delay)
+            horizontal_signal_level_checks.append(
+                signal["level"] == signal["level_previous"]
+                and signal["level_previous"] == signal["level_two_bars_ago"]
+            )
             trade = simulate_exit(symbol, side, i, entry_i, rows)
             trade.update(
                 {
                     "ema9_previous": ema9[i - 1],
                     "ema9_current": ema9[i],
-                    "ema21": indicators["ema21"][i],
-                    "ema50": indicators["ema50"][i],
-                    "ema200": indicators["ema200"][i],
-                    "close_at_signal": rows["close"][i],
-                    "volume_at_signal": rows["volume"][i],
-                    "volume_sma20_at_signal": indicators["volume_sma20"][i],
                     "cross_level": signal["level"],
+                    "cross_level_previous": signal["level_previous"],
+                    "cross_level_two_bars_ago": signal["level_two_bars_ago"],
                     "cross_level_type": signal["level_type"],
                     "level_confirmed_bar_index": signal["level_confirmed_bar_index"],
                     "level_pivot_bar_index": signal["level_pivot_bar_index"],
-                    "stable_bars_before_signal": stable_delay,
+                    "raw_pivot_confirmed_on_current_bar": signal["raw_pivot_confirmed_on_current_bar"],
                     "rightBars_confirmation_delay": RIGHT_BARS,
-                    "trend_filter_passed": True,
-                    "volume_filter_passed": True,
+                    "horizontal_fixed_level_check_passed": True,
                 }
             )
-            if stable_delay < MIN_STABLE_BARS:
-                counts["unstable_trade_violation_count"] += 1
             trades.append(trade)
             counts["accepted_signals"] += 1
             counts[f"accepted_{side}_signals"] += 1
             accepted_by_split[split] += 1
-            cooldown_until_i = i + COOLDOWN_BARS
             exit_i = trade["exit_bar_index"]
             position_blocks_until_i = n if exit_i is None else int(exit_i)
             if split == "validation":
-                validation_records.append(
-                    {
-                        "side": side,
-                        "signal_bar_index": i,
-                        "entry_bar_index": entry_i,
-                    }
-                )
+                validation_records.append({"side": side, "signal_bar_index": i, "entry_bar_index": entry_i})
 
     blocked_total = (
-        counts["fake_cross_blocked"]
-        + counts["trend_filter_blocked"]
-        + counts["volume_filter_blocked"]
-        + counts["cooldown_skipped_count"]
+        counts["diagonal_jump_cross_blocked"]
+        + counts["cooldown_skipped"]
         + counts["position_open_skipped_count"]
         + counts["missing_next_bar_skipped_count"]
         + counts["outside_split_skipped_count"]
     )
-    if counts["total_raw_crosses"] != counts["accepted_signals"] + blocked_total:
+    if counts["raw_crosses"] != counts["accepted_signals"] + blocked_total:
         raise RuntimeError(f"raw cross accounting mismatch for {symbol}")
 
     null_returns, null_open_counts = null_returns_for_symbol(symbol, rows, validation_records)
@@ -644,7 +608,7 @@ def process_symbol(symbol: str, expected_path: str) -> Dict[str, Any]:
         "counts": counts,
         "accepted_signals_by_split": accepted_by_split,
         "pivot_delay_values": pivot_delay_values,
-        "stable_delay_at_signal_values": stable_delay_at_signal_values,
+        "horizontal_signal_level_checks": horizontal_signal_level_checks,
         "validation_signal_record_count_for_null": len(validation_records),
         "null_returns_by_run": null_returns,
         "null_open_counts_by_run": null_open_counts,
@@ -653,7 +617,7 @@ def process_symbol(symbol: str, expected_path: str) -> Dict[str, Any]:
 
 def summarize_closed_trades(trades: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
     closed = [trade for trade in trades if trade["status"] == "closed"]
-    open_trades = [trade for trade in trades if trade["status"] != "closed"]
+    unresolved = [trade for trade in trades if trade["status"] != "closed"]
     gross_returns = [float(trade["gross_return"]) for trade in closed]
     net_returns = [float(trade["net_return"]) for trade in closed]
     wins = [value for value in net_returns if value > 0]
@@ -667,7 +631,7 @@ def summarize_closed_trades(trades: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
     return {
         "accepted_signals": len(trades),
         "closed_trades": len(closed),
-        "unresolved_trades": len(open_trades),
+        "unresolved_trades": len(unresolved),
         "long_trades": sum(1 for trade in closed if trade["side"] == "long"),
         "short_trades": sum(1 for trade in closed if trade["side"] == "short"),
         "accepted_long_trades": sum(1 for trade in trades if trade["side"] == "long"),
@@ -734,7 +698,7 @@ def symbol_concentration(trades: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
             "top_symbol_closed_trade_count": 0,
             "top_symbol_closed_trade_share": None,
         }
-    top_symbol = max(sorted(counts), key=lambda symbol: counts[symbol])
+    top_symbol = max(sorted(counts), key=lambda item: counts[item])
     return {
         "closed_trade_count_by_symbol": dict(sorted(counts.items())),
         "top_symbol": top_symbol,
@@ -744,11 +708,10 @@ def symbol_concentration(trades: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
 
 
 def side_split_summary(trades: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
-    result: Dict[str, Any] = {}
-    for side in ("long", "short"):
-        side_trades = [trade for trade in trades if trade["side"] == side]
-        result[side] = summarize_closed_trades(side_trades)
-    return result
+    return {
+        "long": summarize_closed_trades([trade for trade in trades if trade["side"] == "long"]),
+        "short": summarize_closed_trades([trade for trade in trades if trade["side"] == "short"]),
+    }
 
 
 def combined_summary(trades: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
@@ -870,12 +833,12 @@ def build_execution() -> Dict[str, Any]:
     allowed_dirty = {MODULE_PATH, ARTIFACT_PATH}
     unexpected_dirty_paths = [path for path in current_dirty_paths if path not in allowed_dirty]
     if unexpected_dirty_paths:
-        raise RuntimeError(f"unexpected dirty paths during V2 execution: {unexpected_dirty_paths}")
+        raise RuntimeError(f"unexpected dirty paths during V3 execution: {unexpected_dirty_paths}")
     if actual_head != EXPECTED_PRE_EXECUTION_HEAD:
-        raise RuntimeError(f"HEAD moved before V2 execution: {actual_head} != {EXPECTED_PRE_EXECUTION_HEAD}")
+        raise RuntimeError(f"HEAD moved before V3 execution: {actual_head} != {EXPECTED_PRE_EXECUTION_HEAD}")
     if actual_tracked_python_count != EXPECTED_PRE_EXECUTION_TRACKED_PYTHON_COUNT:
         raise RuntimeError(
-            "tracked Python count mismatch before V2 execution: "
+            "tracked Python count mismatch before V3 execution: "
             f"{actual_tracked_python_count} != {EXPECTED_PRE_EXECUTION_TRACKED_PYTHON_COUNT}"
         )
 
@@ -885,7 +848,7 @@ def build_execution() -> Dict[str, Any]:
     accepted_by_split = {"train": 0, "validation": 0, "holdout": 0}
     symbol_records: Dict[str, Any] = {}
     pivot_delay_values: List[int] = []
-    stable_delay_values: List[int] = []
+    horizontal_signal_level_checks: List[bool] = []
     validation_signal_record_count = 0
     null_returns_by_run: List[List[float]] = [[] for _ in range(NULL_RUN_COUNT)]
     null_open_counts_by_run = [0 for _ in range(NULL_RUN_COUNT)]
@@ -899,7 +862,7 @@ def build_execution() -> Dict[str, Any]:
         for split, value in result["accepted_signals_by_split"].items():
             accepted_by_split[split] += int(value)
         pivot_delay_values.extend(int(value) for value in result["pivot_delay_values"])
-        stable_delay_values.extend(int(value) for value in result["stable_delay_at_signal_values"])
+        horizontal_signal_level_checks.extend(bool(value) for value in result["horizontal_signal_level_checks"])
         for run_index, run_returns in enumerate(result["null_returns_by_run"]):
             null_returns_by_run[run_index].extend(float(value) for value in run_returns)
         for run_index, open_count in enumerate(result["null_open_counts_by_run"]):
@@ -927,19 +890,23 @@ def build_execution() -> Dict[str, Any]:
     )
 
     blocked_total = (
-        all_counts["fake_cross_blocked"]
-        + all_counts["trend_filter_blocked"]
-        + all_counts["volume_filter_blocked"]
-        + all_counts["cooldown_skipped_count"]
+        all_counts["diagonal_jump_cross_blocked"]
+        + all_counts["cooldown_skipped"]
         + all_counts["position_open_skipped_count"]
         + all_counts["missing_next_bar_skipped_count"]
         + all_counts["outside_split_skipped_count"]
     )
     metric_issues: List[str] = []
-    if all_counts["total_raw_crosses"] != all_counts["accepted_signals"] + blocked_total:
+    if all_counts["raw_crosses"] != all_counts["accepted_signals"] + blocked_total:
         metric_issues.append("raw_cross_accounting_mismatch")
-    if all_counts["unstable_trade_violation_count"] != 0:
-        metric_issues.append("unstable_level_trade_violation")
+    if all_counts["valid_horizontal_crosses"] != (
+        all_counts["accepted_signals"]
+        + all_counts["cooldown_skipped"]
+        + all_counts["position_open_skipped_count"]
+        + all_counts["missing_next_bar_skipped_count"]
+        + all_counts["outside_split_skipped_count"]
+    ):
+        metric_issues.append("valid_horizontal_cross_accounting_mismatch")
     if all_counts["pivot_confirmation_delay_mismatch_count"] != 0:
         metric_issues.append("pivot_confirmation_delay_mismatch")
     if overall["trade_summary"]["accepted_signals"] != all_counts["accepted_signals"]:
@@ -959,19 +926,17 @@ def build_execution() -> Dict[str, Any]:
     metric_integrity_passed = not metric_issues
 
     no_lookahead_checks = {
-        "pivot_level_unavailable_before_confirmation": True,
-        "pivot_confirmation_uses_rightBars_future_bars_only": True,
+        "raw_pivot_known_only_on_confirmation_bar": True,
+        "pivots_not_used_before_rightBars_confirmation": True,
         "rightBars_confirmation_delay_equals_75": all(delay == RIGHT_BARS for delay in pivot_delay_values),
+        "ph_fixed_pl_fixed_are_last_non_na_confirmed_pivots": True,
+        "raw_cross_uses_previous_and_current_fixed_levels": True,
+        "horizontal_cross_requires_current_previous_two_bar_level_equality": all(horizontal_signal_level_checks),
         "signal_evaluated_at_bar_close": True,
         "entry_at_next_15m_open": True,
-        "stable_level_required_before_signal": all(delay >= MIN_STABLE_BARS for delay in stable_delay_values),
-        "level_did_not_change_current_or_previous_bar_at_accepted_signal": all(
-            delay >= MIN_STABLE_BARS for delay in stable_delay_values
-        ),
-        "no_pivot_value_used_at_historical_pivot_bar_before_confirmation": True,
-        "no_unstable_level_trades": all_counts["unstable_trade_violation_count"] == 0,
+        "no_filters_used": True,
         "no_other_timeframes": True,
-        "no_parameter_grid": True,
+        "no_parameter_expansion": True,
     }
     pivot_confirmation_delay_checks = {
         "rightBars": RIGHT_BARS,
@@ -980,13 +945,13 @@ def build_execution() -> Dict[str, Any]:
         "max_observed_confirmation_delay": None if not pivot_delay_values else max(pivot_delay_values),
         "delay_mismatch_count": all_counts["pivot_confirmation_delay_mismatch_count"],
         "all_confirmations_delayed_exactly_rightBars": all(delay == RIGHT_BARS for delay in pivot_delay_values),
-        "stable_signal_count": len(stable_delay_values),
-        "min_stable_delay_at_accepted_signal": None if not stable_delay_values else min(stable_delay_values),
-        "stable_delay_violation_count": sum(1 for delay in stable_delay_values if delay < MIN_STABLE_BARS),
+        "accepted_horizontal_signal_count": len(horizontal_signal_level_checks),
+        "accepted_horizontal_signal_level_equality_all_true": all(horizontal_signal_level_checks),
     }
     safety_review = {
         "single_config_only": True,
-        "no_parameter_grid": True,
+        "no_parameter_expansion": True,
+        "no_grid_search": True,
         "no_optimization": True,
         "no_candidate": True,
         "no_edge_claim": True,
@@ -995,16 +960,18 @@ def build_execution() -> Dict[str, Any]:
         "no_orders": True,
         "no_private_api": True,
         "no_network": True,
-        "rsi_filter_used": False,
+        "trend_filter_used": False,
+        "volume_filter_used": False,
+        "rsi_used": False,
         "score_system_used": False,
         "candle_close_filter_used": False,
         "proximity_filter_used": False,
-        "seven_of_seven_labels_used": False,
         "atr_stop_used": False,
     }
     safety_review_passed = (
         safety_review["single_config_only"]
-        and safety_review["no_parameter_grid"]
+        and safety_review["no_parameter_expansion"]
+        and safety_review["no_grid_search"]
         and safety_review["no_optimization"]
         and safety_review["no_candidate"]
         and safety_review["no_edge_claim"]
@@ -1013,11 +980,12 @@ def build_execution() -> Dict[str, Any]:
         and safety_review["no_orders"]
         and safety_review["no_private_api"]
         and safety_review["no_network"]
-        and safety_review["rsi_filter_used"] is False
+        and safety_review["trend_filter_used"] is False
+        and safety_review["volume_filter_used"] is False
+        and safety_review["rsi_used"] is False
         and safety_review["score_system_used"] is False
         and safety_review["candle_close_filter_used"] is False
         and safety_review["proximity_filter_used"] is False
-        and safety_review["seven_of_seven_labels_used"] is False
         and safety_review["atr_stop_used"] is False
     )
 
@@ -1061,26 +1029,21 @@ def build_execution() -> Dict[str, Any]:
             "leftBars": LEFT_BARS,
             "rightBars": RIGHT_BARS,
             "cooldown_bars": COOLDOWN_BARS,
-            "minStableBars": MIN_STABLE_BARS,
             "emaFast": EMA_FAST,
-            "emaTrendFast": EMA_TREND_FAST,
-            "emaTrendSlow": EMA_TREND_SLOW,
-            "emaTrendLong": EMA_TREND_LONG,
-            "volume_sma_len": VOLUME_SMA_LEN,
-            "volume_mult": VOLUME_MULT,
             "stop_loss_pct": STOP_LOSS_PCT * 100.0,
             "take_profit_pct": TAKE_PROFIT_PCT * 100.0,
             "round_trip_cost_bps": int(COST_RETURN * 10000),
             "pyramiding_per_symbol": 0,
         },
         "signal_logic": {
-            "raw_cross_definition": "EMA9 crossing the active confirmed support/resistance step level",
-            "fake_cross_gate": "reject if active level updated within minStableBars or changed current/previous bar",
-            "long_true_cross": "support stable, ema9[1] < support, ema9 >= support",
-            "short_true_cross": "resistance stable, ema9[1] > resistance, ema9 <= resistance",
-            "long_trend_filter": "close > ema200 and ema21 > ema50",
-            "short_trend_filter": "close < ema200 and ema21 < ema50",
-            "volume_filter": "volume > sma(volume, 20) * 1.5",
+            "core_pivot_series": "rawPH/rawPL are confirmed pivots; ph_fixed/pl_fixed are last non-na confirmed values",
+            "raw_short_cross": "ema9[1] > ph_fixed[1] and ema9 <= ph_fixed",
+            "raw_long_cross": "ema9[1] < pl_fixed[1] and ema9 >= pl_fixed",
+            "valid_short_cross": "raw short and ph_fixed == ph_fixed[1] == ph_fixed[2]",
+            "valid_long_cross": "raw long and pl_fixed == pl_fixed[1] == pl_fixed[2]",
+            "diagonal_jump_cross_block": "raw crosses that fail fixed-level equality are blocked",
+            "no_trend_filter": True,
+            "no_volume_filter": True,
             "entry_policy": "next 15m bar open",
             "exit_policy": "1% stop, 2% take profit, conservative stop-first if both hit same bar",
             "split_assignment": "entry timestamp determines split",
@@ -1091,17 +1054,11 @@ def build_execution() -> Dict[str, Any]:
             "holdout": {"start_utc": HOLDOUT_START, "end_exclusive_utc": HOLDOUT_END},
         },
         "signal_accounting": {
-            "total_raw_crosses": all_counts["total_raw_crosses"],
-            "fake_cross_blocked": all_counts["fake_cross_blocked"],
-            "fake_cross_level_updated_within_minStableBars": all_counts[
-                "fake_cross_level_updated_within_minStableBars"
-            ],
-            "fake_cross_level_changed_current_or_previous_bar": all_counts[
-                "fake_cross_level_changed_current_or_previous_bar"
-            ],
-            "trend_filter_blocked": all_counts["trend_filter_blocked"],
-            "volume_filter_blocked": all_counts["volume_filter_blocked"],
-            "cooldown_skipped_count": all_counts["cooldown_skipped_count"],
+            "raw_crosses": all_counts["raw_crosses"],
+            "valid_horizontal_crosses": all_counts["valid_horizontal_crosses"],
+            "diagonal_jump_cross_blocked": all_counts["diagonal_jump_cross_blocked"],
+            "horizontal_context_missing_blocked": all_counts["horizontal_context_missing_blocked"],
+            "cooldown_skipped": all_counts["cooldown_skipped"],
             "position_open_skipped_count": all_counts["position_open_skipped_count"],
             "missing_next_bar_skipped_count": all_counts["missing_next_bar_skipped_count"],
             "outside_split_skipped_count": all_counts["outside_split_skipped_count"],
@@ -1118,8 +1075,15 @@ def build_execution() -> Dict[str, Any]:
             "metric_integrity_passed": metric_integrity_passed,
             "metric_integrity_issues": metric_issues,
             "metric_integrity_issue_count": len(metric_issues),
-            "raw_cross_accounting_balanced": all_counts["total_raw_crosses"]
-            == all_counts["accepted_signals"] + blocked_total,
+            "raw_cross_accounting_balanced": all_counts["raw_crosses"] == all_counts["accepted_signals"] + blocked_total,
+            "valid_horizontal_cross_accounting_balanced": all_counts["valid_horizontal_crosses"]
+            == (
+                all_counts["accepted_signals"]
+                + all_counts["cooldown_skipped"]
+                + all_counts["position_open_skipped_count"]
+                + all_counts["missing_next_bar_skipped_count"]
+                + all_counts["outside_split_skipped_count"]
+            ),
             "accepted_signals_equal_accepted_trades": overall["trade_summary"]["accepted_signals"]
             == all_counts["accepted_signals"],
             "no_nan_or_inf": "non_finite_metric_detected" not in metric_issues,
@@ -1131,8 +1095,9 @@ def build_execution() -> Dict[str, Any]:
         "safety_review": safety_review,
         "safety_review_passed": safety_review_passed,
         "diagnostic_limits": {
-            "single_config_structural_repair_test": True,
+            "single_config_structural_correction_test": True,
             "not_parameter_optimization": True,
+            "not_grid_search": True,
             "no_candidate": True,
             "no_edge_claim": True,
             "no_family_release": True,
@@ -1146,7 +1111,8 @@ def build_execution() -> Dict[str, Any]:
             "unrelated_datasets_read": False,
             "other_timeframes_tested": False,
             "other_parameters_tested": False,
-            "parameter_grid": False,
+            "parameter_expansion": False,
+            "grid_search": False,
             "optimization": False,
             "candidate_generated": False,
             "edge_claimed": False,
@@ -1156,7 +1122,7 @@ def build_execution() -> Dict[str, Any]:
             "capital_permission_granted": False,
             "orders_submitted": False,
         },
-        "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_evaluator_v1.py",
+        "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v3_horizontal_cross_evaluator_v1.py",
         "validation_checks": {
             "status_equals_required_status": True,
             "module_path_equals_required_path": True,
@@ -1167,13 +1133,13 @@ def build_execution() -> Dict[str, Any]:
             "symbol_count_verified_81": len(symbols_and_paths) == SYMBOL_COUNT,
             "timeframe_15m_only": True,
             "single_config_only": True,
-            "no_parameter_grid": True,
+            "no_parameter_expansion": True,
+            "no_grid_search": True,
             "no_optimization": True,
             "no_candidate": True,
             "no_edge_claim": True,
             "no_runtime_live_capital": True,
-            "raw_cross_accounting_balanced": all_counts["total_raw_crosses"]
-            == all_counts["accepted_signals"] + blocked_total,
+            "raw_cross_accounting_balanced": all_counts["raw_crosses"] == all_counts["accepted_signals"] + blocked_total,
             "metric_integrity_passed": metric_integrity_passed,
             "no_lookahead_repaint_issue": all(no_lookahead_checks.values()),
             "safety_review_passed": safety_review_passed,
@@ -1184,7 +1150,7 @@ def build_execution() -> Dict[str, Any]:
         "payload_sha256_excluding_hash": "",
     }
     if not all(payload["validation_checks"].values()):
-        raise RuntimeError(f"V2 execution validation checks failed: {payload['validation_checks']}")
+        raise RuntimeError(f"V3 execution validation checks failed: {payload['validation_checks']}")
     payload["payload_sha256_excluding_hash"] = canonical_payload_hash(payload)
     if canonical_payload_hash(payload) != payload["payload_sha256_excluding_hash"]:
         raise RuntimeError("payload hash failed to stabilize")
@@ -1199,10 +1165,9 @@ def main() -> None:
     summary = {
         "status": STATUS,
         "artifact_path": ARTIFACT_PATH,
-        "raw_crosses": payload["signal_accounting"]["total_raw_crosses"],
-        "fake_cross_blocked": payload["signal_accounting"]["fake_cross_blocked"],
-        "trend_filter_blocked": payload["signal_accounting"]["trend_filter_blocked"],
-        "volume_filter_blocked": payload["signal_accounting"]["volume_filter_blocked"],
+        "raw_crosses": payload["signal_accounting"]["raw_crosses"],
+        "valid_horizontal_crosses": payload["signal_accounting"]["valid_horizontal_crosses"],
+        "diagonal_jump_cross_blocked": payload["signal_accounting"]["diagonal_jump_cross_blocked"],
         "accepted_signals": payload["signal_accounting"]["accepted_signals"],
         "closed_trades": payload["overall_summary"]["trade_summary"]["closed_trades"],
         "unresolved_trades": payload["overall_summary"]["trade_summary"]["unresolved_trades"],

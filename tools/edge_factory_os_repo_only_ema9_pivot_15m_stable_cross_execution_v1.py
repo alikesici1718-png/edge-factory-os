@@ -12,7 +12,7 @@ from typing import Any, Deque, Dict, List, Optional, Sequence, Tuple
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_execution_v1.py"
+MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_stable_cross_execution_v1.py"
 ARTIFACT_PATH = "artifacts/strategy_executions/lucifer_15m_ema9_pivot_stable_cross_execution_v1.json"
 PREREG_PATH = "artifacts/research_preregistrations/lucifer_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json"
 PANEL_REVIEW_PATH = "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json"
@@ -1058,7 +1058,7 @@ def build_execution() -> Dict[str, Any]:
             "capital_permission_granted": False,
             "orders_submitted": False,
         },
-        "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_evaluator_v1.py",
+        "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_stable_cross_evaluator_v1.py",
         "validation_checks": {
             "status_equals_required_status": True,
             "module_path_equals_required_path": True,

@@ -6,19 +6,18 @@ from typing import Any, Dict, List
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_preregistration_contract_v1.py"
-ARTIFACT_PATH = "artifacts/research_preregistrations/lucifer_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json"
+MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_v3_horizontal_cross_preregistration_contract_v1.py"
+ARTIFACT_PATH = "artifacts/research_preregistrations/lucifer_15m_v3_horizontal_cross_preregistration_contract_v1.json"
 PANEL_REVIEW_PATH = "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json"
 
-STATUS = "PASS_REPO_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT_CREATED"
-ARTIFACT_KIND = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT"
-STRATEGY_NAME = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1"
-ROUTE_FAMILY = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE"
-CONFIG_ID = "lucifer_15m_ema9_pivot_stable_cross_sl1_tp2"
+STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_PREREGISTRATION_CONTRACT_CREATED"
+ARTIFACT_KIND = "LUCIFER_15M_V3_HORIZONTAL_CROSS_PREREGISTRATION_CONTRACT"
+ROUTE = "LUCIFER_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3"
+CONFIG_ID = "lucifer_15m_v3_horizontal_pivot_cross_sl1_tp2"
 TIMEFRAME = "15m"
 
-ROUTE_START_HEAD = "76887a956490cf41eb71da99ef1b0a1e2cabf4d8"
-ROUTE_START_TRACKED_PYTHON_COUNT = 932
+ROUTE_START_HEAD = "5ff0d19c97657344ca0ceb309b432681cea46205"
+ROUTE_START_TRACKED_PYTHON_COUNT = 940
 ROUTE_START_REPO_CLEAN = True
 
 PANEL_STATUS = "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED"
@@ -56,10 +55,8 @@ def dirty_paths() -> List[str]:
     output = run_git(["status", "--short"])
     paths: List[str] = []
     for line in output.splitlines():
-        if not line:
-            continue
-        path = line[3:].strip().strip('"').replace("\\", "/")
-        paths.append(path)
+        if line:
+            paths.append(line[3:].strip().strip('"').replace("\\", "/"))
     return sorted(paths)
 
 
@@ -82,16 +79,16 @@ def build_payload() -> Dict[str, Any]:
 
     actual_head = run_git(["rev-parse", "HEAD"])
     actual_tracked_python_count = tracked_python_count()
-    allowed_dirty = {MODULE_PATH, ARTIFACT_PATH}
     current_dirty_paths = dirty_paths()
+    allowed_dirty = {MODULE_PATH, ARTIFACT_PATH}
     unexpected_dirty_paths = [path for path in current_dirty_paths if path not in allowed_dirty]
     if unexpected_dirty_paths:
         raise RuntimeError(f"unexpected dirty paths during preregistration: {unexpected_dirty_paths}")
     if actual_head != ROUTE_START_HEAD:
-        raise RuntimeError(f"HEAD moved before preregistration: {actual_head} != {ROUTE_START_HEAD}")
+        raise RuntimeError(f"HEAD moved before V3 preregistration: {actual_head} != {ROUTE_START_HEAD}")
     if actual_tracked_python_count != ROUTE_START_TRACKED_PYTHON_COUNT:
         raise RuntimeError(
-            "tracked Python count mismatch before preregistration: "
+            "tracked Python count mismatch before V3 preregistration: "
             f"{actual_tracked_python_count} != {ROUTE_START_TRACKED_PYTHON_COUNT}"
         )
 
@@ -100,8 +97,7 @@ def build_payload() -> Dict[str, Any]:
         "status": STATUS,
         "artifact_kind": ARTIFACT_KIND,
         "module": MODULE_PATH,
-        "strategy_name": STRATEGY_NAME,
-        "route_family": ROUTE_FAMILY,
+        "route": ROUTE,
         "config_id": CONFIG_ID,
         "timeframe": TIMEFRAME,
         "cycle": ["preregistration", "execution", "evaluator", "closure"],
@@ -114,6 +110,12 @@ def build_payload() -> Dict[str, Any]:
             "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": True,
             "dirty_paths_during_artifact_creation": current_dirty_paths,
         },
+        "reason_for_v3": {
+            "v1_v2_did_not_correctly_model_visual_rule": True,
+            "visual_rule": "EMA9 crossing a true horizontal support/resistance segment is valid.",
+            "invalid_rule": "A cross caused by pivot line jumping or diagonal connector is invalid.",
+            "not_trend_or_volume_filtering": True,
+        },
         "dataset_preregistration": {
             "panel_review_artifact": PANEL_REVIEW_PATH,
             "panel_review_status": panel_review.get("status"),
@@ -123,162 +125,158 @@ def build_payload() -> Dict[str, Any]:
             "rows": panel_summary.get("reviewed_15m_row_count"),
             "range_start_utc": panel_summary.get("reviewed_min_timestamp_utc"),
             "range_end_inclusive_utc": panel_summary.get("reviewed_max_timestamp_utc"),
-            "read_only_panel_use": True,
+            "reviewed_binance_okx_overlap_81_symbol_15m_panel_only": True,
             "unrelated_datasets_allowed": False,
         },
         "fixed_parameters": {
+            "timeframe": TIMEFRAME,
             "leftBars": 150,
             "rightBars": 75,
             "cooldown_bars": 10,
-            "minStableBars": 5,
-            "ema_period": 9,
+            "emaFast": 9,
             "stop_loss_pct": 1.0,
             "take_profit_pct": 2.0,
-            "filters_enabled": False,
-            "score_filters_enabled": False,
+            "round_trip_cost_bps": 20,
             "pyramiding_per_symbol": 0,
-            "timeframe": TIMEFRAME,
         },
-        "signal_contract": {
-            "ema_source": "close",
-            "pivot_high_source": "high",
-            "pivot_low_source": "low",
-            "pivot_confirmation_policy": (
-                "raw pivot high/low is unavailable until rightBars future bars have closed; "
-                "active resistance/support updates only at confirmation bar"
-            ),
-            "stable_level_policy": (
-                "active step level is tradeable only when current_bar_index - "
-                "level_confirmed_bar_index >= minStableBars"
-            ),
-            "long_signal": (
-                "active support exists, support is stable, EMA9 previous bar < support, "
-                "EMA9 current bar >= support"
-            ),
-            "short_signal": (
-                "active resistance exists, resistance is stable, EMA9 previous bar > resistance, "
-                "EMA9 current bar <= resistance"
-            ),
-            "fake_diagonal_cross_block": (
-                "raw EMA crosses that occur while the active level is not yet stable are skipped "
-                "and counted as fake_pivot_jump_blocked"
-            ),
-            "cooldown_policy": "after an accepted signal, skip same-symbol signals for the next 10 bars",
-            "entry_policy": "signal evaluated at bar close; enter at next 15m bar open if present",
-            "position_policy": "one position per symbol at a time; cross-symbol overlap allowed",
+        "forbidden_filters": {
+            "trend_filter": False,
+            "volume_filter": False,
+            "rsi": False,
+            "score_system": False,
+            "candle_close_filter": False,
+            "proximity_filter": False,
+            "atr_stop": False,
         },
-        "exit_and_cost_contract": {
-            "long_stop": "entry_price * 0.99",
-            "long_take_profit": "entry_price * 1.02",
-            "short_stop": "entry_price * 1.01",
-            "short_take_profit": "entry_price * 0.98",
-            "intrabar_ohlc_policy": "15m high/low determines stop/take hit",
-            "both_hit_same_bar_policy": "conservative stop-first",
-            "dataset_end_policy": "open/unresolved trades are excluded from closed-trade performance and reported separately",
-            "gross_reported": True,
-            "net_round_trip_cost_bps": 20,
-            "cost_optimization": False,
+        "core_pivot_series_contract": {
+            "rawPH": "pivothigh(leftBars, rightBars)",
+            "rawPL": "pivotlow(leftBars, rightBars)",
+            "ph_fixed": "last non-na rawPH, equivalent to fixnan(pivothigh(...))",
+            "pl_fixed": "last non-na rawPL, equivalent to fixnan(pivotlow(...))",
+            "raw_pivot_known_only_on_confirmation_bar": True,
+            "no_pivot_before_confirmation": True,
+            "no_lookahead": True,
+        },
+        "raw_cross_contract": {
+            "rawShortCross": "ema9 previous bar > ph_fixed previous bar and ema9 current bar <= ph_fixed current bar",
+            "rawLongCross": "ema9 previous bar < pl_fixed previous bar and ema9 current bar >= pl_fixed current bar",
+        },
+        "horizontal_only_validity_rule": {
+            "validShortCross": [
+                "rawShortCross is true",
+                "ph_fixed current exists",
+                "ph_fixed previous exists",
+                "ph_fixed current == ph_fixed previous",
+                "ph_fixed previous == ph_fixed two bars ago",
+            ],
+            "validLongCross": [
+                "rawLongCross is true",
+                "pl_fixed current exists",
+                "pl_fixed previous exists",
+                "pl_fixed current == pl_fixed previous",
+                "pl_fixed previous == pl_fixed two bars ago",
+            ],
+            "diagonal_jump_cross_blocked": [
+                "rawShortCross true but ph_fixed current != ph_fixed previous OR ph_fixed previous != ph_fixed two bars ago",
+                "rawLongCross true but pl_fixed current != pl_fixed previous OR pl_fixed previous != pl_fixed two bars ago",
+            ],
+        },
+        "entry_exit_cost_contract": {
+            "entry": "signal evaluated at bar close, entry at next 15m open if present",
+            "cooldown": "after valid signal, ignore valid new signals for cooldown bars",
+            "one_position_per_symbol": True,
+            "cross_symbol_overlap_allowed": True,
+            "long_stop": "entry * 0.99",
+            "long_take": "entry * 1.02",
+            "short_stop": "entry * 1.01",
+            "short_take": "entry * 0.98",
+            "intrabar_policy": "use 15m OHLC high/low; if stop and take both hit, assume stop first",
+            "unresolved_policy": "report separately and exclude from closed-trade performance",
+            "round_trip_cost_bps": 20,
         },
         "splits": {
-            "train": {
-                "start_utc": "2023-01-01T00:00:00Z",
-                "end_exclusive_utc": "2024-07-01T00:00:00Z",
-            },
-            "validation": {
-                "start_utc": "2024-07-01T00:00:00Z",
-                "end_exclusive_utc": "2025-04-01T00:00:00Z",
-            },
-            "holdout": {
-                "start_utc": "2025-04-01T00:00:00Z",
-                "end_exclusive_utc": "2025-11-01T00:00:00Z",
-            },
+            "train": {"start_utc": "2023-01-01T00:00:00Z", "end_exclusive_utc": "2024-07-01T00:00:00Z"},
+            "validation": {"start_utc": "2024-07-01T00:00:00Z", "end_exclusive_utc": "2025-04-01T00:00:00Z"},
+            "holdout": {"start_utc": "2025-04-01T00:00:00Z", "end_exclusive_utc": "2025-11-01T00:00:00Z"},
             "split_assignment": "entry timestamp determines split",
-            "holdout_used_for_config_selection": False,
         },
         "metrics_required": [
-            "total signals",
+            "raw crosses",
+            "valid horizontal crosses",
+            "diagonal_jump_cross_blocked",
+            "cooldown skipped",
             "accepted signals",
-            "skipped signals",
             "closed trades",
-            "open/unresolved trades",
-            "long trades",
-            "short trades",
-            "gross bps",
-            "net bps",
-            "win rate",
-            "average win",
-            "average loss",
-            "profit factor if computable",
+            "unresolved trades",
+            "long/short split",
+            "stop/take counts",
+            "both-hit-same-bar count",
+            "gross/net bps",
+            "validation net",
+            "holdout net",
             "monthly gross/net",
             "monthly positive rate",
             "worst month",
-            "best month",
+            "win rate",
+            "profit factor",
             "symbol concentration",
             "side split",
-            "stop hit count",
-            "take profit hit count",
-            "both-hit-same-bar count",
-            "fake pivot jump blocked count",
-            "cooldown skipped count",
             "no-lookahead checks",
             "pivot confirmation delay checks",
         ],
         "null_baseline_contract": {
-            "required_if_feasible": True,
             "method": "deterministic timestamp/block shuffle null",
             "run_count": 100,
-            "validation_null_percentile_rule": "validation_null_percentile >= 0.95",
-            "limitation_must_be_recorded_if_not_feasible": True,
+            "required_if_feasible": True,
+            "pass_rule": "validation percentile >= 0.95",
         },
         "evaluator_policy": {
             "diagnostic_promising_true_only_if_all_true": [
-                "validation net bps > 0",
+                "validation net > 0",
+                "holdout net > 0",
                 "validation monthly positive rate >= 0.60",
-                "validation closed trades >= 100, otherwise inconclusive",
-                "holdout net bps > 0",
-                "null baseline passes or limitation is explicitly recorded",
+                "validation closed trades >= 100, else inconclusive",
+                "null baseline passes",
                 "metric integrity passes",
                 "no lookahead/repaint issue",
-                "safety review passes",
+                "safety passes",
             ],
             "allowed_result_classes": [
-                "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
-                "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
-                "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_INCONCLUSIVE_NEEDS_MORE_DATA",
-                "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE",
+                "LUCIFER_15M_V3_HORIZONTAL_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+                "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
+                "LUCIFER_15M_V3_HORIZONTAL_CROSS_INCONCLUSIVE_NEEDS_MORE_DATA",
+                "LUCIFER_15M_V3_HORIZONTAL_CROSS_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE",
             ],
         },
         "forbidden_actions_confirmed_false": {
+            "parameter_expansion": False,
+            "grid_search": False,
+            "optimization": False,
+            "candidate_generation": False,
+            "edge_claim": False,
+            "runtime_permission": False,
+            "live_permission": False,
+            "capital_permission": False,
             "network_used": False,
             "private_api_used": False,
-            "data_downloaded": False,
-            "other_timeframes_tested": False,
-            "other_parameters_tested": False,
-            "optimization": False,
-            "candidate_generated": False,
-            "edge_claimed": False,
-            "family_released": False,
-            "runtime_permission_granted": False,
-            "live_permission_granted": False,
-            "capital_permission_granted": False,
             "orders_submitted": False,
-            "seven_of_seven_filters_used": False,
         },
-        "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_execution_v1.py",
+        "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v3_horizontal_cross_execution_v1.py",
         "validation_checks": {
             "status_equals_required_status": True,
             "module_path_equals_required_path": True,
             "artifact_path_equals_required_path": True,
             "actual_clean_head_recorded": True,
             "tracked_python_count_recorded": True,
-            "repo_clean_before_route_start_recorded": True,
             "panel_review_artifact_loaded": True,
             "panel_review_status_verified": True,
             "panel_review_classification_verified": True,
-            "exactly_one_config_preregistered": True,
+            "single_config_only": True,
             "timeframe_15m_only": True,
-            "no_other_timeframes": True,
-            "no_other_parameters": True,
+            "horizontal_only_rule_preregistered": True,
+            "no_filters": True,
+            "no_parameter_expansion": True,
+            "no_grid_search": True,
             "no_optimization": True,
             "no_candidate": True,
             "no_edge_claim": True,
@@ -291,7 +289,7 @@ def build_payload() -> Dict[str, Any]:
     }
     payload["payload_sha256_excluding_hash"] = canonical_payload_hash(payload)
     if not all(payload["validation_checks"].values()):
-        raise RuntimeError("preregistration validation checks failed")
+        raise RuntimeError("V3 preregistration validation checks failed")
     if canonical_payload_hash(payload) != payload["payload_sha256_excluding_hash"]:
         raise RuntimeError("payload hash failed to stabilize")
     return payload
@@ -307,7 +305,7 @@ def main() -> None:
             {
                 "status": STATUS,
                 "artifact_path": ARTIFACT_PATH,
-                "strategy_name": STRATEGY_NAME,
+                "route": ROUTE,
                 "config_id": CONFIG_ID,
                 "actual_clean_head": ROUTE_START_HEAD,
                 "tracked_python_count": ROUTE_START_TRACKED_PYTHON_COUNT,

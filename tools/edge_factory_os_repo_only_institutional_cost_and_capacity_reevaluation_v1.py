@@ -205,8 +205,8 @@ def family_for_path(path: str) -> str | None:
         return "BETA_NEUTRAL_RESIDUAL_MR"
     if "regime_breakout_momentum" in lower:
         return "REGIME_BREAKOUT_MOMENTUM"
-    if "lucifer" in lower:
-        return "LUCIFER_EMA_PIVOT"
+    if "lucifer" in lower or "ema9_pivot_15m" in lower:
+        return "EMA9_PIVOT_15M"
     if "old_short" in lower:
         return "OLD_SHORT_CLEAN_ROOM"
     if any(token in lower for token in ("funding", "basis", "carry", "spot_perp_delta_neutral")):

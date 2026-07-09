@@ -6,7 +6,7 @@ from typing import Any, Dict, List
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_closure_v1.py"
+MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_stable_cross_closure_v1.py"
 ARTIFACT_PATH = "artifacts/strategy_closures/lucifer_15m_ema9_pivot_stable_cross_closure_v1.json"
 EVALUATOR_PATH = "artifacts/strategy_evaluations/lucifer_15m_ema9_pivot_stable_cross_evaluator_v1.json"
 
