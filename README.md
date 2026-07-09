@@ -137,6 +137,13 @@ Detailed inventory: [docs/SCRIPT_INVENTORY.md](docs/SCRIPT_INVENTORY.md)
 - Pre-registered hypotheses (success criteria locked before testing)
 - Immutable, hash-linked decision audit trail
 
+## Usage
+
+```bash
+python cli.py status              # Show research summary
+python cli.py evaluate-example    # Run an example strategy evaluation
+```
+
 ## Requirements
 
 See [requirements.txt](requirements.txt). Install with:
