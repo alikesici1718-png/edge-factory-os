@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Assembles a human-review approval packet for the rel_extreme_reversion_short shadow run by aggregating preflight gate v2, spec review, and OOS robustness results into a single structured JSON. Outputs the packet to the edge_factory_rel_extreme_manual_shadow_approval_packet_v1 directory for operator sign-off before any shadow runtime is started.
+"""
 from __future__ import annotations
 
 import csv

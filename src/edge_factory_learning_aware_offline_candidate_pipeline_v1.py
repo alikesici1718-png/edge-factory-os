@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Orchestrates the full offline candidate pipeline by reading the candidate idea bank and selector outputs, then sequentially invoking contract generation, artifact planning, validation, runner adapter, and data source binding scripts for each selected candidate.
+Outputs pipeline run status and logs to the edge_factory_learning_aware_offline_candidate_pipeline_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import json

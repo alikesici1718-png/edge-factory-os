@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Batch evidence locator that scans the workspace for CSV, JSON, TXT, and MD files mentioning any of the configured research candidate keys and extracts matching rows and column presence information. Outputs a per-candidate evidence summary JSON and a flat evidence CSV to a timestamped directory under edge_factory_research_candidate_batch_evidence_locator_v1.
+"""
 from __future__ import annotations
 
 import json

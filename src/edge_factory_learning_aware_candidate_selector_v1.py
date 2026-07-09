@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Selects the next candidate strategy to research by combining idea bank scores with research learning memory to avoid repeating past failed approaches. Reads the candidate idea bank JSONL ledger and the research learning memory JSONL, scores ideas against learned failure patterns, and writes a selector state JSON with the top-ranked next candidate recommendation.
+"""
 from __future__ import annotations
 
 import json

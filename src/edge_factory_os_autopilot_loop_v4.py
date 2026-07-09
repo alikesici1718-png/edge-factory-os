@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Top-level safe autopilot control loop (v4) that extends v3 by adding a process watchdog check alongside invariant guard, candidate lifecycle registry, command center, drift monitor, capital governor, and batch planner. Outputs a consolidated OS mode decision and timestamped artifacts to edge_factory_os_autopilot_loop_v4/.
+"""
 from __future__ import annotations
 
 import argparse

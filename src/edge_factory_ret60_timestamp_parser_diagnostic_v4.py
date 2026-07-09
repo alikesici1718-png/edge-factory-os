@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Diagnostic tool (v4) that scans local candle CSV files for known USDT-SWAP symbols and tests timestamp parsing robustness, detecting the time unit (ns/us/ms/s) from numeric magnitude and validating that close prices and time columns are correctly inferred.
+Outputs a per-file diagnostic CSV and JSON state report to a stamped directory summarising parse success rates.
+"""
 from __future__ import annotations
 
 import re

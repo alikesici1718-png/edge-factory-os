@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Acknowledges classified network warning errors from the error classifier output so that the command center overlay can mark the runtime as healthy. Reads the latest error classifier state JSON and writes an acknowledger state JSON indicating whether network-only warnings have been safely acknowledged.
+"""
 from __future__ import annotations
 
 import json

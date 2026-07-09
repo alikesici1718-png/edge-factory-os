@@ -1,3 +1,7 @@
+"""
+Reads the safe-to-delete whitelist candidates CSV produced by edge_factory_safe_disk_cleanup_audit_v1.py and physically deletes the approved files and directories, protecting data files (.csv, .json, .parquet, etc.) from deletion regardless of the whitelist.
+Outputs a JSON/Markdown delete summary and per-item deleted/skipped CSVs to the repo outputs directory.
+"""
 from __future__ import annotations
 
 import csv

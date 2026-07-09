@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Preflight gate (v1) for the rel_extreme_reversion_short shadow run that validates the spec review, adapter audit, engine builder state, and engine audit results before allowing shadow startup. Reads artifacts from previous pipeline stages and writes a preflight gate state JSON with a pass/block verdict to the edge_factory_rel_extreme_shadow_preflight_gate_v1 directory.
+"""
 from __future__ import annotations
 
 import ast

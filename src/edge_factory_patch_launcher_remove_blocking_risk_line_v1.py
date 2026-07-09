@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Patches the MASTER_UPPER_SYSTEM PowerShell launcher by removing any blocking direct-invocation lines for the global paper risk manager v4 config script, then writes the modified launcher in place after creating a backup. Outputs the patch result (removed lines and backup path) to the edge_factory_patch_launcher_remove_blocking_risk_line_v1 directory.
+"""
 # EDGE_FACTORY_GATE_METADATA_START
 # gate_metadata_version: 1
 # gate_metadata_kind: non_behavioral_comment_block

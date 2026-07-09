@@ -1,3 +1,7 @@
+"""
+Reads live paper-run family closed_trades and open_positions CSVs and fetches current OKX ticker prices to compute per-family performance metrics including PnL, win rate, profit factor, and max drawdown.
+Outputs a versioned performance snapshot JSON and prints a summary table to stdout.
+"""
 from __future__ import annotations
 
 import argparse

@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads the latest ret60_reversal_short market-replay output (from edge_factory_ret60_market_replay_v4_merge_asof) and applies a gate-check pass/fail decision based on trade count, PnL metrics, and sandbox-only constraints.
+Outputs a JSON decision state file indicating whether the replay meets minimum quality thresholds and whether shadow-paper promotion is permitted.
+"""
 from __future__ import annotations
 
 import json

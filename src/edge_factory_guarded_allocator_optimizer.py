@@ -1,3 +1,6 @@
+"""
+Tests defensive guard strategies inside the real portfolio allocator simulation to determine which guards improve risk-adjusted performance on bad days. Reads normalized trade CSVs from the portfolio validation directory and optional master optimizer daily PnL, then writes guarded scenario summaries, best simulation trades, and family PnL comparisons.
+"""
 from __future__ import annotations
 
 import argparse

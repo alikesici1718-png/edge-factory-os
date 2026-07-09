@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+OS duplicate launch guard (v1) that inspects running Python and PowerShell processes to detect whether any critical Edge Factory components (risk managers, loggers, autopilot) are already running, and writes a timestamped guard report to edge_factory_os_duplicate_launch_guard_v1/ in the workspace.
+"""
 from __future__ import annotations
 
 import json

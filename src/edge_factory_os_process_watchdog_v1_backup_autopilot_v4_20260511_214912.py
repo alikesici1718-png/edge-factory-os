@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Backup snapshot of the process watchdog (autopilot v4 era, 2026-05-11) that checks whether expected Edge Factory OS processes are running and writes a watchdog state report. Functionally identical to edge_factory_os_process_watchdog_v1 but targets the v3-only autopilot process set.
+"""
 from __future__ import annotations
 
 import json

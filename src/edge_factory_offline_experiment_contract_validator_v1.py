@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads an offline experiment contract JSON and validates it against the canonical contract schema, checking required fields, safety hard-rules, and metadata completeness.
+Outputs a structured validation report JSON to the edge_factory_offline_experiment_contract_validator_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import argparse

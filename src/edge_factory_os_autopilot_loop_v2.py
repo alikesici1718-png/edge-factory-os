@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Top-level safe autopilot control loop (v2) that coordinates the command center, drift monitor, capital governor, and batch planner to produce a consolidated OS mode decision with a persistent JSONL history. Writes timestamped state artifacts to edge_factory_os_autopilot_loop_v2/ in the workspace.
+"""
 from __future__ import annotations
 
 import argparse

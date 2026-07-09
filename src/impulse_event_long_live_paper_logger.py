@@ -1,3 +1,8 @@
+"""
+Live paper logger for the impulse/event-long strategy family that polls OKX 1-minute candles,
+detects impulse-long signals based on finalist strategies from robust_strict_best_by_coin.csv,
+and simulates paper trade entries/exits without placing real orders.
+"""
 from __future__ import annotations
 
 import argparse

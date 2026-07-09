@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+OS command center (v1) that sequentially runs the supervisor, lifecycle queue, live health check, and performance analyzer modules and aggregates their outputs into a single timestamped state JSON/CSV/Markdown report written to edge_factory_os_command_center_v1/ in the workspace.
+"""
 from __future__ import annotations
 
 import json

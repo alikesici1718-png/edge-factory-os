@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Decides the next research routing action (guarded contract, new idea seeding, or blocked) by reading the learning-aware candidate selector v2 state and the research learning memory JSONL. Outputs a route decision state JSON to the edge_factory_research_route_decision_v1 directory based on top-candidate policy status, score, and accumulated failure tags.
+"""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Diagnoses the boot status of the MASTER_UPPER_SYSTEM by scanning running Python processes, syntax-checking all component scripts, and inspecting family paper-run directories for recent trade and heartbeat activity.
+Outputs a structured boot diagnosis report JSON to the paper_run_gate_MASTER_UPPER_SYSTEM directory.
+"""
 from __future__ import annotations
 
 import csv

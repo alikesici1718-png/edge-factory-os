@@ -1,3 +1,7 @@
+"""
+Reads live paper-run family trade logs and global risk manager outputs to produce a consolidated "what do we do now?" decision dashboard snapshot for the running v4 priority paper system.
+Outputs a dashboard_snapshot.json to the live_decision_dashboard directory.
+"""
 from __future__ import annotations
 
 import argparse

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Batch rule profiler that reads trade/signal CSV files for multiple research candidates, extracts candidate-specific rows, and computes family-level performance metrics (profit factor, win rate, drawdown, symbol breadth) for each. Outputs a profiler state JSON and a per-candidate results CSV to a timestamped directory under edge_factory_research_candidate_batch_rule_profiler_v1.
+"""
 from __future__ import annotations
 
 import json

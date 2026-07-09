@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Generates structured offline experiment contract JSON files for candidate strategy ideas based on CLI-supplied parameters such as candidate key, entry/exit rules, universe, and cost assumptions. Outputs a timestamped contract directory containing the draft contract JSON ready for downstream validation.
+"""
 from __future__ import annotations
 
 import argparse

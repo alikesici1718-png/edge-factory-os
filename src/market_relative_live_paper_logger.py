@@ -1,3 +1,9 @@
+"""
+Live paper logger for the market_relative_extreme_reversion_short strategy family that polls OKX
+1-hour candles, detects coins whose 6-hour return exceeds the market median by at least 600 bps,
+and logs simulated short entries/exits to the MASTER_UPPER_SYSTEM paper run directory without
+placing real orders.
+"""
 from __future__ import annotations
 
 import argparse

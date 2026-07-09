@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Runs strict in-sample/out-of-sample validation for the post_impulse_drift_long strategy variants, comparing a base candidate against a strict variant using feature panel parquet/CSV files. Outputs IS/OOS performance metrics and a validation state JSON to the edge_factory_post_impulse_strict_validation_v1 directory.
+"""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Tracks and classifies the lifecycle state of research candidate strategies by inspecting their shadow paper trading directories for heartbeat, signal, and closed trade files. Reads shadow directory outputs for each tracked candidate and writes a registry state JSON with lifecycle classifications such as ARCHIVE_WAIT.
+"""
 from __future__ import annotations
 
 import json

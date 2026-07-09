@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Diagnoses global risk decision state by reading the risk manager config, global gate decisions CSV, risk snapshot, and violations files from the MASTER_UPPER_SYSTEM paper run directory. Runs the risk manager script via subprocess and writes a risk decision diagnosis report with pending entry counts, gate status, and family priority configuration.
+"""
 from __future__ import annotations
 
 import json

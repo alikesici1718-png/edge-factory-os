@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Wrapper that launches the global paper risk manager v3 with per-family max-position and priority
+configuration injected at runtime, reading family_config.json from the MASTER_UPPER_SYSTEM paper
+run directory and passing resolved arguments to the underlying v3 risk manager script.
+"""
 from __future__ import annotations
 
 import json

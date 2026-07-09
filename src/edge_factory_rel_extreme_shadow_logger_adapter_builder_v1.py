@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Builds a sandbox-only logger adapter Python file for the rel_extreme_reversion_short shadow run by reading the spec review JSON and code-generating a fully parameterized adapter with all live/order flags set to False. Outputs the generated adapter script and a manifest JSON to the edge_factory_rel_extreme_shadow_logger_adapter_builder_v1 directory.
+"""
 from __future__ import annotations
 
 import json

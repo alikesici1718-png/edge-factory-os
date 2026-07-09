@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Scans running Python processes and MASTER_UPPER_SYSTEM startup logs to diagnose the status of each system component (risk manager, family loggers, autopilot), detecting missing or crashed processes.
+Outputs a startup diagnosis report JSON to the edge_factory_master_startup_diagnoser_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import json

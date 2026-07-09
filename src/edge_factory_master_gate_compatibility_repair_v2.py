@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Second-generation gate compatibility repair script that reads the MASTER_UPPER_SYSTEM launcher, logger files, and family config to detect and patch non-compliant gate-path or config references.
+Requires explicit approval and backs up all files before applying any changes.
+"""
 # EDGE_FACTORY_GATE_METADATA_START
 # gate_metadata_version: 1
 # gate_metadata_kind: non_behavioral_comment_block

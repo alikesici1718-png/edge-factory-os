@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Diagnoses global gate path configuration issues by scanning the paper run directory for gate-related JSON and CSV files and inspecting logger script source for gate-path references. Reads gate decision files, risk config JSONs, and logger Python source files, then writes a gate path diagnosis report identifying mismatches or missing gate files.
+"""
 from __future__ import annotations
 
 import json

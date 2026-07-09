@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+OS interface specifications (v1) that generates and writes machine-readable JSON documents defining the contract-to-runner, runner-to-validator, and validator-to-lifecycle interface schemas used across the Edge Factory OS pipeline. Outputs are saved to edge_factory_os_interface_specs_v1/ in the workspace.
+"""
 from __future__ import annotations
 
 import json

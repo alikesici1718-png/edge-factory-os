@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Stricter v2 preflight gate for the rel_extreme_reversion_short shadow run that additionally inspects the runtime engine Python file for required entry-points, safety flags, and output file references before emitting a pass/block verdict. Reads spec, adapter audit, engine builder v2, and engine auditor v2 artifacts; writes a gate state JSON to the edge_factory_rel_extreme_shadow_preflight_gate_v2 directory.
+"""
 from __future__ import annotations
 
 import json

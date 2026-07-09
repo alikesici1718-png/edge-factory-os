@@ -1,3 +1,8 @@
+"""
+Runtime helper that resolves per-family position notional values from a sizing contract JSON,
+supporting both fixed-notional and equity-fraction allocation modes with a configurable fallback
+default; imported by live paper logger scripts to provide dynamic position sizing.
+"""
 from __future__ import annotations
 import json
 from pathlib import Path

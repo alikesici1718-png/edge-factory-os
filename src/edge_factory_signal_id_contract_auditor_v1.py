@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Audits signal_id naming contract compliance across live paper logger source files and paper-run output CSVs by reading source code, sampling signal_id values from closed-trade CSVs, and classifying their format against the canonical COIN_STRATEGY_YYYYMMDDTHHMMSSZ shape.
+Outputs a JSON audit state report to a stamped directory summarising compliant and non-compliant signal_id patterns per logger.
+"""
 from __future__ import annotations
 
 import json

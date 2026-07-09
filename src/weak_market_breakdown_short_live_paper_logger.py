@@ -1,3 +1,9 @@
+"""
+Live paper logger for the weak_market_breakdown_short strategy family that polls OKX 1-minute
+candles, detects weak-market breakdown signals based on configurable threshold parameters, and
+logs simulated short entries and exits to the MASTER_UPPER_SYSTEM paper run directory without
+placing real orders.
+"""
 from __future__ import annotations
 
 import argparse

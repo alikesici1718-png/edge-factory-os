@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Adapts a validated offline experiment contract into a safe offline runner request by reading the latest contract validator state and contract JSON. Checks validation status and gate conditions, then writes a runner request JSON with resolved data source bindings if all blockers are cleared.
+"""
 from __future__ import annotations
 
 import argparse

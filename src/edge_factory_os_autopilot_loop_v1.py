@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Top-level safe autopilot control loop (v1) that runs the OS command center and reads its output state to emit a consolidated OS mode decision (e.g. CONTROL_PLANE_CURRENT, REBUILD_REQUIRED, MANUAL_REVIEW_REQUIRED). Writes timestamped JSON/CSV/Markdown state artifacts to edge_factory_os_autopilot_loop_v1/ in the workspace.
+"""
 from __future__ import annotations
 
 import argparse

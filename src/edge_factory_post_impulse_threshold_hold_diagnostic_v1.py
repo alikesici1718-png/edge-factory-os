@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Diagnostic tool that sweeps threshold and hold-duration parameter combinations for the post_impulse_drift_long candidate using the latest feature panel parquet/CSV, evaluating profit factor, win rate, and drawdown for each combination. Outputs a diagnostic state JSON and results CSV to the edge_factory_post_impulse_threshold_hold_diagnostic_v1 directory.
+"""
 from __future__ import annotations
 
 import json

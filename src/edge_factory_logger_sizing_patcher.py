@@ -1,3 +1,7 @@
+"""
+Patches live paper logger scripts to replace hardcoded $50 notional assignments with a dynamic family-aware notional resolver, reading the four strategy family logger Python files as inputs.
+Operates in dry-run mode by default; use --apply to back up and overwrite originals.
+"""
 from __future__ import annotations
 
 import argparse

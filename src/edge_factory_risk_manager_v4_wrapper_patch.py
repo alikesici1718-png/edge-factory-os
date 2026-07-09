@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Generates a wrapper script (global_paper_risk_manager_v4_config.py) that delegates to global_paper_risk_manager_v3_priority.py with a pre-configured flat family config JSON, backing up any existing file before patching.
+Outputs the wrapper file and a JSON patch state report to a stamped directory; does not start paper trading or modify live config.
+"""
 from __future__ import annotations
 
 import json

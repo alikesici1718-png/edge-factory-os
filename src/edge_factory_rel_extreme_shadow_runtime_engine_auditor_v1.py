@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Audits the generated rel_extreme shadow runtime engine (v1) by checking required constants, required functions, forbidden live/API tokens, and required CLI argument strings via AST parsing and py_compile. Reads the engine path from the latest engine builder v1 state and writes an audit state JSON to the edge_factory_rel_extreme_shadow_runtime_engine_auditor_v1 directory.
+"""
 from __future__ import annotations
 
 import ast

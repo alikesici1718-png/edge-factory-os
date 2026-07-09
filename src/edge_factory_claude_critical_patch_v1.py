@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Applies critical patches to active paper logger files and the global risk manager by backing up originals and writing updated versions with corrected priority logic. Reads the current logger and risk manager Python source files, applies targeted text patches, and writes backup copies before overwriting the originals.
+"""
 # EDGE_FACTORY_GATE_METADATA_START
 # gate_metadata_version: 1
 # gate_metadata_kind: non_behavioral_comment_block

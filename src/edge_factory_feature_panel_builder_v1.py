@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Builds feature panels for offline strategy research by reading OKX candle CSV files and computing return, volume, and market-relative feature columns. Reads the latest feature panel build plan JSON and its linked candle source file, then writes a feature panel Parquet or CSV and a manifest JSON describing the output.
+"""
 from __future__ import annotations
 
 import json

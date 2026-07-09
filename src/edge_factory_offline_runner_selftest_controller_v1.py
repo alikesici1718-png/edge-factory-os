@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Runs a self-test of the offline runner pipeline by loading the latest contract, data binding, and validation artifacts and verifying that all pipeline stages completed without errors.
+Outputs a selftest controller report JSON to the edge_factory_offline_runner_selftest_controller_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import json

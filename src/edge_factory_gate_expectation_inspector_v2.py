@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Inspects gate decision files and logger scripts to verify that global gate paths, pending entry queues, and risk snapshot references are consistent across all active family loggers. Reads global gate CSV/JSON files and logger Python source files, then writes a gate expectation inspection report with per-family gate path verdicts.
+"""
 from __future__ import annotations
 
 import json

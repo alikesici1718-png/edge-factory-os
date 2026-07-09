@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Monitors running Python processes on the system and checks whether expected Edge Factory OS components (risk manager, loggers, autopilot) are active. Writes a timestamped watchdog state JSON and CSV report to the edge_factory_os_process_watchdog_v1 output directory.
+"""
 from __future__ import annotations
 
 import json

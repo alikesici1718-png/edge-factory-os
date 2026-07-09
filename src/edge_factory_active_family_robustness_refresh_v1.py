@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Refreshes robustness validation status for all active strategy families by reading the latest rolling time-OOS summary. Produces a per-family robustness refresh summary CSV and state JSON with policy and capital action recommendations for each family.
+"""
 from __future__ import annotations
 
 import json

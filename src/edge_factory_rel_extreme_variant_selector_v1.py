@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Selects the best-performing parameter variant for the rel_extreme_reversion_short candidate by reading the family candidate trades CSV, grouping by variant key, and ranking variants by profit factor, win rate, and drawdown. Outputs a variant selector state JSON and a ranked variants CSV to the edge_factory_rel_extreme_variant_selector_v1 directory.
+"""
 from __future__ import annotations
 
 import json

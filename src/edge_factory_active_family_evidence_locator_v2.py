@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Locates and summarizes available rolling time-OOS evidence files for each active strategy family. Reads OOS summary and fold CSVs from the rolling retrain validator output directory and writes a state JSON with per-family evidence paths, rolling status labels, and fold-level statistics.
+"""
 from __future__ import annotations
 
 import json

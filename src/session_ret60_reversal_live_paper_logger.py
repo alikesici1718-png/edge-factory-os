@@ -1,3 +1,8 @@
+"""
+Live paper logger for the session_ret60_reversal strategy family that polls OKX 1-minute candles,
+detects 60-minute return reversal signals, and logs simulated short entries and exits to the
+MASTER_UPPER_SYSTEM paper run directory without placing real orders.
+"""
 from __future__ import annotations
 
 import argparse

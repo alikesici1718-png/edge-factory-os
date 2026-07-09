@@ -1,3 +1,7 @@
+"""
+Scans the edge_lab_new workspace and an external data root for safe-to-delete files and directories (cache folders, .pyc files, temporary files) while explicitly protecting data files (.csv, .json, .parquet, etc.) and flagging large items for manual review.
+Outputs audit summary JSON/Markdown, a delete-whitelist candidates CSV, and a protected-items report to the repo outputs directory without deleting anything.
+"""
 from __future__ import annotations
 
 import csv

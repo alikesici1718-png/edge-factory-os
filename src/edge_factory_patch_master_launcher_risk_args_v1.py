@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Patches the MASTER_UPPER_SYSTEM PowerShell launcher to inject correct risk-manager arguments derived from the family config JSON, backing up the original launcher before writing changes. Reads the family config from edge_factory_master_upper_system_family_config and writes the patched launcher plus a JSON patch report to the edge_factory_patch_master_launcher_risk_args_v1 directory.
+"""
 # EDGE_FACTORY_GATE_METADATA_START
 # gate_metadata_version: 1
 # gate_metadata_kind: non_behavioral_comment_block

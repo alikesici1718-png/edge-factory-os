@@ -1,3 +1,7 @@
+"""
+Patches live paper logger scripts to replace the equity-fraction notional line with a call to resolve_family_notional(), injecting dynamic per-family position sizing into each of the four strategy logger files.
+Operates in dry-run mode by default; use --apply to back up originals and write patched files.
+"""
 from __future__ import annotations
 
 import argparse

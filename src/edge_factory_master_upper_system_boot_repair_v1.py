@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Repairs indentation and argparse structural errors in MASTER_UPPER_SYSTEM component logger scripts, reading each Python logger file and rewriting it with corrected indentation after backing up originals.
+Validates each file with py_compile before and after patching to confirm the repair is syntactically sound.
+"""
 # EDGE_FACTORY_GATE_METADATA_START
 # gate_metadata_version: 1
 # gate_metadata_kind: non_behavioral_comment_block

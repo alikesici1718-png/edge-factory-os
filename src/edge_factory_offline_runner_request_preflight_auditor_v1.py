@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads the latest offline runner request JSON and audits it for preflight compliance, checking that all required fields are present, that the request does not conflict with live/paper system constraints, and that referenced data paths exist.
+Outputs a preflight audit report JSON to the edge_factory_offline_runner_request_preflight_auditor_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import argparse

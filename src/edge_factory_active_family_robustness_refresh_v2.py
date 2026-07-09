@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Refreshes robustness validation status for active strategy families using rolling time-OOS validator outputs (v2). Reads the latest rolling OOS summary CSV and writes a per-family refresh report with role-based capital action decisions and a structured state JSON.
+"""
 from __future__ import annotations
 
 import json

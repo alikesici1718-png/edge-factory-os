@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Audits the generated ret60_reversal_short shadow runtime engine file by compiling it, running its self-test, verifying required CSV fields and schema, and checking that all forbidden live-trading strings are absent.
+Outputs a JSON audit state file to a stamped directory confirming whether the engine is safe to use in sandbox-only shadow mode.
+"""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Scores and ranks candidate strategy ideas from the idea bank ledger by evaluating readiness, contract completeness, side alignment with active families, and regime clarity. Reads the candidate idea bank JSONL ledger and writes a prioritized ranking CSV and state JSON for downstream selector modules.
+"""
 from __future__ import annotations
 
 import json

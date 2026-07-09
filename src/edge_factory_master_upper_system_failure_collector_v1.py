@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Collects failure signals from the MASTER_UPPER_SYSTEM by scanning running processes, family error CSVs, and paper-run logs to produce a consolidated failure report for diagnostic purposes.
+Outputs a failure collection JSON and optionally triggers the system launcher script if all components are confirmed down.
+"""
 from __future__ import annotations
 
 import json

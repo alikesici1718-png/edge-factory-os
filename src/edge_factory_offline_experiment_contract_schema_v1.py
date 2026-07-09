@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Generates and writes the canonical offline experiment contract schema (version edge_factory_offline_experiment_contract_v1), defining required fields, hard safety rules, and allowed metadata for offline strategy experiments.
+Outputs the schema JSON to a timestamped directory under edge_factory_offline_experiment_contract_schema_v1 in the workspace.
+"""
 from __future__ import annotations
 
 import json

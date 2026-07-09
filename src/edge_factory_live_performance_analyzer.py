@@ -1,3 +1,7 @@
+"""
+Reads live paper-run family closed_trades and open_positions CSVs and fetches current OKX market prices to compute per-family realized and unrealized performance metrics (PnL, win rate, drawdown, Sharpe).
+Outputs a performance snapshot JSON and prints a formatted report to stdout.
+"""
 from __future__ import annotations
 
 import argparse

@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Backup snapshot (20260511_221300) of the offline experiment contract validator, preserved because the key_exists check was already present at this point in history.
+Reads an offline experiment contract JSON and validates it against the schema; outputs a validation report JSON to the edge_factory_offline_experiment_contract_validator_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import argparse

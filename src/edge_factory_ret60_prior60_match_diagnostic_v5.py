@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Diagnostic tool that scans local candle CSV files, applies the ret60_reversal_short signal rule (hour-8 UTC, abs(ret60) >= 75 bps), and checks how many signals have a matching prior 60-minute return available for confirmation.
+Outputs a per-symbol diagnostic CSV and JSON state report to a stamped directory.
+"""
 from __future__ import annotations
 
 import re

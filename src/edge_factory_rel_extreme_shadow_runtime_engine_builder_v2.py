@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Code-generates the rel_extreme shadow runtime engine Python script (v2) with an expanded feature set (--candle_dir, --once, polled loop, candle file audit CSV) from the adapter manifest, adapter audit, and spec review. Outputs the engine script and a builder state JSON to the edge_factory_rel_extreme_shadow_runtime_engine_builder_v2 directory.
+"""
 from __future__ import annotations
 
 import json

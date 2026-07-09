@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Post-mortem analysis for the rel_extreme_reversion_short shadow run that reads the sandbox heartbeat, signals CSV, closed trades CSV, and audit CSV to summarize shadow outcomes and emit a verdict. Outputs a postmortem state JSON to the edge_factory_rel_extreme_shadow_postmortem_v1 directory; does not start or restart the shadow runtime.
+"""
 from __future__ import annotations
 
 import json

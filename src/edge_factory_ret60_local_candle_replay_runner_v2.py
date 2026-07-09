@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Replays the ret60_reversal_short strategy rules against local 1-minute candle CSV/parquet files in the workspace, constructing hourly close panels per symbol and simulating short entries based on configurable threshold parameters. Outputs a replay state JSON, trades CSV, and candle audit CSV to a timestamped directory under the configured output root.
+"""
 from __future__ import annotations
 
 import argparse

@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads the latest offline runner request JSON and resolves concrete data-source file paths for each requested symbol and timeframe, binding the request to available offline data on disk.
+Outputs a data-source binding report JSON to the edge_factory_offline_runner_data_source_binding_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import argparse

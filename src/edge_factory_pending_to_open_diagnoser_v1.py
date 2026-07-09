@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Diagnoses why pending entries are not transitioning to open positions by reading pending, open, closed, and error CSV files from each active strategy family folder under MASTER_UPPER_SYSTEM. Outputs a timestamped diagnostic JSON and summary CSV to the edge_factory_pending_to_open_diagnoser_v1 directory.
+"""
 from __future__ import annotations
 
 import json

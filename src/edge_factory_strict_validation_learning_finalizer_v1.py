@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads the latest strict-validation results from the research learning memory master JSONL and classifies failure modes (e.g. drawdown, profit factor, OOS degradation), then appends a finalizer record to the memory log summarising lessons learned and recommended next actions.
+Outputs a JSON finalizer state report to a stamped directory under the workspace.
+"""
 from __future__ import annotations
 
 import json

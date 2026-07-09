@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Code-generates the rel_extreme shadow runtime engine Python script (v1) from the adapter manifest, implementation audit, and spec review, embedding all rule parameters and sandbox-only safety flags directly into the generated file. Outputs the runtime engine script and a builder state JSON to the edge_factory_rel_extreme_shadow_runtime_engine_builder_v1 directory.
+"""
 from __future__ import annotations
 
 import json

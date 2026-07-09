@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Inspects and patches the MASTER_UPPER_SYSTEM launcher script and family logger files to ensure gate-compatibility, replacing any non-compliant gate-path references and verifying family config and gate CSV paths align.
+Requires explicit approval before any mutations; backs up all modified files before writing.
+"""
 # EDGE_FACTORY_GATE_METADATA_START
 # gate_metadata_version: 1
 # gate_metadata_kind: non_behavioral_comment_block

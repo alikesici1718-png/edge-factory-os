@@ -1,3 +1,7 @@
+"""
+Reads closed-trade CSV files and overlap validation data for multiple strategy families to compute optimized per-family position sizing fractions and capital allocation across families.
+Outputs an optimization report JSON with recommended fractions, priority scores, and portfolio-level metrics.
+"""
 from __future__ import annotations
 
 import argparse

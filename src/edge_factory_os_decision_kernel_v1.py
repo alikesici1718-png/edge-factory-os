@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+OS decision kernel (v1) that reads the latest state index and recovery manifest to produce a prioritized list of OS decisions (e.g. allowed actions, blockers, required tasks), writing timestamped JSON/CSV/Markdown artifacts to edge_factory_os_decision_kernel_v1/ in the workspace.
+"""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Seeds the candidate idea bank with a predefined set of initial strategy ideas covering panic rebound, relative weakness snapback, and similar market regimes. Invokes the idea bank module via subprocess to register each seed idea and writes a seeder run report with success/failure status per idea.
+"""
 from __future__ import annotations
 
 import json

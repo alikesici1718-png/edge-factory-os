@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Runs an out-of-sample robustness sweep for the rel_extreme_reversion_short candidate by replaying real candle data with multiple threshold/hold/liquidity combinations and computing profit factor, win rate, and drawdown for each. Reads OOS candle and trade data from the workspace; outputs a robustness state JSON and results CSV to the edge_factory_rel_extreme_oos_robustness_v1 directory.
+"""
 from __future__ import annotations
 
 import json

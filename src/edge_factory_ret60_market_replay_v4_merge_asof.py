@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Scans local 1-minute candle CSV files for the ret60_reversal_short candidate (hour-8 UTC, signal_ret60_bps >= 75, 1-minute delay, 720-minute hold) and replays hypothetical trades using an as-of merge, producing a native events CSV with simulated PnL.
+Outputs a stamped directory containing the replay CSV and a JSON state file, with live and active-paper trading explicitly blocked.
+"""
 from __future__ import annotations
 
 import re

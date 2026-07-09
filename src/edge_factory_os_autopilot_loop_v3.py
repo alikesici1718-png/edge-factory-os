@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Top-level safe autopilot control loop (v3) that adds invariant guard and candidate lifecycle registry checks on top of v2's command center, drift monitor, capital governor, and batch planner coordination. Outputs a consolidated OS mode decision and timestamped artifacts to edge_factory_os_autopilot_loop_v3/.
+"""
 from __future__ import annotations
 
 import argparse

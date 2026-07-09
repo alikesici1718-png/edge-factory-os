@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Launches the ret60_reversal_short true-candle replay engine (v3) as a subprocess, discovers local candle CSVs for USDT-SWAP symbols, and collects the resulting replay output into a stamped run directory.
+Accepts command-line arguments for workspace path, symbol filters, and replay parameters; outputs a JSON state file summarising trade counts and replay status.
+"""
 from __future__ import annotations
 
 import argparse

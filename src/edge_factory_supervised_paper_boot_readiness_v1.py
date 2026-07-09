@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Checks whether the supervised paper trading system is ready to boot by reading the latest JSON state files from capital governor, drift monitor, robustness refresh, damage decomposition, and other subsystem outputs and running a multi-gate readiness check.
+Outputs a JSON boot readiness report to a stamped directory indicating which gates passed and whether paper boot is approved.
+"""
 from __future__ import annotations
 
 import json

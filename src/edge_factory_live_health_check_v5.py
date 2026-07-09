@@ -1,3 +1,7 @@
+"""
+Reads live paper-run family CSV logs and the OKX market ticker API to assess the health of all running strategy families, including heartbeat staleness, open position mark-to-market, and global risk gate status.
+Outputs a health snapshot JSON and prints a formatted status table to stdout.
+"""
 from __future__ import annotations
 
 import argparse

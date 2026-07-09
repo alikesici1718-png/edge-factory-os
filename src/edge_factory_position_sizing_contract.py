@@ -1,3 +1,6 @@
+"""
+Generates a position sizing contract JSON from the capital governor blueprint, computing per-family fixed notionals as a fraction of base equity, and audits logger scripts for notional-related code patterns. Reads the governor blueprint and logger Python files; writes the contract JSON and an audit report to the edge_factory_position_sizing_contract output directory.
+"""
 from __future__ import annotations
 import argparse, json, re
 from pathlib import Path

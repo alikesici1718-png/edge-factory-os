@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Audits the global_paper_risk_manager_v4_config.py candidate file by compiling it, running it with --help, and checking for required argument markers and forbidden live-trading strings.
+Outputs a JSON audit state file to a stamped directory confirming whether the risk manager candidate is safe to deploy.
+"""
 from __future__ import annotations
 
 import json

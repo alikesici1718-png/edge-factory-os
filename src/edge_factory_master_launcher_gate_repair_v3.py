@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Rewrites the MASTER_UPPER_SYSTEM PowerShell launcher script to a gate-compliant version that starts only supervised paper trading windows, reading the existing launcher as input and producing a backed-up replacement.
+Validates the rewritten launcher by syntax-checking the file after writing.
+"""
 # EDGE_FACTORY_GATE_METADATA_START
 # gate_metadata_version: 1
 # gate_metadata_kind: non_behavioral_comment_block

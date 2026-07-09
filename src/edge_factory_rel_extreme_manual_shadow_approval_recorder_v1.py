@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Records a human operator's manual shadow approval decision for the rel_extreme_reversion_short candidate by reading the latest approval packet and preflight gate state and writing a signed approval record JSON. Accepts --approve and --approver CLI arguments; outputs the approval record to the edge_factory_rel_extreme_manual_shadow_approval_recorder_v1 directory without starting the shadow runtime.
+"""
 from __future__ import annotations
 
 import argparse

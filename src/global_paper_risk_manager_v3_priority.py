@@ -1,3 +1,7 @@
+"""
+Global paper risk manager (v3) that extends v2 with family priority scoring and backup-family rules, allowing high-priority families (impulse_long, old_short) to displace low-priority ones (weak_market_short) when position limits are reached.
+Runs in a continuous loop (or once with --once) and outputs gate decisions, risk snapshots, and trade-tracking CSVs to the configured output directory; no real orders are placed.
+"""
 from __future__ import annotations
 
 import argparse

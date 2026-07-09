@@ -1,3 +1,9 @@
+"""
+Pilot study testing whether large aggressive buy orders (top 5% by size, buyer-initiated) predict
+subsequent positive price movements on Binance perpetual futures (BTCUSDT, ETHUSDT, SOLUSDT,
+BNBUSDT, XRPUSDT) over 1-3-6 hour horizons using Lee-Radhakrishna-style size classification;
+downloads aggTrades data from Binance and outputs regression results with cost-adjusted metrics.
+"""
 # ON-TAAHHUT: Lee-Radhakrishna tarzi buyukluk siniflandirmasi.
 # Hipotez: Bir sembolde belirli bir zaman penceresinde "buyuk islem" (ust %5 boyut,
 # is_buyer_maker=False yani agresif alim) net akisi pozitifse, sonraki saatlerde

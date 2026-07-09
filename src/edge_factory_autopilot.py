@@ -1,3 +1,6 @@
+"""
+Upper-level orchestration layer for the Edge Factory OS that inspects the full workspace, scores the current factory stage, and produces a prioritized next-action queue. Reads master optimizer, portfolio, live, and bad-day outputs and writes an autopilot report, family lifecycle CSV, next actions CSV, and recommended system JSON.
+"""
 from __future__ import annotations
 
 import argparse

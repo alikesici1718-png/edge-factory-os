@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Decomposes P&L damage for active strategy families that failed rolling time-OOS validation. Reads the latest active family robustness refresh summary and OOS evidence locator outputs, then produces a per-family damage analysis report with capital action recommendations.
+"""
 from __future__ import annotations
 
 import json

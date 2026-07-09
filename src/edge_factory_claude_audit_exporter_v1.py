@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Collects and bundles Edge Factory OS source files, configs, and paper run outputs into a single consolidated Markdown audit export for Claude review. Reads a predefined list of code files, config JSONs, and the latest paper run logs, then writes a single combined Markdown file capped at a configurable character limit.
+"""
 from __future__ import annotations
 
 import csv

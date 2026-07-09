@@ -1,3 +1,7 @@
+"""
+Reads live paper-run family CSV logs (heartbeat, positions, trades, errors) and global risk manager outputs to assess the operational health of all running strategy families.
+Prints a health status table to stdout, flagging families as OK, WARN, or BAD based on heartbeat age and critical risk violations.
+"""
 from __future__ import annotations
 
 import argparse

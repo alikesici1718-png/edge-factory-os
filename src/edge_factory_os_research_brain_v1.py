@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Autonomous research task planner for the Edge Factory OS that reads the current recovery manifest, command center, and candidate lifecycle state to build a prioritized task queue. Outputs a research brain state JSON and task CSV to the edge_factory_os_research_brain_v1 directory; does not start trading, modify config, or promote strategies.
+"""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+OS command center overlay (v2) that reads the latest outputs from various OS submodules and the MASTER_UPPER_SYSTEM run directory to produce a consolidated read-only state snapshot, writing timestamped JSON/Markdown reports to edge_factory_os_command_center_v2_overlay/ in the workspace.
+"""
 from __future__ import annotations
 
 import json

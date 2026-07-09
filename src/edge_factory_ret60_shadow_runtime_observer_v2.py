@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Observes the ret60_reversal_short sandbox shadow paper runtime by reading the native events and closed trades CSVs from the live shadow paper folder, validating required fields, and summarising trade counts and PnL.
+Outputs a JSON observer state file to a stamped directory, confirming sandbox-only status and blocking live or active-paper promotion.
+"""
 from __future__ import annotations
 
 import json

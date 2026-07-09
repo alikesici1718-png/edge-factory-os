@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+OS lifecycle queue (v1) that reads the latest supervisor state and MASTER_UPPER_SYSTEM artifacts to build a prioritized task queue (with live_allowed / capital_change_allowed safety flags) and writes the queue as JSON/CSV/Markdown to a timestamped directory in the workspace.
+"""
 from __future__ import annotations
 
 import json

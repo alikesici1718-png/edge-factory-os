@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Extended v2 aggregator that reads state files from all registered Edge Factory OS components and produces a unified state index JSON in the edge_factory_os_state_index_v2 directory. Compared to v1, covers additional components including the offline experiment queue and contract validator.
+"""
 from __future__ import annotations
 
 import json

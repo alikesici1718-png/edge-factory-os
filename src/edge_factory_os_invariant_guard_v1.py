@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+OS invariant guard (v1) that reads live paper logger state from MASTER_UPPER_SYSTEM and enforces hard safety invariants (e.g. no unexpected live flag, no gate timeouts, healthy folder structure), emitting a gate-level pass/fail report written to a timestamped directory in the workspace.
+"""
 from __future__ import annotations
 
 import json

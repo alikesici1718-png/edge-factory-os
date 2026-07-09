@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Monitors the ret60_reversal_short shadow paper runtime for signal drift by reading the latest shadow runtime observer output and comparing live shadow trade metrics (PnL, return distribution, runtime modes) against expected sandbox-only behaviour.
+Outputs a JSON drift monitor state report to a stamped directory, with live and active-paper trading blocked.
+"""
 from __future__ import annotations
 
 import json

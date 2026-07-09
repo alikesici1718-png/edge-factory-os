@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Plans batch pipeline execution tasks for active strategy families by evaluating their current lifecycle state, research candidate status, and evidence locator outputs. Reads family lifecycle, evidence synthesis, and robustness refresh outputs and writes a prioritized batch pipeline plan for offline validation and research tasks.
+"""
 from __future__ import annotations
 
 import json

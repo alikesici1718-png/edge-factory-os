@@ -1,3 +1,6 @@
+"""
+Investigates worst-day portfolio performance by analyzing simulated trade CSVs from the master optimizer and guarded allocator outputs. Reads normalized trades and optional daily PnL CSVs, then computes per-family and per-coin breakdowns for bad days and outputs comparative summaries.
+"""
 from __future__ import annotations
 
 import argparse

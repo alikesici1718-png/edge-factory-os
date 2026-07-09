@@ -1,3 +1,7 @@
+"""
+Global paper risk manager (v1) that polls four family paper-run folders (old_short, impulse_long, market_relative_short, weak_market_short), builds a unified risk view of open positions and pending entries, and writes allow/block gate decisions based on configurable global and per-family position limits.
+Runs in a continuous loop (or once with --once) and outputs risk snapshot, gate decisions, open positions, pending entries, closed trades, and violations CSVs to the paper_run_gate directory; no real orders are placed.
+"""
 from __future__ import annotations
 
 import argparse

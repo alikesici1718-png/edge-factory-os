@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Learning controller for the Edge Factory OS research pipeline that reads candidate validation results, classifies failure modes, and appends structured lessons to a persistent JSONL memory log. Inputs are the latest research result artifacts; output is appended records in edge_factory_research_learning_memory_master.jsonl.
+"""
 from __future__ import annotations
 
 import json

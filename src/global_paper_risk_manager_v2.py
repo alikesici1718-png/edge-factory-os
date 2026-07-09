@@ -1,3 +1,7 @@
+"""
+Global paper risk manager (v2) that polls four family paper-run folders, enforces global and per-family position limits, infers trade side from family key, and writes gate decisions and risk snapshot CSV files; replaces v1 with improved pandas-based CSV normalisation.
+Runs in a continuous loop (or once with --once) and outputs the same file set as v1; no real orders are placed.
+"""
 from __future__ import annotations
 
 import argparse

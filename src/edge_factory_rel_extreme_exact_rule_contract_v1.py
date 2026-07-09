@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Produces a frozen exact-rule contract JSON for the rel_extreme_reversion_short candidate by reading the latest OOS robustness and variant selector artifacts and locking in the chosen parameter values. Outputs the contract JSON and a state file to the edge_factory_rel_extreme_exact_rule_contract_v1 directory.
+"""
 from __future__ import annotations
 
 import json

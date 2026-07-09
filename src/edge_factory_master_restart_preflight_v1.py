@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads the MASTER_UPPER_SYSTEM paper-run directory and family trade logs to perform a pre-restart preflight check, verifying that all family directories, gate files, and position state are safe before a system restart.
+Outputs a preflight report JSON to the edge_factory_master_restart_preflight_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Generates a recovery manifest JSON for the Edge Factory OS by reading the latest command center, invariant guard, and candidate lifecycle registry state files. Outputs a consolidated status snapshot with critical commands, do-not-do guards, and next-threshold triggers to the edge_factory_os_recovery_manifest_v1 directory.
+"""
 from __future__ import annotations
 
 import json

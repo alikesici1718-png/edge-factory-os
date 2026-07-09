@@ -1,3 +1,9 @@
+"""
+Live paper logger for the event-impulse-long portfolio on OKX that polls 1-minute candles via
+the OKX REST API, detects impulse-long signals from finalist strategies loaded from
+robust_strict_best_by_coin.csv, and simulates paper trade entries and exits with backtest-delay
+realism without placing real orders.
+"""
 from __future__ import annotations
 
 import argparse

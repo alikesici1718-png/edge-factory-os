@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads self-test output files from previous offline candidate pipeline runs and triages them into pass/warn/fail categories based on validation results and error signals.
+Outputs a triage summary JSON to the edge_factory_offline_candidate_selftest_triage_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Runs a self-test of the feature panel builder by executing it against a small candle data sample and validating the output panel schema. Reads the latest feature panel build plan JSON to locate the candle source file, invokes the builder logic, and writes a selftest state JSON with pass/fail results for required column presence and data quality checks.
+"""
 from __future__ import annotations
 
 import json

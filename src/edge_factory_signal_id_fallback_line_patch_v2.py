@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Patch script (v2) that locates the signal_id fallback block in global_paper_risk_manager_v3_priority.py and replaces it with a canonical fallback that constructs signal IDs matching logger-side naming conventions, backing up the file before modification.
+Outputs a JSON patch state report to a stamped directory; preview-only by gate metadata — direct apply requires explicit approval.
+"""
 # EDGE_FACTORY_GATE_METADATA_START
 # gate_metadata_version: 1
 # gate_metadata_kind: non_behavioral_comment_block

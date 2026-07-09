@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Generates a sandbox-only ret60_reversal_short shadow runtime engine Python file (v2) with the full signal-evaluation, entry/exit tracking, and CSV logging logic embedded as a code string, then writes it to the workspace.
+The produced engine file is blocked from live and active-paper use; it must pass the runtime engine auditor before it can be started in shadow mode.
+"""
 from __future__ import annotations
 
 import argparse

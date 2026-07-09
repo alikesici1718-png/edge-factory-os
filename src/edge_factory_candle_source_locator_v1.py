@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Scans the workspace to locate and validate OHLCV candle source CSV files for use in offline strategy research. Applies path heuristics to distinguish real candle files from paper/live/validation outputs, normalizes OKX 1-minute OHLCV files, and writes a candle source inventory report.
+"""
 from __future__ import annotations
 
 import json

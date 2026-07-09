@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Aggregates state from all major Edge Factory OS components (command center, autopilot v4, invariant guard, process watchdog, candidate registry, and others) into a single indexed summary. Outputs a consolidated state index JSON to the edge_factory_os_state_index_v1 directory.
+"""
 from __future__ import annotations
 
 import json

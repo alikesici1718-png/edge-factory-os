@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Replays the rel_extreme_reversion_short strategy rules against real 1-minute candle CSV files in the workspace, computing hourly close panels and simulating short entries based on coin and market relative-return thresholds. Outputs a replay state JSON and a closed-trades CSV to the edge_factory_rel_extreme_real_candle_replay_v1 directory.
+"""
 from __future__ import annotations
 
 import re

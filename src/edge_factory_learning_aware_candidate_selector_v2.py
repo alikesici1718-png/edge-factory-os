@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads the candidate idea bank ledger and research learning memory to score and rank offline strategy candidates against active master families, selecting the best candidates for further pipeline processing.
+Outputs ranked candidate selections as JSON to the edge_factory_learning_aware_candidate_selector_v2 workspace directory.
+"""
 from __future__ import annotations
 
 import json

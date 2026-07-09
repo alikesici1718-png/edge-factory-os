@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Supervisor module for the Edge Factory OS paper trading runtime that reads per-family CSV files (pending entries, open positions, closed trades, heartbeats) from the MASTER_UPPER_SYSTEM paper directory and produces a family-level health summary. Outputs a supervisor state JSON to a timestamped directory under edge_factory_os_supervisor_v1.
+"""
 from __future__ import annotations
 
 import json

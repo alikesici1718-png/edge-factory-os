@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Classifies errors from the paper run logs into network warnings, logic/safety errors, and unknown errors by scanning log CSVs and JSON files in the MASTER_UPPER_SYSTEM paper run directory. Reads global gate decisions, risk snapshots, and violation logs, then writes a classifier state JSON with severity labels and error counts.
+"""
 from __future__ import annotations
 
 import json

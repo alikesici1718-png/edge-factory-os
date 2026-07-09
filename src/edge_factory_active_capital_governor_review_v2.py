@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reviews the current active capital allocation policy for each strategy family by combining robustness refresh and damage decomposition outputs. Reads the latest robustness summary and damage decomposition CSVs and writes a capital governor review report with per-family allocation decisions and recommended actions.
+"""
 from __future__ import annotations
 
 import json

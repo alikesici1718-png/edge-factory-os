@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Converts a candidate result state JSON into a lifecycle transition decision (ARCHIVE, REJECT, WATCHLIST, KEEP_WAITING, etc.) by reading the candidate lifecycle registry and OS interface specs alongside the provided result artifact. Outputs an adapter state JSON with the previous and new lifecycle status to the edge_factory_result_to_lifecycle_adapter_v1 directory.
+"""
 from __future__ import annotations
 
 import argparse

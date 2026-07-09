@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Audits the quality of a built feature panel by checking required column presence, data completeness, and value range sanity. Reads the latest feature panel manifest JSON to locate the panel CSV/Parquet file, runs schema and statistical gate checks, and writes an audit report with pass/fail verdicts per gate.
+"""
 from __future__ import annotations
 
 import json

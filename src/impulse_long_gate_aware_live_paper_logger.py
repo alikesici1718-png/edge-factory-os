@@ -1,3 +1,8 @@
+"""
+Gate-aware live paper logger for the impulse_long strategy family that polls OKX 1-minute candles,
+checks the global gate decision before each entry, and logs simulated trades to the
+MASTER_UPPER_SYSTEM paper run directory without placing real orders.
+"""
 from __future__ import annotations
 
 import argparse

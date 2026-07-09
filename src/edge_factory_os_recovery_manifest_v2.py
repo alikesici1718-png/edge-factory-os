@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Generates an extended recovery manifest (v2) for the Edge Factory OS by aggregating the latest autopilot v4, command center, invariant guard, process watchdog, and candidate lifecycle registry states. Writes a consolidated manifest JSON with critical commands, safety guards, and next-action thresholds to the edge_factory_os_recovery_manifest_v2 directory.
+"""
 from __future__ import annotations
 
 import json

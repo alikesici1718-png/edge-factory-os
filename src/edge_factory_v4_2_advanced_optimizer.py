@@ -1,3 +1,7 @@
+"""
+Advanced optimizer (v4.2) that reads family trade CSV files from a base directory, computes per-strategy performance metrics (profit factor, max drawdown, Sharpe-like ratios), applies family-level position limits and priority weights, and outputs an optimised portfolio allocation JSON.
+Accepts command-line arguments for base directory, family config, max-per-family limits, and validation directory; outputs allocation results to a JSON file.
+"""
 from __future__ import annotations
 
 import argparse

@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Evaluates whether the ret60_reversal_short sandbox shadow runtime may be started by reading the latest granted manual approval record from the ledger and verifying it has not expired and has no live/active-paper permissions.
+Outputs a JSON gate state file indicating shadow_start_allowed and the expiry window, or records a block reason if approval is absent or expired.
+"""
 from __future__ import annotations
 
 import json

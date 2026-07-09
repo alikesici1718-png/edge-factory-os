@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Fills in artifact output paths for an offline experiment contract by reading the latest generated contract JSON and resolving standardized output file locations. Writes a completed contract JSON with all artifact_outputs fields populated under the candidate's output directory.
+"""
 from __future__ import annotations
 
 import argparse

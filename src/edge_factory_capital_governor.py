@@ -1,3 +1,6 @@
+"""
+Manages and enforces capital allocation policy across active strategy families by reading master optimizer, guarded allocator, and lifecycle outputs. Reads family lifecycle state and sizing contracts, applies baseline allocation rules, optionally launches logger processes via subprocess, and writes capital governor decisions and a recommended system configuration.
+"""
 from __future__ import annotations
 
 import argparse

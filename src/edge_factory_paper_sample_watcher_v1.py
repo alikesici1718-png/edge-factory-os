@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Watches paper trading sample accumulation across active strategy families by reading closed trade CSV files from the MASTER_UPPER_SYSTEM paper directory and comparing row counts against per-family thresholds. Outputs a sample watcher state JSON indicating whether each family has reached its drift-ready sample size.
+"""
 from __future__ import annotations
 
 import json

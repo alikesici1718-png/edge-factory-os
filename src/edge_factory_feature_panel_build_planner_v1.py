@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Plans the feature panel build step for an offline experiment by reading the data-bound runner request and locating the resolved candle source file. Reads the latest bound runner request JSON, samples the candle CSV to classify OHLCV columns, and writes a feature panel build plan JSON specifying the source file path and column mapping.
+"""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Audits the generated rel_extreme shadow logger adapter Python file by verifying required constants, required functions, and absence of forbidden API/live-trading tokens using AST parsing and py_compile. Reads the adapter path from the latest adapter builder manifest and writes an audit state JSON to the edge_factory_rel_extreme_shadow_adapter_implementation_auditor_v1 directory.
+"""
 from __future__ import annotations
 
 import ast

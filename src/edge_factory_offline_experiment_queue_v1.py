@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads the OS recovery manifest, research brain state, candidate lifecycle registry, and contract validator outputs to build a prioritized queue of allowed offline experiment tasks for each candidate.
+Outputs the task queue as a JSON file to the edge_factory_offline_experiment_queue_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import json

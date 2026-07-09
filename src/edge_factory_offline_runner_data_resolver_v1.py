@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Scans the workspace for available offline data directories (excluding live-paper and autopilot paths) and resolves which data sources can satisfy an offline runner request, reading the latest offline runner request JSON as input.
+Outputs a data resolution report JSON to the edge_factory_offline_runner_data_resolver_v1 workspace directory.
+"""
 from __future__ import annotations
 
 import argparse

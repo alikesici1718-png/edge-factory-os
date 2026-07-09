@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Final start gate for the rel_extreme_reversion_short shadow run that verifies manual approval, preflight gate v2 pass, and engine builder v2 state before emitting a shadow-start allowed/blocked verdict with the reference command. Reads approval, preflight, and engine builder state artifacts; writes a start gate state JSON to the edge_factory_rel_extreme_shadow_start_gate_v1 directory without executing the runtime.
+"""
 from __future__ import annotations
 
 import json

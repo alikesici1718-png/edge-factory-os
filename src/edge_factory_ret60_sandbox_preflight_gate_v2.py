@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Runs a sandbox preflight gate (v2) for the ret60_reversal_short shadow logger by checking the latest runtime-engine audit and manual approval records against a set of required gate conditions.
+Outputs a JSON gate state file indicating whether sandbox shadow runtime is cleared to start, with live and active-paper trading remaining blocked.
+"""
 from __future__ import annotations
 
 import json

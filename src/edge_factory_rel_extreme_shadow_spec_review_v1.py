@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reviews and formalises the trading rule specification for the rel_extreme_reversion_short shadow candidate by reading the OOS robustness results, exact rule contract, and variant selector state to produce a locked spec JSON. Outputs the spec review JSON and a state file to the edge_factory_rel_extreme_shadow_spec_review_v1 directory with all live/active-paper flags set to False.
+"""
 from __future__ import annotations
 
 import json

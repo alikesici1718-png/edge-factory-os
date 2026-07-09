@@ -1,3 +1,6 @@
+"""
+Generates a single-file runtime confirmation packet for the Edge Factory MASTER_UPPER_SYSTEM by collecting live paper run logs, gate decisions, risk snapshots, and process status outputs. Reads the paper run directory and runs diagnostic subprocess commands, then writes a consolidated Markdown confirmation file for Claude review.
+"""
 from __future__ import annotations
 
 import json

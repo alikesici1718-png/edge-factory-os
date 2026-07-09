@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Audits the schema of candidate trade CSV artifacts to ensure column classification is unambiguous before robustness validators are trusted. Reads source trade CSVs and validator output files, classifies each column as symbol, PnL, outcome, feature/parameter, or time, and writes a schema audit report with pass/fail verdicts per candidate.
+"""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Reads the candle replay CSV produced by the local candle replay runner and computes per-symbol signal diagnostic statistics for the ret60_reversal_short rule (hour-8 UTC, signal_ret60_bps >= 75).
+Outputs a per-symbol summary CSV and a JSON state report to a stamped directory showing signal hit counts and return distributions.
+"""
 from __future__ import annotations
 
 import json

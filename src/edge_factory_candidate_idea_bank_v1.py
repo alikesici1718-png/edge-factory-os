@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Persistent ledger for storing, querying, and managing candidate strategy idea entries for the Edge Factory research pipeline. Reads and appends to a JSONL master ledger file and exposes CLI commands to add ideas, list them, and check contract-readiness of each entry.
+"""
 from __future__ import annotations
 
 import argparse

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Plans and schedules drift monitoring checks for active strategy families based on rolling time-OOS validator outputs. Reads the latest rolling OOS summary CSVs and writes a drift monitor plan specifying which families require re-validation and minimum trade thresholds.
+"""
 from __future__ import annotations
 
 import json
