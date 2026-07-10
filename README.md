@@ -88,6 +88,10 @@ returns, because they failed the same null-baseline bar.
 This candidate ranked among the strongest discovered during the project, yet
 it was still rejected.
 
+![Percentile Threshold](artifacts/visualizations/percentile_threshold_example.png)
+
+*Note: raw null-distribution values were not persisted in artifacts; this shows only the summary statistics that were recorded (84th percentile vs. 95th percentile acceptance threshold).*
+
 ## Lessons Learned
 
 - A backtest showing 3-digit basis-point returns is not evidence of an edge
