@@ -1,4 +1,4 @@
-import hashlib
+﻿import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -7,14 +7,14 @@ from typing import Any, Dict, List
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_v3_horizontal_cross_closure_v1.py"
-ARTIFACT_PATH = "artifacts/strategy_closures/lucifer_15m_v3_horizontal_cross_closure_v1.json"
-EVALUATOR_PATH = "artifacts/strategy_evaluations/lucifer_15m_v3_horizontal_cross_evaluator_v1.json"
+ARTIFACT_PATH = "artifacts/strategy_closures/ema9_pivot_15m_v3_horizontal_cross_closure_v1.json"
+EVALUATOR_PATH = "artifacts/strategy_evaluations/ema9_pivot_15m_v3_horizontal_cross_evaluator_v1.json"
 
-STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_CLOSURE_CREATED"
-ARTIFACT_KIND = "LUCIFER_15M_V3_HORIZONTAL_CROSS_CLOSURE"
-EVALUATOR_STATUS = "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_EVALUATED"
-ROUTE = "LUCIFER_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3"
-CONFIG_ID = "lucifer_15m_v3_horizontal_pivot_cross_sl1_tp2"
+STATUS = "PASS_REPO_ONLY_EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_CLOSURE_CREATED"
+ARTIFACT_KIND = "EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_CLOSURE"
+EVALUATOR_STATUS = "PASS_REPO_ONLY_EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_EVALUATED"
+ROUTE = "EMA9_PIVOT_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3"
+CONFIG_ID = "ema9_pivot_15m_v3_horizontal_pivot_cross_sl1_tp2"
 
 EXPECTED_PRE_CLOSURE_HEAD = "074d6084d6d3b150e3e32977693f948caa2c53f6"
 EXPECTED_PRE_CLOSURE_TRACKED_PYTHON_COUNT = 943

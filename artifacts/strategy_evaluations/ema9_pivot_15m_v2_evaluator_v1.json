@@ -1,6 +1,6 @@
-{
-  "artifact_kind": "LUCIFER_15M_V2_EVALUATOR",
-  "config_id": "lucifer_15m_v2_stable_cross_trend_volume_sl1_tp2",
+﻿{
+  "artifact_kind": "EMA9_PIVOT_15M_V2_EVALUATOR",
+  "config_id": "ema9_pivot_15m_v2_stable_cross_trend_volume_sl1_tp2",
   "evaluator_findings": {
     "diagnostic_promising": false,
     "holdout_monthly_positive_rate": 0.142857,
@@ -14,7 +14,7 @@
       "validation_monthly_positive_rate_below_0_60",
       "null_baseline_not_passed"
     ],
-    "result_class": "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
+    "result_class": "EMA9_PIVOT_15M_V2_REJECTED_NO_FOLLOWUP",
     "safety_review_passed": true,
     "validation_closed_trades": 325,
     "validation_closed_trades_min_100_pass": true,
@@ -23,20 +23,20 @@
     "validation_null_percentile": 0.07
   },
   "evaluator_inputs": {
-    "execution_artifact": "artifacts/strategy_executions/lucifer_15m_v2_execution_v1.json",
+    "execution_artifact": "artifacts/strategy_executions/ema9_pivot_15m_v2_execution_v1.json",
     "execution_payload_hash_verified": true,
     "execution_payload_sha256_excluding_hash": "fb962e20d575af81d556f012ab0b06de637b9192366b1ef942466ea3bfd1c8b1",
     "execution_rerun": false,
-    "execution_status": "PASS_REPO_CODE_ONLY_LUCIFER_15M_V2_EXECUTED",
+    "execution_status": "PASS_REPO_CODE_ONLY_EMA9_PIVOT_15M_V2_EXECUTED",
     "metadata_read": "git HEAD, tracked Python count, and dirty path scope only",
     "panel_rows_read": false
   },
   "evaluator_policy_applied": {
     "allowed_result_classes": [
-      "LUCIFER_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
-      "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
-      "LUCIFER_15M_V2_INCONCLUSIVE_NEEDS_MORE_DATA",
-      "LUCIFER_15M_V2_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
+      "EMA9_PIVOT_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+      "EMA9_PIVOT_15M_V2_REJECTED_NO_FOLLOWUP",
+      "EMA9_PIVOT_15M_V2_INCONCLUSIVE_NEEDS_MORE_DATA",
+      "EMA9_PIVOT_15M_V2_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
     ],
     "diagnostic_promising_true_only_if_all_true": [
       "validation net > 0",
@@ -77,11 +77,11 @@
     },
     "volume_filter_blocked": 1883
   },
-  "module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_evaluator_v1.py",
-  "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_closure_v1.py",
+  "module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_evaluator_v1.py",
+  "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_closure_v1.py",
   "payload_sha256_excluding_hash": "701346b6123b2d3cdac2ed4951a1d6d62c2c6c87c74b79f0361f9c9fb273428a",
   "replacement_checks_all_true": true,
-  "route": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2",
+  "route": "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2",
   "safety_closure_constraints": {
     "candidate_generated": false,
     "capital_permission_granted": false,
@@ -93,7 +93,7 @@
   },
   "source_checkpoint": {
     "dirty_paths_during_artifact_creation": [
-      "tools/edge_factory_os_repo_only_lucifer_15m_v2_evaluator_v1.py"
+      "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_evaluator_v1.py"
     ],
     "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": true,
     "pre_evaluator_head": "af8590fd8b2e3f47458a0afddeec316122494a8f",
@@ -102,7 +102,7 @@
     "tracked_python_count_before_evaluator": 938,
     "tracked_python_count_verified_at_artifact_creation": 938
   },
-  "status": "PASS_REPO_ONLY_LUCIFER_15M_V2_EVALUATED",
+  "status": "PASS_REPO_ONLY_EMA9_PIVOT_15M_V2_EVALUATED",
   "validation_checks": {
     "artifact_path_equals_required_path": true,
     "diagnostic_promising_policy_applied": true,

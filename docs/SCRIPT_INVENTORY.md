@@ -1,4 +1,4 @@
-# Tools Directory — Script Inventory
+﻿# Tools Directory — Script Inventory
 
 Total: 839 files across 11 functional groups. Files are named
 `edge_factory_os_[repo_only_]<signal_or_subsystem>_<verb>_v<N>.py`; the
@@ -27,7 +27,7 @@ Read-only scripts that interpret execution artifacts and produce a structured
 evaluation JSON — pass/fail verdict, key metrics, null-baseline percentile.
 Each evaluator has a corresponding `_runner_` and `_closure_` partner in the
 same signal namespace. Examples: `*_evaluator_v1.py` under
-`binance_okx_overlap_*`, `crypto_15m_*`, `okx_88_symbol_*`, `lucifer_15m_*`.
+`binance_okx_overlap_*`, `crypto_15m_*`, `okx_88_symbol_*`, `ema9_pivot_15m_*`.
 
 ## Runners and Executors (177 files)
 

@@ -1,4 +1,4 @@
-import hashlib
+﻿import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -7,15 +7,15 @@ from typing import Any, Dict, List
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_stable_cross_closure_v1.py"
-ARTIFACT_PATH = "artifacts/strategy_closures/lucifer_15m_ema9_pivot_stable_cross_closure_v1.json"
-EVALUATOR_PATH = "artifacts/strategy_evaluations/lucifer_15m_ema9_pivot_stable_cross_evaluator_v1.json"
+ARTIFACT_PATH = "artifacts/strategy_closures/ema9_pivot_15m_ema9_pivot_stable_cross_closure_v1.json"
+EVALUATOR_PATH = "artifacts/strategy_evaluations/ema9_pivot_15m_ema9_pivot_stable_cross_evaluator_v1.json"
 
-STATUS = "PASS_REPO_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_CLOSURE_CREATED"
-ARTIFACT_KIND = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_CLOSURE"
-EVALUATOR_STATUS = "PASS_REPO_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EVALUATED"
-STRATEGY_NAME = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1"
-ROUTE_FAMILY = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE"
-CONFIG_ID = "lucifer_15m_ema9_pivot_stable_cross_sl1_tp2"
+STATUS = "PASS_REPO_ONLY_EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_CLOSURE_CREATED"
+ARTIFACT_KIND = "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_CLOSURE"
+EVALUATOR_STATUS = "PASS_REPO_ONLY_EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_EVALUATED"
+STRATEGY_NAME = "EMA9_PIVOT_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1"
+ROUTE_FAMILY = "EMA9_PIVOT_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE"
+CONFIG_ID = "ema9_pivot_15m_ema9_pivot_stable_cross_sl1_tp2"
 
 EXPECTED_PRE_CLOSURE_HEAD = "eb5b379f040627bc9d21be0ca2cf8eb2bec3f136"
 EXPECTED_PRE_CLOSURE_TRACKED_PYTHON_COUNT = 935

@@ -1,6 +1,6 @@
-{
-  "artifact_kind": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTION",
-  "config_id": "lucifer_15m_ema9_pivot_stable_cross_sl1_tp2",
+﻿{
+  "artifact_kind": "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTION",
+  "config_id": "ema9_pivot_15m_ema9_pivot_stable_cross_sl1_tp2",
   "diagnostic_limits": {
     "diagnostic_execution_only": true,
     "holdout_used_for_config_selection": false,
@@ -60,7 +60,7 @@
     "panel_review_artifact": "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json",
     "panel_review_classification": "PANEL_15M_REVIEW_PASS_VALID_FOR_READ_ONLY_EXTREME_MOVE_RESEARCH",
     "panel_review_status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
-    "preregistration_artifact": "artifacts/research_preregistrations/lucifer_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json",
+    "preregistration_artifact": "artifacts/research_preregistrations/ema9_pivot_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json",
     "rows_outside_full_window_skipped": 0,
     "symbol_count": 81,
     "symbols": [
@@ -160,8 +160,8 @@
     "no_nan_or_inf": true,
     "signal_accounting_balanced": true
   },
-  "module": "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_execution_v1.py",
-  "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_evaluator_v1.py",
+  "module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_ema9_pivot_stable_cross_execution_v1.py",
+  "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_ema9_pivot_stable_cross_evaluator_v1.py",
   "no_lookahead_checks": {
     "entry_at_next_15m_open": true,
     "no_other_parameters": true,
@@ -710,7 +710,7 @@
     "stable_signal_count": 17716
   },
   "replacement_checks_all_true": true,
-  "route_family": "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE",
+  "route_family": "EMA9_PIVOT_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE",
   "safety_review": {
     "filters_enabled": false,
     "no_candidate": true,
@@ -763,15 +763,15 @@
       "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED"
     },
     "preregistration": {
-      "path": "artifacts/research_preregistrations/lucifer_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json",
+      "path": "artifacts/research_preregistrations/ema9_pivot_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json",
       "payload_hash_verified": true,
       "payload_sha256_excluding_hash": "096ead2741eac5b954bdbb4fb1f848bb9d09a9c4ebe32ec52ec70f3f9333c296",
-      "status": "PASS_REPO_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT_CREATED"
+      "status": "PASS_REPO_ONLY_EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT_CREATED"
     }
   },
   "source_checkpoint": {
     "dirty_paths_during_artifact_creation": [
-      "tools/edge_factory_os_repo_only_lucifer_15m_ema9_pivot_stable_cross_execution_v1.py"
+      "tools/edge_factory_os_repo_only_ema9_pivot_15m_ema9_pivot_stable_cross_execution_v1.py"
     ],
     "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": true,
     "pre_execution_head": "eef5b5b8847f453ba5fa8d69342452dce439edbb",
@@ -1447,8 +1447,8 @@
       "start_utc": "2024-07-01T00:00:00Z"
     }
   },
-  "status": "PASS_REPO_CODE_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTED",
-  "strategy_name": "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1",
+  "status": "PASS_REPO_CODE_ONLY_EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTED",
+  "strategy_name": "EMA9_PIVOT_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1",
   "symbol_execution_records": {
     "1INCHUSDT": {
       "accepted_signals_by_split": {

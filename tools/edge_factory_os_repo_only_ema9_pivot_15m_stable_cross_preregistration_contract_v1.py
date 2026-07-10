@@ -1,4 +1,4 @@
-import hashlib
+﻿import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -7,14 +7,14 @@ from typing import Any, Dict, List
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_stable_cross_preregistration_contract_v1.py"
-ARTIFACT_PATH = "artifacts/research_preregistrations/lucifer_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json"
+ARTIFACT_PATH = "artifacts/research_preregistrations/ema9_pivot_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json"
 PANEL_REVIEW_PATH = "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json"
 
-STATUS = "PASS_REPO_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT_CREATED"
-ARTIFACT_KIND = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT"
-STRATEGY_NAME = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1"
-ROUTE_FAMILY = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE"
-CONFIG_ID = "lucifer_15m_ema9_pivot_stable_cross_sl1_tp2"
+STATUS = "PASS_REPO_ONLY_EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT_CREATED"
+ARTIFACT_KIND = "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT"
+STRATEGY_NAME = "EMA9_PIVOT_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1"
+ROUTE_FAMILY = "EMA9_PIVOT_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE"
+CONFIG_ID = "ema9_pivot_15m_ema9_pivot_stable_cross_sl1_tp2"
 TIMEFRAME = "15m"
 
 ROUTE_START_HEAD = "76887a956490cf41eb71da99ef1b0a1e2cabf4d8"
@@ -242,10 +242,10 @@ def build_payload() -> Dict[str, Any]:
                 "safety review passes",
             ],
             "allowed_result_classes": [
-                "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
-                "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
-                "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_INCONCLUSIVE_NEEDS_MORE_DATA",
-                "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE",
+                "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+                "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+                "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_INCONCLUSIVE_NEEDS_MORE_DATA",
+                "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE",
             ],
         },
         "forbidden_actions_confirmed_false": {

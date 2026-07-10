@@ -1,4 +1,4 @@
-import csv
+﻿import csv
 import gzip
 import hashlib
 import json
@@ -13,23 +13,23 @@ from typing import Any, Deque, Dict, List, Optional, Sequence, Tuple
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = "tools/edge_factory_os_repo_only_ema9_pivot_15m_stable_cross_execution_v1.py"
-ARTIFACT_PATH = "artifacts/strategy_executions/lucifer_15m_ema9_pivot_stable_cross_execution_v1.json"
-PREREG_PATH = "artifacts/research_preregistrations/lucifer_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json"
+ARTIFACT_PATH = "artifacts/strategy_executions/ema9_pivot_15m_ema9_pivot_stable_cross_execution_v1.json"
+PREREG_PATH = "artifacts/research_preregistrations/ema9_pivot_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json"
 PANEL_REVIEW_PATH = "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json"
 PANEL_DIR = Path(
     r"C:\Users\alike\OneDrive\Desktop\edge_lab_new"
     r"\edge_factory_os_repo_only_binance_okx_overlap_81_symbol_15m_panel_build_v1\panel_15m_by_symbol"
 )
 
-STATUS = "PASS_REPO_CODE_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTED"
-ARTIFACT_KIND = "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTION"
-PREREG_STATUS = "PASS_REPO_ONLY_LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT_CREATED"
+STATUS = "PASS_REPO_CODE_ONLY_EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTED"
+ARTIFACT_KIND = "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_EXECUTION"
+PREREG_STATUS = "PASS_REPO_ONLY_EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_PREREGISTRATION_CONTRACT_CREATED"
 PANEL_STATUS = "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED"
 PANEL_CLASSIFICATION = "PANEL_15M_REVIEW_PASS_VALID_FOR_READ_ONLY_EXTREME_MOVE_RESEARCH"
 
-STRATEGY_NAME = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1"
-ROUTE_FAMILY = "LUCIFER_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE"
-CONFIG_ID = "lucifer_15m_ema9_pivot_stable_cross_sl1_tp2"
+STRATEGY_NAME = "EMA9_PIVOT_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_V1"
+ROUTE_FAMILY = "EMA9_PIVOT_EMA9_PIVOT_STABLE_CROSS_TP_SL_15M_BASELINE"
+CONFIG_ID = "ema9_pivot_15m_ema9_pivot_stable_cross_sl1_tp2"
 TIMEFRAME = "15m"
 
 EXPECTED_PRE_EXECUTION_HEAD = "eef5b5b8847f453ba5fa8d69342452dce439edbb"
@@ -190,7 +190,7 @@ def finite_or_none(value: Any) -> bool:
 
 
 def symbol_seed(symbol: str, run_index: int) -> int:
-    digest = hashlib.sha256(f"{symbol}:{run_index}:lucifer-null".encode("utf-8")).hexdigest()
+    digest = hashlib.sha256(f"{symbol}:{run_index}:ema9_pivot-null".encode("utf-8")).hexdigest()
     return int(digest[:16], 16)
 
 

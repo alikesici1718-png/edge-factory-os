@@ -1,15 +1,15 @@
-{
-  "artifact_kind": "LUCIFER_15M_V2_CLOSURE",
+﻿{
+  "artifact_kind": "EMA9_PIVOT_15M_V2_CLOSURE",
   "closure_inputs": {
-    "evaluator_artifact": "artifacts/strategy_evaluations/lucifer_15m_v2_evaluator_v1.json",
+    "evaluator_artifact": "artifacts/strategy_evaluations/ema9_pivot_15m_v2_evaluator_v1.json",
     "evaluator_payload_hash_verified": true,
     "evaluator_payload_sha256_excluding_hash": "701346b6123b2d3cdac2ed4951a1d6d62c2c6c87c74b79f0361f9c9fb273428a",
-    "evaluator_status": "PASS_REPO_ONLY_LUCIFER_15M_V2_EVALUATED",
+    "evaluator_status": "PASS_REPO_ONLY_EMA9_PIVOT_15M_V2_EVALUATED",
     "execution_rerun": false,
     "panel_rows_read": false
   },
   "closure_reason": "Route closed after evaluator. The evaluator result is preserved exactly; this V2 structural repair test grants no candidate, edge claim, family release, runtime, live, or capital permission.",
-  "config_id": "lucifer_15m_v2_stable_cross_trend_volume_sl1_tp2",
+  "config_id": "ema9_pivot_15m_v2_stable_cross_trend_volume_sl1_tp2",
   "execution_metric_snapshot_preserved_from_evaluator": {
     "accepted_signals": 1253,
     "both_hit_same_bar_count": 17,
@@ -53,7 +53,7 @@
         "validation_monthly_positive_rate_below_0_60",
         "null_baseline_not_passed"
       ],
-      "result_class": "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
+      "result_class": "EMA9_PIVOT_15M_V2_REJECTED_NO_FOLLOWUP",
       "safety_review_passed": true,
       "validation_closed_trades": 325,
       "validation_closed_trades_min_100_pass": true,
@@ -61,7 +61,7 @@
       "validation_net_bps": -36.923077,
       "validation_null_percentile": 0.07
     },
-    "result_class": "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP"
+    "result_class": "EMA9_PIVOT_15M_V2_REJECTED_NO_FOLLOWUP"
   },
   "forbidden_actions_confirmed_false": {
     "candidate_generated": false,
@@ -79,7 +79,7 @@
     "private_api_used": false,
     "runtime_permission_granted": false
   },
-  "module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_closure_v1.py",
+  "module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_closure_v1.py",
   "next_module": null,
   "payload_sha256_excluding_hash": "5907e150c0e21e9aa728866d1b2f009ac7722957b8734df2ce2955e335948f81",
   "permissions": {
@@ -92,11 +92,11 @@
     "runtime_permission_granted": false
   },
   "replacement_checks_all_true": true,
-  "route": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2",
+  "route": "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2",
   "route_closed": true,
   "source_checkpoint": {
     "dirty_paths_during_artifact_creation": [
-      "tools/edge_factory_os_repo_only_lucifer_15m_v2_closure_v1.py"
+      "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_closure_v1.py"
     ],
     "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": true,
     "pre_closure_head": "9516123e858e6746ec7c6947c2e24b23bfeebaec",
@@ -105,7 +105,7 @@
     "tracked_python_count_before_closure": 939,
     "tracked_python_count_verified_at_artifact_creation": 939
   },
-  "status": "PASS_REPO_ONLY_LUCIFER_15M_V2_CLOSURE_CREATED",
+  "status": "PASS_REPO_ONLY_EMA9_PIVOT_15M_V2_CLOSURE_CREATED",
   "validation_checks": {
     "artifact_path_equals_required_path": true,
     "evaluator_artifact_loaded": true,

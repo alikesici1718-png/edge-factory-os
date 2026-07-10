@@ -1,15 +1,15 @@
-{
-  "artifact_kind": "LUCIFER_15M_V3_HORIZONTAL_CROSS_CLOSURE",
+﻿{
+  "artifact_kind": "EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_CLOSURE",
   "closure_inputs": {
-    "evaluator_artifact": "artifacts/strategy_evaluations/lucifer_15m_v3_horizontal_cross_evaluator_v1.json",
+    "evaluator_artifact": "artifacts/strategy_evaluations/ema9_pivot_15m_v3_horizontal_cross_evaluator_v1.json",
     "evaluator_payload_hash_verified": true,
     "evaluator_payload_sha256_excluding_hash": "4445d5650518e922620ea862e205e594e715715128b05ea711b39e806a2a9f37",
-    "evaluator_status": "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_EVALUATED",
+    "evaluator_status": "PASS_REPO_ONLY_EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_EVALUATED",
     "execution_rerun": false,
     "panel_rows_read": false
   },
   "closure_reason": "Route closed after evaluator. The evaluator result is preserved exactly; this V3 horizontal-only pivot cross correction grants no candidate, edge claim, family release, runtime, live, or capital permission.",
-  "config_id": "lucifer_15m_v3_horizontal_pivot_cross_sl1_tp2",
+  "config_id": "ema9_pivot_15m_v3_horizontal_pivot_cross_sl1_tp2",
   "execution_metric_snapshot_preserved_from_evaluator": {
     "accepted_signals": 17708,
     "both_hit_same_bar_count": 48,
@@ -53,7 +53,7 @@
         "validation_monthly_positive_rate_below_0_60",
         "null_baseline_not_passed"
       ],
-      "result_class": "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
+      "result_class": "EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
       "safety_review_passed": true,
       "validation_closed_trades": 4746,
       "validation_closed_trades_min_100_pass": true,
@@ -61,7 +61,7 @@
       "validation_net_bps": -20.948167,
       "validation_null_percentile": 0.22
     },
-    "result_class": "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP"
+    "result_class": "EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP"
   },
   "forbidden_actions_confirmed_false": {
     "candidate_generated": false,
@@ -80,7 +80,7 @@
     "private_api_used": false,
     "runtime_permission_granted": false
   },
-  "module": "tools/edge_factory_os_repo_only_lucifer_15m_v3_horizontal_cross_closure_v1.py",
+  "module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v3_horizontal_cross_closure_v1.py",
   "next_module": null,
   "payload_sha256_excluding_hash": "800babe279ad36ce6f915621b2c7606e920fdef3db0922817d824e3eafa322fd",
   "permissions": {
@@ -93,11 +93,11 @@
     "runtime_permission_granted": false
   },
   "replacement_checks_all_true": true,
-  "route": "LUCIFER_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3",
+  "route": "EMA9_PIVOT_15M_EMA9_HORIZONTAL_PIVOT_CROSS_TP_SL_V3",
   "route_closed": true,
   "source_checkpoint": {
     "dirty_paths_during_artifact_creation": [
-      "tools/edge_factory_os_repo_only_lucifer_15m_v3_horizontal_cross_closure_v1.py"
+      "tools/edge_factory_os_repo_only_ema9_pivot_15m_v3_horizontal_cross_closure_v1.py"
     ],
     "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": true,
     "pre_closure_head": "074d6084d6d3b150e3e32977693f948caa2c53f6",
@@ -106,7 +106,7 @@
     "tracked_python_count_before_closure": 943,
     "tracked_python_count_verified_at_artifact_creation": 943
   },
-  "status": "PASS_REPO_ONLY_LUCIFER_15M_V3_HORIZONTAL_CROSS_CLOSURE_CREATED",
+  "status": "PASS_REPO_ONLY_EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_CLOSURE_CREATED",
   "validation_checks": {
     "artifact_path_equals_required_path": true,
     "evaluator_artifact_loaded": true,

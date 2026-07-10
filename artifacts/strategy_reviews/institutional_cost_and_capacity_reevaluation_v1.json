@@ -1,4 +1,4 @@
-{
+﻿{
   "artifact_inventory": {
     "allowed_artifact_directories": [
       "strategy_executions",
@@ -25,7 +25,7 @@
       "COINALYZE_LONG_LIQUIDATION_FLUSH": 7,
       "FUNDING_OR_BASIS_CARRY": 35,
       "LIQUIDITY_SWEEP_REVERSAL": 7,
-      "LUCIFER_EMA_PIVOT": 12,
+      "EMA9_PIVOT_EMA_PIVOT": 12,
       "OLD_SHORT_CLEAN_ROOM": 7,
       "REGIME_BREAKOUT_MOMENTUM": 4,
       "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY": 43
@@ -84,7 +84,7 @@
       "top_symbol_concentration": 302.0,
       "trade_count": 13224.0
     },
-    "LUCIFER_EMA_PIVOT": {
+    "EMA9_PIVOT_EMA_PIVOT": {
       "classification": "MEDIUM_CAPACITY_PLAUSIBLE",
       "top_3_symbol_concentration": null,
       "top_symbol_concentration": 278.0,
@@ -226,7 +226,7 @@
       "gross_pnl_available": true,
       "max_total_cost_usdt": 2624.366427
     },
-    "LUCIFER_EMA_PIVOT": {
+    "EMA9_PIVOT_EMA_PIVOT": {
       "best_gross_pnl_usdt": null,
       "best_net_pnl_usdt": null,
       "classification": "UNKNOWN_MISSING_GROSS_COST_FIELDS",
@@ -647,35 +647,35 @@
       "trade_count": 13224.0,
       "worst_month_bps": -2425.00853
     },
-    "LUCIFER_EMA_PIVOT": {
+    "EMA9_PIVOT_EMA_PIVOT": {
       "artifact_count": 12,
       "artifact_paths": [
-        "artifacts/strategy_executions/lucifer_15m_ema9_pivot_stable_cross_execution_v1.json",
-        "artifacts/strategy_executions/lucifer_15m_v2_execution_v1.json",
-        "artifacts/strategy_executions/lucifer_15m_v3_horizontal_cross_execution_v1.json",
-        "artifacts/strategy_evaluations/lucifer_15m_ema9_pivot_stable_cross_evaluator_v1.json",
-        "artifacts/strategy_evaluations/lucifer_15m_v2_evaluator_v1.json",
-        "artifacts/strategy_evaluations/lucifer_15m_v3_horizontal_cross_evaluator_v1.json",
-        "artifacts/strategy_closures/lucifer_15m_ema9_pivot_stable_cross_closure_v1.json",
-        "artifacts/strategy_closures/lucifer_15m_v2_closure_v1.json",
-        "artifacts/strategy_closures/lucifer_15m_v3_horizontal_cross_closure_v1.json",
-        "artifacts/research_preregistrations/lucifer_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json",
-        "artifacts/research_preregistrations/lucifer_15m_v2_preregistration_contract_v1.json",
-        "artifacts/research_preregistrations/lucifer_15m_v3_horizontal_cross_preregistration_contract_v1.json"
+        "artifacts/strategy_executions/ema9_pivot_15m_ema9_pivot_stable_cross_execution_v1.json",
+        "artifacts/strategy_executions/ema9_pivot_15m_v2_execution_v1.json",
+        "artifacts/strategy_executions/ema9_pivot_15m_v3_horizontal_cross_execution_v1.json",
+        "artifacts/strategy_evaluations/ema9_pivot_15m_ema9_pivot_stable_cross_evaluator_v1.json",
+        "artifacts/strategy_evaluations/ema9_pivot_15m_v2_evaluator_v1.json",
+        "artifacts/strategy_evaluations/ema9_pivot_15m_v3_horizontal_cross_evaluator_v1.json",
+        "artifacts/strategy_closures/ema9_pivot_15m_ema9_pivot_stable_cross_closure_v1.json",
+        "artifacts/strategy_closures/ema9_pivot_15m_v2_closure_v1.json",
+        "artifacts/strategy_closures/ema9_pivot_15m_v3_horizontal_cross_closure_v1.json",
+        "artifacts/research_preregistrations/ema9_pivot_15m_ema9_pivot_stable_cross_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/ema9_pivot_15m_v2_preregistration_contract_v1.json",
+        "artifacts/research_preregistrations/ema9_pivot_15m_v3_horizontal_cross_preregistration_contract_v1.json"
       ],
       "artifact_statuses_or_classes": [
         "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
         "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
         "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
-        "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
-        "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
-        "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
-        "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
-        "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
-        "LUCIFER_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
-        "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
-        "LUCIFER_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
-        "LUCIFER_15M_V3_HORIZONTAL_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE"
+        "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+        "EMA9_PIVOT_15M_V2_REJECTED_NO_FOLLOWUP",
+        "EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
+        "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+        "EMA9_PIVOT_15M_V2_REJECTED_NO_FOLLOWUP",
+        "EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_REJECTED_NO_FOLLOWUP",
+        "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+        "EMA9_PIVOT_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+        "EMA9_PIVOT_15M_V3_HORIZONTAL_CROSS_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE"
       ],
       "best_cost_as_share_of_gross_pnl": null,
       "best_gross_pnl_usdt": null,
@@ -686,14 +686,14 @@
       "capacity_classification": "MEDIUM_CAPACITY_PLAUSIBLE",
       "cost_scenario_estimates": null,
       "cost_sensitivity_classification": "UNKNOWN_MISSING_GROSS_COST_FIELDS",
-      "family": "LUCIFER_EMA_PIVOT",
+      "family": "EMA9_PIVOT_EMA_PIVOT",
       "fee_stress_2x_net_bps": null,
       "gross_pnl_available": false,
       "institutional_relevance_classification": "INCONCLUSIVE",
       "interpretation": {
         "data_missing": [],
         "evidence_blocking": [
-          "Known fact preserved: Lucifer variants were negative."
+          "Known fact preserved: ema9_pivot variants were negative."
         ],
         "evidence_supporting": [],
         "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP",
@@ -1002,11 +1002,11 @@
       "evidence_supporting": [],
       "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP"
     },
-    "LUCIFER_EMA_PIVOT": {
+    "EMA9_PIVOT_EMA_PIVOT": {
       "classification": "INCONCLUSIVE",
       "data_missing": [],
       "evidence_blocking": [
-        "Known fact preserved: Lucifer variants were negative."
+        "Known fact preserved: ema9_pivot variants were negative."
       ],
       "evidence_supporting": [],
       "next_allowed_step": "NO_FAMILY_SPECIFIC_STEP"
@@ -1121,9 +1121,9 @@
     },
     {
       "cost_sensitivity_classification": "UNKNOWN_MISSING_GROSS_COST_FIELDS",
-      "family": "LUCIFER_EMA_PIVOT",
+      "family": "EMA9_PIVOT_EMA_PIVOT",
       "institutional_relevance_classification": "INCONCLUSIVE",
-      "primary_blocker": "Known fact preserved: Lucifer variants were negative."
+      "primary_blocker": "Known fact preserved: ema9_pivot variants were negative."
     },
     {
       "cost_sensitivity_classification": "NET_POSITIVE_BUT_NULL_FAILED",

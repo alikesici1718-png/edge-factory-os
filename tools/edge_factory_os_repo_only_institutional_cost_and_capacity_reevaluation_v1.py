@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Institutional cost and capacity reevaluation over existing artifacts only.
 
 Meta-evaluation only. This module reads repo JSON artifacts and does not read
@@ -44,7 +44,7 @@ ALLOWED_ARTIFACT_DIRS = [
 FAMILIES = [
     "FUNDING_OR_BASIS_CARRY",
     "OLD_SHORT_CLEAN_ROOM",
-    "LUCIFER_EMA_PIVOT",
+    "EMA9_PIVOT_EMA_PIVOT",
     "REGIME_BREAKOUT_MOMENTUM",
     "BETA_NEUTRAL_RESIDUAL_MR",
     "LIQUIDITY_SWEEP_REVERSAL",
@@ -205,7 +205,7 @@ def family_for_path(path: str) -> str | None:
         return "BETA_NEUTRAL_RESIDUAL_MR"
     if "regime_breakout_momentum" in lower:
         return "REGIME_BREAKOUT_MOMENTUM"
-    if "lucifer" in lower or "ema9_pivot_15m" in lower:
+    if "ema9_pivot" in lower or "ema9_pivot_15m" in lower:
         return "EMA9_PIVOT_15M"
     if "old_short" in lower:
         return "OLD_SHORT_CLEAN_ROOM"
@@ -386,7 +386,7 @@ def capacity_classification(family: str, summary: dict[str, Any]) -> str:
         return "MEDIUM_CAPACITY_PLAUSIBLE"
     if family == "COINALYZE_LONG_LIQUIDATION_FLUSH":
         return "LOW_CAPACITY_OR_MICROSTRUCTURE_LIMITED"
-    if family in ("LUCIFER_EMA_PIVOT", "REGIME_BREAKOUT_MOMENTUM", "LIQUIDITY_SWEEP_REVERSAL", "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY"):
+    if family in ("EMA9_PIVOT_EMA_PIVOT", "REGIME_BREAKOUT_MOMENTUM", "LIQUIDITY_SWEEP_REVERSAL", "RESIDUAL_SWEEP_CONFIRMATION_TRAP_QUALITY"):
         return "LOW_CAPACITY_OR_MICROSTRUCTURE_LIMITED" if trade_count and trade_count < 1000 else "MEDIUM_CAPACITY_PLAUSIBLE"
     if concentration is not None and concentration > 0.50:
         return "LOW_CAPACITY_OR_MICROSTRUCTURE_LIMITED"
@@ -449,8 +449,8 @@ def family_notes(family: str, summary: dict[str, Any], cost_class: str, relevanc
         notes["evidence_blocking"].append("Known fact preserved: regime breakout momentum was heavily negative.")
     elif family == "LIQUIDITY_SWEEP_REVERSAL":
         notes["evidence_blocking"].append("Known fact preserved: repaired liquidity sweep execution was heavily negative.")
-    elif family == "LUCIFER_EMA_PIVOT":
-        notes["evidence_blocking"].append("Known fact preserved: Lucifer variants were negative.")
+    elif family == "EMA9_PIVOT_EMA_PIVOT":
+        notes["evidence_blocking"].append("Known fact preserved: ema9_pivot variants were negative.")
     elif family == "OLD_SHORT_CLEAN_ROOM":
         notes["evidence_blocking"].append("Known fact preserved: old_short clean-room V2 was rejected after corrected accounting.")
     if relevance == "REJECTED_NOT_WORTHY" and not notes["evidence_blocking"]:

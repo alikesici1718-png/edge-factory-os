@@ -1,6 +1,6 @@
-{
-  "artifact_kind": "LUCIFER_15M_V2_PREREGISTRATION_CONTRACT",
-  "config_id": "lucifer_15m_v2_stable_cross_trend_volume_sl1_tp2",
+﻿{
+  "artifact_kind": "EMA9_PIVOT_15M_V2_PREREGISTRATION_CONTRACT",
+  "config_id": "ema9_pivot_15m_v2_stable_cross_trend_volume_sl1_tp2",
   "cycle": [
     "preregistration",
     "execution",
@@ -33,10 +33,10 @@
   },
   "evaluator_policy": {
     "allowed_result_classes": [
-      "LUCIFER_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
-      "LUCIFER_15M_V2_REJECTED_NO_FOLLOWUP",
-      "LUCIFER_15M_V2_INCONCLUSIVE_NEEDS_MORE_DATA",
-      "LUCIFER_15M_V2_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
+      "EMA9_PIVOT_15M_V2_DIAGNOSTIC_PROMISING_NO_EDGE_NO_LIVE",
+      "EMA9_PIVOT_15M_V2_REJECTED_NO_FOLLOWUP",
+      "EMA9_PIVOT_15M_V2_INCONCLUSIVE_NEEDS_MORE_DATA",
+      "EMA9_PIVOT_15M_V2_INVALIDATED_BY_LOOKAHEAD_OR_INTEGRITY_FAILURE"
     ],
     "diagnostic_promising_true_only_if_all_true": [
       "validation net > 0",
@@ -103,8 +103,8 @@
     "no-lookahead checks",
     "pivot confirmation delay checks"
   ],
-  "module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_preregistration_contract_v1.py",
-  "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_execution_v1.py",
+  "module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_preregistration_contract_v1.py",
+  "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_execution_v1.py",
   "null_baseline_contract": {
     "method": "deterministic timestamp/block shuffle null",
     "pass_rule": "validation percentile >= 0.95",
@@ -129,12 +129,12 @@
     "tradeable_level_rule": "bar_index - level_confirmed_bar_index >= minStableBars"
   },
   "replacement_checks_all_true": true,
-  "route": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2",
+  "route": "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2",
   "source_checkpoint": {
     "actual_clean_head": "d0972f46f9ab0963e2fdcf235652204d68deaddd",
     "actual_head_verified_at_artifact_creation": "d0972f46f9ab0963e2fdcf235652204d68deaddd",
     "dirty_paths_during_artifact_creation": [
-      "tools/edge_factory_os_repo_only_lucifer_15m_v2_preregistration_contract_v1.py"
+      "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_preregistration_contract_v1.py"
     ],
     "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": true,
     "repo_clean_before_route_start": true,
@@ -156,7 +156,7 @@
       "start_utc": "2024-07-01T00:00:00Z"
     }
   },
-  "status": "PASS_REPO_ONLY_LUCIFER_15M_V2_PREREGISTRATION_CONTRACT_CREATED",
+  "status": "PASS_REPO_ONLY_EMA9_PIVOT_15M_V2_PREREGISTRATION_CONTRACT_CREATED",
   "structural_filters": {
     "atr_stop_used": false,
     "candle_close_filter_used": false,
@@ -173,7 +173,7 @@
     "not_parameter_optimization": true,
     "prior_closed_trades": 17714,
     "prior_holdout_net_bps": -19.075924,
-    "prior_result_class": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
+    "prior_result_class": "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_REJECTED_NO_FOLLOWUP",
     "prior_total_signals": 20055,
     "prior_validation_net_bps": -20.969033,
     "structural_repair_reason": "V1 likely over-traded and missed the intended visual quality filter."

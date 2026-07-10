@@ -1,6 +1,6 @@
-{
-  "artifact_kind": "LUCIFER_15M_V2_EXECUTION",
-  "config_id": "lucifer_15m_v2_stable_cross_trend_volume_sl1_tp2",
+﻿{
+  "artifact_kind": "EMA9_PIVOT_15M_V2_EXECUTION",
+  "config_id": "ema9_pivot_15m_v2_stable_cross_trend_volume_sl1_tp2",
   "diagnostic_limits": {
     "holdout_used_for_config_selection": false,
     "no_candidate": true,
@@ -64,7 +64,7 @@
     "panel_review_artifact": "artifacts/panel_build_reviews/binance_okx_overlap_81_symbol_15m_panel_review_after_build_v1.json",
     "panel_review_classification": "PANEL_15M_REVIEW_PASS_VALID_FOR_READ_ONLY_EXTREME_MOVE_RESEARCH",
     "panel_review_status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED",
-    "preregistration_artifact": "artifacts/research_preregistrations/lucifer_15m_v2_preregistration_contract_v1.json",
+    "preregistration_artifact": "artifacts/research_preregistrations/ema9_pivot_15m_v2_preregistration_contract_v1.json",
     "rows_outside_full_window_skipped": 0,
     "symbol_count": 81,
     "symbols": [
@@ -164,8 +164,8 @@
     "no_nan_or_inf": true,
     "raw_cross_accounting_balanced": true
   },
-  "module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_execution_v1.py",
-  "next_module": "tools/edge_factory_os_repo_only_lucifer_15m_v2_evaluator_v1.py",
+  "module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_execution_v1.py",
+  "next_module": "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_evaluator_v1.py",
   "no_lookahead_checks": {
     "entry_at_next_15m_open": true,
     "level_did_not_change_current_or_previous_bar_at_accepted_signal": true,
@@ -715,7 +715,7 @@
     "stable_signal_count": 1253
   },
   "replacement_checks_all_true": true,
-  "route": "LUCIFER_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2",
+  "route": "EMA9_PIVOT_15M_EMA9_PIVOT_STABLE_CROSS_TREND_VOLUME_TP_SL_V2",
   "safety_review": {
     "atr_stop_used": false,
     "candle_close_filter_used": false,
@@ -777,15 +777,15 @@
       "status": "PASS_REPO_ONLY_BINANCE_OKX_OVERLAP_81_SYMBOL_15M_PANEL_REVIEW_AFTER_BUILD_CREATED"
     },
     "preregistration": {
-      "path": "artifacts/research_preregistrations/lucifer_15m_v2_preregistration_contract_v1.json",
+      "path": "artifacts/research_preregistrations/ema9_pivot_15m_v2_preregistration_contract_v1.json",
       "payload_hash_verified": true,
       "payload_sha256_excluding_hash": "0dfd11a8ee11bf812d9f0abd7c1773e68a4f70f5ced074d0840cfb9e9c05c8f6",
-      "status": "PASS_REPO_ONLY_LUCIFER_15M_V2_PREREGISTRATION_CONTRACT_CREATED"
+      "status": "PASS_REPO_ONLY_EMA9_PIVOT_15M_V2_PREREGISTRATION_CONTRACT_CREATED"
     }
   },
   "source_checkpoint": {
     "dirty_paths_during_artifact_creation": [
-      "tools/edge_factory_os_repo_only_lucifer_15m_v2_execution_v1.py"
+      "tools/edge_factory_os_repo_only_ema9_pivot_15m_v2_execution_v1.py"
     ],
     "dirty_paths_during_artifact_creation_limited_to_expected_new_paths": true,
     "pre_execution_head": "f7793ec15f4acf0c123c5f92993e392de1a87332",
@@ -1460,7 +1460,7 @@
       "start_utc": "2024-07-01T00:00:00Z"
     }
   },
-  "status": "PASS_REPO_CODE_ONLY_LUCIFER_15M_V2_EXECUTED",
+  "status": "PASS_REPO_CODE_ONLY_EMA9_PIVOT_15M_V2_EXECUTED",
   "symbol_execution_records": {
     "1INCHUSDT": {
       "accepted_signals_by_split": {
