@@ -1,5 +1,7 @@
 # Edge Factory OS
 
+> **TL;DR:** Systematically tested 33 crypto trading strategies across 7 hypothesis families (81 symbols, Binance/OKX, 34 months of data). Result: 0 strategies promoted to deployment — including one candidate that looked strong (+474.5 bps) but was rejected for falling below the statistical significance bar (84th percentile vs. 95th threshold). Full audit trail, worked notebook walkthrough, and unit-tested core statistics documented below.
+
 > **Note:** This repository contains substantial governance scaffolding
 > (risk gates, approval workflows, orchestration) built preemptively for
 > production use if a validated signal had been found. Since no signal
