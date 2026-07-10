@@ -148,6 +148,17 @@ python cli.py status              # Show research summary
 python cli.py evaluate-example    # Run an example strategy evaluation
 ```
 
+## Testing
+
+Run `pytest tests/` to verify core statistical functions:
+
+```
+pytest tests/
+```
+
+- `tests/test_null_baseline.py` — percentile-rank computation and 95th-percentile pass/fail gate
+- `tests/test_cost_adjustment.py` — gross→net PnL calculation and bps conversion (ROUND_TRIP_COST_FRACTION = 0.002, BASE_EQUITY = 1000 USDT)
+
 ## Requirements
 
 See [requirements.txt](requirements.txt). Install with:
