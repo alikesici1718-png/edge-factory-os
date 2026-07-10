@@ -98,6 +98,10 @@ it was still rejected.
 
 *Note: raw null-distribution values were not persisted in artifacts; this shows only the summary statistics that were recorded (84th percentile vs. 95th percentile acceptance threshold).*
 
+![All Strategies Percentile Distribution](artifacts/visualizations/all_strategies_percentile_distribution.png)
+
+*Null-baseline percentile for all strategies with recorded data (13 of 33 evaluations — remaining 20 did not persist this metric). None crossed the 95th percentile acceptance threshold; the closest (90th percentile) still fell short.*
+
 ## Lessons Learned
 
 - A backtest showing 3-digit basis-point returns is not evidence of an edge
