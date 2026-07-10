@@ -1,5 +1,9 @@
 # Edge Factory OS
 
+![Tests](https://img.shields.io/badge/tests-23%20passing-brightgreen)
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 > **TL;DR:** Systematically tested 33 crypto trading strategies across 7 hypothesis families (81 symbols, Binance/OKX, 34 months of data). Result: 0 strategies promoted to deployment — including one candidate that looked strong (+474.5 bps) but was rejected for falling below the statistical significance bar (84th percentile vs. 95th threshold). Full audit trail, worked notebook walkthrough, and unit-tested core statistics documented below.
 
 > **Note:** This repository contains substantial governance scaffolding
