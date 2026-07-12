@@ -127,6 +127,7 @@ Mann-Whitney U: p = 6.3×10⁻¹¹ | rank-biserial r = −0.246 | BH-corrected q
 | **Outlier robustness** (drop worst 10 rising obs) | Signal survives; p moves from 6.3×10⁻¹¹ to 5.8×10⁻⁹; median shifts only +1.4 ppt |
 | **Threshold sensitivity** (1.2×, 1.3×, 1.5×, 1.7×, 2.0×) | All significant (p ≤ 2.3×10⁻¹³ to 1.9×10⁻⁷); spread 19–22 ppt across thresholds |
 | **Size segmentation** (large / mid / small-cap terciles) | All three groups significant (p<0.001); see table below |
+| **Multi-horizon** (3m, 6m, 12m forward return) | All three significant; non-monotonic — see table below |
 
 **Size segmentation:** the effect holds across large, mid, and small-cap symbols (all p<0.001), with the spread strongest in large-caps (+31.4 ppt) — counter to the intuition that large, established coins would show a weaker or no effect. This suggests the pattern is not driven solely by small-cap speculative dynamics.
 
@@ -137,6 +138,16 @@ Mann-Whitney U: p = 6.3×10⁻¹¹ | rank-biserial r = −0.246 | BH-corrected q
 | Small cap | 275 | 109 | −82.4% | −100.7% | **+18.3 ppt** | 1.0×10⁻⁴ | −0.254 |
 
 *Size proxy: average daily quote volume over the full 2022–2025 window; tercile boundaries at 33rd and 67th percentiles (~47M and ~149M USDT/day). Source: `tools/size_interaction_test.py`.*
+
+**Multi-horizon check:** the effect is present at 3, 6, and 12-month horizons but is non-monotonic — strongest at 3m (p=1.2×10⁻⁶) and 12m (p=6.3×10⁻¹¹), notably weaker at 6m (p=0.031, close to placebo noise level). This suggests the reversal is not a smooth, gradual decay but rather concentrated in an early window (0–3m) and a later, larger unwind (6–12m), with a relatively quiet middle period. Practical implication: an exit at the 6-month mark would likely underperform holding to 12 months.
+
+| Horizon | Flat median | Rising median | Spread | p-value | r | Placebo % sig |
+|---------|------------|--------------|--------|---------|---|--------------|
+| 3m | −18.5% | −26.6% | **+8.1 ppt** | 1.2×10⁻⁶ | −0.183 | 5.5% |
+| 6m | −33.4% | −40.1% | **+6.7 ppt** | 3.1×10⁻² | −0.081 | 5.1% |
+| 12m | −69.1% | −89.0% | **+20.0 ppt** | 6.3×10⁻¹¹ | −0.246 | 6.2% |
+
+*Source: `tools/horizon_sensitivity_test.py`.*
 
 ![Volume Momentum Reversal Robustness](artifacts/visualizations/volume_momentum_reversal.png)
 
