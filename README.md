@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-> **TL;DR:** Systematically tested 33 crypto trading strategies across 7 hypothesis families (81 symbols, Binance/OKX, 34 months of data). Result: 0 strategies promoted to deployment — including one candidate that looked strong (+474.5 bps) but was rejected for falling below the statistical significance bar (84th percentile vs. 95th threshold). Supplementary long-horizon analysis found one validated descriptive finding: **rising-volume symbols underperform flat-volume symbols by ~20 ppt vs BTC over 12 months** (p=6.3×10⁻¹¹, survives BH-FDR and 4 robustness checks), consistent with a speculative blow-off reversal pattern rather than momentum. Full audit trail, worked notebook walkthrough, and unit-tested core statistics documented below.
+> **TL;DR:** Systematically tested 33 crypto trading strategies across 7 hypothesis families (81 symbols, Binance/OKX, 34 months of data). Result: 0 strategies promoted to deployment — including one candidate that looked strong (+474.5 bps) but was rejected for falling below the statistical significance bar (84th percentile vs. 95th threshold). Supplementary long-horizon analysis found a volume-momentum reversal signal that held up under multiple robustness checks but showed no effect in 2023 and appears concentrated in the 2024 bull-market period — treat as a bull-market-conditional pattern, not a persistent edge. Full audit trail, worked notebook walkthrough, and unit-tested core statistics documented below.
 
 > **Note:** This repository contains substantial governance scaffolding
 > (risk gates, approval workflows, orchestration) built preemptively for
@@ -128,6 +128,7 @@ Mann-Whitney U: p = 6.3×10⁻¹¹ | rank-biserial r = −0.246 | BH-corrected q
 | **Threshold sensitivity** (1.2×, 1.3×, 1.5×, 1.7×, 2.0×) | All significant (p ≤ 2.3×10⁻¹³ to 1.9×10⁻⁷); spread 19–22 ppt across thresholds |
 | **Size segmentation** (large / mid / small-cap terciles) | All three groups significant (p<0.001); see table below |
 | **Multi-horizon** (3m, 6m, 12m forward return) | All three significant; non-monotonic — see table below |
+| **Yearly breakdown** (2022, 2023, 2024) | **CRITICAL: signal absent in 2023; concentrated in 2024 H1 bull market — see below** |
 
 **Size segmentation:** the effect holds across large, mid, and small-cap symbols (all p<0.001), with the spread strongest in large-caps (+31.4 ppt) — counter to the intuition that large, established coins would show a weaker or no effect. This suggests the pattern is not driven solely by small-cap speculative dynamics.
 
@@ -153,7 +154,17 @@ Mann-Whitney U: p = 6.3×10⁻¹¹ | rank-biserial r = −0.246 | BH-corrected q
 
 *Four-panel robustness suite: (1) return by vol-ratio bin, (2) real vs placebo rank-biserial distribution, (3) subperiod stability, (4) threshold sensitivity. Data: Binance USDM futures daily OHLCV, 81 symbols, 2022–2025. Sources: `tools/volume_momentum_analysis.py`, `tools/volume_momentum_significance_test.py`, `tools/subperiod_stability_test.py`, `tools/outlier_robustness_test.py`, `tools/threshold_sensitivity_test.py`, `tools/bh_fdr_correction.py`.*
 
-**Limitations:** Effect direction is consistent across time periods, but statistical power is regime-dependent — weaker during the 2022–2023 bear/early-recovery period (p=0.07), much stronger during the 2023–2024 bull cycle (p<0.0001). This has not been live-traded and should be treated as a validated backtest finding, not a trading recommendation.
+**Critical update — yearly breakdown:** When broken down by calendar year, the signal is essentially absent in 2023 (12 months, n=751, p=0.55, direction even reverses slightly) and only shows strong significance in the 2024 H1 bull-market window (p=0.005). This means the overall significance across the full sample is substantially driven by 2024's bull market, not a consistent year-over-year effect. This finding should now be treated with significantly more caution than the earlier robustness checks suggested — it may be a bull-market-specific pattern rather than a persistent market inefficiency.
+
+| Year | Months | n_flat | n_rising | Flat median | Rising median | Spread | p-value | Sig? | Note |
+|------|--------|--------|----------|-------------|--------------|--------|---------|------|------|
+| 2022 | 1 | 49 | 7 | −34.2% | −60.4% | +26.1% | 0.20 | no | Thin data (n_rising=7) |
+| 2023 | 12 | 634 | 117 | −64.2% | −60.6% | **−3.6%** | 0.55 | no | **Direction reverses** |
+| 2024 | 6 | 249 | 192 | −100.0% | −119.0% | +19.0% | 5.0×10⁻³ | **YES** | Jan–Jun bull market only |
+
+*Source: `tools/yearly_breakdown_test.py`. Chart: `artifacts/visualizations/volume_momentum_yearly_spread.png`.*
+
+**Limitations:** Effect direction is NOT consistent across calendar years — absent and reversed in 2023 (the only full-year observation), significant only in the 2024 bull-market window. The earlier subperiod and cross-sectional robustness checks are not invalidated, but they mask a year-level non-stationarity that substantially weakens the case for a persistent edge. This has not been live-traded and should be treated as a hypothesis requiring out-of-sample validation before any practical use.
 
 ---
 
