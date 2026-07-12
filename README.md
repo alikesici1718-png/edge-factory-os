@@ -102,6 +102,27 @@ it was still rejected.
 
 *Null-baseline percentile for all strategies with recorded data (13 of 33 evaluations — remaining 20 did not persist this metric). None crossed the 95th percentile acceptance threshold; the closest (90th percentile) still fell short.*
 
+## Supplementary Analysis: Liquidity Quartile vs. Forward Returns
+
+**Question:** Does trailing 3-month trading volume predict 6- or 12-month forward excess returns vs BTC across the 81-symbol universe?
+
+**Method:** For each calendar month (2022-01–2025-06), symbols are sorted into volume quartiles (Q1=least liquid, Q4=most liquid) based on trailing 3-month average daily quote volume. Forward excess returns are computed as log(close T+N / close T) minus the same log return for BTCUSDT.
+
+**Result:** No consistent liquidity premium in either direction.
+
+| Quartile | 6m median excess vs BTC | 12m median excess vs BTC |
+|----------|------------------------|--------------------------|
+| Q1 (least liquid) | −35.7% | −74.1% |
+| Q2 | −39.3% | −70.5% |
+| Q3 | −42.2% | −83.9% |
+| Q4 (most liquid) | −31.3% | −60.4% |
+
+All quartiles underperform BTC in absolute terms — consistent with the well-known large-cap dominance in bull crypto markets. Q4 (most liquid) has the best relative performance, but the spread is narrow and non-monotonic (Q3 is worst at 12m, not Q1). No statistical significance was computed; this is a descriptive pass only.
+
+![Liquidity Quartile Forward Returns](artifacts/visualizations/liquidity_quartile_forward_returns.png)
+
+*Data: Binance USDM futures daily OHLCV, 81 symbols, 2022-01-01 to 2025-06-30. Source: `tools/liquidity_quartile_analysis.py`.*
+
 ## Lessons Learned
 
 - A backtest showing 3-digit basis-point returns is not evidence of an edge
