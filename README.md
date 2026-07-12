@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-> **TL;DR:** Systematically tested 33 crypto trading strategies across 7 hypothesis families (81 symbols, Binance/OKX, 34 months of data). Result: 0 strategies promoted to deployment — including one candidate that looked strong (+474.5 bps) but was rejected for falling below the statistical significance bar (84th percentile vs. 95th threshold). Full audit trail, worked notebook walkthrough, and unit-tested core statistics documented below.
+> **TL;DR:** Systematically tested 33 crypto trading strategies across 7 hypothesis families (81 symbols, Binance/OKX, 34 months of data). Result: 0 strategies promoted to deployment — including one candidate that looked strong (+474.5 bps) but was rejected for falling below the statistical significance bar (84th percentile vs. 95th threshold). Supplementary long-horizon analysis found one validated descriptive finding: **rising-volume symbols underperform flat-volume symbols by ~20 ppt vs BTC over 12 months** (p=6.3×10⁻¹¹, survives BH-FDR and 4 robustness checks), consistent with a speculative blow-off reversal pattern rather than momentum. Full audit trail, worked notebook walkthrough, and unit-tested core statistics documented below.
 
 > **Note:** This repository contains substantial governance scaffolding
 > (risk gates, approval workflows, orchestration) built preemptively for
@@ -101,6 +101,39 @@ it was still rejected.
 ![All Strategies Percentile Distribution](artifacts/visualizations/all_strategies_percentile_distribution.png)
 
 *Null-baseline percentile for all strategies with recorded data (13 of 33 evaluations — remaining 20 did not persist this metric). None crossed the 95th percentile acceptance threshold; the closest (90th percentile) still fell short.*
+
+## Supplementary Analysis: Volume Momentum Reversal (Long-Horizon)
+
+**Hypothesis:** In crypto perpetual futures, symbols with strongly rising trailing volume (recent 6-month average ≥ 1.5× prior 6-month average) will outperform symbols with flat or declining volume over the following 12 months.
+
+**Result: Hypothesis rejected — direction is the opposite.** Rising-volume symbols *underperform* flat-volume symbols by ~20 percentage points vs BTC over 12 months.
+
+| Group | n obs | Median 12m excess vs BTC |
+|-------|-------|--------------------------|
+| Flat/declining volume (<1.5×) | 932 | −69.1% |
+| Rising volume (≥1.5×) | 316 | −89.0% |
+| **Spread (flat − rising)** | | **+20.0 ppt** |
+
+Mann-Whitney U: p = 6.3×10⁻¹¹ | rank-biserial r = −0.246 | BH-corrected q ≈ 0
+
+**Interpretation:** The signal captures a reversal effect — a volume spike is a symptom of speculative blow-off, not sustained momentum. Rising-volume symbols have likely already peaked; they revert sharply vs BTC over the next 12 months. The effect is large enough to survive realistic costs (round-trip fee 0.10%, net of funding rate carry which is typically positive for short positions).
+
+### Robustness Checks
+
+| Check | Result |
+|-------|--------|
+| **BH-FDR correction** (10-test family) | Survives — q ≈ 0; BH threshold 3×10⁸× above p-value |
+| **Subperiod stability** (split at 2023-09) | Same direction both halves; P2 p=2.7×10⁻⁵, P1 p=0.07 (weaker power, n=92) |
+| **Outlier robustness** (drop worst 10 rising obs) | Signal survives; p moves from 6.3×10⁻¹¹ to 5.8×10⁻⁹; median shifts only +1.4 ppt |
+| **Threshold sensitivity** (1.2×, 1.3×, 1.5×, 1.7×, 2.0×) | All significant (p ≤ 2.3×10⁻¹³ to 1.9×10⁻⁷); spread 19–22 ppt across thresholds |
+
+![Volume Momentum Reversal Robustness](artifacts/visualizations/volume_momentum_reversal.png)
+
+*Four-panel robustness suite: (1) return by vol-ratio bin, (2) real vs placebo rank-biserial distribution, (3) subperiod stability, (4) threshold sensitivity. Data: Binance USDM futures daily OHLCV, 81 symbols, 2022–2025. Sources: `tools/volume_momentum_analysis.py`, `tools/volume_momentum_significance_test.py`, `tools/subperiod_stability_test.py`, `tools/outlier_robustness_test.py`, `tools/threshold_sensitivity_test.py`, `tools/bh_fdr_correction.py`.*
+
+**Limitations:** Effect direction is consistent across time periods, but statistical power is regime-dependent — weaker during the 2022–2023 bear/early-recovery period (p=0.07), much stronger during the 2023–2024 bull cycle (p<0.0001). This has not been live-traded and should be treated as a validated backtest finding, not a trading recommendation.
+
+---
 
 ## Supplementary Analysis: Liquidity Quartile vs. Forward Returns
 
