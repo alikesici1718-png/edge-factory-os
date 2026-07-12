@@ -126,6 +126,17 @@ Mann-Whitney U: p = 6.3×10⁻¹¹ | rank-biserial r = −0.246 | BH-corrected q
 | **Subperiod stability** (split at 2023-09) | Same direction both halves; P2 p=2.7×10⁻⁵, P1 p=0.07 (weaker power, n=92) |
 | **Outlier robustness** (drop worst 10 rising obs) | Signal survives; p moves from 6.3×10⁻¹¹ to 5.8×10⁻⁹; median shifts only +1.4 ppt |
 | **Threshold sensitivity** (1.2×, 1.3×, 1.5×, 1.7×, 2.0×) | All significant (p ≤ 2.3×10⁻¹³ to 1.9×10⁻⁷); spread 19–22 ppt across thresholds |
+| **Size segmentation** (large / mid / small-cap terciles) | All three groups significant (p<0.001); see table below |
+
+**Size segmentation:** the effect holds across large, mid, and small-cap symbols (all p<0.001), with the spread strongest in large-caps (+31.4 ppt) — counter to the intuition that large, established coins would show a weaker or no effect. This suggests the pattern is not driven solely by small-cap speculative dynamics.
+
+| Size group | n_flat | n_rising | Flat median | Rising median | Spread | p-value | r |
+|------------|--------|----------|-------------|--------------|--------|---------|---|
+| Large cap | 327 | 106 | −49.8% | −81.2% | **+31.4 ppt** | 9.8×10⁻⁴ | −0.213 |
+| Mid cap | 330 | 101 | −63.9% | −92.1% | **+28.2 ppt** | 4.5×10⁻⁵ | −0.268 |
+| Small cap | 275 | 109 | −82.4% | −100.7% | **+18.3 ppt** | 1.0×10⁻⁴ | −0.254 |
+
+*Size proxy: average daily quote volume over the full 2022–2025 window; tercile boundaries at 33rd and 67th percentiles (~47M and ~149M USDT/day). Source: `tools/size_interaction_test.py`.*
 
 ![Volume Momentum Reversal Robustness](artifacts/visualizations/volume_momentum_reversal.png)
 
